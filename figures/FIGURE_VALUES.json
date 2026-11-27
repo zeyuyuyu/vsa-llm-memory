@@ -4585,7 +4585,7 @@
   "a": [
    {
     "colour": "#D55E00",
-    "series": "Hebbian VSA store (final design)",
+    "series": "standard VSA store (final design)",
     "source": "figdata/final_compression.json acc_final (vsassm results/b60_part_<enc>.json cells, STORE, mean of 12)",
     "values": {
      "Granite-3.3-8B": 47.54,
@@ -4642,7 +4642,7 @@
   ],
   "b": [
    {
-    "series": "least squares minus Hebbian VSA store (final design), points, 95% interval",
+    "series": "least squares minus standard VSA store (final design), points, 95% interval",
     "source": "figdata/final_compression.json final_lamc, sign flipped (vsassm results/b60_verdict.txt 'PRIMARY (ideal): STORE - LAMc', R1)",
     "values": {
      "Granite-3.3-8B": [

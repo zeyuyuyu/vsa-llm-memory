@@ -1247,7 +1247,7 @@ def figS6_gains():
 
 
 def fig_compression():
-    """Main figure (r79l, user 11-25 'not intuitive'): per encoder, the accuracies themselves (a) -- Hebbian VSA store
+    """Main figure (r79l, user 11-25 'not intuitive'): per encoder, the accuracies themselves (a) -- standard VSA store
     (final design), corrected least squares, best of seven classical memories, exact index -- with an arrow from the
     store to least squares, and least squares' gain with its 95% interval (b). Same sources as before (B49/B60/B64)."""
     fig = new_fig(180, 74)
@@ -1280,7 +1280,7 @@ def fig_compression():
         ax.plot([q["store"]], [y], ls="none", marker="o", ms=4.6, color=STORE, zorder=5)
         ax.plot([q["ls"]], [y], ls="none", marker="D", ms=3.9, color=LS, zorder=5)
         ax.plot([q["exact"]], [y], ls="none", marker="^", ms=4.2, mfc="white", mec=EX, mew=0.8, zorder=5)
-    for key, lab, col in (("store", "Hebbian VSA store (final design)", STORE), ("ls", "least-squares memory (corrected)", LS),
+    for key, lab, col in (("store", "standard VSA store (final design)", STORE), ("ls", "least-squares memory (corrected)", LS),
                           ("best7", "best of seven classical memories", B7), ("exact", "exact index, unlimited bits", EX)):
         rec("fig_compression", "a", lab, colour=col, values={q["name"]: round(q[key], 2) for q in rows},
             source={"store": "figdata/final_compression.json acc_final (vsassm results/b60_part_<enc>.json cells, STORE, mean of 12)",
@@ -1296,7 +1296,7 @@ def fig_compression():
     for yy, lab in ((ys[0] + 0.62, "language models"), (ys[4] + 0.62, "sentence encoders")):
         ax.text(-0.012, yy, lab, transform=ax.get_yaxis_transform(), fontsize=SMALL, color=MUTED, fontweight="bold",
                 ha="right", va="center")
-    hb = [Line2D([], [], color=STORE, marker="o", ms=4.6, lw=0, label="Hebbian VSA store"),
+    hb = [Line2D([], [], color=STORE, marker="o", ms=4.6, lw=0, label="standard VSA store"),
           Line2D([], [], color=LS, marker="D", ms=3.9, lw=0, label="least squares"),
           Line2D([], [], color=B7, marker="o", ms=3.2, lw=0, label="best of seven classical memories"),
           Line2D([], [], color=EX, marker="^", ms=4.2, mfc="white", mew=0.8, lw=0, label="exact index (unlimited bits)")]
@@ -1310,7 +1310,7 @@ def fig_compression():
         ax.barh([y], [q["gain"]], height=0.5, color=NEUTRAL, zorder=3, linewidth=0)
         ax.plot([q["glo"], q["ghi"]], [y, y], color=INK, lw=1.1, zorder=4, solid_capstyle="butt")
         ax.text(q["ghi"] + 0.25, y, "+%.1f" % q["gain"], fontsize=MIN_PT, color=INK, va="center", ha="left")
-    rec("fig_compression", "b", "least squares minus Hebbian VSA store (final design), points, 95% interval",
+    rec("fig_compression", "b", "least squares minus standard VSA store (final design), points, 95% interval",
         values={q["name"]: [q["gain"], q["glo"], q["ghi"]] for q in rows},
         source="figdata/final_compression.json final_lamc, sign flipped (vsassm results/b60_verdict.txt 'PRIMARY (ideal): STORE - LAMc', R1)")
     ax.set_yticks(ys); ax.set_yticklabels([]); ax.tick_params(axis="y", length=0); ax.spines["left"].set_visible(False)
