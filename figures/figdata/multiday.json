@@ -1,0 +1,101 @@
+{
+ "_about": "Main Fig. 6d; set-exact accuracy on impact questions over records of 1, 4 and 8 days (NSR5), built by tools/build_newfigs.py from results/nsr5_verdict.txt (scored once with nsr/nsr5_score.py); gpt_direct (r13, 2026-11-12) = the gpt arm re-run through OpenAI's API (amendment 8), the GPT-6.1 Sol line drawn in Fig. 6d",
+ "days": [
+  1,
+  4,
+  8
+ ],
+ "n": [
+  230,
+  161,
+  69
+ ],
+ "tokens_k": [
+  9.5,
+  33.5,
+  69.8
+ ],
+ "pipeline": {
+  "set_exact": [
+   0.93,
+   0.801,
+   0.71
+  ],
+  "micro_f1": [
+   0.965,
+   0.959,
+   0.942
+  ],
+  "source": "results/nsr5_verdict.txt: '| pipeline (reader + replay)          | 0.930 (0.965) | 0.801 (0.959) | 0.710 (0.942) |'"
+ },
+ "gpt_registered": {
+  "set_exact": [
+   0.922,
+   0.677,
+   0.739
+  ],
+  "micro_f1": [
+   0.963,
+   0.897,
+   0.848
+  ],
+  "source": "results/nsr5_verdict.txt: '| gpt-6.1-sol xhigh, registered       | 0.922 (0.963) | 0.677 (0.897) | 0.739 (0.848) |'",
+  "_note": "Sidrune reseller gateway (first runs); superseded by gpt_direct, not drawn"
+ },
+ "gpt_repaired": {
+  "set_exact": [
+   0.943,
+   0.702,
+   0.783
+  ],
+  "micro_f1": [
+   0.978,
+   0.932,
+   0.933
+  ],
+  "source": "results/nsr5_verdict.txt: '|   repaired                          | 0.943 (0.978) | 0.702 (0.932) | 0.783 (0.933) |'",
+  "_note": "Sidrune reseller gateway (first runs); superseded by gpt_direct, not drawn"
+ },
+ "opus_registered": {
+  "set_exact": [
+   0.852,
+   0.714,
+   0.536
+  ],
+  "micro_f1": [
+   0.93,
+   0.928,
+   0.865
+  ],
+  "source": "results/nsr5_verdict.txt: '| Opus 5.5 medium, registered         | 0.852 (0.930) | 0.714 (0.928) | 0.536 (0.865) |'"
+ },
+ "opus_normalised": {
+  "set_exact": [
+   0.935,
+   0.845,
+   0.754
+  ],
+  "micro_f1": [
+   0.98,
+   0.959,
+   0.894
+  ],
+  "source": "results/nsr5_verdict.txt: '|   normalised (= repaired+normalised)| 0.935 (0.980) | 0.845 (0.959) | 0.754 (0.894) |'"
+ },
+ "gpt_direct": {
+  "set_exact": [
+   0.952,
+   0.925,
+   0.855
+  ],
+  "micro_f1": [
+   0.983,
+   0.986,
+   0.983
+  ],
+  "file": "../results/vsassm/results/nsr5_verdict.txt",
+  "line_no": 136,
+  "line": "| gpt via OpenAI direct (*)     | 0.952 (0.983) | 0.925 (0.986) | 0.855 (0.983) |",
+  "source": "results/nsr5_verdict.txt line 136: '| gpt via OpenAI direct (*)     | 0.952 (0.983) | 0.925 (0.986) | 0.855 (0.983) |' (amendment 8; registered = repaired = normalised on this route)"
+ }
+}

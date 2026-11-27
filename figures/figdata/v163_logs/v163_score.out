@@ -1,0 +1,26 @@
+G0 fixed rule reproduces V-95 (33 values): worst |diff| 0.000000 -> PASS
+G1 fitted rule reproduces the banked parser arm [0.932, 0.932, 0.938]: worst |diff| 0.000000 -> PASS
+
+  c     crosstalk  fixed   fitted  auroc
+  0.00  0.0001     0.9244  0.9222  0.9180
+  0.05  0.0492     0.9178  0.9167  0.9171
+  0.10  0.0989     0.9033  0.9022  0.9074
+  0.15  0.1487     0.8306  0.8317  0.8319
+  0.20  0.1986     0.6044  0.7017  0.7177
+  0.25  0.2486     0.5006  0.6200  0.6313
+  0.30  0.2986     0.4989  0.5706  0.5639
+  0.35  0.3487     0.4989  0.5461  0.5453
+  0.40  0.3987     0.4989  0.5356  0.5256
+  0.50  0.4989     0.4989  0.5322  0.5163
+  0.60  0.5992     0.4989  0.5311  0.5141
+  0.70  0.6995     0.4989  0.5206  0.5033
+  0.80  0.7997     0.4989  0.5044  0.4934
+  0.90  0.8999     0.4989  0.5256  0.5022
+
+tolerance under the fitted rule: largest tested cross-talk clearing 0.615 is 0.2486 (target c = 0.25); next tested point c = 0.30 at 0.5706; curve monotone within 0.03: True
+B1 tolerance < 0.39: HOLDS
+B2 at c >= 0.7: fitted <= 0.565 in all 3 points: True (max 0.5256); auroc <= 0.60: True (max 0.5033) -> HOLDS
+B3 first-hop errors: 115 on alias instances (228 instances, rate 0.504), 0 on the others (1272 instances, rate 0.0000); share on alias instances 1.000 -> HOLDS
+   per seed: [(42, 76, 37, 424, 0, 37), (123, 76, 44, 424, 0, 44), (456, 76, 34, 424, 0, 34)]
+
+V-163 VERDICT: G0 PASS | G1 PASS | tolerance 0.2486 | B1 HOLDS | B2 HOLDS | B3 HOLDS

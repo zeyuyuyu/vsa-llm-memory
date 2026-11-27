@@ -1,0 +1,390 @@
+===== V-134 (prereg 9444197) model=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct =====
+  16 KBs x 160 facts; LoRA r=32, 12 epochs, lr=0.0001; 80 queries per (KB, depth)
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:10,  1.46it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:09,  1.52it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:09,  1.55it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:08,  1.56it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:07,  1.56it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:07,  1.56it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.57it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:05<00:05,  1.57it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:05,  1.57it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.58it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:07<00:03,  1.58it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.58it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:08<00:02,  1.58it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:08<00:01,  1.58it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:09<00:01,  1.58it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:10<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.62it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.58it/s]
+trainable params: 268,435,456 || all params: 33,032,311,808 || trainable%: 0.8126
+
+  ---- KB 100: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.875  k2 d4096=0.667  k3 d4096=0.529  k4 d4096=0.367
+    training adapter kb100 on 800 single-hop texts ...
+    epoch  1/12  loss 2.0716
+    epoch  2/12  loss 0.7234
+    epoch  3/12  loss 0.5627
+    epoch  4/12  loss 0.4498
+    epoch  5/12  loss 0.4144
+    epoch  6/12  loss 0.4053
+    epoch  7/12  loss 0.4027
+    epoch  8/12  loss 0.3867
+    epoch  9/12  loss 0.3835
+    epoch 10/12  loss 0.3749
+    epoch 11/12  loss 0.3724
+    epoch 12/12  loss 0.3711
+    trained in 5.4 min
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+    k=1  store 0.8750 | lora_weights 0.9750 | ctx_cot 0.8875 | base_nofacts 0.0000
+    k=2  store 0.6667 | lora_weights 0.5625 | ctx_cot 0.9500 | base_nofacts 0.0000
+    k=3  store 0.5292 | lora_weights 0.4625 | ctx_cot 0.8375 | base_nofacts 0.0000
+    k=4  store 0.3667 | lora_weights 0.3125 | ctx_cot 0.7500 | base_nofacts 0.0000
+
+  ---- KB 101: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.825  k2 d4096=0.704  k3 d4096=0.525  k4 d4096=0.433
+    training adapter kb101 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1031
+    epoch  2/12  loss 0.7191
+    epoch  3/12  loss 0.5711
+    epoch  4/12  loss 0.4234
+    epoch  5/12  loss 0.3925
+    epoch  6/12  loss 0.3826
+    epoch  7/12  loss 0.3778
+    epoch  8/12  loss 0.3693
+    epoch  9/12  loss 0.3669
+    epoch 10/12  loss 0.3634
+    epoch 11/12  loss 0.3589
+    epoch 12/12  loss 0.3552
+    trained in 4.2 min
+    k=1  store 0.8250 | lora_weights 1.0000 | ctx_cot 0.9000 | base_nofacts 0.0000
+    k=2  store 0.7042 | lora_weights 0.8375 | ctx_cot 0.8875 | base_nofacts 0.0000
+    k=3  store 0.5250 | lora_weights 0.5750 | ctx_cot 0.8375 | base_nofacts 0.0000
+    k=4  store 0.4333 | lora_weights 0.5125 | ctx_cot 0.7875 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb101 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 102: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.825  k2 d4096=0.629  k3 d4096=0.475  k4 d4096=0.463
+    training adapter kb102 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1237
+    epoch  2/12  loss 0.7150
+    epoch  3/12  loss 0.5430
+    epoch  4/12  loss 0.4303
+    epoch  5/12  loss 0.3994
+    epoch  6/12  loss 0.3882
+    epoch  7/12  loss 0.3808
+    epoch  8/12  loss 0.3789
+    epoch  9/12  loss 0.3716
+    epoch 10/12  loss 0.3688
+    epoch 11/12  loss 0.3671
+    epoch 12/12  loss 0.3638
+    trained in 4.2 min
+    k=1  store 0.8250 | lora_weights 0.9875 | ctx_cot 0.9125 | base_nofacts 0.0000
+    k=2  store 0.6292 | lora_weights 0.9000 | ctx_cot 0.8875 | base_nofacts 0.0000
+    k=3  store 0.4750 | lora_weights 0.7625 | ctx_cot 0.8500 | base_nofacts 0.0000
+    k=4  store 0.4625 | lora_weights 0.6000 | ctx_cot 0.8125 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb102 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 103: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.829  k2 d4096=0.738  k3 d4096=0.675  k4 d4096=0.583
+    training adapter kb103 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1347
+    epoch  2/12  loss 0.7031
+    epoch  3/12  loss 0.5426
+    epoch  4/12  loss 0.4268
+    epoch  5/12  loss 0.3988
+    epoch  6/12  loss 0.3905
+    epoch  7/12  loss 0.3839
+    epoch  8/12  loss 0.3785
+    epoch  9/12  loss 0.3730
+    epoch 10/12  loss 0.3673
+    epoch 11/12  loss 0.3669
+    epoch 12/12  loss 0.3658
+    trained in 4.2 min
+    k=1  store 0.8292 | lora_weights 1.0000 | ctx_cot 0.9000 | base_nofacts 0.0000
+    k=2  store 0.7375 | lora_weights 0.6750 | ctx_cot 0.8625 | base_nofacts 0.0000
+    k=3  store 0.6750 | lora_weights 0.5750 | ctx_cot 0.8500 | base_nofacts 0.0000
+    k=4  store 0.5833 | lora_weights 0.3375 | ctx_cot 0.7750 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb103 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 104: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.838  k2 d4096=0.729  k3 d4096=0.658  k4 d4096=0.483
+    training adapter kb104 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1677
+    epoch  2/12  loss 0.7548
+    epoch  3/12  loss 0.6329
+    epoch  4/12  loss 0.4648
+    epoch  5/12  loss 0.4155
+    epoch  6/12  loss 0.4033
+    epoch  7/12  loss 0.3986
+    epoch  8/12  loss 0.3893
+    epoch  9/12  loss 0.3777
+    epoch 10/12  loss 0.3748
+    epoch 11/12  loss 0.3679
+    epoch 12/12  loss 0.3661
+    trained in 4.2 min
+    k=1  store 0.8375 | lora_weights 0.9750 | ctx_cot 0.8625 | base_nofacts 0.0000
+    k=2  store 0.7292 | lora_weights 0.6750 | ctx_cot 0.8500 | base_nofacts 0.0000
+    k=3  store 0.6583 | lora_weights 0.5750 | ctx_cot 0.8000 | base_nofacts 0.0000
+    k=4  store 0.4833 | lora_weights 0.3250 | ctx_cot 0.8125 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb104 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 105: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.883  k2 d4096=0.621  k3 d4096=0.554  k4 d4096=0.479
+    training adapter kb105 on 800 single-hop texts ...
+    epoch  1/12  loss 2.0785
+    epoch  2/12  loss 0.7248
+    epoch  3/12  loss 0.5715
+    epoch  4/12  loss 0.4327
+    epoch  5/12  loss 0.4072
+    epoch  6/12  loss 0.3942
+    epoch  7/12  loss 0.3939
+    epoch  8/12  loss 0.3815
+    epoch  9/12  loss 0.3760
+    epoch 10/12  loss 0.3704
+    epoch 11/12  loss 0.3712
+    epoch 12/12  loss 0.3678
+    trained in 4.2 min
+    k=1  store 0.8833 | lora_weights 1.0000 | ctx_cot 0.9000 | base_nofacts 0.0000
+    k=2  store 0.6208 | lora_weights 0.7625 | ctx_cot 0.9500 | base_nofacts 0.0000
+    k=3  store 0.5542 | lora_weights 0.4250 | ctx_cot 0.9500 | base_nofacts 0.0000
+    k=4  store 0.4792 | lora_weights 0.3125 | ctx_cot 0.9250 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb105 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 106: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.817  k2 d4096=0.704  k3 d4096=0.533  k4 d4096=0.504
+    training adapter kb106 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1371
+    epoch  2/12  loss 0.7261
+    epoch  3/12  loss 0.5499
+    epoch  4/12  loss 0.4170
+    epoch  5/12  loss 0.4058
+    epoch  6/12  loss 0.3884
+    epoch  7/12  loss 0.3811
+    epoch  8/12  loss 0.3800
+    epoch  9/12  loss 0.3692
+    epoch 10/12  loss 0.3662
+    epoch 11/12  loss 0.3621
+    epoch 12/12  loss 0.3618
+    trained in 4.2 min
+    k=1  store 0.8167 | lora_weights 0.9875 | ctx_cot 0.8250 | base_nofacts 0.0000
+    k=2  store 0.7042 | lora_weights 0.7875 | ctx_cot 0.9000 | base_nofacts 0.0000
+    k=3  store 0.5333 | lora_weights 0.6500 | ctx_cot 0.7625 | base_nofacts 0.0000
+    k=4  store 0.5042 | lora_weights 0.6875 | ctx_cot 0.8250 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb106 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 107: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.854  k2 d4096=0.654  k3 d4096=0.571  k4 d4096=0.475
+    training adapter kb107 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1024
+    epoch  2/12  loss 0.7243
+    epoch  3/12  loss 0.6094
+    epoch  4/12  loss 0.4573
+    epoch  5/12  loss 0.4197
+    epoch  6/12  loss 0.4119
+    epoch  7/12  loss 0.4001
+    epoch  8/12  loss 0.3900
+    epoch  9/12  loss 0.3928
+    epoch 10/12  loss 0.3791
+    epoch 11/12  loss 0.3755
+    epoch 12/12  loss 0.3774
+    trained in 4.2 min
+    k=1  store 0.8542 | lora_weights 0.9375 | ctx_cot 0.8250 | base_nofacts 0.0000
+    k=2  store 0.6542 | lora_weights 0.6500 | ctx_cot 0.8500 | base_nofacts 0.0000
+    k=3  store 0.5708 | lora_weights 0.4500 | ctx_cot 0.8000 | base_nofacts 0.0000
+    k=4  store 0.4750 | lora_weights 0.3375 | ctx_cot 0.7625 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb107 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 108: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.867  k2 d4096=0.729  k3 d4096=0.500  k4 d4096=0.554
+    training adapter kb108 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1311
+    epoch  2/12  loss 0.7088
+    epoch  3/12  loss 0.5020
+    epoch  4/12  loss 0.4173
+    epoch  5/12  loss 0.4017
+    epoch  6/12  loss 0.3907
+    epoch  7/12  loss 0.3838
+    epoch  8/12  loss 0.3827
+    epoch  9/12  loss 0.3749
+    epoch 10/12  loss 0.3708
+    epoch 11/12  loss 0.3634
+    epoch 12/12  loss 0.3648
+    trained in 4.2 min
+    k=1  store 0.8667 | lora_weights 0.9875 | ctx_cot 0.9250 | base_nofacts 0.0000
+    k=2  store 0.7292 | lora_weights 0.8375 | ctx_cot 0.9250 | base_nofacts 0.0000
+    k=3  store 0.5000 | lora_weights 0.5375 | ctx_cot 0.8625 | base_nofacts 0.0000
+    k=4  store 0.5542 | lora_weights 0.5875 | ctx_cot 0.8000 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb108 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 109: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.796  k2 d4096=0.613  k3 d4096=0.504  k4 d4096=0.467
+    training adapter kb109 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1192
+    epoch  2/12  loss 0.7052
+    epoch  3/12  loss 0.5306
+    epoch  4/12  loss 0.4255
+    epoch  5/12  loss 0.3955
+    epoch  6/12  loss 0.3871
+    epoch  7/12  loss 0.3780
+    epoch  8/12  loss 0.3725
+    epoch  9/12  loss 0.3721
+    epoch 10/12  loss 0.3695
+    epoch 11/12  loss 0.3637
+    epoch 12/12  loss 0.3561
+    trained in 4.2 min
+    k=1  store 0.7958 | lora_weights 0.9875 | ctx_cot 0.8125 | base_nofacts 0.0000
+    k=2  store 0.6125 | lora_weights 0.8250 | ctx_cot 0.8875 | base_nofacts 0.0000
+    k=3  store 0.5042 | lora_weights 0.6250 | ctx_cot 0.8750 | base_nofacts 0.0000
+    k=4  store 0.4667 | lora_weights 0.6125 | ctx_cot 0.7625 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb109 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 110: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.825  k2 d4096=0.604  k3 d4096=0.529  k4 d4096=0.446
+    training adapter kb110 on 800 single-hop texts ...
+    epoch  1/12  loss 2.0174
+    epoch  2/12  loss 0.6984
+    epoch  3/12  loss 0.5168
+    epoch  4/12  loss 0.4192
+    epoch  5/12  loss 0.4007
+    epoch  6/12  loss 0.3981
+    epoch  7/12  loss 0.3854
+    epoch  8/12  loss 0.3831
+    epoch  9/12  loss 0.3768
+    epoch 10/12  loss 0.3685
+    epoch 11/12  loss 0.3671
+    epoch 12/12  loss 0.3632
+    trained in 4.2 min
+    k=1  store 0.8250 | lora_weights 1.0000 | ctx_cot 0.7875 | base_nofacts 0.0000
+    k=2  store 0.6042 | lora_weights 0.7250 | ctx_cot 0.8875 | base_nofacts 0.0000
+    k=3  store 0.5292 | lora_weights 0.6375 | ctx_cot 0.8750 | base_nofacts 0.0000
+    k=4  store 0.4458 | lora_weights 0.5625 | ctx_cot 0.7750 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb110 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 111: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.854  k2 d4096=0.729  k3 d4096=0.683  k4 d4096=0.421
+    training adapter kb111 on 800 single-hop texts ...
+    epoch  1/12  loss 2.0966
+    epoch  2/12  loss 0.7369
+    epoch  3/12  loss 0.6277
+    epoch  4/12  loss 0.4954
+    epoch  5/12  loss 0.4272
+    epoch  6/12  loss 0.4087
+    epoch  7/12  loss 0.3966
+    epoch  8/12  loss 0.3939
+    epoch  9/12  loss 0.3795
+    epoch 10/12  loss 0.3784
+    epoch 11/12  loss 0.3717
+    epoch 12/12  loss 0.3709
+    trained in 4.2 min
+    k=1  store 0.8542 | lora_weights 0.8250 | ctx_cot 0.8125 | base_nofacts 0.0000
+    k=2  store 0.7292 | lora_weights 0.7375 | ctx_cot 0.8750 | base_nofacts 0.0000
+    k=3  store 0.6833 | lora_weights 0.5125 | ctx_cot 0.8750 | base_nofacts 0.0000
+    k=4  store 0.4208 | lora_weights 0.2875 | ctx_cot 0.7625 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb111 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 112: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.842  k2 d4096=0.700  k3 d4096=0.567  k4 d4096=0.504
+    training adapter kb112 on 800 single-hop texts ...
+    epoch  1/12  loss 2.0701
+    epoch  2/12  loss 0.7187
+    epoch  3/12  loss 0.6292
+    epoch  4/12  loss 0.4936
+    epoch  5/12  loss 0.4105
+    epoch  6/12  loss 0.3960
+    epoch  7/12  loss 0.3927
+    epoch  8/12  loss 0.3821
+    epoch  9/12  loss 0.3785
+    epoch 10/12  loss 0.3735
+    epoch 11/12  loss 0.3678
+    epoch 12/12  loss 0.3664
+    trained in 4.2 min
+    k=1  store 0.8417 | lora_weights 0.9250 | ctx_cot 0.8625 | base_nofacts 0.0000
+    k=2  store 0.7000 | lora_weights 0.6250 | ctx_cot 0.8875 | base_nofacts 0.0000
+    k=3  store 0.5667 | lora_weights 0.3500 | ctx_cot 0.8375 | base_nofacts 0.0000
+    k=4  store 0.5042 | lora_weights 0.2250 | ctx_cot 0.7625 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb112 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 113: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.846  k2 d4096=0.613  k3 d4096=0.529  k4 d4096=0.517
+    training adapter kb113 on 800 single-hop texts ...
+    epoch  1/12  loss 2.0560
+    epoch  2/12  loss 0.6934
+    epoch  3/12  loss 0.5408
+    epoch  4/12  loss 0.4209
+    epoch  5/12  loss 0.4021
+    epoch  6/12  loss 0.3939
+    epoch  7/12  loss 0.3849
+    epoch  8/12  loss 0.3816
+    epoch  9/12  loss 0.3704
+    epoch 10/12  loss 0.3651
+    epoch 11/12  loss 0.3647
+    epoch 12/12  loss 0.3589
+    trained in 4.2 min
+    k=1  store 0.8458 | lora_weights 0.9500 | ctx_cot 0.8125 | base_nofacts 0.0000
+    k=2  store 0.6125 | lora_weights 0.6875 | ctx_cot 0.8750 | base_nofacts 0.0000
+    k=3  store 0.5292 | lora_weights 0.6000 | ctx_cot 0.7875 | base_nofacts 0.0000
+    k=4  store 0.5167 | lora_weights 0.4125 | ctx_cot 0.7375 | base_nofacts 0.0125
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb113 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 114: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.854  k2 d4096=0.654  k3 d4096=0.592  k4 d4096=0.321
+    training adapter kb114 on 800 single-hop texts ...
+    epoch  1/12  loss 2.0643
+    epoch  2/12  loss 0.7023
+    epoch  3/12  loss 0.5563
+    epoch  4/12  loss 0.4317
+    epoch  5/12  loss 0.3996
+    epoch  6/12  loss 0.3867
+    epoch  7/12  loss 0.3834
+    epoch  8/12  loss 0.3763
+    epoch  9/12  loss 0.3685
+    epoch 10/12  loss 0.3667
+    epoch 11/12  loss 0.3594
+    epoch 12/12  loss 0.3621
+    trained in 4.2 min
+    k=1  store 0.8542 | lora_weights 1.0000 | ctx_cot 0.8375 | base_nofacts 0.0000
+    k=2  store 0.6542 | lora_weights 0.8125 | ctx_cot 0.9375 | base_nofacts 0.0000
+    k=3  store 0.5917 | lora_weights 0.6000 | ctx_cot 0.8375 | base_nofacts 0.0000
+    k=4  store 0.3208 | lora_weights 0.4500 | ctx_cot 0.8875 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb114 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+
+  ---- KB 115: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.846  k2 d4096=0.688  k3 d4096=0.550  k4 d4096=0.446
+    training adapter kb115 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1135
+    epoch  2/12  loss 0.7125
+    epoch  3/12  loss 0.5428
+    epoch  4/12  loss 0.4237
+    epoch  5/12  loss 0.3990
+    epoch  6/12  loss 0.3890
+    epoch  7/12  loss 0.3839
+    epoch  8/12  loss 0.3772
+    epoch  9/12  loss 0.3770
+    epoch 10/12  loss 0.3729
+    epoch 11/12  loss 0.3650
+    epoch 12/12  loss 0.3699
+    trained in 4.2 min
+    k=1  store 0.8458 | lora_weights 1.0000 | ctx_cot 0.8750 | base_nofacts 0.0000
+    k=2  store 0.6875 | lora_weights 0.6625 | ctx_cot 0.8500 | base_nofacts 0.0000
+    k=3  store 0.5500 | lora_weights 0.5250 | ctx_cot 0.7875 | base_nofacts 0.0000
+    k=4  store 0.4458 | lora_weights 0.3000 | ctx_cot 0.7750 | base_nofacts 0.0000
+/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/tuners_utils.py:1064: UserWarning: Adapter kb115 was active which is now deleted. Setting active adapter to kb100.
+  warnings.warn(
+  shard curve at d=4096 (descriptive): {"1": {"1": 0.8, "2": 0.83046875, "3": 0.85390625, "4": 0.87890625, "8": 0.9140625}, "2": {"1": 0.5562499999999999, "2": 0.6226562499999999, "3": 0.653125, "4": 0.72734375, "8": 0.80078125}, "3": {"1": 0.446875, "2": 0.5234375000000001, "3": 0.5804687500000001, "4": 0.6171875, "8": 0.7046874999999999}, "4": {"1": 0.35390625, "2": 0.40312499999999996, "3": 0.4921875, "4": 0.5179687500000001, "8": 0.6421874999999999}}
+V134-DONE
+V136-WRAPPER-EXIT 0

@@ -1,0 +1,1094 @@
+{
+ "qwen8|256|2|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5535973689864268
+ },
+ "qwen8|256|2|8": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5535973689864268
+ },
+ "qwen8|256|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   4,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.7489344924354807
+ },
+ "qwen8|256|16|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "bits",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.06568183691259699
+ },
+ "qwen8|256|16|8": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "bits",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.06568183691259699
+ },
+ "qwen8|256|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.4079137966311263
+ },
+ "qwen8|1024|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "bits",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6540051582788337
+ },
+ "qwen8|1024|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6540051582788337
+ },
+ "qwen8|1024|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6540051582788337
+ },
+ "qwen8|1024|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 2049,
+  "dev_acc": 0.21991721876335438
+ },
+ "qwen8|1024|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.2757368385219972
+ },
+ "qwen8|1024|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.33996528994083447
+ },
+ "b46|256|2|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5535973689864268
+ },
+ "b46|256|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "bits",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.727818224031258
+ },
+ "b46|256|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   4,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.7498815455926625
+ },
+ "b46|256|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "LA",
+   2,
+   "onehot",
+   "tern",
+   0.5
+  ],
+  "cap": 2049,
+  "dev_acc": 0.1942692853367705
+ },
+ "b46|256|16|8": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "bits",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.06568183691259699
+ },
+ "b46|256|16|16": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "bits",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.06568183691259699
+ },
+ "b46|1024|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   8,
+   "bits",
+   "clip3",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6590611644231438
+ },
+ "b46|1024|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   8,
+   "bits",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.667217435298392
+ },
+ "b46|1024|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   8,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.667217435298392
+ },
+ "b46|1024|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.20198185540498012
+ },
+ "b46|1024|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.2797347386969154
+ },
+ "b46|1024|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   4,
+   "onehot",
+   "tern",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.3721533589773496
+ },
+ "llama|256|2|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5535973689864268
+ },
+ "llama|256|2|8": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5535973689864268
+ },
+ "llama|256|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   4,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.7488290346598552
+ },
+ "llama|256|16|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "bits",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.06568183691259699
+ },
+ "llama|256|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "tern",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.30584165883594333
+ },
+ "llama|256|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.4887455290685856
+ },
+ "llama|1024|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "bits",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6763548731123952
+ },
+ "llama|1024|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   4,
+   "onehot",
+   "clip3",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6856593329037932
+ },
+ "llama|1024|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   4,
+   "onehot",
+   "clip3",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6856593329037932
+ },
+ "llama|1024|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 2049,
+  "dev_acc": 0.23437532724169588
+ },
+ "llama|1024|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.32967151518204446
+ },
+ "llama|1024|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.3995307651704314
+ },
+ "mistral|256|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   2,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6508100973123447
+ },
+ "mistral|256|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "bits",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.7165033914287058
+ },
+ "mistral|256|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "A",
+   8,
+   "bits",
+   "clip3",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.731915034480764
+ },
+ "mistral|256|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "tern",
+   0.5
+  ],
+  "cap": 2049,
+  "dev_acc": 0.2182921204077474
+ },
+ "mistral|256|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.34915472800503816
+ },
+ "mistral|256|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.4841319473334444
+ },
+ "mistral|1024|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   4,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.6605379285514413
+ },
+ "mistral|1024|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   4,
+   "onehot",
+   "clip3",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.672111068982146
+ },
+ "mistral|1024|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   4,
+   "onehot",
+   "clip3",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.672111068982146
+ },
+ "mistral|1024|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 2049,
+  "dev_acc": 0.20483228799746134
+ },
+ "mistral|1024|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   1,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.253097430786391
+ },
+ "mistral|1024|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   4,
+   "onehot",
+   "tern",
+   1.0
+  ],
+  "cap": 2049,
+  "dev_acc": 0.3718490103591434
+ },
+ "e5|256|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "LA",
+   4,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 385,
+  "dev_acc": 0.6397123094459206
+ },
+ "e5|256|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "LA",
+   8,
+   "onehot",
+   "clip3",
+   1.0
+  ],
+  "cap": 385,
+  "dev_acc": 0.6575071399373781
+ },
+ "e5|256|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "LA",
+   8,
+   "onehot",
+   "clip3",
+   1.0
+  ],
+  "cap": 385,
+  "dev_acc": 0.6575071399373781
+ },
+ "e5|256|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "L",
+   1,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 385,
+  "dev_acc": 0.19017137152483896
+ },
+ "e5|256|16|8": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "bits",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.06568183691259699
+ },
+ "e5|256|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "L",
+   4,
+   "onehot",
+   "tern",
+   1.0
+  ],
+  "cap": 385,
+  "dev_acc": 0.33743830328812585
+ },
+ "e5|1024|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   2,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 385,
+  "dev_acc": 0.5866509011506339
+ },
+ "e5|1024|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   2,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 385,
+  "dev_acc": 0.5866509011506339
+ },
+ "e5|1024|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   2,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 385,
+  "dev_acc": 0.5866509011506339
+ },
+ "e5|1024|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "A",
+   4,
+   "onehot",
+   "tern",
+   0.5
+  ],
+  "cap": 385,
+  "dev_acc": 0.19308374824657074
+ },
+ "e5|1024|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "A",
+   8,
+   "onehot",
+   "tern",
+   0.5
+  ],
+  "cap": 385,
+  "dev_acc": 0.21015001997040153
+ },
+ "e5|1024|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "A",
+   8,
+   "onehot",
+   "tern",
+   0.5
+  ],
+  "cap": 385,
+  "dev_acc": 0.21015001997040153
+ },
+ "bge|256|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "A",
+   4,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.6087805709743569
+ },
+ "bge|256|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "A",
+   4,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.6087805709743569
+ },
+ "bge|256|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "A",
+   4,
+   "bits",
+   "tern",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.6087805709743569
+ },
+ "bge|256|16|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "bits",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.06568183691259699
+ },
+ "bge|256|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   2,
+   "onehot",
+   "tern",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.2352283810734137
+ },
+ "bge|256|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "A",
+   8,
+   "onehot",
+   "tern",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.26255229448509904
+ },
+ "bge|1024|2|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5485472265577775
+ },
+ "bge|1024|2|8": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5485472265577775
+ },
+ "bge|1024|2|16": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5485472265577775
+ },
+ "bge|1024|16|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.0990919835089994
+ },
+ "bge|1024|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "A",
+   8,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 193,
+  "dev_acc": 0.17655958354552362
+ },
+ "bge|1024|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "A",
+   8,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 193,
+  "dev_acc": 0.17655958354552362
+ },
+ "minilm|256|2|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "LA",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.6231374612122217
+ },
+ "minilm|256|2|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "LA",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.6231374612122217
+ },
+ "minilm|256|2|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "LA",
+   2,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.6231374612122217
+ },
+ "minilm|256|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 193,
+  "dev_acc": 0.18071999785903767
+ },
+ "minilm|256|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   2,
+   "onehot",
+   "tern",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.24061994396690056
+ },
+ "minilm|256|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   4,
+   "onehot",
+   "cnt",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.27519957325316574
+ },
+ "minilm|1024|2|4": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5485472265577775
+ },
+ "minilm|1024|2|8": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5485472265577775
+ },
+ "minilm|1024|2|16": {
+  "vsar_prep": "center",
+  "cfg": [
+   "center",
+   "LA",
+   1,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 1,
+  "dev_acc": 0.5485472265577775
+ },
+ "minilm|1024|16|4": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "LA",
+   2,
+   "onehot",
+   "clip3",
+   1.0
+  ],
+  "cap": 193,
+  "dev_acc": 0.14906261211286734
+ },
+ "minilm|1024|16|8": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "center",
+   "A",
+   8,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 193,
+  "dev_acc": 0.15260886867704002
+ },
+ "minilm|1024|16|16": {
+  "vsar_prep": "whiten",
+  "cfg": [
+   "whiten",
+   "A",
+   16,
+   "onehot",
+   "cnt",
+   0.5
+  ],
+  "cap": 193,
+  "dev_acc": 0.1563446378713714
+ }
+}

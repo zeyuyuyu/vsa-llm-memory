@@ -1,0 +1,17 @@
+# B71 dev audit of B56's retraining and the delta-written store (DEV stores, B53's configuration of each R1 cell;
+# means over the 12 R1 cells, accuracy points). Registered factor rules: quantisation named if its loss >= 0.5 on >= 4
+# encoders; grid named if the extended grid adds >= 0.5 on >= 4; misread-only updates named if nlms beats err by >= 0.5
+# on >= 4.
+
+| encoder | Hebbian (B53) | Hebbian unquantized | stored-key acc. Hebbian | RT (B56 grid) | RT unquantized | RT quant. loss | RT ext. grid | ext. gain | RT corrected facts / epoch (first epoch, share) | delta 1 pass (VSADR1) | delta unquant. | delta stored-key acc. | best nlms - best err (1 pass) | NLMSFR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | 49.83 | 52.92 | 77.64 | 50.83 | 53.82 | +2.98 | 51.03 | +0.20 | 16.5% | 51.07 | 54.06 | 79.04 | +2.24 | 51.10 |
+| Granite-3.3-8B | 49.46 | 52.44 | 75.99 | 49.90 | 52.81 | +2.91 | 50.14 | +0.24 | 18.3% | 50.58 | 53.46 | 76.67 | +3.25 | 50.67 |
+| Llama-3.1-8B | 49.42 | 52.65 | 77.51 | 50.96 | 53.94 | +2.98 | 51.17 | +0.22 | 17.2% | 51.61 | 53.92 | 78.81 | +2.29 | 51.08 |
+| Mistral-7B | 50.47 | 53.82 | 78.45 | 51.75 | 54.93 | +3.19 | 52.09 | +0.35 | 18.0% | 51.62 | 54.54 | 77.84 | +1.72 | 51.00 |
+| e5-base-v2 | 46.36 | 48.26 | 73.30 | 46.71 | 48.74 | +2.03 | 46.92 | +0.21 | 22.8% | 47.58 | 49.79 | 73.50 | +1.81 | 47.31 |
+| bge-small | 47.06 | 49.21 | 68.95 | 47.76 | 50.61 | +2.85 | 47.96 | +0.21 | 28.9% | 47.38 | 49.50 | 70.03 | +1.72 | 46.82 |
+| MiniLM-L6 | 44.88 | 46.36 | 72.62 | 46.00 | 48.12 | +2.12 | 46.17 | +0.18 | 26.7% | 45.98 | 46.75 | 72.39 | +1.30 | 45.65 |
+
+Encoders meeting the factor rules: quantisation 7 of 7; extended grid 0 of 7; misread-only updates (nlms - err >= 0.5) 7 of 7.
+Named as contributing (registered rule, >= 4 encoders): quant, err

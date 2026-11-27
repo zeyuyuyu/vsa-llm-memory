@@ -1,0 +1,39 @@
+{
+ "codebook": 128,
+ "arms": {
+  "floor": [
+   0.512,
+   0.53,
+   0.504
+  ],
+  "parser": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "vq_ema": [
+   0.496,
+   0.502,
+   0.53
+  ]
+ },
+ "diag": {
+  "vq_ema": [
+   {
+    "codebook_used": 120,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.06706820771609963
+   },
+   {
+    "codebook_used": 113,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.07944001302295295
+   },
+   {
+    "codebook_used": 122,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.08269575126159857
+   }
+  ]
+ }
+}

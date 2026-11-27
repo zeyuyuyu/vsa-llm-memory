@@ -1,0 +1,26 @@
+# B66 predictions (prereg/B66_reconciliation_prereg.md) against the results (verdict files results/b66_A1.txt,
+# b66_A2.txt, b66_B_verdict.txt, b66_C_verdict.txt, b66_D_verdict.txt). Points; R1; ideal accounting.
+
+PA1  HELD.   Grid effect on D = first - SDMt: +3.57 (Qwen3-8B), +2.81 (Llama) >= +2.0; code effect +0.76 / +0.62
+             (|.| <= 2.0); registered attribution GRID on both encoders.
+PA2  HELD.   D(pipeline code, clean grid) +1.86 / +2.03 (in -1.0 .. +2.5); D(clean code, B64 grid) -0.95 / -0.16
+             (in -2.0 .. +1.0).
+PA3  HELD.   Clean-room re-run reproduces its original run: 108 of 108 (arm, cell) test accuracies identical per encoder.
+PA4  PARTLY FAILED. Map-mean R1 VSAR - SDMT: SDMt leads on 6 of 7 (Qwen3-8B level, -0.80 [-1.84, +0.20]) - held;
+             between-map SD <= 0.8 on every encoder - FAILED (Llama 1.17, Mistral 0.92, bge 0.95; Qwen3-8B 0.797);
+             map 0 of VSARm reproduces B49's VSAR dev choice and dev accuracy in 168 of 168 cells - held.
+PA5  HELD.   Map-mean R1 VSA - BEST7 labels equal the registered map's on 5 of 7 (Granite, Mistral, e5, bge, MiniLM;
+             Qwen3-8B and Llama move from "store leads" to "level"); bar passes on 0 of 7.
+PB1  HELD.   STORE - LSFR over R1: LSFR leads on 7 of 7 (-1.49 to -2.26); at R1-V2 on 7 of 7.
+PB2  HELD.   LSFR - LAMC over R1: LAMc leads on 7 of 7 (-1.92 to -4.82).
+PB3  HELD.   VSAPC - LSFP over R1: LSFP leads on 7 of 7 (-4.01 to -11.19); |LSFX - LAMC| <= 1.5 on 7 of 7 (max 0.76).
+PB4  HELD.   Registered reading: "both" (and the write-rule criterion is also met: LSFR leads 7 / 7, LSFP leads 7 / 7).
+PC1  PARTLY FAILED. Median 72-draw R1 test accuracy vs the full-grid choice: LAMC -1.04 / -0.68 / -1.33 / -0.79
+             (within 1.5 on all 4: held); SDMT -2.01 / -1.92 / -1.45 / -1.50 (within 1.5 on Llama and Mistral only:
+             failed on Qwen3-8B and Granite); KF6 not run (cut, compute note 2).
+PC2  PARTLY FAILED. STORE - LAMC72 keeps the full-grid sign in 20 of 20 draws on all 4 (held); VSAR - SDMT72 keeps it
+             in 10 / 12 / 7 / 16 of 20 (>= 18 on none of 4: failed).
+PD1  HELD.   Two-level / one-level interval width, mean over contrasts x regions per encoder: 1.32-1.39.
+PD2  PARTLY FAILED. Claims (1), (2), (4), (5) hold under the two-level interval (held); claim (7) fails on Llama and e5
+             (held); claim (6) holds on all 7 (predicted to fail on at least one: failed).
+PX   HELD.   Checks (results/b66_A_check.txt, b66_B_check.txt, b66_D_check.txt): see results/b66_verdict.txt.

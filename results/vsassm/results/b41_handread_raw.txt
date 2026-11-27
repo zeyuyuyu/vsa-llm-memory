@@ -1,0 +1,1208 @@
+====================================================================================================
+ARGMAX: 961 failures of 1000 at h=6 (N=320, rho=0.200, seed 1)
+-- q0 decoy=False answer=Krebra Rusbrinbaiz got=DEAD
+   start  'Vairia kqeirrunkurp' -> Vaikriak Feirrunkrun 0.83, Vaikriak Feirrunkrup* 0.03, Vaikriak Feirrunprun 0.03
+   hop1 banker     s 'aikirap Feqrirunkrup' -> Vaikriak Feirrunkrup* 1.00, Vaikriak Feirrunprun 0.00, Vaikriak Feirrunkrun 0.00
+                   o 'Brikrbul Shoubstnv' -> Brikbrul Shoustu* 0.96, Brikbrul Shaustu 0.02, Brikbrul Shoastu 0.01
+                   (7 facts with this relation in context)
+   hop2 neighbour  s 'BrdkbrulfShuosatu' -> Brikbrul Shoostu 0.84, Brikbrul Shoustu* 0.10, Brikbrul Shoastu 0.03
+                   o 'Brrusrbak Givonplot' -> Brurdrail Rome 0.33, Brerkrom Plalos 0.30, Brurdrail Rede 0.05
+                   (11 facts with this relation in context)
+   hop3 courier    s 'BruusbrfGijnpflom' -> Shalzeir Bruusgeimkis 0.98, Brusbrak Gianplog 0.01, Brusbrak Gionplom* 0.00
+                   o 'Kreksse Fmokresun' -> Krekses Fomkresun* 0.79, Krekses Fomkrosun 0.18, Krekses Fomprosun 0.03
+                   (17 facts with this relation in context)
+   hop4 courier    s 'KreskssesFmokremnu' -> Krekses Fomkrosun 0.72, Krekses Fomkresun* 0.13, Krekses Fomprosun 0.03
+                   o 'Nainqrais Mcimzreis' -> Naintrais Meimzreis* 1.00, Naintrais Meimtriis 0.00, Naintrais Meimtreis 0.00
+                   (17 facts with this relation in context)
+   hop5 translator s 'Nainqrais Mcimzreis' -> Naintrais Meimzreis* 1.00, Naintrais Meimtriis 0.00, Naintrais Meimtreis 0.00
+                   o 'Glytheli Tranmgkouf' -> Glutheil Tremgokro 0.77, Glanbriar Tranplikmim 0.09, Glilshoun Zimengluf 0.01
+                   (11 facts with this relation in context)
+   hop6 tenant     s 'Gltheil Tremgoknuv' -> Glutheil Tremgoknu* 1.00, Glutheil Tremgokru 0.00, Glutheil Tremgokro 0.00
+                   o 'KrebraR usbrmnbaiz' -> Krebra Rusbrinbail 0.87, Krebra Rusbrinbaiz* 0.13, Krebra Rusbranbail 0.00
+                   (6 facts with this relation in context)
+-- q1 decoy=True answer=Dutriam Surdiashiam got=DEAD
+   start  'aanlshilz Gljunsiachkap' -> Kanshil Glenliachai 0.79, Kanshil Glensiachai 0.09, Glilshoun Zamenglus 0.01
+   hop1 mediator   s 'Kanshil Glnsiwchai' -> Kanshil Glensiachai 0.61, Kanshil Glunsiachai* 0.22, Kanshil Glenliachai 0.11
+                   o 'ZaigluolP lourtjai' -> Zailgloul Plourthai* 0.37, Zailgloul Plounthai 0.34, Zailgloul Plounthii 0.08
+                   (7 facts with this relation in context)
+   hop2 guardian   s 'Zalilgou lPfowrtahib' -> Zailgloul Plourthai* 0.68, Zailgloul Plounthai 0.13, Zailgloul Plounthui 0.05
+                   o 'Ronfaik Raikreshsoamv' -> Ronfaik Raiskresshoam* 1.00, Ronfaik Raiskrepshoum 0.00, Ronfaik Raiskdesshoum 0.00
+                   (17 facts with this relation in context)
+   hop3 banker     s 'Rofaik Raiskreshoma' -> Ronfaik Raiskresshoum 0.99, Ronfaik Raiskresshoam* 0.00, Ronfaik Raiskrepshoum 0.00
+                   o 'Lairdren Breite' -> Lairdren Breite* 1.00, Lairdren Breita 0.00, Lairdren Breiti 0.00
+                   (7 facts with this relation in context)
+   hop4 coach      s 'LirdreqBetiv' -> Lairdren Breile 0.79, Lairdren Breiti 0.08, Lidrir Drispaibruk 0.02
+                   o 'Bremvul riompkriam' -> Bremvul Triomkriam* 0.96, Bremvul Tkiamkriam 0.02, Bremvul Triankriam 0.01
+                   (11 facts with this relation in context)
+   hop5 coach      s 'Brevmul Triommuiam' -> Bremvul Triomkriam* 0.99, Fidrein Brevoulplur 0.00, Fidrein Brevoulplun 0.00
+                   o 'Lopzour Rabbail' -> Louzour Rabbail* 1.00, Louzour Rabrail 0.00, Louzour Rabfail 0.00
+                   (11 facts with this relation in context)
+   hop6 supplier   s 'Lopzour Rabbail' -> Louzour Rabbail* 1.00, Louzour Rabrail 0.00, Louzour Rabfail 0.00
+                   o 'Dutriam Surdiahiam' -> Dutriam Surdiathiam 1.00, Dutriam Surdiashiam* 0.00, Dutriam Sirdiathiam 0.00
+                   (7 facts with this relation in context)
+-- q2 decoy=False answer=Derdru Doulas got=DEAD
+   start  'gzimtres houhi' -> Geimtres Shouthi* 0.33, Komzum Zimge 0.16, Geimtres Shoutho 0.15
+   hop1 broker     s 'zeimtresShojutci' -> Geimtres Shouthi* 0.54, Zeimrei Sikurlou 0.17, Zeimrei Sikunlou 0.09
+                   o 'Kbrum fatsgsktum' -> Kabrum Kfastikstum* 0.91, Kabrum Krastifstum 0.04, Kabrum Krastiksgum 0.03
+                   (10 facts with this relation in context)
+   hop2 lawyer     s 'Kabrum cKfastlkntugm' -> Kabrum Kfastikstum* 0.99, Kabrum Krastifstum 0.01, Kabrum Krastikstum 0.00
+                   o 'Brelmia mKeiketshk' -> Brelmiam Keikesthok 0.85, Brelmiam Keikedthok 0.10, Brelmiam Keikesthuk* 0.02
+                   (9 facts with this relation in context)
+   hop3 landlord   s 'Brelmham eKikesthuk' -> Brelmiam Keikesthuk* 0.99, Brelmiam Keikesthok 0.01, Brelmiam Keikedthok 0.00
+                   o 'Dirshek Diuasgodai' -> Dirshek Diasgodia* 0.96, Dirshek Diastudia 0.03, Dirshek Diastodua 0.01
+                   (10 facts with this relation in context)
+   hop4 neighbour  s 'DirhseksDiasgouia' -> Dirshek Diasgodia* 0.65, Dirshek Diastudia 0.19, Dirshek Diastodua 0.05
+                   o 'Krekkra Dretvhuk' -> Krekkrai Dremthuk 0.62, Krekkrai Drevthuk* 0.38, Krekkrai Dremphuk 0.00
+                   (11 facts with this relation in context)
+   hop5 client     s 'Krekkrai Drevthuk' -> Krekkrai Drevthuk* 1.00, Krekkrai Dremthuk 0.00, Krekkrai Dremphuk 0.00
+                   o 'FqubruloR eizsiailu' -> Foubrul Reisziadiu* 0.18, Foubrul Riisziadia 0.17, Foubrul Reisziadia 0.13
+                   (16 facts with this relation in context)
+   hop6 sponsor    s 'FqubruloR eizsiailu' -> Foubrul Reisziadiu* 0.18, Foubrul Riisziadia 0.17, Foubrul Reisziadia 0.13
+                   o 'Derrdu Dhulas' -> Derdru Doulas* 1.00, Derdru Doular 0.00, Derdru Doulal 0.00
+                   (10 facts with this relation in context)
+-- q3 decoy=True answer=Biktar Falgam got=DEAD
+   start  'aGdnonu arebriwksil' -> Gandoun Trelbriiskil* 0.07, Gandoun Trulbriaskil 0.03, Laplail Saontrer 0.03
+   hop1 rival      s 'GancounTreslbrioiskicl' -> Gandoun Trelbriaskil 0.62, Gandoun Trelbriiskil* 0.06, Gonchil Tiachebro 0.02
+                   o 'Seelubrian Tuelgtaam' -> Stelbrian Telgatam* 0.29, Dreimglia Turglimpir 0.05, Tholgloum Suipainbi 0.02
+                   (14 facts with this relation in context)
+   hop2 broker     s 'Stejbrian eTlgtatao' -> Stelbrian Telratam 0.27, Stelbrian Telgatam* 0.13, Steilchai Geatei 0.03
+                   o 'guokegi Bgahithoul' -> Loukgein Bgaithoul* 0.99, Fumgeik Glurthoi 0.00, Brousbiam Goukeper 0.00
+                   (10 facts with this relation in context)
+   hop3 guardian   s 'Lokugeni Bgaithiul' -> Loukgein Bgaithoul* 1.00, Peirplor Gedikbgai 0.00, Laigia Gludiak 0.00
+                   o 'Zoasjs hLiakbav' -> Ziasas Liakbav* 0.23, Ziasas Liakban 0.05, Zoga Glekhir 0.05
+                   (17 facts with this relation in context)
+   hop4 mentor     s 'Zoasjs hLiakbav' -> Ziasas Liakbav* 0.23, Ziasas Liakban 0.05, Zoga Glekhir 0.05
+                   o 'Krovuan Kdrimao' -> Krouvan Krimfao* 0.91, Krouvan Krimmai 0.08, Krouvan Krivfai 0.00
+                   (11 facts with this relation in context)
+   hop5 landlord   s 'Koruvan rimmoa' -> Krouvan Krimfao* 0.83, Krouvan Krimmai 0.03, Krouvan Krimfai 0.02
+                   o 'Krouu Lilmoypuol' -> Krousu Lilmoupoul* 1.00, Krousu Lolmoupoul 0.00, Krousu Lolmoupoub 0.00
+                   (10 facts with this relation in context)
+   hop6 courier    s 'Kwouhu Llomuizoul' -> Krousu Lolmoupoub 0.81, Siaglaik Louldoum 0.02, Krousu Lolmoupoul 0.01
+                   o 'Biktar Falgam' -> Biktar Falgam* 1.00, Biktar Falgum 0.00, Biktar Fabgum 0.00
+                   (17 facts with this relation in context)
+-- q5 decoy=False answer=Staisglan Veikfudaan got=DEAD
+   start  'KraispouGluriaa' -> Kraipou Glurilna* 0.97, Kraipou Glirilna 0.01, Kraipou Glarilna 0.01
+   hop1 deputy     s 'Kruaipou tlrziln' -> Kraipou Glarilna 0.16, Kraipou Glurilna* 0.09, Krousshaim Naisain 0.05
+                   o 'Barimjtic Nunedriok' -> Braimsti Nunnedriok* 0.99, Braimsti Nunnedriaz 0.00, Braimsti Nunmedriak 0.00
+                   (10 facts with this relation in context)
+   hop2 neighbour  s 'Barimjtic Nunedriok' -> Braimsti Nunnedriok* 0.99, Braimsti Nunnedriaz 0.00, Braimsti Nunmedriak 0.00
+                   o 'rTocheil Dorkuneqkhds' -> Trocheil Droukneikchis* 0.75, Trocheil Droulneikchis 0.09, Trocheil Droinneikchis 0.04
+                   (11 facts with this relation in context)
+   hop3 translator s 'Trochdinl Dioudndikcisu' -> Trocheil Drounneikchis 0.53, Trocheil Droinneikchis 0.32, Trocheil Droulneikchis 0.05
+                   o 'DiaiknStamzrepis' -> Diamkin Stamzeis 0.98, Diamkin Stamreis* 0.02, Diamkin Stamzois 0.00
+                   (11 facts with this relation in context)
+   hop4 registrar  s 'Diarmin Stamreis' -> Diamkin Stamreis* 1.00, Diarplour Sika 0.00, Diamkin Stamzeis 0.00
+                   o 'Rrillo Munkeidriax' -> Reilol Mukkeidriak* 0.27, Reilol Mokkeidriak 0.22, Reilol Muvkeidriak 0.10
+                   (5 facts with this relation in context)
+   hop5 broker     s 'RevilolvMukeidtrijak' -> Reilol Muvkeidriak 0.85, Reilol Mukkeidriak* 0.02, Lurtor Driaksibleil 0.02
+                   o 'ZiarvianjKinastuliar' -> Ziarvian Kianguliar 0.63, Ziarvian Kiansuliar* 0.36, Ziarvian Kienguliar 0.01
+                   (10 facts with this relation in context)
+   hop6 agent      s 'Ziarvian Kinfdliaar' -> Ziarvian Kianguliar 0.53, Ziarvian Kienguliar 0.22, Ziarvian Kianguliir 0.17
+                   o 'Sqaisglan Veikfudana' -> Staisglan Veikfudain 0.53, Staisglan Veikfudaan* 0.47, Staisglan Veikfufain 0.00
+                   (5 facts with this relation in context)
+-- q6 decoy=False answer=Kokem Truvounmoo got=DEAD
+   start  'iRayncsB riaplairrik' -> Rianos Brialpoireik 0.13, Rianos Brialpaireik* 0.05, Rianos Brialpaireir 0.04
+   hop1 rival      s 'Rianou Briallpaieri' -> Rianos Brialpaireir 0.97, Rianos Brialpoireik 0.02, Rianos Brialpaireik* 0.01
+                   o 'Treskrin eRmzuk' -> Treskrin Remzuk* 0.97, Treskrin Remruk 0.02, Treskrin Remrak 0.01
+                   (14 facts with this relation in context)
+   hop2 employer   s 'Treslrin Remzuo' -> Treskrin Remzuk* 1.00, Treskrin Remruk 0.00, Treskrin Remrak 0.00
+                   o 'Thitanploun Fikrurplais' -> Thianploun Fikrurplais* 1.00, Thianploun Fikrukplais 0.00, Thianploun Fikrukklais 0.00
+                   (9 facts with this relation in context)
+   hop3 translator s 'Thitanploun Fikrurplais' -> Thianploun Fikrurplais* 1.00, Thianploun Fikrukplais 0.00, Thianploun Fikrukklais 0.00
+                   o 'Sialstrr Szoonsplaikb' -> Shialtre Szonnosplaik* 0.72, Shialtre Stornosplaik 0.10, Shialtre Stonnosplaik 0.04
+                   (11 facts with this relation in context)
+   hop4 mentor     s 'Shilatre Stzonnosplaik' -> Shialtre Stonnosplaik 0.52, Shialtre Stonnosplaiz 0.42, Shialtre Szonnosplaik* 0.06
+                   o 'Msesgel Vafglxestu' -> Mesgel Vafglestuk* 1.00, Mesgel Varglestuk 0.00, Mesgel Virglestuk 0.00
+                   (11 facts with this relation in context)
+   hop5 heir       s 'Megel Vazfglehtuk' -> Mesgel Vafglestuk* 0.97, Mesgel Vurglestuk 0.02, Mesgel Varglestuk 0.01
+                   o 'Dcupleki hiawggloub' -> Dupleik Niakogloub* 0.29, Dukei Daimzeilthua 0.03, Chiaklour Glairbumzo 0.02
+                   (7 facts with this relation in context)
+   hop6 broker     s 'Duplik Niakonloub' -> Dupleik Niakonlour 1.00, Dupleik Niakogloub* 0.00, Dupleik Niakogleur 0.00
+                   o 'tokem Truvuunmoo' -> Kokem Truvounmoo* 1.00, Kokem Truvounmou 0.00, Kokem Truvounvou 0.00
+                   (10 facts with this relation in context)
+-- q7 decoy=True answer=Maplo Glanailpti got=DEAD
+   start  'tSotres Deknchusvno' -> Stotres Dekchumson 0.35, Stotres Dekchuvson* 0.33, Stotres Dekchomson 0.23
+   hop1 rival      s 'SttersD ekcvuson' -> Stotres Dekchuvson* 0.63, Stotres Dekchomson 0.27, Stotres Dekchumson 0.03
+                   o 'Sarkam Fedviik' -> Sarkam Feivik* 0.96, Sarkam Feevok 0.04, Sarkam Faivok 0.00
+                   (14 facts with this relation in context)
+   hop2 client     s 'Sardkamz Fivik' -> Sarkam Feivik* 0.88, Sarkam Feivok 0.02, Sarkam Faivok 0.01
+                   o 'Shaimai Tralmlzilro' -> Shaimai Trailmlailro* 0.99, Shaimai Traikplailro 0.00, Shaimai Trailplailro 0.00
+                   (16 facts with this relation in context)
+   hop3 doctor     s 'Shaimui Traimlaliuo' -> Shaimai Traikplailro 0.84, Shaimai Trailmlailro* 0.11, Shaimai Trailplailro 0.03
+                   o 'Drilevs Mialabsha' -> Drilves Mialaisha* 0.98, Drilves Mialuisha 0.01, Drilves Mialaikha 0.00
+                   (7 facts with this relation in context)
+   hop4 witness    s 'Drihlves iaalihsa' -> Drilves Mialaisha* 0.64, Driadein Saildrekis 0.11, Drourshiar Fungledriu 0.06
+                   o 'praimsu Fenplar' -> Kraimsu Fenplar* 1.00, Traifus Feplair 0.00, Kraimsu Fenplal 0.00
+                   (9 facts with this relation in context)
+   hop5 supplier   s 'Kuaismb Fenplaar' -> Kraimsu Fenplar* 0.99, Kraimsu Fenplal 0.00, Goupou Plaundekne 0.00
+                   o 'olzil zuinrxb' -> Polzil Fuinranko* 0.90, Zaimreis Daiskreilchuin 0.01, Zoulfou Liromples 0.01
+                   (7 facts with this relation in context)
+   hop6 coach      s 'Pelizl Fuinrvko' -> Polzil Fuinranko* 1.00, Polzil Faonranko 0.00, Polzil Fainnanko 0.00
+                   o 'iaple lGanuailtpi' -> Diakglour Niaplelrouk 0.08, Maplo Glanailpti* 0.04, Miartair Vaiblu 0.04
+                   (11 facts with this relation in context)
+-- q8 decoy=True answer=Riasteik Pleispiaploe got=DEAD
+   start  'Shualtrue Sttornospaik' -> Shialtre Stornosplaik* 0.85, Shialtre Stonnosplaik 0.10, Shialtre Stonnosplaiz 0.03
+   hop1 tutor      s 'hailtrS tornosplanik' -> Shialtre Stornosplaik* 0.98, Shialtre Stonnosplaik 0.00, Shialtre Stonnosplaiz 0.00
+                   o 'kraimsui Fenlab' -> Kraimsu Fenplab* 1.00, Kraimsu Fenplal 0.00, Kraimsu Fenplar 0.00
+                   (12 facts with this relation in context)
+   hop2 rival      s 'Kraimsu Fenplab' -> Kraimsu Fenplab* 1.00, Kraimsu Fenplal 0.00, Kraimsu Fenplar 0.00
+                   o 'Trosein iansaa' -> Trosein Kiasaa* 0.99, Trosein Keasia 0.01, Trosein Kiasio 0.00
+                   (14 facts with this relation in context)
+   hop3 patron     s 'orsien Kiasaa' -> Trosein Kiasaa* 1.00, Vonsa Kiazo 0.00, Kriaszoum Tiazaa 0.00
+                   o 'KairgxliaSenevirza' -> Kiarglia Senveirza* 0.93, Kiarglia Senveikza 0.04, Kiarglia Senveikzu 0.01
+                   (15 facts with this relation in context)
+   hop4 tenant     s 'Kiarglia Sehvlirza' -> Kiarglia Senveirza* 0.94, Kiarglia Senveikza 0.03, Kiarglia Senveikra 0.02
+                   o 'Lamkrok aVakplki' -> Lambrok Vakplik* 0.97, Lambrok Vakplis 0.02, Lambrok Vakplek 0.01
+                   (6 facts with this relation in context)
+   hop5 mediator   s 'Lamxbrnk Vaykplki' -> Lambrok Vakplis 0.50, Lambrok Vakplik* 0.34, Lambrok Vakplek 0.07
+                   o 'Thiafa Feizr' -> Thiafa Fezir* 0.94, Thiafa Fefir 0.06, Thiafa Fefig 0.00
+                   (7 facts with this relation in context)
+   hop6 envoy      s 'Thiafla pezir' -> Thiafa Fezir* 0.97, Thiafa Fefir 0.01, Laildom Peizul 0.00
+                   o 'Riasctqeki Pleispiaploe' -> Riasteik Pleispiaploe* 0.99, Riasteik Pleispiaplou 0.01, Riasteik Pleispiapliu 0.00
+                   (8 facts with this relation in context)
+-- q9 decoy=False answer=Thebrai Galir got=DEAD
+   start  'LiarainL etshero' -> Liarain Leidsherok 0.39, Liarain Leitsherok* 0.38, Liarain Leissherok 0.22
+   hop1 patron     s 'Liarain Letisehrok' -> Liarain Leitsherok* 0.64, Liarain Leidsherok 0.22, Liarain Leissherok 0.11
+                   o 'Drunbua Legerrom' -> Drunba Legeirrom* 0.91, Drunba Lemeirrom 0.07, Drunba Lomeirrom 0.01
+                   (15 facts with this relation in context)
+   hop2 doctor     s 'Drunbua Legerrom' -> Drunba Legeirrom* 0.91, Drunba Lemeirrom 0.07, Drunba Lomeirrom 0.01
+                   o 'Thither Vasiutt' -> Thithir Vasitut* 1.00, Vufak Stuven 0.00, Thamde Vaisglo 0.00
+                   (7 facts with this relation in context)
+   hop3 coach      s 'TbtihirfVsaittu' -> Thithir Vasutur 0.19, Sheirfia Thailgtitrel 0.05, Stommou Trirpait 0.03
+                   o 'Drouabri Stiadraz' -> Drousbri Stiadraz* 1.00, Drousbri Stiadrar 0.00, Drousbri Stiadvar 0.00
+                   (11 facts with this relation in context)
+   hop4 mentor     s 'DrousbroipStiadraz' -> Drousbri Stiadraz* 1.00, Drousbri Stiadvar 0.00, Drousbri Stiadrar 0.00
+                   o 'Fepeik Saimchiothlk' -> Fepeik Saimchiothak* 1.00, Fepeik Saimchiathak 0.00, Fepeik Suimchiathak 0.00
+                   (11 facts with this relation in context)
+   hop5 courier    s 'FepeiSaihmchikoithzk' -> Fepeik Saimchiothak* 0.55, Fepeik Saimchiathak 0.41, Fepeik Suimchiathak 0.03
+                   o 'Plougeik fPoulrrikak' -> Plougeik Poulrriak* 1.00, Plougeik Pouldrial 0.00, Plougeik Pouldriak 0.00
+                   (17 facts with this relation in context)
+   hop6 employer   s 'Plougeid Poulrrka' -> Plougeik Poulrriak* 1.00, Plougeik Pouldrial 0.00, Plougeik Pouldniak 0.00
+                   o 'ThberaoaGoir' -> Thebrai Galur 0.20, Thebrai Golir 0.08, Thoubroun Theikthao 0.07
+                   (9 facts with this relation in context)
+-- q10 decoy=False answer=Salchu Mikplukspi got=DEAD
+   start  'Beiskai Naqikrgutrouk' -> Beilkai Naibguntrouk 0.52, Beilkai Naikguntrouk* 0.26, Beilkai Naokguntrouk 0.19
+   hop1 translator s 'Beiskai Naqikrgutrouk' -> Beilkai Naibguntrouk 0.52, Beilkai Naikguntrouk* 0.26, Beilkai Naokguntrouk 0.19
+                   o 'Vkaglun Trusel' -> Vakgloun Trusel* 1.00, Vakgloun Trusen 0.00, Vakgloun Trudel 0.00
+                   (11 facts with this relation in context)
+   hop2 partner    s 'Vawgloun Truesel' -> Vakgloun Trusev 0.79, Vakgloun Trusel* 0.07, Vakgloun Trudel 0.04
+                   o 'Thoulrim hCeerril' -> Thoultriam Cherrial* 0.50, Thoultriam Cherriul 0.49, Thoultriam Cherriaf 0.01
+                   (10 facts with this relation in context)
+   hop3 registrar  s 'Thoulrim hCeerril' -> Thoultriam Cherrial* 0.50, Thoultriam Cherriul 0.49, Thoultriam Cherriaf 0.01
+                   o 'Driamgiys Beulti' -> Driamgias Beulti* 1.00, Driamgias Boulti 0.00, Driamgias Boilti 0.00
+                   (5 facts with this relation in context)
+   hop4 client     s 'Driamigas Beulti' -> Driamgias Beulti* 1.00, Driamgias Boilti 0.00, Driamgias Boulti 0.00
+                   o 'Clyeiok Zazummeil' -> Cheikon Zazummeil* 1.00, Cheikon Zezummeil 0.00, Triarthak Zumleikthem 0.00
+                   (16 facts with this relation in context)
+   hop5 employer   s 'Cheioky Zazummeil' -> Cheikon Zazummeil* 1.00, Cheikon Zezummeil 0.00, Cheikon Zezammeil 0.00
+                   o 'Minoula oytlukoil' -> Minboul Kotlukkeil* 0.33, Minboul Koplukkuil 0.13, Minboul Koplukkeil 0.10
+                   (9 facts with this relation in context)
+   hop6 client     s 'Minboul Kojlukei' -> Minboul Koplukkeil 0.59, Minboul Kotlukkeil* 0.18, Minboul Koplukkuil 0.17
+                   o 'Salch uMkipuuspi' -> Salchu Mikplukspi* 0.82, Salchu Mikpluksti 0.11, Salchu Mikpruksti 0.01
+                   (16 facts with this relation in context)
+-- q11 decoy=False answer=Nolglaim Thoukglormin got=DEAD
+   start  'Zexlkua Zabreis' -> Zeilkia Zabreis* 1.00, Zeilkia Zebreis 0.00, Zektha Rivairlra 0.00
+   hop1 rival      s 'Zeilkia Zaybreis' -> Zeilkia Zebreis 0.55, Zeilkia Zabreis* 0.45, Zeilkia Zebriis 0.00
+                   o 'Vhntrian Zavanhel' -> Vontrian Zavanshel* 0.98, Vontrian Zavanshem 0.02, Zakdriar Vountik 0.00
+                   (14 facts with this relation in context)
+   hop2 translator s 'ontrian Zpvanshet' -> Vontrian Zavanshem 0.65, Vontrian Zavanshel* 0.09, Vontrian Zavansham 0.06
+                   o 'Dirshek Ddiastodiea' -> Dirshek Diastodia* 1.00, Dirshek Diastodua 0.00, Dirshek Diastudia 0.00
+                   (11 facts with this relation in context)
+   hop3 inspector  s 'Driske Diastodia' -> Dirshek Diastodia* 1.00, Dirshek Diastudia 0.00, Dirshek Diastodua 0.00
+                   o 'Pebea Piun' -> Peba Pouna* 0.80, Peba Pouba 0.07, Peba Pousa 0.05
+                   (7 facts with this relation in context)
+   hop4 courier    s 'Pb aPouyn' -> Porsei Pabrebo 0.49, Peba Pouba 0.15, Peba Pouna* 0.06
+                   o 'Ligagis Sveddyof' -> Ligais Seidof* 0.94, Ligais Seadom 0.01, Ligais Seidim 0.01
+                   (17 facts with this relation in context)
+   hop5 neighbour  s 'Ltgais Seidf' -> Ligais Seidom 0.36, Ligais Seadom 0.32, Ligais Seidof* 0.07
+                   o 'Mokfufsb Nenstip' -> Mokrus Nenstip* 1.00, Mokrus Nenstir 0.00, Mokrus Nenstil 0.00
+                   (11 facts with this relation in context)
+   hop6 heir       s 'MokrusNenstip' -> Mokrus Nenstip* 1.00, Mokrus Nenstir 0.00, Mokrus Nenstil 0.00
+                   o 'Nolwglaim Thsoukglokmin' -> Nolglaim Thoukglobmin 1.00, Nolglaim Thoumglormin 0.00, Nolglaim Thoukglormin* 0.00
+                   (7 facts with this relation in context)
+-- q12 decoy=True answer=Dredrim Shelchul got=DEAD
+   start  'Geinkei Sotustcib' -> Geinkeir Stousteas 0.65, Geinkeir Stoisteis 0.27, Geinkeir Stousteig* 0.04
+   hop1 auditor    s 'GeinkeiStoumseig' -> Geinkeir Stousteig* 0.70, Geinkeir Stousteas 0.23, Geinkeir Stousteis 0.07
+                   o 'Gdidrol Dokttian' -> Gidrol Dokttian* 1.00, Gidrol Doktrian 0.00, Gidrol Doktriap 0.00
+                   (13 facts with this relation in context)
+   hop2 client     s 'Gdidrol Dokttian' -> Gidrol Dokttian* 1.00, Gidrol Doktrian 0.00, Gidrol Doktriap 0.00
+                   o 'broumplamgRadria' -> Droumplam Radria* 1.00, Droumplam Radrie 0.00, Pliampar Broutrobfa 0.00
+                   (16 facts with this relation in context)
+   hop3 rival      s 'Droumplm Radrai' -> Droumplam Radrie 0.87, Droumplam Radria* 0.08, Droumplam Raddia 0.05
+                   o 'Zgawkdria rVountik' -> Zakdriar Vountik* 0.67, Zoukdrour Vongas 0.05, Zailreim Vortroi 0.02
+                   (14 facts with this relation in context)
+   hop4 doctor     s 'Zakdlriar Vountik' -> Zakdriar Vountik* 1.00, Zakdriar Vounpik 0.00, Zakdriar Vounpil 0.00
+                   o 'Nfedikzun Kraibaimfan' -> Neikzun Kraibaimfan* 1.00, Neikzun Kraibairfan 0.00, Neikzun Kraibaemfan 0.00
+                   (7 facts with this relation in context)
+   hop5 envoy      s 'Nfedikzun Kraibaimfan' -> Neikzun Kraibaimfan* 1.00, Neikzun Kraibairfan 0.00, Neikzun Kraibaemfan 0.00
+                   o 'Bronej aktias' -> Bronel Maktias* 0.73, Bronel Mistias 0.19, Bronel Miktias 0.03
+                   (8 facts with this relation in context)
+   hop6 pupil      s 'Bronel Maktias' -> Bronel Maktias* 1.00, Bronel Miktias 0.00, Bronel Mistias 0.00
+                   o 'Daredrim Shylchul' -> Dredrim Shilchul 0.99, Dredrim Shalchul 0.00, Dredrim Shelchul* 0.00
+                   (13 facts with this relation in context)
+-- q13 decoy=False answer=Tiardeir Rikglialte got=DEAD
+   start  'Tarso Riouslielle' -> Traso Rouslielle* 1.00, Traso Reuslialle 0.00, Traso Rouslialle 0.00
+   hop1 partner    s 'Trsa Rouslidlle' -> Traso Rouslielle* 0.66, Traso Rouslialle 0.34, Traso Rousliamle 0.00
+                   o 'Reimcfhe Cudtraini' -> Reimche Chudtrain* 0.60, Reimche Chumtrain 0.36, Reimche Chubtrain 0.05
+                   (10 facts with this relation in context)
+   hop2 tutor      s 'Reimckhe Chwduarin' -> Reimche Chubtrain 0.56, Reimche Chudtrain* 0.25, Reimche Chumtrain 0.18
+                   o 'Mipslbk Trusnouksail' -> Misplik Trunsouksail* 0.51, Trenol Truknoultir 0.14, Misplik Trunsouksiil 0.12
+                   (12 facts with this relation in context)
+   hop3 deputy     s 'Misglik Trqusnouksarl' -> Misplik Trussouksail 0.51, Misplik Trunsouksiil 0.37, Misplik Trunsouksail* 0.09
+                   o 'Plikto sBrmuel' -> Pliktos Brumel* 1.00, Pliktos Brusel 0.00, Pliktos Brutel 0.00
+                   (10 facts with this relation in context)
+   hop4 coach      s 'PlqktosB rjmelf' -> Pliktos Brutef 0.17, Plekria Tilves 0.09, Plagun Krestaim 0.08
+                   o 'Finei Bairiresim' -> Finei Biartreim 0.86, Finei Biartreid 0.07, Finei Biarmreim* 0.04
+                   (11 facts with this relation in context)
+   hop5 deputy     s 'Fivei Biarmriem' -> Finei Biarmreim* 1.00, Nundrian Bliarmeir 0.00, Finei Biartreim 0.00
+                   o 'oFunqes Krupsaikdru' -> Founkes Krupsaikdrur* 1.00, Vaikriak Feirrunkrup 0.00, Founkes Kruszaikdrur 0.00
+                   (10 facts with this relation in context)
+   hop6 mediator   s 'Founkas bropsaikdurv' -> Founkes Krupsaikdrur* 0.98, Founkes Krussaikdrur 0.01, Drirmiak Bounkroufstai 0.00
+                   o 'Tiardeir Rikglailte' -> Tiardeir Rikglialte* 0.98, Tiardeir Rikglialtu 0.01, Tiardeir Rikgliadtu 0.00
+                   (7 facts with this relation in context)
+-- q14 decoy=False answer=Zarrais Sheisbai got=DEAD
+   start  'Kralgleim Rxanleiva' -> Kralgleim Rainleiva* 0.61, Kralgleim Reinleiva 0.38, Kralgleim Rainreiva 0.01
+   hop1 partner    s 'Kraloglemi Rieiva' -> Kralgleim Reinleiva 0.54, Kralgleim Rainleiva* 0.30, Kralgleim Rainreiva 0.12
+                   o 'Kruonstima Daaksho' -> Krounstia Daaksho* 1.00, Krounstia Diaksho 0.00, Kraikshe Daksun 0.00
+                   (10 facts with this relation in context)
+   hop2 editor     s 'Ksrzurstia aaakshk' -> Krounstia Daaksho* 0.80, Kraikshe Daksun 0.04, Kriaszoum Tiazaa 0.01
+                   o 'DeztphorP loukdaik' -> Denthor Ploukdaik* 0.98, Denthor Plaukdaik 0.00, Fizus Glounaik 0.00
+                   (8 facts with this relation in context)
+   hop3 patron     s 'Dentho rPloukaik' -> Denthor Ploukdais 0.50, Denthor Ploukdaik* 0.49, Denthor Plaukdaik 0.00
+                   o 'Stotres Dkecxhumod' -> Stotres Dekchumsod* 0.83, Stotres Dekchumson 0.14, Stotres Dekchuvson 0.02
+                   (15 facts with this relation in context)
+   hop4 pupil      s 'Stotres Dkecxhumod' -> Stotres Dekchumsod* 0.83, Stotres Dekchumson 0.14, Stotres Dekchuvson 0.02
+                   o 'Vouklu Zeisvilcbai' -> Vouklu Zeisvilbai* 0.83, Vouklu Zeisvilbei 0.15, Vouklu Zeisvilbee 0.02
+                   (13 facts with this relation in context)
+   hop5 mentor     s 'Vouklu Zeisdvibai' -> Vouklu Zeisvilbai* 0.93, Vouklu Zeisvilbei 0.05, Vouklu Zeisvilboi 0.01
+                   o 'Pumsin Shianci' -> Pumsin Shainchi* 0.96, Pumsin Shaincha 0.02, Pumsin Shaincho 0.02
+                   (11 facts with this relation in context)
+   hop6 patron     s 'Pumsin Shainhil' -> Pumsin Shaincha 0.62, Pumsin Shainchi* 0.31, Pumsin Shaincho 0.08
+                   o 'ZzrraisS hjeisbai' -> Zarrais Sheisbai* 0.39, Zarrais Shaisbaa 0.32, Glilshoun Zimenglus 0.02
+                   (15 facts with this relation in context)
+-- q15 decoy=False answer=Buknuk Naivaikboik got=DEAD
+   start  'Scumzaik Kalpikve' -> Soumzaik Kaliekze 0.89, Soumzaik Kaluakze 0.07, Soumzaik Kaliakze 0.02
+   hop1 client     s 'Sutzuik haiakvv' -> Soumzaik Kaliakve* 0.50, Shaikai Puachik 0.10, Naisnai Zuunvia 0.03
+                   o 'setheianc airrneslor' -> Krethein Vairreslor* 0.12, Binpei Dairrrei 0.10, Steilsoun Niaglouchiar 0.06
+                   (16 facts with this relation in context)
+   hop2 guardian   s 'Kmrethein Vabqrreslorh' -> Krethein Vairreslor* 1.00, Krethein Vairregtor 0.00, Krethein Vairrestor 0.00
+                   o 'Driadein Savemdrpsgs' -> Driadein Saaldresis 0.84, Driadein Saildresis 0.09, Driadein Saildrekis 0.04
+                   (17 facts with this relation in context)
+   hop3 partner    s 'Dgiadelin Saelurdysis' -> Driadein Saeldresis* 0.48, Driadein Saildrekis 0.04, Driasar Glirfan 0.02
+                   o 'Stiefn Kusnelzvo' -> Stiten Kusnelvo* 0.98, Stiten Kusnelgo 0.02, Stiten Kusnelge 0.00
+                   (10 facts with this relation in context)
+   hop4 registrar  s 'Stiten unslevo' -> Stiten Kusnelvo* 0.90, Stiten Kusnelge 0.04, Stiten Kusnelgo 0.04
+                   o 'Stxilsjl Miarzirzem' -> Stilsel Miarzirzem* 1.00, Stilsel Miarnirzem 0.00, Stilsel Mearzirzem 0.00
+                   (5 facts with this relation in context)
+   hop5 editor     s 'Stilgselq Msiarzirczeh' -> Stilsel Miarzirzem* 0.97, Stilsel Mearzirzem 0.01, Stilsel Miarnirzem 0.01
+                   o 'Zalapis Ddugeil' -> Zaplais Ddugeil* 1.00, Zaplais Drugeil 0.00, Zaplais Drupeil 0.00
+                   (8 facts with this relation in context)
+   hop6 landlord   s 'aplaqs aDdugeil' -> Zaplais Ddugeil* 0.78, Zaplais Drugail 0.05, Dukei Daimzeilthua 0.01
+                   o 'Busknuk avakibl' -> Buknuk Naivaikboik* 0.39, Buknuk Naivaikboud 0.25, Buknuk Naivaikbouk 0.02
+                   (10 facts with this relation in context)
+====================================================================================================
+BEAM_k4_B16: 484 failures of 1000 at h=6 (N=320, rho=0.200, seed 1)
+-- q0 decoy=False answer=Krebra Rusbrinbaiz got=Krebra Rusbrinbail
+   start  'Vairia kqeirrunkurp' -> Vaikriak Feirrunkrun 0.83, Vaikriak Feirrunkrup* 0.03, Vaikriak Feirrunprun 0.03
+   hop1 banker     s 'aikirap Feqrirunkrup' -> Vaikriak Feirrunkrup* 1.00, Vaikriak Feirrunprun 0.00, Vaikriak Feirrunkrun 0.00
+                   o 'Brikrbul Shoubstnv' -> Brikbrul Shoustu* 0.96, Brikbrul Shaustu 0.02, Brikbrul Shoastu 0.01
+                   (7 facts with this relation in context)
+   hop2 neighbour  s 'BrdkbrulfShuosatu' -> Brikbrul Shoostu 0.84, Brikbrul Shoustu* 0.10, Brikbrul Shoastu 0.03
+                   o 'Brrusrbak Givonplot' -> Brurdrail Rome 0.33, Brerkrom Plalos 0.30, Brurdrail Rede 0.05
+                   (11 facts with this relation in context)
+   hop3 courier    s 'BruusbrfGijnpflom' -> Shalzeir Bruusgeimkis 0.98, Brusbrak Gianplog 0.01, Brusbrak Gionplom* 0.00
+                   o 'Kreksse Fmokresun' -> Krekses Fomkresun* 0.79, Krekses Fomkrosun 0.18, Krekses Fomprosun 0.03
+                   (17 facts with this relation in context)
+   hop4 courier    s 'KreskssesFmokremnu' -> Krekses Fomkrosun 0.72, Krekses Fomkresun* 0.13, Krekses Fomprosun 0.03
+                   o 'Nainqrais Mcimzreis' -> Naintrais Meimzreis* 1.00, Naintrais Meimtriis 0.00, Naintrais Meimtreis 0.00
+                   (17 facts with this relation in context)
+   hop5 translator s 'Nainqrais Mcimzreis' -> Naintrais Meimzreis* 1.00, Naintrais Meimtriis 0.00, Naintrais Meimtreis 0.00
+                   o 'Glytheli Tranmgkouf' -> Glutheil Tremgokro 0.77, Glanbriar Tranplikmim 0.09, Glilshoun Zimengluf 0.01
+                   (11 facts with this relation in context)
+   hop6 tenant     s 'Gltheil Tremgoknuv' -> Glutheil Tremgoknu* 1.00, Glutheil Tremgokru 0.00, Glutheil Tremgokro 0.00
+                   o 'KrebraR usbrmnbaiz' -> Krebra Rusbrinbail 0.87, Krebra Rusbrinbaiz* 0.13, Krebra Rusbranbail 0.00
+                   (6 facts with this relation in context)
+-- q1 decoy=True answer=Dutriam Surdiashiam got=Dutriam Surdiathiam
+   start  'aanlshilz Gljunsiachkap' -> Kanshil Glenliachai 0.79, Kanshil Glensiachai 0.09, Glilshoun Zamenglus 0.01
+   hop1 mediator   s 'Kanshil Glnsiwchai' -> Kanshil Glensiachai 0.61, Kanshil Glunsiachai* 0.22, Kanshil Glenliachai 0.11
+                   o 'ZaigluolP lourtjai' -> Zailgloul Plourthai* 0.37, Zailgloul Plounthai 0.34, Zailgloul Plounthii 0.08
+                   (7 facts with this relation in context)
+   hop2 guardian   s 'Zalilgou lPfowrtahib' -> Zailgloul Plourthai* 0.68, Zailgloul Plounthai 0.13, Zailgloul Plounthui 0.05
+                   o 'Ronfaik Raikreshsoamv' -> Ronfaik Raiskresshoam* 1.00, Ronfaik Raiskrepshoum 0.00, Ronfaik Raiskdesshoum 0.00
+                   (17 facts with this relation in context)
+   hop3 banker     s 'Rofaik Raiskreshoma' -> Ronfaik Raiskresshoum 0.99, Ronfaik Raiskresshoam* 0.00, Ronfaik Raiskrepshoum 0.00
+                   o 'Lairdren Breite' -> Lairdren Breite* 1.00, Lairdren Breita 0.00, Lairdren Breiti 0.00
+                   (7 facts with this relation in context)
+   hop4 coach      s 'LirdreqBetiv' -> Lairdren Breile 0.79, Lairdren Breiti 0.08, Lidrir Drispaibruk 0.02
+                   o 'Bremvul riompkriam' -> Bremvul Triomkriam* 0.96, Bremvul Tkiamkriam 0.02, Bremvul Triankriam 0.01
+                   (11 facts with this relation in context)
+   hop5 coach      s 'Brevmul Triommuiam' -> Bremvul Triomkriam* 0.99, Fidrein Brevoulplur 0.00, Fidrein Brevoulplun 0.00
+                   o 'Lopzour Rabbail' -> Louzour Rabbail* 1.00, Louzour Rabrail 0.00, Louzour Rabfail 0.00
+                   (11 facts with this relation in context)
+   hop6 supplier   s 'Lopzour Rabbail' -> Louzour Rabbail* 1.00, Louzour Rabrail 0.00, Louzour Rabfail 0.00
+                   o 'Dutriam Surdiahiam' -> Dutriam Surdiathiam 1.00, Dutriam Surdiashiam* 0.00, Dutriam Sirdiathiam 0.00
+                   (7 facts with this relation in context)
+-- q3 decoy=True answer=Biktar Falgam got=Biktar Falgum
+   start  'aGdnonu arebriwksil' -> Gandoun Trelbriiskil* 0.07, Gandoun Trulbriaskil 0.03, Laplail Saontrer 0.03
+   hop1 rival      s 'GancounTreslbrioiskicl' -> Gandoun Trelbriaskil 0.62, Gandoun Trelbriiskil* 0.06, Gonchil Tiachebro 0.02
+                   o 'Seelubrian Tuelgtaam' -> Stelbrian Telgatam* 0.29, Dreimglia Turglimpir 0.05, Tholgloum Suipainbi 0.02
+                   (14 facts with this relation in context)
+   hop2 broker     s 'Stejbrian eTlgtatao' -> Stelbrian Telratam 0.27, Stelbrian Telgatam* 0.13, Steilchai Geatei 0.03
+                   o 'guokegi Bgahithoul' -> Loukgein Bgaithoul* 0.99, Fumgeik Glurthoi 0.00, Brousbiam Goukeper 0.00
+                   (10 facts with this relation in context)
+   hop3 guardian   s 'Lokugeni Bgaithiul' -> Loukgein Bgaithoul* 1.00, Peirplor Gedikbgai 0.00, Laigia Gludiak 0.00
+                   o 'Zoasjs hLiakbav' -> Ziasas Liakbav* 0.23, Ziasas Liakban 0.05, Zoga Glekhir 0.05
+                   (17 facts with this relation in context)
+   hop4 mentor     s 'Zoasjs hLiakbav' -> Ziasas Liakbav* 0.23, Ziasas Liakban 0.05, Zoga Glekhir 0.05
+                   o 'Krovuan Kdrimao' -> Krouvan Krimfao* 0.91, Krouvan Krimmai 0.08, Krouvan Krivfai 0.00
+                   (11 facts with this relation in context)
+   hop5 landlord   s 'Koruvan rimmoa' -> Krouvan Krimfao* 0.83, Krouvan Krimmai 0.03, Krouvan Krimfai 0.02
+                   o 'Krouu Lilmoypuol' -> Krousu Lilmoupoul* 1.00, Krousu Lolmoupoul 0.00, Krousu Lolmoupoub 0.00
+                   (10 facts with this relation in context)
+   hop6 courier    s 'Kwouhu Llomuizoul' -> Krousu Lolmoupoub 0.81, Siaglaik Louldoum 0.02, Krousu Lolmoupoul 0.01
+                   o 'Biktar Falgam' -> Biktar Falgam* 1.00, Biktar Falgum 0.00, Biktar Fabgum 0.00
+                   (17 facts with this relation in context)
+-- q5 decoy=False answer=Staisglan Veikfudaan got=Staisglan Veikfudain
+   start  'KraispouGluriaa' -> Kraipou Glurilna* 0.97, Kraipou Glirilna 0.01, Kraipou Glarilna 0.01
+   hop1 deputy     s 'Kruaipou tlrziln' -> Kraipou Glarilna 0.16, Kraipou Glurilna* 0.09, Krousshaim Naisain 0.05
+                   o 'Barimjtic Nunedriok' -> Braimsti Nunnedriok* 0.99, Braimsti Nunnedriaz 0.00, Braimsti Nunmedriak 0.00
+                   (10 facts with this relation in context)
+   hop2 neighbour  s 'Barimjtic Nunedriok' -> Braimsti Nunnedriok* 0.99, Braimsti Nunnedriaz 0.00, Braimsti Nunmedriak 0.00
+                   o 'rTocheil Dorkuneqkhds' -> Trocheil Droukneikchis* 0.75, Trocheil Droulneikchis 0.09, Trocheil Droinneikchis 0.04
+                   (11 facts with this relation in context)
+   hop3 translator s 'Trochdinl Dioudndikcisu' -> Trocheil Drounneikchis 0.53, Trocheil Droinneikchis 0.32, Trocheil Droulneikchis 0.05
+                   o 'DiaiknStamzrepis' -> Diamkin Stamzeis 0.98, Diamkin Stamreis* 0.02, Diamkin Stamzois 0.00
+                   (11 facts with this relation in context)
+   hop4 registrar  s 'Diarmin Stamreis' -> Diamkin Stamreis* 1.00, Diarplour Sika 0.00, Diamkin Stamzeis 0.00
+                   o 'Rrillo Munkeidriax' -> Reilol Mukkeidriak* 0.27, Reilol Mokkeidriak 0.22, Reilol Muvkeidriak 0.10
+                   (5 facts with this relation in context)
+   hop5 broker     s 'RevilolvMukeidtrijak' -> Reilol Muvkeidriak 0.85, Reilol Mukkeidriak* 0.02, Lurtor Driaksibleil 0.02
+                   o 'ZiarvianjKinastuliar' -> Ziarvian Kianguliar 0.63, Ziarvian Kiansuliar* 0.36, Ziarvian Kienguliar 0.01
+                   (10 facts with this relation in context)
+   hop6 agent      s 'Ziarvian Kinfdliaar' -> Ziarvian Kianguliar 0.53, Ziarvian Kienguliar 0.22, Ziarvian Kianguliir 0.17
+                   o 'Sqaisglan Veikfudana' -> Staisglan Veikfudain 0.53, Staisglan Veikfudaan* 0.47, Staisglan Veikfufain 0.00
+                   (5 facts with this relation in context)
+-- q7 decoy=True answer=Maplo Glanailpti got=Diakglour Niaplelrouk
+   start  'tSotres Deknchusvno' -> Stotres Dekchumson 0.35, Stotres Dekchuvson* 0.33, Stotres Dekchomson 0.23
+   hop1 rival      s 'SttersD ekcvuson' -> Stotres Dekchuvson* 0.63, Stotres Dekchomson 0.27, Stotres Dekchumson 0.03
+                   o 'Sarkam Fedviik' -> Sarkam Feivik* 0.96, Sarkam Feevok 0.04, Sarkam Faivok 0.00
+                   (14 facts with this relation in context)
+   hop2 client     s 'Sardkamz Fivik' -> Sarkam Feivik* 0.88, Sarkam Feivok 0.02, Sarkam Faivok 0.01
+                   o 'Shaimai Tralmlzilro' -> Shaimai Trailmlailro* 0.99, Shaimai Traikplailro 0.00, Shaimai Trailplailro 0.00
+                   (16 facts with this relation in context)
+   hop3 doctor     s 'Shaimui Traimlaliuo' -> Shaimai Traikplailro 0.84, Shaimai Trailmlailro* 0.11, Shaimai Trailplailro 0.03
+                   o 'Drilevs Mialabsha' -> Drilves Mialaisha* 0.98, Drilves Mialuisha 0.01, Drilves Mialaikha 0.00
+                   (7 facts with this relation in context)
+   hop4 witness    s 'Drihlves iaalihsa' -> Drilves Mialaisha* 0.64, Driadein Saildrekis 0.11, Drourshiar Fungledriu 0.06
+                   o 'praimsu Fenplar' -> Kraimsu Fenplar* 1.00, Traifus Feplair 0.00, Kraimsu Fenplal 0.00
+                   (9 facts with this relation in context)
+   hop5 supplier   s 'Kuaismb Fenplaar' -> Kraimsu Fenplar* 0.99, Kraimsu Fenplal 0.00, Goupou Plaundekne 0.00
+                   o 'olzil zuinrxb' -> Polzil Fuinranko* 0.90, Zaimreis Daiskreilchuin 0.01, Zoulfou Liromples 0.01
+                   (7 facts with this relation in context)
+   hop6 coach      s 'Pelizl Fuinrvko' -> Polzil Fuinranko* 1.00, Polzil Faonranko 0.00, Polzil Fainnanko 0.00
+                   o 'iaple lGanuailtpi' -> Diakglour Niaplelrouk 0.08, Maplo Glanailpti* 0.04, Miartair Vaiblu 0.04
+                   (11 facts with this relation in context)
+-- q9 decoy=False answer=Thebrai Galir got=DEAD
+   start  'LiarainL etshero' -> Liarain Leidsherok 0.39, Liarain Leitsherok* 0.38, Liarain Leissherok 0.22
+   hop1 patron     s 'Liarain Letisehrok' -> Liarain Leitsherok* 0.64, Liarain Leidsherok 0.22, Liarain Leissherok 0.11
+                   o 'Drunbua Legerrom' -> Drunba Legeirrom* 0.91, Drunba Lemeirrom 0.07, Drunba Lomeirrom 0.01
+                   (15 facts with this relation in context)
+   hop2 doctor     s 'Drunbua Legerrom' -> Drunba Legeirrom* 0.91, Drunba Lemeirrom 0.07, Drunba Lomeirrom 0.01
+                   o 'Thither Vasiutt' -> Thithir Vasitut* 1.00, Vufak Stuven 0.00, Thamde Vaisglo 0.00
+                   (7 facts with this relation in context)
+   hop3 coach      s 'TbtihirfVsaittu' -> Thithir Vasutur 0.19, Sheirfia Thailgtitrel 0.05, Stommou Trirpait 0.03
+                   o 'Drouabri Stiadraz' -> Drousbri Stiadraz* 1.00, Drousbri Stiadrar 0.00, Drousbri Stiadvar 0.00
+                   (11 facts with this relation in context)
+   hop4 mentor     s 'DrousbroipStiadraz' -> Drousbri Stiadraz* 1.00, Drousbri Stiadvar 0.00, Drousbri Stiadrar 0.00
+                   o 'Fepeik Saimchiothlk' -> Fepeik Saimchiothak* 1.00, Fepeik Saimchiathak 0.00, Fepeik Suimchiathak 0.00
+                   (11 facts with this relation in context)
+   hop5 courier    s 'FepeiSaihmchikoithzk' -> Fepeik Saimchiothak* 0.55, Fepeik Saimchiathak 0.41, Fepeik Suimchiathak 0.03
+                   o 'Plougeik fPoulrrikak' -> Plougeik Poulrriak* 1.00, Plougeik Pouldrial 0.00, Plougeik Pouldriak 0.00
+                   (17 facts with this relation in context)
+   hop6 employer   s 'Plougeid Poulrrka' -> Plougeik Poulrriak* 1.00, Plougeik Pouldrial 0.00, Plougeik Pouldniak 0.00
+                   o 'ThberaoaGoir' -> Thebrai Galur 0.20, Thebrai Golir 0.08, Thoubroun Theikthao 0.07
+                   (9 facts with this relation in context)
+-- q11 decoy=False answer=Nolglaim Thoukglormin got=Nolglaim Thoukglobmin
+   start  'Zexlkua Zabreis' -> Zeilkia Zabreis* 1.00, Zeilkia Zebreis 0.00, Zektha Rivairlra 0.00
+   hop1 rival      s 'Zeilkia Zaybreis' -> Zeilkia Zebreis 0.55, Zeilkia Zabreis* 0.45, Zeilkia Zebriis 0.00
+                   o 'Vhntrian Zavanhel' -> Vontrian Zavanshel* 0.98, Vontrian Zavanshem 0.02, Zakdriar Vountik 0.00
+                   (14 facts with this relation in context)
+   hop2 translator s 'ontrian Zpvanshet' -> Vontrian Zavanshem 0.65, Vontrian Zavanshel* 0.09, Vontrian Zavansham 0.06
+                   o 'Dirshek Ddiastodiea' -> Dirshek Diastodia* 1.00, Dirshek Diastodua 0.00, Dirshek Diastudia 0.00
+                   (11 facts with this relation in context)
+   hop3 inspector  s 'Driske Diastodia' -> Dirshek Diastodia* 1.00, Dirshek Diastudia 0.00, Dirshek Diastodua 0.00
+                   o 'Pebea Piun' -> Peba Pouna* 0.80, Peba Pouba 0.07, Peba Pousa 0.05
+                   (7 facts with this relation in context)
+   hop4 courier    s 'Pb aPouyn' -> Porsei Pabrebo 0.49, Peba Pouba 0.15, Peba Pouna* 0.06
+                   o 'Ligagis Sveddyof' -> Ligais Seidof* 0.94, Ligais Seadom 0.01, Ligais Seidim 0.01
+                   (17 facts with this relation in context)
+   hop5 neighbour  s 'Ltgais Seidf' -> Ligais Seidom 0.36, Ligais Seadom 0.32, Ligais Seidof* 0.07
+                   o 'Mokfufsb Nenstip' -> Mokrus Nenstip* 1.00, Mokrus Nenstir 0.00, Mokrus Nenstil 0.00
+                   (11 facts with this relation in context)
+   hop6 heir       s 'MokrusNenstip' -> Mokrus Nenstip* 1.00, Mokrus Nenstir 0.00, Mokrus Nenstil 0.00
+                   o 'Nolwglaim Thsoukglokmin' -> Nolglaim Thoukglobmin 1.00, Nolglaim Thoumglormin 0.00, Nolglaim Thoukglormin* 0.00
+                   (7 facts with this relation in context)
+-- q12 decoy=True answer=Dredrim Shelchul got=Dredrim Shilchul
+   start  'Geinkei Sotustcib' -> Geinkeir Stousteas 0.65, Geinkeir Stoisteis 0.27, Geinkeir Stousteig* 0.04
+   hop1 auditor    s 'GeinkeiStoumseig' -> Geinkeir Stousteig* 0.70, Geinkeir Stousteas 0.23, Geinkeir Stousteis 0.07
+                   o 'Gdidrol Dokttian' -> Gidrol Dokttian* 1.00, Gidrol Doktrian 0.00, Gidrol Doktriap 0.00
+                   (13 facts with this relation in context)
+   hop2 client     s 'Gdidrol Dokttian' -> Gidrol Dokttian* 1.00, Gidrol Doktrian 0.00, Gidrol Doktriap 0.00
+                   o 'broumplamgRadria' -> Droumplam Radria* 1.00, Droumplam Radrie 0.00, Pliampar Broutrobfa 0.00
+                   (16 facts with this relation in context)
+   hop3 rival      s 'Droumplm Radrai' -> Droumplam Radrie 0.87, Droumplam Radria* 0.08, Droumplam Raddia 0.05
+                   o 'Zgawkdria rVountik' -> Zakdriar Vountik* 0.67, Zoukdrour Vongas 0.05, Zailreim Vortroi 0.02
+                   (14 facts with this relation in context)
+   hop4 doctor     s 'Zakdlriar Vountik' -> Zakdriar Vountik* 1.00, Zakdriar Vounpik 0.00, Zakdriar Vounpil 0.00
+                   o 'Nfedikzun Kraibaimfan' -> Neikzun Kraibaimfan* 1.00, Neikzun Kraibairfan 0.00, Neikzun Kraibaemfan 0.00
+                   (7 facts with this relation in context)
+   hop5 envoy      s 'Nfedikzun Kraibaimfan' -> Neikzun Kraibaimfan* 1.00, Neikzun Kraibairfan 0.00, Neikzun Kraibaemfan 0.00
+                   o 'Bronej aktias' -> Bronel Maktias* 0.73, Bronel Mistias 0.19, Bronel Miktias 0.03
+                   (8 facts with this relation in context)
+   hop6 pupil      s 'Bronel Maktias' -> Bronel Maktias* 1.00, Bronel Miktias 0.00, Bronel Mistias 0.00
+                   o 'Daredrim Shylchul' -> Dredrim Shilchul 0.99, Dredrim Shalchul 0.00, Dredrim Shelchul* 0.00
+                   (13 facts with this relation in context)
+-- q13 decoy=False answer=Tiardeir Rikglialte got=DEAD
+   start  'Tarso Riouslielle' -> Traso Rouslielle* 1.00, Traso Reuslialle 0.00, Traso Rouslialle 0.00
+   hop1 partner    s 'Trsa Rouslidlle' -> Traso Rouslielle* 0.66, Traso Rouslialle 0.34, Traso Rousliamle 0.00
+                   o 'Reimcfhe Cudtraini' -> Reimche Chudtrain* 0.60, Reimche Chumtrain 0.36, Reimche Chubtrain 0.05
+                   (10 facts with this relation in context)
+   hop2 tutor      s 'Reimckhe Chwduarin' -> Reimche Chubtrain 0.56, Reimche Chudtrain* 0.25, Reimche Chumtrain 0.18
+                   o 'Mipslbk Trusnouksail' -> Misplik Trunsouksail* 0.51, Trenol Truknoultir 0.14, Misplik Trunsouksiil 0.12
+                   (12 facts with this relation in context)
+   hop3 deputy     s 'Misglik Trqusnouksarl' -> Misplik Trussouksail 0.51, Misplik Trunsouksiil 0.37, Misplik Trunsouksail* 0.09
+                   o 'Plikto sBrmuel' -> Pliktos Brumel* 1.00, Pliktos Brusel 0.00, Pliktos Brutel 0.00
+                   (10 facts with this relation in context)
+   hop4 coach      s 'PlqktosB rjmelf' -> Pliktos Brutef 0.17, Plekria Tilves 0.09, Plagun Krestaim 0.08
+                   o 'Finei Bairiresim' -> Finei Biartreim 0.86, Finei Biartreid 0.07, Finei Biarmreim* 0.04
+                   (11 facts with this relation in context)
+   hop5 deputy     s 'Fivei Biarmriem' -> Finei Biarmreim* 1.00, Nundrian Bliarmeir 0.00, Finei Biartreim 0.00
+                   o 'oFunqes Krupsaikdru' -> Founkes Krupsaikdrur* 1.00, Vaikriak Feirrunkrup 0.00, Founkes Kruszaikdrur 0.00
+                   (10 facts with this relation in context)
+   hop6 mediator   s 'Founkas bropsaikdurv' -> Founkes Krupsaikdrur* 0.98, Founkes Krussaikdrur 0.01, Drirmiak Bounkroufstai 0.00
+                   o 'Tiardeir Rikglailte' -> Tiardeir Rikglialte* 0.98, Tiardeir Rikglialtu 0.01, Tiardeir Rikgliadtu 0.00
+                   (7 facts with this relation in context)
+-- q16 decoy=True answer=Raimai Ploanthekbron got=Raimai Plounthekbron
+   start  'Lolkrozm Realrei' -> Lolkrom Rearleil* 0.94, Lolkrom Riatleil 0.06, Lolkrom Riableil 0.00
+   hop1 client     s 'Llokom Rearleil' -> Lolkrom Rearleil* 1.00, Lolkrom Riableil 0.00, Ploullun Glivuv 0.00
+                   o 'Drilves Mealqasiha' -> Drilves Mealaisha* 0.99, Drilves Mialuisha 0.00, Drilves Mialaikha 0.00
+                   (16 facts with this relation in context)
+   hop2 auditor    s 'Durilves Meaglaisah' -> Drilves Mealaisha* 0.99, Biarstiam Keasglirzom 0.00, Glemglais Magliglar 0.00
+                   o 'rBumke nFikvaksheik' -> Brumken Fikvaksheik* 0.87, Brumken Fikzaksheik 0.12, Brumken Fikzakshaik 0.00
+                   (13 facts with this relation in context)
+   hop3 partner    s 'Brummke iFkvakhseik' -> Brumken Fikvaksheik* 0.98, Brumken Fikzakshiik 0.01, Brumken Fikzaksheik 0.00
+                   o 'Numblak Trakder' -> Numplak Trakdre* 0.87, Numplak Traldre 0.13, Numtim Brolthem 0.00
+                   (10 facts with this relation in context)
+   hop4 auditor    s 'eumplrak Trarbdre' -> Numplak Traltre 0.10, Numplak Traldre 0.09, Treskrin Remrak 0.04
+                   o 'Gimim Tzancahinbrei' -> Gimtim Tzainchainbrei* 0.81, Gimtim Trainchuinbrei 0.18, Gimtim Trainchainbrei 0.01
+                   (13 facts with this relation in context)
+   hop5 courier    s 'GidtnmT zainhainbrei' -> Gimtim Tzainchainbrei* 0.95, Gimtim Trainchainbrei 0.01, Zaisgla Thousre 0.00
+                   o 'Shoivna Feimmsxoulzer' -> Shivan Feimsoulzer* 1.00, Shivan Feimsoolmer 0.00, Shivan Feimsoulmer 0.00
+                   (17 facts with this relation in context)
+   hop6 editor     s 'Shitvn Feimsoulzer' -> Shivan Feimsoulzer* 1.00, Shivan Feimsoulmer 0.00, Shivan Faimsoulmer 0.00
+                   o 'Raikzi uPlonthekbron' -> Raimai Ploanthekbron* 0.35, Raikbum Tourseir 0.18, Stanbial Raiktriakros 0.09
+                   (8 facts with this relation in context)
+-- q18 decoy=False answer=Thiakrou Kuskrukmak got=Thiakrou Keskrukmak
+   start  'Shachnok Kraifdrais' -> Shachou Kraifdrais* 1.00, Shachou Krauldrais 0.00, Shachou Kraildrais 0.00
+   hop1 deputy     s 'hcahuK nafidraivs' -> Shachou Kraifdrais* 0.13, Chasnam Nianpu 0.05, Damstian Dalfais 0.02
+                   o 'Trrdos Kqrtbro' -> Trados Krubro 0.59, Trados Krubdo 0.09, Tatra Thaikror 0.02
+                   (9 facts with this relation in context)
+   hop2 courier    s 'Treods Krobro' -> Trados Krobro* 1.00, Trados Krubro 0.00, Stanmi Kroobian 0.00
+                   o 'NeikzunKrlainbairfan' -> Neikzun Kraibairfan* 0.89, Neikzun Kraibaimfan 0.08, Neikzun Kraibaemfan 0.02
+                   (24 facts with this relation in context)
+   hop3 tenant     s 'NeikzunKrlainbairfan' -> Neikzun Kraibairfan* 0.89, Neikzun Kraibaimfan 0.08, Neikzun Kraibaemfan 0.02
+                   o 'Trijanplhai Piakvo' -> Trianplai Piakvo* 1.00, Trianplai Piakva 0.00, Trianplai Piatvo 0.00
+                   (16 facts with this relation in context)
+   hop4 heir       s 'TianpliaP itakvo' -> Trianplai Piatvo 0.89, Trianplai Piakvo* 0.07, Trianplai Piakva 0.02
+                   o 'Brekrrom Plalas' -> Brerkrom Plalas* 1.00, Brerkrom Plalos 0.00, Breirsom Posbrebrak 0.00
+                   (10 facts with this relation in context)
+   hop5 witness    s 'Brerkrom plPalqas' -> Brerkrom Plalas* 0.68, Brerkrom Pzalas 0.20, Brerkrom Pgalas 0.07
+                   o 'Shonno Trinspaifas' -> Shonnon Triaspaifais* 1.00, Shonnon Triasgaifaes 0.00, Shonnon Triasgaifuis 0.00
+                   (8 facts with this relation in context)
+   hop6 broker     s 'Shonunon Tpaspaifais' -> Shonnon Triaspaifais* 1.00, Shonnon Triasgaifais 0.00, Shonnon Triasgaifuis 0.00
+                   o 'Thaklrou Ksukrhukmak' -> Thiakrou Keskrukmak 0.45, Thiakrou Kuskrukmak* 0.44, Thiakrou Kerkrukmak 0.04
+                   (11 facts with this relation in context)
+-- q19 decoy=False answer=Runkias Gomto got=DEAD
+   start  'nairban kibcaizleir' -> Daibran Pibaimzleir* 0.10, Krousshaim Nairain 0.09, Naintrais Meimtriis 0.08
+   hop1 witness    s 'nairban kibcaizleir' -> Daibran Pibaimzleir* 0.10, Krousshaim Nairain 0.09, Naintrais Meimtriis 0.08
+                   o 'Zairiashaisbak' -> Cholsu Zeirraishik 0.46, Zaimreis Daiskreelchain 0.23, Zaimreis Daiskreilchain 0.15
+                   (8 facts with this relation in context)
+   hop2 courier    s 'Zarras Soaisdbap' -> Zarrais Shaisbai 0.65, Zarrais Sheisbai 0.24, Zarrais Shaasbai 0.10
+                   o 'Laplaiql Sainrtel' -> Laplail Saintrer 1.00, Laplail Saintrel* 0.00, Laplail Saentrer 0.00
+                   (24 facts with this relation in context)
+   hop3 registrar  s 'Lalpail Saitnrel' -> Laplail Saintrer 1.00, Laplail Saintrel* 0.00, Lailglair Shiarar 0.00
+                   o 'Daimof wFaitserzo' -> Daimfo Faisterzo* 0.83, Daimfo Faitterpo 0.15, Daimfo Faislerpo 0.02
+                   (14 facts with this relation in context)
+   hop4 heir       s 'Daimof wFaitserzo' -> Daimfo Faisterzo* 0.83, Daimfo Faitterpo 0.15, Daimfo Faislerpo 0.02
+                   o 'Zpelleo Gokousbuor' -> Zelle Gokousbour* 0.98, Zelle Gokousboug 0.02, Zelle Gokoustour 0.00
+                   (10 facts with this relation in context)
+   hop5 client     s 'Zleie Gokousburh' -> Zelle Gokousbour* 0.67, Zelle Gokousboug 0.32, Zelle Gokoisbour 0.01
+                   o 'Miamm Ronrthaussom' -> Miammou Ronthausstom* 0.99, Miammou Ronshousstom 0.01, Miammou Ronthousstom 0.00
+                   (17 facts with this relation in context)
+   hop6 trustee    s 'Miafmmonu Reonthausstom' -> Miammou Ronthausstom* 1.00, Miammou Ronthousstom 0.00, Miammou Rinthousstom 0.00
+                   o 'Runkias Gomto' -> Runkias Gomto* 1.00, Runkias Gemto 0.00, Runkias Gemte 0.00
+                   (5 facts with this relation in context)
+-- q20 decoy=True answer=Zailgloul Plourthai got=Zailgloul Plounthai
+   start  'Sohsmei Theistrunvaek' -> Shosdrei Theistrunvaek* 1.00, Shosdrei Theistrunviik 0.00, Shosdrei Theistrunvaik 0.00
+   hop1 coach      s 'Sohsmei Theistrunvaek' -> Shosdrei Theistrunvaek* 1.00, Shosdrei Theistrunviik 0.00, Shosdrei Theistrunvaik 0.00
+                   o 'Norspi sDyemfdore' -> Norshis Demdrou 0.16, Norshis Demdreu 0.16, Norshis Demdroe* 0.03
+                   (10 facts with this relation in context)
+   hop2 courier    s 'Norshis Demdroe' -> Norshis Demdroe* 1.00, Norshis Demdrou 0.00, Norshis Demdreu 0.00
+                   o 'Fomno Roulstaror' -> Fomo Roulstaror* 1.00, Fomo Roulstarir 0.00, Fomo Roulftarir 0.00
+                   (24 facts with this relation in context)
+   hop3 lawyer     s 'Fomo Roulttror' -> Fomo Roulstaror* 0.97, Fomo Roulstarir 0.03, Fomo Roulftarir 0.00
+                   o 'Fekrra Troukgeisthio' -> Ferkra Troukgeisthio* 0.93, Ferkra Tfoukgeisthia 0.04, Ferkra Troukgeisthia 0.02
+                   (6 facts with this relation in context)
+   hop4 courier    s 'Ferra Trookugeistiho' -> Ferkra Troukgeisthio* 0.51, Ferkra Troekgeisthia 0.23, Ferkra Troukgeisthia 0.03
+                   o 'TilinDadrail' -> Tildin Dadrail* 1.00, Tildin Dudrail 0.00, Tilshi Staigloiriar 0.00
+                   (24 facts with this relation in context)
+   hop5 mentor     s 'Ttldin jaidrail' -> Tildin Dudrail 0.60, Tildin Dadrail* 0.05, Toudai Stukris 0.04
+                   o 'Vacbril lodriastva' -> Vaibril Plodriasva* 0.90, Vaibril Pludriasva 0.01, Vaibril Plodriakva 0.01
+                   (8 facts with this relation in context)
+   hop6 mentor     s 'Vaibri lPlodiasva' -> Vaibril Plodriasva* 0.58, Vaibril Plosriasva 0.37, Vaibril Plodriakva 0.03
+                   o 'Zdxillgoul lPourthari' -> Zailgloul Plourthai* 0.98, Zailgloul Plounthii 0.01, Zailgloul Plounthai 0.00
+                   (8 facts with this relation in context)
+-- q21 decoy=True answer=Murdre Mourdra got=Murdre Mourdri
+   start  'Brile Gleillgor' -> Brilfen Gleilzlair 0.69, Brilfen Gleilglair 0.28, Brilfen Gleilgloir* 0.02
+   hop1 trustee    s 'lrilefn Gielglzoir' -> Brilfen Gleilgloir* 0.29, Brilfen Gleilglair 0.17, Glemglais Magliglar 0.08
+                   o 'Lialbeir Brsook' -> Lailbeir Broshok* 0.74, Lailbeir Breshok 0.25, Lailbeir Brashok 0.01
+                   (5 facts with this relation in context)
+   hop2 doctor     s 'Lialbeir Brsook' -> Lailbeir Broshok* 0.74, Lailbeir Breshok 0.25, Lailbeir Brashok 0.01
+                   o 'Drofli Cujmbulsao' -> Drolfi Chumbulsao* 0.83, Drolfi Chumbalsai 0.15, Drolfi Chumbulsii 0.01
+                   (13 facts with this relation in context)
+   hop3 editor     s 'Drolif hCumblulazo' -> Drolfi Chumbulsii 0.99, Drolfi Chumbulsai 0.00, Drolfi Chumbulsao* 0.00
+                   o 'Glmuia Mairgianohuv' -> Glumia Maigianshouv* 0.78, Glumia Maigianshouk 0.12, Glumia Maigeanshouk 0.04
+                   (9 facts with this relation in context)
+   hop4 courier    s 'Glumip aMiegianshouv' -> Glumia Maigianshouv* 1.00, Glumia Maigeanshouk 0.00, Glumia Maigianshouk 0.00
+                   o 'tSeirfia Kakika' -> Steirfia Kaikki 0.53, Steirfia Kainki 0.45, Sheirfia Thailglifrel 0.01
+                   (24 facts with this relation in context)
+   hop5 courier    s 'Steqrifia aikka' -> Steirfia Kaikka* 1.00, Steirfia Kaikki 0.00, Steilchai Geidei 0.00
+                   o 'Stfibjul Zsavakw' -> Staibul Zasvak* 0.95, Staibul Zosvik 0.01, Stemglei Faakvoubair 0.00
+                   (24 facts with this relation in context)
+   hop6 employer   s 'tSaibul Zasvak' -> Staibul Zasvak* 0.99, Staibul Zasvik 0.01, Zarrais Shaisbai 0.00
+                   o 'uMdrre Mourdr' -> Murdre Mourdri 0.58, Murdre Mourdra* 0.41, Murdre Mourdre 0.01
+                   (16 facts with this relation in context)
+-- q22 decoy=False answer=Gliarche Tailkrusmha got=Gliarche Tailkkustha
+   start  'Tronno kisekszaki' -> Tronno Fizkeszaik 0.67, Tronno Fiskeszaik* 0.31, Tronno Fiskeszauk 0.01
+   hop1 doctor     s 'Tronn Fiskeszik' -> Tronno Fiskeszauk 0.68, Tronno Foskeszaik 0.31, Tronno Fizkeszaik 0.01
+                   o 'Pekzin Kartorutco' -> Plekzon Kartruto* 0.50, Plekzon Kartsuto 0.41, Plekzon Kartrupo 0.08
+                   (13 facts with this relation in context)
+   hop2 guardian   s 'Pekzno Kahtriuto' -> Plekzon Kartrupo 0.78, Peikkrour Keintoe 0.03, Kratrias Zezplu 0.03
+                   o 'Driadekn Saeldreisis' -> Driadein Saeldresis* 1.00, Driadein Saaldresis 0.00, Driadein Saildrekis 0.00
+                   (7 facts with this relation in context)
+   hop3 editor     s 'Driadein Savemdrpsgs' -> Driadein Saaldresis 0.84, Driadein Saildresis 0.09, Driadein Saildrekis 0.04
+                   o 'fdosda arkous' -> Dorbrail Fidolshoum 0.10, Faistaik Cheisliasfa 0.10, Farzis Dousnu 0.07
+                   (9 facts with this relation in context)
+   hop4 client     s 'Thosxas Tairkus' -> Thosdas Tairkous* 1.00, Thosdas Taorkous 0.00, Thosdas Taitkous 0.00
+                   o 'krqailel Chemglaik' -> Kraildel Chemglaik* 1.00, Kraildel Chelglaik 0.00, Kraildel Chalglaik 0.00
+                   (17 facts with this relation in context)
+   hop5 landlord   s 'rKaildle Chemgglaik' -> Kraildel Chemglaik* 1.00, Kraildel Chalglaik 0.00, Kraildel Chelglaik 0.00
+                   o 'Biaiso Dugai' -> Biaso Dugai* 1.00, Biaso Degai 0.00, Biaso Dubai 0.00
+                   (9 facts with this relation in context)
+   hop6 translator s 'iasofDmgai' -> Biaso Degai 0.45, Ziasas Liamban 0.16, Biaso Dubai 0.14
+                   o 'Gliranhs Taikumha' -> Gliarche Tailkkustha 0.29, Gliarche Tailkrusmha* 0.17, Gliarche Tailkrustha 0.04
+                   (8 facts with this relation in context)
+====================================================================================================
+EXACT: 435 failures of 1000 at h=6 (N=320, rho=0.200, seed 1)
+-- q0 decoy=False answer=Krebra Rusbrinbaiz got=Reisshias Girze
+   start  'Vairia kqeirrunkurp' -> Vaikriak Feirrunkrun 0.83, Vaikriak Feirrunkrup* 0.03, Vaikriak Feirrunprun 0.03
+   hop1 banker     s 'aikirap Feqrirunkrup' -> Vaikriak Feirrunkrup* 1.00, Vaikriak Feirrunprun 0.00, Vaikriak Feirrunkrun 0.00
+                   o 'Brikrbul Shoubstnv' -> Brikbrul Shoustu* 0.96, Brikbrul Shaustu 0.02, Brikbrul Shoastu 0.01
+                   (7 facts with this relation in context)
+   hop2 neighbour  s 'BrdkbrulfShuosatu' -> Brikbrul Shoostu 0.84, Brikbrul Shoustu* 0.10, Brikbrul Shoastu 0.03
+                   o 'Brrusrbak Givonplot' -> Brurdrail Rome 0.33, Brerkrom Plalos 0.30, Brurdrail Rede 0.05
+                   (11 facts with this relation in context)
+   hop3 courier    s 'BruusbrfGijnpflom' -> Shalzeir Bruusgeimkis 0.98, Brusbrak Gianplog 0.01, Brusbrak Gionplom* 0.00
+                   o 'Kreksse Fmokresun' -> Krekses Fomkresun* 0.79, Krekses Fomkrosun 0.18, Krekses Fomprosun 0.03
+                   (17 facts with this relation in context)
+   hop4 courier    s 'KreskssesFmokremnu' -> Krekses Fomkrosun 0.72, Krekses Fomkresun* 0.13, Krekses Fomprosun 0.03
+                   o 'Nainqrais Mcimzreis' -> Naintrais Meimzreis* 1.00, Naintrais Meimtriis 0.00, Naintrais Meimtreis 0.00
+                   (17 facts with this relation in context)
+   hop5 translator s 'Nainqrais Mcimzreis' -> Naintrais Meimzreis* 1.00, Naintrais Meimtriis 0.00, Naintrais Meimtreis 0.00
+                   o 'Glytheli Tranmgkouf' -> Glutheil Tremgokro 0.77, Glanbriar Tranplikmim 0.09, Glilshoun Zimengluf 0.01
+                   (11 facts with this relation in context)
+   hop6 tenant     s 'Gltheil Tremgoknuv' -> Glutheil Tremgoknu* 1.00, Glutheil Tremgokru 0.00, Glutheil Tremgokro 0.00
+                   o 'KrebraR usbrmnbaiz' -> Krebra Rusbrinbail 0.87, Krebra Rusbrinbaiz* 0.13, Krebra Rusbranbail 0.00
+                   (6 facts with this relation in context)
+-- q1 decoy=True answer=Dutriam Surdiashiam got=Dutriam Surdiathiam
+   start  'aanlshilz Gljunsiachkap' -> Kanshil Glenliachai 0.79, Kanshil Glensiachai 0.09, Glilshoun Zamenglus 0.01
+   hop1 mediator   s 'Kanshil Glnsiwchai' -> Kanshil Glensiachai 0.61, Kanshil Glunsiachai* 0.22, Kanshil Glenliachai 0.11
+                   o 'ZaigluolP lourtjai' -> Zailgloul Plourthai* 0.37, Zailgloul Plounthai 0.34, Zailgloul Plounthii 0.08
+                   (7 facts with this relation in context)
+   hop2 guardian   s 'Zalilgou lPfowrtahib' -> Zailgloul Plourthai* 0.68, Zailgloul Plounthai 0.13, Zailgloul Plounthui 0.05
+                   o 'Ronfaik Raikreshsoamv' -> Ronfaik Raiskresshoam* 1.00, Ronfaik Raiskrepshoum 0.00, Ronfaik Raiskdesshoum 0.00
+                   (17 facts with this relation in context)
+   hop3 banker     s 'Rofaik Raiskreshoma' -> Ronfaik Raiskresshoum 0.99, Ronfaik Raiskresshoam* 0.00, Ronfaik Raiskrepshoum 0.00
+                   o 'Lairdren Breite' -> Lairdren Breite* 1.00, Lairdren Breita 0.00, Lairdren Breiti 0.00
+                   (7 facts with this relation in context)
+   hop4 coach      s 'LirdreqBetiv' -> Lairdren Breile 0.79, Lairdren Breiti 0.08, Lidrir Drispaibruk 0.02
+                   o 'Bremvul riompkriam' -> Bremvul Triomkriam* 0.96, Bremvul Tkiamkriam 0.02, Bremvul Triankriam 0.01
+                   (11 facts with this relation in context)
+   hop5 coach      s 'Brevmul Triommuiam' -> Bremvul Triomkriam* 0.99, Fidrein Brevoulplur 0.00, Fidrein Brevoulplun 0.00
+                   o 'Lopzour Rabbail' -> Louzour Rabbail* 1.00, Louzour Rabrail 0.00, Louzour Rabfail 0.00
+                   (11 facts with this relation in context)
+   hop6 supplier   s 'Lopzour Rabbail' -> Louzour Rabbail* 1.00, Louzour Rabrail 0.00, Louzour Rabfail 0.00
+                   o 'Dutriam Surdiahiam' -> Dutriam Surdiathiam 1.00, Dutriam Surdiashiam* 0.00, Dutriam Sirdiathiam 0.00
+                   (7 facts with this relation in context)
+-- q3 decoy=True answer=Biktar Falgam got=Biktar Falgum
+   start  'aGdnonu arebriwksil' -> Gandoun Trelbriiskil* 0.07, Gandoun Trulbriaskil 0.03, Laplail Saontrer 0.03
+   hop1 rival      s 'GancounTreslbrioiskicl' -> Gandoun Trelbriaskil 0.62, Gandoun Trelbriiskil* 0.06, Gonchil Tiachebro 0.02
+                   o 'Seelubrian Tuelgtaam' -> Stelbrian Telgatam* 0.29, Dreimglia Turglimpir 0.05, Tholgloum Suipainbi 0.02
+                   (14 facts with this relation in context)
+   hop2 broker     s 'Stejbrian eTlgtatao' -> Stelbrian Telratam 0.27, Stelbrian Telgatam* 0.13, Steilchai Geatei 0.03
+                   o 'guokegi Bgahithoul' -> Loukgein Bgaithoul* 0.99, Fumgeik Glurthoi 0.00, Brousbiam Goukeper 0.00
+                   (10 facts with this relation in context)
+   hop3 guardian   s 'Lokugeni Bgaithiul' -> Loukgein Bgaithoul* 1.00, Peirplor Gedikbgai 0.00, Laigia Gludiak 0.00
+                   o 'Zoasjs hLiakbav' -> Ziasas Liakbav* 0.23, Ziasas Liakban 0.05, Zoga Glekhir 0.05
+                   (17 facts with this relation in context)
+   hop4 mentor     s 'Zoasjs hLiakbav' -> Ziasas Liakbav* 0.23, Ziasas Liakban 0.05, Zoga Glekhir 0.05
+                   o 'Krovuan Kdrimao' -> Krouvan Krimfao* 0.91, Krouvan Krimmai 0.08, Krouvan Krivfai 0.00
+                   (11 facts with this relation in context)
+   hop5 landlord   s 'Koruvan rimmoa' -> Krouvan Krimfao* 0.83, Krouvan Krimmai 0.03, Krouvan Krimfai 0.02
+                   o 'Krouu Lilmoypuol' -> Krousu Lilmoupoul* 1.00, Krousu Lolmoupoul 0.00, Krousu Lolmoupoub 0.00
+                   (10 facts with this relation in context)
+   hop6 courier    s 'Kwouhu Llomuizoul' -> Krousu Lolmoupoub 0.81, Siaglaik Louldoum 0.02, Krousu Lolmoupoul 0.01
+                   o 'Biktar Falgam' -> Biktar Falgam* 1.00, Biktar Falgum 0.00, Biktar Fabgum 0.00
+                   (17 facts with this relation in context)
+-- q5 decoy=False answer=Staisglan Veikfudaan got=Staisglan Veikfudain
+   start  'KraispouGluriaa' -> Kraipou Glurilna* 0.97, Kraipou Glirilna 0.01, Kraipou Glarilna 0.01
+   hop1 deputy     s 'Kruaipou tlrziln' -> Kraipou Glarilna 0.16, Kraipou Glurilna* 0.09, Krousshaim Naisain 0.05
+                   o 'Barimjtic Nunedriok' -> Braimsti Nunnedriok* 0.99, Braimsti Nunnedriaz 0.00, Braimsti Nunmedriak 0.00
+                   (10 facts with this relation in context)
+   hop2 neighbour  s 'Barimjtic Nunedriok' -> Braimsti Nunnedriok* 0.99, Braimsti Nunnedriaz 0.00, Braimsti Nunmedriak 0.00
+                   o 'rTocheil Dorkuneqkhds' -> Trocheil Droukneikchis* 0.75, Trocheil Droulneikchis 0.09, Trocheil Droinneikchis 0.04
+                   (11 facts with this relation in context)
+   hop3 translator s 'Trochdinl Dioudndikcisu' -> Trocheil Drounneikchis 0.53, Trocheil Droinneikchis 0.32, Trocheil Droulneikchis 0.05
+                   o 'DiaiknStamzrepis' -> Diamkin Stamzeis 0.98, Diamkin Stamreis* 0.02, Diamkin Stamzois 0.00
+                   (11 facts with this relation in context)
+   hop4 registrar  s 'Diarmin Stamreis' -> Diamkin Stamreis* 1.00, Diarplour Sika 0.00, Diamkin Stamzeis 0.00
+                   o 'Rrillo Munkeidriax' -> Reilol Mukkeidriak* 0.27, Reilol Mokkeidriak 0.22, Reilol Muvkeidriak 0.10
+                   (5 facts with this relation in context)
+   hop5 broker     s 'RevilolvMukeidtrijak' -> Reilol Muvkeidriak 0.85, Reilol Mukkeidriak* 0.02, Lurtor Driaksibleil 0.02
+                   o 'ZiarvianjKinastuliar' -> Ziarvian Kianguliar 0.63, Ziarvian Kiansuliar* 0.36, Ziarvian Kienguliar 0.01
+                   (10 facts with this relation in context)
+   hop6 agent      s 'Ziarvian Kinfdliaar' -> Ziarvian Kianguliar 0.53, Ziarvian Kienguliar 0.22, Ziarvian Kianguliir 0.17
+                   o 'Sqaisglan Veikfudana' -> Staisglan Veikfudain 0.53, Staisglan Veikfudaan* 0.47, Staisglan Veikfufain 0.00
+                   (5 facts with this relation in context)
+-- q7 decoy=True answer=Maplo Glanailpti got=Diakglour Niaplelrouk
+   start  'tSotres Deknchusvno' -> Stotres Dekchumson 0.35, Stotres Dekchuvson* 0.33, Stotres Dekchomson 0.23
+   hop1 rival      s 'SttersD ekcvuson' -> Stotres Dekchuvson* 0.63, Stotres Dekchomson 0.27, Stotres Dekchumson 0.03
+                   o 'Sarkam Fedviik' -> Sarkam Feivik* 0.96, Sarkam Feevok 0.04, Sarkam Faivok 0.00
+                   (14 facts with this relation in context)
+   hop2 client     s 'Sardkamz Fivik' -> Sarkam Feivik* 0.88, Sarkam Feivok 0.02, Sarkam Faivok 0.01
+                   o 'Shaimai Tralmlzilro' -> Shaimai Trailmlailro* 0.99, Shaimai Traikplailro 0.00, Shaimai Trailplailro 0.00
+                   (16 facts with this relation in context)
+   hop3 doctor     s 'Shaimui Traimlaliuo' -> Shaimai Traikplailro 0.84, Shaimai Trailmlailro* 0.11, Shaimai Trailplailro 0.03
+                   o 'Drilevs Mialabsha' -> Drilves Mialaisha* 0.98, Drilves Mialuisha 0.01, Drilves Mialaikha 0.00
+                   (7 facts with this relation in context)
+   hop4 witness    s 'Drihlves iaalihsa' -> Drilves Mialaisha* 0.64, Driadein Saildrekis 0.11, Drourshiar Fungledriu 0.06
+                   o 'praimsu Fenplar' -> Kraimsu Fenplar* 1.00, Traifus Feplair 0.00, Kraimsu Fenplal 0.00
+                   (9 facts with this relation in context)
+   hop5 supplier   s 'Kuaismb Fenplaar' -> Kraimsu Fenplar* 0.99, Kraimsu Fenplal 0.00, Goupou Plaundekne 0.00
+                   o 'olzil zuinrxb' -> Polzil Fuinranko* 0.90, Zaimreis Daiskreilchuin 0.01, Zoulfou Liromples 0.01
+                   (7 facts with this relation in context)
+   hop6 coach      s 'Pelizl Fuinrvko' -> Polzil Fuinranko* 1.00, Polzil Faonranko 0.00, Polzil Fainnanko 0.00
+                   o 'iaple lGanuailtpi' -> Diakglour Niaplelrouk 0.08, Maplo Glanailpti* 0.04, Miartair Vaiblu 0.04
+                   (11 facts with this relation in context)
+-- q9 decoy=False answer=Thebrai Galir got=Thebrai Galur
+   start  'LiarainL etshero' -> Liarain Leidsherok 0.39, Liarain Leitsherok* 0.38, Liarain Leissherok 0.22
+   hop1 patron     s 'Liarain Letisehrok' -> Liarain Leitsherok* 0.64, Liarain Leidsherok 0.22, Liarain Leissherok 0.11
+                   o 'Drunbua Legerrom' -> Drunba Legeirrom* 0.91, Drunba Lemeirrom 0.07, Drunba Lomeirrom 0.01
+                   (15 facts with this relation in context)
+   hop2 doctor     s 'Drunbua Legerrom' -> Drunba Legeirrom* 0.91, Drunba Lemeirrom 0.07, Drunba Lomeirrom 0.01
+                   o 'Thither Vasiutt' -> Thithir Vasitut* 1.00, Vufak Stuven 0.00, Thamde Vaisglo 0.00
+                   (7 facts with this relation in context)
+   hop3 coach      s 'TbtihirfVsaittu' -> Thithir Vasutur 0.19, Sheirfia Thailgtitrel 0.05, Stommou Trirpait 0.03
+                   o 'Drouabri Stiadraz' -> Drousbri Stiadraz* 1.00, Drousbri Stiadrar 0.00, Drousbri Stiadvar 0.00
+                   (11 facts with this relation in context)
+   hop4 mentor     s 'DrousbroipStiadraz' -> Drousbri Stiadraz* 1.00, Drousbri Stiadvar 0.00, Drousbri Stiadrar 0.00
+                   o 'Fepeik Saimchiothlk' -> Fepeik Saimchiothak* 1.00, Fepeik Saimchiathak 0.00, Fepeik Suimchiathak 0.00
+                   (11 facts with this relation in context)
+   hop5 courier    s 'FepeiSaihmchikoithzk' -> Fepeik Saimchiothak* 0.55, Fepeik Saimchiathak 0.41, Fepeik Suimchiathak 0.03
+                   o 'Plougeik fPoulrrikak' -> Plougeik Poulrriak* 1.00, Plougeik Pouldrial 0.00, Plougeik Pouldriak 0.00
+                   (17 facts with this relation in context)
+   hop6 employer   s 'Plougeid Poulrrka' -> Plougeik Poulrriak* 1.00, Plougeik Pouldrial 0.00, Plougeik Pouldniak 0.00
+                   o 'ThberaoaGoir' -> Thebrai Galur 0.20, Thebrai Golir 0.08, Thoubroun Theikthao 0.07
+                   (9 facts with this relation in context)
+-- q11 decoy=False answer=Nolglaim Thoukglormin got=Nolglaim Thoukglobmin
+   start  'Zexlkua Zabreis' -> Zeilkia Zabreis* 1.00, Zeilkia Zebreis 0.00, Zektha Rivairlra 0.00
+   hop1 rival      s 'Zeilkia Zaybreis' -> Zeilkia Zebreis 0.55, Zeilkia Zabreis* 0.45, Zeilkia Zebriis 0.00
+                   o 'Vhntrian Zavanhel' -> Vontrian Zavanshel* 0.98, Vontrian Zavanshem 0.02, Zakdriar Vountik 0.00
+                   (14 facts with this relation in context)
+   hop2 translator s 'ontrian Zpvanshet' -> Vontrian Zavanshem 0.65, Vontrian Zavanshel* 0.09, Vontrian Zavansham 0.06
+                   o 'Dirshek Ddiastodiea' -> Dirshek Diastodia* 1.00, Dirshek Diastodua 0.00, Dirshek Diastudia 0.00
+                   (11 facts with this relation in context)
+   hop3 inspector  s 'Driske Diastodia' -> Dirshek Diastodia* 1.00, Dirshek Diastudia 0.00, Dirshek Diastodua 0.00
+                   o 'Pebea Piun' -> Peba Pouna* 0.80, Peba Pouba 0.07, Peba Pousa 0.05
+                   (7 facts with this relation in context)
+   hop4 courier    s 'Pb aPouyn' -> Porsei Pabrebo 0.49, Peba Pouba 0.15, Peba Pouna* 0.06
+                   o 'Ligagis Sveddyof' -> Ligais Seidof* 0.94, Ligais Seadom 0.01, Ligais Seidim 0.01
+                   (17 facts with this relation in context)
+   hop5 neighbour  s 'Ltgais Seidf' -> Ligais Seidom 0.36, Ligais Seadom 0.32, Ligais Seidof* 0.07
+                   o 'Mokfufsb Nenstip' -> Mokrus Nenstip* 1.00, Mokrus Nenstir 0.00, Mokrus Nenstil 0.00
+                   (11 facts with this relation in context)
+   hop6 heir       s 'MokrusNenstip' -> Mokrus Nenstip* 1.00, Mokrus Nenstir 0.00, Mokrus Nenstil 0.00
+                   o 'Nolwglaim Thsoukglokmin' -> Nolglaim Thoukglobmin 1.00, Nolglaim Thoumglormin 0.00, Nolglaim Thoukglormin* 0.00
+                   (7 facts with this relation in context)
+-- q12 decoy=True answer=Dredrim Shelchul got=Dredrim Shilchul
+   start  'Geinkei Sotustcib' -> Geinkeir Stousteas 0.65, Geinkeir Stoisteis 0.27, Geinkeir Stousteig* 0.04
+   hop1 auditor    s 'GeinkeiStoumseig' -> Geinkeir Stousteig* 0.70, Geinkeir Stousteas 0.23, Geinkeir Stousteis 0.07
+                   o 'Gdidrol Dokttian' -> Gidrol Dokttian* 1.00, Gidrol Doktrian 0.00, Gidrol Doktriap 0.00
+                   (13 facts with this relation in context)
+   hop2 client     s 'Gdidrol Dokttian' -> Gidrol Dokttian* 1.00, Gidrol Doktrian 0.00, Gidrol Doktriap 0.00
+                   o 'broumplamgRadria' -> Droumplam Radria* 1.00, Droumplam Radrie 0.00, Pliampar Broutrobfa 0.00
+                   (16 facts with this relation in context)
+   hop3 rival      s 'Droumplm Radrai' -> Droumplam Radrie 0.87, Droumplam Radria* 0.08, Droumplam Raddia 0.05
+                   o 'Zgawkdria rVountik' -> Zakdriar Vountik* 0.67, Zoukdrour Vongas 0.05, Zailreim Vortroi 0.02
+                   (14 facts with this relation in context)
+   hop4 doctor     s 'Zakdlriar Vountik' -> Zakdriar Vountik* 1.00, Zakdriar Vounpik 0.00, Zakdriar Vounpil 0.00
+                   o 'Nfedikzun Kraibaimfan' -> Neikzun Kraibaimfan* 1.00, Neikzun Kraibairfan 0.00, Neikzun Kraibaemfan 0.00
+                   (7 facts with this relation in context)
+   hop5 envoy      s 'Nfedikzun Kraibaimfan' -> Neikzun Kraibaimfan* 1.00, Neikzun Kraibairfan 0.00, Neikzun Kraibaemfan 0.00
+                   o 'Bronej aktias' -> Bronel Maktias* 0.73, Bronel Mistias 0.19, Bronel Miktias 0.03
+                   (8 facts with this relation in context)
+   hop6 pupil      s 'Bronel Maktias' -> Bronel Maktias* 1.00, Bronel Miktias 0.00, Bronel Mistias 0.00
+                   o 'Daredrim Shylchul' -> Dredrim Shilchul 0.99, Dredrim Shalchul 0.00, Dredrim Shelchul* 0.00
+                   (13 facts with this relation in context)
+-- q16 decoy=True answer=Raimai Ploanthekbron got=Raimai Plounthekbron
+   start  'Lolkrozm Realrei' -> Lolkrom Rearleil* 0.94, Lolkrom Riatleil 0.06, Lolkrom Riableil 0.00
+   hop1 client     s 'Llokom Rearleil' -> Lolkrom Rearleil* 1.00, Lolkrom Riableil 0.00, Ploullun Glivuv 0.00
+                   o 'Drilves Mealqasiha' -> Drilves Mealaisha* 0.99, Drilves Mialuisha 0.00, Drilves Mialaikha 0.00
+                   (16 facts with this relation in context)
+   hop2 auditor    s 'Durilves Meaglaisah' -> Drilves Mealaisha* 0.99, Biarstiam Keasglirzom 0.00, Glemglais Magliglar 0.00
+                   o 'rBumke nFikvaksheik' -> Brumken Fikvaksheik* 0.87, Brumken Fikzaksheik 0.12, Brumken Fikzakshaik 0.00
+                   (13 facts with this relation in context)
+   hop3 partner    s 'Brummke iFkvakhseik' -> Brumken Fikvaksheik* 0.98, Brumken Fikzakshiik 0.01, Brumken Fikzaksheik 0.00
+                   o 'Numblak Trakder' -> Numplak Trakdre* 0.87, Numplak Traldre 0.13, Numtim Brolthem 0.00
+                   (10 facts with this relation in context)
+   hop4 auditor    s 'eumplrak Trarbdre' -> Numplak Traltre 0.10, Numplak Traldre 0.09, Treskrin Remrak 0.04
+                   o 'Gimim Tzancahinbrei' -> Gimtim Tzainchainbrei* 0.81, Gimtim Trainchuinbrei 0.18, Gimtim Trainchainbrei 0.01
+                   (13 facts with this relation in context)
+   hop5 courier    s 'GidtnmT zainhainbrei' -> Gimtim Tzainchainbrei* 0.95, Gimtim Trainchainbrei 0.01, Zaisgla Thousre 0.00
+                   o 'Shoivna Feimmsxoulzer' -> Shivan Feimsoulzer* 1.00, Shivan Feimsoolmer 0.00, Shivan Feimsoulmer 0.00
+                   (17 facts with this relation in context)
+   hop6 editor     s 'Shitvn Feimsoulzer' -> Shivan Feimsoulzer* 1.00, Shivan Feimsoulmer 0.00, Shivan Faimsoulmer 0.00
+                   o 'Raikzi uPlonthekbron' -> Raimai Ploanthekbron* 0.35, Raikbum Tourseir 0.18, Stanbial Raiktriakros 0.09
+                   (8 facts with this relation in context)
+-- q18 decoy=False answer=Thiakrou Kuskrukmak got=Thiakrou Keskrukmak
+   start  'Shachnok Kraifdrais' -> Shachou Kraifdrais* 1.00, Shachou Krauldrais 0.00, Shachou Kraildrais 0.00
+   hop1 deputy     s 'hcahuK nafidraivs' -> Shachou Kraifdrais* 0.13, Chasnam Nianpu 0.05, Damstian Dalfais 0.02
+                   o 'Trrdos Kqrtbro' -> Trados Krubro 0.59, Trados Krubdo 0.09, Tatra Thaikror 0.02
+                   (9 facts with this relation in context)
+   hop2 courier    s 'Treods Krobro' -> Trados Krobro* 1.00, Trados Krubro 0.00, Stanmi Kroobian 0.00
+                   o 'NeikzunKrlainbairfan' -> Neikzun Kraibairfan* 0.89, Neikzun Kraibaimfan 0.08, Neikzun Kraibaemfan 0.02
+                   (24 facts with this relation in context)
+   hop3 tenant     s 'NeikzunKrlainbairfan' -> Neikzun Kraibairfan* 0.89, Neikzun Kraibaimfan 0.08, Neikzun Kraibaemfan 0.02
+                   o 'Trijanplhai Piakvo' -> Trianplai Piakvo* 1.00, Trianplai Piakva 0.00, Trianplai Piatvo 0.00
+                   (16 facts with this relation in context)
+   hop4 heir       s 'TianpliaP itakvo' -> Trianplai Piatvo 0.89, Trianplai Piakvo* 0.07, Trianplai Piakva 0.02
+                   o 'Brekrrom Plalas' -> Brerkrom Plalas* 1.00, Brerkrom Plalos 0.00, Breirsom Posbrebrak 0.00
+                   (10 facts with this relation in context)
+   hop5 witness    s 'Brerkrom plPalqas' -> Brerkrom Plalas* 0.68, Brerkrom Pzalas 0.20, Brerkrom Pgalas 0.07
+                   o 'Shonno Trinspaifas' -> Shonnon Triaspaifais* 1.00, Shonnon Triasgaifaes 0.00, Shonnon Triasgaifuis 0.00
+                   (8 facts with this relation in context)
+   hop6 broker     s 'Shonunon Tpaspaifais' -> Shonnon Triaspaifais* 1.00, Shonnon Triasgaifais 0.00, Shonnon Triasgaifuis 0.00
+                   o 'Thaklrou Ksukrhukmak' -> Thiakrou Keskrukmak 0.45, Thiakrou Kuskrukmak* 0.44, Thiakrou Kerkrukmak 0.04
+                   (11 facts with this relation in context)
+-- q20 decoy=True answer=Zailgloul Plourthai got=Zailgloul Plounthai
+   start  'Sohsmei Theistrunvaek' -> Shosdrei Theistrunvaek* 1.00, Shosdrei Theistrunviik 0.00, Shosdrei Theistrunvaik 0.00
+   hop1 coach      s 'Sohsmei Theistrunvaek' -> Shosdrei Theistrunvaek* 1.00, Shosdrei Theistrunviik 0.00, Shosdrei Theistrunvaik 0.00
+                   o 'Norspi sDyemfdore' -> Norshis Demdrou 0.16, Norshis Demdreu 0.16, Norshis Demdroe* 0.03
+                   (10 facts with this relation in context)
+   hop2 courier    s 'Norshis Demdroe' -> Norshis Demdroe* 1.00, Norshis Demdrou 0.00, Norshis Demdreu 0.00
+                   o 'Fomno Roulstaror' -> Fomo Roulstaror* 1.00, Fomo Roulstarir 0.00, Fomo Roulftarir 0.00
+                   (24 facts with this relation in context)
+   hop3 lawyer     s 'Fomo Roulttror' -> Fomo Roulstaror* 0.97, Fomo Roulstarir 0.03, Fomo Roulftarir 0.00
+                   o 'Fekrra Troukgeisthio' -> Ferkra Troukgeisthio* 0.93, Ferkra Tfoukgeisthia 0.04, Ferkra Troukgeisthia 0.02
+                   (6 facts with this relation in context)
+   hop4 courier    s 'Ferra Trookugeistiho' -> Ferkra Troukgeisthio* 0.51, Ferkra Troekgeisthia 0.23, Ferkra Troukgeisthia 0.03
+                   o 'TilinDadrail' -> Tildin Dadrail* 1.00, Tildin Dudrail 0.00, Tilshi Staigloiriar 0.00
+                   (24 facts with this relation in context)
+   hop5 mentor     s 'Ttldin jaidrail' -> Tildin Dudrail 0.60, Tildin Dadrail* 0.05, Toudai Stukris 0.04
+                   o 'Vacbril lodriastva' -> Vaibril Plodriasva* 0.90, Vaibril Pludriasva 0.01, Vaibril Plodriakva 0.01
+                   (8 facts with this relation in context)
+   hop6 mentor     s 'Vaibri lPlodiasva' -> Vaibril Plodriasva* 0.58, Vaibril Plosriasva 0.37, Vaibril Plodriakva 0.03
+                   o 'Zdxillgoul lPourthari' -> Zailgloul Plourthai* 0.98, Zailgloul Plounthii 0.01, Zailgloul Plounthai 0.00
+                   (8 facts with this relation in context)
+-- q21 decoy=True answer=Murdre Mourdra got=Murdre Mourdri
+   start  'Brile Gleillgor' -> Brilfen Gleilzlair 0.69, Brilfen Gleilglair 0.28, Brilfen Gleilgloir* 0.02
+   hop1 trustee    s 'lrilefn Gielglzoir' -> Brilfen Gleilgloir* 0.29, Brilfen Gleilglair 0.17, Glemglais Magliglar 0.08
+                   o 'Lialbeir Brsook' -> Lailbeir Broshok* 0.74, Lailbeir Breshok 0.25, Lailbeir Brashok 0.01
+                   (5 facts with this relation in context)
+   hop2 doctor     s 'Lialbeir Brsook' -> Lailbeir Broshok* 0.74, Lailbeir Breshok 0.25, Lailbeir Brashok 0.01
+                   o 'Drofli Cujmbulsao' -> Drolfi Chumbulsao* 0.83, Drolfi Chumbalsai 0.15, Drolfi Chumbulsii 0.01
+                   (13 facts with this relation in context)
+   hop3 editor     s 'Drolif hCumblulazo' -> Drolfi Chumbulsii 0.99, Drolfi Chumbulsai 0.00, Drolfi Chumbulsao* 0.00
+                   o 'Glmuia Mairgianohuv' -> Glumia Maigianshouv* 0.78, Glumia Maigianshouk 0.12, Glumia Maigeanshouk 0.04
+                   (9 facts with this relation in context)
+   hop4 courier    s 'Glumip aMiegianshouv' -> Glumia Maigianshouv* 1.00, Glumia Maigeanshouk 0.00, Glumia Maigianshouk 0.00
+                   o 'tSeirfia Kakika' -> Steirfia Kaikki 0.53, Steirfia Kainki 0.45, Sheirfia Thailglifrel 0.01
+                   (24 facts with this relation in context)
+   hop5 courier    s 'Steqrifia aikka' -> Steirfia Kaikka* 1.00, Steirfia Kaikki 0.00, Steilchai Geidei 0.00
+                   o 'Stfibjul Zsavakw' -> Staibul Zasvak* 0.95, Staibul Zosvik 0.01, Stemglei Faakvoubair 0.00
+                   (24 facts with this relation in context)
+   hop6 employer   s 'tSaibul Zasvak' -> Staibul Zasvak* 0.99, Staibul Zasvik 0.01, Zarrais Shaisbai 0.00
+                   o 'uMdrre Mourdr' -> Murdre Mourdri 0.58, Murdre Mourdra* 0.41, Murdre Mourdre 0.01
+                   (16 facts with this relation in context)
+-- q22 decoy=False answer=Gliarche Tailkrusmha got=Gliarche Tailkkustha
+   start  'Tronno kisekszaki' -> Tronno Fizkeszaik 0.67, Tronno Fiskeszaik* 0.31, Tronno Fiskeszauk 0.01
+   hop1 doctor     s 'Tronn Fiskeszik' -> Tronno Fiskeszauk 0.68, Tronno Foskeszaik 0.31, Tronno Fizkeszaik 0.01
+                   o 'Pekzin Kartorutco' -> Plekzon Kartruto* 0.50, Plekzon Kartsuto 0.41, Plekzon Kartrupo 0.08
+                   (13 facts with this relation in context)
+   hop2 guardian   s 'Pekzno Kahtriuto' -> Plekzon Kartrupo 0.78, Peikkrour Keintoe 0.03, Kratrias Zezplu 0.03
+                   o 'Driadekn Saeldreisis' -> Driadein Saeldresis* 1.00, Driadein Saaldresis 0.00, Driadein Saildrekis 0.00
+                   (7 facts with this relation in context)
+   hop3 editor     s 'Driadein Savemdrpsgs' -> Driadein Saaldresis 0.84, Driadein Saildresis 0.09, Driadein Saildrekis 0.04
+                   o 'fdosda arkous' -> Dorbrail Fidolshoum 0.10, Faistaik Cheisliasfa 0.10, Farzis Dousnu 0.07
+                   (9 facts with this relation in context)
+   hop4 client     s 'Thosxas Tairkus' -> Thosdas Tairkous* 1.00, Thosdas Taorkous 0.00, Thosdas Taitkous 0.00
+                   o 'krqailel Chemglaik' -> Kraildel Chemglaik* 1.00, Kraildel Chelglaik 0.00, Kraildel Chalglaik 0.00
+                   (17 facts with this relation in context)
+   hop5 landlord   s 'rKaildle Chemgglaik' -> Kraildel Chemglaik* 1.00, Kraildel Chalglaik 0.00, Kraildel Chelglaik 0.00
+                   o 'Biaiso Dugai' -> Biaso Dugai* 1.00, Biaso Degai 0.00, Biaso Dubai 0.00
+                   (9 facts with this relation in context)
+   hop6 translator s 'iasofDmgai' -> Biaso Degai 0.45, Ziasas Liamban 0.16, Biaso Dubai 0.14
+                   o 'Gliranhs Taikumha' -> Gliarche Tailkkustha 0.29, Gliarche Tailkrusmha* 0.17, Gliarche Tailkrustha 0.04
+                   (8 facts with this relation in context)
+-- q23 decoy=True answer=Zoga Gleshir got=Zoga Gseshir
+   start  'MeszamK iamthialdar' -> Meszam Kiamtialdar* 0.95, Meszam Kiammialdar 0.05, Meszam Kiommialdar 0.00
+   hop1 doctor     s 'Meszam Kiamhialdar' -> Meszam Kiammialdar 0.78, Meszam Kiamtialdar* 0.21, Meszam Kiammialdas 0.00
+                   o 'Thojo Thikbre' -> Thokzon Thikbre* 0.99, Thokzon Thikbne 0.00, Thokzon Thikbse 0.00
+                   (13 facts with this relation in context)
+   hop2 pupil      s 'Thokzon Thkibre' -> Thokzon Thikbre* 0.76, Thokzon Thikbne 0.15, Thokzon Thikbse 0.05
+                   o 'GsiiuKrakeild' -> Gisi Kraiklim 0.56, Gisi Kraeklin* 0.27, Gisi Kraiklin 0.10
+                   (16 facts with this relation in context)
+   hop3 broker     s 'Gisi Kraelidn' -> Gisi Kraeklin* 1.00, Gisi Kraiklil 0.00, Gisi Kraiklim 0.00
+                   o 'Trasor Rguslilale' -> Traso Reuslialle 0.95, Traso Rousliamle 0.02, Traso Rouslialle* 0.01
+                   (11 facts with this relation in context)
+   hop4 employer   s 'Trasor Rguslilale' -> Traso Reuslialle 0.95, Traso Rousliamle 0.02, Traso Rouslialle* 0.01
+                   o 'qhremtug Glsiorinin' -> Chemtou Glitkrinain 0.05, Glutheil Tremgokru 0.03, Dumtun Mesfiar 0.02
+                   (16 facts with this relation in context)
+   hop5 rival      s 'Chemtou eliskrinain' -> Chemtou Gliskrinain* 1.00, Chemtou Glitkrinain 0.00, Chemtou Glivkrinain 0.00
+                   o 'Brosnscat Drosneitrihv' -> Brounsta Drosneithiv* 0.68, Brounsta Drosneithis 0.30, Drousshe Broisbren 0.01
+                   (5 facts with this relation in context)
+   hop6 tutor      s 'Brounsat Drosnewthvi' -> Brounsta Drosneithis 0.63, Brounsta Drosneithiv* 0.36, Brounsta Drosnuithis 0.01
+                   o 'oZagGleshir' -> Zoga Gleshir* 0.99, Zunshou Glainzeir 0.00, Zoukdrour Vongas 0.00
+                   (13 facts with this relation in context)
+-- q26 decoy=True answer=Cheimdia Piasdoutai got=Cheimdia Piasdourai
+   start  'iVsngaij Schulbmo' -> Viasnaim Sichulba 0.11, Shidi Shoolchas 0.07, Viasnaim Sichulbo* 0.05
+   hop1 mediator   s 'Vifasanim Sicuhlbo' -> Viasnaim Sichulbo* 0.49, Viasnaim Sichulba 0.21, Viasnaim Sicholbo 0.19
+                   o 'Glimshou nZimnnguf' -> Glilshoun Zimenglus 0.94, Glilshoun Zimengluf* 0.04, Glilshoun Zimenglud 0.01
+                   (10 facts with this relation in context)
+   hop2 tenant     s 'Glilwshoun Zimexnglufg' -> Glilshoun Zimengluf* 0.96, Glilshoun Zimenglus 0.04, Glilshoun Zimenglud 0.00
+                   o 'Plaeplaijk Gozneisia' -> Plaplaik Gomzeisia* 1.00, Plaplaik Gemzeisia 0.00, Plaplaik Gimzeisia 0.00
+                   (16 facts with this relation in context)
+   hop3 witness    s 'Phaplaik Gomzeisia' -> Plaplaik Gomzeisia* 1.00, Plaplaik Gemzeisia 0.00, Plaplaik Gimzeisia 0.00
+                   o 'Limvo Rengwedcsaim' -> Limvo Rengedchaim* 0.94, Limvo Rengolchaim 0.05, Limvo Rengelchaim 0.01
+                   (8 facts with this relation in context)
+   hop4 tenant     s 'Limvo Rengwedcsaim' -> Limvo Rengedchaim* 0.94, Limvo Rengolchaim 0.05, Limvo Rengelchaim 0.01
+                   o 'Rfousha Batjnoumfu' -> Rousha Bairnoumfu* 0.96, Dreimliak Boukstouzo 0.01, Rousha Baignounfu 0.01
+                   (16 facts with this relation in context)
+   hop5 mediator   s 'oush aBairnnamfu' -> Rousha Bairnoumfu* 0.58, Rousha Bairnounfu 0.34, Dreimliak Boukstouzo 0.01
+                   o 'Gimchebs Lcavshuk' -> Gaimches Liavshuk* 0.99, Gaimches Lianshuk 0.01, Gaimches Loanshuk 0.00
+                   (10 facts with this relation in context)
+   hop6 supplier   s 'Gimczhes zLcavshuk' -> Gaimches Liavshuk* 0.81, Gulous Zolchis 0.01, Gaimches Loanshuk 0.01
+                   o 'hCeimdiakPiasduotiai' -> Cheimdia Piasdourai 0.74, Cheimdia Piasdoutai* 0.14, Cheimdia Piasdeurai 0.07
+                   (5 facts with this relation in context)
+====================================================================================================
+VSA_HOP4_D65536_kb4: 716 failures of 1000 at h=6 (N=320, rho=0.200, seed 1)
+-- q0 decoy=False answer=Krebra Rusbrinbaiz got=Naisnai Ziunvia
+   start  'Vairia kqeirrunkurp' -> Vaikriak Feirrunkrun 0.83, Vaikriak Feirrunkrup* 0.03, Vaikriak Feirrunprun 0.03
+   hop1 banker     s 'aikirap Feqrirunkrup' -> Vaikriak Feirrunkrup* 1.00, Vaikriak Feirrunprun 0.00, Vaikriak Feirrunkrun 0.00
+                   o 'Brikrbul Shoubstnv' -> Brikbrul Shoustu* 0.96, Brikbrul Shaustu 0.02, Brikbrul Shoastu 0.01
+                   (7 facts with this relation in context)
+   hop2 neighbour  s 'BrdkbrulfShuosatu' -> Brikbrul Shoostu 0.84, Brikbrul Shoustu* 0.10, Brikbrul Shoastu 0.03
+                   o 'Brrusrbak Givonplot' -> Brurdrail Rome 0.33, Brerkrom Plalos 0.30, Brurdrail Rede 0.05
+                   (11 facts with this relation in context)
+   hop3 courier    s 'BruusbrfGijnpflom' -> Shalzeir Bruusgeimkis 0.98, Brusbrak Gianplog 0.01, Brusbrak Gionplom* 0.00
+                   o 'Kreksse Fmokresun' -> Krekses Fomkresun* 0.79, Krekses Fomkrosun 0.18, Krekses Fomprosun 0.03
+                   (17 facts with this relation in context)
+   hop4 courier    s 'KreskssesFmokremnu' -> Krekses Fomkrosun 0.72, Krekses Fomkresun* 0.13, Krekses Fomprosun 0.03
+                   o 'Nainqrais Mcimzreis' -> Naintrais Meimzreis* 1.00, Naintrais Meimtriis 0.00, Naintrais Meimtreis 0.00
+                   (17 facts with this relation in context)
+   hop5 translator s 'Nainqrais Mcimzreis' -> Naintrais Meimzreis* 1.00, Naintrais Meimtriis 0.00, Naintrais Meimtreis 0.00
+                   o 'Glytheli Tranmgkouf' -> Glutheil Tremgokro 0.77, Glanbriar Tranplikmim 0.09, Glilshoun Zimengluf 0.01
+                   (11 facts with this relation in context)
+   hop6 tenant     s 'Gltheil Tremgoknuv' -> Glutheil Tremgoknu* 1.00, Glutheil Tremgokru 0.00, Glutheil Tremgokro 0.00
+                   o 'KrebraR usbrmnbaiz' -> Krebra Rusbrinbail 0.87, Krebra Rusbrinbaiz* 0.13, Krebra Rusbranbail 0.00
+                   (6 facts with this relation in context)
+-- q1 decoy=True answer=Dutriam Surdiashiam got=Brurdrail Reme
+   start  'aanlshilz Gljunsiachkap' -> Kanshil Glenliachai 0.79, Kanshil Glensiachai 0.09, Glilshoun Zamenglus 0.01
+   hop1 mediator   s 'Kanshil Glnsiwchai' -> Kanshil Glensiachai 0.61, Kanshil Glunsiachai* 0.22, Kanshil Glenliachai 0.11
+                   o 'ZaigluolP lourtjai' -> Zailgloul Plourthai* 0.37, Zailgloul Plounthai 0.34, Zailgloul Plounthii 0.08
+                   (7 facts with this relation in context)
+   hop2 guardian   s 'Zalilgou lPfowrtahib' -> Zailgloul Plourthai* 0.68, Zailgloul Plounthai 0.13, Zailgloul Plounthui 0.05
+                   o 'Ronfaik Raikreshsoamv' -> Ronfaik Raiskresshoam* 1.00, Ronfaik Raiskrepshoum 0.00, Ronfaik Raiskdesshoum 0.00
+                   (17 facts with this relation in context)
+   hop3 banker     s 'Rofaik Raiskreshoma' -> Ronfaik Raiskresshoum 0.99, Ronfaik Raiskresshoam* 0.00, Ronfaik Raiskrepshoum 0.00
+                   o 'Lairdren Breite' -> Lairdren Breite* 1.00, Lairdren Breita 0.00, Lairdren Breiti 0.00
+                   (7 facts with this relation in context)
+   hop4 coach      s 'LirdreqBetiv' -> Lairdren Breile 0.79, Lairdren Breiti 0.08, Lidrir Drispaibruk 0.02
+                   o 'Bremvul riompkriam' -> Bremvul Triomkriam* 0.96, Bremvul Tkiamkriam 0.02, Bremvul Triankriam 0.01
+                   (11 facts with this relation in context)
+   hop5 coach      s 'Brevmul Triommuiam' -> Bremvul Triomkriam* 0.99, Fidrein Brevoulplur 0.00, Fidrein Brevoulplun 0.00
+                   o 'Lopzour Rabbail' -> Louzour Rabbail* 1.00, Louzour Rabrail 0.00, Louzour Rabfail 0.00
+                   (11 facts with this relation in context)
+   hop6 supplier   s 'Lopzour Rabbail' -> Louzour Rabbail* 1.00, Louzour Rabrail 0.00, Louzour Rabfail 0.00
+                   o 'Dutriam Surdiahiam' -> Dutriam Surdiathiam 1.00, Dutriam Surdiashiam* 0.00, Dutriam Sirdiathiam 0.00
+                   (7 facts with this relation in context)
+-- q2 decoy=False answer=Derdru Doulas got=Niazeim Pemvingil
+   start  'gzimtres houhi' -> Geimtres Shouthi* 0.33, Komzum Zimge 0.16, Geimtres Shoutho 0.15
+   hop1 broker     s 'zeimtresShojutci' -> Geimtres Shouthi* 0.54, Zeimrei Sikurlou 0.17, Zeimrei Sikunlou 0.09
+                   o 'Kbrum fatsgsktum' -> Kabrum Kfastikstum* 0.91, Kabrum Krastifstum 0.04, Kabrum Krastiksgum 0.03
+                   (10 facts with this relation in context)
+   hop2 lawyer     s 'Kabrum cKfastlkntugm' -> Kabrum Kfastikstum* 0.99, Kabrum Krastifstum 0.01, Kabrum Krastikstum 0.00
+                   o 'Brelmia mKeiketshk' -> Brelmiam Keikesthok 0.85, Brelmiam Keikedthok 0.10, Brelmiam Keikesthuk* 0.02
+                   (9 facts with this relation in context)
+   hop3 landlord   s 'Brelmham eKikesthuk' -> Brelmiam Keikesthuk* 0.99, Brelmiam Keikesthok 0.01, Brelmiam Keikedthok 0.00
+                   o 'Dirshek Diuasgodai' -> Dirshek Diasgodia* 0.96, Dirshek Diastudia 0.03, Dirshek Diastodua 0.01
+                   (10 facts with this relation in context)
+   hop4 neighbour  s 'DirhseksDiasgouia' -> Dirshek Diasgodia* 0.65, Dirshek Diastudia 0.19, Dirshek Diastodua 0.05
+                   o 'Krekkra Dretvhuk' -> Krekkrai Dremthuk 0.62, Krekkrai Drevthuk* 0.38, Krekkrai Dremphuk 0.00
+                   (11 facts with this relation in context)
+   hop5 client     s 'Krekkrai Drevthuk' -> Krekkrai Drevthuk* 1.00, Krekkrai Dremthuk 0.00, Krekkrai Dremphuk 0.00
+                   o 'FqubruloR eizsiailu' -> Foubrul Reisziadiu* 0.18, Foubrul Riisziadia 0.17, Foubrul Reisziadia 0.13
+                   (16 facts with this relation in context)
+   hop6 sponsor    s 'FqubruloR eizsiailu' -> Foubrul Reisziadiu* 0.18, Foubrul Riisziadia 0.17, Foubrul Reisziadia 0.13
+                   o 'Derrdu Dhulas' -> Derdru Doulas* 1.00, Derdru Doular 0.00, Derdru Doulal 0.00
+                   (10 facts with this relation in context)
+-- q3 decoy=True answer=Biktar Falgam got=Malgleis Thasmurbrail
+   start  'aGdnonu arebriwksil' -> Gandoun Trelbriiskil* 0.07, Gandoun Trulbriaskil 0.03, Laplail Saontrer 0.03
+   hop1 rival      s 'GancounTreslbrioiskicl' -> Gandoun Trelbriaskil 0.62, Gandoun Trelbriiskil* 0.06, Gonchil Tiachebro 0.02
+                   o 'Seelubrian Tuelgtaam' -> Stelbrian Telgatam* 0.29, Dreimglia Turglimpir 0.05, Tholgloum Suipainbi 0.02
+                   (14 facts with this relation in context)
+   hop2 broker     s 'Stejbrian eTlgtatao' -> Stelbrian Telratam 0.27, Stelbrian Telgatam* 0.13, Steilchai Geatei 0.03
+                   o 'guokegi Bgahithoul' -> Loukgein Bgaithoul* 0.99, Fumgeik Glurthoi 0.00, Brousbiam Goukeper 0.00
+                   (10 facts with this relation in context)
+   hop3 guardian   s 'Lokugeni Bgaithiul' -> Loukgein Bgaithoul* 1.00, Peirplor Gedikbgai 0.00, Laigia Gludiak 0.00
+                   o 'Zoasjs hLiakbav' -> Ziasas Liakbav* 0.23, Ziasas Liakban 0.05, Zoga Glekhir 0.05
+                   (17 facts with this relation in context)
+   hop4 mentor     s 'Zoasjs hLiakbav' -> Ziasas Liakbav* 0.23, Ziasas Liakban 0.05, Zoga Glekhir 0.05
+                   o 'Krovuan Kdrimao' -> Krouvan Krimfao* 0.91, Krouvan Krimmai 0.08, Krouvan Krivfai 0.00
+                   (11 facts with this relation in context)
+   hop5 landlord   s 'Koruvan rimmoa' -> Krouvan Krimfao* 0.83, Krouvan Krimmai 0.03, Krouvan Krimfai 0.02
+                   o 'Krouu Lilmoypuol' -> Krousu Lilmoupoul* 1.00, Krousu Lolmoupoul 0.00, Krousu Lolmoupoub 0.00
+                   (10 facts with this relation in context)
+   hop6 courier    s 'Kwouhu Llomuizoul' -> Krousu Lolmoupoub 0.81, Siaglaik Louldoum 0.02, Krousu Lolmoupoul 0.01
+                   o 'Biktar Falgam' -> Biktar Falgam* 1.00, Biktar Falgum 0.00, Biktar Fabgum 0.00
+                   (17 facts with this relation in context)
+-- q5 decoy=False answer=Staisglan Veikfudaan got=Thounvou Dinkroukei
+   start  'KraispouGluriaa' -> Kraipou Glurilna* 0.97, Kraipou Glirilna 0.01, Kraipou Glarilna 0.01
+   hop1 deputy     s 'Kruaipou tlrziln' -> Kraipou Glarilna 0.16, Kraipou Glurilna* 0.09, Krousshaim Naisain 0.05
+                   o 'Barimjtic Nunedriok' -> Braimsti Nunnedriok* 0.99, Braimsti Nunnedriaz 0.00, Braimsti Nunmedriak 0.00
+                   (10 facts with this relation in context)
+   hop2 neighbour  s 'Barimjtic Nunedriok' -> Braimsti Nunnedriok* 0.99, Braimsti Nunnedriaz 0.00, Braimsti Nunmedriak 0.00
+                   o 'rTocheil Dorkuneqkhds' -> Trocheil Droukneikchis* 0.75, Trocheil Droulneikchis 0.09, Trocheil Droinneikchis 0.04
+                   (11 facts with this relation in context)
+   hop3 translator s 'Trochdinl Dioudndikcisu' -> Trocheil Drounneikchis 0.53, Trocheil Droinneikchis 0.32, Trocheil Droulneikchis 0.05
+                   o 'DiaiknStamzrepis' -> Diamkin Stamzeis 0.98, Diamkin Stamreis* 0.02, Diamkin Stamzois 0.00
+                   (11 facts with this relation in context)
+   hop4 registrar  s 'Diarmin Stamreis' -> Diamkin Stamreis* 1.00, Diarplour Sika 0.00, Diamkin Stamzeis 0.00
+                   o 'Rrillo Munkeidriax' -> Reilol Mukkeidriak* 0.27, Reilol Mokkeidriak 0.22, Reilol Muvkeidriak 0.10
+                   (5 facts with this relation in context)
+   hop5 broker     s 'RevilolvMukeidtrijak' -> Reilol Muvkeidriak 0.85, Reilol Mukkeidriak* 0.02, Lurtor Driaksibleil 0.02
+                   o 'ZiarvianjKinastuliar' -> Ziarvian Kianguliar 0.63, Ziarvian Kiansuliar* 0.36, Ziarvian Kienguliar 0.01
+                   (10 facts with this relation in context)
+   hop6 agent      s 'Ziarvian Kinfdliaar' -> Ziarvian Kianguliar 0.53, Ziarvian Kienguliar 0.22, Ziarvian Kianguliir 0.17
+                   o 'Sqaisglan Veikfudana' -> Staisglan Veikfudain 0.53, Staisglan Veikfudaan* 0.47, Staisglan Veikfufain 0.00
+                   (5 facts with this relation in context)
+-- q6 decoy=False answer=Kokem Truvounmoo got=Thokzon Thikbre
+   start  'iRayncsB riaplairrik' -> Rianos Brialpoireik 0.13, Rianos Brialpaireik* 0.05, Rianos Brialpaireir 0.04
+   hop1 rival      s 'Rianou Briallpaieri' -> Rianos Brialpaireir 0.97, Rianos Brialpoireik 0.02, Rianos Brialpaireik* 0.01
+                   o 'Treskrin eRmzuk' -> Treskrin Remzuk* 0.97, Treskrin Remruk 0.02, Treskrin Remrak 0.01
+                   (14 facts with this relation in context)
+   hop2 employer   s 'Treslrin Remzuo' -> Treskrin Remzuk* 1.00, Treskrin Remruk 0.00, Treskrin Remrak 0.00
+                   o 'Thitanploun Fikrurplais' -> Thianploun Fikrurplais* 1.00, Thianploun Fikrukplais 0.00, Thianploun Fikrukklais 0.00
+                   (9 facts with this relation in context)
+   hop3 translator s 'Thitanploun Fikrurplais' -> Thianploun Fikrurplais* 1.00, Thianploun Fikrukplais 0.00, Thianploun Fikrukklais 0.00
+                   o 'Sialstrr Szoonsplaikb' -> Shialtre Szonnosplaik* 0.72, Shialtre Stornosplaik 0.10, Shialtre Stonnosplaik 0.04
+                   (11 facts with this relation in context)
+   hop4 mentor     s 'Shilatre Stzonnosplaik' -> Shialtre Stonnosplaik 0.52, Shialtre Stonnosplaiz 0.42, Shialtre Szonnosplaik* 0.06
+                   o 'Msesgel Vafglxestu' -> Mesgel Vafglestuk* 1.00, Mesgel Varglestuk 0.00, Mesgel Virglestuk 0.00
+                   (11 facts with this relation in context)
+   hop5 heir       s 'Megel Vazfglehtuk' -> Mesgel Vafglestuk* 0.97, Mesgel Vurglestuk 0.02, Mesgel Varglestuk 0.01
+                   o 'Dcupleki hiawggloub' -> Dupleik Niakogloub* 0.29, Dukei Daimzeilthua 0.03, Chiaklour Glairbumzo 0.02
+                   (7 facts with this relation in context)
+   hop6 broker     s 'Duplik Niakonloub' -> Dupleik Niakonlour 1.00, Dupleik Niakogloub* 0.00, Dupleik Niakogleur 0.00
+                   o 'tokem Truvuunmoo' -> Kokem Truvounmoo* 1.00, Kokem Truvounmou 0.00, Kokem Truvounvou 0.00
+                   (10 facts with this relation in context)
+-- q7 decoy=True answer=Maplo Glanailpti got=Diakglour Niaplelrouk
+   start  'tSotres Deknchusvno' -> Stotres Dekchumson 0.35, Stotres Dekchuvson* 0.33, Stotres Dekchomson 0.23
+   hop1 rival      s 'SttersD ekcvuson' -> Stotres Dekchuvson* 0.63, Stotres Dekchomson 0.27, Stotres Dekchumson 0.03
+                   o 'Sarkam Fedviik' -> Sarkam Feivik* 0.96, Sarkam Feevok 0.04, Sarkam Faivok 0.00
+                   (14 facts with this relation in context)
+   hop2 client     s 'Sardkamz Fivik' -> Sarkam Feivik* 0.88, Sarkam Feivok 0.02, Sarkam Faivok 0.01
+                   o 'Shaimai Tralmlzilro' -> Shaimai Trailmlailro* 0.99, Shaimai Traikplailro 0.00, Shaimai Trailplailro 0.00
+                   (16 facts with this relation in context)
+   hop3 doctor     s 'Shaimui Traimlaliuo' -> Shaimai Traikplailro 0.84, Shaimai Trailmlailro* 0.11, Shaimai Trailplailro 0.03
+                   o 'Drilevs Mialabsha' -> Drilves Mialaisha* 0.98, Drilves Mialuisha 0.01, Drilves Mialaikha 0.00
+                   (7 facts with this relation in context)
+   hop4 witness    s 'Drihlves iaalihsa' -> Drilves Mialaisha* 0.64, Driadein Saildrekis 0.11, Drourshiar Fungledriu 0.06
+                   o 'praimsu Fenplar' -> Kraimsu Fenplar* 1.00, Traifus Feplair 0.00, Kraimsu Fenplal 0.00
+                   (9 facts with this relation in context)
+   hop5 supplier   s 'Kuaismb Fenplaar' -> Kraimsu Fenplar* 0.99, Kraimsu Fenplal 0.00, Goupou Plaundekne 0.00
+                   o 'olzil zuinrxb' -> Polzil Fuinranko* 0.90, Zaimreis Daiskreilchuin 0.01, Zoulfou Liromples 0.01
+                   (7 facts with this relation in context)
+   hop6 coach      s 'Pelizl Fuinrvko' -> Polzil Fuinranko* 1.00, Polzil Faonranko 0.00, Polzil Fainnanko 0.00
+                   o 'iaple lGanuailtpi' -> Diakglour Niaplelrouk 0.08, Maplo Glanailpti* 0.04, Miartair Vaiblu 0.04
+                   (11 facts with this relation in context)
+-- q9 decoy=False answer=Thebrai Galir got=Kokpeik Vaimbezul
+   start  'LiarainL etshero' -> Liarain Leidsherok 0.39, Liarain Leitsherok* 0.38, Liarain Leissherok 0.22
+   hop1 patron     s 'Liarain Letisehrok' -> Liarain Leitsherok* 0.64, Liarain Leidsherok 0.22, Liarain Leissherok 0.11
+                   o 'Drunbua Legerrom' -> Drunba Legeirrom* 0.91, Drunba Lemeirrom 0.07, Drunba Lomeirrom 0.01
+                   (15 facts with this relation in context)
+   hop2 doctor     s 'Drunbua Legerrom' -> Drunba Legeirrom* 0.91, Drunba Lemeirrom 0.07, Drunba Lomeirrom 0.01
+                   o 'Thither Vasiutt' -> Thithir Vasitut* 1.00, Vufak Stuven 0.00, Thamde Vaisglo 0.00
+                   (7 facts with this relation in context)
+   hop3 coach      s 'TbtihirfVsaittu' -> Thithir Vasutur 0.19, Sheirfia Thailgtitrel 0.05, Stommou Trirpait 0.03
+                   o 'Drouabri Stiadraz' -> Drousbri Stiadraz* 1.00, Drousbri Stiadrar 0.00, Drousbri Stiadvar 0.00
+                   (11 facts with this relation in context)
+   hop4 mentor     s 'DrousbroipStiadraz' -> Drousbri Stiadraz* 1.00, Drousbri Stiadvar 0.00, Drousbri Stiadrar 0.00
+                   o 'Fepeik Saimchiothlk' -> Fepeik Saimchiothak* 1.00, Fepeik Saimchiathak 0.00, Fepeik Suimchiathak 0.00
+                   (11 facts with this relation in context)
+   hop5 courier    s 'FepeiSaihmchikoithzk' -> Fepeik Saimchiothak* 0.55, Fepeik Saimchiathak 0.41, Fepeik Suimchiathak 0.03
+                   o 'Plougeik fPoulrrikak' -> Plougeik Poulrriak* 1.00, Plougeik Pouldrial 0.00, Plougeik Pouldriak 0.00
+                   (17 facts with this relation in context)
+   hop6 employer   s 'Plougeid Poulrrka' -> Plougeik Poulrriak* 1.00, Plougeik Pouldrial 0.00, Plougeik Pouldniak 0.00
+                   o 'ThberaoaGoir' -> Thebrai Galur 0.20, Thebrai Golir 0.08, Thoubroun Theikthao 0.07
+                   (9 facts with this relation in context)
+-- q11 decoy=False answer=Nolglaim Thoukglormin got=Nolglaim Thoukglobmin
+   start  'Zexlkua Zabreis' -> Zeilkia Zabreis* 1.00, Zeilkia Zebreis 0.00, Zektha Rivairlra 0.00
+   hop1 rival      s 'Zeilkia Zaybreis' -> Zeilkia Zebreis 0.55, Zeilkia Zabreis* 0.45, Zeilkia Zebriis 0.00
+                   o 'Vhntrian Zavanhel' -> Vontrian Zavanshel* 0.98, Vontrian Zavanshem 0.02, Zakdriar Vountik 0.00
+                   (14 facts with this relation in context)
+   hop2 translator s 'ontrian Zpvanshet' -> Vontrian Zavanshem 0.65, Vontrian Zavanshel* 0.09, Vontrian Zavansham 0.06
+                   o 'Dirshek Ddiastodiea' -> Dirshek Diastodia* 1.00, Dirshek Diastodua 0.00, Dirshek Diastudia 0.00
+                   (11 facts with this relation in context)
+   hop3 inspector  s 'Driske Diastodia' -> Dirshek Diastodia* 1.00, Dirshek Diastudia 0.00, Dirshek Diastodua 0.00
+                   o 'Pebea Piun' -> Peba Pouna* 0.80, Peba Pouba 0.07, Peba Pousa 0.05
+                   (7 facts with this relation in context)
+   hop4 courier    s 'Pb aPouyn' -> Porsei Pabrebo 0.49, Peba Pouba 0.15, Peba Pouna* 0.06
+                   o 'Ligagis Sveddyof' -> Ligais Seidof* 0.94, Ligais Seadom 0.01, Ligais Seidim 0.01
+                   (17 facts with this relation in context)
+   hop5 neighbour  s 'Ltgais Seidf' -> Ligais Seidom 0.36, Ligais Seadom 0.32, Ligais Seidof* 0.07
+                   o 'Mokfufsb Nenstip' -> Mokrus Nenstip* 1.00, Mokrus Nenstir 0.00, Mokrus Nenstil 0.00
+                   (11 facts with this relation in context)
+   hop6 heir       s 'MokrusNenstip' -> Mokrus Nenstip* 1.00, Mokrus Nenstir 0.00, Mokrus Nenstil 0.00
+                   o 'Nolwglaim Thsoukglokmin' -> Nolglaim Thoukglobmin 1.00, Nolglaim Thoumglormin 0.00, Nolglaim Thoukglormin* 0.00
+                   (7 facts with this relation in context)
+-- q12 decoy=True answer=Dredrim Shelchul got=Dredrim Shilchul
+   start  'Geinkei Sotustcib' -> Geinkeir Stousteas 0.65, Geinkeir Stoisteis 0.27, Geinkeir Stousteig* 0.04
+   hop1 auditor    s 'GeinkeiStoumseig' -> Geinkeir Stousteig* 0.70, Geinkeir Stousteas 0.23, Geinkeir Stousteis 0.07
+                   o 'Gdidrol Dokttian' -> Gidrol Dokttian* 1.00, Gidrol Doktrian 0.00, Gidrol Doktriap 0.00
+                   (13 facts with this relation in context)
+   hop2 client     s 'Gdidrol Dokttian' -> Gidrol Dokttian* 1.00, Gidrol Doktrian 0.00, Gidrol Doktriap 0.00
+                   o 'broumplamgRadria' -> Droumplam Radria* 1.00, Droumplam Radrie 0.00, Pliampar Broutrobfa 0.00
+                   (16 facts with this relation in context)
+   hop3 rival      s 'Droumplm Radrai' -> Droumplam Radrie 0.87, Droumplam Radria* 0.08, Droumplam Raddia 0.05
+                   o 'Zgawkdria rVountik' -> Zakdriar Vountik* 0.67, Zoukdrour Vongas 0.05, Zailreim Vortroi 0.02
+                   (14 facts with this relation in context)
+   hop4 doctor     s 'Zakdlriar Vountik' -> Zakdriar Vountik* 1.00, Zakdriar Vounpik 0.00, Zakdriar Vounpil 0.00
+                   o 'Nfedikzun Kraibaimfan' -> Neikzun Kraibaimfan* 1.00, Neikzun Kraibairfan 0.00, Neikzun Kraibaemfan 0.00
+                   (7 facts with this relation in context)
+   hop5 envoy      s 'Nfedikzun Kraibaimfan' -> Neikzun Kraibaimfan* 1.00, Neikzun Kraibairfan 0.00, Neikzun Kraibaemfan 0.00
+                   o 'Bronej aktias' -> Bronel Maktias* 0.73, Bronel Mistias 0.19, Bronel Miktias 0.03
+                   (8 facts with this relation in context)
+   hop6 pupil      s 'Bronel Maktias' -> Bronel Maktias* 1.00, Bronel Miktias 0.00, Bronel Mistias 0.00
+                   o 'Daredrim Shylchul' -> Dredrim Shilchul 0.99, Dredrim Shalchul 0.00, Dredrim Shelchul* 0.00
+                   (13 facts with this relation in context)
+-- q13 decoy=False answer=Tiardeir Rikglialte got=Dimbri Renva
+   start  'Tarso Riouslielle' -> Traso Rouslielle* 1.00, Traso Reuslialle 0.00, Traso Rouslialle 0.00
+   hop1 partner    s 'Trsa Rouslidlle' -> Traso Rouslielle* 0.66, Traso Rouslialle 0.34, Traso Rousliamle 0.00
+                   o 'Reimcfhe Cudtraini' -> Reimche Chudtrain* 0.60, Reimche Chumtrain 0.36, Reimche Chubtrain 0.05
+                   (10 facts with this relation in context)
+   hop2 tutor      s 'Reimckhe Chwduarin' -> Reimche Chubtrain 0.56, Reimche Chudtrain* 0.25, Reimche Chumtrain 0.18
+                   o 'Mipslbk Trusnouksail' -> Misplik Trunsouksail* 0.51, Trenol Truknoultir 0.14, Misplik Trunsouksiil 0.12
+                   (12 facts with this relation in context)
+   hop3 deputy     s 'Misglik Trqusnouksarl' -> Misplik Trussouksail 0.51, Misplik Trunsouksiil 0.37, Misplik Trunsouksail* 0.09
+                   o 'Plikto sBrmuel' -> Pliktos Brumel* 1.00, Pliktos Brusel 0.00, Pliktos Brutel 0.00
+                   (10 facts with this relation in context)
+   hop4 coach      s 'PlqktosB rjmelf' -> Pliktos Brutef 0.17, Plekria Tilves 0.09, Plagun Krestaim 0.08
+                   o 'Finei Bairiresim' -> Finei Biartreim 0.86, Finei Biartreid 0.07, Finei Biarmreim* 0.04
+                   (11 facts with this relation in context)
+   hop5 deputy     s 'Fivei Biarmriem' -> Finei Biarmreim* 1.00, Nundrian Bliarmeir 0.00, Finei Biartreim 0.00
+                   o 'oFunqes Krupsaikdru' -> Founkes Krupsaikdrur* 1.00, Vaikriak Feirrunkrup 0.00, Founkes Kruszaikdrur 0.00
+                   (10 facts with this relation in context)
+   hop6 mediator   s 'Founkas bropsaikdurv' -> Founkes Krupsaikdrur* 0.98, Founkes Krussaikdrur 0.01, Drirmiak Bounkroufstai 0.00
+                   o 'Tiardeir Rikglailte' -> Tiardeir Rikglialte* 0.98, Tiardeir Rikglialtu 0.01, Tiardeir Rikgliadtu 0.00
+                   (7 facts with this relation in context)
+-- q15 decoy=False answer=Buknuk Naivaikboik got=Krousu Lilmoupoul
+   start  'Scumzaik Kalpikve' -> Soumzaik Kaliekze 0.89, Soumzaik Kaluakze 0.07, Soumzaik Kaliakze 0.02
+   hop1 client     s 'Sutzuik haiakvv' -> Soumzaik Kaliakve* 0.50, Shaikai Puachik 0.10, Naisnai Zuunvia 0.03
+                   o 'setheianc airrneslor' -> Krethein Vairreslor* 0.12, Binpei Dairrrei 0.10, Steilsoun Niaglouchiar 0.06
+                   (16 facts with this relation in context)
+   hop2 guardian   s 'Kmrethein Vabqrreslorh' -> Krethein Vairreslor* 1.00, Krethein Vairregtor 0.00, Krethein Vairrestor 0.00
+                   o 'Driadein Savemdrpsgs' -> Driadein Saaldresis 0.84, Driadein Saildresis 0.09, Driadein Saildrekis 0.04
+                   (17 facts with this relation in context)
+   hop3 partner    s 'Dgiadelin Saelurdysis' -> Driadein Saeldresis* 0.48, Driadein Saildrekis 0.04, Driasar Glirfan 0.02
+                   o 'Stiefn Kusnelzvo' -> Stiten Kusnelvo* 0.98, Stiten Kusnelgo 0.02, Stiten Kusnelge 0.00
+                   (10 facts with this relation in context)
+   hop4 registrar  s 'Stiten unslevo' -> Stiten Kusnelvo* 0.90, Stiten Kusnelge 0.04, Stiten Kusnelgo 0.04
+                   o 'Stxilsjl Miarzirzem' -> Stilsel Miarzirzem* 1.00, Stilsel Miarnirzem 0.00, Stilsel Mearzirzem 0.00
+                   (5 facts with this relation in context)
+   hop5 editor     s 'Stilgselq Msiarzirczeh' -> Stilsel Miarzirzem* 0.97, Stilsel Mearzirzem 0.01, Stilsel Miarnirzem 0.01
+                   o 'Zalapis Ddugeil' -> Zaplais Ddugeil* 1.00, Zaplais Drugeil 0.00, Zaplais Drupeil 0.00
+                   (8 facts with this relation in context)
+   hop6 landlord   s 'aplaqs aDdugeil' -> Zaplais Ddugeil* 0.78, Zaplais Drugail 0.05, Dukei Daimzeilthua 0.01
+                   o 'Busknuk avakibl' -> Buknuk Naivaikboik* 0.39, Buknuk Naivaikboud 0.25, Buknuk Naivaikbouk 0.02
+                   (10 facts with this relation in context)
+-- q16 decoy=True answer=Raimai Ploanthekbron got=Funlik Kalglumluin
+   start  'Lolkrozm Realrei' -> Lolkrom Rearleil* 0.94, Lolkrom Riatleil 0.06, Lolkrom Riableil 0.00
+   hop1 client     s 'Llokom Rearleil' -> Lolkrom Rearleil* 1.00, Lolkrom Riableil 0.00, Ploullun Glivuv 0.00
+                   o 'Drilves Mealqasiha' -> Drilves Mealaisha* 0.99, Drilves Mialuisha 0.00, Drilves Mialaikha 0.00
+                   (16 facts with this relation in context)
+   hop2 auditor    s 'Durilves Meaglaisah' -> Drilves Mealaisha* 0.99, Biarstiam Keasglirzom 0.00, Glemglais Magliglar 0.00
+                   o 'rBumke nFikvaksheik' -> Brumken Fikvaksheik* 0.87, Brumken Fikzaksheik 0.12, Brumken Fikzakshaik 0.00
+                   (13 facts with this relation in context)
+   hop3 partner    s 'Brummke iFkvakhseik' -> Brumken Fikvaksheik* 0.98, Brumken Fikzakshiik 0.01, Brumken Fikzaksheik 0.00
+                   o 'Numblak Trakder' -> Numplak Trakdre* 0.87, Numplak Traldre 0.13, Numtim Brolthem 0.00
+                   (10 facts with this relation in context)
+   hop4 auditor    s 'eumplrak Trarbdre' -> Numplak Traltre 0.10, Numplak Traldre 0.09, Treskrin Remrak 0.04
+                   o 'Gimim Tzancahinbrei' -> Gimtim Tzainchainbrei* 0.81, Gimtim Trainchuinbrei 0.18, Gimtim Trainchainbrei 0.01
+                   (13 facts with this relation in context)
+   hop5 courier    s 'GidtnmT zainhainbrei' -> Gimtim Tzainchainbrei* 0.95, Gimtim Trainchainbrei 0.01, Zaisgla Thousre 0.00
+                   o 'Shoivna Feimmsxoulzer' -> Shivan Feimsoulzer* 1.00, Shivan Feimsoolmer 0.00, Shivan Feimsoulmer 0.00
+                   (17 facts with this relation in context)
+   hop6 editor     s 'Shitvn Feimsoulzer' -> Shivan Feimsoulzer* 1.00, Shivan Feimsoulmer 0.00, Shivan Faimsoulmer 0.00
+                   o 'Raikzi uPlonthekbron' -> Raimai Ploanthekbron* 0.35, Raikbum Tourseir 0.18, Stanbial Raiktriakros 0.09
+                   (8 facts with this relation in context)
+-- q18 decoy=False answer=Thiakrou Kuskrukmak got=Cheimdia Piasdourai
+   start  'Shachnok Kraifdrais' -> Shachou Kraifdrais* 1.00, Shachou Krauldrais 0.00, Shachou Kraildrais 0.00
+   hop1 deputy     s 'hcahuK nafidraivs' -> Shachou Kraifdrais* 0.13, Chasnam Nianpu 0.05, Damstian Dalfais 0.02
+                   o 'Trrdos Kqrtbro' -> Trados Krubro 0.59, Trados Krubdo 0.09, Tatra Thaikror 0.02
+                   (9 facts with this relation in context)
+   hop2 courier    s 'Treods Krobro' -> Trados Krobro* 1.00, Trados Krubro 0.00, Stanmi Kroobian 0.00
+                   o 'NeikzunKrlainbairfan' -> Neikzun Kraibairfan* 0.89, Neikzun Kraibaimfan 0.08, Neikzun Kraibaemfan 0.02
+                   (24 facts with this relation in context)
+   hop3 tenant     s 'NeikzunKrlainbairfan' -> Neikzun Kraibairfan* 0.89, Neikzun Kraibaimfan 0.08, Neikzun Kraibaemfan 0.02
+                   o 'Trijanplhai Piakvo' -> Trianplai Piakvo* 1.00, Trianplai Piakva 0.00, Trianplai Piatvo 0.00
+                   (16 facts with this relation in context)
+   hop4 heir       s 'TianpliaP itakvo' -> Trianplai Piatvo 0.89, Trianplai Piakvo* 0.07, Trianplai Piakva 0.02
+                   o 'Brekrrom Plalas' -> Brerkrom Plalas* 1.00, Brerkrom Plalos 0.00, Breirsom Posbrebrak 0.00
+                   (10 facts with this relation in context)
+   hop5 witness    s 'Brerkrom plPalqas' -> Brerkrom Plalas* 0.68, Brerkrom Pzalas 0.20, Brerkrom Pgalas 0.07
+                   o 'Shonno Trinspaifas' -> Shonnon Triaspaifais* 1.00, Shonnon Triasgaifaes 0.00, Shonnon Triasgaifuis 0.00
+                   (8 facts with this relation in context)
+   hop6 broker     s 'Shonunon Tpaspaifais' -> Shonnon Triaspaifais* 1.00, Shonnon Triasgaifais 0.00, Shonnon Triasgaifuis 0.00
+                   o 'Thaklrou Ksukrhukmak' -> Thiakrou Keskrukmak 0.45, Thiakrou Kuskrukmak* 0.44, Thiakrou Kerkrukmak 0.04
+                   (11 facts with this relation in context)
+-- q19 decoy=False answer=Runkias Gomto got=Zektha Rivairbra
+   start  'nairban kibcaizleir' -> Daibran Pibaimzleir* 0.10, Krousshaim Nairain 0.09, Naintrais Meimtriis 0.08
+   hop1 witness    s 'nairban kibcaizleir' -> Daibran Pibaimzleir* 0.10, Krousshaim Nairain 0.09, Naintrais Meimtriis 0.08
+                   o 'Zairiashaisbak' -> Cholsu Zeirraishik 0.46, Zaimreis Daiskreelchain 0.23, Zaimreis Daiskreilchain 0.15
+                   (8 facts with this relation in context)
+   hop2 courier    s 'Zarras Soaisdbap' -> Zarrais Shaisbai 0.65, Zarrais Sheisbai 0.24, Zarrais Shaasbai 0.10
+                   o 'Laplaiql Sainrtel' -> Laplail Saintrer 1.00, Laplail Saintrel* 0.00, Laplail Saentrer 0.00
+                   (24 facts with this relation in context)
+   hop3 registrar  s 'Lalpail Saitnrel' -> Laplail Saintrer 1.00, Laplail Saintrel* 0.00, Lailglair Shiarar 0.00
+                   o 'Daimof wFaitserzo' -> Daimfo Faisterzo* 0.83, Daimfo Faitterpo 0.15, Daimfo Faislerpo 0.02
+                   (14 facts with this relation in context)
+   hop4 heir       s 'Daimof wFaitserzo' -> Daimfo Faisterzo* 0.83, Daimfo Faitterpo 0.15, Daimfo Faislerpo 0.02
+                   o 'Zpelleo Gokousbuor' -> Zelle Gokousbour* 0.98, Zelle Gokousboug 0.02, Zelle Gokoustour 0.00
+                   (10 facts with this relation in context)
+   hop5 client     s 'Zleie Gokousburh' -> Zelle Gokousbour* 0.67, Zelle Gokousboug 0.32, Zelle Gokoisbour 0.01
+                   o 'Miamm Ronrthaussom' -> Miammou Ronthausstom* 0.99, Miammou Ronshousstom 0.01, Miammou Ronthousstom 0.00
+                   (17 facts with this relation in context)
+   hop6 trustee    s 'Miafmmonu Reonthausstom' -> Miammou Ronthausstom* 1.00, Miammou Ronthousstom 0.00, Miammou Rinthousstom 0.00
+                   o 'Runkias Gomto' -> Runkias Gomto* 1.00, Runkias Gemto 0.00, Runkias Gemte 0.00
+                   (5 facts with this relation in context)

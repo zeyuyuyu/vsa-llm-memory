@@ -1,0 +1,31 @@
+{
+ "refs": {
+  "compositional": {
+   "prompt": 0.2533,
+   "prompt_ev": 0.95,
+   "hrr_gold": 0.9744
+  },
+  "inference": {
+   "prompt": 0.0933,
+   "prompt_ev": 0.6833,
+   "hrr_gold": 0.7622
+  }
+ },
+ "arms": {
+  "compositional": 0.92,
+  "inference": 0.53
+ },
+ "diag": {
+  "compositional": {
+   "retrieval_hit_rate": 0.97,
+   "mean_tokens_hybrid": 27.746666666666666,
+   "mean_tokens_prompt_ev": 27.65
+  },
+  "inference": {
+   "retrieval_hit_rate": 0.7566666666666667,
+   "mean_tokens_hybrid": 34.99333333333333,
+   "mean_tokens_prompt_ev": 34.79
+  }
+ },
+ "verdict": "P1 compositional >= .93: False (0.9200 vs prompt_ev .9500) | P2 inference >= .70: False (0.5300 vs prompt_ev .6833) | P3 token ratio <= .25: False (1.003 / 1.006) | NEGATIVE READING: chain misses dominate on inference; output case rests on token efficiency"
+}

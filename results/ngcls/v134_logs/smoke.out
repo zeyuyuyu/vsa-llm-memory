@@ -1,0 +1,18 @@
+===== V-134 (prereg 9444197) model=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct =====
+  1 KBs x 160 facts; LoRA r=32, 2 epochs, lr=0.0001; 8 queries per (KB, depth)
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:11,  1.44it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:09,  1.50it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:09,  1.53it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:08,  1.54it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:07,  1.54it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:07,  1.54it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.55it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:05<00:05,  1.55it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:05,  1.56it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.56it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:07<00:03,  1.56it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.56it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:08<00:02,  1.56it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:09<00:01,  1.56it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:09<00:01,  1.56it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:10<00:00,  1.56it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.57it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.55it/s]
+trainable params: 268,435,456 || all params: 33,032,311,808 || trainable%: 0.8126
+
+  ---- KB 0: 160 facts, 40 entities ----
+    store done: k1 d4096=0.667  k2 d4096=0.417  k3 d4096=0.500  k4 d4096=0.458
+    training adapter kb0 on 800 single-hop texts ...
+    epoch  1/2  loss 2.1216
+    epoch  2/2  loss 0.6963
+    trained in 0.9 min
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+    k=1  store 0.6667 | lora_weights 0.3750 | ctx_cot 0.7500 | base_nofacts 0.0000
+    k=2  store 0.4167 | lora_weights 0.1250 | ctx_cot 1.0000 | base_nofacts 0.0000
+    k=3  store 0.5000 | lora_weights 0.0000 | ctx_cot 0.7500 | base_nofacts 0.0000
+    k=4  store 0.4583 | lora_weights 0.0000 | ctx_cot 0.8750 | base_nofacts 0.0000
+V134-DONE
+V134-WRAPPER-EXIT 0

@@ -1,0 +1,64 @@
+{
+ "prereg": "3c19d05",
+ "banked_tuned_standard_split": 0.9722,
+ "rank": 16,
+ "epochs": 6,
+ "lr": 0.0001,
+ "held_out_combos": [
+  [
+   "Daniel",
+   "garden"
+  ],
+  [
+   "Daniel",
+   "kitchen"
+  ],
+  [
+   "John",
+   "kitchen"
+  ],
+  [
+   "John",
+   "office"
+  ],
+  [
+   "Sandra",
+   "bathroom"
+  ],
+  [
+   "Sandra",
+   "hallway"
+  ]
+ ],
+ "sizes": {
+  "A": [
+   443,
+   79
+  ],
+  "B": [
+   443,
+   79
+  ]
+ },
+ "arms": {
+  "A_heldout_combos": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0
+  },
+  "B_matched_random": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0
+  }
+ },
+ "gap_B_minus_A": 0.0,
+ "P3_control_ok": true,
+ "verdict": "NOT FOUND"
+}

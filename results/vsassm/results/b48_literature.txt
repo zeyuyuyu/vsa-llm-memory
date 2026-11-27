@@ -1,0 +1,60 @@
+B48 literature check (prereg/B48_one_form_and_alias_naming_prereg.md), written after the B48 results. Each entry:
+the B48 finding it bears on, and whether the source supports it, conflicts with it, or has no direct precedent.
+Sources were looked up on 2026-11-19 (abstracts / proceedings pages; full texts not re-read for this note).
+
+PART B (naming where identity is not in the surface string)
+
+1. Wu, Petroni, Josifoski, Riedel, Zettlemoyer (2020), "Scalable Zero-shot Entity Linking with Dense Entity Retrieval"
+   (BLINK), EMNLP 2020, https://arxiv.org/abs/1911.03814 . A bi-encoder trained on some entities links mentions to
+   entities never seen in training. B48: a bilinear pointer trained on training entities names unseen entities' aliases
+   from frozen Qwen3-8B states at 0.661 (W) and pronouns at 0.827 (P). SUPPORTS that a trained mention-to-entity matcher
+   can generalise to unseen entities; B48's head is far weaker than BLINK (no entity descriptions, frozen states, 800
+   training stories), so no number is comparable.
+
+2. Mallen et al. (2023), "When Not to Trust Language Models: Investigating Effectiveness of Parametric and
+   Non-Parametric Memories" (PopQA), ACL 2023, https://arxiv.org/abs/2212.10511 . LMs know facts about popular
+   entities and not about the long tail; scaling does little for the tail. B48's W entities and aliases are PopQA
+   subjects; the head names well-known aliases (AK -> Alaska, Un prophete -> A Prophet, The Addicks -> Charlton
+   Athletic) and fails on obscure ones (foreign release titles, ICAO codes such as FYRU). SUPPORTS (identity from world
+   knowledge is available only where the LM knows the alias).
+
+3. De Cao, Izacard, Riedel, Petroni (2021), "Autoregressive Entity Retrieval" (GENRE), ICLR 2021,
+   https://arxiv.org/abs/2010.00904 . A seq2seq model fine-tuned to generate an entity's unique name links mentions
+   well. B48: prompted zero-shot, Qwen3-8B mostly copies a W alias as written (76% of alias mentions) instead of writing
+   the listed name (17%). NO DIRECT PRECEDENT for the zero-shot setting (GENRE is fine-tuned with constrained decoding);
+   not a conflict.
+
+4. Ding, Zeng, Weninger (2024), "ChatEL: Entity Linking with Chatbots", https://arxiv.org/abs/2402.14858 ; Liu et al.
+   (2024), "OneNet: A Fine-Tuning Free Framework for Few-Shot Entity Linking via Large Language Model Prompting", EMNLP
+   2024, https://arxiv.org/abs/2410.07549 . Prompted LLMs link entities when the task is posed with candidates and
+   multi-step prompting (candidate generation, disambiguation as a choice). B48's single free-form prompt ("write the
+   listed name it refers to") elicited copying. SUPPORTS the reading that the LM arm's W result is a property of this
+   prompt, not a ceiling of prompted LMs; a candidate-choice prompt was not run in B48.
+
+5. Feng & Steinhardt (2024), "How do Language Models Bind Entities in Context?", ICLR 2024,
+   https://arxiv.org/abs/2310.17191 ; Kim & Schuster (2023), "Entity Tracking in Language Models", ACL 2023,
+   https://arxiv.org/abs/2305.02363 . In-context binding is carried in the activations (binding-ID vectors); entity
+   tracking surfaces unevenly across models. B48: the same LM resolves P pronouns when it writes text (0.998) but a
+   bilinear read-out of layer-18 span means reaches 0.827, and its errors pick a same-gender listed name. SUPPORTS that
+   the identity is present in the LM's computation; NO DIRECT PRECEDENT for how much of it a low-rank pointer on
+   span-mean states recovers.
+
+6. Tenney et al. (2019), "BERT Rediscovers the Classical NLP Pipeline", ACL 2019, https://arxiv.org/abs/1905.05950 .
+   Edge probes recover coreference from frozen contextual states, less well than syntactic labels. SUPPORTS the partial
+   (0.83) pronoun naming from frozen states.
+
+PART A (one surface form per symbol)
+
+7. The B42 literature (results/b42_literature.txt: VQ-VAE / EMA codebooks, Gumbel-softmax, straight-through estimators,
+   the discrete key-value bottleneck, codebook collapse, anisotropy and centring / whitening of LM states) applies
+   unchanged: B48 reruns B42's seven interfaces with B42's grids on arena C1. B48 adds that removing the second written
+   form does not change the outcome (all seven FAIL on both encoders, best recovery 0.053), and that the codes follow
+   the mention's position in the input (the query mention gets one key and the candidate another, whatever the symbol)
+   rather than its written symbol. The anisotropy literature (e.g. Ethayarajh 2019, "How Contextual are Contextualized
+   Word Representations?", EMNLP 2019, https://arxiv.org/abs/1909.00512 : contextual states of the same word in
+   different contexts are far apart in upper layers) SUPPORTS that identical written forms do not give matching
+   final-layer states, which a label-free clusterer would need. NO PRECEDENT found for the specific test (label-free
+   discrete codes from frozen LM states feeding a two-hop VSA chain with one written form per symbol).
+
+8. Exact string hashing over hand-written spans reaching the exact-symbol ceiling (C1 1.000, C 0.526) is a property of
+   the task construction (identity in the written form), not a literature claim; reported as a check.

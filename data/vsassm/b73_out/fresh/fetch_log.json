@@ -1,0 +1,110 @@
+[
+ {
+  "class": "human",
+  "qid": "Q5",
+  "sample": 40000,
+  "attempt": 0,
+  "start": "2026-11-23T20:23:57+0800",
+  "sec": 19.1,
+  "rows": 4089,
+  "bytes": 1467764,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q5 . bd:serviceParam bd:sample.limit 40000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "50f7ab9fc0958a782f3bbf8a9e0efbb6"
+ },
+ {
+  "class": "film",
+  "qid": "Q11424",
+  "sample": 25000,
+  "attempt": 0,
+  "start": "2026-11-23T20:24:31+0800",
+  "sec": 4.8,
+  "rows": 4049,
+  "bytes": 1457619,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q11424 . bd:serviceParam bd:sample.limit 25000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "c81c863c2e0fabfc53476440807eb93b"
+ },
+ {
+  "class": "literary_work",
+  "qid": "Q7725634",
+  "sample": 40000,
+  "attempt": 0,
+  "start": "2026-11-23T20:24:50+0800",
+  "sec": 15.2,
+  "rows": 1054,
+  "bytes": 391933,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q7725634 . bd:serviceParam bd:sample.limit 40000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "62fee822eadab49b563982b24c08c4c5"
+ },
+ {
+  "class": "album",
+  "qid": "Q482994",
+  "sample": 30000,
+  "attempt": 0,
+  "start": "2026-11-23T20:25:21+0800",
+  "sec": 20.6,
+  "rows": 989,
+  "bytes": 364142,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q482994 . bd:serviceParam bd:sample.limit 30000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "08c3434042ba9e2c45625c789ec2f99e"
+ },
+ {
+  "class": "tv_series",
+  "qid": "Q5398426",
+  "sample": 15000,
+  "attempt": 0,
+  "start": "2026-11-23T20:25:56+0800",
+  "sec": 5.1,
+  "rows": 1382,
+  "bytes": 495783,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q5398426 . bd:serviceParam bd:sample.limit 15000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "20597ab2b1974c2e4783f258b79de56c"
+ },
+ {
+  "class": "single",
+  "qid": "Q134556",
+  "sample": 15000,
+  "attempt": 0,
+  "start": "2026-11-23T20:26:16+0800",
+  "sec": 5.2,
+  "rows": 467,
+  "bytes": 168908,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q134556 . bd:serviceParam bd:sample.limit 15000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "7cadc24e133d83f05ef767773239758e"
+ },
+ {
+  "class": "city",
+  "qid": "Q515",
+  "sample": 15000,
+  "attempt": 0,
+  "start": "2026-11-23T20:26:37+0800",
+  "sec": 7.9,
+  "rows": 6810,
+  "bytes": 2341569,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q515 . bd:serviceParam bd:sample.limit 15000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "fa742923abfdfa48205b1f45a3c6fa76"
+ },
+ {
+  "class": "football_club",
+  "qid": "Q476028",
+  "sample": 20000,
+  "attempt": 0,
+  "start": "2026-11-23T20:27:00+0800",
+  "sec": 13.0,
+  "rows": 5948,
+  "bytes": 2134763,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q476028 . bd:serviceParam bd:sample.limit 20000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "291931b6345a271b462bdf43ddad8b40"
+ },
+ {
+  "class": "business",
+  "qid": "Q4830453",
+  "sample": 30000,
+  "attempt": 0,
+  "start": "2026-11-23T20:27:28+0800",
+  "sec": 10.1,
+  "rows": 3493,
+  "bytes": 1250501,
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q4830453 . bd:serviceParam bd:sample.limit 30000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}",
+  "md5": "1010ead7c2969c1476bdec4c65599f2e"
+ }
+]

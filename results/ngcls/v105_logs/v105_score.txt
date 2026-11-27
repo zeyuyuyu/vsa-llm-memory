@@ -1,0 +1,14 @@
+===== V-105 configs =====
+  len  512 d 256 n/d   2.0 | majority 0.130 | hrr 0.3190 linear 0.3210 softmax 0.3087 | gap(hrr) -0.0103 gap(linear) -0.0124 | learns | hrr 34s/5.6GB linear 29s/4.9GB softmax 103s/5.8GB
+  len  512 d 128 n/d   4.0 | majority 0.130 | hrr 0.3163 linear 0.3644 softmax 0.3337 | gap(hrr) +0.0174 gap(linear) -0.0307 | learns | hrr 17s/3.1GB linear 13s/2.7GB softmax 23s/5.2GB
+  len 1024 d 256 n/d   4.0 | majority 0.130 | hrr 0.2965 linear 0.3033 softmax 0.3117 | gap(hrr) +0.0151 gap(linear) +0.0083 | learns | hrr 198s/10.9GB linear 55s/9.5GB softmax 94s/19.5GB
+  len 2048 d 512 n/d   4.0 | majority 0.141 | hrr 0.2696 linear 0.3100 softmax 0.2956 | gap(hrr) +0.0260 gap(linear) -0.0144 | learns | hrr 332s/41.1GB linear 320s/35.6GB softmax 618s/36.6GB
+  len  512 d  64 n/d   8.0 | majority 0.130 | hrr 0.3078 linear 0.3242 softmax 0.3208 | gap(hrr) +0.0130 gap(linear) -0.0034 | learns | hrr 10s/1.8GB linear 8s/1.6GB softmax 18s/4.9GB
+  len 2048 d 256 n/d   8.0 | majority 0.141 | hrr 0.2618 linear 0.3062 softmax 0.3019 | gap(hrr) +0.0401 gap(linear) -0.0043 | learns | hrr 456s/21.6GB linear 106s/18.7GB softmax 285s/35.2GB
+  len  512 d  32 n/d  16.0 | majority 0.130 | hrr 0.2686 linear 0.3168 softmax 0.3188 | gap(hrr) +0.0501 gap(linear) +0.0020 | learns | hrr 9s/1.2GB linear 7s/1.1GB softmax 25s/4.7GB
+
+  >>> P1 gate: (512,256) softmax learns and hrr within .05 (V-84 parity replicates) : True
+  >>> P2 law: gap strictly increases with n/d along the len-512 d-sweep, and gap(n/d=16) >= gap(n/d=2) + .05 : False
+  >>> P3 ratio: equal n/d gives equal gap within .05 (n/d=8 spread 0.0271, n/d=4 spread 0.0109) : True
+  >>> P4 state: at n/d=16 linear attention's gap <= hrr's gap - .05 (0.0020 vs 0.0501) : False
+V105-SCORE-DONE

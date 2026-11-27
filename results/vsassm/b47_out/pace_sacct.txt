@@ -1,0 +1,190 @@
+JobID|JobName|Account|Partition|AllocTRES|Elapsed|State|NodeList
+15837484|b43_r128_niah_multikey_1|gts-nimam6|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=96G,node=1|06:00:44|TIMEOUT|atl1-1-02-012-2-0
+15839728|stale_dev|gts-nimam6|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=96G,node=1|04:00:24|TIMEOUT|atl1-1-02-012-2-0
+15842517|b44_cls_ho_n8000_r8_lr1e-4_s123|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15842520|b44_cls_ho_n8000_r8_lr1e-4_s456|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15842522|b44_cls_ho_n80000_r8_lr1e-4_s42|gts-nimam6|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:39:47|FAILED|atl1-1-02-012-2-0
+15842523|b44_cls_ho_n80000_r8_lr1e-4_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15842524|b44_cls_ho_n80000_r8_lr1e-4_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15842869|b44_cls_std_n80000_r8_lr1e-4_s456|gts-nimam6|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:01:45|FAILED|atl1-1-01-002-14-0
+15842870|b44_cls_std_n80000_r8_lr1e-4_s456|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15843010|b44_scratch_std_n80000_r8_lr1e-4_s42|gts-nimam6|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:36:14|COMPLETED|atl1-1-01-002-20-0
+15843011|b44_scratch_std_n80000_r8_lr1e-4_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15843014|b44_scratch_std_n80000_r8_lr1e-4_s123|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15843015|b44_scratch_std_n80000_r8_lr1e-4_s123|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15843018|b44_scratch_std_n80000_r8_lr1e-4_s456|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15843019|b44_scratch_std_n80000_r8_lr1e-4_s456|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15843022|b44_scratch_ho_n80000_r8_lr1e-4_s42|gts-nimam6|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:02:31|COMPLETED|atl1-1-01-002-28-0
+15843023|b44_scratch_ho_n80000_r8_lr1e-4_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15843027|b44_scratch_ho_n80000_r8_lr1e-4_s123|gts-nimam6|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:03:25|COMPLETED|atl1-1-01-002-28-0
+15843028|b44_scratch_ho_n80000_r8_lr1e-4_s123|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15843032|b44_scratch_ho_n80000_r8_lr1e-4_s456|gts-nimam6|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:03:58|COMPLETED|atl1-1-01-002-28-0
+15843033|b44_scratch_ho_n80000_r8_lr1e-4_s456|gts-nimam6|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:00:12|COMPLETED|atl1-1-01-002-14-0
+15843034|b44_scratch_ho_n80000_r8_lr1e-4_s456|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15845044|b43_r128s_niah_single_3_50|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15845045|b43_r128s_niah_single_3_75|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15845317|b43_r128s_niah_multikey_1_50|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15845318|b43_r128s_niah_multikey_1_75|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15845319|b43_r128s_niah_multivalue_50|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15845320|b43_r128s_niah_multivalue_75|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15848304|b43_r128s_niah_multikey_1_25|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15848676|b44_cls_std_n80000_r8_lr1e-4_s123|gts-nimam6|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:01:28|FAILED|atl1-1-01-002-14-0
+15848677|b44_cls_std_n80000_r8_lr1e-4_s123|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15848681|b44_cls_ho_n80000_r8_lr1e-4_s123|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15848683|b44_cls_ho_n80000_r8_lr1e-4_s123|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15848754|b43_r128s_niah_multikey_1_0|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15848755|b43_r128s_niah_multikey_1_25|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15848756|b43_r128s_niah_multikey_1_50|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15848757|b43_r128s_niah_multikey_1_75|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15848758|b43_r128s_niah_single_3_50|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15848760|b43_r128s_niah_single_3_75|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15848762|b43_r128s_niah_multivalue_50|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15848763|b43_r128s_niah_multivalue_75|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15849140|b47_tok|gts-nimam6|cpu-small|billing=1216,cpu=4,mem=32G,node=1|00:01:07|COMPLETED|atl1-1-02-008-14-2
+15849141|b47_smoke|gts-nimam6|gpu-h200,gpu-h100,gpu-a100||00:00:00|CANCELLED by 3049098|None assigned
+15849313|b47_gen_k32_r8_lr3e-05_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849315|b47_gen_k32_r8_lr0.0001_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849317|b47_gen_k32_r8_lr0.0003_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849319|b47_gen_k32_r64_lr3e-05_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849321|b47_gen_k32_r64_lr0.0001_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849323|b47_gen_k32_r64_lr0.0003_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849325|b47_fullgen_k32_r8_lr3e-06_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849327|b47_fullgen_k32_r8_lr1e-05_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849329|b47_fullgen_k32_r8_lr3e-05_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849331|b47_fullcls_k32_r8_lr3e-06_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849333|b47_fullcls_k32_r8_lr1e-05_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849335|b47_fullcls_k32_r8_lr3e-05_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849337|b47_scratch_k32_r8_lr0.0001_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849346|b47_scratch_k32_r8_lr0.0003_s42|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15849351|b47_sw_cons_0|gts-nimam6|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:05|COMPLETED|atl1-1-01-004-28-1
+15849352|b47_sw_cons_1|gts-nimam6|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:09|COMPLETED|atl1-1-01-002-25-2
+15849353|b47_sw_cons_2|gts-nimam6|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:28|COMPLETED|atl1-1-01-002-25-2
+15849355|b47_sw_cons_3|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849356|b47_sw_cons_4|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849357|b47_sw_cons_5|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849358|b47_sw_grid_0|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849359|b47_sw_grid_1|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849360|b47_sw_grid_2|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849361|b47_sw_grid_3|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849362|b47_sw_coh_0|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849363|b47_sw_coh_1|gts-nimam6|cpu-small||00:00:00|CANCELLED by 3049098|None assigned
+15849365|b48_feats|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15849366|b48_lmW_dev|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15849367|b48_lmP_dev|gts-nimam6|gpu-h200,gpu-h100,gpu-a100,gpu-l40s,gpu-a100,gpu-h100,gpu-h200,gpu-l40s||00:00:00|CANCELLED by 3049098|None assigned
+15849510|b48_feats|gts-nimam6-paid|gpu-l40s|billing=12764,cpu=8,gres/gpu:l40s=1,gres/gpu=1,mem=150G,node=1|00:09:20|COMPLETED|atl1-1-01-004-33-0
+15849511|b48_lmW_dev|gts-nimam6-paid|gpu-l40s|billing=12764,cpu=8,gres/gpu:l40s=1,gres/gpu=1,mem=150G,node=1|00:09:55|COMPLETED|atl1-1-01-004-33-0
+15849512|b48_lmP_dev|gts-nimam6-paid|gpu-l40s|billing=12764,cpu=8,gres/gpu:l40s=1,gres/gpu=1,mem=150G,node=1|00:05:11|COMPLETED|atl1-1-01-004-33-0
+15849513|b48_tuneA1|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=150G,node=1|00:12:21|COMPLETED|atl1-1-03-019-14-0
+15849514|b48_tuneA2|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=150G,node=1|00:12:06|COMPLETED|atl1-1-02-012-9-0
+15849515|b48_tuneB|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=150G,node=1|00:01:12|COMPLETED|atl1-1-02-012-2-0
+15849517|b47_sw_consistency_3|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:09|COMPLETED|atl1-1-03-004-17-2
+15849518|b47_sw_consistency_4|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:25|COMPLETED|atl1-1-03-004-17-2
+15849519|b47_sw_consistency_5|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:00:55|COMPLETED|atl1-1-03-002-6-2
+15849520|b47_sw_grid_0|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:18|COMPLETED|atl1-1-03-002-6-2
+15849521|b47_sw_grid_1|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:31|COMPLETED|atl1-1-03-004-17-2
+15849522|b47_sw_grid_2|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:19|COMPLETED|atl1-1-01-004-5-1
+15849523|b47_sw_grid_3|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:01:17|COMPLETED|atl1-1-02-003-30-1
+15849524|b47_sw_coherence_0|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:00:45|COMPLETED|atl1-1-01-003-8-2
+15849525|b47_sw_coherence_1|gts-nimam6-paid|cpu-small|billing=4864,cpu=16,mem=40G,node=1|00:00:39|COMPLETED|atl1-1-02-003-24-2
+15849526|b47_gen_k32_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:12:51|COMPLETED|atl1-1-02-012-2-0
+15849527|b47_gen_k32_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:09|COMPLETED|atl1-1-03-019-2-0
+15849529|b47_gen_k32_r8_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:07:37|COMPLETED|atl1-1-02-012-2-0
+15849531|b47_gen_k32_r8_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-03-019-2-0
+15849532|b47_gen_k32_r8_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:10:54|COMPLETED|atl1-1-03-020-11-0
+15849533|b47_gen_k32_r8_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-03-019-2-0
+15849534|b47_gen_k32_r64_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:17:40|COMPLETED|atl1-1-02-012-2-0
+15849538|b47_gen_k32_r64_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:06|COMPLETED|atl1-1-03-019-2-0
+15849546|b47_gen_k32_r64_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:10:51|COMPLETED|atl1-1-02-012-9-0
+15849547|b47_gen_k32_r64_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-03-019-2-0
+15849549|b47_gen_k32_r64_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:10:56|COMPLETED|atl1-1-02-012-9-0
+15849550|b47_gen_k32_r64_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:08|COMPLETED|atl1-1-02-012-9-0
+15849551|b47_fullgen_k32_r8_lr3e-06_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:08:52|COMPLETED|atl1-1-02-012-2-0
+15849552|b47_fullgen_k32_r8_lr3e-06_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:06|COMPLETED|atl1-1-03-019-14-0
+15849553|b47_fullgen_k32_r8_lr1e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:08:32|COMPLETED|atl1-1-02-012-2-0
+15849554|b47_fullgen_k32_r8_lr1e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:10|COMPLETED|atl1-1-02-012-9-0
+15849555|b47_fullgen_k32_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:08:41|COMPLETED|atl1-1-02-012-9-0
+15849556|b47_fullgen_k32_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:08|COMPLETED|atl1-1-03-019-14-0
+15849558|b47_fullcls_k32_r8_lr3e-06_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:08:41|COMPLETED|atl1-1-02-012-9-0
+15849559|b47_fullcls_k32_r8_lr3e-06_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:08|COMPLETED|atl1-1-02-012-9-0
+15849560|b47_fullcls_k32_r8_lr1e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:12:29|COMPLETED|atl1-1-02-012-2-0
+15849561|b47_fullcls_k32_r8_lr1e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:06|COMPLETED|atl1-1-03-019-14-0
+15849562|b47_fullcls_k32_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:12:37|COMPLETED|atl1-1-02-012-2-0
+15849563|b47_fullcls_k32_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-03-019-14-0
+15849564|b47_scratch_k32_r8_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:12:19|COMPLETED|atl1-1-03-020-11-0
+15849565|b47_scratch_k32_r8_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:08|COMPLETED|atl1-1-02-012-9-0
+15849566|b47_scratch_k32_r8_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:09:01|COMPLETED|atl1-1-02-014-9-0
+15849567|b47_scratch_k32_r8_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:06|COMPLETED|atl1-1-03-019-14-0
+15849684|b48_lmW_test|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=150G,node=1|00:05:21|COMPLETED|atl1-1-02-012-9-0
+15849685|b48_lmP_test|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=150G,node=1|00:02:25|COMPLETED|atl1-1-03-019-2-0
+15849723|b47_fullgen_std_lr3e-06_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:37:32|COMPLETED|atl1-1-03-020-11-0
+15849724|b47_fullgen_std_lr3e-06_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:08|COMPLETED|atl1-1-03-020-11-0
+15849725|b47_fullgen_std_lr3e-06_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:06|COMPLETED|atl1-1-03-020-11-0
+15849726|b47_fullgen_std_lr1e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:36:53|COMPLETED|atl1-1-02-012-9-0
+15849727|b47_fullgen_std_lr1e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:09|COMPLETED|atl1-1-02-012-9-0
+15849728|b47_fullgen_std_lr1e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:08|COMPLETED|atl1-1-03-020-11-0
+15849729|b47_fullgen_std_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:36:37|COMPLETED|atl1-1-02-012-9-0
+15849730|b47_fullgen_std_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-02-012-9-0
+15849731|b47_fullgen_std_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:06|COMPLETED|atl1-1-03-020-11-0
+15849767|b47_name8k|gts-nimam6-paid|gpu-l40s|billing=12764,cpu=8,gres/gpu:l40s=1,gres/gpu=1,mem=120G,node=1|00:06:44|COMPLETED|atl1-1-03-007-29-0
+15849822|b47_gen_std_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:26:07|COMPLETED|atl1-1-02-012-9-0
+15849827|b47_gen_std_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:08|COMPLETED|atl1-1-03-019-2-0
+15849828|b47_gen_std_r8_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:06|COMPLETED|atl1-1-03-019-2-0
+15849830|b47_gen_std_r8_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:23:51|COMPLETED|atl1-1-02-012-2-0
+15849831|b47_gen_std_r8_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-03-020-11-0
+15849832|b47_gen_std_r8_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-03-020-11-0
+15849834|b47_gen_std_r8_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:23:51|COMPLETED|atl1-1-02-012-2-0
+15849835|b47_gen_std_r8_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:13|COMPLETED|atl1-1-03-020-11-0
+15849836|b47_gen_std_r8_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-03-020-11-0
+15849837|b47_gen_std_r64_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:29:55|COMPLETED|atl1-1-03-020-11-0
+15849839|b47_gen_std_r64_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:14|COMPLETED|atl1-1-03-020-11-0
+15849841|b47_gen_std_r64_lr3e-05_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:07|COMPLETED|atl1-1-03-020-11-0
+15849842|b47_gen_std_r64_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:28:12|COMPLETED|atl1-1-02-014-9-0
+15849843|b47_gen_std_r64_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:09|COMPLETED|atl1-1-02-014-9-0
+15849844|b47_gen_std_r64_lr0.0001_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:17|COMPLETED|atl1-1-02-014-9-0
+15849846|b47_gen_std_r64_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:27:58|COMPLETED|atl1-1-03-019-14-0
+15849847|b47_gen_std_r64_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:19|COMPLETED|atl1-1-03-019-14-0
+15849848|b47_gen_std_r64_lr0.0003_s42|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:11|COMPLETED|atl1-1-03-019-14-0
+15849965|b50_dl|gts-nimam6|cpu-small|billing=1216,cpu=4,mem=16G,node=1|00:01:09|COMPLETED|atl1-1-02-010-9-2
+15849971|b50_cotR|gts-nimam6|gpu-l40s|billing=12764,cpu=4,gres/gpu:l40s=1,gres/gpu=1,mem=64G,node=1|00:01:16|CANCELLED by 3049098|atl1-1-03-007-29-0
+15875163|stale_dev|gts-nimam6|gpu-h200,gpu-h200||00:00:00|PENDING|None assigned
+15875237|b47_score42|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:38:22|COMPLETED|atl1-1-01-002-18-0
+15875241|b47_final_gen_k32_s123|gts-nimam6-paid|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15875246|b47_final_gen_k32_s456|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:34:15|COMPLETED|atl1-1-01-002-28-0
+15875247|b47_final_gen_k32_s456|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:00:12|COMPLETED|atl1-1-01-002-14-0
+15875248|b47_final_fullgen_k32_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:33:30|COMPLETED|atl1-1-01-002-12-0
+15875249|b47_final_fullgen_k32_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:00:12|COMPLETED|atl1-1-01-002-14-0
+15875251|b47_final_fullgen_k32_s456|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:20:23|COMPLETED|atl1-1-01-002-18-0
+15875252|b47_final_fullgen_k32_s456|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:00:10|COMPLETED|atl1-1-01-002-14-0
+15875253|b47_final_fullcls_k32_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:25:36|COMPLETED|atl1-1-01-002-14-0
+15875254|b47_final_fullcls_k32_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:00:11|COMPLETED|atl1-1-01-002-14-0
+15875256|b47_final_fullcls_k32_s456|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:20:57|COMPLETED|atl1-1-01-002-28-0
+15875257|b47_final_fullcls_k32_s456|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:00:11|COMPLETED|atl1-1-01-002-14-0
+15875258|b47_final_scratch_k32_s123|gts-nimam6-paid|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15875260|b47_final_scratch_k32_s456|gts-nimam6-paid|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15875262|b47_final_gen_std_s123|gts-nimam6-paid|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15875264|b47_final_gen_std_s456|gts-nimam6-paid|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15875268|b47_final_fullgen_std_s123|gts-nimam6-paid|gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200||00:00:00|CANCELLED by 3049098|None assigned
+15875270|b47_final_fullgen_std_s456|gts-nimam6-paid|gpu-h100|billing=35160,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=120G,node=1|00:46:35|COMPLETED|atl1-1-03-008-32-0
+15875271|b47_final_fullgen_std_s456|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:12|COMPLETED|atl1-1-02-012-23-0
+15875281|b47_ctrl_gen|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:16:44|COMPLETED|atl1-1-01-002-20-0
+15875282|b47_ctrl_fullgen|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:17:25|COMPLETED|atl1-1-01-002-12-0
+15875401|b44_cls_std_n80000_r8_lr1e-4_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:00:13|TIMEOUT|atl1-1-01-002-10-0
+15875402|b44_cls_std_n80000_r8_lr1e-4_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:00:10|TIMEOUT|atl1-1-01-002-10-0
+15875403|b44_cls_std_n80000_r8_lr1e-4_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:00:11|TIMEOUT|atl1-1-01-002-10-0
+15875404|b44_cls_std_n80000_r8_lr1e-4_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:34:09|COMPLETED|atl1-1-01-002-10-0
+15875405|b44_cls_std_n80000_r8_lr1e-4_s456|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:33:22|COMPLETED|atl1-1-01-002-18-0
+15875406|b44_cls_std_n80000_r8_lr1e-4_s456|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:00:13|COMPLETED|atl1-1-01-002-18-0
+15875407|b44_cls_ho_n80000_r8_lr1e-4_s42|gts-nimam6-paid|gpu-h100|billing=35160,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=120G,node=1|00:34:00|COMPLETED|atl1-1-03-008-32-0
+15875408|b44_cls_ho_n80000_r8_lr1e-4_s42|gts-nimam6-paid|gpu-h100|billing=35160,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=120G,node=1|00:00:14|COMPLETED|atl1-1-03-008-32-0
+15875409|b44_cls_ho_n80000_r8_lr1e-4_s42|gts-nimam6-paid|gpu-h100|billing=35160,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=120G,node=1|00:00:11|COMPLETED|atl1-1-03-008-32-0
+15875410|b44_cls_ho_n80000_r8_lr1e-4_s123|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|01:00:27|TIMEOUT|atl1-1-01-002-14-0
+15875411|b44_cls_ho_n80000_r8_lr1e-4_s123|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:46:25|COMPLETED|atl1-1-03-019-14-0
+15875412|b44_cls_ho_n80000_r8_lr1e-4_s123|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:14|COMPLETED|atl1-1-03-019-14-0
+15875413|b44_cls_ho_n80000_r8_lr1e-4_s123|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:00:17|COMPLETED|atl1-1-03-019-14-0
+15876653|b47_final_fullgen_std_s123b|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:58:59|FAILED|atl1-1-01-002-14-0
+15876654|b47_final_fullgen_std_s123b|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:26:44|COMPLETED|atl1-1-01-002-14-0
+15876655|b47_final_scratch_k32_s456b|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:16:41|COMPLETED|atl1-1-01-002-12-0
+15876656|b47_final_scratch_k32_s456b|gts-nimam6-paid|gpu-a100|billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu=1,mem=120G,node=1|00:00:11|COMPLETED|atl1-1-01-002-12-0
+15876657|b47_final_gen_std_s456b|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:57:53|FAILED|atl1-1-02-014-9-0
+15876658|b47_final_gen_std_s456b|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:16:14|COMPLETED|atl1-1-02-012-9-0
+15891107|b47_ctrl2|gts-nimam6-paid|gpu-h200|billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=120G,node=1|00:19:38|COMPLETED|atl1-1-02-012-9-0

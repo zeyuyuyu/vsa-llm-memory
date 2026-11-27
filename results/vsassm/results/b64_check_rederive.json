@@ -1,0 +1,898 @@
+{
+ "qwen8|256|2|4|r7": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "2",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 714,
+  "N_own": 714,
+  "bits_log": 985.0,
+  "bits_own": 985.0,
+  "budget": 1024
+ },
+ "qwen8|256|2|16|r7": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "4",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5043,
+  "N_own": 5043,
+  "bits_log": 4093.6,
+  "bits_own": 4093.6,
+  "budget": 4096
+ },
+ "qwen8|256|16|4|r15": {
+  "cfg": [
+   "center",
+   "A",
+   "2",
+   "onehot",
+   "tern",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 121,
+  "N_own": 121,
+  "bits_log": 1007.6,
+  "bits_own": 1007.6,
+  "budget": 1024
+ },
+ "qwen8|256|16|16|r15": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4052.2,
+  "bits_own": 4052.2,
+  "budget": 4096
+ },
+ "qwen8|1024|2|4|r0": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "bits",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2088,
+  "N_own": 2088,
+  "bits_log": 4093.6,
+  "bits_own": 4093.6,
+  "budget": 4096
+ },
+ "qwen8|1024|2|16|r0": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "8",
+   "bits",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5621,
+  "N_own": 5621,
+  "bits_log": 12760.7,
+  "bits_own": 12760.7,
+  "budget": 16384
+ },
+ "qwen8|1024|16|4|r1": {
+  "cfg": [
+   "whiten",
+   "L",
+   "1",
+   "onehot",
+   "cnt",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4054.1,
+  "bits_own": 4054.1,
+  "budget": 4096
+ },
+ "qwen8|1024|16|16|r1": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 12140.5,
+  "bits_own": 12140.5,
+  "budget": 16384
+ },
+ "b46|256|2|4|r1": {
+  "cfg": [
+   "center",
+   "A",
+   "32",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 1033,
+  "N_own": 1033,
+  "bits_log": 948.9,
+  "bits_own": 948.9,
+  "budget": 1024
+ },
+ "b46|256|2|16|r1": {
+  "cfg": [
+   "whiten",
+   "L",
+   "4",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4093.7,
+  "bits_own": 4093.7,
+  "budget": 4096
+ },
+ "b46|256|16|4|r13": {
+  "cfg": [
+   "center",
+   "LA",
+   "2",
+   "onehot",
+   "tern",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 113,
+  "N_own": 113,
+  "bits_log": 1014.5,
+  "bits_own": 1014.5,
+  "budget": 1024
+ },
+ "b46|256|16|16|r13": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4053.4,
+  "bits_own": 4053.4,
+  "budget": 4096
+ },
+ "b46|1024|2|4|r3": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "2",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2930,
+  "N_own": 2930,
+  "bits_log": 3981.6,
+  "bits_own": 3981.6,
+  "budget": 4096
+ },
+ "b46|1024|2|16|r3": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "16",
+   "bits",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5621,
+  "N_own": 5621,
+  "bits_log": 15760.2,
+  "bits_own": 15760.2,
+  "budget": 16384
+ },
+ "b46|1024|16|4|r3": {
+  "cfg": [
+   "whiten",
+   "L",
+   "1",
+   "onehot",
+   "cnt",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4054.4,
+  "bits_own": 4054.4,
+  "budget": 4096
+ },
+ "b46|1024|16|16|r3": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5621,
+  "N_own": 5621,
+  "bits_log": 14164.8,
+  "bits_own": 14164.8,
+  "budget": 16384
+ },
+ "llama|256|2|4|r13": {
+  "cfg": [
+   "whiten",
+   "A",
+   "4",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 627,
+  "N_own": 627,
+  "bits_log": 988.3,
+  "bits_own": 988.3,
+  "budget": 1024
+ },
+ "llama|256|2|16|r13": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "4",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 4776,
+  "N_own": 4776,
+  "bits_log": 4028.0,
+  "bits_own": 4028.0,
+  "budget": 4096
+ },
+ "llama|256|16|4|r17": {
+  "cfg": [
+   "center",
+   "A",
+   "1",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 121,
+  "N_own": 121,
+  "bits_log": 1016.4,
+  "bits_own": 1016.4,
+  "budget": 1024
+ },
+ "llama|256|16|16|r17": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4052.2,
+  "bits_own": 4052.2,
+  "budget": 4096
+ },
+ "llama|1024|2|4|r1": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "bits",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 1986,
+  "N_own": 1986,
+  "bits_log": 4065.8,
+  "bits_own": 4065.8,
+  "budget": 4096
+ },
+ "llama|1024|2|16|r1": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "4",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5621,
+  "N_own": 5621,
+  "bits_log": 12801.5,
+  "bits_own": 12801.5,
+  "budget": 16384
+ },
+ "llama|1024|16|4|r4": {
+  "cfg": [
+   "whiten",
+   "L",
+   "1",
+   "onehot",
+   "cnt",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4054.4,
+  "bits_own": 4054.4,
+  "budget": 4096
+ },
+ "llama|1024|16|16|r4": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 12145.9,
+  "bits_own": 12145.9,
+  "budget": 16384
+ },
+ "mistral|256|2|4|r9": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "2",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 714,
+  "N_own": 714,
+  "bits_log": 984.6,
+  "bits_own": 984.6,
+  "budget": 1024
+ },
+ "mistral|256|2|16|r9": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "4",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5043,
+  "N_own": 5043,
+  "bits_log": 3993.5,
+  "bits_own": 3993.5,
+  "budget": 4096
+ },
+ "mistral|256|16|4|r1": {
+  "cfg": [
+   "whiten",
+   "L",
+   "1",
+   "onehot",
+   "tern",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 731,
+  "N_own": 731,
+  "bits_log": 1021.4,
+  "bits_own": 1021.4,
+  "budget": 1024
+ },
+ "mistral|256|16|16|r1": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4052.2,
+  "bits_own": 4052.2,
+  "budget": 4096
+ },
+ "mistral|1024|2|4|r1": {
+  "cfg": [
+   "whiten",
+   "A",
+   "8",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2537,
+  "N_own": 2537,
+  "bits_log": 4008.3,
+  "bits_own": 4008.3,
+  "budget": 4096
+ },
+ "mistral|1024|2|16|r1": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "8",
+   "bits",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5621,
+  "N_own": 5621,
+  "bits_log": 12569.1,
+  "bits_own": 12569.1,
+  "budget": 16384
+ },
+ "mistral|1024|16|4|r2": {
+  "cfg": [
+   "whiten",
+   "L",
+   "1",
+   "onehot",
+   "cnt",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 4054.4,
+  "bits_own": 4054.4,
+  "budget": 4096
+ },
+ "mistral|1024|16|16|r2": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2818,
+  "N_own": 2818,
+  "bits_log": 12147.2,
+  "bits_own": 12147.2,
+  "budget": 16384
+ },
+ "e5|256|2|4|r17": {
+  "cfg": [
+   "whiten",
+   "L",
+   "8",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 662,
+  "N_own": 662,
+  "bits_log": 1017.0,
+  "bits_own": 1017.0,
+  "budget": 1024
+ },
+ "e5|256|2|16|r17": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "8",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2774,
+  "N_own": 2774,
+  "bits_log": 3938.8,
+  "bits_own": 3938.8,
+  "budget": 4096
+ },
+ "e5|256|16|4|r14": {
+  "cfg": [
+   "center",
+   "L",
+   "1",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 85,
+  "N_own": 85,
+  "bits_log": 1016.4,
+  "bits_own": 1016.4,
+  "budget": 1024
+ },
+ "e5|256|16|16|r14": {
+  "cfg": [
+   "center",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2817,
+  "N_own": 2817,
+  "bits_log": 4054.2,
+  "bits_own": 4054.2,
+  "budget": 4096
+ },
+ "e5|1024|2|4|r0": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "16",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2628,
+  "N_own": 2628,
+  "bits_log": 3895.0,
+  "bits_own": 3895.0,
+  "budget": 4096
+ },
+ "e5|1024|2|16|r0": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "8",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5620,
+  "N_own": 5620,
+  "bits_log": 11216.6,
+  "bits_own": 11216.6,
+  "budget": 16384
+ },
+ "e5|1024|16|4|r0": {
+  "cfg": [
+   "center",
+   "A",
+   "1",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 513,
+  "N_own": 513,
+  "bits_log": 4095.6,
+  "bits_own": 4095.6,
+  "budget": 4096
+ },
+ "e5|1024|16|16|r0": {
+  "cfg": [
+   "center",
+   "L",
+   "2",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2817,
+  "N_own": 2817,
+  "bits_log": 11777.3,
+  "bits_own": 11777.3,
+  "budget": 16384
+ },
+ "bge|256|2|4|r1": {
+  "cfg": [
+   "whiten",
+   "L",
+   "64",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2194,
+  "N_own": 2194,
+  "bits_log": 885.7,
+  "bits_own": 885.7,
+  "budget": 1024
+ },
+ "bge|256|2|16|r1": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "4",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5042,
+  "N_own": 5042,
+  "bits_log": 4084.2,
+  "bits_own": 4084.2,
+  "budget": 4096
+ },
+ "bge|256|16|4|r2": {
+  "cfg": [
+   "whiten",
+   "L",
+   "1",
+   "onehot",
+   "cnt",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 731,
+  "N_own": 731,
+  "bits_log": 1021.4,
+  "bits_own": 1021.4,
+  "budget": 1024
+ },
+ "bge|256|16|16|r2": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2817,
+  "N_own": 2817,
+  "bits_log": 4049.9,
+  "bits_own": 4049.9,
+  "budget": 4096
+ },
+ "bge|1024|2|4|r1": {
+  "cfg": [
+   "whiten",
+   "L",
+   "8",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2549,
+  "N_own": 2549,
+  "bits_log": 3954.1,
+  "bits_own": 3954.1,
+  "budget": 4096
+ },
+ "bge|1024|2|16|r1": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "32",
+   "bits",
+   "clip3",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5620,
+  "N_own": 5620,
+  "bits_log": 15526.8,
+  "bits_own": 15526.2,
+  "budget": 16384
+ },
+ "bge|1024|16|4|r0": {
+  "cfg": [
+   "whiten",
+   "L",
+   "1",
+   "onehot",
+   "cnt",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 2817,
+  "N_own": 2817,
+  "bits_log": 4053.6,
+  "bits_own": 4053.6,
+  "budget": 4096
+ },
+ "bge|1024|16|16|r0": {
+  "cfg": [
+   "whiten",
+   "L",
+   "4",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 1797,
+  "N_own": 1797,
+  "bits_log": 16086.9,
+  "bits_own": 16086.9,
+  "budget": 16384
+ },
+ "minilm|256|2|4|r7": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "4",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 640,
+  "N_own": 640,
+  "bits_log": 1013.3,
+  "bits_own": 1013.3,
+  "budget": 1024
+ },
+ "minilm|256|2|16|r7": {
+  "cfg": [
+   "whiten",
+   "L",
+   "4",
+   "onehot",
+   "cnt",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2680,
+  "N_own": 2680,
+  "bits_log": 4039.4,
+  "bits_own": 4039.4,
+  "budget": 4096
+ },
+ "minilm|256|16|4|r2": {
+  "cfg": [
+   "whiten",
+   "L",
+   "1",
+   "onehot",
+   "tern",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 731,
+  "N_own": 731,
+  "bits_log": 1021.4,
+  "bits_own": 1021.4,
+  "budget": 1024
+ },
+ "minilm|256|16|16|r2": {
+  "cfg": [
+   "whiten",
+   "L",
+   "2",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2817,
+  "N_own": 2817,
+  "bits_log": 4013.7,
+  "bits_own": 4013.7,
+  "budget": 4096
+ },
+ "minilm|1024|2|4|r0": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "4",
+   "bits",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 2489,
+  "N_own": 2489,
+  "bits_log": 3907.6,
+  "bits_own": 3907.6,
+  "budget": 4096
+ },
+ "minilm|1024|2|16|r0": {
+  "cfg": [
+   "whiten",
+   "LA",
+   "8",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 5620,
+  "N_own": 5620,
+  "bits_log": 11223.4,
+  "bits_own": 11223.4,
+  "budget": 16384
+ },
+ "minilm|1024|16|4|r0": {
+  "cfg": [
+   "whiten",
+   "A",
+   "2",
+   "onehot",
+   "tern",
+   "0.5"
+  ],
+  "agree": 1.0,
+  "N_log": 465,
+  "N_own": 465,
+  "bits_log": 4084.5,
+  "bits_own": 4084.5,
+  "budget": 4096
+ },
+ "minilm|1024|16|16|r0": {
+  "cfg": [
+   "whiten",
+   "L",
+   "4",
+   "onehot",
+   "tern",
+   "1.0"
+  ],
+  "agree": 1.0,
+  "N_log": 1797,
+  "N_own": 1797,
+  "bits_log": 16163.2,
+  "bits_own": 16163.2,
+  "budget": 16384
+ }
+}

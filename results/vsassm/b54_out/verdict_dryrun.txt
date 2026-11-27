@@ -1,0 +1,182 @@
+# B54 verdict (prereg/B54_mlc_cells_prereg.md): cells per stored pair for >= 99.5% exact reads of the
+# probed RULER keys with 1, 2 or 3 bits per cell (multi-level PCM cells, B25's device model)
+
+Probed keys 300; binary (b = 1) rows: B38 (30 d) and B52 (c) (1 d); T-vhdd b = 1 at 1 d: this run.
+
+Calibrated mean bit-error rate per stored bit (uniform levels, Gray labels, calibrated thresholds):
+  30d    k1  m2 0.0002  m3 0.0311 m1 0.0000   k2  m2 0.0279  m3 0.1258 m1 0.0001   k4  m2 0.1416  m3 0.2465 m1 0.0208   k8  m2 0.2684  m3 0.3502 m1 0.1226   k16 m2 0.3668  m3 0.4223 m1 0.2760   k32 m2 0.4523  m3 0.4717 m1 0.3744
+  1d     k1  m2 0.0000  m3 0.0239 m1 0.0000   k2  m2 0.0193  m3 0.1128 m1 0.0000   k4  m2 0.1233  m3 0.2322 m1 0.0098   k8  m2 0.2553  m3 0.3417 m1 0.1017   k16 m2 0.3593  m3 0.4168 m1 0.2564   k32 m2 0.4488  m3 0.4694 m1 0.3650
+
+Table 1a: N* (cells per stored pair, every stored bit counted; >4096 = not reached), 30 days
+  memory     b   ideal     k1     k2     k4     k8    k16    k32
+  V-last     1      76     76     76     76    128    431   1722
+  V-last     2      64     64     64     64    256   1024  >4096
+  V-last     3      32     32     64     64    256   1024  >4096
+  T-rep      1      19     19     23     91    256   1024   3444
+  T-rep      2   >4096  >4096  >4096  >4096  >4096  >4096  >4096
+  T-rep      3   >4096  >4096  >4096  >4096  >4096  >4096  >4096
+  E-BCH      1      19     19     19     27    108    431   1722
+  E-BCH      2      16     16     16     64    256  >4096  >4096
+  E-BCH      3     8.0     16     64    128  >4096  >4096  >4096
+  E-LDPC     1      23     23     23     27     54    215    724
+  E-LDPC     2      16     16     16     32    128    256   1024
+  E-LDPC     3     8.0     16     16     32    128    256  >4096
+  T-vhdd     1      32     32     32     38     91    304   1024
+  T-vhdd     2      16     16     32     64    256    512  >4096
+  T-vhdd     3      16     16     32    128    256   1024  >4096
+
+Table 1b: N* (cells per stored pair, every stored bit counted; >4096 = not reached), 1 day
+  memory     b   ideal     k1     k2     k4     k8    k16    k32
+  V-last     1      76     76     76     76    108    304   1448
+  V-last     2      64     64     64     64    128    512   2048
+  V-last     3      32     32     64     64    256    512   2048
+  T-rep      1      19     19     19     76    215    861   2896
+  T-rep      2   >4096  >4096  >4096  >4096  >4096  >4096  >4096
+  T-rep      3   >4096  >4096  >4096  >4096  >4096  >4096  >4096
+  E-BCH      1      19     19     19     23     91    362   1448
+  E-BCH      2      16     16     16     64    256  >4096  >4096
+  E-BCH      3     8.0     16     32    128  >4096  >4096  >4096
+  E-LDPC     1      23     23     23     23     54    181    609
+  E-LDPC     2      16     16     16     32     64    256   1024
+  E-LDPC     3     8.0    8.0     16     32    128    256   1024
+  T-vhdd     1      32     32     32     64    128    256   1024
+  T-vhdd     2      16     16     32     64    128    512  >4096
+  T-vhdd     3      16     16     32    128    256   1024  >4096
+
+Table 2a: overhead relative to the memory's own noise-free requirement, N*(k) / N*(ideal, same b), 30 days
+  memory     b     k1     k2     k4     k8    k16    k32
+  V-last     1   1.00   1.00   1.00   1.68   5.67  22.66
+  V-last     2   1.00   1.00   1.00   4.00  16.00      -
+  V-last     3   1.00   2.00   2.00   8.00  32.00      -
+  T-rep      1   1.00   1.21   4.79  13.47  53.89 181.26
+  T-rep      2      -      -      -      -      -      -
+  T-rep      3      -      -      -      -      -      -
+  E-BCH      1   1.00   1.00   1.42   5.68  22.68  90.63
+  E-BCH      2   1.00   1.00   4.00  16.00      -      -
+  E-BCH      3   2.00   8.00  16.00      -      -      -
+  E-LDPC     1   1.00   1.00   1.17   2.35   9.35  31.48
+  E-LDPC     2   1.00   1.00   2.00   8.00  16.00  64.00
+  E-LDPC     3   2.00   2.00   4.00  16.00  32.00      -
+  T-vhdd     1   1.00   1.00   1.19   2.84   9.50  32.00
+  T-vhdd     2   1.00   2.00   4.00  16.00  32.00      -
+  T-vhdd     3   1.00   2.00   8.00  16.00  64.00      -
+
+Table 2b: overhead relative to the memory's own noise-free requirement, N*(k) / N*(ideal, same b), 1 day
+  memory     b     k1     k2     k4     k8    k16    k32
+  V-last     1   1.00   1.00   1.00   1.42   4.01  19.05
+  V-last     2   1.00   1.00   1.00   2.00   8.00  32.00
+  V-last     3   1.00   2.00   2.00   8.00  16.00  64.00
+  T-rep      1   1.00   1.00   4.01  11.33  45.32 152.44
+  T-rep      2      -      -      -      -      -      -
+  T-rep      3      -      -      -      -      -      -
+  E-BCH      1   1.00   1.00   1.19   4.76  19.05  76.22
+  E-BCH      2   1.00   1.00   4.00  16.00      -      -
+  E-BCH      3   2.00   4.00  16.00      -      -      -
+  E-LDPC     1   0.98   0.98   0.98   2.34   7.87  26.47
+  E-LDPC     2   1.00   1.00   2.00   4.00  16.00  64.00
+  E-LDPC     3   1.00   2.00   4.00  16.00  32.00 128.00
+  T-vhdd     1   1.00   1.00   2.00   4.00   8.00  32.00
+  T-vhdd     2   1.00   2.00   4.00   8.00  32.00      -
+  T-vhdd     3   1.00   2.00   8.00  16.00  64.00      -
+
+Table 3a: best over b in {1, 2, 3} per memory (N*, b), and overhead relative to the best noise-free requirement over b, 30 days
+  memory        ideal            k1            k2            k4            k8           k16           k32
+  V-last      32 (b3)  32 (b3) 1.00  64 (b2) 2.00  64 (b2) 2.00 128 (b1) 4.00431 (b1) 13.471722 (b1) 53.81
+  T-rep       19 (b1)  19 (b1) 1.00  23 (b1) 1.21  91 (b1) 4.79256 (b1) 13.471024 (b1) 53.893444 (b1) 181.26
+  E-BCH      8.0 (b3)  16 (b2) 2.00  16 (b2) 2.00  27 (b1) 3.38108 (b1) 13.50431 (b1) 53.881722 (b1) 215.25
+  E-LDPC     8.0 (b3)  16 (b2) 2.00  16 (b2) 2.00  27 (b1) 3.38  54 (b1) 6.75215 (b1) 26.88724 (b1) 90.50
+  T-vhdd      16 (b2)  16 (b2) 1.00  32 (b1) 2.00  38 (b1) 2.38  91 (b1) 5.69304 (b1) 19.001024 (b1) 64.00
+
+Table 3b: best over b in {1, 2, 3} per memory (N*, b), and overhead relative to the best noise-free requirement over b, 1 day
+  memory        ideal            k1            k2            k4            k8           k16           k32
+  V-last      32 (b3)  32 (b3) 1.00  64 (b2) 2.00  64 (b2) 2.00 108 (b1) 3.36 304 (b1) 9.511448 (b1) 45.25
+  T-rep       19 (b1)  19 (b1) 1.00  19 (b1) 1.00  76 (b1) 4.01215 (b1) 11.33861 (b1) 45.322896 (b1) 152.44
+  E-BCH      8.0 (b3)  16 (b2) 2.00  16 (b2) 2.00  23 (b1) 2.83 91 (b1) 11.31362 (b1) 45.251448 (b1) 181.02
+  E-LDPC     8.0 (b3) 8.0 (b3) 1.00  16 (b2) 2.00  23 (b1) 2.83  54 (b1) 6.73181 (b1) 22.63609 (b1) 76.11
+  T-vhdd      16 (b2)  16 (b2) 1.00  32 (b1) 2.00  64 (b1) 4.00 128 (b1) 8.00256 (b1) 16.001024 (b1) 64.00
+
+Bars (Delta = grid steps of the best table's N* minus the VSA store's; one step = 19%;
+'VSA fewer cells' if Delta >= +2, 'table fewer cells' if <= -2, 'tie' within 1)
+  H1 binary (b = 1), 30d:
+    k1  VSA      76 (b1) | best table E-BCH      19 (b1) | Delta -8 -> table fewer cells
+    k2  VSA      76 (b1) | best table E-BCH      19 (b1) | Delta -8 -> table fewer cells
+    k4  VSA      76 (b1) | best table E-BCH      27 (b1) | Delta -6 -> table fewer cells
+    k8  VSA     128 (b1) | best table E-LDPC      54 (b1) | Delta -5 -> table fewer cells
+    k16 VSA     431 (b1) | best table E-LDPC     215 (b1) | Delta -4 -> table fewer cells
+    k32 VSA    1722 (b1) | best table E-LDPC     724 (b1) | Delta -5 -> table fewer cells
+    -> TABLE WIN
+  H1-MLC b = 2, 30d:
+    k1  VSA      64 (b2) | best table E-BCH      16 (b2) | Delta -8 -> table fewer cells
+    k2  VSA      64 (b2) | best table E-BCH      16 (b2) | Delta -8 -> table fewer cells
+    k4  VSA      64 (b2) | best table E-LDPC      32 (b2) | Delta -4 -> table fewer cells
+    k8  VSA     256 (b2) | best table E-LDPC     128 (b2) | Delta -4 -> table fewer cells
+    k16 VSA    1024 (b2) | best table E-LDPC     256 (b2) | Delta -8 -> table fewer cells
+    k32 VSA   >4096 (b2) | best table E-LDPC    1024 (b2) | Delta -9 -> table fewer cells
+    -> TABLE WIN
+  H1-MLC b = 3, 30d:
+    k1  VSA      32 (b3) | best table E-BCH      16 (b3) | Delta -4 -> table fewer cells
+    k2  VSA      64 (b3) | best table E-LDPC      16 (b3) | Delta -8 -> table fewer cells
+    k4  VSA      64 (b3) | best table E-LDPC      32 (b3) | Delta -4 -> table fewer cells
+    k8  VSA     256 (b3) | best table E-LDPC     128 (b3) | Delta -4 -> table fewer cells
+    k16 VSA    1024 (b3) | best table E-LDPC     256 (b3) | Delta -8 -> table fewer cells
+    k32 VSA   >4096 (b3) | best table E-BCH   >4096 (b3) | Delta +0 -> tie
+    -> TABLE WIN
+  H1-best (each memory at its best b), 30d:
+    k1  VSA      32 (b3) | best table E-BCH      16 (b2) | Delta -4 -> table fewer cells
+    k2  VSA      64 (b2) | best table E-BCH      16 (b2) | Delta -8 -> table fewer cells
+    k4  VSA      64 (b2) | best table E-BCH      27 (b1) | Delta -5 -> table fewer cells
+    k8  VSA     128 (b1) | best table E-LDPC      54 (b1) | Delta -5 -> table fewer cells
+    k16 VSA     431 (b1) | best table E-LDPC     215 (b1) | Delta -4 -> table fewer cells
+    k32 VSA    1722 (b1) | best table E-LDPC     724 (b1) | Delta -5 -> table fewer cells
+    -> TABLE WIN
+  H1 binary (b = 1), 1d:
+    k1  VSA      76 (b1) | best table E-BCH      19 (b1) | Delta -8 -> table fewer cells
+    k2  VSA      76 (b1) | best table E-BCH      19 (b1) | Delta -8 -> table fewer cells
+    k4  VSA      76 (b1) | best table E-BCH      23 (b1) | Delta -7 -> table fewer cells
+    k8  VSA     108 (b1) | best table E-LDPC      54 (b1) | Delta -4 -> table fewer cells
+    k16 VSA     304 (b1) | best table E-LDPC     181 (b1) | Delta -3 -> table fewer cells
+    k32 VSA    1448 (b1) | best table E-LDPC     609 (b1) | Delta -5 -> table fewer cells
+    -> TABLE WIN
+  H1-MLC b = 2, 1d:
+    k1  VSA      64 (b2) | best table E-BCH      16 (b2) | Delta -8 -> table fewer cells
+    k2  VSA      64 (b2) | best table E-BCH      16 (b2) | Delta -8 -> table fewer cells
+    k4  VSA      64 (b2) | best table E-LDPC      32 (b2) | Delta -4 -> table fewer cells
+    k8  VSA     128 (b2) | best table E-LDPC      64 (b2) | Delta -4 -> table fewer cells
+    k16 VSA     512 (b2) | best table E-LDPC     256 (b2) | Delta -4 -> table fewer cells
+    k32 VSA    2048 (b2) | best table E-LDPC    1024 (b2) | Delta -4 -> table fewer cells
+    -> TABLE WIN
+  H1-MLC b = 3, 1d:
+    k1  VSA      32 (b3) | best table E-LDPC     8.0 (b3) | Delta -8 -> table fewer cells
+    k2  VSA      64 (b3) | best table E-LDPC      16 (b3) | Delta -8 -> table fewer cells
+    k4  VSA      64 (b3) | best table E-LDPC      32 (b3) | Delta -4 -> table fewer cells
+    k8  VSA     256 (b3) | best table E-LDPC     128 (b3) | Delta -4 -> table fewer cells
+    k16 VSA     512 (b3) | best table E-LDPC     256 (b3) | Delta -4 -> table fewer cells
+    k32 VSA    2048 (b3) | best table E-LDPC    1024 (b3) | Delta -4 -> table fewer cells
+    -> TABLE WIN
+  H1-best (each memory at its best b), 1d:
+    k1  VSA      32 (b3) | best table E-LDPC     8.0 (b3) | Delta -8 -> table fewer cells
+    k2  VSA      64 (b2) | best table E-BCH      16 (b2) | Delta -8 -> table fewer cells
+    k4  VSA      64 (b2) | best table E-BCH      23 (b1) | Delta -6 -> table fewer cells
+    k8  VSA     108 (b1) | best table E-LDPC      54 (b1) | Delta -4 -> table fewer cells
+    k16 VSA     304 (b1) | best table E-LDPC     181 (b1) | Delta -3 -> table fewer cells
+    k32 VSA    1448 (b1) | best table E-LDPC     609 (b1) | Delta -5 -> table fewer cells
+    -> TABLE WIN
+
+H4 (robustness vs storage efficiency): overhead N*(k) / N*(noise-free) per memory; is the VSA store's the
+smallest? (k8, k16; per b and at each memory's best b)
+  30d k8  b=1    V-last 1.68  T-rep 13.47  E-BCH 5.68  E-LDPC 2.35  T-vhdd 2.84  -> least: V-last
+  30d k8  b=2    V-last 4.00  T-rep -  E-BCH 16.00  E-LDPC 8.00  T-vhdd 16.00  -> least: V-last
+  30d k8  b=3    V-last 8.00  T-rep -  E-BCH -  E-LDPC 16.00  T-vhdd 16.00  -> least: V-last
+  30d k8  b=best V-last 4.00  T-rep 13.47  E-BCH 13.50  E-LDPC 6.75  T-vhdd 5.69  -> least: V-last
+  30d k16 b=1    V-last 5.67  T-rep 53.89  E-BCH 22.68  E-LDPC 9.35  T-vhdd 9.50  -> least: V-last
+  30d k16 b=2    V-last 16.00  T-rep -  E-BCH -  E-LDPC 16.00  T-vhdd 32.00  -> least: V-last
+  30d k16 b=3    V-last 32.00  T-rep -  E-BCH -  E-LDPC 32.00  T-vhdd 64.00  -> least: V-last
+  30d k16 b=best V-last 13.47  T-rep 53.89  E-BCH 53.88  E-LDPC 26.88  T-vhdd 19.00  -> least: V-last
+  1d  k8  b=1    V-last 1.42  T-rep 11.33  E-BCH 4.76  E-LDPC 2.34  T-vhdd 4.00  -> least: V-last
+  1d  k8  b=2    V-last 2.00  T-rep -  E-BCH 16.00  E-LDPC 4.00  T-vhdd 8.00  -> least: V-last
+  1d  k8  b=3    V-last 8.00  T-rep -  E-BCH -  E-LDPC 16.00  T-vhdd 16.00  -> least: V-last
+  1d  k8  b=best V-last 3.36  T-rep 11.33  E-BCH 11.31  E-LDPC 6.73  T-vhdd 8.00  -> least: V-last
+  1d  k16 b=1    V-last 4.01  T-rep 45.32  E-BCH 19.05  E-LDPC 7.87  T-vhdd 8.00  -> least: V-last
+  1d  k16 b=2    V-last 8.00  T-rep -  E-BCH -  E-LDPC 16.00  T-vhdd 32.00  -> least: V-last
+  1d  k16 b=3    V-last 16.00  T-rep -  E-BCH -  E-LDPC 32.00  T-vhdd 64.00  -> least: V-last
+  1d  k16 b=best V-last 9.51  T-rep 45.32  E-BCH 45.25  E-LDPC 22.63  T-vhdd 16.00  -> least: V-last

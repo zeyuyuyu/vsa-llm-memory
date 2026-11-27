@@ -1,0 +1,34 @@
+# B70 predictions (prereg/B70_useful_budgets_prereg.md) scored against results/b70_verdict.txt (ideal accounting)
+
+Q1 (P1) STORE - LAMc: LAMc leads on all 4 language models; on the sentence encoders LAMc leads on none.
+    FAILED in its first part. LAMc leads on Qwen3-8B (-1.86), Granite (-2.20), Mistral (-4.18); Llama-3.1-8B level
+    (+0.43 [-1.65, +2.73], one cell). Sentence encoders: store leads on e5 (+2.53) and bge (+1.79), level on MiniLM
+    (+0.94); LAMc leads on none (held).
+Q2 (P2) STORE - NLMSc: NLMSc leads on >= 3 of 4 language models; store leads or level on all 3 sentence encoders.
+    HELD. NLMSc leads on Qwen3-8B, Granite, Mistral (-1.01 to -2.69), Llama level; store leads on e5, bge, MiniLM
+    (+3.33 to +5.16).
+Q3 (P3) VSAPcX - LAMc: LAMc leads on at most 2 of 4 language models; level or VSAPcX leads on all 3 sentence encoders.
+    HELD. LAMc leads on Qwen3-8B and Mistral; level on Granite and Llama; VSAPcX leads on all 3 sentence encoders
+    (+1.57 to +2.25).
+Q4 (P4) STORE - BEST36: loss on all 3 sentence encoders; on the language models no loss and passes on >= 2.
+    HELD. Loss on e5, bge, MiniLM (-7.50 to -9.60); passes on all 4 language models (+2.67 to +6.46).
+Q5 (P5) STORE - BEST7: the same labels as Q4 on >= 6 of 7 (scored on the 4 language models; BEST7 cut on the sentence
+    encoders). FAILED: same label on 2 of 4 (passes on Qwen3-8B, Llama; tie on Granite +0.69 and Mistral -1.84,
+    where SDMt is the best of seven at M = 256).
+Q6 STORE - BESTc: BESTc ahead on all 7, by >= 4 on each sentence encoder.
+    FAILED in its first part: BESTc ahead on 6 of 7 (Llama level, -1.62 [-3.70, +0.40]); by 10.0-11.0 on the sentence
+    encoders (held).
+Q7 VSAR - SDMt: VSAR leads or level on >= 3 of 4 language models.
+    HELD (VSAR leads on Qwen3-8B +3.79, level on Granite and Llama, SDMt leads on Mistral -2.55).
+Q8 Fraction of the exact index: STORE 0.80-0.92 on every encoder; BESTc >= 0.88 on every encoder; cells reaching U_test
+    (of 23): STORE <= 1, VSAPcX <= 4, LAMc <= 8, BESTc >= 16.
+    HELD. STORE 0.801-0.899; BESTc 0.902-0.958; STORE 0, VSAPcX 4, LAMc 4, BESTc 20.
+Q9 Sensitivity: NLMSc / SDMt dev accuracies would change b* in no setting.
+    HELD (0 settings; checked at the budgets where their dev rows exist: 4-16 everywhere (B62 / B64), 32 where it is an
+    R2 budget; not checkable at 32 for settings whose b* is 64, nor at 32-64 for the 13 settings without R2 cells).
+Q10 Checks pass and the 16-bit dev reproduction is exact.
+    FAILED in part: the reproduction was exact for NLMSc (all 7) and SDMt on the language models, not for SDMt on the
+    sentence encoders (cut, compute notes 2-3). Checks: plain-loop scorer max 1.4e-16, bits 0 over / 0 not maximal,
+    float64 re-derivation agreement 1.0000 on 22 stores (all pass; results/b70_check.txt).
+
+Held: Q2, Q3, Q4, Q7, Q8, Q9. Failed (in part): Q1, Q5, Q6, Q10.

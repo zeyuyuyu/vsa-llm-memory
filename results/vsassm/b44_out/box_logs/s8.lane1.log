@@ -1,0 +1,44 @@
+B44 LoRA {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 522, "dev": 520}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 140.63it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 std n8000 r8 lr1e-04 sd123 step 500/4000 (ep 0.50) loss 0.0001 train_sub 1.0000 dev 0.9980 bridge 0.998 unparsed 0.000 (844s)
+  scratch qwen8 std n8000 r8 lr1e-04 sd123 step 1000/4000 (ep 1.00) loss 0.0000 train_sub 1.0000 dev 1.0000 bridge 1.000 unparsed 0.000 (1690s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 130.96it/s]
+  TEST scratch qwen8 std n8000 r8 lr1e-04 sd123: test 0.9980 (dev recheck 1.0000, logged 1.0000)
+B44 LoRA {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 522, "dev": 520}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 138.72it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 std n8000 r8 lr1e-04 sd456 step 500/4000 (ep 0.50) loss 0.0000 train_sub 1.0000 dev 1.0000 bridge 1.000 unparsed 0.000 (845s)
+  scratch qwen8 std n8000 r8 lr1e-04 sd456 step 1000/4000 (ep 1.00) loss 0.0000 train_sub 1.0000 dev 1.0000 bridge 1.000 unparsed 0.000 (1690s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 128.19it/s]
+  TEST scratch qwen8 std n8000 r8 lr1e-04 sd456: test 1.0000 (dev recheck 1.0000, logged 1.0000)
+B44 LoRA {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 141.71it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 ho n8000 r8 lr1e-04 sd42 step 500/4000 (ep 0.50) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 1.000 unparsed 0.000 (843s)
+  scratch qwen8 ho n8000 r8 lr1e-04 sd42 step 1000/4000 (ep 1.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 0.996 unparsed 0.000 (1688s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 129.60it/s]
+  TEST scratch qwen8 ho n8000 r8 lr1e-04 sd42: test 1.0000 (dev recheck 0.9980, logged 0.9980)
+B44 LoRA {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 140.25it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 ho n8000 r8 lr1e-04 sd123 step 500/4000 (ep 0.50) loss 0.0004 train_sub 0.9980 dev 0.9980 bridge 0.998 unparsed 0.000 (965s)
+  scratch qwen8 ho n8000 r8 lr1e-04 sd123 step 1000/4000 (ep 1.00) loss 0.0000 train_sub 1.0000 dev 1.0000 bridge 1.000 unparsed 0.000 (1810s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 129.41it/s]
+  TEST scratch qwen8 ho n8000 r8 lr1e-04 sd123: test 1.0000 (dev recheck 1.0000, logged 1.0000)
+B44 LoRA {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 141.43it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 ho n8000 r8 lr1e-04 sd456 step 500/4000 (ep 0.50) loss 0.0000 train_sub 0.9980 dev 0.9980 bridge 1.000 unparsed 0.000 (844s)
+  scratch qwen8 ho n8000 r8 lr1e-04 sd456 step 1000/4000 (ep 1.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 1.000 unparsed 0.000 (1689s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 130.52it/s]
+  TEST scratch qwen8 ho n8000 r8 lr1e-04 sd456: test 0.9980 (dev recheck 0.9980, logged 0.9980)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 130.15it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  TEST scratch qwen8 std n8000 r8 lr1e-04 sd42: test 1.0000 (dev recheck 1.0000, logged 1.0000)

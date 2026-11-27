@@ -1,0 +1,138 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 135.72it/s]
+  qwen8_ho_dev 0/500 1s
+feats qwen8_ho_dev (500, 130, 4096) 23s
+  qwen8_ho_test 0/500 1s
+feats qwen8_ho_test (500, 130, 4096) 23s
+  qwen8_ho_train 0/80000 1s
+  qwen8_ho_train 8000/80000 370s
+  qwen8_ho_train 16000/80000 742s
+  qwen8_ho_train 24000/80000 1114s
+  qwen8_ho_train 32000/80000 1487s
+  qwen8_ho_train 40000/80000 1860s
+  qwen8_ho_train 48000/80000 2233s
+  qwen8_ho_train 56000/80000 2609s
+  qwen8_ho_train 64000/80000 2986s
+  qwen8_ho_train 72000/80000 3363s
+feats qwen8_ho_train (80000, 130, 4096) 3749s
+/data1/path/to/work/b44/b44_name.py:67: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  return torch.from_numpy(np.ascontiguousarray(self.arr[st:sp])).float()
+  C exact seed 42 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (2s)
+  C exact seed 123 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (2s)
+  C exact seed 456 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (2s)
+/data1/path/to/work/b44/b44_name.py:67: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  return torch.from_numpy(np.ascontiguousarray(self.arr[st:sp])).float()
+  C exact seed 42 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (12s)
+  C exact seed 123 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (12s)
+  C exact seed 456 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (12s)
+/data1/path/to/work/b44/b44_name.py:67: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  return torch.from_numpy(np.ascontiguousarray(self.arr[st:sp])).float()
+  C exact seed 42 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (108s)
+  C exact seed 123 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (108s)
+  C exact seed 456 ep0 [perm/named] dev 1.0000 (train 1.0000) | test 1.0000 (train 1.0000) (106s)
+/data1/path/to/work/b44/b44_name.py:67: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  return torch.from_numpy(np.ascontiguousarray(self.arr[st:sp])).float()
+  C name seed 42 ep1 [perm/named] dev 0.8240 (train 0.8538, named 0.9632) | test 0.8320 (train 0.8538, named 0.9609, geom 0.004/0.853) (3s)
+  C name seed 42 ep2 [perm/named] dev 0.9460 (train 0.9437, named 0.9851) | test 0.9200 (train 0.9437, named 0.9854, geom 0.000/0.951) (5s)
+  C name seed 42 ep3 [perm/named] dev 0.9820 (train 0.9850, named 0.9925) | test 0.9640 (train 0.9850, named 0.9928, geom -0.001/0.988) (8s)
+  C name seed 42 ep4 [perm/named] dev 0.9900 (train 0.9950, named 0.9955) | test 0.9820 (train 0.9950, named 0.9960, geom 0.000/0.987) (10s)
+  C name seed 123 ep1 [perm/named] dev 0.8500 (train 0.8675, named 0.9478) | test 0.8500 (train 0.8675, named 0.9473, geom 0.005/0.837) (2s)
+  C name seed 123 ep2 [perm/named] dev 0.9460 (train 0.9550, named 0.9876) | test 0.9360 (train 0.9550, named 0.9879, geom 0.001/0.950) (5s)
+  C name seed 123 ep3 [perm/named] dev 0.9760 (train 0.9838, named 0.9925) | test 0.9600 (train 0.9838, named 0.9927, geom 0.001/0.975) (7s)
+  C name seed 123 ep4 [perm/named] dev 0.9860 (train 0.9962, named 0.9948) | test 0.9740 (train 0.9962, named 0.9947, geom 0.000/0.975) (9s)
+  C name seed 456 ep1 [perm/named] dev 0.8500 (train 0.8550, named 0.9419) | test 0.8540 (train 0.8550, named 0.9416, geom 0.010/0.863) (2s)
+  C name seed 456 ep2 [perm/named] dev 0.9440 (train 0.9437, named 0.9852) | test 0.9360 (train 0.9437, named 0.9850, geom 0.003/0.938) (5s)
+  C name seed 456 ep3 [perm/named] dev 0.9640 (train 0.9750, named 0.9924) | test 0.9540 (train 0.9750, named 0.9922, geom 0.003/0.975) (7s)
+  C name seed 456 ep4 [perm/named] dev 0.9740 (train 0.9775, named 0.9944) | test 0.9680 (train 0.9775, named 0.9951, geom 0.005/0.962) (9s)
+/data1/path/to/work/b44/b44_name.py:67: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  return torch.from_numpy(np.ascontiguousarray(self.arr[st:sp])).float()
+  C name seed 42 ep1 [perm/named] dev 1.0000 (train 0.9992, named 0.9998) | test 0.9980 (train 0.9992, named 0.9997, geom -0.001/1.000) (16s)
+  C name seed 42 ep2 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 0.9999, geom -0.001/1.000) (32s)
+  C name seed 42 ep3 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (48s)
+  C name seed 42 ep4 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (63s)
+  C name seed 123 ep1 [perm/named] dev 1.0000 (train 0.9995, named 0.9997) | test 1.0000 (train 0.9995, named 0.9997, geom -0.001/1.000) (16s)
+  C name seed 123 ep2 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (31s)
+  C name seed 123 ep3 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (47s)
+  C name seed 123 ep4 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (62s)
+  C name seed 456 ep1 [perm/named] dev 1.0000 (train 0.9995, named 0.9998) | test 0.9960 (train 0.9995, named 0.9997, geom 0.002/1.000) (16s)
+  C name seed 456 ep2 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 0.9980 (train 1.0000, named 0.9999, geom 0.002/1.000) (31s)
+  C name seed 456 ep3 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom 0.002/1.000) (47s)
+  C name seed 456 ep4 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom 0.002/1.000) (62s)
+  probe ho:800 last logistic 0 dev 0.5660 @100
+  probe ho:800 last logistic 0.0001 dev 0.5660 @100
+  probe ho:800 last logistic 0.001 dev 0.5660 @100
+  probe ho:800 last logistic 0.01 dev 0.5600 @100
+  probe ho:800 last logistic 0.1 dev 0.5660 @50
+  probe ho:800 last logistic 1 dev 0.5520 @150
+  probe ho:800 last mlp 0.0001 dev 0.5520 @50
+  probe ho:800 last mlp 0.01 dev 0.5540 @50
+  probe ho:800 last mlp 0.1 dev 0.5540 @50
+  probe ho:800 eq logistic 0 dev 0.5680 @2000
+  probe ho:800 eq logistic 0.0001 dev 0.5680 @1100
+  probe ho:800 eq logistic 0.001 dev 0.5620 @450
+  probe ho:800 eq logistic 0.01 dev 0.5700 @1150
+  probe ho:800 eq logistic 0.1 dev 0.5760 @1400
+  probe ho:800 eq logistic 1 dev 0.5780 @1400
+  probe ho:800 eq mlp 0.0001 dev 0.5300 @50
+  probe ho:800 eq mlp 0.01 dev 0.5300 @50
+  probe ho:800 eq mlp 0.1 dev 0.5300 @50
+  probe ho:800 eqx logistic 0 dev 0.5580 @50
+  probe ho:800 eqx logistic 0.0001 dev 0.5620 @1950
+  probe ho:800 eqx logistic 0.001 dev 0.5580 @200
+  probe ho:800 eqx logistic 0.01 dev 0.5640 @100
+  probe ho:800 eqx logistic 0.1 dev 0.5680 @1650
+  probe ho:800 eqx logistic 1 dev 0.5880 @100
+  probe ho:800 eqx mlp 0.0001 dev 0.5400 @550
+  probe ho:800 eqx mlp 0.01 dev 0.5380 @650
+  probe ho:800 eqx mlp 0.1 dev 0.5380 @250
+  TEST probe ho:800 seed 42 0.4720
+  TEST probe ho:800 seed 123 0.4720
+  TEST probe ho:800 seed 456 0.4720
+  probe ho:8000 last logistic 0 dev 0.5500 @100
+  probe ho:8000 last logistic 0.0001 dev 0.5500 @600
+  probe ho:8000 last logistic 0.001 dev 0.5540 @1900
+  probe ho:8000 last logistic 0.01 dev 0.5620 @350
+  probe ho:8000 last logistic 0.1 dev 0.5500 @300
+  probe ho:8000 last logistic 1 dev 0.5380 @350
+  probe ho:8000 last mlp 0.0001 dev 0.5780 @200
+  probe ho:8000 last mlp 0.01 dev 0.5620 @300
+  probe ho:8000 last mlp 0.1 dev 0.5760 @250
+  probe ho:8000 eq logistic 0 dev 0.5600 @50
+  probe ho:8000 eq logistic 0.0001 dev 0.5580 @150
+  probe ho:8000 eq logistic 0.001 dev 0.5640 @1600
+  probe ho:8000 eq logistic 0.01 dev 0.5780 @1200
+  probe ho:8000 eq logistic 0.1 dev 0.5840 @600
+  probe ho:8000 eq logistic 1 dev 0.5580 @600
+  probe ho:8000 eq mlp 0.0001 dev 0.5500 @1000
+  probe ho:8000 eq mlp 0.01 dev 0.5460 @50
+  probe ho:8000 eq mlp 0.1 dev 0.5600 @900
+  probe ho:8000 eqx logistic 0 dev 0.5480 @50
+  probe ho:8000 eqx logistic 0.0001 dev 0.5500 @50
+  probe ho:8000 eqx logistic 0.001 dev 0.5540 @1750
+  probe ho:8000 eqx logistic 0.01 dev 0.5700 @400
+  probe ho:8000 eqx logistic 0.1 dev 0.5700 @100
+  probe ho:8000 eqx logistic 1 dev 0.5680 @800
+  probe ho:8000 eqx mlp 0.0001 dev 0.5620 @100
+  probe ho:8000 eqx mlp 0.01 dev 0.5740 @550
+  probe ho:8000 eqx mlp 0.1 dev 0.5660 @400
+  TEST probe ho:8000 seed 42 0.4780
+  TEST probe ho:8000 seed 123 0.4780
+  TEST probe ho:8000 seed 456 0.4780
+/data1/path/to/work/b44/b44_name.py:67: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  return torch.from_numpy(np.ascontiguousarray(self.arr[st:sp])).float()
+  C name seed 42 ep1 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (158s)
+  C name seed 42 ep2 [perm/named] dev 1.0000 (train 0.9999, named 1.0000) | test 1.0000 (train 0.9999, named 1.0000, geom -0.001/1.000) (310s)
+  C name seed 42 ep3 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (462s)
+  C name seed 42 ep4 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (613s)
+/data1/path/to/work/b44/b44_name.py:67: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  return torch.from_numpy(np.ascontiguousarray(self.arr[st:sp])).float()
+  C name seed 123 ep1 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (153s)
+  C name seed 123 ep2 [perm/named] dev 0.9980 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (304s)
+  C name seed 123 ep3 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (456s)
+  C name seed 123 ep4 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom -0.001/1.000) (607s)
+/data1/path/to/work/b44/b44_name.py:67: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  return torch.from_numpy(np.ascontiguousarray(self.arr[st:sp])).float()
+  C name seed 456 ep1 [perm/named] dev 0.9940 (train 0.9970, named 0.9992) | test 0.9980 (train 0.9970, named 0.9993, geom 0.002/1.000) (151s)
+  C name seed 456 ep2 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom 0.002/1.000) (301s)
+  C name seed 456 ep3 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom 0.002/1.000) (450s)
+  C name seed 456 ep4 [perm/named] dev 1.0000 (train 1.0000, named 1.0000) | test 1.0000 (train 1.0000, named 1.0000, geom 0.002/1.000) (597s)

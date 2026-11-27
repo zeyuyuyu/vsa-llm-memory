@@ -1,0 +1,60 @@
+# NSR4 verdict: a state-estimation engine that repairs the reader's events (prereg/NSR4_prereg.md)
+
+Date: 2026-11-11. Held-out nsr3: 40 fresh logs (10 per scenario, seeds 600+), generated after the prereg commit on the
+A800 (Qwen3-32B rev 9216db57; template fallbacks 242/4689 = 5.2%, nsr1 5.0%, nsr2 5.2%; commit 39332c5), read by the
+shipped reader (Qwen3-1.7B + b16 student_s0, A800 GPU 5, 991 s; nsr/out/held/reader_nsr3_verify_v4.jsonl, commit
+0bf57cd). Engine: nsr/nsr4.py at the prereg commit, type table learned from dev + retired test + nsr1, run once:
+python3 nsr/nsr4_run.py --eval nsr3. Scored with the independent scorers (nsr1_score.py, nsr3_score.py: own replay,
+no shared code with nsr4.py). Paired analysis: nsr/nsr3_compare.py (post hoc).
+
+## Results (nsr3)
+| arm                 | impact (230) set-exact / F1 | temporal (460) | final facts (630) | final fixed / broken | history fixed / broken |
+| E0 product          | 0.926 / 0.966               | 0.896          | 614 (0.975)       |                      |                        |
+| E1 = R1 + R3        | 0.926 / 0.967               | 0.915          | 615               | 1 / 0                | 614 / 0                |
+| E2 = R1 + R2 + R3   | 0.922 / 0.965               | 0.928          | 614               | 1 / 1                | 673 / 81               |
+Per scenario, temporal (warehouse / biobank / home / ops): E0 .800/.883/.888/.956; E1 .888/.917/.888/.956;
+E2 .900/.917/.919/.956. Impact: E0 = E1 = .925/.800/.950/.950; E2 biobank .767.
+Rule firings: R1 (duplicate swap) 8, R3 (type violation) 6 in E1; E2 adds R2 13 (12 drops, 1 reassignment), R3 7.
+
+## Bars
+- S1 impact E1 - E0 >= +0.010: +0.000. FAIL.
+- S2 temporal E1 - E0 >= +0.015: +0.020 (paired CI +0.009 to +0.033; 9 questions wrong -> right, 0 right -> wrong). PASS.
+- S3 final facts broken <= 0.2 x repaired, with >= 3 repaired: 1 repaired, 0 broken. NOT MEASURABLE (fewer than 3
+  repairs, as the prereg defines it). No final fact was broken.
+- S4 fact-line states broken <= 0.1 x repaired: 0 broken / 614 repaired. PASS.
+E2 (reported): impact -0.004 (one biobank question broken), temporal +0.033 (CI +0.017 to +0.050; 15 wrong -> right, 0
+right -> wrong), history 673 / 81 (ratio 0.12, would fail S4's 0.1), final 1 / 1.
+
+## Why the end state does not move
+The reader is already right on 97.5% of final facts (614/630). R1's 8 duplicate swaps are all mid-log: a later event
+overwrites both items before the end, so they corrupt the history (419 fact-line states, post hoc R1-only run) but no
+final fact. R3 repairs one final fact (biobank-605-5: DS-14 read into box CB-014; truth: handed to the FedEx courier)
+and 195 more history states. The impact questions read only the final state, so they cannot see these repairs; the
+temporal questions read the whole history and gain.
+Post hoc R1-only arm (nsr/out/nsr3_nsr3_nsr4_R1posthoc.jsonl, not registered): temporal +0.015 (7 of E1's 9 fixes).
+
+## Every broken fact inspected
+E1: none. E2: biobank-604-4 S-26-01785 (truth CB-003). The reader turned "stuck it in CB-3" (line 190) into two moves,
+CB-001 then CB-003; R2 keeps the first place and drops the second, so the fact goes wrong. This is the failure the
+prereg named for R2 ("the first stands"); the 81 broken history states are the same mechanism on other lines.
+
+## Predictions (made before the held-out split existed)
+S1 about +0.02: WRONG (+0.000; development had final-fact repairs, 9 and 5, that nsr3 does not). S2 about +0.03:
++0.020, holds. S3 and S4 hold: S4 holds; S3 could not be measured (1 repair), with no fact broken. "E2 adds little over E1
+and may break facts": half right. E2 adds +0.013 temporal over E1 (CI +0.004 to +0.024) and breaks 1 final fact and 81
+history states.
+
+## Conclusion
+On fresh logs, symbolic consistency repair of the reader's events makes the temporal answers measurably better (+0.020,
+nine fixes, nothing broken) and never breaks a fact in the primary arm. It does not move end-state answers on this split,
+because the errors the rules can see are mid-log and later events overwrite them. Unlike NSR2's engine, which could flag
+risky answers but never change one, this engine changes answers, and only for the better. The rules cover a small part of
+the reader's errors: E1 leaves 39 of 460 temporal questions and 17 of 230 impact questions wrong, and most remaining misses
+are plausible wrong places that no consistency rule can see.
+
+## Literature check (conclusion -> literature)
+SUPPORTED in kind: global constraint inference over the decisions of local extractors (ILP with symmetry/transitivity
+constraints on temporal relations) improves over the local decisions (Do et al. 2012, as cited in Ning, Feng & Roth,
+EMNLP 2017, arXiv 1906.04943; read only in the abstract and citation context, gain size not verified). Here the
+constraints are domain rules about state (a swap read twice is one swap; type containment) applied to a neural reader's
+events, and the gain shows on history questions, not on end-state questions.

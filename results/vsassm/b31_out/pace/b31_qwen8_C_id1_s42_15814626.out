@@ -1,0 +1,36 @@
+---------------------------------------
+Begin Slurm Prolog: Nov-18-2026 06:55:56
+Job ID:    15814626
+User ID:   <user>
+Account:   gts-nimam6
+Job name:  b31_qwen8_C_id1_s42
+Partition: gpu-h100
+QOS:       inferno
+---------------------------------------
+B31-PACE start 2026-11-18T11:55:56Z host atl1-1-03-008-32-0.pace.gatech.edu job 15814626
+NVIDIA H100 80GB HBM3, 81559 MiB
+B31 LoRA {"n": {"train": 800, "dev": 500, "test": 500}, "max_len": {"train": 520, "dev": 520, "test": 519}, "gpu": "NVIDIA H100 80GB HBM3"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:00<00:01,  2.11it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  5.50it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  4.61it/s]
+  qwen8 C r8 lr1e-04 id1 sd42 ep1 loss 0.8610 train_sub 0.5220 dev 0.4960 id 0.9556 (108s)
+  qwen8 C r8 lr1e-04 id1 sd42 ep2 loss 0.7594 train_sub 0.5980 dev 0.5060 id 0.9814 (216s)
+  qwen8 C r8 lr1e-04 id1 sd42 ep3 loss 0.5995 train_sub 0.8840 dev 0.4780 id 0.9927 (325s)
+  qwen8 C r8 lr1e-04 id1 sd42 ep4 loss 0.3829 train_sub 0.9740 dev 0.4780 id 0.9959 (433s)
+  qwen8 C r8 lr1e-04 id1 sd42 ep5 loss 0.2080 train_sub 0.9780 dev 0.5260 id 0.9998 (541s)
+  qwen8 C r8 lr1e-04 id1 sd42 ep6 loss 0.0295 train_sub 1.0000 dev 0.5120 id 1.0000 (649s)
+  qwen8 C r8 lr1e-04 id1 sd42 ep7 loss 0.0006 train_sub 1.0000 dev 0.5260 id 1.0000 (757s)
+  qwen8 C r8 lr1e-04 id1 sd42 ep8 loss 0.0001 train_sub 1.0000 dev 0.5240 id 1.0000 (866s)
+  TEST qwen8 C seed 42 at dev-best epoch 5: 0.5040
+B31-PACE end 2026-11-18T12:11:57Z rc=0
+---------------------------------------
+Begin Slurm Epilog: Nov-18-2026 07:12:01
+Job ID:        15814626
+User ID:       <user>
+Account:       gts-nimam6
+Job name:      b31_qwen8_C_id1_s42
+Resources:     cpu=8,gres/gpu:h100=1,mem=120G,node=1
+Rsrc Used:     cput=02:08:48,vmem=0,walltime=00:16:06,mem=13614076K,energy_used=0
+Partition:     gpu-h100
+QOS:           inferno
+Nodes:         atl1-1-03-008-32-0
+---------------------------------------

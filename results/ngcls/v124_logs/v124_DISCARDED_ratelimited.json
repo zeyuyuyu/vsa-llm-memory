@@ -1,0 +1,3354 @@
+{
+ "prereg": "045aa94",
+ "config": {
+  "models": [
+   "qwen/qwen3.8-2.4t-a95b",
+   "deepseek/deepseek-v4-pro",
+   "z-ai/glm-5.3",
+   "moonshotai/kimi-k3",
+   "deepseek/deepseek-v4-flash"
+  ],
+  "anchor": "deepseek/deepseek-v4-flash",
+  "repeats": 2,
+  "n_eval": 300,
+  "budget": 1200,
+  "tokenizer": "Qwen/Qwen3-8B",
+  "workers": 8,
+  "cap_usd": 16.0,
+  "keyfile": "/path/to/work/.orkey",
+  "out": "/path/to/work/ngcls/v124_logs/v124.json"
+ },
+ "prompt_tokens": 197733,
+ "prompt_sha256": "49eaa80a685bd4e7dfb82ce3",
+ "canonical": {
+  "tokens": 197733,
+  "sha256": "49eaa80a685bd4e7dfb82ce3"
+ },
+ "pins": {
+  "qwen/qwen3.8-2.4t-a95b": {
+   "provider": "Novita",
+   "quantization": "unknown",
+   "n_endpoints": 7
+  },
+  "deepseek/deepseek-v4-pro": {
+   "provider": "DigitalOcean",
+   "quantization": "unknown",
+   "n_endpoints": 16
+  },
+  "z-ai/glm-5.3": {
+   "provider": "GMICloud",
+   "quantization": "fp8",
+   "n_endpoints": 28
+  },
+  "moonshotai/kimi-k3": {
+   "provider": "Morph",
+   "quantization": "fp4",
+   "n_endpoints": 18
+  },
+  "deepseek/deepseek-v4-flash": {
+   "provider": "DigitalOcean",
+   "quantization": "unknown",
+   "n_endpoints": 15
+  }
+ },
+ "store_readout": 0.974,
+ "band": 0.02,
+ "reference_v108": {
+  "anchor_single_pass": 0.4767,
+  "anchor_evidence_in_prompt": 0.99
+ },
+ "models": {
+  "qwen/qwen3.8-2.4t-a95b": [
+   {
+    "single_pass": {
+     "arm": "single_pass",
+     "n_scored": 196,
+     "n_error": 104,
+     "acc": 0.4846938775510204,
+     "cats": {
+      "em_hit": 95,
+      "form_miss": 39,
+      "hop2_miss": 61,
+      "hop1_miss": 1
+     },
+     "pinned": "Novita",
+     "providers": [
+      "Novita"
+     ],
+     "pin_honoured": true,
+     "n_reasoning": 196,
+     "usd": 0.5752520000000004,
+     "rows": [
+      {
+       "i": 0,
+       "cat": "em_hit",
+       "answer": "Ma\u0142gorzata Braunek",
+       "gold": "Ma\u0142gorzata Braunek",
+       "provider": "Novita",
+       "raw": "Ma\u0142gorzata Braunek",
+       "has_reasoning": true
+      },
+      {
+       "i": 1,
+       "cat": "em_hit",
+       "answer": "12 June 1516",
+       "gold": "12 June 1516",
+       "provider": "Novita",
+       "raw": "12 June 1516",
+       "has_reasoning": true
+      },
+      {
+       "i": 2,
+       "cat": "em_hit",
+       "answer": "Myanmar Motion Picture Academy Awards",
+       "gold": "Myanmar Motion Picture Academy Awards",
+       "provider": "Novita",
+       "raw": "Myanmar Motion Picture Academy Awards",
+       "has_reasoning": true
+      },
+      {
+       "i": 3,
+       "cat": "em_hit",
+       "answer": "Missoula, Montana",
+       "gold": "Missoula, Montana",
+       "provider": "Novita",
+       "raw": "Missoula, Montana",
+       "has_reasoning": true
+      },
+      {
+       "i": 4,
+       "cat": "em_hit",
+       "answer": "Gala\u021bi",
+       "gold": "Gala\u021bi",
+       "provider": "Novita",
+       "raw": "Gala\u021bi",
+       "has_reasoning": true
+      },
+      {
+       "i": 5,
+       "cat": "hop2_miss",
+       "answer": "Ann Arbor, Michigan",
+       "gold": "Brooklyn",
+       "provider": "Novita",
+       "raw": "Ann Arbor, Michigan",
+       "has_reasoning": true
+      },
+      {
+       "i": 6,
+       "cat": "em_hit",
+       "answer": "a stroke",
+       "gold": "stroke",
+       "provider": "Novita",
+       "raw": "a stroke",
+       "has_reasoning": true
+      },
+      {
+       "i": 7,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Nice",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 8,
+       "cat": "form_miss",
+       "answer": "March 7, 1983",
+       "gold": "1983",
+       "provider": "Novita",
+       "raw": "March 7, 1983",
+       "has_reasoning": true
+      },
+      {
+       "i": 9,
+       "cat": "hop2_miss",
+       "answer": "American",
+       "gold": "United States",
+       "provider": "Novita",
+       "raw": "American",
+       "has_reasoning": true
+      },
+      {
+       "i": 10,
+       "cat": "em_hit",
+       "answer": "Catherine Robbe-Grillet",
+       "gold": "Catherine Robbe-Grillet",
+       "provider": "Novita",
+       "raw": "Catherine Robbe-Grillet",
+       "has_reasoning": true
+      },
+      {
+       "i": 11,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Hilandar",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 12,
+       "cat": "form_miss",
+       "answer": "Extrapulmonary tuberculosis",
+       "gold": "tuberculosis",
+       "provider": "Novita",
+       "raw": "Extrapulmonary tuberculosis",
+       "has_reasoning": true
+      },
+      {
+       "i": 13,
+       "cat": "form_miss",
+       "answer": "Xi'an, Shaanxi, People's Republic of China",
+       "gold": "Xi'an",
+       "provider": "Novita",
+       "raw": "Xi'an, Shaanxi, People's Republic of China",
+       "has_reasoning": true
+      },
+      {
+       "i": 14,
+       "cat": "hop2_miss",
+       "answer": "Kingdom of W\u00fcrttemberg",
+       "gold": "German",
+       "provider": "Novita",
+       "raw": "Kingdom of W\u00fcrttemberg",
+       "has_reasoning": true
+      },
+      {
+       "i": 15,
+       "cat": "em_hit",
+       "answer": "Pavia",
+       "gold": "Pavia",
+       "provider": "Novita",
+       "raw": "Pavia",
+       "has_reasoning": true
+      },
+      {
+       "i": 16,
+       "cat": "em_hit",
+       "answer": "V\u00edctor B\u00f3",
+       "gold": "V\u00edctor B\u00f3",
+       "provider": "Novita",
+       "raw": "V\u00edctor B\u00f3",
+       "has_reasoning": true
+      },
+      {
+       "i": 17,
+       "cat": "form_miss",
+       "answer": "Les Cahiers du Cin\u00e9ma",
+       "gold": "Cahiers du cin\u00e9ma",
+       "provider": "Novita",
+       "raw": "Les Cahiers du Cin\u00e9ma",
+       "has_reasoning": true
+      },
+      {
+       "i": 18,
+       "cat": "form_miss",
+       "answer": "Grosvenor Square, London",
+       "gold": "London",
+       "provider": "Novita",
+       "raw": "Grosvenor Square, London",
+       "has_reasoning": true
+      },
+      {
+       "i": 19,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Pakistan",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 28,
+       "cat": "form_miss",
+       "answer": "Grammy Award",
+       "gold": "Grammy",
+       "provider": "Novita",
+       "raw": "Grammy Award",
+       "has_reasoning": true
+      },
+      {
+       "i": 29,
+       "cat": "em_hit",
+       "answer": "24 March 1927",
+       "gold": "24 March 1927",
+       "provider": "Novita",
+       "raw": "24 March 1927",
+       "has_reasoning": true
+      },
+      {
+       "i": 30,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Ostrogothic Kingdom",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 31,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Kurdish",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 32,
+       "cat": "em_hit",
+       "answer": "Liverpool",
+       "gold": "Liverpool",
+       "provider": "Novita",
+       "raw": "Liverpool",
+       "has_reasoning": true
+      },
+      {
+       "i": 33,
+       "cat": "em_hit",
+       "answer": "Madrid",
+       "gold": "Madrid",
+       "provider": "Novita",
+       "raw": "Madrid",
+       "has_reasoning": true
+      },
+      {
+       "i": 34,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "United Nations",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 35,
+       "cat": "em_hit",
+       "answer": "Paris",
+       "gold": "Paris",
+       "provider": "Novita",
+       "raw": "Paris",
+       "has_reasoning": true
+      },
+      {
+       "i": 36,
+       "cat": "em_hit",
+       "answer": "London",
+       "gold": "London",
+       "provider": "Novita",
+       "raw": "London",
+       "has_reasoning": true
+      },
+      {
+       "i": 37,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "K\u00f6nigsberg",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 38,
+       "cat": "form_miss",
+       "answer": "Homs, Syria",
+       "gold": "Homs",
+       "provider": "Novita",
+       "raw": "Homs, Syria",
+       "has_reasoning": true
+      },
+      {
+       "i": 39,
+       "cat": "em_hit",
+       "answer": "Alain Poir\u00e9",
+       "gold": "Alain Poir\u00e9",
+       "provider": "Novita",
+       "raw": "Alain Poir\u00e9",
+       "has_reasoning": true
+      },
+      {
+       "i": 40,
+       "cat": "form_miss",
+       "answer": "Naha, Okinawa, Japan",
+       "gold": "Naha, Okinawa",
+       "provider": "Novita",
+       "raw": "Naha, Okinawa, Japan",
+       "has_reasoning": true
+      },
+      {
+       "i": 41,
+       "cat": "em_hit",
+       "answer": "Byzantine",
+       "gold": "Byzantine",
+       "provider": "Novita",
+       "raw": "Byzantine",
+       "has_reasoning": true
+      },
+      {
+       "i": 42,
+       "cat": "em_hit",
+       "answer": "August 8, 1975",
+       "gold": "August 8, 1975",
+       "provider": "Novita",
+       "raw": "August 8, 1975",
+       "has_reasoning": true
+      },
+      {
+       "i": 43,
+       "cat": "hop2_miss",
+       "answer": "New York City Council",
+       "gold": "Chuck Schumer",
+       "provider": "Novita",
+       "raw": "New York City Council",
+       "has_reasoning": true
+      },
+      {
+       "i": 44,
+       "cat": "em_hit",
+       "answer": "Florence",
+       "gold": "Florence",
+       "provider": "Novita",
+       "raw": "Florence",
+       "has_reasoning": true
+      },
+      {
+       "i": 45,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Helsingfors",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 46,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Dutch",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 47,
+       "cat": "form_miss",
+       "answer": "Tisch School of the Arts of New York University",
+       "gold": "Tisch",
+       "provider": "Novita",
+       "raw": "Tisch School of the Arts of New York University",
+       "has_reasoning": true
+      },
+      {
+       "i": 60,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "French",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 61,
+       "cat": "em_hit",
+       "answer": "Winnipeg, Manitoba",
+       "gold": "Winnipeg, Manitoba",
+       "provider": "Novita",
+       "raw": "Winnipeg, Manitoba",
+       "has_reasoning": true
+      },
+      {
+       "i": 62,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Villafranca del Bierzo",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 63,
+       "cat": "em_hit",
+       "answer": "Jean Hersholt Humanitarian Award",
+       "gold": "Jean Hersholt Humanitarian Award",
+       "provider": "Novita",
+       "raw": "Jean Hersholt Humanitarian Award",
+       "has_reasoning": true
+      },
+      {
+       "i": 64,
+       "cat": "em_hit",
+       "answer": "Cahiers du cin\u00e9ma",
+       "gold": "Cahiers du cin\u00e9ma",
+       "provider": "Novita",
+       "raw": "Cahiers du cin\u00e9ma",
+       "has_reasoning": true
+      },
+      {
+       "i": 65,
+       "cat": "em_hit",
+       "answer": "China",
+       "gold": "China",
+       "provider": "Novita",
+       "raw": "China",
+       "has_reasoning": true
+      },
+      {
+       "i": 66,
+       "cat": "em_hit",
+       "answer": "Argentina",
+       "gold": "Argentina",
+       "provider": "Novita",
+       "raw": "Argentina",
+       "has_reasoning": true
+      },
+      {
+       "i": 67,
+       "cat": "em_hit",
+       "answer": "Jacques Cousteau",
+       "gold": "Jacques Cousteau",
+       "provider": "Novita",
+       "raw": "Jacques Cousteau",
+       "has_reasoning": true
+      },
+      {
+       "i": 68,
+       "cat": "em_hit",
+       "answer": "Thessaloniki",
+       "gold": "Thessaloniki",
+       "provider": "Novita",
+       "raw": "Thessaloniki",
+       "has_reasoning": true
+      },
+      {
+       "i": 69,
+       "cat": "form_miss",
+       "answer": "New York City",
+       "gold": "New York",
+       "provider": "Novita",
+       "raw": "New York City",
+       "has_reasoning": true
+      },
+      {
+       "i": 70,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "University of Paris",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 71,
+       "cat": "form_miss",
+       "answer": "Hackney, London",
+       "gold": "Hackney",
+       "provider": "Novita",
+       "raw": "Hackney, London",
+       "has_reasoning": true
+      },
+      {
+       "i": 72,
+       "cat": "form_miss",
+       "answer": "December 1969",
+       "gold": "1969",
+       "provider": "Novita",
+       "raw": "December 1969",
+       "has_reasoning": true
+      },
+      {
+       "i": 73,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Huahine",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 74,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Brighton",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 75,
+       "cat": "em_hit",
+       "answer": "10 May 1912",
+       "gold": "10 May 1912",
+       "provider": "Novita",
+       "raw": "10 May 1912",
+       "has_reasoning": true
+      },
+      {
+       "i": 76,
+       "cat": "em_hit",
+       "answer": "Kreuzlingen",
+       "gold": "Kreuzlingen",
+       "provider": "Novita",
+       "raw": "Kreuzlingen",
+       "has_reasoning": true
+      },
+      {
+       "i": 77,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Florence",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 78,
+       "cat": "form_miss",
+       "answer": "\u00c5rhus, Region Midtjylland, Denmark",
+       "gold": "\u00c5rhus",
+       "provider": "Novita",
+       "raw": "\u00c5rhus, Region Midtjylland, Denmark",
+       "has_reasoning": true
+      },
+      {
+       "i": 79,
+       "cat": "em_hit",
+       "answer": "Florence",
+       "gold": "Florence",
+       "provider": "Novita",
+       "raw": "Florence",
+       "has_reasoning": true
+      },
+      {
+       "i": 92,
+       "cat": "em_hit",
+       "answer": "Jerez de la Frontera",
+       "gold": "Jerez de la Frontera",
+       "provider": "Novita",
+       "raw": "Jerez de la Frontera",
+       "has_reasoning": true
+      },
+      {
+       "i": 93,
+       "cat": "form_miss",
+       "answer": "Queens, New York",
+       "gold": "Queens",
+       "provider": "Novita",
+       "raw": "Queens, New York",
+       "has_reasoning": true
+      },
+      {
+       "i": 94,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Nanjing",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 95,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Polish\u2013Lithuanian Commonwealth",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 96,
+       "cat": "hop2_miss",
+       "answer": "India",
+       "gold": "Maurya dynasty",
+       "provider": "Novita",
+       "raw": "India",
+       "has_reasoning": true
+      },
+      {
+       "i": 97,
+       "cat": "em_hit",
+       "answer": "New Brunswick, New Jersey",
+       "gold": "New Brunswick, New Jersey",
+       "provider": "Novita",
+       "raw": "New Brunswick, New Jersey",
+       "has_reasoning": true
+      },
+      {
+       "i": 98,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Bombay",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 99,
+       "cat": "em_hit",
+       "answer": "National Film School in \u0141\u00f3d\u017a",
+       "gold": "National Film School in \u0141\u00f3d\u017a",
+       "provider": "Novita",
+       "raw": "National Film School in \u0141\u00f3d\u017a",
+       "has_reasoning": true
+      },
+      {
+       "i": 100,
+       "cat": "form_miss",
+       "answer": "London, England",
+       "gold": "London",
+       "provider": "Novita",
+       "raw": "London, England",
+       "has_reasoning": true
+      },
+      {
+       "i": 101,
+       "cat": "em_hit",
+       "answer": "Swedish",
+       "gold": "Swedish",
+       "provider": "Novita",
+       "raw": "Swedish",
+       "has_reasoning": true
+      },
+      {
+       "i": 102,
+       "cat": "form_miss",
+       "answer": "Davao City",
+       "gold": "Davao",
+       "provider": "Novita",
+       "raw": "Davao City",
+       "has_reasoning": true
+      },
+      {
+       "i": 103,
+       "cat": "em_hit",
+       "answer": "15 November 1784",
+       "gold": "15 November 1784",
+       "provider": "Novita",
+       "raw": "15 November 1784",
+       "has_reasoning": true
+      },
+      {
+       "i": 104,
+       "cat": "em_hit",
+       "answer": "Hollywood",
+       "gold": "Hollywood",
+       "provider": "Novita",
+       "raw": "Hollywood",
+       "has_reasoning": true
+      },
+      {
+       "i": 105,
+       "cat": "form_miss",
+       "answer": "Harvard University",
+       "gold": "Harvard",
+       "provider": "Novita",
+       "raw": "Harvard University",
+       "has_reasoning": true
+      },
+      {
+       "i": 106,
+       "cat": "hop2_miss",
+       "answer": "France",
+       "gold": "French",
+       "provider": "Novita",
+       "raw": "France",
+       "has_reasoning": true
+      },
+      {
+       "i": 107,
+       "cat": "em_hit",
+       "answer": "Reykjav\u00edk",
+       "gold": "Reykjav\u00edk",
+       "provider": "Novita",
+       "raw": "Reykjav\u00edk",
+       "has_reasoning": true
+      },
+      {
+       "i": 108,
+       "cat": "em_hit",
+       "answer": "Mar\u00eda Barranco",
+       "gold": "Mar\u00eda Barranco",
+       "provider": "Novita",
+       "raw": "Mar\u00eda Barranco",
+       "has_reasoning": true
+      },
+      {
+       "i": 109,
+       "cat": "em_hit",
+       "answer": "Osterholz",
+       "gold": "Osterholz",
+       "provider": "Novita",
+       "raw": "Osterholz",
+       "has_reasoning": true
+      },
+      {
+       "i": 110,
+       "cat": "em_hit",
+       "answer": "October 27, 1893",
+       "gold": "October 27, 1893",
+       "provider": "Novita",
+       "raw": "October 27, 1893",
+       "has_reasoning": true
+      },
+      {
+       "i": 111,
+       "cat": "hop2_miss",
+       "answer": "Ottoman",
+       "gold": "Ottoman Empire",
+       "provider": "Novita",
+       "raw": "Ottoman",
+       "has_reasoning": true
+      },
+      {
+       "i": 126,
+       "cat": "em_hit",
+       "answer": "April 30, 1939",
+       "gold": "April 30, 1939",
+       "provider": "Novita",
+       "raw": "April 30, 1939",
+       "has_reasoning": true
+      },
+      {
+       "i": 127,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Cross Plains",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 128,
+       "cat": "em_hit",
+       "answer": "Sydney, Australia",
+       "gold": "Sydney, Australia",
+       "provider": "Novita",
+       "raw": "Sydney, Australia",
+       "has_reasoning": true
+      },
+      {
+       "i": 129,
+       "cat": "form_miss",
+       "answer": "Los Angeles, California",
+       "gold": "California",
+       "provider": "Novita",
+       "raw": "Los Angeles, California",
+       "has_reasoning": true
+      },
+      {
+       "i": 130,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Norwegian",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 131,
+       "cat": "form_miss",
+       "answer": "Weston Park, Staffordshire",
+       "gold": "Weston Park",
+       "provider": "Novita",
+       "raw": "Weston Park, Staffordshire",
+       "has_reasoning": true
+      },
+      {
+       "i": 132,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Qing dynasty",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 133,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Roman Empire",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 134,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Arizona",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 135,
+       "cat": "em_hit",
+       "answer": "Spanish",
+       "gold": "Spanish",
+       "provider": "Novita",
+       "raw": "Spanish",
+       "has_reasoning": true
+      },
+      {
+       "i": 136,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Chinese",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 137,
+       "cat": "form_miss",
+       "answer": "Ashgabat, Turkmenistan",
+       "gold": "Ashgabat",
+       "provider": "Novita",
+       "raw": "Ashgabat, Turkmenistan",
+       "has_reasoning": true
+      },
+      {
+       "i": 138,
+       "cat": "em_hit",
+       "answer": "Sangeet Natak Akademi Award",
+       "gold": "Sangeet Natak Akademi Award",
+       "provider": "Novita",
+       "raw": "Sangeet Natak Akademi Award",
+       "has_reasoning": true
+      },
+      {
+       "i": 139,
+       "cat": "form_miss",
+       "answer": "Rabat, Morocco",
+       "gold": "Rabat",
+       "provider": "Novita",
+       "raw": "Rabat, Morocco",
+       "has_reasoning": true
+      },
+      {
+       "i": 140,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Coventry",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 141,
+       "cat": "em_hit",
+       "answer": "China",
+       "gold": "China",
+       "provider": "Novita",
+       "raw": "China",
+       "has_reasoning": true
+      },
+      {
+       "i": 142,
+       "cat": "em_hit",
+       "answer": "Efva Attling",
+       "gold": "Efva Attling",
+       "provider": "Novita",
+       "raw": "Efva Attling",
+       "has_reasoning": true
+      },
+      {
+       "i": 143,
+       "cat": "em_hit",
+       "answer": "La Trinit\u00e9",
+       "gold": "La Trinit\u00e9",
+       "provider": "Novita",
+       "raw": "La Trinit\u00e9",
+       "has_reasoning": true
+      },
+      {
+       "i": 144,
+       "cat": "form_miss",
+       "answer": "V\u00e4ster\u00e5s, Sweden",
+       "gold": "V\u00e4ster\u00e5s",
+       "provider": "Novita",
+       "raw": "V\u00e4ster\u00e5s, Sweden",
+       "has_reasoning": true
+      },
+      {
+       "i": 145,
+       "cat": "em_hit",
+       "answer": "Leopoldo Torre Nilsson",
+       "gold": "Leopoldo Torre Nilsson",
+       "provider": "Novita",
+       "raw": "Leopoldo Torre Nilsson",
+       "has_reasoning": true
+      },
+      {
+       "i": 154,
+       "cat": "form_miss",
+       "answer": "Santa Monica, California",
+       "gold": "California",
+       "provider": "Novita",
+       "raw": "Santa Monica, California",
+       "has_reasoning": true
+      },
+      {
+       "i": 155,
+       "cat": "em_hit",
+       "answer": "laryngeal cancer",
+       "gold": "laryngeal cancer",
+       "provider": "Novita",
+       "raw": "laryngeal cancer",
+       "has_reasoning": true
+      },
+      {
+       "i": 156,
+       "cat": "hop2_miss",
+       "answer": "German",
+       "gold": "Germany",
+       "provider": "Novita",
+       "raw": "German",
+       "has_reasoning": true
+      },
+      {
+       "i": 157,
+       "cat": "em_hit",
+       "answer": "Christ's College, Cambridge",
+       "gold": "Christ's College, Cambridge",
+       "provider": "Novita",
+       "raw": "Christ's College, Cambridge",
+       "has_reasoning": true
+      },
+      {
+       "i": 158,
+       "cat": "em_hit",
+       "answer": "Weimar",
+       "gold": "Weimar",
+       "provider": "Novita",
+       "raw": "Weimar",
+       "has_reasoning": true
+      },
+      {
+       "i": 159,
+       "cat": "em_hit",
+       "answer": "23 February 1473",
+       "gold": "23 February 1473",
+       "provider": "Novita",
+       "raw": "23 February 1473",
+       "has_reasoning": true
+      },
+      {
+       "i": 160,
+       "cat": "em_hit",
+       "answer": "Billy Ray Cyrus",
+       "gold": "Billy Ray Cyrus",
+       "provider": "Novita",
+       "raw": "Billy Ray Cyrus",
+       "has_reasoning": true
+      },
+      {
+       "i": 161,
+       "cat": "form_miss",
+       "answer": "New York, New York",
+       "gold": "New York",
+       "provider": "Novita",
+       "raw": "New York, New York",
+       "has_reasoning": true
+      },
+      {
+       "i": 162,
+       "cat": "em_hit",
+       "answer": "Forl\u00ec",
+       "gold": "Forl\u00ec",
+       "provider": "Novita",
+       "raw": "Forl\u00ec",
+       "has_reasoning": true
+      },
+      {
+       "i": 163,
+       "cat": "form_miss",
+       "answer": "Hyderabad, India",
+       "gold": "Hyderabad",
+       "provider": "Novita",
+       "raw": "Hyderabad, India",
+       "has_reasoning": true
+      },
+      {
+       "i": 164,
+       "cat": "em_hit",
+       "answer": "Gloria Loring",
+       "gold": "Gloria Loring",
+       "provider": "Novita",
+       "raw": "Gloria Loring",
+       "has_reasoning": true
+      },
+      {
+       "i": 165,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Lancing College",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 166,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Edinburgh",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 167,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "St John's College",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 168,
+       "cat": "em_hit",
+       "answer": "Yash Johar",
+       "gold": "Yash Johar",
+       "provider": "Novita",
+       "raw": "Yash Johar",
+       "has_reasoning": true
+      },
+      {
+       "i": 169,
+       "cat": "em_hit",
+       "answer": "San Juan, Puerto Rico",
+       "gold": "San Juan, Puerto Rico",
+       "provider": "Novita",
+       "raw": "San Juan, Puerto Rico",
+       "has_reasoning": true
+      },
+      {
+       "i": 170,
+       "cat": "em_hit",
+       "answer": "\u00c9vreux",
+       "gold": "\u00c9vreux",
+       "provider": "Novita",
+       "raw": "\u00c9vreux",
+       "has_reasoning": true
+      },
+      {
+       "i": 171,
+       "cat": "em_hit",
+       "answer": "Reykjav\u00edk",
+       "gold": "Reykjav\u00edk",
+       "provider": "Novita",
+       "raw": "Reykjav\u00edk",
+       "has_reasoning": true
+      },
+      {
+       "i": 172,
+       "cat": "em_hit",
+       "answer": "Munich",
+       "gold": "Munich",
+       "provider": "Novita",
+       "raw": "Munich",
+       "has_reasoning": true
+      },
+      {
+       "i": 173,
+       "cat": "em_hit",
+       "answer": "Maureen O'Sullivan",
+       "gold": "Maureen O'Sullivan",
+       "provider": "Novita",
+       "raw": "Maureen O'Sullivan",
+       "has_reasoning": true
+      },
+      {
+       "i": 187,
+       "cat": "hop2_miss",
+       "answer": "Dutch",
+       "gold": "Germany",
+       "provider": "Novita",
+       "raw": "Dutch",
+       "has_reasoning": true
+      },
+      {
+       "i": 188,
+       "cat": "hop2_miss",
+       "answer": "Posen, Germany",
+       "gold": "Pozna\u0144",
+       "provider": "Novita",
+       "raw": "Posen, Germany",
+       "has_reasoning": true
+      },
+      {
+       "i": 189,
+       "cat": "em_hit",
+       "answer": "Alena Mihulov\u00e1",
+       "gold": "Alena Mihulov\u00e1",
+       "provider": "Novita",
+       "raw": "Alena Mihulov\u00e1",
+       "has_reasoning": true
+      },
+      {
+       "i": 190,
+       "cat": "form_miss",
+       "answer": "Ischia, Italy",
+       "gold": "Ischia",
+       "provider": "Novita",
+       "raw": "Ischia, Italy",
+       "has_reasoning": true
+      },
+      {
+       "i": 191,
+       "cat": "em_hit",
+       "answer": "Paris",
+       "gold": "Paris",
+       "provider": "Novita",
+       "raw": "Paris",
+       "has_reasoning": true
+      },
+      {
+       "i": 192,
+       "cat": "form_miss",
+       "answer": "Palos Verdes Estates, California, USA",
+       "gold": "Palos Verdes",
+       "provider": "Novita",
+       "raw": "Palos Verdes Estates, California, USA",
+       "has_reasoning": true
+      },
+      {
+       "i": 193,
+       "cat": "hop2_miss",
+       "answer": "Mexico",
+       "gold": "France",
+       "provider": "Novita",
+       "raw": "Mexico",
+       "has_reasoning": true
+      },
+      {
+       "i": 194,
+       "cat": "form_miss",
+       "answer": "Naha, Okinawa, Japan",
+       "gold": "Naha, Okinawa",
+       "provider": "Novita",
+       "raw": "Naha, Okinawa, Japan",
+       "has_reasoning": true
+      },
+      {
+       "i": 195,
+       "cat": "form_miss",
+       "answer": "Mallingapuram near Pannaipuram, Theni District, Tamil Nadu",
+       "gold": "Theni",
+       "provider": "Novita",
+       "raw": "Mallingapuram near Pannaipuram, Theni District, Tamil Nadu",
+       "has_reasoning": true
+      },
+      {
+       "i": 196,
+       "cat": "em_hit",
+       "answer": "Johannesburg, South Africa",
+       "gold": "Johannesburg, South Africa",
+       "provider": "Novita",
+       "raw": "Johannesburg, South Africa",
+       "has_reasoning": true
+      },
+      {
+       "i": 197,
+       "cat": "em_hit",
+       "answer": "Rimini",
+       "gold": "Rimini",
+       "provider": "Novita",
+       "raw": "Rimini",
+       "has_reasoning": true
+      },
+      {
+       "i": 198,
+       "cat": "em_hit",
+       "answer": "Prost\u011bjov",
+       "gold": "Prost\u011bjov",
+       "provider": "Novita",
+       "raw": "Prost\u011bjov",
+       "has_reasoning": true
+      },
+      {
+       "i": 199,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Cebu",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 200,
+       "cat": "form_miss",
+       "answer": "Fregene, near Rome",
+       "gold": "Rome",
+       "provider": "Novita",
+       "raw": "Fregene, near Rome",
+       "has_reasoning": true
+      },
+      {
+       "i": 201,
+       "cat": "em_hit",
+       "answer": "F\u00e5r\u00f6",
+       "gold": "F\u00e5r\u00f6",
+       "provider": "Novita",
+       "raw": "F\u00e5r\u00f6",
+       "has_reasoning": true
+      },
+      {
+       "i": 202,
+       "cat": "hop2_miss",
+       "answer": "Poland",
+       "gold": "Polish-Lithuanian Commonwealth",
+       "provider": "Novita",
+       "raw": "Poland",
+       "has_reasoning": true
+      },
+      {
+       "i": 203,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Lewes",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 204,
+       "cat": "em_hit",
+       "answer": "Bratislava",
+       "gold": "Bratislava",
+       "provider": "Novita",
+       "raw": "Bratislava",
+       "has_reasoning": true
+      },
+      {
+       "i": 205,
+       "cat": "em_hit",
+       "answer": "Westerland",
+       "gold": "Westerland",
+       "provider": "Novita",
+       "raw": "Westerland",
+       "has_reasoning": true
+      },
+      {
+       "i": 206,
+       "cat": "form_miss",
+       "answer": "London Borough of Islington, London",
+       "gold": "London",
+       "provider": "Novita",
+       "raw": "London Borough of Islington, London",
+       "has_reasoning": true
+      },
+      {
+       "i": 219,
+       "cat": "em_hit",
+       "answer": "K\u00f6nigstein im Taunus",
+       "gold": "K\u00f6nigstein im Taunus",
+       "provider": "Novita",
+       "raw": "K\u00f6nigstein im Taunus",
+       "has_reasoning": true
+      },
+      {
+       "i": 220,
+       "cat": "em_hit",
+       "answer": "10 November 1871",
+       "gold": "10 November 1871",
+       "provider": "Novita",
+       "raw": "10 November 1871",
+       "has_reasoning": true
+      },
+      {
+       "i": 221,
+       "cat": "em_hit",
+       "answer": "Torgau",
+       "gold": "Torgau",
+       "provider": "Novita",
+       "raw": "Torgau",
+       "has_reasoning": true
+      },
+      {
+       "i": 222,
+       "cat": "em_hit",
+       "answer": "Weston-super-Mare, Somerset",
+       "gold": "Weston-super-Mare, Somerset",
+       "provider": "Novita",
+       "raw": "Weston-super-Mare, Somerset",
+       "has_reasoning": true
+      },
+      {
+       "i": 223,
+       "cat": "em_hit",
+       "answer": "20 April 1434",
+       "gold": "20 April 1434",
+       "provider": "Novita",
+       "raw": "20 April 1434",
+       "has_reasoning": true
+      },
+      {
+       "i": 224,
+       "cat": "form_miss",
+       "answer": "Florida Atlantic University",
+       "gold": "Florida Atlantic",
+       "provider": "Novita",
+       "raw": "Florida Atlantic University",
+       "has_reasoning": true
+      },
+      {
+       "i": 225,
+       "cat": "em_hit",
+       "answer": "West Branch, Iowa",
+       "gold": "West Branch, Iowa",
+       "provider": "Novita",
+       "raw": "West Branch, Iowa",
+       "has_reasoning": true
+      },
+      {
+       "i": 226,
+       "cat": "em_hit",
+       "answer": "British",
+       "gold": "British",
+       "provider": "Novita",
+       "raw": "British",
+       "has_reasoning": true
+      },
+      {
+       "i": 227,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Saqqara",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 228,
+       "cat": "hop2_miss",
+       "answer": "Ireland",
+       "gold": "Irish",
+       "provider": "Novita",
+       "raw": "Ireland",
+       "has_reasoning": true
+      },
+      {
+       "i": 229,
+       "cat": "form_miss",
+       "answer": "Celle, Hanover",
+       "gold": "Celle",
+       "provider": "Novita",
+       "raw": "Celle, Hanover",
+       "has_reasoning": true
+      },
+      {
+       "i": 230,
+       "cat": "em_hit",
+       "answer": "Otto Carlmar",
+       "gold": "Otto Carlmar",
+       "provider": "Novita",
+       "raw": "Otto Carlmar",
+       "has_reasoning": true
+      },
+      {
+       "i": 231,
+       "cat": "form_miss",
+       "answer": "Columbia College Hollywood and University of California",
+       "gold": "University of California",
+       "provider": "Novita",
+       "raw": "Columbia College Hollywood and University of California",
+       "has_reasoning": true
+      },
+      {
+       "i": 232,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "UCLA",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 233,
+       "cat": "hop2_miss",
+       "answer": "French",
+       "gold": "France",
+       "provider": "Novita",
+       "raw": "French",
+       "has_reasoning": true
+      },
+      {
+       "i": 234,
+       "cat": "em_hit",
+       "answer": "Strasbourg",
+       "gold": "Strasbourg",
+       "provider": "Novita",
+       "raw": "Strasbourg",
+       "has_reasoning": true
+      },
+      {
+       "i": 235,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Paris",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 236,
+       "cat": "em_hit",
+       "answer": "Gisela Elsner",
+       "gold": "Gisela Elsner",
+       "provider": "Novita",
+       "raw": "Gisela Elsner",
+       "has_reasoning": true
+      },
+      {
+       "i": 237,
+       "cat": "em_hit",
+       "answer": "1323",
+       "gold": "1323",
+       "provider": "Novita",
+       "raw": "1323",
+       "has_reasoning": true
+      },
+      {
+       "i": 238,
+       "cat": "em_hit",
+       "answer": "16 August 1932",
+       "gold": "16 August 1932",
+       "provider": "Novita",
+       "raw": "16 August 1932",
+       "has_reasoning": true
+      },
+      {
+       "i": 253,
+       "cat": "hop2_miss",
+       "answer": "United States",
+       "gold": "American",
+       "provider": "Novita",
+       "raw": "United States",
+       "has_reasoning": true
+      },
+      {
+       "i": 254,
+       "cat": "em_hit",
+       "answer": "Saffron Walden",
+       "gold": "Saffron Walden",
+       "provider": "Novita",
+       "raw": "Saffron Walden",
+       "has_reasoning": true
+      },
+      {
+       "i": 255,
+       "cat": "hop2_miss",
+       "answer": "England",
+       "gold": "English",
+       "provider": "Novita",
+       "raw": "England",
+       "has_reasoning": true
+      },
+      {
+       "i": 256,
+       "cat": "hop2_miss",
+       "answer": "Oildale, California",
+       "gold": "Bakersfield",
+       "provider": "Novita",
+       "raw": "Oildale, California",
+       "has_reasoning": true
+      },
+      {
+       "i": 257,
+       "cat": "em_hit",
+       "answer": "Rohan Marley",
+       "gold": "Rohan Marley",
+       "provider": "Novita",
+       "raw": "Rohan Marley",
+       "has_reasoning": true
+      },
+      {
+       "i": 258,
+       "cat": "form_miss",
+       "answer": "Mallingapuram near Pannaipuram, Theni District, Tamil Nadu",
+       "gold": "Theni",
+       "provider": "Novita",
+       "raw": "Mallingapuram near Pannaipuram, Theni District, Tamil Nadu",
+       "has_reasoning": true
+      },
+      {
+       "i": 259,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Argentine",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 260,
+       "cat": "em_hit",
+       "answer": "Rome",
+       "gold": "Rome",
+       "provider": "Novita",
+       "raw": "Rome",
+       "has_reasoning": true
+      },
+      {
+       "i": 261,
+       "cat": "em_hit",
+       "answer": "Annelise Hovmand",
+       "gold": "Annelise Hovmand",
+       "provider": "Novita",
+       "raw": "Annelise Hovmand",
+       "has_reasoning": true
+      },
+      {
+       "i": 262,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Rudolstadt",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 263,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "German",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 264,
+       "cat": "form_miss",
+       "answer": "B\u00e9ziers, H\u00e9rault",
+       "gold": "B\u00e9ziers",
+       "provider": "Novita",
+       "raw": "B\u00e9ziers, H\u00e9rault",
+       "has_reasoning": true
+      },
+      {
+       "i": 265,
+       "cat": "em_hit",
+       "answer": "Dortmund University of Applied Sciences and Arts",
+       "gold": "Dortmund University of Applied Sciences and Arts",
+       "provider": "Novita",
+       "raw": "Dortmund University of Applied Sciences and Arts",
+       "has_reasoning": true
+      },
+      {
+       "i": 266,
+       "cat": "form_miss",
+       "answer": "Parkinson's disease",
+       "gold": "Parkinson",
+       "provider": "Novita",
+       "raw": "Parkinson's disease",
+       "has_reasoning": true
+      },
+      {
+       "i": 267,
+       "cat": "hop2_miss",
+       "answer": "England",
+       "gold": "English",
+       "provider": "Novita",
+       "raw": "England",
+       "has_reasoning": true
+      },
+      {
+       "i": 268,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Paris",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 269,
+       "cat": "em_hit",
+       "answer": "Fearless Nadia",
+       "gold": "Fearless Nadia",
+       "provider": "Novita",
+       "raw": "Fearless Nadia",
+       "has_reasoning": true
+      },
+      {
+       "i": 270,
+       "cat": "em_hit",
+       "answer": "Dresden",
+       "gold": "Dresden",
+       "provider": "Novita",
+       "raw": "Dresden",
+       "has_reasoning": true
+      },
+      {
+       "i": 271,
+       "cat": "em_hit",
+       "answer": "Berlin",
+       "gold": "Berlin",
+       "provider": "Novita",
+       "raw": "Berlin",
+       "has_reasoning": true
+      },
+      {
+       "i": 272,
+       "cat": "em_hit",
+       "answer": "British",
+       "gold": "British",
+       "provider": "Novita",
+       "raw": "British",
+       "has_reasoning": true
+      },
+      {
+       "i": 284,
+       "cat": "em_hit",
+       "answer": "Brno",
+       "gold": "Brno",
+       "provider": "Novita",
+       "raw": "Brno",
+       "has_reasoning": true
+      },
+      {
+       "i": 285,
+       "cat": "em_hit",
+       "answer": "Academy of Fine Arts Vienna",
+       "gold": "Academy of Fine Arts Vienna",
+       "provider": "Novita",
+       "raw": "Academy of Fine Arts Vienna",
+       "has_reasoning": true
+      },
+      {
+       "i": 286,
+       "cat": "hop2_miss",
+       "answer": "Austria",
+       "gold": "Austrian",
+       "provider": "Novita",
+       "raw": "Austria",
+       "has_reasoning": true
+      },
+      {
+       "i": 287,
+       "cat": "em_hit",
+       "answer": "Mills College",
+       "gold": "Mills College",
+       "provider": "Novita",
+       "raw": "Mills College",
+       "has_reasoning": true
+      },
+      {
+       "i": 288,
+       "cat": "hop2_miss",
+       "answer": "Australian",
+       "gold": "French",
+       "provider": "Novita",
+       "raw": "Australian",
+       "has_reasoning": true
+      },
+      {
+       "i": 289,
+       "cat": "em_hit",
+       "answer": "National Film School in \u0141\u00f3d\u017a",
+       "gold": "National Film School in \u0141\u00f3d\u017a",
+       "provider": "Novita",
+       "raw": "National Film School in \u0141\u00f3d\u017a",
+       "has_reasoning": true
+      },
+      {
+       "i": 290,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "S\u00e3o Paulo",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 291,
+       "cat": "em_hit",
+       "answer": "14 September 1964",
+       "gold": "14 September 1964",
+       "provider": "Novita",
+       "raw": "14 September 1964",
+       "has_reasoning": true
+      },
+      {
+       "i": 292,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Memphis",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 293,
+       "cat": "form_miss",
+       "answer": "Southampton, New York",
+       "gold": "Southampton",
+       "provider": "Novita",
+       "raw": "Southampton, New York",
+       "has_reasoning": true
+      },
+      {
+       "i": 294,
+       "cat": "em_hit",
+       "answer": "British",
+       "gold": "British",
+       "provider": "Novita",
+       "raw": "British",
+       "has_reasoning": true
+      },
+      {
+       "i": 295,
+       "cat": "form_miss",
+       "answer": "Florida Atlantic University",
+       "gold": "Florida Atlantic",
+       "provider": "Novita",
+       "raw": "Florida Atlantic University",
+       "has_reasoning": true
+      },
+      {
+       "i": 296,
+       "cat": "hop1_miss",
+       "answer": "",
+       "gold": "Total Nonstop Action Wrestling",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 297,
+       "cat": "em_hit",
+       "answer": "3 June 1801",
+       "gold": "3 June 1801",
+       "provider": "Novita",
+       "raw": "3 June 1801",
+       "has_reasoning": true
+      },
+      {
+       "i": 298,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Writtle",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 299,
+       "cat": "hop2_miss",
+       "answer": "",
+       "gold": "Hunsur",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      }
+     ]
+    },
+    "evidence_in_prompt": {
+     "arm": "evidence_in_prompt",
+     "n_scored": 165,
+     "n_error": 135,
+     "acc": 0.9515151515151515,
+     "cats": {},
+     "pinned": "Novita",
+     "providers": [
+      "Novita"
+     ],
+     "pin_honoured": true,
+     "n_reasoning": 165,
+     "usd": 0.18292000000000017,
+     "rows": [
+      {
+       "i": 1,
+       "cat": "em_hit",
+       "answer": "12 June 1516",
+       "gold": "12 June 1516",
+       "provider": "Novita",
+       "raw": "12 June 1516",
+       "has_reasoning": true
+      },
+      {
+       "i": 2,
+       "cat": "em_hit",
+       "answer": "Myanmar Motion Picture Academy Awards",
+       "gold": "Myanmar Motion Picture Academy Awards",
+       "provider": "Novita",
+       "raw": "Myanmar Motion Picture Academy Awards",
+       "has_reasoning": true
+      },
+      {
+       "i": 4,
+       "cat": "em_hit",
+       "answer": "Gala\u021bi",
+       "gold": "Gala\u021bi",
+       "provider": "Novita",
+       "raw": "Gala\u021bi",
+       "has_reasoning": true
+      },
+      {
+       "i": 5,
+       "cat": "em_hit",
+       "answer": "Brooklyn",
+       "gold": "Brooklyn",
+       "provider": "Novita",
+       "raw": "Brooklyn",
+       "has_reasoning": true
+      },
+      {
+       "i": 12,
+       "cat": "em_hit",
+       "answer": "tuberculosis",
+       "gold": "tuberculosis",
+       "provider": "Novita",
+       "raw": "tuberculosis",
+       "has_reasoning": true
+      },
+      {
+       "i": 13,
+       "cat": "em_hit",
+       "answer": "Xi'an",
+       "gold": "Xi'an",
+       "provider": "Novita",
+       "raw": "Xi'an",
+       "has_reasoning": true
+      },
+      {
+       "i": 14,
+       "cat": "em_hit",
+       "answer": "German",
+       "gold": "German",
+       "provider": "Novita",
+       "raw": "German",
+       "has_reasoning": true
+      },
+      {
+       "i": 15,
+       "cat": "em_hit",
+       "answer": "Pavia",
+       "gold": "Pavia",
+       "provider": "Novita",
+       "raw": "Pavia",
+       "has_reasoning": true
+      },
+      {
+       "i": 16,
+       "cat": "em_hit",
+       "answer": "V\u00edctor B\u00f3",
+       "gold": "V\u00edctor B\u00f3",
+       "provider": "Novita",
+       "raw": "V\u00edctor B\u00f3",
+       "has_reasoning": true
+      },
+      {
+       "i": 17,
+       "cat": "em_hit",
+       "answer": "Cahiers du cin\u00e9ma",
+       "gold": "Cahiers du cin\u00e9ma",
+       "provider": "Novita",
+       "raw": "Cahiers du cin\u00e9ma",
+       "has_reasoning": true
+      },
+      {
+       "i": 18,
+       "cat": "em_hit",
+       "answer": "London",
+       "gold": "London",
+       "provider": "Novita",
+       "raw": "London",
+       "has_reasoning": true
+      },
+      {
+       "i": 19,
+       "cat": "em_hit",
+       "answer": "Pakistan",
+       "gold": "Pakistan",
+       "provider": "Novita",
+       "raw": "Pakistan",
+       "has_reasoning": true
+      },
+      {
+       "i": 20,
+       "cat": "em_hit",
+       "answer": "Winnipeg, Manitoba",
+       "gold": "Winnipeg, Manitoba",
+       "provider": "Novita",
+       "raw": "Winnipeg, Manitoba",
+       "has_reasoning": true
+      },
+      {
+       "i": 21,
+       "cat": "em_hit",
+       "answer": "Fukuoka",
+       "gold": "Fukuoka",
+       "provider": "Novita",
+       "raw": "Fukuoka",
+       "has_reasoning": true
+      },
+      {
+       "i": 22,
+       "cat": "em_hit",
+       "answer": "Roma",
+       "gold": "Roma",
+       "provider": "Novita",
+       "raw": "Roma",
+       "has_reasoning": true
+      },
+      {
+       "i": 23,
+       "cat": "em_hit",
+       "answer": "Moscow, USSR",
+       "gold": "Moscow, USSR",
+       "provider": "Novita",
+       "raw": "Moscow, USSR",
+       "has_reasoning": true
+      },
+      {
+       "i": 24,
+       "cat": "em_hit",
+       "answer": "New York",
+       "gold": "New York",
+       "provider": "Novita",
+       "raw": "New York",
+       "has_reasoning": true
+      },
+      {
+       "i": 25,
+       "cat": "em_hit",
+       "answer": "Bohemia",
+       "gold": "Bohemia",
+       "provider": "Novita",
+       "raw": "Bohemia",
+       "has_reasoning": true
+      },
+      {
+       "i": 26,
+       "cat": "em_hit",
+       "answer": "Gura Humorului",
+       "gold": "Gura Humorului",
+       "provider": "Novita",
+       "raw": "Gura Humorului",
+       "has_reasoning": true
+      },
+      {
+       "i": 27,
+       "cat": "em_hit",
+       "answer": "Meran",
+       "gold": "Meran",
+       "provider": "Novita",
+       "raw": "Meran",
+       "has_reasoning": true
+      },
+      {
+       "i": 28,
+       "cat": "em_hit",
+       "answer": "Grammy",
+       "gold": "Grammy",
+       "provider": "Novita",
+       "raw": "Grammy",
+       "has_reasoning": true
+      },
+      {
+       "i": 29,
+       "cat": "em_hit",
+       "answer": "24 March 1927",
+       "gold": "24 March 1927",
+       "provider": "Novita",
+       "raw": "24 March 1927",
+       "has_reasoning": true
+      },
+      {
+       "i": 30,
+       "cat": "em_hit",
+       "answer": "Ostrogothic Kingdom",
+       "gold": "Ostrogothic Kingdom",
+       "provider": "Novita",
+       "raw": "Ostrogothic Kingdom",
+       "has_reasoning": true
+      },
+      {
+       "i": 31,
+       "cat": "em_hit",
+       "answer": "Kurdish",
+       "gold": "Kurdish",
+       "provider": "Novita",
+       "raw": "Kurdish",
+       "has_reasoning": true
+      },
+      {
+       "i": 48,
+       "cat": "miss",
+       "answer": "Indian",
+       "gold": "India",
+       "provider": "Novita",
+       "raw": "Indian",
+       "has_reasoning": true
+      },
+      {
+       "i": 49,
+       "cat": "em_hit",
+       "answer": "leukemia",
+       "gold": "leukemia",
+       "provider": "Novita",
+       "raw": "leukemia",
+       "has_reasoning": true
+      },
+      {
+       "i": 50,
+       "cat": "em_hit",
+       "answer": "Herstal",
+       "gold": "Herstal",
+       "provider": "Novita",
+       "raw": "Herstal",
+       "has_reasoning": true
+      },
+      {
+       "i": 51,
+       "cat": "em_hit",
+       "answer": "22 January 1794",
+       "gold": "22 January 1794",
+       "provider": "Novita",
+       "raw": "22 January 1794",
+       "has_reasoning": true
+      },
+      {
+       "i": 52,
+       "cat": "em_hit",
+       "answer": "3 August 979",
+       "gold": "3 August 979",
+       "provider": "Novita",
+       "raw": "3 August 979",
+       "has_reasoning": true
+      },
+      {
+       "i": 53,
+       "cat": "em_hit",
+       "answer": "Aldo Parisot",
+       "gold": "Aldo Parisot",
+       "provider": "Novita",
+       "raw": "Aldo Parisot",
+       "has_reasoning": true
+      },
+      {
+       "i": 54,
+       "cat": "em_hit",
+       "answer": "1886",
+       "gold": "1886",
+       "provider": "Novita",
+       "raw": "1886",
+       "has_reasoning": true
+      },
+      {
+       "i": 55,
+       "cat": "em_hit",
+       "answer": "Nevele",
+       "gold": "Nevele",
+       "provider": "Novita",
+       "raw": "Nevele",
+       "has_reasoning": true
+      },
+      {
+       "i": 56,
+       "cat": "em_hit",
+       "answer": "Manchester",
+       "gold": "Manchester",
+       "provider": "Novita",
+       "raw": "Manchester",
+       "has_reasoning": true
+      },
+      {
+       "i": 57,
+       "cat": "em_hit",
+       "answer": "Tantallon Castle",
+       "gold": "Tantallon Castle",
+       "provider": "Novita",
+       "raw": "Tantallon Castle",
+       "has_reasoning": true
+      },
+      {
+       "i": 58,
+       "cat": "em_hit",
+       "answer": "American",
+       "gold": "American",
+       "provider": "Novita",
+       "raw": "American",
+       "has_reasoning": true
+      },
+      {
+       "i": 59,
+       "cat": "em_hit",
+       "answer": "Sochi",
+       "gold": "Sochi",
+       "provider": "Novita",
+       "raw": "Sochi",
+       "has_reasoning": true
+      },
+      {
+       "i": 60,
+       "cat": "miss",
+       "answer": "",
+       "gold": "French",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 61,
+       "cat": "em_hit",
+       "answer": "Winnipeg, Manitoba",
+       "gold": "Winnipeg, Manitoba",
+       "provider": "Novita",
+       "raw": "Winnipeg, Manitoba",
+       "has_reasoning": true
+      },
+      {
+       "i": 62,
+       "cat": "em_hit",
+       "answer": "Villafranca del Bierzo",
+       "gold": "Villafranca del Bierzo",
+       "provider": "Novita",
+       "raw": "Villafranca del Bierzo",
+       "has_reasoning": true
+      },
+      {
+       "i": 63,
+       "cat": "em_hit",
+       "answer": "Jean Hersholt Humanitarian Award",
+       "gold": "Jean Hersholt Humanitarian Award",
+       "provider": "Novita",
+       "raw": "Jean Hersholt Humanitarian Award",
+       "has_reasoning": true
+      },
+      {
+       "i": 64,
+       "cat": "em_hit",
+       "answer": "Cahiers du cin\u00e9ma",
+       "gold": "Cahiers du cin\u00e9ma",
+       "provider": "Novita",
+       "raw": "Cahiers du cin\u00e9ma",
+       "has_reasoning": true
+      },
+      {
+       "i": 65,
+       "cat": "em_hit",
+       "answer": "China",
+       "gold": "China",
+       "provider": "Novita",
+       "raw": "China",
+       "has_reasoning": true
+      },
+      {
+       "i": 66,
+       "cat": "em_hit",
+       "answer": "Argentina",
+       "gold": "Argentina",
+       "provider": "Novita",
+       "raw": "Argentina",
+       "has_reasoning": true
+      },
+      {
+       "i": 67,
+       "cat": "em_hit",
+       "answer": "Jacques Cousteau",
+       "gold": "Jacques Cousteau",
+       "provider": "Novita",
+       "raw": "Jacques Cousteau",
+       "has_reasoning": true
+      },
+      {
+       "i": 84,
+       "cat": "em_hit",
+       "answer": "30 June 1963",
+       "gold": "30 June 1963",
+       "provider": "Novita",
+       "raw": "30 June 1963",
+       "has_reasoning": true
+      },
+      {
+       "i": 85,
+       "cat": "em_hit",
+       "answer": "Wales",
+       "gold": "Wales",
+       "provider": "Novita",
+       "raw": "Wales",
+       "has_reasoning": true
+      },
+      {
+       "i": 86,
+       "cat": "em_hit",
+       "answer": "Rosario",
+       "gold": "Rosario",
+       "provider": "Novita",
+       "raw": "Rosario",
+       "has_reasoning": true
+      },
+      {
+       "i": 87,
+       "cat": "em_hit",
+       "answer": "1701",
+       "gold": "1701",
+       "provider": "Novita",
+       "raw": "1701",
+       "has_reasoning": true
+      },
+      {
+       "i": 88,
+       "cat": "miss",
+       "answer": "",
+       "gold": "German",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 89,
+       "cat": "em_hit",
+       "answer": "Amman",
+       "gold": "Amman",
+       "provider": "Novita",
+       "raw": "Amman",
+       "has_reasoning": true
+      },
+      {
+       "i": 90,
+       "cat": "em_hit",
+       "answer": "Belfast",
+       "gold": "Belfast",
+       "provider": "Novita",
+       "raw": "Belfast",
+       "has_reasoning": true
+      },
+      {
+       "i": 91,
+       "cat": "em_hit",
+       "answer": "Tamil",
+       "gold": "Tamil",
+       "provider": "Novita",
+       "raw": "Tamil",
+       "has_reasoning": true
+      },
+      {
+       "i": 92,
+       "cat": "em_hit",
+       "answer": "Jerez de la Frontera",
+       "gold": "Jerez de la Frontera",
+       "provider": "Novita",
+       "raw": "Jerez de la Frontera",
+       "has_reasoning": true
+      },
+      {
+       "i": 93,
+       "cat": "em_hit",
+       "answer": "Queens",
+       "gold": "Queens",
+       "provider": "Novita",
+       "raw": "Queens",
+       "has_reasoning": true
+      },
+      {
+       "i": 94,
+       "cat": "em_hit",
+       "answer": "Nanjing",
+       "gold": "Nanjing",
+       "provider": "Novita",
+       "raw": "Nanjing",
+       "has_reasoning": true
+      },
+      {
+       "i": 95,
+       "cat": "em_hit",
+       "answer": "Polish\u2013Lithuanian Commonwealth",
+       "gold": "Polish\u2013Lithuanian Commonwealth",
+       "provider": "Novita",
+       "raw": "Polish\u2013Lithuanian Commonwealth",
+       "has_reasoning": true
+      },
+      {
+       "i": 96,
+       "cat": "em_hit",
+       "answer": "Maurya dynasty",
+       "gold": "Maurya dynasty",
+       "provider": "Novita",
+       "raw": "Maurya dynasty",
+       "has_reasoning": true
+      },
+      {
+       "i": 97,
+       "cat": "em_hit",
+       "answer": "New Brunswick, New Jersey",
+       "gold": "New Brunswick, New Jersey",
+       "provider": "Novita",
+       "raw": "New Brunswick, New Jersey",
+       "has_reasoning": true
+      },
+      {
+       "i": 98,
+       "cat": "em_hit",
+       "answer": "Bombay",
+       "gold": "Bombay",
+       "provider": "Novita",
+       "raw": "Bombay",
+       "has_reasoning": true
+      },
+      {
+       "i": 99,
+       "cat": "em_hit",
+       "answer": "National Film School in \u0141\u00f3d\u017a",
+       "gold": "National Film School in \u0141\u00f3d\u017a",
+       "provider": "Novita",
+       "raw": "National Film School in \u0141\u00f3d\u017a",
+       "has_reasoning": true
+      },
+      {
+       "i": 100,
+       "cat": "em_hit",
+       "answer": "London",
+       "gold": "London",
+       "provider": "Novita",
+       "raw": "London",
+       "has_reasoning": true
+      },
+      {
+       "i": 101,
+       "cat": "em_hit",
+       "answer": "Swedish",
+       "gold": "Swedish",
+       "provider": "Novita",
+       "raw": "Swedish",
+       "has_reasoning": true
+      },
+      {
+       "i": 102,
+       "cat": "em_hit",
+       "answer": "Davao",
+       "gold": "Davao",
+       "provider": "Novita",
+       "raw": "Davao",
+       "has_reasoning": true
+      },
+      {
+       "i": 103,
+       "cat": "em_hit",
+       "answer": "15 November 1784",
+       "gold": "15 November 1784",
+       "provider": "Novita",
+       "raw": "15 November 1784",
+       "has_reasoning": true
+      },
+      {
+       "i": 120,
+       "cat": "em_hit",
+       "answer": "British",
+       "gold": "British",
+       "provider": "Novita",
+       "raw": "British",
+       "has_reasoning": true
+      },
+      {
+       "i": 121,
+       "cat": "miss",
+       "answer": "",
+       "gold": "United Kingdom",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 122,
+       "cat": "em_hit",
+       "answer": "US",
+       "gold": "US",
+       "provider": "Novita",
+       "raw": "US",
+       "has_reasoning": true
+      },
+      {
+       "i": 123,
+       "cat": "em_hit",
+       "answer": "National Film Award for Best Music Direction",
+       "gold": "National Film Award for Best Music Direction",
+       "provider": "Novita",
+       "raw": "National Film Award for Best Music Direction",
+       "has_reasoning": true
+      },
+      {
+       "i": 124,
+       "cat": "em_hit",
+       "answer": "Queens",
+       "gold": "Queens",
+       "provider": "Novita",
+       "raw": "Queens",
+       "has_reasoning": true
+      },
+      {
+       "i": 125,
+       "cat": "em_hit",
+       "answer": "Bowdoin College",
+       "gold": "Bowdoin College",
+       "provider": "Novita",
+       "raw": "Bowdoin College",
+       "has_reasoning": true
+      },
+      {
+       "i": 126,
+       "cat": "em_hit",
+       "answer": "April 30, 1939",
+       "gold": "April 30, 1939",
+       "provider": "Novita",
+       "raw": "April 30, 1939",
+       "has_reasoning": true
+      },
+      {
+       "i": 127,
+       "cat": "em_hit",
+       "answer": "Cross Plains",
+       "gold": "Cross Plains",
+       "provider": "Novita",
+       "raw": "Cross Plains",
+       "has_reasoning": true
+      },
+      {
+       "i": 128,
+       "cat": "em_hit",
+       "answer": "Sydney, Australia",
+       "gold": "Sydney, Australia",
+       "provider": "Novita",
+       "raw": "Sydney, Australia",
+       "has_reasoning": true
+      },
+      {
+       "i": 129,
+       "cat": "em_hit",
+       "answer": "California",
+       "gold": "California",
+       "provider": "Novita",
+       "raw": "California",
+       "has_reasoning": true
+      },
+      {
+       "i": 130,
+       "cat": "em_hit",
+       "answer": "Norwegian",
+       "gold": "Norwegian",
+       "provider": "Novita",
+       "raw": "Norwegian",
+       "has_reasoning": true
+      },
+      {
+       "i": 131,
+       "cat": "em_hit",
+       "answer": "Weston Park",
+       "gold": "Weston Park",
+       "provider": "Novita",
+       "raw": "Weston Park",
+       "has_reasoning": true
+      },
+      {
+       "i": 132,
+       "cat": "em_hit",
+       "answer": "Qing dynasty",
+       "gold": "Qing dynasty",
+       "provider": "Novita",
+       "raw": "Qing dynasty",
+       "has_reasoning": true
+      },
+      {
+       "i": 133,
+       "cat": "em_hit",
+       "answer": "Roman Empire",
+       "gold": "Roman Empire",
+       "provider": "Novita",
+       "raw": "Roman Empire",
+       "has_reasoning": true
+      },
+      {
+       "i": 134,
+       "cat": "em_hit",
+       "answer": "Arizona",
+       "gold": "Arizona",
+       "provider": "Novita",
+       "raw": "Arizona",
+       "has_reasoning": true
+      },
+      {
+       "i": 135,
+       "cat": "em_hit",
+       "answer": "Spanish",
+       "gold": "Spanish",
+       "provider": "Novita",
+       "raw": "Spanish",
+       "has_reasoning": true
+      },
+      {
+       "i": 136,
+       "cat": "em_hit",
+       "answer": "Chinese",
+       "gold": "Chinese",
+       "provider": "Novita",
+       "raw": "Chinese",
+       "has_reasoning": true
+      },
+      {
+       "i": 137,
+       "cat": "em_hit",
+       "answer": "Ashgabat",
+       "gold": "Ashgabat",
+       "provider": "Novita",
+       "raw": "Ashgabat",
+       "has_reasoning": true
+      },
+      {
+       "i": 138,
+       "cat": "em_hit",
+       "answer": "Sangeet Natak Akademi Award",
+       "gold": "Sangeet Natak Akademi Award",
+       "provider": "Novita",
+       "raw": "Sangeet Natak Akademi Award",
+       "has_reasoning": true
+      },
+      {
+       "i": 139,
+       "cat": "em_hit",
+       "answer": "Rabat",
+       "gold": "Rabat",
+       "provider": "Novita",
+       "raw": "Rabat",
+       "has_reasoning": true
+      },
+      {
+       "i": 157,
+       "cat": "em_hit",
+       "answer": "Christ's College, Cambridge",
+       "gold": "Christ's College, Cambridge",
+       "provider": "Novita",
+       "raw": "Christ's College, Cambridge",
+       "has_reasoning": true
+      },
+      {
+       "i": 158,
+       "cat": "em_hit",
+       "answer": "Weimar",
+       "gold": "Weimar",
+       "provider": "Novita",
+       "raw": "Weimar",
+       "has_reasoning": true
+      },
+      {
+       "i": 159,
+       "cat": "em_hit",
+       "answer": "23 February 1473",
+       "gold": "23 February 1473",
+       "provider": "Novita",
+       "raw": "23 February 1473",
+       "has_reasoning": true
+      },
+      {
+       "i": 160,
+       "cat": "em_hit",
+       "answer": "Billy Ray Cyrus",
+       "gold": "Billy Ray Cyrus",
+       "provider": "Novita",
+       "raw": "Billy Ray Cyrus",
+       "has_reasoning": true
+      },
+      {
+       "i": 161,
+       "cat": "em_hit",
+       "answer": "New York",
+       "gold": "New York",
+       "provider": "Novita",
+       "raw": "New York",
+       "has_reasoning": true
+      },
+      {
+       "i": 162,
+       "cat": "em_hit",
+       "answer": "Forl\u00ec",
+       "gold": "Forl\u00ec",
+       "provider": "Novita",
+       "raw": "Forl\u00ec",
+       "has_reasoning": true
+      },
+      {
+       "i": 163,
+       "cat": "em_hit",
+       "answer": "Hyderabad",
+       "gold": "Hyderabad",
+       "provider": "Novita",
+       "raw": "Hyderabad",
+       "has_reasoning": true
+      },
+      {
+       "i": 164,
+       "cat": "em_hit",
+       "answer": "Gloria Loring",
+       "gold": "Gloria Loring",
+       "provider": "Novita",
+       "raw": "Gloria Loring",
+       "has_reasoning": true
+      },
+      {
+       "i": 165,
+       "cat": "em_hit",
+       "answer": "Lancing College",
+       "gold": "Lancing College",
+       "provider": "Novita",
+       "raw": "Lancing College",
+       "has_reasoning": true
+      },
+      {
+       "i": 166,
+       "cat": "em_hit",
+       "answer": "Edinburgh",
+       "gold": "Edinburgh",
+       "provider": "Novita",
+       "raw": "Edinburgh",
+       "has_reasoning": true
+      },
+      {
+       "i": 167,
+       "cat": "em_hit",
+       "answer": "St John's College",
+       "gold": "St John's College",
+       "provider": "Novita",
+       "raw": "St John's College",
+       "has_reasoning": true
+      },
+      {
+       "i": 168,
+       "cat": "em_hit",
+       "answer": "Yash Johar",
+       "gold": "Yash Johar",
+       "provider": "Novita",
+       "raw": "Yash Johar",
+       "has_reasoning": true
+      },
+      {
+       "i": 169,
+       "cat": "em_hit",
+       "answer": "San Juan, Puerto Rico",
+       "gold": "San Juan, Puerto Rico",
+       "provider": "Novita",
+       "raw": "San Juan, Puerto Rico",
+       "has_reasoning": true
+      },
+      {
+       "i": 170,
+       "cat": "em_hit",
+       "answer": "\u00c9vreux",
+       "gold": "\u00c9vreux",
+       "provider": "Novita",
+       "raw": "\u00c9vreux",
+       "has_reasoning": true
+      },
+      {
+       "i": 171,
+       "cat": "em_hit",
+       "answer": "Reykjav\u00edk",
+       "gold": "Reykjav\u00edk",
+       "provider": "Novita",
+       "raw": "Reykjav\u00edk",
+       "has_reasoning": true
+      },
+      {
+       "i": 172,
+       "cat": "em_hit",
+       "answer": "Munich",
+       "gold": "Munich",
+       "provider": "Novita",
+       "raw": "Munich",
+       "has_reasoning": true
+      },
+      {
+       "i": 173,
+       "cat": "em_hit",
+       "answer": "Maureen O'Sullivan",
+       "gold": "Maureen O'Sullivan",
+       "provider": "Novita",
+       "raw": "Maureen O'Sullivan",
+       "has_reasoning": true
+      },
+      {
+       "i": 174,
+       "cat": "em_hit",
+       "answer": "shot",
+       "gold": "shot",
+       "provider": "Novita",
+       "raw": "shot",
+       "has_reasoning": true
+      },
+      {
+       "i": 175,
+       "cat": "em_hit",
+       "answer": "Abilene",
+       "gold": "Abilene",
+       "provider": "Novita",
+       "raw": "Abilene",
+       "has_reasoning": true
+      },
+      {
+       "i": 176,
+       "cat": "em_hit",
+       "answer": "Tehran",
+       "gold": "Tehran",
+       "provider": "Novita",
+       "raw": "Tehran",
+       "has_reasoning": true
+      },
+      {
+       "i": 193,
+       "cat": "em_hit",
+       "answer": "France",
+       "gold": "France",
+       "provider": "Novita",
+       "raw": "France",
+       "has_reasoning": true
+      },
+      {
+       "i": 194,
+       "cat": "em_hit",
+       "answer": "Naha, Okinawa",
+       "gold": "Naha, Okinawa",
+       "provider": "Novita",
+       "raw": "Naha, Okinawa",
+       "has_reasoning": true
+      },
+      {
+       "i": 195,
+       "cat": "em_hit",
+       "answer": "Theni",
+       "gold": "Theni",
+       "provider": "Novita",
+       "raw": "Theni",
+       "has_reasoning": true
+      },
+      {
+       "i": 196,
+       "cat": "em_hit",
+       "answer": "Johannesburg, South Africa",
+       "gold": "Johannesburg, South Africa",
+       "provider": "Novita",
+       "raw": "Johannesburg, South Africa",
+       "has_reasoning": true
+      },
+      {
+       "i": 197,
+       "cat": "em_hit",
+       "answer": "Rimini",
+       "gold": "Rimini",
+       "provider": "Novita",
+       "raw": "Rimini",
+       "has_reasoning": true
+      },
+      {
+       "i": 198,
+       "cat": "em_hit",
+       "answer": "Prost\u011bjov",
+       "gold": "Prost\u011bjov",
+       "provider": "Novita",
+       "raw": "Prost\u011bjov",
+       "has_reasoning": true
+      },
+      {
+       "i": 199,
+       "cat": "em_hit",
+       "answer": "Cebu",
+       "gold": "Cebu",
+       "provider": "Novita",
+       "raw": "Cebu",
+       "has_reasoning": true
+      },
+      {
+       "i": 200,
+       "cat": "em_hit",
+       "answer": "Rome",
+       "gold": "Rome",
+       "provider": "Novita",
+       "raw": "Rome",
+       "has_reasoning": true
+      },
+      {
+       "i": 201,
+       "cat": "em_hit",
+       "answer": "F\u00e5r\u00f6",
+       "gold": "F\u00e5r\u00f6",
+       "provider": "Novita",
+       "raw": "F\u00e5r\u00f6",
+       "has_reasoning": true
+      },
+      {
+       "i": 202,
+       "cat": "em_hit",
+       "answer": "Polish-Lithuanian Commonwealth",
+       "gold": "Polish-Lithuanian Commonwealth",
+       "provider": "Novita",
+       "raw": "Polish-Lithuanian Commonwealth",
+       "has_reasoning": true
+      },
+      {
+       "i": 203,
+       "cat": "em_hit",
+       "answer": "Lewes",
+       "gold": "Lewes",
+       "provider": "Novita",
+       "raw": "Lewes",
+       "has_reasoning": true
+      },
+      {
+       "i": 204,
+       "cat": "em_hit",
+       "answer": "Bratislava",
+       "gold": "Bratislava",
+       "provider": "Novita",
+       "raw": "Bratislava",
+       "has_reasoning": true
+      },
+      {
+       "i": 205,
+       "cat": "em_hit",
+       "answer": "Westerland",
+       "gold": "Westerland",
+       "provider": "Novita",
+       "raw": "Westerland",
+       "has_reasoning": true
+      },
+      {
+       "i": 206,
+       "cat": "em_hit",
+       "answer": "London",
+       "gold": "London",
+       "provider": "Novita",
+       "raw": "London",
+       "has_reasoning": true
+      },
+      {
+       "i": 207,
+       "cat": "em_hit",
+       "answer": "Ridley Scott",
+       "gold": "Ridley Scott",
+       "provider": "Novita",
+       "raw": "Ridley Scott",
+       "has_reasoning": true
+      },
+      {
+       "i": 208,
+       "cat": "miss",
+       "answer": "",
+       "gold": "United States",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 209,
+       "cat": "em_hit",
+       "answer": "India",
+       "gold": "India",
+       "provider": "Novita",
+       "raw": "India",
+       "has_reasoning": true
+      },
+      {
+       "i": 210,
+       "cat": "em_hit",
+       "answer": "France",
+       "gold": "France",
+       "provider": "Novita",
+       "raw": "France",
+       "has_reasoning": true
+      },
+      {
+       "i": 211,
+       "cat": "em_hit",
+       "answer": "Forest Lawn Memorial Park",
+       "gold": "Forest Lawn Memorial Park",
+       "provider": "Novita",
+       "raw": "Forest Lawn Memorial Park",
+       "has_reasoning": true
+      },
+      {
+       "i": 213,
+       "cat": "miss",
+       "answer": "",
+       "gold": "France",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 227,
+       "cat": "em_hit",
+       "answer": "Saqqara",
+       "gold": "Saqqara",
+       "provider": "Novita",
+       "raw": "Saqqara",
+       "has_reasoning": true
+      },
+      {
+       "i": 228,
+       "cat": "miss",
+       "answer": "",
+       "gold": "Irish",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 229,
+       "cat": "em_hit",
+       "answer": "Celle",
+       "gold": "Celle",
+       "provider": "Novita",
+       "raw": "Celle",
+       "has_reasoning": true
+      },
+      {
+       "i": 230,
+       "cat": "em_hit",
+       "answer": "Otto Carlmar",
+       "gold": "Otto Carlmar",
+       "provider": "Novita",
+       "raw": "Otto Carlmar",
+       "has_reasoning": true
+      },
+      {
+       "i": 231,
+       "cat": "em_hit",
+       "answer": "University of California",
+       "gold": "University of California",
+       "provider": "Novita",
+       "raw": "University of California",
+       "has_reasoning": true
+      },
+      {
+       "i": 232,
+       "cat": "em_hit",
+       "answer": "UCLA",
+       "gold": "UCLA",
+       "provider": "Novita",
+       "raw": "UCLA",
+       "has_reasoning": true
+      },
+      {
+       "i": 233,
+       "cat": "miss",
+       "answer": "",
+       "gold": "France",
+       "provider": "Novita",
+       "raw": "",
+       "has_reasoning": true
+      },
+      {
+       "i": 234,
+       "cat": "em_hit",
+       "answer": "Strasbourg",
+       "gold": "Strasbourg",
+       "provider": "Novita",
+       "raw": "Strasbourg",
+       "has_reasoning": true
+      },
+      {
+       "i": 235,
+       "cat": "em_hit",
+       "answer": "Paris",
+       "gold": "Paris",
+       "provider": "Novita",
+       "raw": "Paris",
+       "has_reasoning": true
+      },
+      {
+       "i": 236,
+       "cat": "em_hit",
+       "answer": "Gisela Elsner",
+       "gold": "Gisela Elsner",
+       "provider": "Novita",
+       "raw": "Gisela Elsner",
+       "has_reasoning": true
+      },
+      {
+       "i": 237,
+       "cat": "em_hit",
+       "answer": "1323",
+       "gold": "1323",
+       "provider": "Novita",
+       "raw": "1323",
+       "has_reasoning": true
+      },
+      {
+       "i": 238,
+       "cat": "em_hit",
+       "answer": "16 August 1932",
+       "gold": "16 August 1932",
+       "provider": "Novita",
+       "raw": "16 August 1932",
+       "has_reasoning": true
+      },
+      {
+       "i": 239,
+       "cat": "em_hit",
+       "answer": "Albuquerque, New Mexico",
+       "gold": "Albuquerque, New Mexico",
+       "provider": "Novita",
+       "raw": "Albuquerque, New Mexico",
+       "has_reasoning": true
+      },
+      {
+       "i": 240,
+       "cat": "em_hit",
+       "answer": "Wawel Cathedral",
+       "gold": "Wawel Cathedral",
+       "provider": "Novita",
+       "raw": "Wawel Cathedral",
+       "has_reasoning": true
+      },
+      {
+       "i": 241,
+       "cat": "em_hit",
+       "answer": "Swiss",
+       "gold": "Swiss",
+       "provider": "Novita",
+       "raw": "Swiss",
+       "has_reasoning": true
+      },
+      {
+       "i": 242,
+       "cat": "em_hit",
+       "answer": "Warsaw",
+       "gold": "Warsaw",
+       "provider": "Novita",
+       "raw": "Warsaw",
+       "has_reasoning": true
+      },
+      {
+       "i": 243,
+       "cat": "em_hit",
+       "answer": "Konya",
+       "gold": "Konya",
+       "provider": "Novita",
+       "raw": "Konya",
+       "has_reasoning": true
+      },
+      {
+       "i": 244,
+       "cat": "em_hit",
+       "answer": "San Ferdinando di Puglia",
+       "gold": "San Ferdinando di Puglia",
+       "provider": "Novita",
+       "raw": "San Ferdinando di Puglia",
+       "has_reasoning": true
+      },
+      {
+       "i": 245,
+       "cat": "em_hit",
+       "answer": "Pyay",
+       "gold": "Pyay",
+       "provider": "Novita",
+       "raw": "Pyay",
+       "has_reasoning": true
+      },
+      {
+       "i": 246,
+       "cat": "em_hit",
+       "answer": "Westwood Village Memorial Park Cemetery",
+       "gold": "Westwood Village Memorial Park Cemetery",
+       "provider": "Novita",
+       "raw": "Westwood Village Memorial Park Cemetery",
+       "has_reasoning": true
+      },
+      {
+       "i": 263,
+       "cat": "em_hit",
+       "answer": "German",
+       "gold": "German",
+       "provider": "Novita",
+       "raw": "German",
+       "has_reasoning": true
+      },
+      {
+       "i": 264,
+       "cat": "em_hit",
+       "answer": "B\u00e9ziers",
+       "gold": "B\u00e9ziers",
+       "provider": "Novita",
+       "raw": "B\u00e9ziers",
+       "has_reasoning": true
+      },
+      {
+       "i": 265,
+       "cat": "em_hit",
+       "answer": "Dortmund University of Applied Sciences and Arts",
+       "gold": "Dortmund University of Applied Sciences and Arts",
+       "provider": "Novita",
+       "raw": "Dortmund University of Applied Sciences and Arts",
+       "has_reasoning": true
+      },
+      {
+       "i": 266,
+       "cat": "em_hit",
+       "answer": "Parkinson",
+       "gold": "Parkinson",
+       "provider": "Novita",
+       "raw": "Parkinson",
+       "has_reasoning": true
+      },
+      {
+       "i": 267,
+       "cat": "em_hit",
+       "answer": "English",
+       "gold": "English",
+       "provider": "Novita",
+       "raw": "English",
+       "has_reasoning": true
+      },
+      {
+       "i": 268,
+       "cat": "em_hit",
+       "answer": "Paris",
+       "gold": "Paris",
+       "provider": "Novita",
+       "raw": "Paris",
+       "has_reasoning": true
+      },
+      {
+       "i": 269,
+       "cat": "em_hit",
+       "answer": "Fearless Nadia",
+       "gold": "Fearless Nadia",
+       "provider": "Novita",
+       "raw": "Fearless Nadia",
+       "has_reasoning": true
+      },
+      {
+       "i": 270,
+       "cat": "em_hit",
+       "answer": "Dresden",
+       "gold": "Dresden",
+       "provider": "Novita",
+       "raw": "Dresden",
+       "has_reasoning": true
+      },
+      {
+       "i": 271,
+       "cat": "em_hit",
+       "answer": "Berlin",
+       "gold": "Berlin",
+       "provider": "Novita",
+       "raw": "Berlin",
+       "has_reasoning": true
+      },
+      {
+       "i": 272,
+       "cat": "em_hit",
+       "answer": "British",
+       "gold": "British",
+       "provider": "Novita",
+       "raw": "British",
+       "has_reasoning": true
+      },
+      {
+       "i": 273,
+       "cat": "em_hit",
+       "answer": "Commercy",
+       "gold": "Commercy",
+       "provider": "Novita",
+       "raw": "Commercy",
+       "has_reasoning": true
+      },
+      {
+       "i": 274,
+       "cat": "em_hit",
+       "answer": "17 November 1845",
+       "gold": "17 November 1845",
+       "provider": "Novita",
+       "raw": "17 November 1845",
+       "has_reasoning": true
+      },
+      {
+       "i": 275,
+       "cat": "em_hit",
+       "answer": "P\u0159erov",
+       "gold": "P\u0159erov",
+       "provider": "Novita",
+       "raw": "P\u0159erov",
+       "has_reasoning": true
+      },
+      {
+       "i": 276,
+       "cat": "em_hit",
+       "answer": "American",
+       "gold": "American",
+       "provider": "Novita",
+       "raw": "American",
+       "has_reasoning": true
+      },
+      {
+       "i": 277,
+       "cat": "em_hit",
+       "answer": "Neapolitan",
+       "gold": "Neapolitan",
+       "provider": "Novita",
+       "raw": "Neapolitan",
+       "has_reasoning": true
+      },
+      {
+       "i": 278,
+       "cat": "em_hit",
+       "answer": "\u00d6nd\u00f6rkhaan",
+       "gold": "\u00d6nd\u00f6rkhaan",
+       "provider": "Novita",
+       "raw": "\u00d6nd\u00f6rkhaan",
+       "has_reasoning": true
+      },
+      {
+       "i": 279,
+       "cat": "em_hit",
+       "answer": "New York",
+       "gold": "New York",
+       "provider": "Novita",
+       "raw": "New York",
+       "has_reasoning": true
+      },
+      {
+       "i": 280,
+       "cat": "em_hit",
+       "answer": "American",
+       "gold": "American",
+       "provider": "Novita",
+       "raw": "American",
+       "has_reasoning": true
+      },
+      {
+       "i": 281,
+       "cat": "em_hit",
+       "answer": "Virginia Bourbon del Monte",
+       "gold": "Virginia Bourbon del Monte",
+       "provider": "Novita",
+       "raw": "Virginia Bourbon del Monte",
+       "has_reasoning": true
+      },
+      {
+       "i": 282,
+       "cat": "em_hit",
+       "answer": "Jean Harlow",
+       "gold": "Jean Harlow",
+       "provider": "Novita",
+       "raw": "Jean Harlow",
+       "has_reasoning": true
+      },
+      {
+       "i": 299,
+       "cat": "em_hit",
+       "answer": "Hunsur",
+       "gold": "Hunsur",
+       "provider": "Novita",
+       "raw": "Hunsur",
+       "has_reasoning": true
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "usd_total": 0.7581720000000001,
+ "usd_account": 1.3955109600000029
+}

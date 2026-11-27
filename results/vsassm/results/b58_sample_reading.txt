@@ -1,0 +1,26 @@
+# B58 sample reading by the AI-assisted process (not independent): failed probed keys of the protected store one grid step below its test N*, with the cause read from the decoded bits and the similarities.
+# Note: P-LDPC at k8 and P-BCH at k16 were not run in the cut test (compute note 5); their 'N*' below comes from the
+# checkpoint of the stopped run (large stores only) and is not a pooled N* - shown for reading only, not in the verdict.
+# Damage conditions were not run (compute note 4), hence 'no uncensored budget' for lines-nat-k8.
+# Reading: every failed key sits in a shard whose decoded bits still carry 2-14% errors (the code did not decode there:
+# belief propagation not converged, or BCH words beyond 2t); the true value's similarity (about 0.04) is level with or
+# below the best wrong value - the store is then read through residual errors plus cross-talk, as the uncoded store is.
+# Where the true value is still best at j = 0, the key fails at its stopping step (a wrong later value or a missed LAST).
+== P-LDPC k8 B=215 (N* 256): share 0.9947, 3 stores with failures
+  131072/niah_multikey_2/44358 key 'lamentable-regionalism' (design b=128 0.8333333333333334): want ['5583722'] got ['6057305'] | decoded-bit errors in its shard 1033 of 8162 | j=0 similarity true value 0.039, best other 0.048 (another value wins)
+  131072/niah_multikey_2/44358 key 'lacking-champion' (design b=128 0.8333333333333334): want ['3979476'] got ['1400469'] | decoded-bit errors in its shard 978 of 8162 | j=0 similarity true value 0.044, best other 0.046 (another value wins)
+  131072/niah_multikey_2/92134 key 'cloudy-meantime' (design b=128 0.8333333333333334): want ['3019354'] got ['4711358', '3147310', '2416029'] | decoded-bit errors in its shard 990 of 8159 | j=0 similarity true value 0.039, best other 0.038 (true value still best)
+== P-LDPC k16 B=861 (N* 1024): share 0.9950, 13 stores with failures
+  131072/niah_multikey_2/162015 key 'cynical-safe' (design b=91 0.25): want ['8748103'] got ['7817492'] | decoded-bit errors in its shard 853 of 8098 | j=0 similarity true value 0.044, best other 0.047 (another value wins)
+  131072/niah_multikey_2/44358 key 'vengeful-parliament' (design b=91 0.25): want ['3922549'] got ['2167455', '7154328', '6505054'] | decoded-bit errors in its shard 525 of 8097 | j=0 similarity true value 0.037, best other 0.036 (true value still best)
+  131072/niah_multikey_2/44358 key 'spurious-side' (design b=91 0.25): want ['1749846'] got ['6227820'] | decoded-bit errors in its shard 569 of 8097 | j=0 similarity true value 0.042, best other 0.052 (another value wins)
+P-LDPC lines-nat-k8: no uncensored budget below N*
+== P-BCH k8 B=128 (N* 152): share 0.9839, 27 stores with failures
+  131072/niah_multikey_2/162015 key 'bitter-larder' (design b=108 1): want ['1184787'] got ['5192673'] | decoded-bit errors in its shard 1032 of 8167 | j=0 similarity true value 0.043, best other 0.044 (another value wins)
+  131072/niah_multikey_2/162015 key 'acrid-wink' (design b=108 1): want ['4202609'] got ['6303651'] | decoded-bit errors in its shard 1086 of 8167 | j=0 similarity true value 0.037, best other 0.047 (another value wins)
+  131072/niah_multikey_2/44358 key 'lean-lode' (design b=108 1): want ['3245632'] got ['6564348', '5931280'] | decoded-bit errors in its shard 1117 of 8166 | j=0 similarity true value 0.044, best other 0.037 (true value still best)
+== P-BCH k16 B=1448 (N* 1722): share 0.9893, 4 stores with failures
+  131072/niah_multikey_2/162015 key 'terrible-bedroom' (design b=76 19): want ['8788247'] got ['3134788', '5248580', '1634864'] | decoded-bit errors in its shard 225 of 8147 | j=0 similarity true value 0.040, best other 0.051 (another value wins)
+  131072/niah_multikey_2/162015 key 'vague-memory' (design b=76 19): want ['2019831'] got ['1426288'] | decoded-bit errors in its shard 139 of 8147 | j=0 similarity true value 0.047, best other 0.048 (another value wins)
+  131072/niah_multikey_2/44358 key 'orange-alley' (design b=76 19): want ['7585876'] got ['7800086', '3674135', '3869063'] | decoded-bit errors in its shard 266 of 8146 | j=0 similarity true value 0.046, best other 0.042 (true value still best)
+P-BCH lines-nat-k8: no uncensored budget below N*

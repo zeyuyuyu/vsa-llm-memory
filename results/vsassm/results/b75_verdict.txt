@@ -1,0 +1,89 @@
+# B75 verdict (prereg/B75_strongest_options_prereg.md): cells per stored pair for >= 99.5% of probed keys exact,
+# pooled; 30-day i.i.d. cell errors x 1 ... 32; value vocabulary uncharged. Delta(X, Y) = steps(X) - steps(Y)
+# (one step = x 2^(1/4)); 'X fewer' if Delta <= -2, 'Y fewer' if >= +2, else tie. '*' = N* is the lowest
+# evaluated budget (bracket open below); '>4096' / not reached counts as 37 steps. Comparators = the paper's
+# registered rows (B38 / B59 / B61 / B63 on the RULER stores; B73 on the fresh stores).
+
+== ruler stores (50 stores, 4776 probed keys)
+  memory                        k1        k2        k4        k8       k16       k32
+  U-LS                          54        54        64       108       609      1722
+  U-J                           32         -         -        64       215         -
+  U-J (charged)                 45         -         -        91       304         -
+  H-SBC-J                       23         -         -        54         -         -
+  H-SBC-J (charged)             32         -         -        76         -         -
+  J-best                        23         -         -        54       215         -
+  J-best (charged)              32         -         -        76       304         -
+  O2-BCH                       27*       27*        38       152       609      2048
+  O2-LDPC                      27*       27*        32        76       256       861
+  O2-best                       27        27        32        76       256       861
+  U                             76        76        76       128       431      1722
+  H-SBC                         32        32        45        91       304      1448
+  static                        19        19        27        54       215       724
+  cuckoo                        32        32        38        91       304      1218
+
+  Comparisons: Delta per condition (ratio Y / X) -> label
+  (A) U-LS                 vs U        k1 -2 (0.71)  k2 -2 (0.71)  k4 -1 (0.84)  k8 -1 (0.84)  k16 +2 (1.41)  k32 +0 (1.00) -> MIXED
+  (A) U-LS                 vs H-SBC    k1 +3 (1.68)  k2 +3 (1.68)  k4 +2 (1.41)  k8 +1 (1.19)  k16 +4 (2.00)  k32 +1 (1.19) -> H-SBC WIN
+  (A) U-LS                 vs static   k1 +6 (2.83)  k2 +6 (2.83)  k4 +5 (2.38)  k8 +4 (2.00)  k16 +6 (2.83)  k32 +5 (2.38) -> static WIN
+  (A) U-LS                 vs cuckoo   k1 +3 (1.68)  k2 +3 (1.68)  k4 +3 (1.68)  k8 +1 (1.19)  k16 +4 (2.00)  k32 +2 (1.41) -> cuckoo WIN
+  (A) U-LS                 vs O2-best  k1 +4 (2.00)  k2 +4 (2.00)  k4 +4 (2.00)  k8 +2 (1.41)  k16 +5 (2.38)  k32 +4 (2.00) -> O2-best WIN
+  (B) U-J                  vs U        k1 -5 (0.42)  k8 -4 (0.50)  k16 -4 (0.50) -> U-J WIN
+  (B) H-SBC-J              vs H-SBC    k1 -2 (0.71)  k8 -3 (0.59) -> H-SBC-J WIN
+  (B) J-best               vs H-SBC    k1 -2 (0.71)  k8 -3 (0.59)  k16 -2 (0.71) -> J-best WIN
+  (B) J-best               vs static   k1 +1 (1.19)  k8 +0 (1.00)  k16 +0 (1.00) -> TIE
+  (B) J-best               vs cuckoo   k1 -2 (0.71)  k8 -3 (0.59)  k16 -2 (0.71) -> J-best WIN
+  (B) J-best               vs O2-best  k1 -1 (0.84)  k8 -2 (0.71)  k16 -1 (0.84) -> J-best WIN
+  (B) U-J (charged)        vs U        k1 -3 (0.59)  k8 -2 (0.71)  k16 -2 (0.71) -> U-J (charged) WIN
+  (B) H-SBC-J (charged)    vs H-SBC    k1 +0 (1.00)  k8 -1 (0.84) -> TIE
+  (B) J-best (charged)     vs H-SBC    k1 +0 (1.00)  k8 -1 (0.84)  k16 +0 (1.00) -> TIE
+  (B) J-best (charged)     vs static   k1 +3 (1.68)  k8 +2 (1.41)  k16 +2 (1.41) -> static WIN
+  (B) J-best (charged)     vs cuckoo   k1 +0 (1.00)  k8 -1 (0.84)  k16 +0 (1.00) -> TIE
+  (B) J-best (charged)     vs O2-best  k1 +1 (1.19)  k8 +0 (1.00)  k16 +1 (1.19) -> TIE
+  (C) O2-best              vs H-SBC    k1 -1 (0.84)  k2 -1 (0.84)  k4 -2 (0.71)  k8 -1 (0.84)  k16 -1 (0.84)  k32 -3 (0.59) -> O2-best WIN
+  (C) O2-best              vs cuckoo   k1 -1 (0.84)  k2 -1 (0.84)  k4 -1 (0.84)  k8 -1 (0.84)  k16 -1 (0.84)  k32 -2 (0.71) -> O2-best WIN
+  (C) O2-best              vs static   k1 +2 (1.41)  k2 +2 (1.41)  k4 +1 (1.19)  k8 +2 (1.41)  k16 +1 (1.19)  k32 +1 (1.19) -> static WIN
+  (C) O2-best              vs U        k1 -6 (0.35)  k2 -6 (0.35)  k4 -5 (0.42)  k8 -3 (0.59)  k16 -3 (0.59)  k32 -4 (0.50) -> O2-best WIN
+  (C) O2-BCH               vs H-SBC    k1 -1 (0.84)  k2 -1 (0.84)  k4 -1 (0.84)  k8 +3 (1.68)  k16 +4 (2.00)  k32 +2 (1.41) -> H-SBC WIN
+  (C) O2-LDPC              vs H-SBC    k1 -1 (0.84)  k2 -1 (0.84)  k4 -2 (0.71)  k8 -1 (0.84)  k16 -1 (0.84)  k32 -3 (0.59) -> O2-LDPC WIN
+
+  O2 logical bits per pair (median [min, max] over stores) and beyond the static MPHF table's:
+    (g, ss) [6, 0]   bits/pair 20.66 [20.58, 23.80]; beyond static 6.76 [6.20, 15.56]; lost 0; stash overflow stores 0; on >= 1,000-pair stores lost 0
+    (g, ss) [6, 1]   bits/pair 19.60 [19.39, 22.75]; beyond static 5.71 [5.15, 14.22]; lost 0; stash overflow stores 0; on >= 1,000-pair stores lost 0
+    (g, ss) [8, 0]   bits/pair 20.89 [20.25, 23.95]; beyond static 6.91 [6.44, 16.00]; lost 0; stash overflow stores 0; on >= 1,000-pair stores lost 0
+    (g, ss) [8, 1]   bits/pair 19.83 [19.05, 22.89]; beyond static 5.85 [5.38, 14.67]; lost 0; stash overflow stores 0; on >= 1,000-pair stores lost 0
+
+  Store bootstrap (2,000 resamples within families): share in which the label holds; 95% Delta range
+  (A) U-LS                 vs U        label MIXED            held in 0.597; k1 [-2, -2] k2 [-2, -2] k4 [-2, -1] k8 [-1, -1] k16 [+0, +3] k32 [+0, +0]
+  (A) U-LS                 vs H-SBC    label H-SBC WIN        held in 0.988; k1 [+3, +3] k2 [+3, +3] k4 [+1, +3] k8 [+1, +1] k16 [+1, +4] k32 [+0, +2]
+  (A) U-LS                 vs static   label static WIN       held in 1.000; k1 [+6, +6] k2 [+6, +6] k4 [+4, +5] k8 [+4, +4] k16 [+3, +6] k32 [+5, +6]
+  (A) U-LS                 vs cuckoo   label cuckoo WIN       held in 1.000; k1 [+3, +3] k2 [+3, +3] k4 [+2, +3] k8 [+1, +1] k16 [+1, +4] k32 [+2, +4]
+  (A) U-LS                 vs O2-best  label O2-best WIN      held in 1.000; k1 [+4, +4] k2 [+4, +4] k4 [+3, +4] k8 [+2, +2] k16 [+2, +5] k32 [+3, +5]
+  (B) U-J                  vs U        label U-J WIN          held in 1.000; k1 [-5, -5] k8 [-4, -4] k16 [-4, -3]
+  (B) H-SBC-J              vs H-SBC    label H-SBC-J WIN      held in 1.000; k1 [-2, -2] k8 [-3, -3]
+  (B) J-best               vs H-SBC    label J-best WIN       held in 1.000; k1 [-2, -2] k8 [-3, -3] k16 [-3, -2]
+  (B) J-best               vs static   label TIE              held in 0.995; k1 [+1, +1] k8 [+0, +0] k16 [+0, +0]
+  (B) J-best               vs cuckoo   label J-best WIN       held in 1.000; k1 [-2, -2] k8 [-3, -3] k16 [-4, -2]
+  (B) J-best               vs O2-best  label J-best WIN       held in 1.000; k1 [-1, -1] k8 [-2, -2] k16 [-1, -1]
+  (B) U-J (charged)        vs U        label U-J (charged) WIN held in 0.999; k1 [-3, -3] k8 [-2, -2] k16 [-2, -1]
+  (B) H-SBC-J (charged)    vs H-SBC    label TIE              held in 1.000; k1 [+0, +0] k8 [-1, -1]
+  (B) J-best (charged)     vs H-SBC    label TIE              held in 0.999; k1 [+0, +0] k8 [-1, -1] k16 [-1, +0]
+  (B) J-best (charged)     vs static   label static WIN       held in 0.999; k1 [+3, +3] k8 [+2, +2] k16 [+2, +2]
+  (B) J-best (charged)     vs cuckoo   label TIE              held in 0.970; k1 [+0, +0] k8 [-1, -1] k16 [-2, +0]
+  (B) J-best (charged)     vs O2-best  label TIE              held in 0.999; k1 [+1, +1] k8 [+0, +0] k16 [+1, +1]
+  (C) O2-best              vs H-SBC    label O2-best WIN      held in 1.000; k1 [-1, -1] k2 [-1, -1] k4 [-2, -1] k8 [-1, -1] k16 [-2, -1] k32 [-4, -3]
+  (C) O2-best              vs cuckoo   label O2-best WIN      held in 0.878; k1 [-1, -1] k2 [-1, -1] k4 [-2, -1] k8 [-1, -1] k16 [-3, -1] k32 [-2, -1]
+  (C) O2-best              vs static   label static WIN       held in 0.999; k1 [+2, +2] k2 [+2, +2] k4 [+1, +1] k8 [+2, +2] k16 [+1, +1] k32 [+1, +1]
+  (C) O2-best              vs U        label O2-best WIN      held in 1.000; k1 [-6, -6] k2 [-6, -6] k4 [-5, -5] k8 [-3, -3] k16 [-3, -2] k32 [-5, -3]
+  (C) O2-BCH               vs H-SBC    label H-SBC WIN        held in 0.672; k1 [-1, -1] k2 [-1, -1] k4 [-2, -1] k8 [+3, +3] k16 [+3, +4] k32 [+1, +2]
+  (C) O2-LDPC              vs H-SBC    label O2-LDPC WIN      held in 1.000; k1 [-1, -1] k2 [-1, -1] k4 [-2, -1] k8 [-1, -1] k16 [-2, -1] k32 [-4, -3]
+
+Predictions (prereg):
+  PA1 FAILED: Delta(U-LS, U) {'k1': -2, 'k2': -2, 'k4': -1, 'k8': -1, 'k16': 2, 'k32': 0}
+  PA2 held: Delta(U-LS, H-SBC) {'k1': 3, 'k2': 3, 'k4': 2, 'k8': 1, 'k16': 4, 'k32': 1}; Delta(U-LS, static) {'k1': 6, 'k2': 6, 'k4': 5, 'k8': 4, 'k16': 6, 'k32': 5}
+  PB1 held: Delta(U-J, U) {'k1': -5, 'k8': -4, 'k16': -4}; Delta(H-SBC-J, H-SBC) {'k1': -2, 'k8': -3}; H-SBC-J k1 22.627416997969522
+  PB2 held: Delta(J-best chg, H-SBC) {'k1': 0, 'k8': -1, 'k16': 0}; Delta(J-best chg, static) {'k1': 3, 'k8': 2, 'k16': 2}
+  PC1 held: Delta(O2-best, cuckoo) {'k1': -1, 'k2': -1, 'k4': -1, 'k8': -1, 'k16': -1, 'k32': -2}
+  PC2 held: Delta(O2-best, H-SBC) {'k1': -1, 'k2': -1, 'k4': -2, 'k8': -1, 'k16': -1, 'k32': -3}, label O2-best WIN
+  PC3 held: Delta(O2-best, static) {'k1': 2, 'k2': 2, 'k4': 1, 'k8': 2, 'k16': 1, 'k32': 1}
+  PC4 not scored: lost insertions over all O2 test builds (all sizes): 0 (see the per-design lines)
+  PD not scored: fresh stores not run

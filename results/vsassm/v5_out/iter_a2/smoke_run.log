@@ -1,0 +1,16 @@
+[0.0 min] Training statistics: 5621 occurrences, dimension 128
+[0.0 min] Preparing centre/lin, 992 features
+[0.0 min] Preparing centre/sgn, 992 features
+[0.0 min] Preparing whiten/lin, 992 features
+[0.0 min] Preparing centre/rp, 992 features
+[0.0 min] Preparing centre/pca, 128 features
+[0.0 min] Preparing whiten/pca, 128 features
+[0.0 min] Preparing whiten/rp, 992 features
+[0.1 min] Preprocessing complete; BLAS permanently reduced to one thread
+[0.1 min] Condition M=256, V=2, b=4: development search
+[0.1 min]   STORE: dev=0.66570, {'prep': 'centre', 'map': 'sgn', 'q': 1, 'share': 1.0}
+[0.1 min]   LAMc: dev=0.63953, {'scale': 'col', 'target': 'V-1', 'prep': 'centre', 'feat': 'rp', 'alpha': 0.0001, 'q': 1}
+[0.1 min]   NLMSc: dev=0.55233, {'scale': 'col', 'target': 'V-1', 'prep': 'centre', 'feat': 'rp', 'mu': 1.0, 'output': 'avg', 'q': 1}
+[0.1 min]   Selected configurations: test
+[0.1 min] Paired entity-cluster bootstrap (2000 draws)
+[0.1 min] Finished: v5_out/iter_a2/smoke/qwen8_result.json

@@ -1,0 +1,53 @@
+{
+ "n_sym": 64,
+ "hops": 2,
+ "cells": [
+  {
+   "n_ctx": 4,
+   "arms": {
+    "floor": [
+     0.576,
+     0.576,
+     0.56
+    ],
+    "parser": [
+     0.998,
+     0.998,
+     0.998
+    ],
+    "spans": [
+     0.478,
+     0.5,
+     0.494
+    ]
+   },
+   "floor": 0.5706666666666667,
+   "parser": 0.9979999999999999,
+   "headroom": 0.42733333333333323
+  },
+  {
+   "n_ctx": 6,
+   "arms": {
+    "floor": [
+     0.564,
+     0.536,
+     0.582
+    ],
+    "parser": [
+     0.998,
+     0.998,
+     1.0
+    ],
+    "spans": [
+     0.52,
+     0.518,
+     0.512
+    ]
+   },
+   "floor": 0.5606666666666666,
+   "parser": 0.9986666666666667,
+   "headroom": 0.43800000000000006
+  }
+ ],
+ "verdict": "CANDIDATE COUNT ELIMINATED (four synthetic candidates still fail where 3.6 natural-text candidates succeed, so the natural-text difference is real)"
+}

@@ -1,0 +1,30 @@
+[    0.7s] codes (18292, 4096)
+[   24.0s] train codes 5621 eps 1.4882999142613125e-06
+[   24.0s] stores ('dev', 256, 2) 6 queries 1901
+[   24.0s] stores ('dev', 256, 16) 6 queries 1662
+[   24.0s] stores ('dev', 1024, 2) 3 queries 3392
+[   24.0s] stores ('dev', 1024, 16) 3 queries 3828
+[   24.0s] stores ('test', 256, 2) 20 queries 4415
+[   24.0s] stores ('test', 256, 16) 20 queries 4827
+[   24.0s] stores ('test', 1024, 2) 5 queries 4255
+[   24.0s] stores ('test', 1024, 16) 5 queries 4344
+[   30.8s] prep centred
+[   94.0s] store maps done centred
+[   94.9s] store centred 256 2 done
+[   96.9s] store centred 256 2 done
+[  102.2s] store centred 256 2 done
+[  108.0s] store centred 256 16 done
+[  114.8s] store centred 256 16 done
+[  125.4s] store centred 256 16 done
+[  132.7s] store centred 1024 2 done
+[  143.0s] store centred 1024 2 done
+[  170.1s] store centred 1024 2 done
+[  178.4s] store centred 1024 16 done
+[  192.2s] store centred 1024 16 done
+[  217.5s] store centred 1024 16 done
+[  230.0s] ls random features done centred
+[  291.8s] ls centred 256 2 done
+[  317.1s] ls centred 256 16 done
+[  520.8s] ls centred 1024 2 done
+[  548.9s] ls centred 1024 16 done
+[  548.9s] wrote raw_qwen8_centred.json

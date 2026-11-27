@@ -1,0 +1,332 @@
+{
+ "qwen8": {
+  "rows": [
+   {
+    "M": 256,
+    "V": 2,
+    "b": 4,
+    "my_store": 69.44507361268403,
+    "my_ls": 70.079275198188,
+    "pipe_store": 69.53751284686537,
+    "pipe_ls": 73.60739979445016,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|4|1|percol|1.0"
+   },
+   {
+    "M": 256,
+    "V": 2,
+    "b": 8,
+    "my_store": 71.37032842582107,
+    "my_ls": 78.21064552661382,
+    "pipe_store": 73.50462487153135,
+    "pipe_ls": 76.42343268242549,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|1|percol|1.0"
+   },
+   {
+    "M": 256,
+    "V": 2,
+    "b": 16,
+    "my_store": 74.81313703284258,
+    "my_ls": 80.97395243488108,
+    "pipe_store": 77.30729701952723,
+    "pipe_ls": 79.01336073997945,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "centred|principal|1|1|percol|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 2,
+    "b": 4,
+    "my_store": 65.75793184488836,
+    "my_ls": 68.95417156286722,
+    "pipe_store": 66.423196104471,
+    "pipe_ls": 71.64674634794157,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|2|1|percol|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 2,
+    "b": 8,
+    "my_store": 66.83901292596944,
+    "my_ls": 69.84723854289072,
+    "pipe_store": 68.50376272687029,
+    "pipe_ls": 73.94864984506418,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|2|1|percol|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 2,
+    "b": 16,
+    "my_store": 66.27497062279672,
+    "my_ls": 72.07990599294948,
+    "pipe_store": 70.20805666223993,
+    "pipe_ls": 74.5019920318725,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "centred|principal|4|1|percol|0.1"
+   },
+   {
+    "M": 256,
+    "V": 16,
+    "b": 4,
+    "my_store": 18.50010358400663,
+    "my_ls": 22.89206546509219,
+    "pipe_store": 17.963944856839873,
+    "pipe_ls": 22.58748674443266,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|1.0"
+   },
+   {
+    "M": 256,
+    "V": 16,
+    "b": 8,
+    "my_store": 26.97327532628962,
+    "my_ls": 33.49906774394034,
+    "pipe_store": 22.672322375397666,
+    "pipe_ls": 33.72216330858961,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|1.0"
+   },
+   {
+    "M": 256,
+    "V": 16,
+    "b": 16,
+    "my_store": 35.81934949243837,
+    "my_ls": 44.95545887714937,
+    "pipe_store": 36.28844114528102,
+    "pipe_ls": 44.305408271474015,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 16,
+    "b": 4,
+    "my_store": 19.7744014732965,
+    "my_ls": 20.48802946593002,
+    "pipe_store": 19.81630309988519,
+    "pipe_ls": 17.588978185993113,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|percol|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 16,
+    "b": 8,
+    "my_store": 25.161141804788215,
+    "my_ls": 29.857274401473298,
+    "pipe_store": 27.324913892078072,
+    "pipe_ls": 28.610792192881746,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 16,
+    "b": 16,
+    "my_store": 32.80386740331492,
+    "my_ls": 40.14732965009208,
+    "pipe_store": 36.18828932261768,
+    "pipe_ls": 38.48450057405281,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|percol|1.0"
+   }
+  ],
+  "regions": {
+   "V2": {
+    "mine": -4.2741224655646874,
+    "pipe": -3.9428552017046976,
+    "diff": -0.33126726385998984,
+    "my_store": 69.08340907750036,
+    "pipe_store": 70.91407503858419,
+    "my_ls": 73.35753154306505,
+    "pipe_ls": 74.85693024028889
+   },
+   "V16": {
+    "mine": -5.467847753257174,
+    "pipe": -4.174185764220742,
+    "diff": -1.2936619890364316,
+    "my_store": 26.505356514022377,
+    "pipe_store": 26.70903578201658,
+    "my_ls": 31.973204267279545,
+    "pipe_ls": 30.883221546237326
+   },
+   "R1": {
+    "mine": -4.87098510941093,
+    "pipe": -4.058520482962719,
+    "diff": -0.8124646264482109,
+    "my_store": 47.79438279576138,
+    "pipe_store": 48.81155541030038,
+    "my_ls": 52.665367905172296,
+    "pipe_ls": 52.87007589326311
+   }
+  }
+ },
+ "e5": {
+  "rows": [
+   {
+    "M": 256,
+    "V": 2,
+    "b": 4,
+    "my_store": 67.56511891279729,
+    "my_ls": 70.69082672706682,
+    "pipe_store": 66.3103802672148,
+    "pipe_ls": 71.05858170606372,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|2|1|percol|100.0"
+   },
+   {
+    "M": 256,
+    "V": 2,
+    "b": 8,
+    "my_store": 70.30577576443942,
+    "my_ls": 74.1109852774632,
+    "pipe_store": 67.8108941418294,
+    "pipe_ls": 74.98458376156218,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|2|1|percol|1.0"
+   },
+   {
+    "M": 256,
+    "V": 2,
+    "b": 16,
+    "my_store": 70.21517553793885,
+    "my_ls": 74.1109852774632,
+    "pipe_store": 71.77800616649537,
+    "pipe_ls": 76.03288797533402,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|2|1|percol|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 2,
+    "b": 4,
+    "my_store": 62.467685076380725,
+    "my_ls": 63.031727379553466,
+    "pipe_store": 61.08897742363878,
+    "pipe_ls": 63.3244798583444,
+    "my_cfg_store": "white|sign|1|1.0",
+    "my_cfg_ls": "white|principal|2|1|percol|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 2,
+    "b": 8,
+    "my_store": 62.56169212690952,
+    "my_ls": 63.031727379553466,
+    "pipe_store": 62.12926073483842,
+    "pipe_ls": 63.3244798583444,
+    "my_cfg_store": "white|sign|2|1.0",
+    "my_cfg_ls": "white|principal|2|1|percol|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 2,
+    "b": 16,
+    "my_store": 63.6192714453584,
+    "my_ls": 63.031727379553466,
+    "pipe_store": 65.11730854360337,
+    "pipe_ls": 63.3244798583444,
+    "my_cfg_store": "white|sign|1|1.0",
+    "my_cfg_ls": "white|principal|2|1|percol|1.0"
+   },
+   {
+    "M": 256,
+    "V": 16,
+    "b": 4,
+    "my_store": 20.73751812720116,
+    "my_ls": 29.977211518541537,
+    "pipe_store": 21.208907741251327,
+    "pipe_ls": 30.75291622481442,
+    "my_cfg_store": "centred|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|10.0"
+   },
+   {
+    "M": 256,
+    "V": 16,
+    "b": 8,
+    "my_store": 26.993992127615495,
+    "my_ls": 43.8367516055521,
+    "pipe_store": 28.7592788971368,
+    "pipe_ls": 43.94485683987275,
+    "my_cfg_store": "centred|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|10.0"
+   },
+   {
+    "M": 256,
+    "V": 16,
+    "b": 16,
+    "my_store": 37.497410399834266,
+    "my_ls": 52.102755334576344,
+    "pipe_store": 39.1728525980912,
+    "pipe_ls": 51.41039236479321,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|1.0"
+   },
+   {
+    "M": 1024,
+    "V": 16,
+    "b": 4,
+    "my_store": 18.186003683241253,
+    "my_ls": 26.841620626151013,
+    "pipe_store": 17.86452353616533,
+    "pipe_ls": 26.222732491389205,
+    "my_cfg_store": "centred|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|100.0"
+   },
+   {
+    "M": 1024,
+    "V": 16,
+    "b": 8,
+    "my_store": 25.0,
+    "my_ls": 33.770718232044196,
+    "pipe_store": 26.10792192881745,
+    "pipe_ls": 32.10103329506315,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|1|16|shared|10.0"
+   },
+   {
+    "M": 1024,
+    "V": 16,
+    "b": 16,
+    "my_store": 29.35082872928177,
+    "my_ls": 39.755985267034994,
+    "pipe_store": 29.5292766934558,
+    "pipe_ls": 38.80597014925373,
+    "my_cfg_store": "white|lin|1|1.0",
+    "my_cfg_ls": "white|principal|2|16|percol|1.0"
+   }
+  ],
+  "regions": {
+   "V2": {
+    "mine": -1.87887675947157,
+    "pipe": -2.9691109567288287,
+    "diff": 1.0902341972572587,
+    "my_store": 66.1224531439707,
+    "pipe_store": 65.70580454627002,
+    "my_ls": 68.00132990344225,
+    "pipe_ls": 68.67491550299884
+   },
+   "V16": {
+    "mine": -11.419881586121042,
+    "pipe": -10.099189995044762,
+    "diff": -1.3206915910762795,
+    "my_store": 26.29429217786232,
+    "pipe_store": 27.107126899152984,
+    "my_ls": 37.71417376398336,
+    "pipe_ls": 37.20631689419774
+   },
+   "R1": {
+    "mine": -6.649379172796305,
+    "pipe": -6.534150475886794,
+    "diff": -0.11522869690951065,
+    "my_store": 46.2083726609165,
+    "pipe_store": 46.40646572271151,
+    "my_ls": 52.857751833712804,
+    "pipe_ls": 52.9406161985983
+   }
+  }
+ }
+}

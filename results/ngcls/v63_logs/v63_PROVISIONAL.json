@@ -1,0 +1,59 @@
+{
+ "floor_ref": 0.5153333333333333,
+ "parser_ref": 0.934,
+ "arms": {
+  "fsq_id": [
+   0.538,
+   0.508,
+   0.538
+  ],
+  "fsq_id_only": [
+   0.544,
+   0.55,
+   0.55
+  ]
+ },
+ "diag": {
+  "fsq_id": [
+   {
+    "tuples_used": 3173,
+    "role_distinct_rate": 0.9833333333333333,
+    "same_symbol_consistency": 0.06462640403711542,
+    "distinct_symbol_code_cosine": 0.12959363457439813
+   },
+   {
+    "tuples_used": 2350,
+    "role_distinct_rate": 0.95,
+    "same_symbol_consistency": 0.031743447826794724,
+    "distinct_symbol_code_cosine": 0.4079097153766391
+   },
+   {
+    "tuples_used": 2829,
+    "role_distinct_rate": 1.0,
+    "same_symbol_consistency": 0.08139345596614032,
+    "distinct_symbol_code_cosine": 0.28962944238212096
+   }
+  ],
+  "fsq_id_only": [
+   {
+    "tuples_used": 3393,
+    "role_distinct_rate": 0.9733333333333334,
+    "same_symbol_consistency": 0.08106788214227575,
+    "distinct_symbol_code_cosine": -0.0015830250187535528
+   },
+   {
+    "tuples_used": 3441,
+    "role_distinct_rate": 0.9733333333333334,
+    "same_symbol_consistency": 0.059417222855282434,
+    "distinct_symbol_code_cosine": 0.00774232853345435
+   },
+   {
+    "tuples_used": 3970,
+    "role_distinct_rate": 0.9633333333333334,
+    "same_symbol_consistency": 0.06657984698030278,
+    "distinct_symbol_code_cosine": -0.012957480858080088
+   }
+  ]
+ },
+ "verdict": "fsq_id: FAILS (the V-62 attribution is overclaimed; weaken the manuscript) | fsq_id_only: FAILS (the V-62 attribution is overclaimed; weaken the manuscript)"
+}

@@ -1,0 +1,412 @@
+{
+ "gates": {
+  "tok": true,
+  "G1": true,
+  "G1b": true
+ },
+ "cell|gen|n800": {
+  "acc": [
+   0.47,
+   0.474,
+   0.484
+  ],
+  "mean": 0.476,
+  "ok": true,
+  "info": [
+   {
+    "best_step": 800,
+    "best_dev": 0.5239999890327454,
+    "early_stop": null,
+    "train_sub_max": 0.5339999794960022,
+    "dev_recheck": 0.5320000052452087,
+    "secs": 425.5895712375641,
+    "gpu": "NVIDIA H200",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.4699999988079071,
+     "pos_rate": 0.21199999749660492
+    }
+   },
+   {
+    "best_step": 200,
+    "best_dev": 0.5059999823570251,
+    "early_stop": null,
+    "train_sub_max": 0.5339999794960022,
+    "dev_recheck": 0.5059999823570251,
+    "secs": 1764.858068704605,
+    "gpu": "NVIDIA A800 80GB PCIe",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.4740000069141388,
+     "pos_rate": 1.0
+    }
+   },
+   {
+    "best_step": 700,
+    "best_dev": 0.5239999890327454,
+    "early_stop": null,
+    "train_sub_max": 0.5339999794960022,
+    "dev_recheck": 0.5239999890327454,
+    "secs": 882.2728221416473,
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.48399999737739563,
+     "pos_rate": 0.777999997138977
+    }
+   }
+  ]
+ },
+ "cell|fullgen|n800": {
+  "acc": [
+   0.5,
+   0.53,
+   0.53
+  ],
+  "mean": 0.52,
+  "ok": true,
+  "info": [
+   {
+    "best_step": 700,
+    "best_dev": 0.5139999985694885,
+    "early_stop": null,
+    "train_sub_max": 0.5400000214576721,
+    "dev_recheck": 0.4959999918937683,
+    "secs": 490.5367965698242,
+    "gpu": "NVIDIA H200",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.5,
+     "pos_rate": 0.10999999940395355
+    }
+   },
+   {
+    "best_step": 100,
+    "best_dev": 0.5460000038146973,
+    "early_stop": null,
+    "train_sub_max": 0.5440000295639038,
+    "dev_recheck": 0.5460000038146973,
+    "secs": 1007.6253976821899,
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.5299999713897705,
+     "pos_rate": 0.42800000309944153
+    }
+   },
+   {
+    "best_step": 800,
+    "best_dev": 0.5180000066757202,
+    "early_stop": null,
+    "train_sub_max": 0.5339999794960022,
+    "dev_recheck": 0.5180000066757202,
+    "secs": 1003.3827788829803,
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.5299999713897705,
+     "pos_rate": 0.2280000001192093
+    }
+   }
+  ]
+ },
+ "cell|fullcls|n800": {
+  "acc": [
+   0.508,
+   0.506,
+   0.476
+  ],
+  "mean": 0.49666666666666665,
+  "ok": true,
+  "info": [
+   {
+    "best_step": 800,
+    "best_dev": 0.5479999780654907,
+    "early_stop": null,
+    "train_sub_max": 0.7480000257492065,
+    "dev_recheck": 0.550000011920929,
+    "secs": 479.06506633758545,
+    "gpu": "NVIDIA H200",
+    "free": {
+     "pos_rate": 0.4740000069141388
+    }
+   },
+   {
+    "best_step": 800,
+    "best_dev": 0.5440000295639038,
+    "early_stop": null,
+    "train_sub_max": 0.7639999985694885,
+    "dev_recheck": 0.5440000295639038,
+    "secs": 991.6317121982574,
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "free": {
+     "pos_rate": 0.46799999475479126
+    }
+   },
+   {
+    "best_step": 700,
+    "best_dev": 0.5139999985694885,
+    "early_stop": null,
+    "train_sub_max": 0.7139999866485596,
+    "dev_recheck": 0.5139999985694885,
+    "secs": 941.7440176010132,
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "free": {
+     "pos_rate": 0.7059999704360962
+    }
+   }
+  ]
+ },
+ "cell|scratch|n800": {
+  "acc": [
+   0.998,
+   0.994,
+   0.998
+  ],
+  "mean": 0.9966666666666667,
+  "ok": true,
+  "info": [
+   {
+    "best_step": 500,
+    "best_dev": 1.0,
+    "early_stop": 500,
+    "train_sub_max": 1.0,
+    "dev_recheck": 1.0,
+    "secs": 305.90985083580017,
+    "gpu": "NVIDIA H200",
+    "free": {
+     "unparsed": 0.0,
+     "bridge_acc": 1.0,
+     "bridge_hex_acc": 1.0,
+     "answer_sym_acc": 1.0
+    }
+   },
+   {
+    "best_step": 400,
+    "best_dev": 1.0,
+    "early_stop": 500,
+    "train_sub_max": 1.0,
+    "dev_recheck": 1.0,
+    "secs": 1288.8372299671173,
+    "gpu": "NVIDIA A800 80GB PCIe",
+    "free": {
+     "unparsed": 0.0,
+     "bridge_acc": 0.992,
+     "bridge_hex_acc": 0.992,
+     "answer_sym_acc": 0.992
+    }
+   },
+   {
+    "best_step": 400,
+    "best_dev": 1.0,
+    "early_stop": 500,
+    "train_sub_max": 1.0,
+    "dev_recheck": 1.0,
+    "secs": 548.9806835651398,
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "free": {
+     "unparsed": 0.0,
+     "bridge_acc": 1.0,
+     "bridge_hex_acc": 1.0,
+     "answer_sym_acc": 1.0
+    }
+   }
+  ]
+ },
+ "cell|gen|n8000": {
+  "acc": [
+   0.486,
+   0.52,
+   0.498
+  ],
+  "mean": 0.5013333333333333,
+  "ok": true,
+  "info": [
+   {
+    "best_step": 3500,
+    "best_dev": 0.5339999794960022,
+    "early_stop": null,
+    "train_sub_max": 0.5239999890327454,
+    "dev_recheck": 0.4779999852180481,
+    "secs": 1516.808120727539,
+    "gpu": "NVIDIA H200",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.4860000014305115,
+     "pos_rate": 0.5400000214576721
+    }
+   },
+   {
+    "best_step": 4000,
+    "best_dev": 0.5199999809265137,
+    "early_stop": null,
+    "train_sub_max": 0.5139999985694885,
+    "dev_recheck": 0.5199999809265137,
+    "secs": 3793.3173699378967,
+    "gpu": "NVIDIA A800 80GB PCIe",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.5199999809265137,
+     "pos_rate": 0.2939999997615814
+    }
+   },
+   {
+    "best_step": 3000,
+    "best_dev": 0.4959999918937683,
+    "early_stop": null,
+    "train_sub_max": 0.5,
+    "dev_recheck": 0.4959999918937683,
+    "secs": 3762.180862903595,
+    "gpu": "NVIDIA H200",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.49799999594688416,
+     "pos_rate": 0.13199999928474426
+    }
+   }
+  ]
+ },
+ "cell|fullgen|n8000": {
+  "acc": [
+   0.434,
+   0.536,
+   0.49
+  ],
+  "mean": 0.48666666666666664,
+  "ok": true,
+  "info": [
+   {
+    "best_step": 4000,
+    "best_dev": 0.5299999713897705,
+    "early_stop": null,
+    "train_sub_max": 0.5199999809265137,
+    "dev_recheck": 0.5080000162124634,
+    "secs": 1989.448659658432,
+    "gpu": "NVIDIA H200",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.4339999854564667,
+     "pos_rate": 0.3799999952316284
+    }
+   },
+   {
+    "best_step": 3500,
+    "best_dev": 0.5080000162124634,
+    "early_stop": null,
+    "train_sub_max": 0.5139999985694885,
+    "dev_recheck": 0.5080000162124634,
+    "secs": 4147.666896343231,
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.5360000133514404,
+     "pos_rate": 0.1340000033378601
+    }
+   },
+   {
+    "best_step": 4000,
+    "best_dev": 0.5320000052452087,
+    "early_stop": null,
+    "train_sub_max": 0.5019999742507935,
+    "dev_recheck": 0.5320000052452087,
+    "secs": 2201.7747507095337,
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "free": {
+     "free_yesno_rate": 1.0,
+     "free_acc": 0.49000000953674316,
+     "pos_rate": 0.3840000033378601
+    }
+   }
+  ]
+ },
+ "F2|n800": {
+  "vs": "fullgen",
+  "M": 0.48,
+  "m": [
+   0.5,
+   0.47,
+   0.47
+  ],
+  "reading": "STANDS"
+ },
+ "F1|gen": {
+  "fit": false,
+  "any_fit": false
+ },
+ "F1|fullgen": {
+  "fit": false,
+  "any_fit": false
+ },
+ "F1|fullcls": {
+  "fit": false,
+  "any_fit": false
+ },
+ "F2sec|n800": {
+  "vs": "scratch",
+  "M": 0.0033333333333332993,
+  "m": [
+   0.0020000000000000018,
+   0.006000000000000005,
+   0.0020000000000000018
+  ],
+  "reading": "CLOSED",
+  "arms": [
+   "fullcls",
+   "fullgen",
+   "gen",
+   "scratch"
+  ]
+ },
+ "N8000": {
+  "acc": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "epoch": [
+   1,
+   1,
+   1
+  ],
+  "ok": true
+ },
+ "F2|n8000": {
+  "vs": "gen",
+  "M": 0.4986666666666667,
+  "m": [
+   0.514,
+   0.48,
+   0.502
+  ],
+  "reading": "STANDS"
+ },
+ "sweep": {
+  "A30": 0.7100934467118241,
+  "reading": "PARTIAL",
+  "s_tol": 0.25059586608161527,
+  "rho_tol": 0.5,
+  "s_95": 0.562847612467077,
+  "rho_95": 0.75,
+  "hop1_30": 0.632360473520454,
+  "comm_below_perm_rho_ge_0.6": false,
+  "form_ge_mention": true,
+  "perm_ge099_rho_ge085": true,
+  "perm_le572_rho_le045": true
+ },
+ "predictions": {
+  "P1": true,
+  "P2": true,
+  "P3": false,
+  "P4": true,
+  "P5": false,
+  "P6": true,
+  "P7": true,
+  "P8": true,
+  "P9": true,
+  "P10": false,
+  "P11": true,
+  "P12": true,
+  "P13": true,
+  "P14": true
+ }
+}

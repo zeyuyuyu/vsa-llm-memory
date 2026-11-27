@@ -1,0 +1,40 @@
+m2 V-last  packed   ideal: 150/150 exact, cells 191995 <= budget 192000
+m2 V-last  1.0      ideal: 150/150 exact, cells 192000 <= budget 192000
+m2 T-rep   None     ideal: 150/150 exact, cells 88128 <= budget 96000
+m2 T-vhdd  0.1      ideal: 150/150 exact, cells 95727 <= budget 96000
+m2 T-vhdd  0.2      ideal: 150/150 exact, cells 95506 <= budget 96000
+m2 E-BCH   (255, 215, 5) ideal: 150/150 exact, cells 96000 <= budget 96000
+m2 E-LDPC  0.25     ideal: 150/150 exact, cells 96000 <= budget 96000
+m2 E-LDPC  0.3333333333333333 ideal: 150/150 exact, cells 96000 <= budget 96000
+m3 V-last  packed   ideal: 150/150 exact, cells 191984 <= budget 192000
+m3 V-last  1.0      ideal: 150/150 exact, cells 192000 <= budget 192000
+m3 T-rep   None     ideal: 150/150 exact, cells 95472 <= budget 96000
+m3 T-vhdd  0.1      ideal: 150/150 exact, cells 95727 <= budget 96000
+m3 T-vhdd  0.2      ideal: 150/150 exact, cells 95758 <= budget 96000
+m3 E-BCH   (255, 215, 5) ideal: 150/150 exact, cells 96000 <= budget 96000
+m3 E-LDPC  0.25     ideal: 150/150 exact, cells 96000 <= budget 96000
+m3 E-LDPC  0.3333333333333333 ideal: 150/150 exact, cells 96000 <= budget 96000
+m2-k1-30d    simulated bit-error rate 0.00020  calibrated 0.00017
+m2-k2-30d    simulated bit-error rate 0.02677  calibrated 0.02794
+m2-k4-30d    simulated bit-error rate 0.13602  calibrated 0.14162
+m2-k8-30d    simulated bit-error rate 0.26035  calibrated 0.26837
+m2-k16-30d   simulated bit-error rate 0.34897  calibrated 0.36684
+m2-k32-30d   simulated bit-error rate 0.40627  calibrated 0.45232
+m2-k1-1d     simulated bit-error rate 0.00007  calibrated 0.00004
+m2-k2-1d     simulated bit-error rate 0.01877  calibrated 0.01927
+m2-k4-1d     simulated bit-error rate 0.11573  calibrated 0.12329
+m2-k8-1d     simulated bit-error rate 0.24728  calibrated 0.25529
+m2-k16-1d    simulated bit-error rate 0.34068  calibrated 0.35933
+m2-k32-1d    simulated bit-error rate 0.40366  calibrated 0.44884
+m3-k1-30d    simulated bit-error rate 0.03105  calibrated 0.03107
+m3-k2-30d    simulated bit-error rate 0.12007  calibrated 0.12582
+m3-k4-30d    simulated bit-error rate 0.23611  calibrated 0.24655
+m3-k8-30d    simulated bit-error rate 0.32573  calibrated 0.35017
+m3-k16-30d   simulated bit-error rate 0.40174  calibrated 0.42231
+m3-k32-30d   simulated bit-error rate 0.41900  calibrated 0.47174
+m3-k1-1d     simulated bit-error rate 0.02341  calibrated 0.02390
+m3-k2-1d     simulated bit-error rate 0.10823  calibrated 0.11283
+m3-k4-1d     simulated bit-error rate 0.21998  calibrated 0.23222
+m3-k8-1d     simulated bit-error rate 0.31919  calibrated 0.34165
+m3-k16-1d    simulated bit-error rate 0.39639  calibrated 0.41681
+m3-k32-1d    simulated bit-error rate 0.41716  calibrated 0.46945

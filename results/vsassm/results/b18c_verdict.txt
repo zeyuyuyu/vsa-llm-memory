@@ -1,0 +1,22 @@
+# B18c verdict (prereg/B18c_prereg.md): qa11-13 training labels from bAbI's coreference rule, 2026-10-24
+PACE 14351760 (paid account, 40 min). Training data: B18b's 50,768 examples, the 5,400 qa11-13 ones relabelled by the
+rule (825 outputs changed, 0 left as the teacher wrote them). Student Qwen3-1.7B + LoRA, seed 0, as B18b.
+
+Official BABILong test set (n = 100 per task):
+  0k: qa11 1.000  qa12 1.000  qa13 1.000    (B18 0.64 / 0.59 / 0.46; B18b 0.78 / 1.00 / 0.86)
+      qa1-10 mean 99.0 (B18 99.7): qa1 1.00 qa2 .99 qa3 .98 qa4 1.00 qa5 .98 qa6 1.00 qa7 .98 qa8 .97 qa9 1.00 qa10 1.00
+  4k: qa1-10 mean 97.9 (B18 98.2)
+Diagnosis stories (bAbI en-10k train 1000-1199, never distilled): qa11 200/200, qa12 200/200, qa13 200/200
+(B18b: 170 / 200 / 159).
+
+P1 (each of qa11-13 >= 0.90): PASS (1.000 each). P2 (qa1-10 within 0.01 of B18 at 0k and 4k): PASS (-0.7 and -0.3
+points). Prediction (P1 >= 0.97, P2 holds): correct.
+
+Second scorer, verbatim babilong/metrics.py: agrees on every task except qa7, where it marks every correct "none" answer wrong (45 disagreements at 0k, 46 at 4k).
+Cause: the official code matches labels as substrings,
+and "none" contains "one", so a correct "none" counts as two labels. This is a bug in the official scorer, not in
+our outputs; it does not touch QA1-5 (the leaderboard summary) but it does touch any QA1-10 mean. Our scorer
+(b18.correct_official) matches whole words. Disclose wherever a QA1-10 mean is quoted as "the official rule".
+
+Consequence (as preregistered): the B18c student's qa11-13 (1.000 each) is reported for those three tasks, with this
+disclosure; every other number (0k-10M) stays the B18 student's.

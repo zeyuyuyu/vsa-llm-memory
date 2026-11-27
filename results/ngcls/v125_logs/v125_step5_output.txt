@@ -1,0 +1,36 @@
+===== V-125 step 5: answerable-subset recompute (prereg b5a6828 P3) =====
+  answerable rows: 204 of 287 judged (300 registered; 13 undecidable never judged)
+
+  per-row dump existence checks:
+    v108_logs/v108.json                    per-row rows: ABSENT
+    v108_logs/v108b.json                   per-row rows: ABSENT
+    v108_logs/v108_merged.json             per-row rows: ABSENT
+    v108_logs/v108_merged_clean.json       per-row rows: ABSENT
+    v65_logs/v65.json                      per-row rows: ABSENT (per-seed means only)
+    => qwen3-8b and phi-2 CANNOT be subset-restricted; V-124 models only.
+
+  store re-read (hrr_gold verbatim, seeds 42/123/456, no model, CPU):
+    seed 42   full-300 EM 0.9700000000  banked 0.9700000000  match=True
+    seed 123  full-300 EM 0.9766666667  banked 0.9766666667  match=True
+    seed 456  full-300 EM 0.9766666667  banked 0.9766666667  match=True
+    store wrong: full 7.67/300 (acc 0.9744) | answerable 0.67/204 (acc 0.9967)
+
+  V-124 completeness filter (value-blind, n_scored != 300):
+    excluded deepseek/deepseek-v4-pro     rep1 arms ['single_pass', 'evidence_in_prompt']
+    excluded deepseek/deepseek-v4-pro     rep2 arms ['single_pass', 'evidence_in_prompt']
+    excluded moonshotai/kimi-k3           rep1 arms ['single_pass']
+    excluded deepseek/deepseek-v4-flash   rep2 arms ['single_pass']
+    models with no complete repeat, excluded entirely: ['deepseek/deepseek-v4-pro']
+
+  model                  arm              full acc  ans acc   ans acc+form raw ER full raw ER ans cons ER ans
+  qwen3.8-2.4t-a95b      single_pass      0.4900    0.6078    0.8407       95.0       % 99.2      % 97.9       %
+  qwen3.8-2.4t-a95b      evidence_in_prompt 0.9567    0.9657    0.9657      
+  glm-5.3                single_pass      0.5517    0.6299    0.8848       94.3       % 99.1      % 97.2       %
+  glm-5.3                evidence_in_prompt 0.9950    0.9951    0.9951      
+  kimi-k3                single_pass      0.5500    0.6275    0.9020       94.3       % 99.1      % 96.7       %
+  kimi-k3                evidence_in_prompt 0.9933    1.0000    1.0000      
+  deepseek-v4-flash      single_pass      0.5033    0.5980    0.8873       94.9       % 99.2      % 97.1       %
+  deepseek-v4-flash      evidence_in_prompt 0.9833    0.9902    0.9902      
+
+  wrote v125_logs/v125_step5.json
+V125-STEP5-DONE

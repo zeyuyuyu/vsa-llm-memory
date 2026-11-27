@@ -1,0 +1,108 @@
+{
+ "_about": "Main Fig. 5; values transcribed from the Supplementary tables tab:babi and tab:threearena and the bAbI screening paragraph, each with the string it was read from (re-checked by make_figures.verify_sources)",
+ "groups": [
+  {
+   "label": "single pass succeeds",
+   "rows": [
+    {
+     "label": "bAbI task 1 (one hop)",
+     "memory": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "lora": [
+      0.998,
+      1.0,
+      1.0
+     ],
+     "prompt": 0.792,
+     "source": "appendix.tex: 'Handover & 1.0000 (1.0000, 1.0000, 1.0000)'; appendix.tex: '0.9993 (0.9980, 1.0000, 1.0000)'"
+    }
+   ]
+  },
+  {
+   "label": "a tuned fine-tune learns the task",
+   "rows": [
+    {
+     "label": "bAbI task 2 (two hops)",
+     "memory": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "lora": [
+      0.9714,
+      0.9738,
+      0.9714
+     ],
+     "lora_first": [
+      0.85,
+      0.6952,
+      0.8571
+     ],
+     "prompt": 0.386,
+     "source": "appendix.tex: '0.9722 (0.9714, 0.9738, 0.9714)'; appendix.tex: '0.8008 (0.8500, 0.6952, 0.8571)'"
+    }
+   ]
+  },
+  {
+   "label": "pairings given in each input",
+   "rows": [
+    {
+     "label": "arena B (queried pairs held out)",
+     "memory": [
+      0.99,
+      1.0,
+      0.998
+     ],
+     "lora": [
+      0.98,
+      0.895,
+      0.51
+     ],
+     "source": "appendix.tex: 'on B ($0.990$, $1.000$ and $0.998$)' ; 'reached $0.980$, $0.895$ and $0.510$'"
+    },
+    {
+     "label": "arena C (pairing drawn per instance)",
+     "memory": [
+      0.932,
+      0.932,
+      0.938
+     ],
+     "lora": [
+      0.515,
+      0.518,
+      0.515
+     ],
+     "source": "appendix.tex: 'on C ($0.932$, $0.932$ and $0.938$)' ; '($0.515$, $0.518$ and $0.515$; majority $0.515$)'"
+    }
+   ]
+  },
+  {
+   "label": "algebra not exact on the task",
+   "rows": [
+    {
+     "label": "bAbI task 15",
+     "memory": [
+      0.836
+     ],
+     "lora": [
+      0.991
+     ],
+     "source": "appendix.tex: 'reached only $0.836$'; appendix.tex: 'reached $0.991$'"
+    },
+    {
+     "label": "bAbI task 4",
+     "memory": [
+      0.691
+     ],
+     "lora": [
+      1.0
+     ],
+     "source": "appendix.tex: 'Exact codes reached $0.691$ and the fine-tune reached $1.000$'"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/data1/path/to/work/b54/b54_check.py", line 186, in _second_job
+    ok2 = [vocab[i] for i in got[a]] == want
+  File "/data1/path/to/work/b54/b54_check.py", line 186, in <listcomp>
+    ok2 = [vocab[i] for i in got[a]] == want
+IndexError: list index out of range
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/path/to/work/b54/b54_check.py", line 312, in <module>
+    second(sys.argv[2], sys.argv[3], sys.argv[4], W)
+  File "/data1/path/to/work/b54/b54_check.py", line 238, in second
+    for out in pool.imap_unordered(_second_job, [(s, stores[s], cl) for s, cl in per.items()]):
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/multiprocessing/pool.py", line 870, in next
+    raise value
+IndexError: list index out of range

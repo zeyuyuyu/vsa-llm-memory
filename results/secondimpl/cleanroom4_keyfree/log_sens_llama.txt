@@ -1,0 +1,13 @@
+setup llama done 80s
+[llama sdm_gauss M1024 V16 b4] test=10.73 cfg=('sdm', 'centre', 'gauss', 1, 'onehot', 1.0) 64s
+[llama sdm_gauss M1024 V16 b8] test=12.89 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 0.5) 69s
+[llama sdm_gauss M1024 V2 b4] test=55.95 cfg=('sdm', 'centre', 'gauss', 64, 'bits', 0.5) 72s
+[llama sdm_gauss M1024 V16 b16] test=16.45 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 1.0) 72s
+[llama sdm_gauss M1024 V2 b8] test=59.87 cfg=('sdm', 'centre', 'gauss', 16, 'bits', 1.0) 76s
+[llama sdm_gauss M1024 V2 b16] test=55.90 cfg=('sdm', 'centre', 'gauss', 64, 'bits', 0.5) 92s
+[llama sdm_gauss M256 V2 b4] test=56.52 cfg=('sdm', 'whiten', 'gauss', 4, 'bits', 1.0) 40s
+[llama sdm_gauss M256 V16 b4] test=11.68 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 1.0) 37s
+[llama sdm_gauss M256 V2 b8] test=56.37 cfg=('sdm', 'whiten', 'gauss', 16, 'bits', 0.5) 42s
+[llama sdm_gauss M256 V2 b16] test=64.72 cfg=('sdm', 'centre', 'gauss', 16, 'bits', 1.0) 41s
+[llama sdm_gauss M256 V16 b8] test=14.84 cfg=('sdm', 'whiten', 'gauss', 4, 'onehot', 1.0) 37s
+[llama sdm_gauss M256 V16 b16] test=20.50 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 1.0) 33s

@@ -1,0 +1,3 @@
+bits: 837774 job rows (dev + test); over budget or logged bits mismatching 0; not maximal 0 (PASS)
+scorer: 567 cell accuracies and region statistics recomputed by plain loops; max |difference| 5.551e-17 (PASS at 1e-9)
+rederive: float64 independent code (genuine primal loops) on 72 (encoder, M, V, bpf, arm) test cells (rep 0; 0 RLSc cells with p > 4,096 not recursed): agreement min 1.0000 mean 1.0000 (PASS at 0.99); NLMS primal loop vs dual form max rel |dW| 2.44e-15 (PASS at 1e-8); RLS recursion vs closed form max rel |dW| 6.64e-13 (PASS at 1e-6)

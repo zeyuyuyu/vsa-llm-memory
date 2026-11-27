@@ -1,0 +1,21 @@
+split: validation
+instances: 300 (type=compositional, dev)
+answer-coverage of gold triples: 1.0000 (300/300)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 46.76it/s]
+  prompt     seed 42  EM full=0.2400 covered=0.2400
+  prompt     seed 123  EM full=0.2400 covered=0.2400
+  prompt     seed 456  EM full=0.2400 covered=0.2400
+  prompt_ev  seed 42  EM full=0.9500 covered=0.9500
+  prompt_ev  seed 123  EM full=0.9500 covered=0.9500
+  prompt_ev  seed 456  EM full=0.9500 covered=0.9500
+  hrr_gold   seed 42  EM full=0.9700 covered=0.9700
+  hrr_gold   seed 123  EM full=0.9767 covered=0.9767
+  hrr_gold   seed 456  EM full=0.9767 covered=0.9767
+
+===== V-65 SCORING (prereg 679939f) =====
+  covered-slice EM: prompt=0.2400 prompt_ev=0.9500 hrr_gold=0.9744 (coverage 1.000, trunc -1.000)
+  >>> V-65 VERDICT: P1 ordering in 3/3: True | P2 gain>=.20: True (0.734) | P3 strict middle: True
+  per-row hits -> v131_logs/v65_rows.json
+V65-DONE
+V131A-WRAPPER-EXIT 0

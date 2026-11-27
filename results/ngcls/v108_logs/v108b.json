@@ -1,0 +1,192 @@
+{
+ "prereg": "6f3ea10",
+ "config": {
+  "models": [
+   "qwen/qwen3-235b-a22b",
+   "qwen/qwen3.5-397b-a17b",
+   "z-ai/glm-5",
+   "deepseek/deepseek-v4-flash"
+  ],
+  "n_eval": 300,
+  "budget": 1200,
+  "tokenizer": "Qwen/Qwen3-8B",
+  "workers": 8,
+  "max_tokens": 512,
+  "cap_usd": 22.0,
+  "keyfile": "/path/to/pace-home/.orkey",
+  "out": "/path/to/pace-home/v108_logs/v108b.json"
+ },
+ "prompt_tokens": {
+  "single_pass": 197733,
+  "evidence_in_prompt": 50974
+ },
+ "reference": {
+  "store": 0.974,
+  "store_seed_range": [
+   0.97,
+   0.977
+  ],
+  "phi2_single_pass": 0.253,
+  "phi2_evidence_in_prompt": 0.95,
+  "qwen3_8b_single_pass": 0.397,
+  "qwen3_8b_evidence_in_prompt": 0.953
+ },
+ "models": {
+  "qwen/qwen3-235b-a22b": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.4633333333333333,
+    "providers": [
+     "Alibaba"
+    ],
+    "usd": 0.4227682549999998,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.9266666666666666,
+    "providers": [
+     "Alibaba"
+    ],
+    "usd": 0.13684306999999996,
+    "first_errors": []
+   },
+   "minutes": 8.180867314338684
+  },
+  "qwen/qwen3.5-397b-a17b": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.36,
+    "providers": [
+     "Alibaba",
+     "AtlasCloud",
+     "DeepInfra",
+     "DigitalOcean",
+     "GMICloud",
+     "Novita",
+     "Parasail",
+     "Phala",
+     "StreamLake",
+     "Venice"
+    ],
+    "usd": 1.7729902499999997,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.7166666666666667,
+    "providers": [
+     "Alibaba",
+     "AtlasCloud",
+     "DeepInfra",
+     "DigitalOcean",
+     "GMICloud",
+     "Novita",
+     "Parasail",
+     "Phala",
+     "StreamLake",
+     "Venice"
+    ],
+    "usd": 0.5348099299999998,
+    "first_errors": []
+   },
+   "minutes": 24.048728477954864
+  },
+  "z-ai/glm-5": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.28,
+    "providers": [
+     "Amazon Bedrock",
+     "Baidu",
+     "DeepInfra",
+     "DigitalOcean",
+     "GMICloud",
+     "Novita",
+     "SiliconFlow",
+     "StreamLake",
+     "Venice",
+     "Z.AI"
+    ],
+    "usd": 0.44639096000000045,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.9333333333333333,
+    "providers": [
+     "Amazon Bedrock",
+     "Baidu",
+     "DeepInfra",
+     "DigitalOcean",
+     "GMICloud",
+     "Novita",
+     "SiliconFlow",
+     "StreamLake",
+     "Venice",
+     "Z.AI"
+    ],
+    "usd": 0.2673552800000001,
+    "first_errors": []
+   },
+   "minutes": 13.326074262460073
+  },
+  "deepseek/deepseek-v4-flash": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.4766666666666667,
+    "providers": [
+     "Alibaba",
+     "AtlasCloud",
+     "CoreWeave",
+     "DeepInfra",
+     "DigitalOcean",
+     "GMICloud",
+     "Mancer 2",
+     "NextBit",
+     "Novita",
+     "Parasail",
+     "Phala",
+     "SiliconFlow",
+     "StreamLake",
+     "Venice"
+    ],
+    "usd": 0.03762774918399996,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.99,
+    "providers": [
+     "Alibaba",
+     "AtlasCloud",
+     "CoreWeave",
+     "DeepInfra",
+     "DigitalOcean",
+     "GMICloud",
+     "Mancer 2",
+     "NextBit",
+     "Novita",
+     "Parasail",
+     "Phala",
+     "SiliconFlow",
+     "StreamLake",
+     "Venice"
+    ],
+    "usd": 0.010656817065999996,
+    "first_errors": []
+   },
+   "minutes": 4.203729903697967
+  }
+ },
+ "usd_total": 3.6294423112500036,
+ "usd_account": 3.630829448
+}

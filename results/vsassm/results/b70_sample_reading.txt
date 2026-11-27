@@ -1,0 +1,40 @@
+# B70 sample reading by the AI-assisted process (material: results/b70_sample_material.txt, b70_check.py sample;
+# 10 random queries per group, seed 70; tuple = rep, alias, stored label, gold, store, LAMc, BESTc, EXACT answers).
+# Read by the AI agent that ran B70, not by a human annotator. With two values a wrong memory is right half the time by
+# chance, so every "only X right" list mixes real reads with coin flips; the exact index's answer marks which is which.
+
+## Qwen3-8B, M = 256, V = 2, 64 bits per fact (the R2 cell with the largest |STORE - LAMc|: store 79.3, LAMc 81.4,
+## best of ten 84.1 = learned hashing LHI, exact index 89.6)
+- Only the store right (198 queries in the cell; 10 read): in 8 of 10 the exact index is also right, so these are real
+  reads that least squares loses: very short or non-English aliases ('Vir' -> Mahavira, 'IN' -> Indiana, 'ao' -> Angola,
+  'Edmund' -> Edmund of Scotland) and two aliases of one entity ('Diana Frances Spencer', 'Lady Diana Spencer').
+  The other 2 ('BWV 228' -> Fuerchte dich nicht, 'The Indomitable City' -> Sacramento) are chance hits (the exact index
+  is wrong on them).
+- Only LAMc right (297; 10 read): the exact index is right in all 10. Mostly near-copies or qualified forms of the label
+  ('Ottawa (Ontario)', 'Canton of Basel-Stadt', 'OFK Ostersund', 'NIN' -> Nine Inch Nails) plus nicknames ('Old
+  Ironsides' -> USS Constitution, 'Natwar' -> Krishna) that the store's cross-talk flips; the same kind of loss as in
+  B60 / B62 / B66's readings.
+- Only the best of ten right while both superposed memories are wrong (448; 10 read): the exact index is right in all
+  10. Renamings, translations and transliterations ('Communist Germany' -> German Democratic Republic, 'Pablo Primero'
+  -> Paul I of Russia, 'Fo' -> Gautama Buddha, 'Mo Yung Wai' -> Murong Wei, 'La Religieuse' -> The Nun): cases where a
+  per-fact index on a map trained on alias-label pairs finds the nearest stored label and the superposed reads, which
+  sum over all 256 stored facts, do not. 448 such queries against 198 + 297 in the two-way comparison: at this budget
+  the gap to the best memory is larger than the gap between the two superposed memories.
+
+## e5-base-v2, M = 1,024, V = 2, 64 bits per fact (store 72.0, LAMc 64.0, best of ten 81.4 = LHI, exact 84.7)
+- Only the store right (1,056; 10 read): exact index right in 8 of 10; near-copies of the label ('the Confederate
+  States of America', 'El Monte, California', 'Juve' -> Juventus F.C., 'Great Japanese Empire' -> Empire of Japan) that
+  least squares misses. Here least squares is a linear function of the 768-dimensional code (its dev-chosen map is a
+  linear random projection, alpha 10); with 1,024 stored binary values that is near the capacity of a linear read of
+  768 inputs, while the store's dev choice is the nonlinear three-fold sign map (65,280 coordinates). This explanation
+  is mine and post hoc (not a registered statistic).
+- Only LAMc right (695; 10 read): exact index right in all 10 ('UAE', 'BL' -> Basel-Landschaft, 'Jacob Duyck' -> Jacob
+  Duck, 'Zheng Sen' -> Koxinga): abbreviations and spelling variants.
+- Only the best of ten right (372; 10 read): exact index right in 7; transliterations and renamings again
+  ('Keshava' -> Krishna, 'Estados Unidos de Venezuela', 'BEL' -> Belgium).
+
+## Notes
+- No scoring artefact seen: every listed gold value matches the stored label's value in the record, and the exact
+  index's answer behaves as expected (right on near-copies, sometimes wrong on renamings).
+- No leak seen: the aliases are unseen query strings of stored test entities; the learned map of LHI was trained on the
+  training split's 2,803 alias-label pairs (B49), none of these entities.

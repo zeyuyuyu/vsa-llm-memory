@@ -1,0 +1,69 @@
+{
+ "prereg": "4bf0d4f",
+ "curve": [
+  {
+   "n_facts": 8,
+   "n": 120,
+   "prompt_acc": 0.9416666666666667,
+   "store_acc": 0.9333333333333333,
+   "prompt_tokens": 246.54166666666666,
+   "prompt_latency_s": 0.36852837006251016,
+   "store_latency_s": 0.025640382369359335
+  },
+  {
+   "n_facts": 16,
+   "n": 120,
+   "prompt_acc": 0.925,
+   "store_acc": 0.9333333333333333,
+   "prompt_tokens": 361.475,
+   "prompt_latency_s": 0.3659147540728251,
+   "store_latency_s": 0.0019639889399210614
+  },
+  {
+   "n_facts": 32,
+   "n": 120,
+   "prompt_acc": 0.9,
+   "store_acc": 0.9333333333333333,
+   "prompt_tokens": 596.65,
+   "prompt_latency_s": 0.3719687024752299,
+   "store_latency_s": 0.003137977917989095
+  },
+  {
+   "n_facts": 64,
+   "n": 120,
+   "prompt_acc": 0.925,
+   "store_acc": 0.925,
+   "prompt_tokens": 1042.8833333333334,
+   "prompt_latency_s": 0.38360639015833536,
+   "store_latency_s": 0.005468604962031046
+  },
+  {
+   "n_facts": 128,
+   "n": 120,
+   "prompt_acc": 0.875,
+   "store_acc": 0.7416666666666667,
+   "prompt_tokens": 1965.6,
+   "prompt_latency_s": 0.41290996273358666,
+   "store_latency_s": 0.010090941190719604
+  },
+  {
+   "n_facts": 256,
+   "n": 120,
+   "prompt_acc": 0.7416666666666667,
+   "store_acc": 0.24166666666666667,
+   "prompt_tokens": 3793.475,
+   "prompt_latency_s": 0.47965566913286845,
+   "store_latency_s": 0.01928913394610087
+  },
+  {
+   "n_facts": 512,
+   "n": 120,
+   "prompt_acc": 0.5916666666666667,
+   "store_acc": 0.016666666666666666,
+   "prompt_tokens": 7475.016666666666,
+   "prompt_latency_s": 0.6337291220823924,
+   "store_latency_s": 0.03771169781684876
+  }
+ ],
+ "verdict": "P1 gate: smallest scale prompt acc 0.9417 vs 0.950: True ; P2 prompt tokens grow 30.3x over a 64x scale increase while store query cost grows 1.47x: False ; P3 crossover at 16 facts (store 0.9333 > prompt 0.9250), <= 256: True ; at the crossover: prompt 361 tokens and 0.366s against the store's 0.0020s -- token ratio 361x, latency ratio 186x ; STORE ALSO DEGRADES with scale (0.9333 to 0.0167), so it has a capacity limit in the same regime and neither route survives -- which the manuscript's capacity sketch predicts."
+}

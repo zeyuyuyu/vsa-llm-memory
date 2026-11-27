@@ -1,0 +1,56 @@
+[
+ {
+  "arm": "extract_then_bind",
+  "seed": 42,
+  "acc": 0.915,
+  "trainable": 655618,
+  "secs": 10344.3,
+  "arena": "A",
+  "banked": 0.915
+ },
+ {
+  "arm": "extract_then_bind",
+  "seed": 123,
+  "acc": 0.913,
+  "trainable": 655618,
+  "secs": 6806.5,
+  "arena": "A",
+  "banked": 0.913
+ },
+ {
+  "arm": "extract_then_bind",
+  "seed": 456,
+  "acc": 0.913,
+  "trainable": 655618,
+  "secs": 537.5,
+  "arena": "A",
+  "banked": 0.913
+ },
+ {
+  "seed": 42,
+  "acc": 0.511,
+  "trainable": 5244930,
+  "secs": 112.2,
+  "arm": "spans",
+  "arena": "A",
+  "banked": 0.511
+ },
+ {
+  "seed": 123,
+  "acc": 0.499,
+  "trainable": 5244930,
+  "secs": 112.5,
+  "arm": "spans",
+  "arena": "A",
+  "banked": 0.499
+ },
+ {
+  "seed": 456,
+  "acc": 0.493,
+  "trainable": 5244930,
+  "secs": 126.1,
+  "arm": "spans",
+  "arena": "A",
+  "banked": 0.493
+ }
+]

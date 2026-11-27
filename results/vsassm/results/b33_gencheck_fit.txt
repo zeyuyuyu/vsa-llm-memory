@@ -1,0 +1,40 @@
+official: 200 stories, 1000 questions; text tracker answers 1000/1000; fit half = stories 1-100, check half = stories 101-200
+  question rule, window 2: 1862 of 2169 step ends explained; questions after an odd count: 0
+  question rule, window 3: 2038 of 2169 step ends explained; questions after an odd count: 0
+  question rule, window 4: 2169 of 2169 step ends explained; questions after an odd count: 0
+  question rule, window 5: 2090 of 2169 step ends explained; questions after an odd count: 0
+  question rule, window 6: 2037 of 2169 step ends explained; questions after an odd count: 0
+fit (random search 320 + local search from the best 8, on the fit half): {"P_DROP": 0.55, "P_GET": 0.62, "P_GET_HOLDER": 0.71, "R_GET": 0.22, "R_DROP": 0.13, "W_UNSEEN": 1.05, "INIT": "random", "WINDOW": 4, "STEP": 2, "N_Q": 5, "P_THERE_DROP": 0.228}  objective 2.495
+generated: 20000 stories, 100000 questions (seed 3); tracker answers 100000/100000
+  statistic                      p(check half)  p(all 200)   official(all)/generated proportions
+  C_answer                       0.8626        0.0405       bathroom 0.145/0.166  bedroom 0.158/0.166  garden 0.210/0.168  hallway 0.138/0.167  kitchen 0.147/0.167  office 0.202/0.166
+  C_bundle_objects               0.0030        0.0005       1 0.231/0.191  2 0.498/0.418  3 0.271/0.391
+  C_bundle_persons               0.2669        0.0110       1 0.025/0.019  2 0.106/0.070  3 0.249/0.247  4 0.620/0.665
+  C_drop_then_moved              0.0140        0.0065       moved 0.237/0.188  stayed 0.763/0.812
+  C_first_q                      0.0750        0.0495       <=10 0.100/0.132  <=12 0.110/0.105  <=16 0.100/0.135  <=2 0.025/0.043  <=4 0.190/0.136  <=6 0.210/0.167  <=8 0.180/0.158  >16 0.085/0.124
+  C_gap                          0.1119        0.0740       <=2 0.739/0.711  <=4 0.116/0.129  <=6 0.072/0.066  <=8 0.035/0.037  >8 0.037/0.057
+  C_get_actor_place_unstated     0.8036        0.6287       False 0.708/0.717  True 0.292/0.283
+  C_get_already_held             0.0035        0.0005       0 0.861/0.908  1 0.124/0.087  2 0.015/0.004
+  C_get_there                    1.0000        1.0000       True 1.000/1.000
+  C_get_unseen_object            0.8516        0.7401       False 0.450/0.445  True 0.550/0.555
+  C_kind                         0.2679        0.0370       drop 0.158/0.146  get 0.202/0.196  move 0.640/0.659
+  C_known_objects                0.0500        0.0025       1 0.348/0.317  2 0.456/0.414  3 0.196/0.269
+  C_pair_kinds                   0.3768        0.0110       drop-drop 0.017/0.013  drop-get 0.046/0.050  drop-move 0.086/0.079  get-drop 0.054/0.055  get-get 0.031/0.022  get-move 0.119/0.119  move-drop 0.095/0.082  move-get 0.123/0.123  move-move 0.429/0.457
+  C_qobject                      0.9735        0.8436       apple 0.326/0.333  football 0.344/0.331  milk 0.330/0.336
+  C_qtype                        0.5807        0.5382       dropped 0.705/0.695  held 0.295/0.305
+  C_same_actor_after_move        0.9675        0.8546       False 0.752/0.750  True 0.248/0.250
+  C_since_last_event             0.7751        0.5997       <=0 0.253/0.242  <=1 0.234/0.246  <=2 0.206/0.197  <=3 0.176/0.175  <=5 0.131/0.140
+  C_story_len                    0.1069        0.0055       <=12 0.055/0.037  <=14 0.090/0.061  <=16 0.140/0.092  <=18 0.105/0.109  <=20 0.135/0.116  <=22 0.085/0.113  <=24 0.145/0.101  <=26 0.075/0.084  <=28 0.055/0.068  <=32 0.055/0.098  >32 0.060/0.120
+  C_verb_drop                    0.0500        0.6252       discarded 0.263/0.254  dropped 0.250/0.249  left 0.260/0.250  put down 0.227/0.248
+  C_verb_get                     0.3848        0.2909       got 0.270/0.251  grabbed 0.263/0.249  picked up 0.233/0.249  took 0.233/0.250
+  C_verb_move                    0.9990        0.9765       journeyed 0.201/0.199  moved 0.203/0.200  travelled 0.201/0.201  went 0.197/0.201  went back 0.198/0.200
+  F1_kind_holds0                 0.8871        0.2984       get 0.251/0.242  move 0.749/0.758
+  F1_kind_holds1+                0.0035        0.0015       drop 0.517/0.550  get 0.092/0.068  move 0.391/0.383
+  F3_drop_there                  0.1444        0.2664       False 0.788/0.770  True 0.212/0.230
+  F4_same_actor_after_drop       0.7366        0.5042       False 0.661/0.648  True 0.339/0.352
+  F4_same_actor_after_get        0.8931        0.2399       False 0.606/0.586  True 0.394/0.414
+GATE G-DIST: 26 statistics on the check half (story bootstrap, B = 2000, p floor 0.0005), min p = 0.0030 (threshold 0.05/26 = 0.0019); tracker 1000/1000 official, 100000/100000 generated; question rule 5947/5947 generated -> PASS
+
+real	6m39.585s
+user	6m25.917s
+sys	0m1.725s

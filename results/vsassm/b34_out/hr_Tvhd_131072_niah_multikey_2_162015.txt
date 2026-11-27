@@ -1,0 +1,11 @@
+store 131072/niah_multikey_2/162015  arm T-vhd  x32  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'R': 6007, 'B': 1199, 'db': 16, 'rd': 80, 'wv': 255}  cells/C 0.998
+  array disp: 1534720 cells, flipped 0.3754
+  array rows: 1531785 cells, flipped 0.3744
+failed 85 of 150
+  key 'rural-messy'  want ['3149341']  got ['6562925']
+    j=0 bucket 566 sigma 1229 decoded 5325 -> row 4741 (true row 4413); in that row the best candidate is 11359 (6562925, last=1) at similarity 61 of 255; the true value+flag code at -
+  key 'unbiased-pharmacopoeia'  want ['6201627']  got ['6375029']
+    j=0 bucket 698 sigma 7666 decoded 7666 -> row 1378 (true row 1378); in that row the best candidate is 9577 (6375029, last=1) at similarity 65 of 255; the true value+flag code at 59
+  key 'momentous-mukluk'  want ['4281356']  got ['3614368']
+    j=0 bucket 597 sigma 77 decoded 77 -> row 4419 (true row 4419); in that row the best candidate is 8961 (3614368, last=1) at similarity 63 of 255; the true value+flag code at 43

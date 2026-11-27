@@ -1,0 +1,114 @@
+B42 literature check (prereg/B42_label_free_discrete_prereg.md). Sources verified 2026-11-18 from the arXiv full text
+unless marked "abstract only"; venues from the PDF headers, PMLR/NeurIPS/ACL Anthology pages. Each item is marked, after
+the verdict, as SUPPORTS / CONFLICTS / NO PRECEDENT with respect to the B42 result (see the last section).
+
+== Methods B42 implements (what the papers prescribe, and how B42 follows it) ==
+
+[M1] van den Oord, Vinyals, Kavukcuoglu. Neural Discrete Representation Learning. NeurIPS 2017. arXiv:1711.00937.
+     Loss log p(x|z_q) + ||sg[z_e] - e||^2 + beta ||z_e - sg[e]||^2; beta = 0.25 (robust 0.1-2.0); gradient copied from
+     z_q to z_e ("similar to the straight-through estimator"). The EMA codebook update is in Appendix A.1 (gamma 0.99) and
+     was NOT used for the paper's experiments. B42 vq: beta 0.25, straight-through, EMA 0.99.
+     Also: mapping each of 128 latent codes to its most likely phoneme gave 49.3% on a 41-way task (baseline 7.2%):
+     unsupervised codes only partly align with the true discrete units.
+[M2] Razavi, van den Oord, Vinyals. Generating Diverse High-Fidelity Images with VQ-VAE-2. NeurIPS 2019. arXiv:1906.00446.
+     First to train with the EMA codebook update ("as a replacement for the codebook loss").
+[M3] Jang, Gu, Poole. Categorical Reparameterization with Gumbel-Softmax. ICLR 2017. arXiv:1611.01144.
+     Start at a high temperature and anneal to a small non-zero one; VAE schedule tau = max(0.5, exp(-rt)); straight-
+     through Gumbel = arg-max forward, soft-sample gradient backward. B42 gumbel: tau 2 -> 0.1, hard arg-max at test.
+[M4] Maddison, Mnih, Teh. The Concrete Distribution. ICLR 2017. arXiv:1611.00712. The same relaxation; temperature
+     choice "an empirical question".
+[M5] Bengio, Leonard, Courville. Estimating or Propagating Gradients Through Stochastic Neurons for Conditional
+     Computation. arXiv:1308.3432 (2013, preprint). Names the straight-through estimator. B42 st arm and the st clean-up.
+[M6] Trauble, Goyal, Rahaman, Mozer, Kawaguchi, Bengio, Scholkopf. Discrete Key-Value Bottleneck. ICML 2023 (PMLR
+     202:34431-34455). arXiv:2207.11240. Frozen encoder -> C fixed Gaussian random projections into C heads; each head
+     snaps to its nearest key (L2); keys initialised without labels by VQ-style EMA (decay 0.95, dead-key expiry) and
+     then FROZEN; values learned by the task loss and averaged over heads. B42 dkvb follows this with k-means keys (an
+     offline version of the EMA initialisation) and values in the code space (D = 2,048) averaged over heads.
+[M7] Dhariwal et al. Jukebox. arXiv:2005.00341 (2020): reset a code to a random current encoder output when its mean
+     usage falls below a threshold. B42 vq dead-code restart.
+[M8] Lancucki et al. Robust Training of Vector Quantized Bottleneck Models. IJCNN 2020. arXiv:2005.08520: k-means++
+     initialisation on encoder outputs, periodic re-estimation. B42 vq: spherical k-means++ initialisation.
+[M9] Yu et al. Vector-quantized Image Modeling with Improved VQGAN. ICLR 2022. arXiv:2110.04627: l2-normalised codes and
+     encoder outputs (cosine lookup) and low-dimensional factorised lookup raise codebook usage. B42 vq: cosine lookup.
+[M10] Baevski, Zhou, Mohamed, Auli. wav2vec 2.0. NeurIPS 2020. arXiv:2006.11477: diversity loss = entropy of the
+     averaged softmax over codebook entries across a batch (weight 0.1), hard Gumbel with straight-through, tau 2 ->
+     0.5/0.1. B42 gumbel/st: the same diversity term at weight 0, 0.1 or 1.
+[M11] Zeghidour et al. SoundStream. IEEE/ACM TASLP 2022 (volume not verified). arXiv:2107.03312: k-means init on the
+     first batch, dead-code replacement when EMA usage < 2.
+[M12] Huh et al. Straightening Out the Straight-Through Estimator. ICML 2023. arXiv:2305.08842: index collapse comes
+     from a mismatch between the encoder-output and code distributions ("internal codebook covariate shift");
+     replacement methods treat the symptom.
+
+== Anisotropy, centring and whitening of LM states ==
+
+[A1] Ethayarajh. How Contextual are Contextualized Word Representations? EMNLP-IJCNLP 2019, 55-65. arXiv:1909.00512:
+     representations are anisotropic in every layer (GPT-2 last layer: two random words have cosine near 0.99); a
+     static embedding explains < 5% of a word's contextual variance on average; self-similarity drops in upper layers.
+[A2] Mu & Viswanath. All-but-the-Top. ICLR 2018. arXiv:1702.01417: removing the common mean vector and a few dominating
+     directions improves similarity, analogy and classification - on static word vectors, not LM states.
+[A3] Su, Cao, Liu, Ou. Whitening Sentence Representations for Better Semantics and Faster Retrieval. arXiv:2103.15316
+     (2021; no peer-reviewed venue found): mean 0 / covariance identity makes BERT sentence embeddings isotropic,
+     competitive STS.
+[A4] Huang et al. WhiteningBERT. Findings of EMNLP 2021, 238-244. arXiv:2104.01767: whitening boosts unsupervised
+     sentence matching and retrieval.
+[A5] Timkey & van Schijndel. All Bark and No Bite: Rogue Dimensions. EMNLP 2021, 4527-4546. arXiv:2109.04404: 1-3 rogue
+     dimensions dominate cosine; z-scoring corrects it; after removing 5 dimensions same-word-type self-similarity is
+     high in all layers ("information about word identity is preserved") - a similarity statistic, not a decoder.
+     None of A1-A5 claims that centring or whitening yields consistent per-symbol (identity) codes.
+
+== Unsupervised discrete units against supervised labels ==
+
+[U1] Locatello et al. Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations. ICML
+     2019. arXiv:1811.12359 (abstract + header): unsupervised disentanglement is impossible without inductive biases on
+     models and data; good models cannot be identified without supervision.
+[U2] Chorowski, Weiss, Bengio, van den Oord. Unsupervised speech representation learning using WaveNet autoencoders.
+     IEEE/ACM TASLP 2019. arXiv:1901.08810: VQ tokens mapped to their most probable phoneme reach 64.5% frame accuracy
+     only with 32,768 tokens (gains flatten after 4,096); the same architecture trained with phoneme labels reaches
+     80%. Unsupervised codes split each true unit across many codes and stay below the supervised result.
+[U3] Hsu, Dorrell, Whittington, Wu, Finn. Disentanglement via Latent Quantization. NeurIPS 2023. arXiv:2305.18378
+     (abstract only): scalar per-dimension codebooks plus strong weight decay improve modularity and explicitness -
+     quantization as a useful inductive bias (counterpoint).
+
+== Binding and learning through HRR ==
+
+[B1] Feng & Steinhardt. How do Language Models Bind Entities in Context? ICLR 2024. arXiv:2310.17191: LMs attach
+     binding-ID vectors by addition; binding IDs form a continuous subspace.
+[B2] Ganesan et al. Learning with Holographic Reduced Representations. NeurIPS 2021. arXiv:2109.02157: backpropagating
+     through HRR "does not learn in practice" without their projection step (results fall to random guessing); class
+     vectors were fixed random vectors, and learning them gave no significant difference. Supervised setting.
+[B3] Schlag & Schmidhuber. Learning to Reason with Third Order Tensor Products. NeurIPS 2018. arXiv:1811.12143 (search-
+     result abstract only): end-to-end TPR-RNN on bAbI. Details not checked; cite only as an end-to-end binding model.
+
+== Classification after the verdict (arena C, the primary bar: every label-free arm FAILS on both encoders) ==
+
+SUPPORTS
+  [U2] Chorowski et al. 2019 and [M1] van den Oord et al. 2017: unsupervised VQ codes only partly align with the true
+       discrete units and stay well below the supervised result. B42: label-free codes put 3-44% of a symbol's mentions
+       on its most common code (naming head 99.6-100%), and recover <= 0.11 of the gap.
+  [U1] Locatello et al. 2019: without supervision or a matching inductive bias, the intended factors are not
+       identifiable. B42: the only signal is the memory's answer; with it, no family recovers symbol identity; with the
+       identity loss added (gate G1) the same Gumbel / straight-through code paths reach 0.98-1.00 dev.
+  [A1] Ethayarajh 2019: anisotropy, and lower self-similarity of the same word in upper layers. B42: uncentred VQ
+       collapses to one code; the same hex string in the query and in the context gets different discrete codes
+       (Phi-2 dkvb, hand-read cases: the query and the context role with the same hex string share 0-6 of 8 head keys); hop-1 clean-up correct in only 3-18% of chains.
+  [M12] Huh et al. 2023: index collapse from a mismatch between encoder outputs and codes. B42 smoke: one code used
+       until z was centred.
+  [B2] Ganesan et al. 2021: backpropagating through HRR does not learn without help. B42 finds a sharper reason in the
+       published arena-C chain: the arg-max clean-up passes the answer loss to only 2 of 130 codes per instance.
+SUPPORTS THE NARROWER READING (no conflict)
+  [A2]-[A5] Mu & Viswanath 2018; Su et al. 2021; Huang et al. 2021; Timkey & van Schijndel 2021: centring / whitening
+       / standardisation remove the common direction and improve similarity and retrieval. B42 agrees on the geometry
+       (different-symbol cosine 0.92-0.97 -> 0.01-0.19 after centring or ZCA) but none of these papers claims that it
+       makes per-symbol codes consistent, and B42 finds it does not (accuracy unchanged, R -0.08 to 0.11).
+  [M6] Trauble et al. 2023: DKVB works with frozen label-free keys because its VALUES are trained with class labels.
+       B42's dkvb trains values only through the memory's answer and fails; with oracle surface-form keys (labels) and a
+       straight-through clean-up it reaches 0.72-0.74. Not a conflict: the label-free part of DKVB is the key
+       assignment, and that part is what fails here.
+CONFLICTS (in spirit, different setting)
+  [U3] Hsu et al. 2023: latent quantization is a helpful inductive bias for disentangling generative factors. B42 sees
+       no benefit of discreteness over the continuous maps (all FAIL); their setting (independent generative factors,
+       reconstruction loss) differs from per-mention identity under a memory-answer loss. Abstract only.
+NO PRECEDENT FOUND
+  - A test of label-free discrete interfaces (VQ, DKVB, Gumbel / straight-through) as the front end of a VSA / HRR
+    memory over frozen LM states, or of the gradient path through an arg-max clean-up in a multi-hop HRR chain.
+  - [B1] Feng & Steinhardt 2024 (binding IDs) and [B3] Schlag & Schmidhuber 2018 are background; B42 does not test them.

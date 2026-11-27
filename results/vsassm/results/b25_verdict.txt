@@ -1,0 +1,210 @@
+# B25 verdict (prereg/B25_pcm_device_model_prereg.md): the RULER vector stores (bipolar) on a measured PCM device
+# model (Joshi et al. 2020), crossbar mapping after Karunaratne et al. 2020, with a cited energy estimate
+
+Stores: the 50 B22 stores, 4776 probed keys. Registered check: the ideal B1 path reproduces B22 amendment 2 on every
+store (asserted per store in b25_pcm.py): B1 ideal at 16 pairs per vector reads 4776 / 4776.
+
+Ideal stores (no device): fraction of keys exact (stores fully exact of 50)
+  B1  16/vec 1.0000 (50)  32/vec 1.0000 (50)  64/vec 0.9992 (46)
+  ML  16/vec 1.0000 (50)  32/vec 1.0000 (50)  64/vec 0.9998 (49)
+
+Table 1: fraction of the 4776 keys read exactly, WITH global drift compensation (GDC)
+  S = store crossbar on PCM (clean-up digital); C = clean-up crossbar on PCM (store digital); SC = both
+  arm | load           60 s      1 h      1 d     30 d      1 y
+  B1-S | 16          1.0000   1.0000   1.0000   1.0000   1.0000
+  B1-S | 32          1.0000   1.0000   1.0000   1.0000   1.0000
+  B1-S | 64          0.9992   0.9992   0.9992   0.9992   0.9992
+  B1-C | 16          1.0000   1.0000   1.0000   1.0000   1.0000
+  B1-C | 32          1.0000   1.0000   1.0000   1.0000   1.0000
+  B1-C | 64          0.9990   0.9990   0.9987   0.9985   0.9990
+  B1-SC | 16         1.0000   1.0000   1.0000   1.0000   1.0000
+  B1-SC | 32         1.0000   1.0000   1.0000   1.0000   1.0000
+  B1-SC | 64         0.9990   0.9990   0.9987   0.9985   0.9990
+  ML-S | 16          1.0000   1.0000   1.0000   1.0000   1.0000
+  ML-S | 32          1.0000   1.0000   1.0000   1.0000   1.0000
+  ML-S | 64          1.0000   0.9998   1.0000   1.0000   1.0000
+  ML-C | 16          1.0000   1.0000   1.0000   1.0000   1.0000
+  ML-C | 32          1.0000   1.0000   1.0000   1.0000   1.0000
+  ML-C | 64          0.9998   0.9998   1.0000   0.9998   0.9998
+  ML-SC | 16         1.0000   1.0000   1.0000   1.0000   1.0000
+  ML-SC | 32         1.0000   1.0000   1.0000   1.0000   1.0000
+  ML-SC | 64         1.0000   0.9998   1.0000   1.0000   0.9992
+
+Table 2: fraction of the 4776 keys read exactly, WITHOUT compensation
+  S = store crossbar on PCM (clean-up digital); C = clean-up crossbar on PCM (store digital); SC = both
+  arm | load           60 s      1 h      1 d     30 d      1 y
+  B1-S | 16          1.0000   1.0000   1.0000   1.0000   1.0000
+  B1-S | 32          1.0000   1.0000   1.0000   1.0000   1.0000
+  B1-S | 64          0.9992   0.9992   0.9992   0.9992   0.9992
+  B1-C | 16          1.0000   0.9954   0.5184   0.0000   0.0000
+  B1-C | 32          1.0000   0.9782   0.5052   0.0054   0.0000
+  B1-C | 64          0.9973   0.9280   0.4985   0.0352   0.0004
+  B1-SC | 16         1.0000   0.9954   0.5184   0.0000   0.0000
+  B1-SC | 32         1.0000   0.9782   0.5052   0.0054   0.0000
+  B1-SC | 64         0.9973   0.9280   0.4985   0.0352   0.0004
+  ML-S | 16          1.0000   1.0000   0.9996   0.3691   0.0000
+  ML-S | 32          1.0000   1.0000   0.9927   0.3725   0.0027
+  ML-S | 64          1.0000   0.9994   0.9663   0.4183   0.0211
+  ML-C | 16          1.0000   1.0000   1.0000   0.8122   0.0149
+  ML-C | 32          1.0000   1.0000   0.9994   0.7368   0.0536
+  ML-C | 64          1.0000   0.9998   0.9872   0.6725   0.1336
+  ML-SC | 16         1.0000   0.9539   0.0000   0.0000   0.0000
+  ML-SC | 32         1.0000   0.8731   0.0000   0.0000   0.0000
+  ML-SC | 64         1.0000   0.7948   0.0006   0.0000   0.0000
+
+Diagnostics (means over the 50 stores):
+  60 s  clean-up GDC scale alpha 0.947 | B1 store bit errors 0.00e+00 | ML store rms error / rms(m) 0.240 (GDC)
+  1 h   clean-up GDC scale alpha 0.756 | B1 store bit errors 0.00e+00 | ML store rms error / rms(m) 0.247 (GDC)
+  1 d   clean-up GDC scale alpha 0.635 | B1 store bit errors 0.00e+00 | ML store rms error / rms(m) 0.258 (GDC)
+  30 d  clean-up GDC scale alpha 0.527 | B1 store bit errors 0.00e+00 | ML store rms error / rms(m) 0.275 (GDC)
+  1 y   clean-up GDC scale alpha 0.460 | B1 store bit errors 0.00e+00 | ML store rms error / rms(m) 0.291 (GDC)
+
+Descriptive extras (30 days, 16 pairs per vector, GDC; no bars):
+  B1-S   noise x2..x32: x2 1.0000  x4 1.0000  x8 0.9851  x16 0.0023  x32 0.0000
+  B1-C   noise x2..x32: x2 1.0000  x4 1.0000  x8 0.2456  x16 0.0000  x32 0.0000
+  B1-SC  noise x2..x32: x2 1.0000  x4 0.9996  x8 0.0029  x16 0.0000  x32 0.0000
+  B1-SC  ADC 6-bit 1.0000  ADC 4-bit 1.0000  read noise redrawn per MVM 1.0000
+  ML-S   noise x2..x32: x2 1.0000  x4 0.9001  x8 0.0000  x16 0.0000  x32 0.0000
+  ML-C   noise x2..x32: x2 1.0000  x4 1.0000  x8 0.9391  x16 0.0000  x32 0.0000
+  ML-SC  noise x2..x32: x2 1.0000  x4 0.3572  x8 0.0000  x16 0.0000  x32 0.0000
+  ML-SC  ADC 6-bit 1.0000  ADC 4-bit 0.0015  read noise redrawn per MVM 1.0000
+  B1 store bit errors at x2..x32: x2 0.000  x4 0.021  x8 0.123  x16 0.276  x32 0.375
+  clean-up GDC alpha at x2..x32:  x2 0.537  x4 0.574  x8 0.711  x16 1.244  x32 3.338  (x1: 0.527)
+
+Bars:
+  H1 B1-SC GDC 16/vec 1 d >= 99.5%: PASS (1.0000)
+  H2 B1-SC GDC 16/vec 30 d >= 99.5%: PASS (1.0000)
+  H3 ML-SC GDC 16/vec 1 d >= 99.5%: PASS (1.0000)
+  H4 B1-SC GDC 1 d within 0.5 points of ideal at 32 and 64/vec: PASS (32/vec 1.0000 vs ideal 1.0000; 64/vec 0.9987 vs ideal 0.9992)
+
+Predictions:
+  P1 GDC, every arm at 16 and 32/vec, every time >= 99.9%: held (lowest B1-S 16/vec 60 s: 1.0000)
+  P2 GDC at 64/vec within 0.2 points of ideal: held (largest gap B1-C 30 d: -0.0006); ideal B1 64/vec >= 99%: held (0.9992)
+  P3 B1-C none >= 99.5% at 60 s and 1 h: held (1.0000, 0.9954)
+  P3 B1-C none < 99.5% at 1 d: held (0.5184)
+  P3 B1-C none < 20% at 30 d: held (0.0000)
+  P3 B1-SC none >= 99.5% at 60 s and 1 h: held (1.0000, 0.9954)
+  P3 B1-SC none < 99.5% at 1 d: held (0.5184)
+  P3 B1-SC none < 20% at 30 d: held (0.0000)
+  P3 B1-S unchanged by compensation: held 
+  P3 ML-S none >= 99% at 1 d, < 80% at 30 d, < 20% at 1 y: held (0.9996, 0.3691, 0.0000)
+  P3 ML-C none >= 99% at 1 d, < 80% at 30 d, < 20% at 1 y: WRONG (1.0000, 0.8122, 0.0149)
+  P3 ML-SC none < 99.5% at 1 h and < 5% at 1 d: held (0.9539, 0.0000)
+  P4 B1-SC >= 99.5% up to x4, < 99.5% at x8: held (x4 0.9996, x8 0.0029)
+  P4 B1-S >= 99.5% up to x4, > 90% at x8, < 50% at x16: held (x4 1.0000, x8 0.9851, x16 0.0023)
+  P4 ML-SC >= 99.5% at x2, < 99.5% at x4: held (1.0000, 0.3572)
+  P4 6-bit ADC >= 99.5% for both forms: held (B1 1.0000, ML 1.0000)
+  P4 read noise redrawn per MVM within 0.1 points: held (B1 1.0000 vs 1.0000, ML 1.0000 vs 1.0000)
+
+Energy estimate (cited per-operation figures x operation counts; an estimate, not a measurement):
+  One clean-up step = N x d MACs; largest store N = 5993, d = 8192 -> 49.1 M MACs; a one-value key takes 2 steps.
+  In-memory (PCM crossbar), per step:
+    Karunaratne 2020, AM search 9.44 nJ / (22 x 10,000) = 42.9 fJ/MAC -> 2.11 uJ
+    Le Gallo 2023, 9.76 TOPS/W (1-phase, 8-bit I/O) = 0.205 pJ/MAC -> 10.1 uJ
+    Le Gallo 2023, 2.48 TOPS/W (4-phase)            = 0.806 pJ/MAC -> 39.6 uJ
+    store-row read (B1: d sense-amplifier reads x 9.8 fJ) = 80 pJ (negligible); digital unbinding neglected
+  GPU (NVIDIA A100 SXM, datasheet), per step:
+    compute at peak, INT8 tensor 624 TOPS  : 1.28 pJ/MAC -> 63 uJ
+    compute at peak, FP16 tensor 312 TFLOPS: 2.56 pJ/MAC -> 126 uJ
+    compute at peak, FP32 19.5 TFLOPS      : 41.03 pJ/MAC -> 2014 uJ
+    one unbatched read, memory-bound (INT8 codebook at 2,039 GB/s, 400 W): 196 pJ/MAC -> 9.6 mJ
+  Ratio GPU / in-memory per step: best case for the GPU (INT8 at peak) vs Karunaratne 30x, vs Le Gallo 1-phase 6.3x,
+  vs Le Gallo 4-phase 1.6x; unbatched memory-bound GPU read vs Le Gallo 4-phase 243x.
+  Footprint: 2 x N x d = 98.2 M PCM devices for the largest codebook (0.2 um^2 each per Karunaratne: 20 mm^2 of
+  devices), 11.7 times the 64 x 256 x 256 = 4.19 M weights of one Le Gallo 2023 chip.
+  Sources: Karunaratne et al., Nat. Electron. 3, 327-337 (2020), Table 1 and Extended Data Tables 1-2; Le Gallo et al.,
+  Nat. Electron. 6, 680-693 (2023), abstract/Sec. VI and Extended Data Table I footnote b (arXiv:2212.02872); NVIDIA A100
+  Tensor Core GPU datasheet (SXM 80GB column).
+
+Citations and the exact numbers used (each checked against the paper itself):
+  [J20] Joshi, V. et al. Accurate deep neural network inference using computational phase-change memory. Nat. Commun.
+    11, 2473 (2020). Main text: "For all levels, we achieve a standard deviation less than 1.2 uS" (programming noise,
+    Fig. 3b; median 0.94 uS over 11 levels, measured ~25 s after programming); iterative programming "within the range
+    of 0-25 uS"; "In our PCM devices, nu ~ 0.06 on average"; without compensation the accuracy "quickly decreases
+    down to 10% (random guessing) within approximately 1000 s"; Methods: "on-chip 8-bit cyclic analog-to-digital
+    converter", "Global drift compensation (GDC) method" (summed column currents under a calibration voltage divided
+    by the stored sum of the known programmed conductances). Supplementary Note 2: Eqs. 8-9 (mean and sd of nu vs target
+    conductance at 20 s: 0.055 / 0.0043 at 25 uS, 0.08 / 0.033 at 0 uS), Eqs. 10-11 (Q_s = 0.0388/G_T^0.5729 (t/1.089e5
+    s)^-nu_q), Eqs. 12-17 (programming noise at T0 = 27.36 s and T1 = 55.39 s; drift from T1; 1/f read noise with
+    gamma = 1.21, T_read = 250 ns, f_min = 1/(t + T_read)); Supplementary Fig. 16 (programming-noise sd ~1.07 uS at T0
+    and ~1.12 uS at T1 at 25 uS, ~0.15-0.2 uS at 0 uS; we use 1.2 and 0.2 uS per event). Data to 1e5 s on 10,000 devices.
+  [LS20] Le Gallo, M. & Sebastian, A. An overview of phase-change memory device physics. J. Phys. D: Appl. Phys. 53,
+    213002 (2020), Sec. 4.2: "The drift exponent nu_R, which typically has a value of 0.1 for the RESET state, exhibits
+    significant inter-device and intra-device variability ... the drift exponent is lower for the SET state (< 0.05)";
+    "Drift variability across different resistance states and devices is arguably the most significant challenge for
+    multi-level storage in PCM".
+  [K20] Karunaratne, G. et al. In-memory hyperdimensional computing. Nat. Electron. 3, 327-337 (2020). Binary
+    hypervectors (d = 10,000; "Binary '1' components are programmed as crystalline states and binary '0' components
+    are programmed as amorphous states") in PCM crossbars, up to 760,000 devices; Table 1: average energy per query of the
+    AM search 1,110 nJ (all-CMOS) vs 9.44 nJ (PCM crossbar), 117.5x; total 2,584 vs 430.3 nJ, 6.01x; exclusive AM
+    modules 1,104 vs 3.30 nJ; Extended Data Table 1: language task AM c = 22 classes, d = 10,000; Extended Data Table 2:
+    read voltage 0.1 V, 1 uA per conducting device, AM readout 100 ns, 12 pJ per ADC read, 9.8 fJ per sense-amp read.
+  [LG23] Le Gallo, M. et al. A 64-core mixed-signal in-memory compute chip based on phase-change memory for deep neural
+    network inference. Nat. Electron. 6, 680-693 (2023) (arXiv:2212.02872): 64 cores of 256 x 256 PCM unit cells, "a
+    maximal throughput of 63.1 TOPS at an energy efficiency of 9.76 TOPS W-1 for 8-bit input/output matrix-vector
+    multiplications"; "2.48 - 9.76 TOPS/W in 4-phase (high-precision) - 1-phase (low-precision) read mode";
+    Extended Data Table I note b: "1 multiply-and-accumulate = 2 OPs"; "> 4M weights" per chip.
+  [A100] NVIDIA A100 Tensor Core GPU datasheet: FP32 19.5 TFLOPS; FP16 Tensor Core 312 TFLOPS (624 with sparsity);
+    INT8 Tensor Core 624 TOPS (1,248 with sparsity); 80GB SXM: HBM2e 2,039 GB/s, max TDP 400 W.
+  [K21] Karunaratne, G. et al. Robust high-dimensional memory-augmented neural networks. Nat. Commun. 12, 2468 (2021)
+    (abstract): bipolar/binary high-dimensional key vectors in more than 256,000 PCM devices, few-shot Omniglot accuracy
+    close to 32-bit software.
+
+Reading of the results (written after the run):
+- Mapping. The real-valued mapping the referee asked for is the bipolar store: every FHRR phase rounded to 0 or pi gives
+  a +-1 code, binding is a sign flip, and each stored or codebook component is one differential pair of PCM devices.
+  The ideal 1-bit store reproduces B22 amendment 2 on every store (4,776 / 4,776, asserted per store).
+- With global drift compensation (one scale per array, Joshi et al.'s GDC), the store with BOTH the stored vectors and
+  the clean-up codebook in PCM crossbars reads all 4,776 probed keys exactly at every time from 60 s to 1 year, at the
+  RULER load (16 pairs per vector) and at 32, for both the 1-bit (B1) and the multi-level (ML) form. At 64 pairs per
+  vector the ideal stores already miss keys (B1 4 keys, 0.9992; ML 1 key, 0.9998) and the PCM arms stay within 0.07
+  points of them (lowest: B1-C/SC 0.9985 at 30 days; ML-SC 0.9992 at 1 year).
+- Which stage limits. At the measured parameters, with GDC, neither: the B1 store read made no bit errors at any time
+  (25 uS against a RESET device; the sign survives the 54% conductance decay of a year), and the ML store read carried
+  an rms error of 0.25-0.30 of rms(m) (B22's read-noise scale r ~ 0.3, against B22's exact range r <= 2). The clean-up
+  similarity averages device errors over 8,192 components, so they add only ~0.004 to it. Without compensation the
+  limiting stage is the clean-up for B1 (B1-S reads signs, which drift does not change; B1-C/SC fall to 99.54% at 1 h,
+  51.8% at 1 day and 0% at 30 days, because the common decay, GDC alpha 0.95 -> 0.46 from 60 s to 1 year, pulls a match
+  similarity of ~0.8 under the fixed 0.5 threshold), and both stages for ML (ML-SC: 95.4% at 1 h, 0% at 1 day). This is
+  the failure Joshi et al. report for a network without compensation (accuracy "quickly decreases down to 10% ...
+  within approximately 1000 s"), and the same one-scale-per-array calibration removes it.
+- Margin (descriptive; all device noise sources multiplied by k, 30 days, 16 per vector, GDC). B1-SC stays exact up to
+  k = 4 (0.9996) and fails at k = 8 (0.0029). Alone, the B1 store survives k = 8 (0.985, about 12% bit errors) and fails
+  at k = 16; the clean-up fails at k = 8 (0.246). A post hoc check on one store (not registered) shows why: at large k
+  the RESET devices' clamped noise adds conductance that the summed-current GDC counts as signal but the differential
+  output cancels, so GDC over-estimates the gain (true gain / GDC alpha = 0.988 at k = 1, 0.86 at k = 4, 0.58 at k = 8,
+  0.09 at k = 16) and every match similarity is scaled toward or under 0.5. The clean-up's break at k = 8 is therefore
+  the calibration rule, not the averaging; a calibration on differential reference columns would remove that bias (not
+  tested). The ML form breaks earlier and at the store read (ML-S 0.900 at k = 4, ML-C 1.000 at k = 4), in line with
+  multi-level storage being the weak point of PCM (Le Gallo & Sebastian 2020). ADC: 6 bits exact for both forms; 4 bits
+  exact for B1 and failing for ML (0.0015), because the registered full-scale tile ADC leaves ML tile outputs below one
+  step (a range set from the output distribution, as Joshi et al. do for activations, was not tested). Read noise
+  redrawn on every MVM instead of once per time point: identical (1.0000 both forms).
+
+Deviations from the pre-registration: none in conditions, metric, threshold or bars. Prediction P3 was wrong in one
+sub-item (ML-C without compensation read 81.2% at 30 days against a predicted < 80%). Times start at 60 s rather than
+1 s because the published model is defined from T1 = 55.39 s (stated in the prereg). The GDC gain-bias check above is
+post hoc and labelled so.
+
+Limits: a simulation of a published statistical model of one PCM technology (IBM's 90-nm prototype chip), not a
+hardware run; the model was fitted to data up to 1e5 s, so 30 days and 1 year are extrapolations. Not modelled: IR drop,
+stuck or defective devices (B22's failed-component conditions, up to 40% of components zeroed with no loss, bound this),
+deterministic spatial variation (Karunaratne et al. counter it by spreading each vector across the array), temperature,
+ADC nonlinearity. The energy figures are per-operation estimates from the cited papers, not a design.
+
+Literature check (conclusion -> literature):
+- Supporting. Karunaratne et al. 2020 stored binary hypervectors (d = 10,000) in PCM crossbars for associative search,
+  with on-chip accuracy comparable to software; Karunaratne et al. 2021 stored bipolar/binary high-dimensional keys in
+  more than 256,000 PCM devices for few-shot learning close to 32-bit software accuracy; Joshi et al. 2020 needed a
+  global per-array scale (GDC) to stop drift from collapsing accuracy. Our results agree on all three points.
+- Qualifying. Le Gallo & Sebastian 2020 name drift variability "arguably the most significant challenge for multi-level
+  storage in PCM"; our multi-level store is indeed the weaker form (larger read error, breaks at k = 4 where the 1-bit
+  store holds), yet at the measured parameters it still reads exactly, because a read averages 8,192 components and the
+  store tolerates read noise up to r = 2 (B22). Joshi et al. (Supplementary Fig. 6) find that a ResNet-32 with GDC
+  tolerates a drift-exponent spread up to about 0.013 over 30 s to 1 year (criterion: accuracy above 90%); our 1-bit
+  store with GDC stayed exact at k = 4 at 30 days (spread 0.017 on programmed devices, with programming and read noise
+  also x4). The time spans differ (30 days here), so this is only a rough indication that the store is at least as
+  tolerant as that network under the same compensation.
+- New relative to these precedents: they classify into at most 22 classes (or 5-way few-shot); here the clean-up has up to
+  5,993 candidates, a fixed acceptance threshold and a stop rule, and the stores were filled by a language model reading
+  a real long-context benchmark.

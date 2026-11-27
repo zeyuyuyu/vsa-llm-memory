@@ -1,0 +1,561 @@
+{
+ "_about": "Operational-log results drawn in main Fig. 3 (figs/fig3_oplogs.pdf). Every value was cut from its source file by program (scratch builder build_oplogs.py, 2026-11-11) together with the verbatim source line; make_figures.py re-checks `line` in `file` and `text` in `line` (or in table cell `cell`) whenever the source files are present. Accuracies are the share of questions answered exactly (set-exact for impact and past-window questions). 2026-11-12 (r13): GPT-6.1 Sol values now from the re-run through OpenAI's own API; the Sidrune-gateway values are kept under *gateway* keys and not drawn.",
+ "systems": {
+  "sor": {
+   "label": "system of record",
+   "colour_key": "sor"
+  },
+  "qwen": {
+   "label": "Qwen3-32B reading the whole log",
+   "colour_key": "open"
+  },
+  "gpt": {
+   "label": "GPT-6.1 Sol reading the whole log",
+   "colour_key": "gpt"
+  },
+  "ours": {
+   "label": "ours: 1.7B reader + memory",
+   "colour_key": "ours"
+  }
+ },
+ "sets": [
+  {
+   "id": "where",
+   "label": "where is it now",
+   "n": {
+    "value": 414,
+    "text": "414",
+    "file": "../code/vsassm/apps/real/README.md",
+    "line_no": 52,
+    "line": "| All | **0.959** (397/414) | 0.396 | 0.543 (0.531) | 0.321 (0.217) | 0.162 (0.135) |",
+    "source": "vsassm/apps/real/README.md line 52: '**0.959** (397/414)' (n of the held-out test2 split, 'All' row)"
+   },
+   "ours_correct": {
+    "value": 397,
+    "text": "397",
+    "file": "../code/vsassm/apps/real/README.md",
+    "line_no": 52,
+    "line": "| All | **0.959** (397/414) | 0.396 | 0.543 (0.531) | 0.321 (0.217) | 0.162 (0.135) |",
+    "source": "vsassm/apps/real/README.md line 52: '**0.959** (397/414)' (correct answers of Readable Memory, 'All' row)"
+   },
+   "values": {
+    "ours": {
+     "value": 0.959,
+     "text": "0.959",
+     "file": "../code/vsassm/apps/real/README.md",
+     "line_no": 52,
+     "line": "| All | **0.959** (397/414) | 0.396 | 0.543 (0.531) | 0.321 (0.217) | 0.162 (0.135) |",
+     "cell": 1,
+     "source": "vsassm/apps/real/README.md line 52, table row 'All', column 1 (Readable Memory)"
+    },
+    "sor": {
+     "value": 0.396,
+     "text": "0.396",
+     "file": "../code/vsassm/apps/real/README.md",
+     "line_no": 52,
+     "line": "| All | **0.959** (397/414) | 0.396 | 0.543 (0.531) | 0.321 (0.217) | 0.162 (0.135) |",
+     "cell": 2,
+     "source": "vsassm/apps/real/README.md line 52, table row 'All', column 2 (System of record alone)"
+    },
+    "qwen": {
+     "value": 0.543,
+     "text": "0.543",
+     "file": "../code/vsassm/apps/real/README.md",
+     "line_no": 52,
+     "line": "| All | **0.959** (397/414) | 0.396 | 0.543 (0.531) | 0.321 (0.217) | 0.162 (0.135) |",
+     "cell": 3,
+     "source": "vsassm/apps/real/README.md line 52, table row 'All', column 3 (Qwen3-32B, budget-forced score; strict 0.531 in brackets)"
+    },
+    "gpt": null
+   },
+   "not_run": {
+    "gpt": "GPT-6.1 Sol was not run on the 'where is it now' questions (no such arm in apps/real/README.md)"
+   }
+  },
+  {
+   "id": "impact",
+   "label": "impact",
+   "n": {
+    "value": 230,
+    "text": "230",
+    "file": "../results/vsassm/results/nsr1_verdict.txt",
+    "line_no": 7,
+    "line": "## Results (set-exact accuracy, all 230 questions)",
+    "source": "vsassm/results/nsr1_verdict.txt line 7: '## Results (set-exact accuracy, all 230 questions)' (n of the held-out nsr1 split)"
+   },
+   "values": {
+    "ours": {
+     "value": 0.93,
+     "text": "0.930",
+     "file": "../results/vsassm/results/nsr1_verdict.txt",
+     "line_no": 9,
+     "line": "| 1  RM state + VSA rule memory (rules from 1 worked trace)  | 0.930 | 0.875     | 0.833   | 0.975 | 0.950 |",
+     "cell": 1,
+     "source": "vsassm/results/nsr1_verdict.txt line 9, table row '1  RM state + VSA rule memory (rules from 1 worked trace)', column 1 (all)"
+    },
+    "qwen": {
+     "value": 0.278,
+     "text": "0.278",
+     "file": "../results/vsassm/results/nsr1_verdict.txt",
+     "line_no": 12,
+     "line": "| 3  Qwen3-32B thinking over the whole log (forced)          | 0.278 | 0.150     | 0.033   | 0.288 | 0.425 |",
+     "cell": 1,
+     "source": "vsassm/results/nsr1_verdict.txt line 12, table row '3  Qwen3-32B thinking over the whole log (forced)', column 1 (all; budget-forced)"
+    },
+    "sor": {
+     "value": 0.313,
+     "text": "0.313",
+     "file": "../results/vsassm/results/nsr1_verdict.txt",
+     "line_no": 16,
+     "line": "| 4  system of record + graph query                          | 0.313 | 0.200     | 0.167   | 0.363 | 0.375 |",
+     "cell": 1,
+     "source": "vsassm/results/nsr1_verdict.txt line 16, table row '4  system of record + graph query', column 1 (all)"
+    },
+    "gpt": {
+     "value": 0.952,
+     "text": "0.952",
+     "file": "../results/vsassm/results/nsr1_verdict.txt",
+     "line_no": 149,
+     "line": "| gpt-6.1-sol over the log, OpenAI direct | 0.952 | 0.975     | 0.800   | 0.975 | 0.975 |",
+     "cell": 1,
+     "source": "vsassm/results/nsr1_verdict.txt line 149, table row 'gpt-6.1-sol over the log, OpenAI direct', column 1 (all; OpenAI API, registered = repaired = normalised parse)"
+    }
+   },
+   "gateway_not_drawn": {
+    "_about": "GPT-6.1 Sol through the Sidrune reseller gateway (first runs; superseded: that gateway is not serving the same model or not counting the same tokens as OpenAI, nsr5_verdict.txt route replication). Kept for the Supplementary note; not drawn.",
+    "registered": {
+     "value": 0.922,
+     "text": "0.922",
+     "file": "../results/vsassm/results/nsr1_verdict.txt",
+     "line_no": 119,
+     "line": "(\"none\", correct). Registered parse: frontier 0.917 -> 0.922 (ops 0.950 -> 0.963). Underscore parse: 0.922 -> 0.926.",
+     "source": "vsassm/results/nsr1_verdict.txt line 119: 'Registered parse: frontier 0.917 -> 0.922' (registered parse after frontier amendment 1 (the one dropped stream re-run))"
+    },
+    "repaired": {
+     "value": 0.943,
+     "text": "0.943",
+     "file": "../results/vsassm/results/nsr1_verdict.txt",
+     "line_no": 127,
+     "line": "model scores **0.943** (underscore parse 0.948; micro-F1 0.978), against the pipeline's 0.930. Pipeline - frontier:",
+     "source": "vsassm/results/nsr1_verdict.txt line 127: 'model scores **0.943**' (repaired parse, frontier amendment 2, post hoc)"
+    }
+   }
+  },
+  {
+   "id": "window",
+   "label": "past window",
+   "n": {
+    "value": 460,
+    "text": "460",
+    "file": "../results/vsassm/results/nsr3_verdict.txt",
+    "line_no": 2,
+    "line": "# Held-out: the 40 nsr2 logs (seeds 500+), 460 temporal questions (230 targets x 2 windows of 15-35% of the log), first",
+    "source": "vsassm/results/nsr3_verdict.txt line 2: 'seeds 500+), 460 temporal questions' (n of the held-out nsr2 logs)"
+   },
+   "values": {
+    "ours": {
+     "value": 0.874,
+     "text": "0.874",
+     "file": "../results/vsassm/results/nsr3_verdict.txt",
+     "line_no": 8,
+     "line": "| history engine over the read state                    | 0.874 | 0.725     | 0.933   | 0.838 | 0.963 |",
+     "cell": 1,
+     "source": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 1 (all; first results table)"
+    },
+    "qwen": {
+     "value": 0.202,
+     "text": "0.202",
+     "file": "../results/vsassm/results/nsr3_verdict.txt",
+     "line_no": 9,
+     "line": "| Qwen3-32B thinking over the log (forced; registered)  | 0.202 | 0.113     | 0.083   | 0.088 | 0.406 |",
+     "cell": 1,
+     "source": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 1 (all; budget-forced, registered parse)"
+    },
+    "sor": {
+     "value": 0.217,
+     "text": "0.217",
+     "file": "../results/vsassm/results/nsr3_verdict.txt",
+     "line_no": 12,
+     "line": "| system-of-record history                              | 0.217 | 0.150     | 0.067   | 0.163 | 0.363 |",
+     "cell": 1,
+     "source": "vsassm/results/nsr3_verdict.txt line 12, table row 'system-of-record history', column 1 (all)"
+    },
+    "gpt": {
+     "value": 0.904,
+     "text": "0.904",
+     "file": "../results/vsassm/results/nsr3_verdict.txt",
+     "line_no": 118,
+     "line": "| gpt-6.1-sol over the log, OpenAI direct | 0.904 | 0.925     | 0.800   | 0.875 | 0.963 |",
+     "cell": 1,
+     "source": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 1 (all; OpenAI API, registered = repaired = normalised parse)"
+    }
+   },
+   "gateway_not_drawn": {
+    "_about": "GPT-6.1 Sol through the Sidrune reseller gateway (first runs; superseded: that gateway is not serving the same model or not counting the same tokens as OpenAI, nsr5_verdict.txt route replication). Kept for the Supplementary note; not drawn.",
+    "registered": {
+     "value": 0.83,
+     "text": "0.830",
+     "file": "../results/vsassm/results/nsr3_verdict.txt",
+     "line_no": 52,
+     "line": "| gpt-6.1-sol over the log (registered parse)      | 0.830 | 0.850     | 0.717   | 0.750 | 0.944 | 0.953    |",
+     "cell": 1,
+     "source": "vsassm/results/nsr3_verdict.txt line 52, table row 'gpt-6.1-sol over the log (registered parse)', column 1 (all; registered parse)"
+    },
+    "repaired": {
+     "value": 0.839,
+     "text": "0.839",
+     "file": "../results/vsassm/results/nsr3_verdict.txt",
+     "line_no": 81,
+     "line": "line break restored (--repair) the frontier model scores 0.839 (0.867 with the normalising parse; micro-F1 0.965 /",
+     "source": "vsassm/results/nsr3_verdict.txt line 81: '(--repair) the frontier model scores 0.839' (repaired parse, frontier amendment 2, post hoc)"
+    }
+   }
+  }
+ ],
+ "paired": {
+  "_about": "Paired outcomes of ours against GPT-6.1 Sol on the same questions, GPT-6.1 Sol through OpenAI's API (registered, repaired and normalised parses agree on that route). 'only_ours' is 'only RM' (NSR1) or 'only history' (NSR3) in the source; 'only_gpt' is 'only frontier'.",
+  "segments": [
+   {
+    "key": "both_right",
+    "label": "both right"
+   },
+   {
+    "key": "only_ours",
+    "label": "only ours"
+   },
+   {
+    "key": "only_gpt",
+    "label": "only GPT-6.1 Sol"
+   },
+   {
+    "key": "both_wrong",
+    "label": "both wrong"
+   }
+  ],
+  "rows": [
+   {
+    "id": "impact",
+    "label": "impact",
+    "n": 230,
+    "both_right": 205,
+    "only_ours": 9,
+    "only_gpt": 14,
+    "both_wrong": 2,
+    "either_right": {
+     "value": 0.991,
+     "text": "0.991"
+    },
+    "file": "../results/vsassm/results/nsr1_verdict.txt",
+    "line_no": 150,
+    "lines": [
+     "Pipeline - direct: -0.022 (95% bootstrap interval -0.061 to +0.022). Both right 205, only RM 9, only frontier 14, both wrong 2; either right 0.991."
+    ],
+    "source": "vsassm/results/nsr1_verdict.txt line 150 (addendum 2026-11-12, OpenAI direct): 'Both right 205, only RM 9, only frontier 14, both wrong 2; either right 0.991'"
+   },
+   {
+    "id": "window",
+    "label": "past window",
+    "n": 460,
+    "both_right": 369,
+    "only_ours": 33,
+    "only_gpt": 47,
+    "both_wrong": 11,
+    "either_right": {
+     "value": 0.976,
+     "text": "0.976"
+    },
+    "file": "../results/vsassm/results/nsr3_verdict.txt",
+    "line_no": 119,
+    "lines": [
+     "Errors are mostly disjoint: both right 369, only history 33, only frontier 47, both wrong 11; either right 0.976."
+    ],
+    "source": "vsassm/results/nsr3_verdict.txt line 119 (addendum 2026-11-12, OpenAI direct): 'both right 369, only history 33, only frontier 47, both wrong 11; either right 0.976'"
+   }
+  ],
+  "gateway_rows_not_drawn": [
+   {
+    "id": "impact",
+    "label": "impact",
+    "n": 230,
+    "both_right": 199,
+    "only_ours": 15,
+    "only_gpt": 13,
+    "both_wrong": 3,
+    "either_right": {
+     "value": 0.987,
+     "text": "0.987"
+    },
+    "file": "../results/vsassm/results/nsr1_verdict.txt",
+    "line_no": 120,
+    "lines": [
+     "Pipeline - frontier: +0.009 (95% bootstrap interval -0.035 to +0.057). Both right 199, only RM 15, only frontier 13,",
+     "both wrong 3; either right 0.987. P2-F still FAILS, and the conclusion above is unchanged. Scores:"
+    ],
+    "source": "vsassm/results/nsr1_verdict.txt lines 120-121 (Correction 2026-11-11, frontier amendment 1; registered parse): 'Both right 199, only RM 15, only frontier 13, both wrong 3; either right 0.987'",
+    "repaired_parse": {
+     "both_right": 203,
+     "only_ours": 11,
+     "only_gpt": 14,
+     "both_wrong": 2,
+     "either_right": {
+      "value": 0.991,
+      "text": "0.991"
+     },
+     "file": "../results/vsassm/results/nsr1_verdict.txt",
+     "line_no": 128,
+     "lines": [
+      "-0.013 (95% bootstrap interval -0.057 to +0.030). Both right 203, only RM 11, only frontier 14, both wrong 2; either",
+      "right 0.991. P2-F still FAILS (the registered parse gives 0.922). On the repaired parse the frontier model is"
+     ],
+     "source": "vsassm/results/nsr1_verdict.txt lines 128-129 (Correction 2, frontier amendment 2, post hoc; NOT drawn): 'Both right 203, only RM 11, only frontier 14, both wrong 2; either right 0.991'"
+    }
+   },
+   {
+    "id": "window",
+    "label": "past window",
+    "n": 460,
+    "both_right": 341,
+    "only_ours": 61,
+    "only_gpt": 41,
+    "both_wrong": 17,
+    "either_right": {
+     "value": 0.963,
+     "text": "0.963"
+    },
+    "file": "../results/vsassm/results/nsr3_verdict.txt",
+    "line_no": 58,
+    "lines": [
+     "Errors are mostly disjoint: both right 341, only history 61, only frontier 41, both wrong 17; either right 0.963."
+    ],
+    "source": "vsassm/results/nsr3_verdict.txt line 58 (addendum, registered parse): 'both right 341, only history 61, only frontier 41, both wrong 17; either right 0.963'"
+   }
+  ]
+ },
+ "per_site": {
+  "_about": "Past-window questions (NSR3, the 40 nsr2 logs) by site; columns of the results tables of nsr3_verdict.txt. Column names in the source: warehouse, biobank, home, ops.",
+  "header": {
+   "file": "../results/vsassm/results/nsr3_verdict.txt",
+   "line_no": 7,
+   "line": "| arm                                                   | all   | warehouse | biobank | home  | ops   |"
+  },
+  "sites": [
+   {
+    "id": "warehouse",
+    "label": "warehouse",
+    "values": {
+     "ours": {
+      "value": 0.725,
+      "text": "0.725",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 8,
+      "line": "| history engine over the read state                    | 0.874 | 0.725     | 0.933   | 0.838 | 0.963 |",
+      "cell": 2,
+      "source": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 2 (warehouse; history engine over the read state; first results table)",
+      "correct_implied": 58
+     },
+     "gpt": {
+      "value": 0.925,
+      "text": "0.925",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 118,
+      "line": "| gpt-6.1-sol over the log, OpenAI direct | 0.904 | 0.925     | 0.800   | 0.875 | 0.963 |",
+      "cell": 2,
+      "source": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 2 (warehouse; OpenAI API)",
+      "correct_implied": 74
+     },
+     "qwen": {
+      "value": 0.113,
+      "text": "0.113",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 9,
+      "line": "| Qwen3-32B thinking over the log (forced; registered)  | 0.202 | 0.113     | 0.083   | 0.088 | 0.406 |",
+      "cell": 2,
+      "source": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 2 (warehouse; Qwen3-32B thinking over the log, budget-forced, registered parse; first results table)",
+      "correct_implied": 9
+     },
+     "gpt_gateway_not_drawn": {
+      "value": 0.85,
+      "text": "0.850",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 52,
+      "line": "| gpt-6.1-sol over the log (registered parse)      | 0.830 | 0.850     | 0.717   | 0.750 | 0.944 | 0.953    |",
+      "cell": 2,
+      "source": "vsassm/results/nsr3_verdict.txt line 52, table row 'gpt-6.1-sol over the log (registered parse)', column 2 (warehouse; gpt-6.1-sol over the log, registered parse; addendum table)",
+      "correct_implied": 68
+     }
+    },
+    "n": {
+     "value": 80,
+     "count_file": "../results/vsassm/nsr/out/nsr3_nsr2_gptD_strict.jsonl",
+     "count_prefix": "warehouse-",
+     "source": "number of question ids that start with 'warehouse-' in vsassm/nsr/out/nsr3_nsr2_gptD_strict.jsonl (460 records, one per question)"
+    }
+   },
+   {
+    "id": "biobank",
+    "label": "biobank",
+    "values": {
+     "ours": {
+      "value": 0.933,
+      "text": "0.933",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 8,
+      "line": "| history engine over the read state                    | 0.874 | 0.725     | 0.933   | 0.838 | 0.963 |",
+      "cell": 3,
+      "source": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 3 (biobank; history engine over the read state; first results table)",
+      "correct_implied": 56
+     },
+     "gpt": {
+      "value": 0.8,
+      "text": "0.800",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 118,
+      "line": "| gpt-6.1-sol over the log, OpenAI direct | 0.904 | 0.925     | 0.800   | 0.875 | 0.963 |",
+      "cell": 3,
+      "source": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 3 (biobank; OpenAI API)",
+      "correct_implied": 48
+     },
+     "qwen": {
+      "value": 0.083,
+      "text": "0.083",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 9,
+      "line": "| Qwen3-32B thinking over the log (forced; registered)  | 0.202 | 0.113     | 0.083   | 0.088 | 0.406 |",
+      "cell": 3,
+      "source": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 3 (biobank; Qwen3-32B thinking over the log, budget-forced, registered parse; first results table)",
+      "correct_implied": 5
+     },
+     "gpt_gateway_not_drawn": {
+      "value": 0.717,
+      "text": "0.717",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 52,
+      "line": "| gpt-6.1-sol over the log (registered parse)      | 0.830 | 0.850     | 0.717   | 0.750 | 0.944 | 0.953    |",
+      "cell": 3,
+      "source": "vsassm/results/nsr3_verdict.txt line 52, table row 'gpt-6.1-sol over the log (registered parse)', column 3 (biobank; gpt-6.1-sol over the log, registered parse; addendum table)",
+      "correct_implied": 43
+     }
+    },
+    "n": {
+     "value": 60,
+     "count_file": "../results/vsassm/nsr/out/nsr3_nsr2_gptD_strict.jsonl",
+     "count_prefix": "biobank-",
+     "source": "number of question ids that start with 'biobank-' in vsassm/nsr/out/nsr3_nsr2_gptD_strict.jsonl (460 records, one per question)"
+    }
+   },
+   {
+    "id": "home",
+    "label": "home robot",
+    "values": {
+     "ours": {
+      "value": 0.838,
+      "text": "0.838",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 8,
+      "line": "| history engine over the read state                    | 0.874 | 0.725     | 0.933   | 0.838 | 0.963 |",
+      "cell": 4,
+      "source": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 4 (home; history engine over the read state; first results table)",
+      "correct_implied": 134
+     },
+     "gpt": {
+      "value": 0.875,
+      "text": "0.875",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 118,
+      "line": "| gpt-6.1-sol over the log, OpenAI direct | 0.904 | 0.925     | 0.800   | 0.875 | 0.963 |",
+      "cell": 4,
+      "source": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 4 (home; OpenAI API)",
+      "correct_implied": 140
+     },
+     "qwen": {
+      "value": 0.088,
+      "text": "0.088",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 9,
+      "line": "| Qwen3-32B thinking over the log (forced; registered)  | 0.202 | 0.113     | 0.083   | 0.088 | 0.406 |",
+      "cell": 4,
+      "source": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 4 (home; Qwen3-32B thinking over the log, budget-forced, registered parse; first results table)",
+      "correct_implied": 14
+     },
+     "gpt_gateway_not_drawn": {
+      "value": 0.75,
+      "text": "0.750",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 52,
+      "line": "| gpt-6.1-sol over the log (registered parse)      | 0.830 | 0.850     | 0.717   | 0.750 | 0.944 | 0.953    |",
+      "cell": 4,
+      "source": "vsassm/results/nsr3_verdict.txt line 52, table row 'gpt-6.1-sol over the log (registered parse)', column 4 (home; gpt-6.1-sol over the log, registered parse; addendum table)",
+      "correct_implied": 120
+     }
+    },
+    "n": {
+     "value": 160,
+     "count_file": "../results/vsassm/nsr/out/nsr3_nsr2_gptD_strict.jsonl",
+     "count_prefix": "home-",
+     "source": "number of question ids that start with 'home-' in vsassm/nsr/out/nsr3_nsr2_gptD_strict.jsonl (460 records, one per question)"
+    }
+   },
+   {
+    "id": "ops",
+    "label": "cloud incident",
+    "values": {
+     "ours": {
+      "value": 0.963,
+      "text": "0.963",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 8,
+      "line": "| history engine over the read state                    | 0.874 | 0.725     | 0.933   | 0.838 | 0.963 |",
+      "cell": 5,
+      "source": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 5 (ops; history engine over the read state; first results table)",
+      "correct_implied": 154
+     },
+     "gpt": {
+      "value": 0.963,
+      "text": "0.963",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 118,
+      "line": "| gpt-6.1-sol over the log, OpenAI direct | 0.904 | 0.925     | 0.800   | 0.875 | 0.963 |",
+      "cell": 5,
+      "source": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 5 (ops; OpenAI API)",
+      "correct_implied": 154
+     },
+     "qwen": {
+      "value": 0.406,
+      "text": "0.406",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 9,
+      "line": "| Qwen3-32B thinking over the log (forced; registered)  | 0.202 | 0.113     | 0.083   | 0.088 | 0.406 |",
+      "cell": 5,
+      "source": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 5 (ops; Qwen3-32B thinking over the log, budget-forced, registered parse; first results table)",
+      "correct_implied": 65
+     },
+     "gpt_gateway_not_drawn": {
+      "value": 0.944,
+      "text": "0.944",
+      "file": "../results/vsassm/results/nsr3_verdict.txt",
+      "line_no": 52,
+      "line": "| gpt-6.1-sol over the log (registered parse)      | 0.830 | 0.850     | 0.717   | 0.750 | 0.944 | 0.953    |",
+      "cell": 5,
+      "source": "vsassm/results/nsr3_verdict.txt line 52, table row 'gpt-6.1-sol over the log (registered parse)', column 5 (ops; gpt-6.1-sol over the log, registered parse; addendum table)",
+      "correct_implied": 151
+     }
+    },
+    "n": {
+     "value": 160,
+     "count_file": "../results/vsassm/nsr/out/nsr3_nsr2_gptD_strict.jsonl",
+     "count_prefix": "ops-",
+     "source": "number of question ids that start with 'ops-' in vsassm/nsr/out/nsr3_nsr2_gptD_strict.jsonl (460 records, one per question)"
+    }
+   }
+  ],
+  "n_note": "per-site n counted from the question ids (see n.source); nsr3_verdict.txt states it only for warehouse ('18 of 80 warehouse questions'); 'correct_implied' = round(accuracy x n), consistent with every printed accuracy to 0.0005",
+  "n_warehouse": {
+   "value": 80,
+   "text": "80",
+   "file": "../results/vsassm/results/nsr3_verdict.txt",
+   "line_no": 59,
+   "line": "The frontier model beats the history engine on warehouse (0.850 vs 0.725; frontier-only right 18 of 80 warehouse",
+   "source": "vsassm/results/nsr3_verdict.txt line 59: 'frontier-only right 18 of 80 warehouse questions'"
+  }
+ }
+}

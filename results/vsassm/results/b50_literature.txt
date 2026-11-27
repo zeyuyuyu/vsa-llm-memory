@@ -1,0 +1,38 @@
+B50 conclusion -> literature (written after the result; each conclusion is filed as SUPPORTED, CONFLICTING or NEW)
+
+C1. A softmax type head is confidently wrong on an unseen operation that resembles a trained one (addition read as
+    bitwise OR with MSP log-odds ~9), and post-hoc scores computed from that head (MSP, max-logit, energy) do not
+    flag it at a tight in-distribution acceptance rate. SUPPORTED: softmax overconfidence on out-of-distribution
+    inputs (Nguyen, Yosinski & Clune, CVPR 2015; Hendrycks & Gimpel, ICLR 2017, arXiv 1610.02136); energy and
+    max-logit improve on MSP mainly for far-OOD inputs (Liu et al., NeurIPS 2020, arXiv 2010.03759; Hendrycks et al.,
+    ICML 2022, arXiv 1911.11132). Here energy was no better than MSP (AUROC 0.95-0.96 vs 0.975-0.978).
+
+C2. Class-conditional Mahalanobis distance on the 4,096-d state with a tied covariance (Lee et al., NeurIPS 2018,
+    arXiv 1807.03888; and its Ledoit-Wolf variant) separates the far case (integer division, 0% open) but not the
+    near case (addition, 99.6% open; AUROC 0.977 pooled). SUPPORTED: Mahalanobis on raw features is known to fail on
+    near-OOD inputs; Ren et al. 2021 (arXiv 2106.09022, "A Simple Fix to Mahalanobis Distance for Improving Near-OOD
+    Detection") propose the relative Mahalanobis distance for exactly this case, and Fort, Ren & Lakshminarayanan
+    (NeurIPS 2021, arXiv 2106.03004) show near-OOD is where these detectors break. Relative Mahalanobis was NOT
+    registered or run in B50; it is the obvious untested competitor.
+
+C3. A score fitted by least squares to exact targets (the VSA encoder's type similarity, and a plain least-squares
+    one-hot readout with no vector-symbolic structure, exploratory 1) rejects the near-OOD operation: the outputs are
+    fitted to 1 on trained types and fall to ~0.7 on addition. SUPPORTED in spirit: distance-to-prototype and
+    one-vs-all regression outputs reject OOD inputs better than softmax confidence (DUQ, van Amersfoort et al., ICML
+    2020, arXiv 2003.02037); in hyperdimensional computing, cosine similarity to bundled class descriptors is used
+    as an OOD detector and beats softmax-based baselines on vision benchmarks (Wilson et al., "Hyperdimensional
+    Feature Fusion for Out-of-Distribution Detection", WACV 2023, arXiv 2112.05341). Their HDC detector, like ours,
+    is a similarity-to-prototype score; B50's exploratory 1 indicates that what does the work here is the
+    regression-to-target readout, which needs no VSA. NEW as far as I found: a head-to-head of the VSA gate against
+    a same-features least-squares readout inside an LLM; I found no published comparison.
+
+C4. A 2,048-token budget lifts Llama-3.1-8B-Instruct's CoT only a little on task N (0.275 -> 0.302 on trained types)
+    because the truncated outputs were mostly bitwise items in bit-by-bit loops that either still loop (136) or end
+    with a wrong binary conversion. SUPPORTED: DE25's own appendix shows CoT loops on bitwise problems; repetition
+    loops under greedy decoding are a known failure (Holtzman et al., ICLR 2020, arXiv 1904.09751, degeneration under
+    likelihood-maximising decoding).
+
+Searches used (2026-11-20): "Mahalanobis distance out-of-distribution detection LLM hidden states unseen task types";
+"hyperdimensional computing vector symbolic architecture out-of-distribution detection similarity threshold".
+Citations not re-opened in this session are given from memory with their arXiv ids; check them before citing in the
+paper.

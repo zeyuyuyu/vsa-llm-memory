@@ -1,0 +1,96 @@
+# B41 prediction checks (mechanical, from /path/to/work/b41/results/b41_test_verdict.json)
+  P1   FAIL  dev error range 0.036-0.402; in-cluster share of errors >= 0.71
+  P2   HELD  ARGMAX high h6 [0.047 0.045 0.06  0.035 0.029]; low h2 [0.869 0.856 0.858 0.855 0.84 ]
+  P3   FAIL  EXACT - ARGMAX at high h4/h6 over N: [0.471 0.48  0.46  0.337 0.118 0.52  0.529 0.515 0.356 0.088]
+  P4   FAIL  BEAM(4,16) within 0.01 of EXACT in 36/45 cells; ops ratio to EXACT at N>=3200 max 2.46e-03
+  P5   HELD  v* modes at h6: ['HOP1', 'HOP16', 'HOP4']; best END <= ARGMAX at N>=3200: 9/9
+  P6   FAIL  most accurate VSA - ARGMAX at high, h4/h6, N<=3200: [0.354 0.29  0.147 0.372 0.252 0.121]
+  P7   HELD  cells with a VSA config > EXACT + 0.02: none
+  P8   HELD  VSA-WIN (cell, metric): none
+  P9   HELD  C-ratio range 2.5e-06-1.5e-05 over 45 cells
+  P10  FAIL  EXACT - most accurate VSA at high h6 N=100k: 0.112 (EXACT 0.117)
+  P11  FAIL  smallest D with >= 90% recovery at high h6 per N: [None, None, None, None, None] (undefined = never on the grid)
+
+# Accuracy at equal state width (words carried between hops): best VSA config at D vs best table config whose state <= D; high noise
+  h=4 N=32     D=256 VSA 0.170 / table 0.585; D=1024 VSA 0.275 / table 0.585; D=4096 VSA 0.369 / table 0.595; D=16384 VSA 0.427 / table 0.595; D=65536 VSA 0.478 / table 0.595
+  h=4 N=320    D=256 VSA 0.042 / table 0.591; D=1024 VSA 0.117 / table 0.591; D=4096 VSA 0.230 / table 0.597; D=16384 VSA 0.327 / table 0.597; D=65536 VSA 0.407 / table 0.597
+  h=4 N=3200   D=256 VSA 0.001 / table 0.569; D=1024 VSA 0.004 / table 0.569; D=4096 VSA 0.070 / table 0.574; D=16384 VSA 0.167 / table 0.574; D=65536 VSA 0.267 / table 0.574
+  h=4 N=32000  D=256 VSA 0.001 / table 0.441; D=1024 VSA 0.001 / table 0.441; D=4096 VSA 0.001 / table 0.441; D=16384 VSA 0.023 / table 0.441; D=65536 VSA 0.084 / table 0.441
+  h=4 N=100000 D=256 VSA 0.002 / table 0.199; D=1024 VSA 0.001 / table 0.199; D=4096 VSA 0.001 / table 0.199; D=16384 VSA 0.001 / table 0.199; D=65536 VSA 0.030 / table 0.199
+  h=6 N=32     D=256 VSA 0.075 / table 0.549; D=1024 VSA 0.173 / table 0.549; D=4096 VSA 0.277 / table 0.567; D=16384 VSA 0.349 / table 0.567; D=65536 VSA 0.419 / table 0.567
+  h=6 N=320    D=256 VSA 0.010 / table 0.566; D=1024 VSA 0.052 / table 0.566; D=4096 VSA 0.137 / table 0.575; D=16384 VSA 0.228 / table 0.575; D=65536 VSA 0.319 / table 0.575
+  h=6 N=3200   D=256 VSA 0.001 / table 0.566; D=1024 VSA 0.002 / table 0.566; D=4096 VSA 0.026 / table 0.575; D=16384 VSA 0.094 / table 0.575; D=65536 VSA 0.185 / table 0.575
+  h=6 N=32000  D=256 VSA 0.001 / table 0.398; D=1024 VSA 0.000 / table 0.398; D=4096 VSA 0.001 / table 0.398; D=16384 VSA 0.004 / table 0.398; D=65536 VSA 0.025 / table 0.398
+  h=6 N=100000 D=256 VSA 0.001 / table 0.118; D=1024 VSA 0.000 / table 0.118; D=4096 VSA 0.001 / table 0.118; D=16384 VSA 0.001 / table 0.118; D=65536 VSA 0.006 / table 0.118
+
+# Start mention read correctly (argmax) vs not: accuracy of ARGMAX / BEAM(4,16) / EXACT / v*, h = 6
+  low  N=32     start right 0.969 of queries | ARGMAX 0.708/0.140; BEAM 0.906/0.742; EXACT 0.906/0.742; v* 0.878/0.634
+  low  N=320    start right 0.966 of queries | ARGMAX 0.702/0.129; BEAM 0.915/0.782; EXACT 0.915/0.792; v* 0.867/0.604
+  low  N=3200   start right 0.964 of queries | ARGMAX 0.700/0.150; BEAM 0.920/0.804; EXACT 0.919/0.804; v* 0.820/0.505
+  low  N=32000  start right 0.961 of queries | ARGMAX 0.689/0.068; BEAM 0.908/0.769; EXACT 0.908/0.769; v* 0.676/0.162
+  low  N=100000 start right 0.958 of queries | ARGMAX 0.674/0.024; BEAM 0.826/0.444; EXACT 0.825/0.444; v* 0.201/0.000
+  mid  N=32     start right 0.934 of queries | ARGMAX 0.476/0.061; BEAM 0.821/0.711; EXACT 0.822/0.711; v* 0.765/0.579
+  mid  N=320    start right 0.934 of queries | ARGMAX 0.476/0.106; BEAM 0.831/0.749; EXACT 0.833/0.749; v* 0.739/0.588
+  mid  N=3200   start right 0.936 of queries | ARGMAX 0.480/0.079; BEAM 0.827/0.717; EXACT 0.831/0.723; v* 0.655/0.382
+  mid  N=32000  start right 0.923 of queries | ARGMAX 0.466/0.065; BEAM 0.802/0.688; EXACT 0.802/0.680; v* 0.436/0.130
+  mid  N=100000 start right 0.926 of queries | ARGMAX 0.445/0.032; BEAM 0.641/0.389; EXACT 0.640/0.385; v* 0.139/0.000
+  high N=32     start right 0.731 of queries | ARGMAX 0.055/0.025; BEAM 0.515/0.504; EXACT 0.559/0.587; v* 0.429/0.392
+  high N=320    start right 0.736 of queries | ARGMAX 0.056/0.015; BEAM 0.543/0.486; EXACT 0.585/0.545; v* 0.315/0.250
+  high N=3200   start right 0.752 of queries | ARGMAX 0.073/0.020; BEAM 0.535/0.507; EXACT 0.575/0.575; v* 0.191/0.151
+  high N=32000  start right 0.722 of queries | ARGMAX 0.042/0.016; BEAM 0.403/0.378; EXACT 0.394/0.381; v* 0.029/0.012
+  high N=100000 start right 0.736 of queries | ARGMAX 0.036/0.009; BEAM 0.133/0.076; EXACT 0.132/0.076; v* 0.006/0.001
+
+# Failure types at h = 6 (share of failures): answer in the true answer's confusable cluster (near miss) / another entity / dead chain (no answer)
+  low  N=32     ARGMAX 928 fails: 0.18/0.00/0.82; BEAM 298 fails: 1.00/0.00/0.00; EXACT 298 fails: 1.00/0.00/0.00; v* 390 fails: 0.67/0.33/0.00
+  low  N=320    ARGMAX 953 fails: 0.16/0.00/0.84; BEAM 268 fails: 1.00/0.00/0.00; EXACT 266 fails: 1.00/0.00/0.00; v* 425 fails: 0.55/0.45/0.00
+  low  N=3200   ARGMAX 960 fails: 0.15/0.00/0.85; BEAM 252 fails: 0.98/0.02/0.00; EXACT 254 fails: 0.97/0.03/0.00; v* 574 fails: 0.36/0.64/0.00
+  low  N=32000  ARGMAX 1006 fails: 0.14/0.03/0.83; BEAM 291 fails: 0.83/0.17/0.00; EXACT 293 fails: 0.82/0.18/0.00; v* 1033 fails: 0.13/0.87/0.00
+  low  N=100000 ARGMAX 1060 fails: 0.14/0.17/0.69; BEAM 570 fails: 0.40/0.60/0.00; EXACT 572 fails: 0.40/0.60/0.00; v* 2421 fails: 0.02/0.98/0.00
+  mid  N=32     ARGMAX 1654 fails: 0.15/0.00/0.85; BEAM 560 fails: 0.98/0.01/0.01; EXACT 557 fails: 0.99/0.01/0.00; v* 741 fails: 0.69/0.31/0.00
+  mid  N=320    ARGMAX 1646 fails: 0.12/0.00/0.88; BEAM 524 fails: 0.99/0.00/0.01; EXACT 518 fails: 1.00/0.00/0.00; v* 813 fails: 0.55/0.45/0.00
+  mid  N=3200   ARGMAX 1636 fails: 0.14/0.01/0.86; BEAM 539 fails: 0.96/0.02/0.01; EXACT 528 fails: 0.98/0.02/0.00; v* 1088 fails: 0.35/0.65/0.00
+  mid  N=32000  ARGMAX 1695 fails: 0.12/0.02/0.86; BEAM 620 fails: 0.81/0.18/0.00; EXACT 622 fails: 0.80/0.20/0.00; v* 1763 fails: 0.11/0.89/0.00
+  mid  N=100000 ARGMAX 1757 fails: 0.11/0.19/0.71; BEAM 1132 fails: 0.31/0.69/0.00; EXACT 1137 fails: 0.30/0.70/0.00; v* 2614 fails: 0.02/0.98/0.00
+  high N=32     ARGMAX 2860 fails: 0.04/0.00/0.95; BEAM 1464 fails: 0.78/0.06/0.16; EXACT 1300 fails: 0.93/0.07/0.00; v* 1744 fails: 0.55/0.45/0.00
+  high N=320    ARGMAX 2864 fails: 0.04/0.00/0.96; BEAM 1416 fails: 0.79/0.07/0.15; EXACT 1276 fails: 0.92/0.08/0.00; v* 2107 fails: 0.34/0.66/0.00
+  high N=3200   ARGMAX 2820 fails: 0.03/0.00/0.96; BEAM 1415 fails: 0.74/0.10/0.15; EXACT 1276 fails: 0.85/0.15/0.00; v* 2457 fails: 0.16/0.84/0.00
+  high N=32000  ARGMAX 2895 fails: 0.03/0.02/0.95; BEAM 1813 fails: 0.46/0.54/0.00; EXACT 1828 fails: 0.45/0.55/0.00; v* 2927 fails: 0.02/0.98/0.00
+  high N=100000 ARGMAX 2913 fails: 0.02/0.13/0.85; BEAM 2646 fails: 0.11/0.89/0.00; EXACT 2648 fails: 0.11/0.89/0.00; v* 2985 fails: 0.01/0.99/0.00
+
+# Exploratory E1 (registered in the dev record; not in the bar): VSA at D = 262,144 (2^18)
+  low  h=2 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.928 (ops 2.2e+09) | D=65536 v* 0.923 | ARGMAX 0.856 BEAM(4,16) 0.941 EXACT 0.941
+  low  h=2 N=3200   best 2^18 VSA_HOP16_D262144_kb16 0.918 (ops 2.2e+09) | D=65536 v* 0.904 | ARGMAX 0.858 BEAM(4,16) 0.948 EXACT 0.948
+  low  h=2 N=32000  best 2^18 VSA_HOP4_D262144_kb16  0.887 (ops 2.2e+09) | D=65536 v* 0.851 | ARGMAX 0.855 BEAM(4,16) 0.937 EXACT 0.937
+  low  h=2 N=100000 best 2^18 VSA_HOP1_D262144_kb16  0.847 (ops 2.2e+09) | D=65536 v* 0.553 | ARGMAX 0.840 BEAM(4,16) 0.904 EXACT 0.903
+  low  h=4 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.903 (ops 4.3e+09) | D=65536 v* 0.890 | ARGMAX 0.764 BEAM(4,16) 0.927 EXACT 0.927
+  low  h=4 N=3200   best 2^18 VSA_HOP16_D262144_kb16 0.872 (ops 4.3e+09) | D=65536 v* 0.852 | ARGMAX 0.764 BEAM(4,16) 0.927 EXACT 0.927
+  low  h=4 N=32000  best 2^18 VSA_HOP4_D262144_kb4   0.808 (ops 4.3e+09) | D=65536 v* 0.743 | ARGMAX 0.752 BEAM(4,16) 0.909 EXACT 0.909
+  low  h=4 N=100000 best 2^18 VSA_HOP1_D262144_kb16  0.742 (ops 4.3e+09) | D=65536 v* 0.320 | ARGMAX 0.738 BEAM(4,16) 0.861 EXACT 0.860
+  low  h=6 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.875 (ops 6.5e+09) | D=65536 v* 0.858 | ARGMAX 0.682 BEAM(4,16) 0.911 EXACT 0.911
+  low  h=6 N=3200   best 2^18 VSA_HOP16_D262144_kb16 0.846 (ops 6.5e+09) | D=65536 v* 0.809 | ARGMAX 0.680 BEAM(4,16) 0.916 EXACT 0.915
+  low  h=6 N=32000  best 2^18 VSA_HOP4_D262144_kb4   0.748 (ops 6.5e+09) | D=65536 v* 0.656 | ARGMAX 0.665 BEAM(4,16) 0.903 EXACT 0.902
+  low  h=6 N=100000 best 2^18 VSA_HOP1_D262144_kb16  0.650 (ops 6.5e+09) | D=65536 v* 0.193 | ARGMAX 0.647 BEAM(4,16) 0.810 EXACT 0.809
+  mid  h=2 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.878 (ops 2.2e+09) | D=65536 v* 0.861 | ARGMAX 0.734 BEAM(4,16) 0.902 EXACT 0.902
+  mid  h=2 N=3200   best 2^18 VSA_HOP16_D262144_kb16 0.846 (ops 2.2e+09) | D=65536 v* 0.817 | ARGMAX 0.734 BEAM(4,16) 0.892 EXACT 0.892
+  mid  h=2 N=32000  best 2^18 VSA_HOP4_D262144_kb16  0.777 (ops 2.2e+09) | D=65536 v* 0.720 | ARGMAX 0.724 BEAM(4,16) 0.864 EXACT 0.865
+  mid  h=2 N=100000 best 2^18 VSA_HOP1_D262144_kb16  0.717 (ops 2.2e+09) | D=65536 v* 0.474 | ARGMAX 0.714 BEAM(4,16) 0.802 EXACT 0.802
+  mid  h=4 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.810 (ops 4.3e+09) | D=65536 v* 0.789 | ARGMAX 0.571 BEAM(4,16) 0.855 EXACT 0.855
+  mid  h=4 N=3200   best 2^18 VSA_HOP16_D262144_kb16 0.779 (ops 4.3e+09) | D=65536 v* 0.726 | ARGMAX 0.589 BEAM(4,16) 0.857 EXACT 0.859
+  mid  h=4 N=32000  best 2^18 VSA_HOP4_D262144_kb16  0.664 (ops 4.3e+09) | D=65536 v* 0.544 | ARGMAX 0.564 BEAM(4,16) 0.829 EXACT 0.828
+  mid  h=4 N=100000 best 2^18 VSA_HOP1_D262144_kb16  0.540 (ops 4.3e+09) | D=65536 v* 0.238 | ARGMAX 0.540 BEAM(4,16) 0.697 EXACT 0.696
+  mid  h=6 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.758 (ops 6.5e+09) | D=65536 v* 0.729 | ARGMAX 0.451 BEAM(4,16) 0.825 EXACT 0.827
+  mid  h=6 N=3200   best 2^18 VSA_HOP16_D262144_kb16 0.712 (ops 6.5e+09) | D=65536 v* 0.637 | ARGMAX 0.455 BEAM(4,16) 0.820 EXACT 0.824
+  mid  h=6 N=32000  best 2^18 VSA_HOP4_D262144_kb16  0.562 (ops 6.5e+09) | D=65536 v* 0.412 | ARGMAX 0.435 BEAM(4,16) 0.793 EXACT 0.793
+  mid  h=6 N=100000 best 2^18 VSA_HOP1_D262144_kb16  0.411 (ops 6.5e+09) | D=65536 v* 0.129 | ARGMAX 0.414 BEAM(4,16) 0.623 EXACT 0.621
+  high h=2 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.567 (ops 2.2e+09) | D=65536 v* 0.531 | ARGMAX 0.299 BEAM(4,16) 0.621 EXACT 0.642
+  high h=2 N=3200   best 2^18 VSA_HOP4_D262144_kb16  0.483 (ops 2.2e+09) | D=65536 v* 0.420 | ARGMAX 0.280 BEAM(4,16) 0.601 EXACT 0.611
+  high h=2 N=32000  best 2^18 VSA_HOP4_D262144_kb16  0.349 (ops 2.2e+09) | D=65536 v* 0.256 | ARGMAX 0.270 BEAM(4,16) 0.516 EXACT 0.518
+  high h=2 N=100000 best 2^18 VSA_HOP1_D262144_kb4   0.249 (ops 2.2e+09) | D=65536 v* 0.155 | ARGMAX 0.250 BEAM(4,16) 0.352 EXACT 0.351
+  high h=4 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.463 (ops 4.3e+09) | D=65536 v* 0.407 | ARGMAX 0.117 BEAM(4,16) 0.564 EXACT 0.597
+  high h=4 N=3200   best 2^18 VSA_HOP16_D262144_kb16 0.346 (ops 4.3e+09) | D=65536 v* 0.260 | ARGMAX 0.114 BEAM(4,16) 0.546 EXACT 0.574
+  high h=4 N=32000  best 2^18 VSA_HOP4_D262144_kb16  0.163 (ops 4.3e+09) | D=65536 v* 0.083 | ARGMAX 0.098 BEAM(4,16) 0.441 EXACT 0.435
+  high h=4 N=100000 best 2^18 VSA_HOP1_D262144_kb16  0.078 (ops 4.3e+09) | D=65536 v* 0.030 | ARGMAX 0.079 BEAM(4,16) 0.196 EXACT 0.197
+  high h=6 N=320    best 2^18 VSA_HOP16_D262144_kb16 0.390 (ops 6.5e+09) | D=65536 v* 0.298 | ARGMAX 0.045 BEAM(4,16) 0.528 EXACT 0.575
+  high h=6 N=3200   best 2^18 VSA_HOP16_D262144_kb16 0.279 (ops 6.5e+09) | D=65536 v* 0.181 | ARGMAX 0.060 BEAM(4,16) 0.528 EXACT 0.575
+  high h=6 N=32000  best 2^18 VSA_HOP4_D262144_kb16  0.080 (ops 6.5e+09) | D=65536 v* 0.024 | ARGMAX 0.035 BEAM(4,16) 0.396 EXACT 0.391
+  high h=6 N=100000 best 2^18 VSA_HOP1_D262144_kb16  0.027 (ops 6.5e+09) | D=65536 v* 0.005 | ARGMAX 0.029 BEAM(4,16) 0.118 EXACT 0.117

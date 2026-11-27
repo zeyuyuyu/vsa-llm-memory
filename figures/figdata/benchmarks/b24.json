@@ -1,0 +1,23 @@
+{
+ "_about": "B24 (prereg vsassm/prereg/B24_ruler_store_ablation_prereg.md): RULER, the nine tasks that use the memory, same Qwen3-8B; mean accuracy (%) at 128k with 95% CI; verbatim verdict lines. store = VSA store (B21); prompt = arm F, the same extracted facts as lines in the prompt; bm25 = arm R, BM25 top-20 pieces.",
+ "at_128k": {
+  "store": {
+   "value": 99.6,
+   "file": "../results/vsassm/results/b24_verdict.txt",
+   "line": "VSA store (B21)              99.5 [98.8, 99.8]   99.9 [99.4,100.0]   99.6 [99.0, 99.9]   99.7 [99.1, 99.9]   99.5 [98.7, 99.8]   99.6 [98.9, 99.8]",
+   "text": "99.6"
+  },
+  "prompt": {
+   "value": 86.1,
+   "file": "../results/vsassm/results/b24_verdict.txt",
+   "line": "arm F, facts in prompt       99.6 [99.0, 99.9]   99.8 [99.3,100.0]   99.7 [99.0, 99.9]   98.1 [97.0, 98.8]   88.6 [86.4, 90.5]   86.1 [83.7, 88.2]",
+   "text": "86.1"
+  },
+  "bm25": {
+   "value": 90.9,
+   "file": "../results/vsassm/results/b24_verdict.txt",
+   "line": "arm R, BM25 top-20           91.3 [89.3, 93.0]   91.1 [89.1, 92.8]   91.1 [89.1, 92.8]   91.0 [89.0, 92.7]   91.1 [89.0, 92.8]   90.9 [88.8, 92.6]",
+   "text": "90.9"
+  }
+ }
+}

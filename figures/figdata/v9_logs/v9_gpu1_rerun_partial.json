@@ -1,0 +1,37 @@
+[
+ {
+  "arm": "extract_then_bind",
+  "seed": 42,
+  "acc": 0.915,
+  "trainable": 655618,
+  "secs": 149.1
+ },
+ {
+  "arm": "extract_then_bind",
+  "seed": 123,
+  "acc": 0.913,
+  "trainable": 655618,
+  "secs": 147.8
+ },
+ {
+  "arm": "extract_then_bind",
+  "seed": 456,
+  "acc": 0.913,
+  "trainable": 655618,
+  "secs": 149.3
+ },
+ {
+  "arm": "vsa_spans_sup",
+  "seed": 42,
+  "acc": 0.516,
+  "trainable": 5244930,
+  "secs": 218.7
+ },
+ {
+  "arm": "vsa_spans_sup",
+  "seed": 123,
+  "acc": 0.5,
+  "trainable": 5244930,
+  "secs": 217.2
+ }
+]

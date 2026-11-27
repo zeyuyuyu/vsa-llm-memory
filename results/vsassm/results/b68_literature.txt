@@ -1,0 +1,35 @@
+B68 literature check (prereg/B68_early_layer_labelfree_prereg.md, "Literature"); each entry: what it says, and
+whether it SUPPORTS / CONFLICTS with / gives NO PRECEDENT for the B68 reading (filled in after the verdict).
+
+1. Lad, Gurnee & Tegmark (with Lee in later versions), "The Remarkable Robustness of LLMs: Stages of Inference?",
+   arXiv 2406.19384 (ICML 2024 workshop; NeurIPS 2025). Early layers perform "detokenization": they combine local
+   context to turn raw token representations into coherent entities.
+2. Feucht, Atkinson, Wallace & Bau, "Token Erasure as a Footprint of Implicit Vocabulary Items in LLMs", EMNLP 2024
+   (arXiv 2406.20086). Last-token states of multi-token words and named entities rapidly forget the identity of their
+   current and previous tokens in early layers (Llama-2-7b, Llama-3-8B).
+3. Kaplan, Oren, Reif & Schwartz, "From Tokens to Words: On the Inner Lexicon of LLMs", ICLR 2025 (arXiv 2410.05864).
+   Word-level detokenization (sub-word tokens merged into whole-word representations) happens mostly in early and
+   middle layers.
+4. Feng & Steinhardt, "How do Language Models Bind Entities in Context?", ICLR 2024. In-context bindings are carried by
+   binding-ID vectors added to entity states, i.e. contextual states of a mention carry more than its identity.
+5. Sahlgren 2005 / Kanerva et al. 2000 (random indexing): fixed random index vectors per token type are a standard
+   label-free way to give each written form its own near-orthogonal code (the feature-hash reference).
+
+Verdict-dependent marks: see the end of this file (added after the verdict).
+
+Marks after the verdict (2026-11-23):
+1. Lad et al.: SUPPORTS. Early layers combine local context into token states; B68: on Qwen3-8B the same written form's
+   centred cosine falls from 1.00 (L0) to 0.86 (L2) and 0.72 (L4) on training rows, and label-free recovery falls from
+   1.02 to 0.60 and 0.24 in arena A.
+2. Feucht et al.: SUPPORTS. Token identity of multi-token items is erased in early layers; B68's markers ([R3A] = 3-5
+   tokens) lose per-form consistency on Qwen3-8B by layer 4, while Phi-2 (fewer, merged tokens per marker) keeps it
+   through layer 4 (vq consistency 0.96).
+3. Kaplan et al.: SUPPORTS (direction): detokenization in early-middle layers; the label-free readers fail once it has
+   happened (Qwen3-8B L4 and the middle / final layers tested in B42 / B52), and the identity-labelled head recovers
+   identity again at Qwen3-8B layer 9 (0.997).
+4. Feng & Steinhardt: SUPPORTS. Contextual states of a mention carry more than its identity; at Qwen3-8B layer 2 the
+   query role and the same role in the context already get different VQ codes (sample reading item 4).
+5. Random indexing: SUPPORTS. A fixed random code per written form (the feature hash) reaches the naming head at L0
+   (0.975 / 0.995) with no training and no labels.
+No conflicting work found; no precedent found for label-free VSA coupling read from a language model's input or early
+layers (not an exhaustive search: three targeted web searches).

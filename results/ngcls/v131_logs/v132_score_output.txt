@@ -1,0 +1,68 @@
+===== V-132 (amended gate): the three softest points, measured (prereg 6a2a52d) =====
+
+>>> G1 (deterministic arms reproduce V-65 within +-0.01)
+      prompt_ev  [0.95, 0.95, 0.95] vs banked [0.95, 0.95, 0.95] : True
+      hrr_gold   [0.97, 0.9767, 0.9767] vs banked [0.97, 0.9767, 0.9767] : True
+
+>>> G2 (the permuting arm is gated on its MEASURED spread, not on a point)
+      hash-seed spread [0.24, 0.2667, 0.2667, 0.2467, 0.2767] -> [0.2400, 0.2767] (width 0.0367)
+      re-run 0.2400 inside: True | banked 0.2533 inside: True
+      G2: True
+
+>>> G3 (per-row dumps complete; the void is scoped to Part A)
+      per-row dumps complete (300 rows, every arm x seed): True
+      Parts B and C never touch v65.py and are read independently of Part A's gate.
+
+>>> P1 (PRIMARY, bar: best-of-grid LoRA trails the handover's 1.000 by >= 0.10 in 3/3 seeds)
+      12/12 configurations completed
+        r16_e6_lr0.0001  mean 0.9722  seeds [0.9714, 0.9738, 0.9714]
+        r8_e6_lr0.0003   mean 0.9635  seeds [0.9524, 0.9595, 0.9786]
+        r8_e6_lr0.0001   mean 0.9540  seeds [0.9548, 0.9595, 0.9476]
+        r32_e6_lr0.0001  mean 0.9540  seeds [0.9548, 0.9405, 0.9667]
+        r32_e2_lr0.0001  mean 0.9000  seeds [0.8167, 0.9286, 0.9548]
+        r16_e2_lr0.0001  mean 0.8437  seeds [0.75, 0.9024, 0.8786]
+        r8_e2_lr0.0001   mean 0.7952  seeds [0.85, 0.6952, 0.8405]
+        r8_e2_lr0.0003   mean 0.6548  seeds [0.8429, 0.9595, 0.1619]
+        r16_e2_lr0.0003  mean 0.4056  seeds [0.2071, 0.1619, 0.8476]
+        r16_e6_lr0.0003  mean 0.1690  seeds [0.1405, 0.169, 0.1976]
+        r32_e2_lr0.0003  mean 0.1659  seeds [0.1738, 0.1619, 0.1619]
+        r32_e6_lr0.0003  mean 0.1611  seeds [0.1595, 0.169, 0.1548]
+      BEST (selected on test, disclosed handicap): r16_e6_lr0.0001 mean 0.9722 seeds [0.9714, 0.9738, 0.9714]
+      handover - best, per seed: [0.0286, 0.0262, 0.0286]
+      manuscript's untuned point: [0.85, 0.6952, 0.8571] (mean 0.8008)
+      P1: False
+
+>>> P2 (bar: paired bootstrap CI for hrr_gold - prompt_ev on the 300 rows excludes zero)
+      store 0.9744  evidence-in-prompt 0.9500  single pass 0.2400
+      store - evidence_in_prompt = +0.0244  95% CI [-0.0044, +0.0544]  (discordant rows: 26)
+      store - single_pass        = +0.7344  95% CI [+0.6822, +0.7856]  (the headline gap, for contrast)
+      P2: False
+
+>>> P3 (bar: untruncated single pass trails the store's 0.9481 by >= 0.20)
+      single_pass (32k reader) 0.2877  trunc 0.000  mean prompt tokens 2183
+      manuscript's phi-2 single pass 0.1651 at trunc 0.887
+      store - single_pass = +0.6604 : P3 True
+      prompt_sup (gold paragraphs only) 0.5283 (manuscript 0.4009)
+      prompt_ev_p150 0.5786  trunc 0.000  gold_kept 1.000  (manuscript 0.1873 at gold_kept 0.46-0.51; store 0.6556)
+
+>>> P4 (descriptive, no bar): the V-125 answerable subset, which phi-2 dumps could not reach before
+      204 answerable rows of 300
+        single pass          full 0.2400   answerable 0.2990
+        evidence in prompt   full 0.9500   answerable 0.9559
+        store                full 0.9744   answerable 0.9967
+      error removal (store over single pass): full 96.6%  answerable 99.5%
+      store - evidence_in_prompt on the answerable rows: +0.0408  95% CI [+0.0131, +0.0719]
+
+--- readings, as registered ---
+  REPORTED FIRST -- P1 FAILS: the headline bAbI comparison was a tuning artifact. 'About twenty
+  points at two hops' is struck from the abstract, the introduction, Figure 1's caption and the
+  Discussion and replaced by the measured tuned gap; if the tuned fine-tune reaches the ceiling,
+  the claim that structure beats an equally supervised fine-tune at two hops is WITHDRAWN on
+  natural text and survives only on the synthetic arenas.
+  P2 fails: the store and the in-prompt evidence arm are NOT distinguishable on 300 rows. The
+  sentence is restated as not resolvable at this sample size -- a stronger form of the
+  counter-finding the paper already carries, and no longer resting only on the ICLR companion.
+  P3 holds: the MuSiQue separation is a property of the method, not of phi-2's window.
+  scoping: Parts A and C hand every arm the same gold evidence (use, not acquisition); Part B moves
+  only the comparator's hyperparameters. Zero API spend.
+V132-SCORE-DONE

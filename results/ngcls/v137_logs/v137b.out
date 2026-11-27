@@ -1,0 +1,23 @@
+===== V-137 amended: frontier ladder =====
+  4 readers | K [120, 2000, 4000, 8000] | n=40 | caps 1200 calls, 25M ptok | early stop below 0.60
+  k=2 K=120   zai-org/glm-5.3                plain 1.0000 | window 0.00 err 0.00 | 1348 ptok | calls 40 tot 0.1M | 0.7 min
+  k=2 K=2000  zai-org/glm-5.3                plain 0.9750 | window 0.00 err 0.03 | 20873 ptok | calls 80 tot 0.9M | 1.4 min
+  k=2 K=4000  zai-org/glm-5.3                plain 0.9000 | window 0.00 err 0.10 | 41636 ptok | calls 120 tot 2.6M | 2.0 min
+  k=2 K=8000  zai-org/glm-5.3                plain 0.7750 | window 0.00 err 0.23 | 83168 ptok | calls 160 tot 5.9M | 4.0 min
+  k=2 K=120   moonshotai/kimi-k3             plain 1.0000 | window 0.00 err 0.00 | 1440 ptok | calls 200 tot 5.9M | 1.6 min
+  k=2 K=2000  moonshotai/kimi-k3             plain 1.0000 | window 0.00 err 0.00 | 21094 ptok | calls 240 tot 6.8M | 2.8 min
+  k=2 K=4000  moonshotai/kimi-k3             plain 1.0000 | window 0.00 err 0.00 | 41995 ptok | calls 280 tot 8.5M | 2.7 min
+  k=2 K=8000  moonshotai/kimi-k3             plain 0.9750 | window 0.00 err 0.03 | 83816 ptok | calls 320 tot 11.8M | 5.0 min
+  k=2 K=120   deepseek/deepseek-v4-pro       plain 1.0000 | window 0.00 err 0.00 | 1325 ptok | calls 360 tot 11.9M | 0.9 min
+  k=2 K=2000  deepseek/deepseek-v4-pro       plain 0.8000 | window 0.00 err 0.20 | 20604 ptok | calls 400 tot 12.7M | 1.9 min
+  k=2 K=4000  deepseek/deepseek-v4-pro       plain 0.4250 | window 0.00 err 0.55 | 41112 ptok | calls 440 tot 14.3M | 3.7 min
+    -> deepseek/deepseek-v4-pro has fallen below 0.60 at K=4000; ladder stops here
+  k=2 K=120   openai/gpt-5.4-2026-03-05      plain 0.4750 | window 0.00 err 0.00 | 1287 ptok | calls 480 tot 14.4M | 0.4 min
+    -> openai/gpt-5.4-2026-03-05 fails the K=120 anchor (0.4750 < .85); no reading taken from it
+  k=4 K=2000  zai-org/glm-5.3                plain 0.9750 | window 0.00 err 0.03 | 20865 ptok | calls 520 tot 15.2M | 6.5 min
+  k=4 K=2000  moonshotai/kimi-k3             plain 1.0000 | window 0.00 err 0.00 | 21093 ptok | calls 560 tot 16.1M | 3.6 min
+  k=4 K=2000  deepseek/deepseek-v4-pro       plain 0.7500 | window 0.00 err 0.25 | 20601 ptok | calls 601 tot 16.9M | 12.3 min
+  k=4 K=2000  openai/gpt-5.4-2026-03-05      plain 0.7250 | window 0.00 err 0.00 | 19910 ptok | calls 641 tot 17.7M | 0.7 min
+  TOTAL 641 calls, 17.69M prompt tokens, 0.36M completion tokens
+V137B-DONE
+V137B-WRAPPER-EXIT 0

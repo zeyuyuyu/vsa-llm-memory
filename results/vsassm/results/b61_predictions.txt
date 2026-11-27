@@ -1,0 +1,8 @@
+HELD   R1 H-SBC within 2 steps of the model at every k  {'k1': 0, 'k2': 0, 'k4': 0, 'e05': 0, 'k8': 0, 'k16': 0, 'k32': 2}
+HELD   R2 H-SBC G >= +2 at >= 5 of 7 k and G >= +1 at every k  {'k1': 5, 'k2': 5, 'k4': 3, 'e05': 3, 'k8': 2, 'k16': 2, 'k32': 1}
+HELD   R3 H-SBC TABLE WIN, -4 <= Delta <= -2 at every k  ('TABLE WIN', {'k1': -3, 'k2': -3, 'k4': -3, 'e05': -2, 'k8': -3, 'k16': -2, 'k32': -4})
+HELD   R4 H-SIC within 1 step of H-SBC at every k  {'k1': 0, 'k2': 0, 'k4': 0, 'e05': 0, 'k8': 0, 'k16': 0, 'k32': 0}
+HELD   R5 H-HAD within 1 step of U at every k  {'k1': 0, 'k2': 0, 'k4': 0, 'e05': 0, 'k8': 0, 'k16': 0, 'k32': 0}
+HELD   R6 HD-best = H-SBC or H-SIC at every k  {'k1': ['H-SBC', 'H-SIC'], 'k2': ['H-SBC', 'H-SIC'], 'k4': ['H-SBC', 'H-SIC'], 'e05': ['H-SBC', 'H-SIC'], 'k8': ['H-SBC', 'H-SIC'], 'k16': ['H-SBC', 'H-SIC'], 'k32': ['H-SBC', 'H-SIC']}
+FAILED R7 dev lam at dev N* 0.5 or 0.7 at every k  {'k1': 0.7, 'k2': 0.7, 'k4': 0.7, 'e05': 0.5, 'k8': 0.5, 'k16': 0.5, 'k32': 0.35}
+FAILED R8 damage: H-SBC position independent and fewer cells than the best non-HD table in 4 of 4, fewer than U in >= 2 of 4  {'lines-nat-k4': {'delta': 6, 'label': 'store fewer cells', 'G': 3, 'posind': True}, 'clust-nat-k4': {'delta': 5, 'label': 'store fewer cells', 'G': 2, 'posind': True}, 'lines-nat-k8': {'delta': 20, 'label': 'store fewer cells', 'G': 3, 'posind': True}, 'clust-nat-k8': {'delta': 9, 'label': 'store fewer cells', 'G': 1, 'posind': False}}

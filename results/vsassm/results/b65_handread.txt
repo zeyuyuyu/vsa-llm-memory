@@ -1,0 +1,150 @@
+=== last vsapub vs disc (seed 0): 206 disagreements; vector right 58, disc right 148
+ -- vector right, disc wrong: all 58 tagged {'write-back not followed': 15, 'read error': 43}
+   N-test-117 multiplication x=202 y=45 gold=90 | loser: read error (x)
+      vector mod={'op': 'multiplication', 'op_s': 0.989, 'x': 2, 'y': 45, 'ans': 90, 'gate': True} out='90' correct=True
+      disc   mod={'op': 'multiplication', 'op_p': 1.0, 'x': 902, 'y': 45, 'ans': 590, 'gate': True} out='590' correct=False
+   N-test-373 modulo x=660 y=8 gold=4 | loser: read error (x)
+      vector mod={'op': 'modulo', 'op_s': 1.013, 'x': 660, 'y': 8, 'ans': 4, 'gate': True} out='4' correct=True
+      disc   mod={'op': 'modulo', 'op_p': 1.0, 'x': 650, 'y': 8, 'ans': 2, 'gate': True} out='2' correct=False
+   N-test-709 gcd x=135 y=2 gold=1 | loser: read error (x)
+      vector mod={'op': 'gcd', 'op_s': 0.996, 'x': 5, 'y': 2, 'ans': 1, 'gate': True} out='1' correct=True
+      disc   mod={'op': 'gcd', 'op_p': 1.0, 'x': 132, 'y': 2, 'ans': 2, 'gate': True} out='2' correct=False
+   N-test-814 lcm x=955 y=139 gold=745 | loser: read error (y)
+      vector mod={'op': 'lcm', 'op_s': 1.002, 'x': 955, 'y': 139, 'ans': 745, 'gate': True} out='745' correct=True
+      disc   mod={'op': 'lcm', 'op_p': 1.0, 'x': 955, 'y': 149, 'ans': 295, 'gate': True} out='295' correct=False
+   N-test-1114 square_mod x=561 y=69 gold=12 | loser: read error (x)
+      vector mod={'op': 'square_mod', 'op_s': 0.995, 'x': 561, 'y': 69, 'ans': 12, 'gate': True} out='12' correct=True
+      disc   mod={'op': 'square_mod', 'op_p': 1.0, 'x': 661, 'y': 69, 'ans': 13, 'gate': True} out='13' correct=False
+   N-test-1309 bitwise_and x=981 y=397 gold=389 | loser: write-back not followed
+      vector mod={'op': 'bitwise_and', 'op_s': 0.977, 'x': 981, 'y': 397, 'ans': 389, 'gate': True} out='389' correct=True
+      disc   mod={'op': 'bitwise_and', 'op_p': 1.0, 'x': 981, 'y': 397, 'ans': 389, 'gate': True} out='379' correct=False
+ -- disc right, vector wrong: all 148 tagged {'read error': 142, 'write-back not followed': 4, 'gate closed': 2}
+   N-test-99 multiplication x=367 y=300 gold=100 | loser: read error (y)
+      vector mod={'op': 'multiplication', 'op_s': 1.056, 'x': 367, 'y': 0, 'ans': 0, 'gate': True} out='0' correct=False
+      disc   mod={'op': 'multiplication', 'op_p': 1.0, 'x': 367, 'y': 300, 'ans': 100, 'gate': True} out='100' correct=True
+   N-test-364 modulo x=894 y=890 gold=4 | loser: read error (y)
+      vector mod={'op': 'modulo', 'op_s': 1.104, 'x': 894, 'y': 880, 'ans': 14, 'gate': True} out='14' correct=False
+      disc   mod={'op': 'modulo', 'op_p': 1.0, 'x': 894, 'y': 890, 'ans': 4, 'gate': True} out='4' correct=True
+   N-test-741 gcd x=888 y=154 gold=2 | loser: read error (x)
+      vector mod={'op': 'gcd', 'op_s': 1.069, 'x': 88, 'y': 154, 'ans': 22, 'gate': True} out='22' correct=False
+      disc   mod={'op': 'gcd', 'op_p': 1.0, 'x': 888, 'y': 154, 'ans': 2, 'gate': True} out='2' correct=True
+   N-test-1058 square_mod x=946 y=605 gold=121 | loser: read error (y)
+      vector mod={'op': 'square_mod', 'op_s': 1.049, 'x': 946, 'y': 5, 'ans': 1, 'gate': True} out='1' correct=False
+      disc   mod={'op': 'square_mod', 'op_p': 1.0, 'x': 946, 'y': 605, 'ans': 121, 'gate': True} out='121' correct=True
+   N-test-1101 square_mod x=857 y=733 gold=716 | loser: gate closed
+      vector mod={'op': 'square_mod', 'op_s': 0.785, 'x': 857, 'y': 733, 'ans': 716, 'gate': False} out='729' correct=False
+      disc   mod={'op': 'square_mod', 'op_p': 1.0, 'x': 857, 'y': 733, 'ans': 716, 'gate': True} out='716' correct=True
+   N-test-1377 bitwise_and x=689 y=593 gold=529 | loser: read error (y)
+      vector mod={'op': 'bitwise_and', 'op_s': 1.011, 'x': 689, 'y': 93, 'ans': 17, 'gate': True} out='17' correct=False
+      disc   mod={'op': 'bitwise_and', 'op_p': 1.0, 'x': 689, 'y': 593, 'ans': 529, 'gate': True} out='529' correct=True
+=== last vsabm vs disc (seed 0): 92 disagreements; vector right 60, disc right 32
+ -- vector right, disc wrong: all 60 tagged {'write-back not followed': 11, 'read error': 49}
+   N-test-81 multiplication x=856 y=460 gold=760 | loser: read error (y)
+      vector mod={'op': 'multiplication', 'op_s': 1.092, 'x': 856, 'y': 460, 'ans': 760, 'gate': True} out='760' correct=True
+      disc   mod={'op': 'multiplication', 'op_p': 1.0, 'x': 856, 'y': 450, 'ans': 200, 'gate': True} out='200' correct=False
+   N-test-685 gcd x=748 y=33 gold=11 | loser: read error (x)
+      vector mod={'op': 'gcd', 'op_s': 1.006, 'x': 748, 'y': 33, 'ans': 11, 'gate': True} out='11' correct=True
+      disc   mod={'op': 'gcd', 'op_p': 1.0, 'x': 738, 'y': 33, 'ans': 3, 'gate': True} out='3' correct=False
+   N-test-1089 square_mod x=832 y=428 gold=148 | loser: read error (x)
+      vector mod={'op': 'square_mod', 'op_s': 0.971, 'x': 832, 'y': 428, 'ans': 148, 'gate': True} out='148' correct=True
+      disc   mod={'op': 'square_mod', 'op_p': 1.0, 'x': 822, 'y': 428, 'ans': 300, 'gate': True} out='300' correct=False
+   N-test-1509 bitwise_xor x=531 y=500 gold=999 | loser: read error (y)
+      vector mod={'op': 'bitwise_xor', 'op_s': 1.0, 'x': 531, 'y': 500, 'ans': 999, 'gate': True} out='999' correct=True
+      disc   mod={'op': 'bitwise_xor', 'op_p': 1.0, 'x': 531, 'y': 400, 'ans': 899, 'gate': True} out='899' correct=False
+   N-test-1903 bitwise_or x=941 y=626 gold=1023 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.024, 'x': 941, 'y': 626, 'ans': 1023, 'gate': True} out='1023' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 1.0, 'x': 941, 'y': 626, 'ans': 1023, 'gate': True} out='1027' correct=False
+   N-test-1907 bitwise_or x=670 y=487 gold=1023 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.051, 'x': 670, 'y': 487, 'ans': 1023, 'gate': True} out='1023' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 1.0, 'x': 670, 'y': 487, 'ans': 1023, 'gate': True} out='1027' correct=False
+ -- disc right, vector wrong: all 32 tagged {'read error': 27, 'gate closed': 3, 'write-back not followed': 2}
+   N-test-807 lcm x=942 y=109 gold=678 | loser: read error (y)
+      vector mod={'op': 'lcm', 'op_s': 0.923, 'x': 942, 'y': 119, 'ans': 98, 'gate': True} out='98' correct=False
+      disc   mod={'op': 'lcm', 'op_p': 1.0, 'x': 942, 'y': 109, 'ans': 678, 'gate': True} out='678' correct=True
+   N-test-1187 square_mod x=571 y=493 gold=168 | loser: read error (y)
+      vector mod={'op': 'square_mod', 'op_s': 0.982, 'x': 571, 'y': 593, 'ans': 484, 'gate': True} out='484' correct=False
+      disc   mod={'op': 'square_mod', 'op_p': 1.0, 'x': 571, 'y': 493, 'ans': 168, 'gate': True} out='168' correct=True
+   N-test-1193 square_mod x=890 y=360 gold=100 | loser: read error (x)
+      vector mod={'op': 'square_mod', 'op_s': 0.991, 'x': 880, 'y': 360, 'ans': 40, 'gate': True} out='40' correct=False
+      disc   mod={'op': 'square_mod', 'op_p': 1.0, 'x': 890, 'y': 360, 'ans': 100, 'gate': True} out='100' correct=True
+   N-test-1251 bitwise_and x=797 y=650 gold=520 | loser: read error (x)
+      vector mod={'op': 'bitwise_and', 'op_s': 1.114, 'x': 897, 'y': 650, 'ans': 640, 'gate': True} out='640' correct=False
+      disc   mod={'op': 'bitwise_and', 'op_p': 1.0, 'x': 797, 'y': 650, 'ans': 520, 'gate': True} out='520' correct=True
+   N-test-1918 bitwise_or x=603 y=583 gold=607 | loser: read error (x)
+      vector mod={'op': 'bitwise_or', 'op_s': 0.953, 'x': 503, 'y': 583, 'ans': 1015, 'gate': True} out='1015' correct=False
+      disc   mod={'op': 'bitwise_or', 'op_p': 1.0, 'x': 603, 'y': 583, 'ans': 607, 'gate': True} out='607' correct=True
+   N-test-1931 bitwise_or x=902 y=456 gold=974 | loser: gate closed
+      vector mod={'op': 'bitwise_or', 'op_s': 0.795, 'x': 902, 'y': 456, 'ans': 974, 'gate': False} out='1058' correct=False
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.997, 'x': 902, 'y': 456, 'ans': 974, 'gate': True} out='974' correct=True
+=== ops vsapub vs disc (seed 0): 31 disagreements; vector right 7, disc right 24
+ -- vector right, disc wrong: all 7 tagged {'write-back not followed': 7}
+   N-test-1822 bitwise_or x=653 y=502 gold=1023 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 0.996, 'x': 653, 'y': 502, 'ans': 1023, 'gate': True} out='1023' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.999, 'x': 653, 'y': 502, 'ans': 1023, 'gate': True} out='1024' correct=False
+   N-test-1826 bitwise_or x=959 y=487 gold=1023 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.0, 'x': 959, 'y': 487, 'ans': 1023, 'gate': True} out='1023' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.998, 'x': 959, 'y': 487, 'ans': 1023, 'gate': True} out='1024' correct=False
+   N-test-1839 bitwise_or x=942 y=876 gold=1006 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 0.957, 'x': 942, 'y': 876, 'ans': 1006, 'gate': True} out='1006' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.996, 'x': 942, 'y': 876, 'ans': 1006, 'gate': True} out='1000' correct=False
+   N-test-1877 bitwise_or x=803 y=491 gold=1003 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 0.987, 'x': 803, 'y': 491, 'ans': 1003, 'gate': True} out='1003' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.999, 'x': 803, 'y': 491, 'ans': 1003, 'gate': True} out='1000' correct=False
+   N-test-1907 bitwise_or x=670 y=487 gold=1023 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.072, 'x': 670, 'y': 487, 'ans': 1023, 'gate': True} out='1023' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.999, 'x': 670, 'y': 487, 'ans': 1023, 'gate': True} out='1024' correct=False
+   N-test-1927 bitwise_or x=552 y=332 gold=876 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.087, 'x': 552, 'y': 332, 'ans': 876, 'gate': True} out='876' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.999, 'x': 552, 'y': 332, 'ans': 876, 'gate': True} out='878' correct=False
+ -- disc right, vector wrong: all 24 tagged {'read error': 14, 'gate closed': 3, 'write-back not followed': 7}
+   N-test-131 multiplication x=21 y=1 gold=21 | loser: read error (x)
+      vector mod={'op': 'multiplication', 'op_s': 1.053, 'x': 1, 'y': 1, 'ans': 1, 'gate': True} out='1' correct=False
+      disc   mod={'op': 'multiplication', 'op_p': 0.996, 'x': 21, 'y': 1, 'ans': 21, 'gate': True} out='21' correct=True
+   N-test-862 lcm x=859 y=104 gold=336 | loser: gate closed
+      vector mod={'op': 'lcm', 'op_s': 0.757, 'x': 859, 'y': 104, 'ans': 336, 'gate': False} out='859' correct=False
+      disc   mod={'op': 'lcm', 'op_p': 0.992, 'x': 859, 'y': 104, 'ans': 336, 'gate': True} out='336' correct=True
+   N-test-944 lcm x=79 y=20 gold=580 | loser: read error (x)
+      vector mod={'op': 'lcm', 'op_s': 1.036, 'x': 9, 'y': 20, 'ans': 180, 'gate': True} out='180' correct=False
+      disc   mod={'op': 'lcm', 'op_p': 0.999, 'x': 79, 'y': 20, 'ans': 580, 'gate': True} out='580' correct=True
+   N-test-1022 square_mod x=213 y=57 gold=54 | loser: gate closed
+      vector mod={'op': 'square_mod', 'op_s': 0.764, 'x': 213, 'y': 57, 'ans': 54, 'gate': False} out='9' correct=False
+      disc   mod={'op': 'square_mod', 'op_p': 0.97, 'x': 213, 'y': 57, 'ans': 54, 'gate': True} out='54' correct=True
+   N-test-1226 square_mod x=998 y=725 gold=579 | loser: read error (y)
+      vector mod={'op': 'square_mod', 'op_s': 0.962, 'x': 998, 'y': 25, 'ans': 4, 'gate': True} out='4' correct=False
+      disc   mod={'op': 'square_mod', 'op_p': 1.0, 'x': 998, 'y': 725, 'ans': 579, 'gate': True} out='579' correct=True
+   N-test-1889 bitwise_or x=916 y=241 gold=1013 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 0.982, 'x': 916, 'y': 241, 'ans': 1013, 'gate': True} out='1017' correct=False
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.997, 'x': 916, 'y': 241, 'ans': 1013, 'gate': True} out='1013' correct=True
+=== ops vsabm vs disc (seed 0): 23 disagreements; vector right 4, disc right 19
+ -- vector right, disc wrong: all 4 tagged {'write-back not followed': 4}
+   N-test-1826 bitwise_or x=959 y=487 gold=1023 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.03, 'x': 959, 'y': 487, 'ans': 1023, 'gate': True} out='1023' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.998, 'x': 959, 'y': 487, 'ans': 1023, 'gate': True} out='1024' correct=False
+   N-test-1877 bitwise_or x=803 y=491 gold=1003 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.018, 'x': 803, 'y': 491, 'ans': 1003, 'gate': True} out='1003' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.999, 'x': 803, 'y': 491, 'ans': 1003, 'gate': True} out='1000' correct=False
+   N-test-1907 bitwise_or x=670 y=487 gold=1023 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.075, 'x': 670, 'y': 487, 'ans': 1023, 'gate': True} out='1023' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.999, 'x': 670, 'y': 487, 'ans': 1023, 'gate': True} out='1024' correct=False
+   N-test-1927 bitwise_or x=552 y=332 gold=876 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.115, 'x': 552, 'y': 332, 'ans': 876, 'gate': True} out='876' correct=True
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.999, 'x': 552, 'y': 332, 'ans': 876, 'gate': True} out='878' correct=False
+ -- disc right, vector wrong: all 19 tagged {'read error': 4, 'gate closed': 5, 'write-back not followed': 10}
+   N-test-131 multiplication x=21 y=1 gold=21 | loser: read error (y)
+      vector mod={'op': 'multiplication', 'op_s': 1.054, 'x': 21, 'y': 21, 'ans': 441, 'gate': True} out='441' correct=False
+      disc   mod={'op': 'multiplication', 'op_p': 0.996, 'x': 21, 'y': 1, 'ans': 21, 'gate': True} out='21' correct=True
+   N-test-752 lcm x=818 y=313 gold=34 | loser: gate closed
+      vector mod={'op': 'lcm', 'op_s': 0.788, 'x': 818, 'y': 313, 'ans': 34, 'gate': False} out='818' correct=False
+      disc   mod={'op': 'lcm', 'op_p': 0.997, 'x': 818, 'y': 313, 'ans': 34, 'gate': True} out='34' correct=True
+   N-test-862 lcm x=859 y=104 gold=336 | loser: gate closed
+      vector mod={'op': 'lcm', 'op_s': 0.752, 'x': 859, 'y': 104, 'ans': 336, 'gate': False} out='859' correct=False
+      disc   mod={'op': 'lcm', 'op_p': 0.992, 'x': 859, 'y': 104, 'ans': 336, 'gate': True} out='336' correct=True
+   N-test-1851 bitwise_or x=862 y=225 gold=1023 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 0.942, 'x': 862, 'y': 225, 'ans': 1023, 'gate': True} out='1027' correct=False
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.997, 'x': 862, 'y': 225, 'ans': 1023, 'gate': True} out='1023' correct=True
+   N-test-1889 bitwise_or x=916 y=241 gold=1013 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.012, 'x': 916, 'y': 241, 'ans': 1013, 'gate': True} out='1017' correct=False
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.997, 'x': 916, 'y': 241, 'ans': 1013, 'gate': True} out='1013' correct=True
+   N-test-1983 bitwise_or x=880 y=244 gold=1012 | loser: write-back not followed
+      vector mod={'op': 'bitwise_or', 'op_s': 1.062, 'x': 880, 'y': 244, 'ans': 1012, 'gate': True} out='1014' correct=False
+      disc   mod={'op': 'bitwise_or', 'op_p': 0.999, 'x': 880, 'y': 244, 'ans': 1012, 'gate': True} out='1012' correct=True

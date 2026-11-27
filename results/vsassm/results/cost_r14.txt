@@ -1,0 +1,21 @@
+# Inputs of the paper's Table 2 (accuracy and cost per question), r14, 2026-11-14. Every input with its source.
+GPU price: ~US$1.17 per H200 GPU-hour, derived from PACE Phoenix billing weights (memory note pace_phoenix_ops,
+  "~$1.17 per H200 GPU-hour"; consistent with prereg/B18_prereg.md "about 23 H200-hours ... (about $27)"). Applied to
+  A800 and L40S time as well (no separate price).
+Reader time per one-day log (the shipped Qwen3-1.7B reader, 40 logs per run, batched):
+  slowest: 991 s for 40 logs on a shared A800 = 24.8 s per log (results/nsr4_verdict.txt line 5: "A800 GPU 5, 991 s").
+  fastest: 351 s for 40 logs on an H200 = 8.8 s per log (session log 668bab84, PACE job 14689334:
+  "reader_test2_verify_v4.jsonl: 40 logs in 351s, 18.4 tokens per human line").
+Questions per read text: impact 230 over 40 one-day logs; window 460 over another 40; eight days: 12 sites x 8 day-logs
+  = 96 day-logs for 69 questions (prereg/NSR5_prereg.md: "K = 8: 12 sites, 69 questions").
+Ours, per question at 24.8 s per log: impact 40*24.8/230 = 4.3 GPU-s = 0.14 US cents; window 40*24.8/460 = 2.2 GPU-s =
+  0.07 cents; eight days 96*24.8/69 = 34.5 GPU-s = 1.1 cents. RULER at 128k: 46,470 GPU-s (sacct, array tasks 13-21)
+  / 900 samples = 51.6 GPU-s = 1.7 cents (reading of the 9 memory tasks only; QA relevance reading not charged).
+GPT-6.1 Sol (OpenAI's API, xhigh), per question: impact USD 0.020 and 12 s (nsr1_verdict.txt line 151); window USD 0.025
+  and 22 s (nsr3_verdict.txt line 120); eight days USD 0.152 and 83 s (nsr5_verdict.txt line 130). Token counts at
+  USD 2 / 10 per million, a list price taken from price trackers (nsr5_verdict.txt lines 112-113). RULER: USD 38.98 for
+  130 samples, billed by OpenRouter (frontier_ruler_verdict.txt line 15).
+Claude Opus 5.5 (medium): ledger USD 10.12 (impact, 230), 19.51 (window, 460), 18.25 (eight days, 69)
+  (nsr5_verdict.txt line 83); mean seconds 13.7, 15.0, 68.9 (recomputed from nsr/out/api/*claude-opus-5-5_medium.jsonl).
+  RULER: USD 82.49 for 130 samples (frontier_ruler_verdict.txt line 15).
+Not included: reader training; answering time (measured only for location questions: mean 0.22 ms on CPU).

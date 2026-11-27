@@ -1,0 +1,100 @@
+===== V-128: retrieval budget sweep + dense retriever (prereg 75bdc1a) =====
+dense model: BAAI/bge-small-en-v1.5
+
+  --- 2wiki (n=300) ---
+    bm25_para_k2       0.1533 [0.1133, 0.1967]  recall 0.5433  picked 10.46  tok 141635
+    bm25_para_k5       0.2633 [0.2133, 0.3133]  recall 0.7933  picked 22.68  tok 252958
+    bm25_sent_k10      0.1533 [0.1133, 0.1967]  recall 0.5017  picked 10.00  tok 152963
+    bm25_sent_k20      0.2700 [0.2200, 0.3200]  recall 0.7633  picked 19.57  tok 246857
+    bm25_sent_k5       0.0933 [0.0633, 0.1267]  recall 0.3617  picked 5.00  tok 99405
+    bm25_sent_kgold    0.0433 [0.0233, 0.0667]  recall 0.2450  picked 2.00  tok 67101
+    dense_para_k2      0.2233 [0.1767, 0.2733]  recall 0.6917  picked 9.85  tok 137955
+    dense_para_k5      0.3067 [0.2567, 0.3600]  recall 0.8733  picked 20.00  tok 234579
+    dense_sent_k10     0.2600 [0.2100, 0.3100]  recall 0.6983  picked 10.00  tok 160068
+    dense_sent_k20     0.3233 [0.2700, 0.3767]  recall 0.8917  picked 19.57  tok 250356
+    dense_sent_k5      0.2000 [0.1567, 0.2467]  recall 0.5417  picked 5.00  tok 105362
+    dense_sent_kgold   0.0767 [0.0467, 0.1067]  recall 0.3883  picked 2.00  tok 69749
+    oracle_sentences   0.5200 [0.4633, 0.5767]  recall 1.0000  picked 2.00  tok 70199
+    single_pass        0.3333 [0.2800, 0.3867]  recall   n/a   picked  n/a  tok 325919
+
+  --- hotpotqa (n=300) ---
+    bm25_para_k2       0.4433 [0.3867, 0.5000]  recall 0.6374  picked 7.71  tok 125230
+    bm25_para_k5       0.5167 [0.4600, 0.5733]  recall 0.8280  picked 21.15  tok 260847
+    bm25_sent_k10      0.4700 [0.4133, 0.5267]  recall 0.7472  picked 10.00  tok 169500
+    bm25_sent_k20      0.5033 [0.4467, 0.5600]  recall 0.8718  picked 19.99  tok 279448
+    bm25_sent_k5       0.4167 [0.3633, 0.4733]  recall 0.6099  picked 5.00  tok 108520
+    bm25_sent_kgold    0.3667 [0.3133, 0.4200]  recall 0.4874  picked 2.48  tok 76890
+    dense_para_k2      0.4300 [0.3733, 0.4867]  recall 0.6937  picked 6.90  tok 117873
+    dense_para_k5      0.5300 [0.4733, 0.5867]  recall 0.8866  picked 19.01  tok 240173
+    dense_sent_k10     0.4467 [0.3900, 0.5033]  recall 0.7802  picked 10.00  tok 170826
+    dense_sent_k20     0.5300 [0.4733, 0.5867]  recall 0.9245  picked 19.99  tok 279355
+    dense_sent_k5      0.4167 [0.3600, 0.4733]  recall 0.6245  picked 5.00  tok 109366
+    dense_sent_kgold   0.3833 [0.3267, 0.4367]  recall 0.4892  picked 2.48  tok 77616
+    oracle_sentences   0.6833 [0.6300, 0.7333]  recall 1.0000  picked 2.48  tok 76653
+    single_pass        0.4967 [0.4400, 0.5533]  recall   n/a   picked  n/a  tok 395201
+
+>>> P0 validity gate: BM25 sentence k=gold reproduces V-126 within +-.05 on BOTH datasets
+      2wiki      0.0433 vs V-126 0.0433 : True
+      hotpotqa   0.3667 vs V-126 0.3667 : True
+
+>>> P1 (PRIMARY, bar: for EVERY config, oracle - config CI excludes zero)
+      2wiki      oracle - bm25_para_k2       +0.3667 [+0.3067, +0.4267]
+      2wiki      oracle - bm25_para_k5       +0.2567 [+0.2033, +0.3133]
+      2wiki      oracle - bm25_sent_k10      +0.3667 [+0.3100, +0.4233]
+      2wiki      oracle - bm25_sent_k20      +0.2500 [+0.1967, +0.3033]
+      2wiki      oracle - bm25_sent_k5       +0.4267 [+0.3700, +0.4833]
+      2wiki      oracle - bm25_sent_kgold    +0.4767 [+0.4200, +0.5333]
+      2wiki      oracle - dense_para_k2      +0.2967 [+0.2400, +0.3533]
+      2wiki      oracle - dense_para_k5      +0.2133 [+0.1633, +0.2633]
+      2wiki      oracle - dense_sent_k10     +0.2600 [+0.2100, +0.3133]
+      2wiki      oracle - dense_sent_k20     +0.1967 [+0.1500, +0.2467]
+      2wiki      oracle - dense_sent_k5      +0.3200 [+0.2633, +0.3767]
+      2wiki      oracle - dense_sent_kgold   +0.4433 [+0.3867, +0.5000]
+      hotpotqa   oracle - bm25_para_k2       +0.2400 [+0.1833, +0.2967]
+      hotpotqa   oracle - bm25_para_k5       +0.1667 [+0.1100, +0.2233]
+      hotpotqa   oracle - bm25_sent_k10      +0.2133 [+0.1567, +0.2700]
+      hotpotqa   oracle - bm25_sent_k20      +0.1800 [+0.1267, +0.2333]
+      hotpotqa   oracle - bm25_sent_k5       +0.2667 [+0.2100, +0.3233]
+      hotpotqa   oracle - bm25_sent_kgold    +0.3167 [+0.2600, +0.3767]
+      hotpotqa   oracle - dense_para_k2      +0.2533 [+0.1933, +0.3133]
+      hotpotqa   oracle - dense_para_k5      +0.1533 [+0.1000, +0.2067]
+      hotpotqa   oracle - dense_sent_k10     +0.2367 [+0.1833, +0.2900]
+      hotpotqa   oracle - dense_sent_k20     +0.1533 [+0.1033, +0.2033]
+      hotpotqa   oracle - dense_sent_k5      +0.2667 [+0.2133, +0.3233]
+      hotpotqa   oracle - dense_sent_kgold   +0.3000 [+0.2400, +0.3600]
+      P1: True
+
+>>> P2 (bar: best config - single_pass CI excludes zero)
+      2wiki      best=dense_sent_k20     0.3233 | best - single_pass -0.0100 [-0.0500, +0.0300] : False
+      hotpotqa   best=dense_sent_k20     0.5300 | best - single_pass +0.0333 [-0.0100, +0.0800] : False
+      P2: False
+
+>>> P3 (descriptive, no bar): smallest budget at which a retriever stops hurting
+      2wiki      bm25   sent   10:-0.180(worse)  20:-0.063(worse)  5:-0.240(worse)  gold:-0.290(worse)
+      2wiki      bm25   para   2:-0.180(worse)  5:-0.070(worse)
+      2wiki      dense  sent   10:-0.073(worse)  20:-0.010(tied)  5:-0.133(worse)  gold:-0.257(worse)
+      2wiki      dense  para   2:-0.110(worse)  5:-0.027(tied)
+      hotpotqa   bm25   sent   10:-0.027(tied)  20:+0.007(tied)  5:-0.080(worse)  gold:-0.130(worse)
+      hotpotqa   bm25   para   2:-0.053(tied)  5:+0.020(tied)
+      hotpotqa   dense  sent   10:-0.050(tied)  20:+0.033(tied)  5:-0.080(worse)  gold:-0.113(worse)
+      hotpotqa   dense  para   2:-0.067(worse)  5:+0.033(tied)
+
+>>> P4 (descriptive, no bar): recall of the gold supporting sentences against budget
+      2wiki      bm25   sent   10:0.502  20:0.763  5:0.362  gold:0.245
+      2wiki      bm25   para   2:0.543  5:0.793
+      2wiki      dense  sent   10:0.698  20:0.892  5:0.542  gold:0.388
+      2wiki      dense  para   2:0.692  5:0.873
+      hotpotqa   bm25   sent   10:0.747  20:0.872  5:0.610  gold:0.487
+      hotpotqa   bm25   para   2:0.637  5:0.828
+      hotpotqa   dense  sent   10:0.780  20:0.924  5:0.624  gold:0.489
+      hotpotqa   dense  para   2:0.694  5:0.887
+
+--- readings, as registered ---
+  P1 holds: no retriever configuration reaches the oracle at any tested budget, so
+  'evidence SELECTION is the hard part' now has a budget curve behind it rather than one
+  harsh point.
+  P2 fails: retrieval never beats the unfiltered context at any tested budget, which
+  STRENGTHENS V-126 rather than qualifying it.
+  scoping: GPU only, zero API spend; the store is not re-measured; nothing here bears on
+  acquisition or on the npj submission.
+V128-SCORE-DONE

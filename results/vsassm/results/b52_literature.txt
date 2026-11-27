@@ -1,0 +1,42 @@
+B52 literature check after the results (prereg/B52_robustness_layers_maps_1day_prereg.md). Full entries with
+verification notes: results/b52_literature_raw.txt (42 entries; arXiv ids resolved through the arXiv API; five PDFs read
+in full). Tags: SUPPORTS / CONFLICTS / CONTEXT / NO PRECEDENT, relative to the B52 result named.
+
+(b) R1 compression result across random maps (result: ROBUST; per-map R1 VSA - BEST +8.13 / +8.33 / +8.59, two-level
+    interval [+7.47, +9.23]; B36's own map +6.77 was the lowest of four, its dev choices tested worse at V = 2)
+  - T2-1 Bouthillier et al. 2021 (arXiv:2103.03098): hyperparameter selection is a major variance source and should be
+    randomised. SUPPORTS the design (configuration re-selected on dev per map) and the observation that selection, not
+    the map, moved the published number most (B36 map +6.77 vs new maps +8.1 to +8.6).
+  - T2-4 Saravanan, Berman, Sober 2020 (hierarchical bootstrap, NBDT 3(5)): resampling level by level for nested data.
+    SUPPORTS the two-level (maps x entity clusters) interval as the method.
+  - T2-9 Sutherland & Schneider 2015 (arXiv:1506.02785): error of random Fourier features across draws concentrates
+    with dimension. CONTEXT / SUPPORTS the small between-map SD (0.23 points) at d of 10^3-10^4.
+  - T2-2 Dodge et al. 2020, T2-3 Reimers & Gurevych 2017: seed variance can change conclusions. CONTEXT (here it does not).
+  - No precedent found for a seed-and-selection-randomised equal-bits comparison of a VSA store with classical memories.
+
+(c) Hardware ranking at the fitted horizon (result: unchanged; TABLE WIN at every k at one day as at 30 days)
+  - T3-2 Joshi et al. 2020 (Nat. Commun. 11:2473): the PCM statistical model was characterised over about one day
+    (reads from ~25 s to 1 day); the authors themselves extrapolate to one year. SUPPORTS reporting one day as the
+    fitted horizon and 30 days as an extrapolation.
+  - T3-3 Rasch et al. 2021 (aihwkit, arXiv:2104.02184): the PCM-like noise model is calibrated on Joshi's array, time
+    axis ~1e2-1e5 s; no validity range stated. CONTEXT (same fit window).
+  - T3-1 Nandakumar et al. 2018 (J. Appl. Phys. 124:152135): drift fit from ~100 ns to tens of seconds. CONTEXT: the
+    earlier model's window is even shorter; the paper should cite which model B25 implements.
+  - T3-6 Le Gallo et al. 2018 (Adv. Electron. Mater.): log(t) drift observed from ~100 ns up to months, model valid to
+    10 years at room temperature, no saturation observed. SUPPORTS the power-law form at 30 days (not the per-device
+    drift-exponent spread or the 1/f noise growth, which are validated only to ~1 day).
+  - T3-11 Kim 2018 (HDM, ICC): uncoded hyperdimensional modulation matches LDPC / Polar error rates on a wireless
+    channel. CONFLICTS in spirit with "ECC tables need 2-4x fewer cells", but on a different channel and metric
+    (communication BER, not cells per stored fact). No ECC-vs-HD comparison on PCM / RRAM found (NO PRECEDENT, as B38).
+
+(a) Label-free codes at Qwen3-8B's dev-chosen layer (only qwen8L27 x C ran; see results/b52a_verdict.txt)
+  - T1-1 Voita, Sennrich, Titov 2019 (arXiv:1909.01380), T1-2 Brunner et al. 2020 (arXiv:1908.04211): token identity is
+    best kept below the top layers of left-to-right LMs. SUPPORTS reading names from an intermediate layer (B31
+    exploratory 1: 0.998 at layer 27 vs 0.983 at the final layer in C).
+  - T1-8 Levy & Geva 2024 (arXiv:2410.11781): numbers are represented digit-wise in base 10. CONTEXT for the decimal /
+    hex alias in arena C and for the input-embedding cell (not run).
+  - T1-17 Razzhigaev et al. 2023 (arXiv:2311.05928): anisotropy peaks in the middle layers of decoders. CONTEXT: the
+    centring / whitening arms (cw, bind+pc, bind+pz) were rerun at layer 27, where this matters most.
+  - T1-12..T1-15 (Ethayarajh 2019; all-but-the-top; whitening; rogue dimensions): centring / whitening remove the
+    common direction. CONTEXT for cw / bind+pc / bind+pz (B42's reading: centring removes common-mode cross-talk but
+    not the inconsistency across mentions).

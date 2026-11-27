@@ -1,0 +1,31 @@
+# B55 literature check (conclusion -> literature). Sources in B40's check (results/b40_literature.txt) are cited by its
+# keys and not re-read; new sources are marked (snippet only) where only a search-engine snippet was seen.
+# Date of check: 2026-11-20. Search: "holographic reduced representations clean-up memory threshold versus nearest
+# neighbour argmax decoding noise robustness unbinding crosstalk" (one search; no direct comparison of a thresholded and
+# an argmax clean-up rule was found).
+
+[PL95] Plate, T. A. Holographic Reduced Representations. IEEE Transactions on Neural Networks 6(3), 1995 (snippet only,
+  redwood.berkeley.edu copy). Unbinding is correct only in expectation, its variance is of order 1/N, so a clean-up
+  memory (nearest match in the vocabulary) is essential for reliable retrieval.
+  -> CONTEXT for the argmax read: nearest-match clean-up is the canonical HRR read; a similarity threshold that writes
+     a default symbol (DE25's digit rule) is a design choice on top of it.
+[AX2606] "Disentanglement with Holographic Reduced Representations", arXiv:2606.09725 (snippet only; authors not checked): retrieval = target +
+  intrinsic unbinding noise + cross-talk from other stored items.
+  -> CONTEXT for task R: binding UNCLEANED mention reads adds each read's error into the memory, where it becomes
+     cross-talk for every later unbinding; cleaning each read first removes that term ([FK18] in B40's check makes the
+     same point about superposition).
+
+Per-conclusion lines are appended in results/b55_verdict.txt's companion note (prereg/B55_note_after_test.md).
+
+AFTER THE RESULT (2026-11-20; conclusion -> literature, one line per conclusion)
+- Argmax clean-up beats DE25's thresholded digit read on clean reads (+0.063) and DISC (+0.030): SUPPORTED by [PL95]
+  (nearest-match clean-up is the canonical HRR read) and QUALIFIED by [D26T-ch8] in B40's check ("encoding accuracy plays
+  a pivotal role"); NO PRECEDENT found comparing a threshold-with-default rule against plain argmax for HRR digit reads.
+- Under read noise the VSA module loses to the classifier read with either clean-up rule (task N rho 0.25-2, 8; task R
+  rho >= 2): consistent with B40's line (no precedent for read noise on LLM hidden states; HDC robustness claims concern
+  device noise in stored vectors, [FK18] context). NO PRECEDENT for this comparison.
+- Task R: binding uncleaned reads makes the module fragile at a noise level where every read is still correct (rho 1:
+  0.728 vs 0.999 after per-read clean-up): SUPPORTED by [AX2606] and [FK18] (cross-talk from stored items limits
+  retrieval; cleaning each item before superposition removes its error from the trace).
+- The similarity gate opens on noisy held-out reads while the MSP gate on the classifier closes: NO PRECEDENT found;
+  QUALIFIES B50's held-out result (its advantage is limited to read noise <= 1).

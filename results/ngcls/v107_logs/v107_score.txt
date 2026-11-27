@@ -1,0 +1,26 @@
+===== V-107: redundant extraction vs the recall-squared penalty =====
+  seeds: ['42', '123', '456'] | T=0.80 top_p=0.95, 8 samples drawn once, k nested
+
+  arm        EM        recall    recall^2    triples   wrong_obj 
+  greedy     0.4778    0.6633    0.4400      2.00      -         
+  k=1        0.4344    0.6333    0.4011      2.00      0.57      
+  k=2        0.4378    0.6994    0.4892      2.52      0.81      
+  k=4        0.4256    0.7494    0.5617      3.16      1.16      
+  k=8        0.4278    0.7872    0.6197      3.86      1.50      
+
+  per-seed greedy EM: [0.4733, 0.4867, 0.4733]
+  per-seed k=1   EM: [0.44, 0.4333, 0.43]  recall: [0.6367, 0.625, 0.6383]
+  per-seed k=2   EM: [0.42, 0.45, 0.4433]  recall: [0.7067, 0.69, 0.7017]
+  per-seed k=4   EM: [0.4367, 0.4333, 0.4067]  recall: [0.7567, 0.745, 0.7467]
+  per-seed k=8   EM: [0.4267, 0.4267, 0.43]  recall: [0.785, 0.7767, 0.8]
+
+  >>> P1 gate: greedy reproduces V-103 extract_ft_10k -- EM 0.4778 vs .4722 (True), recall 0.6633 vs .66 (True) : True
+  >>> P2 failures are stochastic: recall(k=8) 0.7872 - recall(k=1) 0.6333 = +0.1539 >= .10 : True
+  >>> P3 mechanism survives: |EM - recall^2| <= .10 at every k : False | deviations [('1', 0.0333), ('2', -0.0514), ('4', -0.1361), ('8', -0.1919)]
+  >>> P4 it propagates: EM(k=8) 0.4278 - EM(k=1) 0.4344 = -0.0067 >= .05 : False
+  >>> P5 (descriptive, no bar): triples/row [('1', 2.0), ('2', 2.52), ('4', 3.16), ('8', 3.86)] ; distinct wrong objects/row [('1', 0.57), ('2', 0.81), ('4', 1.16), ('8', 1.5)] ; head_entity fallback rate 0.1100
+
+  reference: lora_only 0.7333 (V-99, Qwen3-8B, r16 a32 lr 2e-5, 10k x 1 pass, own passages, budget 1200, 300 dev rows, em)
+  READING (P2 hit, P4 fail), REPORTED FIRST: coverage rises and accuracy does not -- the added candidates cost in cleanup ambiguity what they gain in coverage. Redundancy-as-stated is dead and the recall-squared model needs a store-noise term it does not have. Second time a remedy's price cancelled its gain (V-99's routing was the first).
+  scoping: this is the ACQUISITION half; not comparable to V-106's gold-triple sweep. Nothing enters 9/16.
+V107-SCORE-DONE

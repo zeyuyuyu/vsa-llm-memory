@@ -1,0 +1,46 @@
+
+B60: store (final design) and variants minus corrected least squares (LAMc)
+encoder              STORE-LAMC R1-V2     STORE-LAMC R1-V16         STORE-LAMC R1        VSAPCX-LAMC R1        STORE-BESTC R1
+Qwen3-8B                        -3.94                 -4.17                 -4.06                 -2.01                 -3.13
+Granite-3.3-8B                  -4.09                 -7.01                 -5.55                 -3.48                 -5.55
+Llama-3.1-8B                    -4.41                 -6.72                 -5.56                 -4.02                 -5.56
+Mistral-7B                      -5.47                 -5.00                 -5.23                 -3.91                 -5.66
+e5-base-v2                      -2.97                -10.10                 -6.53                 -5.31                 -6.87
+bge-small                       -1.05                 -7.30                 -4.18                 -3.47                 -6.14
+MiniLM-L6                       -0.19                 -8.41                 -4.30                 -3.66                 -5.47
+
+B62: store minus online least squares (NLMSc, RLSc)
+encoder             STORE-NLMSC R1-V2    STORE-NLMSC R1-V16        STORE-NLMSC R1         STORE-RLSC R1         NLMSC-LAMC R1
+Qwen3-8B                        -2.77                 -1.44                 -2.11                 -3.60                 -1.95
+Granite-3.3-8B                  -1.73                 -4.01                 -2.87                 -5.11                 -2.68
+Llama-3.1-8B                    -3.30                  0.27                 -1.51                 -5.07                 -4.05
+Mistral-7B                      -4.76                 -4.82                 -4.79                 -5.40                 -0.45
+e5-base-v2                      -1.55                 -5.41                 -3.48                 -6.47                 -3.05
+bge-small                        1.04                 -5.09                 -2.02                 -4.07                 -2.15
+MiniLM-L6                        1.08                 -5.39                 -2.16                 -4.32                 -2.15
+
+B64: first design (VSAR) and final design (VSA) against the SDM at training codes and the best of seven
+encoder                  VSAR-SDMT R1         VSAR-BEST7 R1          VSA-BEST7 R1        VSAR-BEST36 R1
+Qwen3-8B                        -1.89                 -2.15                  1.25                  6.77
+Granite-3.3-8B                  -2.25                 -2.25                 -0.22                  6.06
+Llama-3.1-8B                    -1.20                 -1.20                  0.91                  7.10
+Mistral-7B                      -3.56                 -3.56                 -1.02                  7.10
+e5-base-v2                      -0.92                 -1.79                 -1.51                  0.60
+bge-small                       -4.73                 -5.01                 -3.73                 -0.71
+MiniLM-L6                       -3.80                 -4.06                 -3.43                 -2.12
+
+memory       k1     k2     k4    e05     k8    k16    k32
+H-SBC        32     32     45     54     91    304   1448
+H-SIC        32     32     45     54     91    304   1448
+H-HAD        76     76     76     91    128    431   1722
+O-LDPC       32     32     38     64     91    304   1218
+O-BCH        32     32     45     64    181    724   2435
+
+accuracy: published 0.897  best match 0.960  discrete 0.930  (items 2000)
+published read - discrete    -3.23 points (95% -4.60 to -1.87)
+best match - discrete        +3.03 points (95% 2.10 to 3.98)
+
+with seed variance (task N: 2,000 trained items; task R: 2,000 chain items; three seeds per arm)
+N published read - discrete    -3.23 points; two-level 95% -4.80 to -1.67; Welch t (df 3.5) -4.42 to -2.05
+N best match - discrete        +3.03 points; two-level 95% 1.80 to 4.27; Welch t (df 3.9) 1.80 to 4.27
+R chains, vector - discrete    +0.65 points; two-level 95% 0.27 to 1.08; Welch t (df 2.4) 0.06 to 1.24

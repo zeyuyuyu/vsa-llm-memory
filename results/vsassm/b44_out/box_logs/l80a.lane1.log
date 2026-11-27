@@ -1,0 +1,13 @@
+B44 LoRA {"n": {"train": 80000, "dev": 500}, "max_len": {"train": 522, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 146.96it/s]
+  cls qwen8 ho n80000 r8 lr1e-04 sd456 step 1250/10000 (ep 0.12) loss 0.4246 train_sub 0.7700 dev 0.7500 (1851s)
+  cls qwen8 ho n80000 r8 lr1e-04 sd456 step 2500/10000 (ep 0.25) loss 0.8848 train_sub 0.8040 dev 0.8040 (3699s)
+  cls qwen8 ho n80000 r8 lr1e-04 sd456 step 3750/10000 (ep 0.38) loss 0.4390 train_sub 0.7100 dev 0.7320 (5549s)
+  cls qwen8 ho n80000 r8 lr1e-04 sd456 step 5000/10000 (ep 0.50) loss 0.6170 train_sub 0.8060 dev 0.8020 (7399s)
+  cls qwen8 ho n80000 r8 lr1e-04 sd456 step 6250/10000 (ep 0.62) loss 0.5016 train_sub 0.8040 dev 0.8040 (9249s)
+  cls qwen8 ho n80000 r8 lr1e-04 sd456 step 7500/10000 (ep 0.75) loss 0.3136 train_sub 0.8040 dev 0.8040 (11100s)
+  cls qwen8 ho n80000 r8 lr1e-04 sd456 step 8750/10000 (ep 0.88) loss 0.5030 train_sub 0.8040 dev 0.8040 (12953s)
+  cls qwen8 ho n80000 r8 lr1e-04 sd456 step 10000/10000 (ep 1.00) loss 0.5563 train_sub 0.8040 dev 0.8040 (14803s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 131.41it/s]
+  TEST cls qwen8 ho n80000 r8 lr1e-04 sd456: test 0.8100 (dev recheck 0.8040, logged 0.8040)

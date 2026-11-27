@@ -1,0 +1,22 @@
+[2026-11-18T23:53:10Z] gpu2 lane1 b44_feats.py --enc qwen8 --items ho:dev ho:test ho:train
+[2026-11-19T00:56:38Z] gpu2 lane1 rc=0 b44_feats.py --enc qwen8 --items ho:dev ho:test ho:train
+[2026-11-19T00:56:38Z] gpu2 lane1 b44_name.py --cell ho:800 --arm exact --out out/name/qwen8_exact_ho_n800.json
+[2026-11-19T00:56:52Z] gpu2 lane1 rc=0 b44_name.py --cell ho:800 --arm exact --out out/name/qwen8_exact_ho_n800.json
+[2026-11-19T00:56:52Z] gpu2 lane1 b44_name.py --cell ho:8000 --arm exact --out out/name/qwen8_exact_ho_n8000.json
+[2026-11-19T00:57:36Z] gpu2 lane1 rc=0 b44_name.py --cell ho:8000 --arm exact --out out/name/qwen8_exact_ho_n8000.json
+[2026-11-19T00:57:36Z] gpu2 lane1 b44_name.py --cell ho:80000 --arm exact --out out/name/qwen8_exact_ho_n80000.json
+[2026-11-19T01:03:10Z] gpu2 lane1 rc=0 b44_name.py --cell ho:80000 --arm exact --out out/name/qwen8_exact_ho_n80000.json
+[2026-11-19T01:03:10Z] gpu2 lane1 b44_name.py --cell ho:800 --arm name --out out/name/qwen8_name_ho_n800.json
+[2026-11-19T01:03:46Z] gpu2 lane1 rc=0 b44_name.py --cell ho:800 --arm name --out out/name/qwen8_name_ho_n800.json
+[2026-11-19T01:03:46Z] gpu2 lane1 b44_name.py --cell ho:8000 --arm name --out out/name/qwen8_name_ho_n8000.json
+[2026-11-19T01:07:01Z] gpu2 lane1 rc=0 b44_name.py --cell ho:8000 --arm name --out out/name/qwen8_name_ho_n8000.json
+[2026-11-19T01:07:01Z] gpu2 lane1 b44_name.py --cell ho:800 --arm probe --out out/name/qwen8_probe_ho_n800.json
+[2026-11-19T01:08:09Z] gpu2 lane1 rc=0 b44_name.py --cell ho:800 --arm probe --out out/name/qwen8_probe_ho_n800.json
+[2026-11-19T01:08:09Z] gpu2 lane1 b44_name.py --cell ho:8000 --arm probe --out out/name/qwen8_probe_ho_n8000.json
+[2026-11-19T01:11:45Z] gpu2 lane1 rc=0 b44_name.py --cell ho:8000 --arm probe --out out/name/qwen8_probe_ho_n8000.json
+[2026-11-19T01:11:45Z] gpu2 lane1 b44_name.py --cell ho:80000 --arm name --seeds 42 --out out/name/qwen8_name_ho_n80000_s42.json
+[2026-11-19T01:22:07Z] gpu2 lane1 rc=0 b44_name.py --cell ho:80000 --arm name --seeds 42 --out out/name/qwen8_name_ho_n80000_s42.json
+[2026-11-19T01:22:07Z] gpu2 lane1 b44_name.py --cell ho:80000 --arm name --seeds 123 --out out/name/qwen8_name_ho_n80000_s123.json
+[2026-11-19T01:32:23Z] gpu2 lane1 rc=0 b44_name.py --cell ho:80000 --arm name --seeds 123 --out out/name/qwen8_name_ho_n80000_s123.json
+[2026-11-19T01:32:23Z] gpu2 lane1 b44_name.py --cell ho:80000 --arm name --seeds 456 --out out/name/qwen8_name_ho_n80000_s456.json
+[2026-11-19T01:42:29Z] gpu2 lane1 rc=0 b44_name.py --cell ho:80000 --arm name --seeds 456 --out out/name/qwen8_name_ho_n80000_s456.json

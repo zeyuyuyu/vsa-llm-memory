@@ -1,0 +1,36 @@
+================================================================================================
+V-134  model=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct  16 KBs x 160 facts  80 queries per (KB, depth)
+================================================================================================
+
+  depth  store      lora_weights   ctx_cot    base_nofacts  | gap = store - lora
+  k=1    0.8422     0.9711         0.8586     0.0000        | -0.1289
+  k=2    0.6734     0.7352         0.8914     0.0000        | -0.0617
+  k=3    0.5609     0.5539         0.8391     0.0000        | +0.0070
+  k=4    0.4664     0.4289         0.7945     0.0008        | +0.0375
+
+  ---- P0 validity gate ----
+  P0(a) memorisation: lora_weights at k=1 = 0.9711 >= .80: True
+  P0(b) not guessable: base_nofacts max over depths = 0.0008 <= .05: True
+  P0(c) scratchpad truncation max 0.0187 <= .02: True
+
+  ---- P1 / P2 ----
+  P1 store - lora at k=2 = -0.0617  CI [-0.1143, -0.0096]  >= +.30 False, excl-0 True => FAILS
+  P2 gap(4) - gap(2)    = +0.0992  CI [+0.0510, +0.1474]  >= +.15 False, excl-0 True => FAILS
+
+  ---- P3 scope (descriptive, no bar) ----
+  ctx_cot beats the store at depths: [1, 2, 3, 4]
+  store d=2048  k1=0.8305  k2=0.6552  k3=0.5281  k4=0.4294
+  store d=4096  k1=0.8422  k2=0.6734  k3=0.5609  k4=0.4664
+  store d=8192  k1=0.8443  k2=0.6771  k3=0.5641  k4=0.4661
+
+================================================================================================
+V-134 VERDICT: P1 FAILS | P2 FAILS
+
+  The fine-tune composes its memorised facts about as well as the algebra does. The route
+  that was supposed to be the algebra's clearest win is not one on this task.
+
+  SCOPE, BINDING: context-plus-scratchpad beats the store at depths [1, 2, 3, 4]. So this run licenses
+  'an algebraic memory beats putting knowledge in weights' and NOT 'the algebra beats putting
+  the evidence in the prompt'. Quoting P1/P2 without this sentence would misrepresent them.
+================================================================================================
+V134-SCORED

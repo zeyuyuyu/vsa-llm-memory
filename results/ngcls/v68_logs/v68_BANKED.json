@@ -1,0 +1,22 @@
+{
+ "n": 300,
+ "extraction_recall": 0.44,
+ "start_hit_rate": 1.0,
+ "refs": {
+  "prompt": 0.2533,
+  "prompt_ev": 0.95
+ },
+ "arms": {
+  "hrr_extr": [
+   0.04,
+   0.03,
+   0.023333333333333334
+  ]
+ },
+ "failure_split": {
+  "no_start": 0,
+  "empty_store": 0,
+  "wrong": 288
+ },
+ "verdict": "P1 recall >= .60: False (0.440) | P2 no-gold revives (>= .4533): False (0.0311) | P3 recall bounds the arm: True | 7B EXTRACTOR NOT COMPETENT EITHER: original boundary stands"
+}

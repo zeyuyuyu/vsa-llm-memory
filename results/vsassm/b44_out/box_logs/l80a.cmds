@@ -1,0 +1,2 @@
+[2026-11-19T02:10:44Z] gpu7 lane1 b44_lora.py --task cls --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 456 --final --out out/lora/cls_ho_n80000_r8_lr1e-4_s456.json
+[2026-11-19T06:21:28Z] gpu7 lane1 rc=0 b44_lora.py --task cls --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 456 --final --out out/lora/cls_ho_n80000_r8_lr1e-4_s456.json

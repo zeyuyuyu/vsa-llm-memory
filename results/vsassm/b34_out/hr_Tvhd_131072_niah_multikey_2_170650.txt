@@ -1,0 +1,12 @@
+store 131072/niah_multikey_2/170650  arm T-vhd  x32  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'R': 6007, 'B': 1198, 'db': 15, 'rd': 85, 'wv': 257}  cells/C 1.000
+  array disp: 1527450 cells, flipped 0.3746
+  array rows: 1543799 cells, flipped 0.3747
+failed 77 of 150
+  key 'brief-trafficker'  want ['5660982']  got ['8847420', '1727215']
+    j=0 bucket 807 sigma 205 decoded 205 -> row 3641 (true row 3641); in that row the best candidate is 1845 (8847420, last=0) at similarity 59 of 257; the true value+flag code at 59
+    j=1 bucket 179 sigma 186 decoded 186 -> row 1104 (true row None); in that row the best candidate is 7641 (1727215, last=1) at similarity 81 of 257; the true value+flag code at -
+  key 'quickest-tag'  want ['8556685']  got ['2323015']
+    j=0 bucket 860 sigma 386 decoded 386 -> row 579 (true row 579); in that row the best candidate is 8337 (2323015, last=1) at similarity 63 of 257; the true value+flag code at 39
+  key 'faded-gearshift'  want ['7705917']  got ['4402869']
+    j=0 bucket 24 sigma 5 decoded 2053 -> row 3039 (true row 3128); in that row the best candidate is 9206 (4402869, last=1) at similarity 79 of 257; the true value+flag code at -

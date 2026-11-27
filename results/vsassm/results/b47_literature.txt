@@ -1,0 +1,44 @@
+# B47 literature check (after the results; conclusion -> literature, recorded as supports / conflicts / no precedent).
+# Searched 2026-11-19 (web search; abstracts and publisher pages read, not every full text).
+
+## (2) Intervals for seeds x questions
+- Conclusion: in the arena designs every seed answers the same questions (seeds and questions are crossed), so the
+  nested hierarchical bootstrap (questions redrawn within each seed) understates the question component; resampling
+  seeds and questions separately (H-cross) is the appropriate, mildly conservative scheme; with three seeds any
+  bootstrap understates the seed component, so the t interval over seeds is the conservative bound.
+- SUPPORTS: Owen (2007), "The pigeonhole bootstrap", Ann. Appl. Stat. 1(2):386-411, doi 10.1214/07-AOAS122: for
+  crossed random-effects data, resample rows and columns independently; the scheme is mildly conservative; McCullagh
+  (2000) showed no exact bootstrap exists for crossed random effects.
+- SUPPORTS (for the nested scheme on nested data, i.e. why it is not the primary one here): Saravanan, Berman & Sober
+  (2020), "Application of the hierarchical bootstrap to multi-level data in neuroscience", NBDT (bioRxiv 819334).
+
+## (3) Within-symbol inconsistency at zero coherence
+- Conclusion: with exactly orthogonal symbols, per-mention inconsistency of the size measured in the label-free codes
+  (mention-to-mention cosine 0.30) costs about 29 points (1.000 -> 0.715) but leaves the memory above the floor; the
+  chain breaks first at the clean-up (hop-1 0.64, hop-2 0.41 at that level), and accuracy reaches the floor + 0.10 only
+  near a mention cosine of 0.25 (rho 0.5).
+- SUPPORTS (mechanism): Plate's analysis of holographic reduced representations (Plate 1995, IEEE TNN 6(3); Plate
+  2003, book): the unbinding of a k-pair trace returns the cued item with noise of variance ~k/N, so retrieval needs
+  the cue's similarity to the stored key to stay well above sqrt(k/N) (here k = 32, N = 2,048: ~0.125 relative noise);
+  a cue-key cosine of rho^2 ~ 0.3 sits at that edge, as observed. Clean-up memory as the stage that fails with noisy
+  cues: Stewart, Tang & Eliasmith (2011), "A biologically realistic cleanup memory".
+- NO PRECEDENT found for the specific manipulation (per-mention inconsistency at zero coherence in a VSA chain read
+  from language-model states).
+
+## (1) Phi-2 fine-tunes
+- Conclusion: on arena C (800 or 8,000 inputs) neither an answer-token read-out (LoRA or all weights) nor a full fine-tune
+  with the B31 classifier read-out fits its training split or leaves chance on test; a LoRA trained to write the bridge
+  symbol first (scratchpad) reaches 0.997. The bottleneck on Phi-2 is not the classifier read-out or LoRA's capacity
+  but composing the two look-ups in one step without intermediate supervision (subject to exploratory 2 for the
+  answer-token arms).
+- SUPPORTS: Nye et al. (2021), "Show your work: scratchpads for intermediate computation with language models"
+  (arXiv 2112.00114): supervising intermediate steps makes multi-step computation learnable where direct answers fail.
+- SUPPORTS: Wang et al. (2024), "Grokked transformers are implicit reasoners" (arXiv 2405.15071): implicit two-hop
+  composition is learned only after training far past overfitting (grokking) and does not generalise systematically out
+  of distribution; prior work on implicit composition reports negative results.
+- CONFLICTS (in part): Biderman et al. (2024), "LoRA learns less and forgets less" (TMLR; arXiv 2405.09673): full
+  fine-tuning learns more than LoRA on code and math; here full fine-tuning did no better than LoRA (both at chance), so
+  capacity is not the limit on this task.
+- CONFLICTS (in part): Gao, Fisch & Chen (2021), LM-BFF (ACL; arXiv 2012.15723): with few examples, prompt-based
+  fine-tuning through label words beats a new classification head; here the label-word (answer-token) read-out was no
+  better than the head.

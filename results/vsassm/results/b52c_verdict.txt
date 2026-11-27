@@ -1,0 +1,30 @@
+# B52 (c) verdict (prereg/B52_robustness_layers_maps_1day_prereg.md): B38's N* (cells per stored pair for >= 99.5%
+# exact reads of the 4,776 probed RULER keys) at the device model's ONE-DAY bit-error rates; generated 2026-11-20 04:57 UTC
+
+  rates (1 day): k1 0, k2 8.2e-06, k4 0.0097645, e05 0.05, k8 0.101718, k16 0.25641, k32 0.365043   (30 days: k1 0, k2 0.00013175, k4 0.0208065, e05 0.05, k8 0.122635, k16 0.276006, k32 0.374429)
+
+  N* at 1 day (30 days in parentheses)
+                         k1               k2               k4              e05               k8              k16              k32
+  V-pub         108  (  108)      108  (  108)      108  (  108)      152  (  152)      431  (  861)    >4096  (>4096)    >4096  (>4096)
+  V-Snt          91  (   91)       91  (   91)      108  (  108)      108  (  108)      108  (  128)    >4096  (>4096)    >4096  (>4096)
+  V-am           91  (   91)       91  (   91)       91  (  108)      108  (  108)      152  (  152)      512  (  609)     2048  ( 2896)
+  V-last         76  (   76)       76  (   76)       76  (   76)       91  (   91)      108  (  128)      304  (  431)     1448  ( 1722)
+  T-rep          19  (   19)       19  (   23)       76  (   91)      128  (  128)      215  (  256)      861  ( 1024)     2896  ( 3444)
+  E-BCH          19  (   19)       19  (   19)       23  (   27)       38  (   38)       91  (  108)      362  (  431)     1448  ( 1722)
+  E-LDPC         23  (   23)       23  (   23)       23  (   27)       38  (   38)       54  (   54)      181  (  215)      609  (  724)
+  E-CAM          45  (   45)       45  (   45)       54  (   64)       91  (   91)      215  (  256)      861  ( 1024)     3444  ( 3444)
+
+  H1 at 1 day: Delta = grid steps of the best non-HD table's N* minus the best VSA read's N* (never reached = one
+  step beyond 4,096); 'VSA fewer cells' if Delta >= +2, 'table fewer cells' if <= -2, 'tie' if |Delta| <= 1
+    k1   best VSA V-last     76 | best table E-BCH      19 | Delta -8 -> table fewer cells (30 d: V-last 76 vs E-BCH 19, Delta -8)
+    k2   best VSA V-last     76 | best table E-BCH      19 | Delta -8 -> table fewer cells (30 d: V-last 76 vs E-BCH 19, Delta -8)
+    k4   best VSA V-last     76 | best table E-BCH      23 | Delta -7 -> table fewer cells (30 d: V-last 76 vs E-BCH 27, Delta -6)
+    e05  best VSA V-last     91 | best table E-BCH      38 | Delta -5 -> table fewer cells (30 d: V-last 91 vs E-BCH 38, Delta -5)
+    k8   best VSA V-Snt     108 | best table E-LDPC     54 | Delta -4 -> table fewer cells (30 d: V-Snt 128 vs E-LDPC 54, Delta -5)
+    k16  best VSA V-last    304 | best table E-LDPC    181 | Delta -3 -> table fewer cells (30 d: V-last 431 vs E-LDPC 215, Delta -4)
+    k32  best VSA V-last   1448 | best table E-LDPC    609 | Delta -5 -> table fewer cells (30 d: V-last 1722 vs E-LDPC 724, Delta -5)
+
+  H1 at 1 day: TABLE WIN; the 30-day ranking (table fewer cells at every k) HOLDS
+  best arms identical to 30 days per condition: {'k1': True, 'k2': True, 'k4': True, 'e05': True, 'k8': True, 'k16': True, 'k32': True}
+  check: N*(1 day) <= N*(30 days) for every arm and condition (rates are lower at 1 day): violations none
+  closed-form check (b38_check closed at the one-day rates; T-rep, V-pub, V-Snt, V-last, E-BCH/E-CAM where available): 445 cells, 37 flagged (|sim - closed form| > max(1 point, 4 SE))

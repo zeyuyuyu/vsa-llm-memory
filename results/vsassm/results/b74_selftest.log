@@ -1,0 +1,16 @@
+NL72 draws: 20 distinct sub-grids of 72, deterministic: ok
+B62's full-grid NLMSc choices reproduced from B62's dev rows in 84 / 84 cells x 7 encoders: ok
+minilm V 2 train store: STORE label recall {4: 0.84, 8: 0.863, 16: 0.855} alias {4: 0.567, 8: 0.574, 16: 0.589} LAMc(pca) label {'ideal': 0.879} 5.6s
+minilm V 16 train store: STORE label recall {4: 0.391, 8: 0.602, 16: 0.801} alias {4: 0.241, 8: 0.277, 16: 0.357} LAMc(pca) label {'ideal': 0.82} 5.9s
+qwen8 V 2 train store: STORE label recall {4: 0.926, 8: 0.98, 16: 0.996} alias {4: 0.574, 8: 0.596, 16: 0.641} LAMc(pca) label {'ideal': 1.0} 142.5s
+qwen8 V 16 train store: STORE label recall {4: 0.426, 8: 0.645, 16: 0.902} alias {4: 0.125, 8: 0.134, 16: 0.21} LAMc(pca) label {'ideal': 0.84} 145.1s
+label wrapper: alias predictions identical with labels appended (STORE, LAMc, NLMSc engines): ok
+minilm P V 2 ['whiten', 'plin'] q 2 train store best acc {'H4': 0.581, 'H16': 0.581, 'L4': 0.626, 'L16': 0.626} 0.6s
+minilm P V 16 ['whiten', 'plin'] q 1 train store best acc {'H4': 0.129, 'H16': 0.129, 'L4': 0.129, 'L16': 0.129} 0.4s
+minilm T V 2 ['whiten', 'lin', 384] q 2 train store best acc {'H4': 0.607, 'H16': 0.589, 'L4': 0.656, 'L16': 0.663} 0.6s
+minilm T V 16 ['whiten', 'lin', 384] q 1 train store best acc {'H4': 0.223, 'H16': 0.344, 'L4': 0.241, 'L16': 0.446} 0.9s
+qwen8 P V 2 ['whiten', 'plin'] q 1 train store best acc {'H4': 0.67, 'H16': 0.622, 'L4': 0.685, 'L16': 0.641} 98.5s
+qwen8 P V 16 ['whiten', 'plin'] q 1 train store best acc {'H4': 0.214, 'H16': 0.192, 'L4': 0.223, 'L16': 0.228} 2.5s
+qwen8 T V 2 ['whiten', 'lin', 4096] q 1 train store best acc {'H4': 0.604, 'H16': 0.656, 'L4': 0.611, 'L16': 0.663} 76.7s
+qwen8 T V 16 ['whiten', 'lin', 1024] q 1 train store best acc {'H4': 0.165, 'H16': 0.335, 'L4': 0.232, 'L16': 0.379} 2.5s
+selftest passed

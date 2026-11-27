@@ -1,0 +1,10 @@
+Written 2026-11-23 ~02:19 CST, before any test generation was scored.
+Primary arm: read_pos=operands (manuscript text: "the hidden state at each operand position"), layer-17 input, out/.
+Secondary (sensitivity, DE25 default "most recent token"): read_pos=last, out_last/.
+Both: same train rows (deposited N_train_meta.json, 16,000), dev rows (N_dev_meta.json, 800), own 2,000 test rows
+(250 per trained op, disjoint from train/dev), one seed (0), CE write-back fine-tune 1 epoch / 500 steps of 32,
+Adam lr 1e-3 (DE25 default) for BOTH modules, greedy decoding, exact match.
+Reproduction criterion (from the task): same sign as the paper and within ~2 points of
+published-minus-discrete -3.2 and best-match-minus-discrete +3.0.
+Observed before test scoring (dev reader selection only): operands variant reads ~99-100% for both modules;
+last-token variant dev module-correct 0.906 (vector, published read) vs 0.970 (discrete).

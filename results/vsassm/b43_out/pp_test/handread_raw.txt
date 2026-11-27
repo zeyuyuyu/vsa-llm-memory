@@ -1,0 +1,231 @@
+====================================================================================================
+paragraph 409  state acc store 0.25 direct 1.00
+  1. Light enters the eyes.   events: [['image', 'create', '-', 'eyes'], ['electrical impulses', 'create', '-', 'eyes']]
+  2. The lens focuses light through the vitreous humor.   events: []
+  3. The cornea focuses through the eye's internal lens.   events: []
+  4. The retina receives the image.   events: [['image', 'create', '-', 'retina'], ['electrical impulses', 'create', '-', 'retina']]
+  5. The retina transforms this image into electrical impulses.   events: []
+  6. The impulses travel along the optic nerve to the brain.   events: [['electrical impulses', 'move', 'retina', 'optic nerve']]
+  7. The brain decodes the impuses.   events: [['electrical impulses', 'destroy', None, '-'], ['image', 'create', '-', 'brain']]
+  image
+    gold   ['-', '-', '-', '-', 'retina', '-', '-', '-']
+    store  ['-', 'eyes', 'eyes', 'eyes', 'retina', 'retina', 'retina', 'brain']
+    direct ['-', '-', '-', '-', 'retina', '-', '-', '-']
+  electrical impulses
+    gold   ['-', '-', '-', '-', '-', 'retina', 'brain', 'brain']
+    store  ['-', 'eyes', 'eyes', 'eyes', 'retina', 'retina', 'optic nerve', '-']
+    direct ['-', '-', '-', '-', '-', 'retina', 'brain', 'brain']
+====================================================================================================
+paragraph 400  state acc store 0.17 direct 0.83
+  1. The are set up and produced with conductors.   events: [['energy', 'create', '-', '?'], ['electricity', 'create', '-', '?']]
+  2. They are set up to take the sun rays.   events: [['energy', 'move', '?', 'sun'], ['electricity', 'create', '-', 'sun']]
+  3. The sun heats up the elements.   events: [['energy', 'create', '-', 'sun'], ['electricity', 'create', '-', 'sun']]
+  4. The elements create energy.   events: [['energy', 'create', '-', 'surface']]
+  5. The energy is turned into electricity.   events: [['electricity', 'create', '-', 'surface']]
+  energy
+    gold   ['-', '-', '-', '-', 'solar panel', '-']
+    store  ['-', '?', 'sun', 'sun', 'surface', 'surface']
+    direct ['-', '-', '-', '-', '?', '-']
+  electricity
+    gold   ['-', '-', '-', '-', '-', 'solar panel']
+    store  ['-', '?', 'sun', 'sun', 'sun', 'surface']
+    direct ['-', '-', '-', '-', '-', '?']
+====================================================================================================
+paragraph 904  state acc store 0.04 direct 0.62
+  1. The cornea and lens refract light into a small image.   events: [['small image', 'create', '-', "retina's rods and cones"]]
+  2. Shine it on the retina.   events: [['light', 'move', 'lens', "retina's rods and cones"], ['small image', 'create', '-', "retina's rods and cones"]]
+  3. The retina's rods and cones convert it to electrical pulses.   events: []
+  4. The optic nerve carries electrical pulses through the optic canal.   events: [['electrical pulses', 'move', "retina's rods and cones", 'optic nerve']]
+  5. Nerve fibers end in the lateral geniculate nucleus and the visual cortex.   events: []
+  light
+    gold   ['cornea and lens', '-', '-', '-', '-', '-']
+    store  ['lens', 'lens', "retina's rods and cones", "retina's rods and cones", "retina's rods and cones", "retina's rods and cones"]
+    direct ['-', '-', '-', '-', '-', '-']
+  small image
+    gold   ['-', 'retina', 'retina', '-', '-', '-']
+    store  ['-', "retina's rods and cones", "retina's rods and cones", "retina's rods and cones", "retina's rods and cones", "retina's rods and cones"]
+    direct ['-', 'small image', 'retina', '-', '-', '-']
+  retina's rods and cones
+    gold   ['retina', 'retina', 'retina', 'retina', 'retina', 'retina']
+    store  ['?', '?', '?', '?', '?', '?']
+    direct ['?', '?', '?', "retina's rods and cones", "retina's rods and cones", "retina's rods and cones"]
+  electrical pulses
+    gold   ['-', '-', '-', 'optic nerve', 'optic canal', 'lateral geniculate nucleus and the visual cortex']
+    store  ["retina's rods and cones", "retina's rods and cones", "retina's rods and cones", "retina's rods and cones", 'optic nerve', 'optic nerve']
+    direct ['-', '-', '-', 'electrical pulses', 'optic canal', 'lateral geniculate nucleus and the visual cortex']
+====================================================================================================
+paragraph 661  state acc store 0.68 direct 0.14
+  1. Fixation is the first step in the process of making nitrogen usable by plants. Here bacteria change nitrogen into ammonium.   events: [['ammonium', 'create', '-', '?']]
+  2. Nitrification is the process by which ammonium gets changed into nitrates by bacteria.   events: [['ammonium', 'destroy', None, '-'], ['nitrates', 'create', '-', 'soil']]
+  3. Nitrates are what the plants can then absorb.   events: [['nitrates', 'create', '-', 'surface'], ['nitrates', 'move', 'surface', 'plants']]
+  4. Assimilation is how plants get nitrogen.   events: [['plant', 'create', '-', 'soil']]
+  5. They absorb nitrates from the soil into their roots. Then the nitrogen gets used in amino acids, nucleic acids, and chlorophyll.   events: [['nitrates', 'move', 'soil', 'plant']]
+  6. Ammonification is part of the decaying process.   events: [['ammonium', 'create', '-', 'soil']]
+  7. When a plant or animal dies, decomposers like fungi and bacteria turn the nitrogen back into ammonium so it can reenter the nitrogen cycle.   events: [['plant', 'destroy', None, '-'], ['animal', 'destroy', None, '-'], ['ammonium', 'create', '-', 'soil']]
+  8. Denitrification is when extra nitrogen in the soil gets put back out into the air.   events: [['nitrates', 'move', 'soil', 'air'], ['nitrates', 'destroy', None, '-'], ['nitrogen', 'create', '-', 'air']]
+  9. There are special bacteria that perform this task as well.   events: []
+  nitrogen
+    gold   ['?', '-', '-', '-', '-', 'amino acid , nucleic acid , and chlorophyll', 'amino acid , nucleic acid , and chlorophyll', '-', '-', '-']
+    store  ['-', '-', '-', '-', '-', '-', '-', '-', 'air', 'air']
+    direct ['-', '?', '?', '?', '?', '?', '?', '?', 'air', 'air']
+  ammonium
+    gold   ['-', 'soil', '-', '-', '-', '-', '-', 'soil', 'air', 'air']
+    store  ['-', '?', '-', '-', '-', '-', 'soil', 'soil', 'soil', 'soil']
+    direct ['-', '?', '?', '?', '?', '?', '?', 'soil', 'soil', 'soil']
+  nitrates
+    gold   ['-', '-', 'soil', 'plant', 'plant', '-', '-', '-', '-', '-']
+    store  ['-', '-', 'soil', 'plants', 'plants', 'plant', 'plant', 'plant', '-', '-']
+    direct ['-', '-', '?', 'soil', 'soil', 'roots', 'roots', 'roots', 'roots', 'roots']
+  plant
+    gold   ['soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', '-', '-', '-']
+    store  ['-', '-', '-', '-', 'soil', 'soil', 'soil', '-', '-', '-']
+    direct ['-', '?', '?', '?', '?', 'soil', 'soil', '?', '?', '?']
+  animal
+    gold   ['?', '?', '?', '?', '?', '?', '?', '-', '-', '-']
+    store  ['?', '?', '?', '?', '?', '?', '?', '-', '-', '-']
+    direct ['-', '-', '-', '-', '-', '-', '?', '?', '?', '?']
+====================================================================================================
+paragraph 791  state acc store 0.43 direct 0.93
+  1. Photovoltaic cells are solar cells.   events: []
+  2. Photovoltaic cell is made from silicon.   events: [['DC electricity', 'create', '-', 'solar cells'], ['AC electricity', 'create', '-', 'solar cells']]
+  3. Sun shines on the solar cells which generates DC electricity.   events: [['DC electricity', 'create', '-', 'sunlight']]
+  4. Electricity is fed into an inverter to change it to AC electricity.   events: [['DC electricity', 'move', 'solar cells', 'inverter'], ['AC electricity', 'create', '-', 'inverter']]
+  5. Electricity is then sent into the home to be used.   events: [['DC electricity', 'move', 'inverter', 'home'], ['AC electricity', 'move', 'inverter', 'home']]
+  6. Extra electricity can be sent to the main power grid for others.   events: [['AC electricity', 'move', 'home', 'main power grid'], ['DC electricity', 'move', 'solar cells', 'main power grid']]
+  DC electricity
+    gold   ['-', '-', '-', 'solar cell', '-', '-', '-']
+    store  ['-', '-', 'solar cells', 'sunlight', 'inverter', 'home', 'main power grid']
+    direct ['-', '-', '-', 'solar cells', '-', '-', '-']
+  AC electricity
+    gold   ['-', '-', '-', '-', 'inverter', 'home', 'power grid']
+    store  ['-', '-', 'solar cells', 'solar cells', 'inverter', 'home', 'main power grid']
+    direct ['-', '-', '-', '-', 'inverter', 'home', 'main power grid']
+====================================================================================================
+paragraph 533  state acc store 0.40 direct 0.85
+  1. A seed comes from an adult tree.   events: [['seed', 'create', '-', 'tree']]
+  2. It sprouts from the soil.   events: [['sprouts', 'create', '-', 'soil']]
+  3. It grows into a small seedling, a tree's infancy.   events: [['seedling', 'create', '-', 'soil']]
+  4. It grows bigger and becomes a sapling, a juvenile tree.   events: [['seedling', 'destroy', None, '-'], ['sapling', 'create', '-', 'surface']]
+  5. It reaches maturity, this make take many years depending on the type of tree.   events: []
+  6. The tree will begin to age and decline.   events: [['tree', 'destroy', None, '-'], ['tree', 'create', '-', '?']]
+  7. Eventually rot and decay after it dies.   events: [['tree', 'destroy', None, '-']]
+  seed
+    gold   ['tree', 'soil', '-', '-', '-', '-', '-', '-']
+    store  ['-', 'tree', 'tree', 'tree', 'tree', 'tree', 'tree', 'tree']
+    direct ['-', '?', '-', '-', '-', '-', '-', '-']
+  sprouts
+    gold   ['-', '-', 'soil', '-', '-', '-', '-', '-']
+    store  ['-', '-', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil']
+    direct ['-', '-', 'soil', '-', '-', '-', '-', '-']
+  seedling
+    gold   ['-', '-', '-', 'soil', '-', '-', '-', '-']
+    store  ['-', '-', '-', 'soil', '-', '-', '-', '-']
+    direct ['-', '-', '-', '?', '-', '-', '-', '-']
+  sapling
+    gold   ['-', '-', '-', '-', 'soil', '-', '-', '-']
+    store  ['-', '-', '-', '-', 'surface', 'surface', 'surface', 'surface']
+    direct ['-', '-', '-', '-', '?', '-', '-', '-']
+  tree
+    gold   ['-', '-', '-', '-', '-', 'soil', 'soil', '-']
+    store  ['?', '?', '?', '?', '?', '?', '?', '-']
+    direct ['-', '-', '-', '-', '-', '-', '?', '-']
+====================================================================================================
+paragraph 410  state acc store 0.29 direct 0.71
+  1. The cornea helps to focus light.   events: [['light', 'create', '-', 'eye'], ['electric signal', 'create', '-', 'eye']]
+  2. Light passes to the iris.   events: [['light', 'move', 'cornea', 'iris']]
+  3. The pupil within the iris expands or contracts to control the amount of light entering the eye.   events: []
+  4. The retina converts the light that reaches the retina into an electric signal.   events: [['electric signal', 'create', '-', 'retina'], ['light', 'move', 'iris', 'retina']]
+  5. Sends the signal to the brain.   events: [['electric signal', 'move', 'retina', 'brain']]
+  6. The brain translates the electrical signals into the images a person sees.   events: [['electric signal', 'destroy', None, '-']]
+  electric signal
+    gold   ['-', '-', '-', '-', 'retina', 'brain', 'brain']
+    store  ['-', 'eye', 'eye', 'eye', 'retina', 'brain', '-']
+    direct ['-', '-', '-', '-', 'retina', 'brain', 'brain']
+  light
+    gold   ['?', 'cornea', 'iris', 'retina', '-', '-', '-']
+    store  ['-', 'eye', 'iris', 'iris', 'retina', 'retina', 'retina']
+    direct ['-', 'eye', 'iris', 'eye', 'retina', '-', '-']
+====================================================================================================
+paragraph 401  state acc store 0.33 direct 0.75
+  1. Solar panels are made up of two types of silicon.   events: []
+  2. Sun shines on solar panels.   events: [['sunlight', 'create', '-', 'sky'], ['direct current', 'create', '-', 'panels'], ['alternating current', 'create', '-', 'panels']]
+  3. Sunlight goes into the top half of the solar panel.   events: [['sunlight', 'move', 'outside', 'top half of the solar panel']]
+  4. Sunlight travels into the bottom half of the solar panel.   events: [['sunlight', 'move', 'top half of the solar panel', 'bottom half of the solar panel']]
+  5. The "jump" between the two halves can be used to make direct current.   events: [['direct current', 'create', '-', 'top half of the solar panel']]
+  6. A solar "inverter" changes the direct current to alternating current.   events: [['alternating current', 'create', '-', 'location of inverter']]
+  7. Alternating current can be used to power things in your house.   events: []
+  sunlight
+    gold   ['-', '-', 'solar panel', 'top half of the solar panel', 'bottom half of the solar panel', '-', '-', '-']
+    store  ['-', '-', 'sky', 'top half of the solar panel', 'bottom half of the solar panel', 'bottom half of the solar panel', 'bottom half of the solar panel', 'bottom half of the solar panel']
+    direct ['-', '-', '-', 'top half of the solar panel', 'bottom half of the solar panel', 'bottom half of the solar panel', 'bottom half of the solar panel', 'bottom half of the solar panel']
+  direct current
+    gold   ['-', '-', '-', '-', '-', 'solar panel', '-', '-']
+    store  ['-', '-', 'panels', 'panels', 'panels', 'top half of the solar panel', 'top half of the solar panel', 'top half of the solar panel']
+    direct ['-', '-', '-', '-', '-', "the 'jump' between the two halves", '-', '-']
+  alternating current
+    gold   ['-', '-', '-', '-', '-', '-', "solar `` inverter ''", 'house']
+    store  ['-', '-', 'panels', 'panels', 'panels', 'panels', 'location of inverter', 'location of inverter']
+    direct ['-', '-', '-', '-', '-', '-', "solar 'inverter'", 'your house']
+====================================================================================================
+paragraph 503  state acc store 0.61 direct 0.21
+  1. A car is filled with gasoline (gas).   events: [['gasoline;gas', 'create', '-', 'car']]
+  2. Someone turns the car on with a key.   events: [['spark', 'create', '-', 'car'], ['battery', 'create', '-', 'car'], ['piston', 'create', '-', 'car'], ['crankshaft', 'create', '-', 'car'], ['wheel', 'create', '-', 'car']]
+  3. The car's battery produces a spark (electricity).   events: [['spark', 'create', '-', 'car']]
+  4. The spark ignites the gas.   events: [['spark', 'destroy', None, '-'], ['gasoline;gas', 'create', '-', 'engine']]
+  5. The burning gas expands when it encounters air.   events: [['gasoline;gas', 'destroy', None, '-']]
+  6. The expanding air and gas pushes a piston out.   events: [['gasoline;gas', 'move', 'engine', 'piston'], ['spark', 'destroy', None, '-']]
+  7. The motion of several pistons move the crankshaft.   events: [['piston', 'move', 'cylinder', 'crankshaft'], ['piston', 'move', 'cylinder', 'crankshaft'], ['piston', 'move', 'cylinder', 'crankshaft'], ['piston', 'move', 'cylinder', 'crankshaft'], ['piston', 'move', 'cylinder', 'crankshaft'], ['piston', 'move', 'cylinder', 'crankshaft'], ['piston', 'move', 'cylinder', 'crankshaft']]
+  8. Different parts of the car cause the motion in the crankshaft to cause the wheels to move.   events: [['crankshaft', 'move', 'engine', 'car'], ['wheel', 'move', 'car', 'ground']]
+  9. The wheels and the car's body can move.   events: [['wheel', 'move', 'crankshaft', 'surface']]
+  car
+    gold   ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
+    store  ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
+    direct ['car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+  gasoline;gas
+    gold   ['?', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+    store  ['-', 'car', 'car', 'car', 'engine', '-', 'piston', 'piston', 'piston', 'piston']
+    direct ['-', 'car', 'car', 'car', '-', '-', '-', '-', '-', '-']
+  battery
+    gold   ['car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+    store  ['-', '-', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+    direct ['-', '-', '-', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+  spark
+    gold   ['-', '-', '-', 'car', 'car', '?', '?', '?', '?', '?']
+    store  ['-', '-', 'car', 'car', '-', '-', '-', '-', '-', '-']
+    direct ['-', '-', '-', '?', '-', '-', '-', '-', '-', '-']
+  piston
+    gold   ['car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+    store  ['-', '-', 'car', 'car', 'car', 'car', 'car', 'crankshaft', 'crankshaft', 'crankshaft']
+    direct ['-', '-', '-', '-', '-', '-', '?', '?', '?', '?']
+  crankshaft
+    gold   ['car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+    store  ['-', '-', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+    direct ['-', '-', '-', '-', '-', '-', '-', '?', '?', '?']
+  wheel
+    gold   ['car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car', 'car']
+    store  ['-', '-', 'car', 'car', 'car', 'car', 'car', 'car', 'ground', 'surface']
+    direct ['-', '-', '-', '-', '-', '-', '-', '-', 'car', 'car']
+====================================================================================================
+paragraph 654  state acc store 0.50 direct 0.89
+  1. A seedling is grown in the ground.   events: [['seedling', 'create', '-', 'ground']]
+  2. The seedling grows bigger, and forms its root system.   events: [['root system', 'create', '-', 'ground'], ['seedling', 'move', 'ground', 'ground'], ['seedling', 'destroy', None, '-'], ['tree', 'create', '-', 'ground']]
+  3. The roots start to gain more nourishment as the tree grows.   events: [['root system', 'move', 'ground', 'tree'], ['material for new growth', 'create', '-', 'tree']]
+  4. The tree starts to attract animals and plants that will grant it more nourishment.   events: []
+  5. The tree matures.   events: [['seedling', 'destroy', None, '-'], ['tree', 'create', '-', 'ground']]
+  6. After a number of years the tree will grow old and die, becoming material for new growth.   events: [['tree', 'destroy', None, '-'], ['material for new growth', 'create', '-', 'ground']]
+  seedling
+    gold   ['ground', 'ground', 'ground', 'ground', 'ground', 'ground', 'ground']
+    store  ['-', 'ground', '-', '-', '-', '-', '-']
+    direct ['-', 'ground', 'ground', 'ground', 'ground', 'ground', '-']
+  root system
+    gold   ['-', '-', 'ground', 'ground', 'ground', 'ground', 'ground']
+    store  ['-', '-', 'ground', 'tree', 'tree', 'tree', 'tree']
+    direct ['-', '-', 'ground', 'ground', 'ground', 'ground', '-']
+  tree
+    gold   ['-', '-', '-', 'ground', 'ground', 'ground', '-']
+    store  ['-', '-', 'ground', 'ground', 'ground', 'ground', '-']
+    direct ['-', '-', '-', 'ground', 'ground', 'ground', '-']
+  material for new growth
+    gold   ['-', '-', '-', '-', '-', '-', 'ground']
+    store  ['-', '-', '-', 'tree', 'tree', 'tree', 'ground']
+    direct ['-', '-', '-', '-', '-', '-', 'ground']

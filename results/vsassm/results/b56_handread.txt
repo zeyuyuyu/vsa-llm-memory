@@ -1,0 +1,68 @@
+# B56 hand reading: per encoder the R1 cell (ideal) where VSAS - LAM is lowest; 10 queries only VSAS answers
+# right and 10 only LAM answers right (alias -> stored label, gold value). Notes below each block.
+
+## qwen8: M = 1024, V = 2, 4 bits per fact; VSAS - LAM = -4.87 points; VSAS = ['RT']
+### only VSAS right: 462 queries in the cell; 10 drawn
+  'Contract' -> 'The Contract' gold 0 VSAS 0 LAM 1
+  'The Addicks' -> 'Charlton Athletic F.C.' gold 1 VSAS 1 LAM 0
+  'Guatemalan general election, 1999' -> '1999 Guatemalan general election' gold 1 VSAS 1 LAM 0
+  'Cadmos' -> 'Cadmus' gold 0 VSAS 0 LAM 1
+  'Italian' -> 'Symphony No. 4' gold 0 VSAS 0 LAM 1
+  'Joh. Hinr. Roose' -> 'Johann Heinrich Roos' gold 0 VSAS 0 LAM 1
+  'Joh. Hch. Roos' -> 'Johann Heinrich Roos' gold 1 VSAS 1 LAM 0
+  'Argentine Republic' -> 'Argentina' gold 0 VSAS 0 LAM 1
+  'Hsian' -> "Xi'an" gold 0 VSAS 0 LAM 1
+  'Pai' -> 'Pathit Pisitkul' gold 1 VSAS 1 LAM 0
+### only LAM right: 682 queries in the cell; 10 drawn
+  'Río de Janeiro' -> 'Rio de Janeiro' gold 1 VSAS 0 LAM 1
+  'Old Ross' -> 'Johann Heinrich Roos' gold 0 VSAS 1 LAM 0
+  'Social Network' -> 'The Social Network' gold 0 VSAS 1 LAM 0
+  'State of Vermont' -> 'Vermont' gold 0 VSAS 1 LAM 0
+  'Edu' -> 'Eduard Campabadal' gold 0 VSAS 1 LAM 0
+  'Dzhalaliddin Rumi' -> 'Rumi' gold 1 VSAS 0 LAM 1
+  'duck jacob' -> 'Jacob Duck' gold 0 VSAS 1 LAM 0
+  'Josh' -> 'Josh Mankiewicz' gold 0 VSAS 1 LAM 0
+  'Kirgizia' -> 'Kyrgyzstan' gold 1 VSAS 0 LAM 1
+  'co. Dublin' -> 'County Dublin' gold 1 VSAS 0 LAM 1
+
+## e5: M = 256, V = 2, 4 bits per fact; VSAS - LAM = -8.20 points; VSAS = ['RT']
+### only VSAS right: 512 queries in the cell; 10 drawn
+  'Neil Timothy Helson' -> 'Trace Cyrus' gold 0 VSAS 0 LAM 1
+  'Banwari' -> 'Krishna' gold 0 VSAS 0 LAM 1
+  'The Ars' -> 'Arsenal F.C.' gold 0 VSAS 0 LAM 1
+  'ACM' -> 'A.C. Milan' gold 1 VSAS 1 LAM 0
+  'take-all chess' -> 'antichess' gold 1 VSAS 1 LAM 0
+  'Devarajalu' -> 'Gautama Buddha' gold 1 VSAS 1 LAM 0
+  'Ely, Iowa' -> 'Ely' gold 0 VSAS 0 LAM 1
+  'ERS' -> 'Eros Airport' gold 0 VSAS 0 LAM 1
+  'Gerard Kornelis van het Reve' -> 'Gerard Reve' gold 0 VSAS 0 LAM 1
+  'Slave' -> 'The Slave' gold 1 VSAS 1 LAM 0
+### only LAM right: 911 queries in the cell; 10 drawn
+  'Roos de Francfort' -> 'Johann Heinrich Roos' gold 1 VSAS 0 LAM 1
+  'Io, Chiara e lo Scuro' -> 'The Pool Hustlers' gold 0 VSAS 1 LAM 0
+  'William Martin "Billy" Joel' -> 'Billy Joel' gold 1 VSAS 0 LAM 1
+  'The Thing' -> 'The Thing from Another World' gold 0 VSAS 1 LAM 0
+  'Stefan II of Serbia' -> 'Stefan the First-Crowned' gold 1 VSAS 0 LAM 1
+  'Francesco Garde' -> 'Francesco Guardi' gold 1 VSAS 0 LAM 1
+  'Kishore' -> 'Krishna' gold 0 VSAS 1 LAM 0
+  'Denver, Colorado' -> 'Denver' gold 0 VSAS 1 LAM 0
+  "L'assassino" -> 'The Assassin' gold 1 VSAS 0 LAM 1
+  'River City' -> 'Sacramento' gold 0 VSAS 1 LAM 0
+
+## Notes (by me, after reading the 40 queries above)
+
+- Both cells are V = 2 at 4 bits per fact, where both memories sit far above chance only on part of the queries
+  (qwen8 cell: VSAS about 66%, LAM about 71%); the two "only one right" sets are large (462 / 682 and 512 / 911
+  queries), so a share of every list is coin-flip luck on aliases that carry little of the label's code (qwen8:
+  'Italian' -> 'Symphony No. 4', 'Pai' -> 'Pathit Pisitkul', 'Edu' -> 'Eduard Campabadal', 'Josh' -> 'Josh
+  Mankiewicz'; e5: 'Neil Timothy Helson' -> 'Trace Cyrus', 'Banwari' -> 'Krishna', 'River City' -> 'Sacramento').
+- What separates the lists is not a kind of alias. Each memory's wins include close variants of the label: VSAS
+  'Argentine Republic' -> 'Argentina', 'Cadmos' -> 'Cadmus', 'ACM' -> 'A.C. Milan', 'Slave' -> 'The Slave'; LAM
+  'Rio de Janeiro' (accent), 'State of Vermont', 'Kirgizia' -> 'Kyrgyzstan', 'co. Dublin', 'William Martin "Billy"
+  Joel', 'Francesco Garde' -> 'Francesco Guardi', "L'assassino" -> 'The Assassin'. Counting close variants in the
+  e5 lists gives about 6 of LAM's 10 and 5 of VSAS's 10 (qwen8: about 7 and 7): no pattern. The gap
+  (911 vs 512 queries in the e5 cell) is a matter of how often, not of which kind of alias; 10 + 10 queries cannot
+  say more.
+- No sign of a scoring or parsing artifact: gold values, predictions and aliases are consistent with the stored labels;
+  the same entity appears in different stores with different values (e.g. Johann Heinrich Roos), as the design draws
+  values per store.

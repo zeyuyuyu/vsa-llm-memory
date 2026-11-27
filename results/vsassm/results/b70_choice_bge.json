@@ -1,0 +1,103 @@
+{
+ "choice": {
+  "1024|2|32|NLMSC": {
+   "best_dev_acc": 0.6107633065987969,
+   "bits_rep0": 32766.587199999998,
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    1.0,
+    "avg",
+    4
+   ],
+   "dev_acc": 0.6102646302958531,
+   "n_tied": 4,
+   "size_rep0": 4539
+  },
+  "1024|2|64|NLMSC": {
+   "best_dev_acc": 0.6096294914680187,
+   "bits_rep0": 65536.0,
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "avg",
+    1
+   ],
+   "dev_acc": 0.6096294914680187,
+   "n_tied": 2,
+   "size_rep0": 65280
+  },
+  "256|16|64|NLMSC": {
+   "best_dev_acc": 0.6140690804401684,
+   "bits_rep0": 11728.3328,
+   "cfg": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    2
+   ],
+   "dev_acc": 0.6140690804401684,
+   "n_tied": 1,
+   "size_rep0": 384
+  },
+  "256|2|32|NLMSC": {
+   "best_dev_acc": 0.7057599695270786,
+   "bits_rep0": 8191.2582,
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "rp",
+    0.5,
+    "last",
+    2
+   ],
+   "dev_acc": 0.7057599695270786,
+   "n_tied": 2,
+   "size_rep0": 4286
+  },
+  "256|2|64|NLMSC": {
+   "best_dev_acc": 0.706687786086914,
+   "bits_rep0": 16382.5164,
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "rp",
+    0.5,
+    "last",
+    2
+   ],
+   "dev_acc": 0.706687786086914,
+   "n_tied": 4,
+   "size_rep0": 8572
+  }
+ },
+ "cut": [
+  "SDMT",
+  "BEST7"
+ ],
+ "enc": "bge",
+ "repro16": {
+  "1024|2": {
+   "compared": 2952,
+   "mismatch": 105
+  },
+  "256|16": {
+   "compared": 5904,
+   "mismatch": 51
+  },
+  "256|2": {
+   "compared": 5904,
+   "mismatch": 5
+  }
+ }
+}

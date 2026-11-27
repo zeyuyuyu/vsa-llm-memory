@@ -1,0 +1,209 @@
+{
+ "args": {
+  "cmd": "eval",
+  "task": "N",
+  "arm": "discood",
+  "split": "dev",
+  "layers": "20",
+  "layer": 20,
+  "bs": 32,
+  "subset": 0,
+  "reader": "/path/to/work/b40/out/rd/N_disc_e300_s0",
+  "ckpt": "/path/to/work/b40/out/dev/N_disc_lr1e-3_s0",
+  "out": "",
+  "pred": "preds/dev/discopen_s0.jsonl",
+  "noise": 0.0,
+  "noise_seed": 12345,
+  "soft_beta": 0.0,
+  "limit": 0,
+  "max_new": 6,
+  "cot_max_new": 2048,
+  "cot_bs": 48,
+  "digit_thr": 0.5,
+  "hops": 2,
+  "seed": 0,
+  "gate": "open",
+  "thr": 0.0,
+  "maha": "/path/to/work/b50/maha.pt"
+ },
+ "wall_s": 33.69,
+ "gen_s": 25.78,
+ "gpu": "NVIDIA A800 80GB PCIe",
+ "batches": [
+  {
+   "batch": 0,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.704,
+   "prompt_len": 113
+  },
+  {
+   "batch": 1,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.147,
+   "prompt_len": 113
+  },
+  {
+   "batch": 2,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.155,
+   "prompt_len": 113
+  },
+  {
+   "batch": 3,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.153,
+   "prompt_len": 113
+  },
+  {
+   "batch": 4,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.996,
+   "prompt_len": 101
+  },
+  {
+   "batch": 5,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.364,
+   "prompt_len": 101
+  },
+  {
+   "batch": 6,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.984,
+   "prompt_len": 101
+  },
+  {
+   "batch": 7,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.905,
+   "prompt_len": 101
+  },
+  {
+   "batch": 8,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.991,
+   "prompt_len": 101
+  },
+  {
+   "batch": 9,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.001,
+   "prompt_len": 101
+  },
+  {
+   "batch": 10,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.951,
+   "prompt_len": 95
+  },
+  {
+   "batch": 11,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.954,
+   "prompt_len": 95
+  },
+  {
+   "batch": 12,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.053,
+   "prompt_len": 95
+  },
+  {
+   "batch": 13,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.021,
+   "prompt_len": 90
+  },
+  {
+   "batch": 14,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.915,
+   "prompt_len": 89
+  },
+  {
+   "batch": 15,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.92,
+   "prompt_len": 89
+  },
+  {
+   "batch": 16,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.921,
+   "prompt_len": 89
+  },
+  {
+   "batch": 17,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.918,
+   "prompt_len": 89
+  },
+  {
+   "batch": 18,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.919,
+   "prompt_len": 89
+  },
+  {
+   "batch": 19,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.923,
+   "prompt_len": 89
+  },
+  {
+   "batch": 20,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.924,
+   "prompt_len": 89
+  },
+  {
+   "batch": 21,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.922,
+   "prompt_len": 89
+  },
+  {
+   "batch": 22,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.01,
+   "prompt_len": 89
+  },
+  {
+   "batch": 23,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.008,
+   "prompt_len": 89
+  },
+  {
+   "batch": 24,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.017,
+   "prompt_len": 89
+  }
+ ]
+}

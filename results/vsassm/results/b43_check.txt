@@ -1,0 +1,32 @@
+# B43 checks (second scorer and cross-checks), 2026-11-20T02:40:27Z
+
+## RULER 128k: independent re-score (alignment by index + gold, own string match; b43_check.py ruler)
+131072 niah_single_1 n 100 {'coa': 92.0, 'store': 100.0, 'dict': 100.0}
+131072 niah_single_2 n 100 {'coa': 35.0, 'store': 99.0, 'dict': 99.0}
+131072 niah_single_3 n 100 {'coa': 63.0, 'store': 100.0, 'dict': 100.0}
+131072 niah_multikey_1 n 50 {'coa': 30.0, 'store': 100.0, 'dict': 100.0}
+131072 niah_multikey_2 n 100 {'coa': 56.0, 'store': 99.0, 'dict': 99.0}
+131072 niah_multikey_3 n 100 {'coa': 81.0, 'store': 100.0, 'dict': 100.0}
+131072 niah_multivalue n 100 {'coa': 17.0, 'store': 100.0, 'dict': 100.0}
+131072 niah_multiquery n 100 {'coa': 22.75, 'store': 100.0, 'dict': 100.0}
+131072 vt n 100 {'coa': 11.0, 'store': 98.2, 'dict': 98.2}
+131072 mean over complete tasks {'coa': 47.219, 'store': 99.525, 'dict': 99.525} complete tasks 8
+
+## ProPara: independent state accuracy (nltk Porter) and grid -> action rows (b43_check.py propara)
+direct_think    state acc 57.64 (1910 cells); action rows differing from the .tsv: 0
+direct_nothink  state acc 45.45 (1910 cells); action rows differing from the .tsv: 0
+store_vsa       state acc 45.65 (1910 cells); action rows differing from the .tsv: 0
+store_dict      state acc 45.65 (1910 cells); action rows differing from the .tsv: 0
+
+## ProPara: official evaluator command-line F1 vs in-process aggregation
+  direct_think    in-process 61.63  CLI 61.6
+  direct_nothink  in-process 49.97  CLI 50.0
+  store_vsa       in-process 54.31  CLI 54.3
+  store_dict      in-process 54.31  CLI 54.3
+
+## RULER 128k CoA failure mechanism (all failed samples; every missed gold value)
+failed samples 503; missed gold values 1244; worker steps identical to the previous CU 10209/13589 = 0.75
+  needle-window worker copied previous CU verbatim: 922 (74%)
+  needle-window CU rewritten without the value: 168 (14%)
+  needle-window CU has a rejection phrase: 143 (11%)
+  written then lost: 11 (1%)

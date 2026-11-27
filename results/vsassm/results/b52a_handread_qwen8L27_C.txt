@@ -1,0 +1,49 @@
+qwen8L27 arena C, family cw (selected dev 0.568, config {"cleanup": "st", "inw": 1, "code": "inst", "lr": 0.0003}), seed 42 epoch 3: wrong on 253 of 500
+
+#1 label 0, chain 59 -> 11 -> 5, candidate 7; memory says 1 (score 0.077, threshold 0.013)
+  text: [R0B]{34} [R3D]{13} [R3A]{35} [R04]{30} [R30]{15} [R1E]{47} [R3E]{47} [R13]{58} [R39]{2} [R37]{39} [R10]{20} [R26]{57} [R38]{57} [R24]{0} [R19]{39} [R03]{2} [R0F]{60} [R3B]{11} [R2B]{1} [R23]{9} [R16]{34} [R20]{34} [R32]{38} [R1C]{59} [R06]{40} [R22]{55} [R21]{34} [R0A]{61} [R11]{22} [R01]{30} [R3F] ...
+  hop 1 winner symbol 43 (WRONG), hop 2 winner symbol 17 (WRONG)
+
+#2 label 1, chain 52 -> 30 -> 26, candidate 26; memory says 0 (score -0.006, threshold 0.013)
+  text: [R2E]{0} [R2A]{62} [R18]{47} [R05]{34} [R0E]{32} [R0A]{60} [R06]{51} [R00]{1} [R38]{49} [R34]{30} [R32]{4} [R0F]{2} [R1E]{13} [R20]{20} [R1C]{14} [R16]{5} [R24]{52} [R07]{19} [R39]{43} [R02]{37} [R12]{34} [R0D]{2} [R11]{43} [R15]{56} [R3D]{42} [R0C]{13} [R09]{62} [R3A]{32} [R2B]{54} [R22]{15} [R35]{ ...
+  hop 1 winner symbol 43 (WRONG), hop 2 winner symbol 7 (WRONG)
+
+#4 label 0, chain 55 -> 20 -> 8, candidate 7; memory says 1 (score 0.042, threshold 0.013)
+  text: [R11]{31} [R1E]{31} [R3D]{60} [R3A]{25} [R39]{18} [R36]{28} [R1F]{15} [R2C]{12} [R30]{55} [R33]{60} [R18]{48} [R03]{57} [R05]{54} [R32]{6} [R0B]{32} [R0F]{17} [R3E]{16} [R31]{43} [R22]{56} [R26]{61} [R1D]{17} [R1C]{49} [R13]{55} [R27]{12} [R01]{9} [R25]{2} [R0D]{2} [R07]{62} [R37]{20} [R16]{38} [R12 ...
+  hop 1 winner symbol 62 (WRONG), hop 2 winner symbol 25 (WRONG)
+
+#9 label 0, chain 55 -> 4 -> 10, candidate 19; memory says 1 (score 0.017, threshold 0.013)
+  text: [R37]{4} [R3F]{28} [R25]{62} [R19]{42} [R0B]{12} [R07]{17} [R11]{52} [R00]{4} [R2C]{63} [R09]{13} [R34]{43} [R27]{62} [R2F]{42} [R16]{7} [R17]{37} [R3A]{41} [R2E]{50} [R2A]{4} [R28]{49} [R23]{18} [R30]{24} [R14]{33} [R32]{1} [R0C]{12} [R05]{9} [R3C]{61} [R29]{34} [R06]{44} [R1F]{16} [R2B]{9} [R20]{6 ...
+  hop 1 winner symbol 37 (WRONG), hop 2 winner symbol 33 (WRONG)
+
+#10 label 1, chain 2 -> 32 -> 5, candidate 5; memory says 0 (score -0.109, threshold 0.013)
+  text: [R10]{59} [R30]{56} [R28]{32} [R22]{45} [R3A]{37} [R39]{11} [R03]{53} [R0C]{6} [R02]{32} [R08]{1} [R09]{22} [R37]{45} [R27]{12} [R0D]{53} [R17]{4} [R1A]{17} [R1E]{0} [R00]{63} [R29]{60} [R36]{8} [R24]{2} [R1D]{46} [R13]{44} [R3C]{63} [R0B]{3} [R05]{46} [R31]{22} [R35]{59} [R0E]{14} [R19]{32} [R16]{2 ...
+  hop 1 winner symbol 59 (WRONG), hop 2 winner symbol 61 (WRONG)
+
+#11 label 0, chain 63 -> 42 -> 2, candidate 34; memory says 1 (score 0.075, threshold 0.013)
+  text: [R26]{50} [R2D]{40} [R14]{14} [R10]{49} [R08]{30} [R2E]{41} [R1E]{16} [R05]{31} [R13]{49} [R3B]{45} [R32]{26} [R07]{37} [R16]{58} [R0A]{40} [R0D]{63} [R1D]{25} [R3F]{42} [R01]{35} [R36]{52} [R0F]{15} [R34]{26} [R0B]{43} [R3D]{23} [R28]{15} [R24]{24} [R04]{46} [R12]{22} [R2C]{23} [R0C]{18} [R11]{30}  ...
+  hop 1 winner symbol 45 (WRONG), hop 2 winner symbol 6 (WRONG)
+
+#12 label 1, chain 59 -> 63 -> 63, candidate 63; memory says 0 (score -0.055, threshold 0.013)
+  text: [R11]{47} [R29]{41} [R3B]{63} [R20]{10} [R38]{11} [R05]{40} [R30]{51} [R1D]{26} [R00]{62} [R0F]{0} [R1E]{34} [R25]{24} [R19]{31} [R04]{56} [R01]{59} [R1A]{63} [R3D]{20} [R1B]{18} [R13]{1} [R07]{28} [R3E]{35} [R2F]{31} [R36]{10} [R1F]{14} [R08]{22} [R21]{3} [R35]{28} [R3A]{11} [R14]{61} [R12]{24} [R3 ...
+  hop 1 winner symbol 19 (WRONG), hop 2 winner symbol 25 (WRONG)
+
+#13 label 0, chain 13 -> 36 -> 55, candidate 11; memory says 1 (score 0.132, threshold 0.013)
+  text: [R08]{14} [R2E]{62} [R13]{46} [R1E]{19} [R26]{30} [R0B]{30} [R1F]{3} [R36]{61} [R09]{57} [R18]{26} [R14]{35} [R12]{32} [R06]{13} [R1A]{39} [R22]{18} [R29]{32} [R3F]{32} [R3C]{3} [R3E]{5} [R17]{27} [R2F]{45} [R2C]{55} [R30]{21} [R34]{56} [R25]{8} [R1D]{63} [R37]{46} [R0D]{36} [R39]{33} [R01]{1} [R28] ...
+  hop 1 winner symbol 36 (right), hop 2 winner symbol 18 (WRONG)
+
+#14 label 1, chain 63 -> 29 -> 12, candidate 12; memory says 0 (score -0.046, threshold 0.013)
+  text: [R3B]{40} [R1D]{22} [R04]{32} [R08]{26} [R02]{6} [R29]{5} [R1B]{62} [R26]{40} [R06]{61} [R3F]{29} [R11]{18} [R2D]{56} [R16]{43} [R1A]{20} [R23]{59} [R15]{42} [R05]{38} [R3D]{26} [R17]{25} [R19]{11} [R28]{63} [R1E]{10} [R1F]{14} [R2F]{51} [R0F]{26} [R2A]{28} [R3A]{23} [R32]{17} [R3C]{60} [R37]{63} [R ...
+  hop 1 winner symbol 60 (WRONG), hop 2 winner symbol 33 (WRONG)
+
+#17 label 1, chain 15 -> 53 -> 6, candidate 6; memory says 0 (score -0.037, threshold 0.013)
+  text: [R21]{7} [R15]{60} [R37]{37} [R09]{20} [R1D]{9} [R01]{6} [R2A]{24} [R2C]{35} [R23]{56} [R32]{18} [R1B]{49} [R26]{58} [R18]{37} [R3B]{56} [R13]{32} [R0F]{53} [R2F]{53} [R04]{56} [R07]{54} [R38]{40} [R08]{46} [R0E]{11} [R3F]{4} [R0C]{61} [R34]{31} [R3C]{41} [R3E]{33} [R1A]{12} [R24]{19} [R03]{30} [R36 ...
+  hop 1 winner symbol 40 (WRONG), hop 2 winner symbol 52 (WRONG)
+
+#18 label 1, chain 1 -> 57 -> 16, candidate 16; memory says 0 (score -0.013, threshold 0.013)
+  text: [R15]{54} [R37]{31} [R3C]{41} [R34]{61} [R19]{26} [R01]{57} [R3F]{53} [R1B]{13} [R23]{24} [R2C]{30} [R3D]{22} [R1C]{52} [R02]{42} [R35]{12} [R39]{31} [R0F]{40} [R0A]{18} [R30]{50} [R1D]{29} [R0D]{41} [R04]{24} [R26]{29} [R09]{5} [R2D]{28} [R25]{36} [R33]{10} [R29]{58} [R3B]{25} [R21]{34} [R2A]{7} [R ...
+  hop 1 winner symbol 40 (WRONG), hop 2 winner symbol 62 (WRONG)
+
+#20 label 1, chain 2 -> 59 -> 7, candidate 7; memory says 0 (score -0.007, threshold 0.013)
+  text: [R2C]{17} [R3A]{22} [R13]{62} [R01]{44} [R18]{43} [R30]{21} [R0C]{17} [R23]{0} [R38]{52} [R10]{55} [R08]{30} [R1D]{28} [R39]{17} [R3D]{7} [R2A]{30} [R02]{59} [R22]{2} [R31]{46} [R32]{47} [R33]{2} [R0F]{50} [R07]{32} [R3E]{9} [R26]{8} [R19]{61} [R2D]{38} [R21]{56} [R0A]{47} [R04]{57} [R06]{26} [R00]{ ...
+  hop 1 winner symbol 59 (right), hop 2 winner symbol 5 (WRONG)

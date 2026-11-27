@@ -1,0 +1,39 @@
+{
+ "_about": "Constants used by make_figures.py that no banked JSON artifact records as a number. Each carries its source; the script asserts them against the artifacts wherever an artifact allows it.",
+ "crosstalk_bar": {
+  "floor": 0.515,
+  "margin": 0.1,
+  "bar": 0.615,
+  "source": "V-95 and V-163 preregistrations: the arena-C frozen-state probe (v13_logs/v13_fixed.json arm floor, mean 0.5153, fixed as 0.515) plus 0.10; figdata/v163_logs/v163_score.out: 'largest tested cross-talk clearing 0.615 is 0.2486'",
+  "check_file": "v163_logs/v163_score.out",
+  "check_text": "largest tested cross-talk clearing 0.615 is 0.2486"
+ },
+ "capacity_criterion": {
+  "threshold": 0.7,
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 20261008,
+  "source": "the frozen scorer of V-151 (ngcls/v151_score.py: THRESH, BOOT, BOOT_SEED), as repeated in reference_v54/make_figs_v2.py; the 0.70 crossing is interpolated linearly in log k between the two grid points that bracket it",
+  "ledger": {
+   "HRR_kstar": [
+    41.7,
+    73.3,
+    136.7,
+    264.7
+   ],
+   "HRR_exponent": 0.89,
+   "HRR_ci95": [
+    0.815,
+    0.953
+   ],
+   "source": "V-151 ledger values quoted in reference_v54/FIGURES_v52_notes.md (sweeps panel d); make_figures.py asserts that it reproduces them"
+  }
+ },
+ "pool": {
+  "instances": 400,
+  "facts_per_instance": 2,
+  "facts": 800,
+  "source": "v106_logs/v106.json config.n_pool = 400; v101.py, v102.py and v149.py call load_rows(400); pooled() (v100.py) stops when the other instances' gold triples run out, two per compositional instance (v73_logs/v73_BANKED.json: 600 bindings from 300 instances). A scale requested as 1024 therefore holds 800 facts. The realized pool size is not recorded in v102_scored.json, v151.json or v106.json; make_figures.py checks it against the prompt lengths of v106.json (tokens grow linearly in the number of facts)",
+  "requested_last_scale": 1024,
+  "label_all": "800 (all)"
+ }
+}

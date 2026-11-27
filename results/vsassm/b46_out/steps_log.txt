@@ -1,0 +1,22 @@
+2026-11-19 06:52:17 dev start
+2026-11-19 06:56:43 driver stopped by hand: memory full (swap 8/8 GB) with 14 OPQ fits + pqfit + VSA grid; whiten OPQ fits stopped, to be rerun after the centre fits; remaining steps run by hand in the same order
+2026-11-19 07:21:15 b46_dev2.sh stopped before it had started any step (replaced by b46_dev3.sh: B36 families' dev grid starts after the VSA grid and PQ codebooks, 3 workers)
+2026-11-19 07:24:53 b32dev vsa and pqfit done (vsa lines: 216)
+2026-11-19 07:47:16 centre OPQ fits done
+2026-11-19 08:45:00 whiten fits done (44 cached fits)
+2026-11-19 08:45:18 dev32 started by hand in parallel with b32dev idx (all fits cached, so no cache writes; the driver's later dev32 call skips stores already done)
+2026-11-19 09:12:21 b32dev idx rc=0
+2026-11-19 09:13:16 dev32 rc=0
+2026-11-19 09:13:16 dev (new families) rc=0
+2026-11-19 09:13:16 b32choose rc=0
+2026-11-19 09:13:18 choose rc=0
+2026-11-19 09:13:18 DEV_DONE
+2026-11-19 09:14:07 test start (HEAD 78178ca)
+2026-11-19 09:17:24 b32test vsa rc=0
+2026-11-19 09:17:24 b32test idx rc=0
+2026-11-19 09:17:27 b32merge rc=0
+2026-11-19 09:19:38 test32 rc=0
+2026-11-19 09:26:55 test (new families) rc=0
+2026-11-19 09:27:04 merge rc=0
+2026-11-19 09:31:42 verdict rc=0
+2026-11-19 09:31:42 TEST_DONE

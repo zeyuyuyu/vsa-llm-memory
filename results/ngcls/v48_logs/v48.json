@@ -1,0 +1,31 @@
+{
+ "quoted": 0.2032,
+ "estimator": "last-non-pad-token (paper, as v13.Floor)",
+ "floor_last_token": [
+  0.2523809523809524,
+  0.2357142857142857,
+  0.24761904761904763
+ ],
+ "floor_train_acc": [
+  0.4967741935483871,
+  0.5587096774193548,
+  0.5212903225806451
+ ],
+ "majority_eval": 0.20476190476190476,
+ "banked_parser": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "banked_probe_argmax": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "n_train_expressible": 775,
+ "n_eval_expressible": 420,
+ "floor_mean": 0.24523809523809526,
+ "parser_mean": 1.0,
+ "headroom": 0.7547619047619047,
+ "verdict": "THE QUOTED NUMBER STANDS (the two estimators agree here; no manuscript change)"
+}

@@ -1,0 +1,38 @@
+---------------------------------------
+Begin Slurm Prolog: Sep-04-2026 12:24:58
+Job ID:    12826493
+User ID:   <user>
+Account:   gts-nimam6
+Job name:  v109
+Partition: cpu-small
+QOS:       inferno
+---------------------------------------
+===== V-109: decompose the single-pass error + does the measurement replicate? =====
+  gate: qwen3-8b single_pass ~ V-108's .4700 +-.05 (mean of repeats)
+  blind on P2 (form_miss >= .10), P3 (hop1_miss > hop2_miss), P4 (agreement >= .90 and |acc1-acc2| <= .03), P5
+  300 rows | 0 rows expose no intermediate entity (excluded from P3 by the scorer)
+  spend cap: $12.00 of account spend, floor $3.00; account usage at start $25.0200
+  --- qwen/qwen3-8b
+    [qwen3-8b rep1] acc 0.4867  n=300 (err 0)  cats {'em_hit': 146, 'form_miss': 73, 'hop2_miss': 79, 'hop1_miss': 2}  providers=1  reasoning=300  $0.1084
+    [qwen3-8b rep2] acc 0.4733  n=300 (err 0)  cats {'em_hit': 142, 'form_miss': 73, 'hop2_miss': 83, 'hop1_miss': 2}  providers=1  reasoning=300  $0.1069
+  --- z-ai/glm-5
+    [glm-5 rep1] acc 0.2867  n=300 (err 0)  cats {'em_hit': 86, 'form_miss': 40, 'hop2_miss': 173, 'hop1_miss': 1}  providers=10  reasoning=299  $0.4520
+    [glm-5 rep2] acc 0.2733  n=300 (err 0)  cats {'em_hit': 82, 'form_miss': 38, 'hop2_miss': 180, 'hop1_miss': 0}  providers=10  reasoning=300  $0.4119
+  --- deepseek/deepseek-v4-flash
+    [deepseek-v4-flash rep1] acc 0.4567  n=300 (err 0)  cats {'em_hit': 137, 'form_miss': 71, 'hop2_miss': 82, 'hop1_miss': 10}  providers=14  reasoning=277  $0.0369
+    [deepseek-v4-flash rep2] acc 0.4733  n=300 (err 0)  cats {'em_hit': 142, 'form_miss': 73, 'hop2_miss': 81, 'hop1_miss': 4}  providers=14  reasoning=280  $0.0345
+  per-call field $1.1507 | account meter $1.1448 over 1800 calls
+V109-MEASURE-DONE
+V108-SBATCH-DONE
+---------------------------------------
+Begin Slurm Epilog: Sep-04-2026 13:04:55
+Job ID:        12826493
+User ID:       <user>
+Account:       gts-nimam6
+Job name:      v109
+Resources:     cpu=4,mem=16G,node=1
+Rsrc Used:     cput=02:39:56,vmem=0,walltime=00:39:59,mem=1037748K,energy_used=0
+Partition:     cpu-small
+QOS:           inferno
+Nodes:         atl1-1-02-005-5-2
+---------------------------------------

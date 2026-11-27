@@ -1,0 +1,80 @@
+2026-11-18T22:27:47Z cls_std_n800_r8_lr1e-4_s42 nseg=1 jobs: 15837396  cmd: b44_lora.py --task cls --variant std --n 800 --rank 8 --lr 1e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_std_n800_r8_lr1e-4_s42.json
+2026-11-18T22:27:49Z cls_std_n800_r8_lr3e-4_s42 nseg=1 jobs: 15837397  cmd: b44_lora.py --task cls --variant std --n 800 --rank 8 --lr 3e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_std_n800_r8_lr3e-4_s42.json
+2026-11-18T22:27:53Z cls_std_n8000_r8_lr1e-4_s42 nseg=2 jobs: 15837398 15837399  cmd: b44_lora.py --task cls --variant std --n 8000 --rank 8 --lr 1e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_std_n8000_r8_lr1e-4_s42.json
+2026-11-18T22:27:56Z cls_std_n8000_r8_lr3e-4_s42 nseg=2 jobs: 15837400 15837401  cmd: b44_lora.py --task cls --variant std --n 8000 --rank 8 --lr 3e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_std_n8000_r8_lr3e-4_s42.json
+2026-11-18T22:27:59Z cls_std_n80000_r8_lr1e-4_s42 nseg=3 jobs: 15837403 15837404 15837405  cmd: b44_lora.py --task cls --variant std --n 80000 --rank 8 --lr 1e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_std_n80000_r8_lr1e-4_s42.json
+2026-11-18T22:28:03Z cls_std_n80000_r8_lr3e-4_s42 nseg=3 jobs: 15837406 15837407 15837408  cmd: b44_lora.py --task cls --variant std --n 80000 --rank 8 --lr 3e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_std_n80000_r8_lr3e-4_s42.json
+2026-11-18T22:28:09Z scratch_std_n800_r8_lr1e-4_s42 nseg=1 jobs: 15837409  cmd: b44_lora.py --task scratch --variant std --n 800 --rank 8 --lr 1e-4 --seed 42 --max_hours 2.6 --out out/lora/scratch_std_n800_r8_lr1e-4_s42.json
+2026-11-18T22:28:11Z scratch_std_n800_r8_lr3e-4_s42 nseg=1 jobs: 15837410  cmd: b44_lora.py --task scratch --variant std --n 800 --rank 8 --lr 3e-4 --seed 42 --max_hours 2.6 --out out/lora/scratch_std_n800_r8_lr3e-4_s42.json
+2026-11-18T22:28:29Z scratch_std_n8000_r8_lr1e-4_s42 nseg=2 jobs: 15837414 15837416  cmd: b44_lora.py --task scratch --variant std --n 8000 --rank 8 --lr 1e-4 --seed 42 --max_hours 2.6 --out out/lora/scratch_std_n8000_r8_lr1e-4_s42.json
+2026-11-18T22:28:34Z scratch_std_n8000_r8_lr3e-4_s42 nseg=2 jobs: 15837417 15837418  cmd: b44_lora.py --task scratch --variant std --n 8000 --rank 8 --lr 3e-4 --seed 42 --max_hours 2.6 --out out/lora/scratch_std_n8000_r8_lr3e-4_s42.json
+2026-11-18T22:28:38Z cls_ho_n800_r8_lr1e-4_s42 nseg=1 jobs: 15837419  cmd: b44_lora.py --task cls --variant ho --n 800 --rank 8 --lr 1e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_ho_n800_r8_lr1e-4_s42.json
+2026-11-18T22:28:41Z cls_ho_n800_r8_lr3e-4_s42 nseg=1 jobs: 15837420  cmd: b44_lora.py --task cls --variant ho --n 800 --rank 8 --lr 3e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_ho_n800_r8_lr3e-4_s42.json
+2026-11-18T22:28:44Z cls_ho_n8000_r8_lr1e-4_s42 nseg=2 jobs: 15837422 15837423  cmd: b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 1e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_ho_n8000_r8_lr1e-4_s42.json
+2026-11-18T22:28:47Z cls_ho_n8000_r8_lr3e-4_s42 nseg=2 jobs: 15837425 15837426  cmd: b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 3e-4 --seed 42 --max_hours 2.6 --out out/lora/cls_ho_n8000_r8_lr3e-4_s42.json
+15837581 15837582 15837584 15837585 15837586
+21:bash "$@"
+15837599 15837600 15837601 15837602 15837603
+15837604
+2026-11-18T22:41:05Z cls_std_n8000_r8_lr1e-4_s42 nseg=3 jobs: 15837648 15837649 15837650  cmd: b44_lora.py --task cls --variant std --n 8000 --rank 8 --lr 1e-4 --seed 42 --max_hours 1.3 --out out/lora/cls_std_n8000_r8_lr1e-4_s42.json
+2026-11-18T22:41:08Z cls_std_n8000_r8_lr3e-4_s42 nseg=3 jobs: 15837652 15837653 15837654  cmd: b44_lora.py --task cls --variant std --n 8000 --rank 8 --lr 3e-4 --seed 42 --max_hours 1.3 --out out/lora/cls_std_n8000_r8_lr3e-4_s42.json
+2026-11-18T22:41:11Z cls_std_n80000_r8_lr1e-4_s42 nseg=5 jobs: 15837655 15837656 15837657 15837658 15837659  cmd: b44_lora.py --task cls --variant std --n 80000 --rank 8 --lr 1e-4 --seed 42 --max_hours 1.3 --out out/lora/cls_std_n80000_r8_lr1e-4_s42.json
+2026-11-18T22:41:14Z cls_std_n80000_r8_lr3e-4_s42 nseg=5 jobs: 15837660 15837661 15837662 15837663 15837664  cmd: b44_lora.py --task cls --variant std --n 80000 --rank 8 --lr 3e-4 --seed 42 --max_hours 1.3 --out out/lora/cls_std_n80000_r8_lr3e-4_s42.json
+2026-11-18T22:41:18Z scratch_std_n8000_r8_lr1e-4_s42 nseg=3 jobs: 15837665 15837666 15837667  cmd: b44_lora.py --task scratch --variant std --n 8000 --rank 8 --lr 1e-4 --seed 42 --max_hours 1.3 --out out/lora/scratch_std_n8000_r8_lr1e-4_s42.json
+2026-11-18T22:41:20Z scratch_std_n8000_r8_lr3e-4_s42 nseg=3 jobs: 15837668 15837669 15837670  cmd: b44_lora.py --task scratch --variant std --n 8000 --rank 8 --lr 3e-4 --seed 42 --max_hours 1.3 --out out/lora/scratch_std_n8000_r8_lr3e-4_s42.json
+2026-11-18T22:41:23Z cls_ho_n8000_r8_lr1e-4_s42 nseg=3 jobs: 15837671 15837672 15837673  cmd: b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 1e-4 --seed 42 --max_hours 1.3 --out out/lora/cls_ho_n8000_r8_lr1e-4_s42.json
+2026-11-18T22:41:26Z cls_ho_n8000_r8_lr3e-4_s42 nseg=3 jobs: 15837674 15837675 15837676  cmd: b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 3e-4 --seed 42 --max_hours 1.3 --out out/lora/cls_ho_n8000_r8_lr3e-4_s42.json
+small 15837677
+std 0 15837678
+std 1 15837679
+std 2 15837680
+std 3 15837681
+ho 0 15837682
+ho 1 15837683
+ho 2 15837684
+ho 3 15837685
+mem_std 15837689
+mem_ho 15837690
+name80k_std_42 15837691
+name80k_std_123 15837692
+name80k_std_456 15837693
+name80k_ho_42 15837694
+name80k_ho_123 15837695
+name80k_ho_456 15837696
+2026-11-18T23:14:22Z cls_std_n800_r8_lr3e-4_s123 nseg=1 jobs: 15838241  cmd: b44_lora.py --task cls --variant std --n 800 --rank 8 --lr 3e-4 --seed 123 --max_hours 1.3 --final --out out/lora/cls_std_n800_r8_lr3e-4_s123.json
+2026-11-18T23:14:31Z cls_std_n800_r8_lr3e-4_s456 nseg=1 jobs: 15838244  cmd: b44_lora.py --task cls --variant std --n 800 --rank 8 --lr 3e-4 --seed 456 --max_hours 1.3 --final --out out/lora/cls_std_n800_r8_lr3e-4_s456.json
+2026-11-18T23:14:33Z scratch_std_n800_r8_lr1e-4_s123 nseg=1 jobs: 15838246  cmd: b44_lora.py --task scratch --variant std --n 800 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/scratch_std_n800_r8_lr1e-4_s123.json
+2026-11-18T23:14:35Z scratch_std_n800_r8_lr1e-4_s456 nseg=1 jobs: 15838248  cmd: b44_lora.py --task scratch --variant std --n 800 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/scratch_std_n800_r8_lr1e-4_s456.json
+2026-11-18T23:14:38Z scratch_ho_n800_r8_lr1e-4_s42 nseg=1 jobs: 15838252  cmd: b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 42 --max_hours 1.3 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s42.json
+2026-11-18T23:14:40Z scratch_ho_n800_r8_lr1e-4_s123 nseg=1 jobs: 15838255  cmd: b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s123.json
+2026-11-18T23:14:42Z scratch_ho_n800_r8_lr1e-4_s456 nseg=1 jobs: 15838257  cmd: b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s456.json
+15838258
+2026-11-18T23:20:14Z cot_zs-nothink_std_test nseg=2 jobs: 15838386 15838387  cmd: b44_cot.py --arm zs-nothink --variant std --split test --bs 12 --out out/cot/zs-nothink_std_test.json
+2026-11-18T23:20:16Z cot_fs-nothink_std_test nseg=2 jobs: 15838388 15838389  cmd: b44_cot.py --arm fs-nothink --variant std --split test --bs 12 --out out/cot/fs-nothink_std_test.json
+2026-11-18T23:20:18Z cot_zs-think_std_test nseg=4 jobs: 15838390 15838391 15838392 15838393  cmd: b44_cot.py --arm zs-think --variant std --split test --bs 12 --out out/cot/zs-think_std_test.json
+2026-11-18T23:20:21Z cot_fs-think_std_test nseg=4 jobs: 15838394 15838395 15838396 15838397  cmd: b44_cot.py --arm fs-think --variant std --split test --bs 12 --out out/cot/fs-think_std_test.json
+2026-11-18T23:26:33Z cls_ho_n800_r8_lr1e-4_s123 nseg=1 jobs: 15838500  cmd: b44_lora.py --task cls --variant ho --n 800 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/cls_ho_n800_r8_lr1e-4_s123.json
+2026-11-18T23:26:35Z cls_ho_n800_r8_lr1e-4_s456 nseg=1 jobs: 15838511  cmd: b44_lora.py --task cls --variant ho --n 800 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/cls_ho_n800_r8_lr1e-4_s456.json
+15838514
+2026-11-19T00:28:24Z cls_std_n8000_r8_lr1e-4_s123 nseg=3 jobs: 15840250 15840251 15840252  cmd: b44_lora.py --task cls --variant std --n 8000 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/cls_std_n8000_r8_lr1e-4_s123.json
+2026-11-19T00:28:26Z cls_std_n8000_r8_lr1e-4_s456 nseg=3 jobs: 15840254 15840255 15840256  cmd: b44_lora.py --task cls --variant std --n 8000 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/cls_std_n8000_r8_lr1e-4_s456.json
+NVIDIA H200 NVIDIA A100-SXM4-80GB NVIDIA A100-SXM4-80GB
+15840257
+2026-11-19T01:00:03Z cot_fs-think_std_dev100 nseg=2 jobs: 15841108 15841110  cmd: b44_cot.py --arm fs-think --variant std --split dev --n 100 --bs 12 --out out/cot/fs-think_std_dev100.json
+2026-11-19T01:43:45Z cls_ho_n8000_r8_lr1e-4_s123 nseg=3 jobs: 15842515 15842516 15842517  cmd: b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/cls_ho_n8000_r8_lr1e-4_s123.json
+2026-11-19T01:43:48Z cls_ho_n8000_r8_lr1e-4_s456 nseg=3 jobs: 15842518 15842519 15842520  cmd: b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/cls_ho_n8000_r8_lr1e-4_s456.json
+2026-11-19T01:43:50Z cls_ho_n80000_r8_lr1e-4_s42 nseg=5 jobs: 15842521 15842522 15842523 15842524 15842525  cmd: b44_lora.py --task cls --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 42 --max_hours 1.3 --final --out out/lora/cls_ho_n80000_r8_lr1e-4_s42.json
+2026-11-19T01:43:53Z cls_ho_n80000_r8_lr1e-4_s123 nseg=5 jobs: 15842538 15842540 15842542 15842544 15842546  cmd: b44_lora.py --task cls --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/cls_ho_n80000_r8_lr1e-4_s123.json
+2026-11-19T01:43:56Z cls_ho_n80000_r8_lr1e-4_s456 nseg=5 jobs: 15842549 15842550 15842551 15842552 15842553  cmd: b44_lora.py --task cls --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/cls_ho_n80000_r8_lr1e-4_s456.json
+2026-11-19T02:05:36Z cls_std_n80000_r8_lr1e-4_s123 nseg=5 jobs: 15842862 15842864 15842865 15842866 15842867  cmd: b44_lora.py --task cls --variant std --n 80000 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/cls_std_n80000_r8_lr1e-4_s123.json
+2026-11-19T02:05:38Z cls_std_n80000_r8_lr1e-4_s456 nseg=5 jobs: 15842868 15842869 15842870 15842871 15842872  cmd: b44_lora.py --task cls --variant std --n 80000 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/cls_std_n80000_r8_lr1e-4_s456.json
+NVIDIA H200
+15842873
+2026-11-19T02:11:59Z scratch_std_n80000_r8_lr1e-4_s42 nseg=4 jobs: 15843009 15843010 15843011 15843012  cmd: b44_lora.py --task scratch --variant std --n 80000 --rank 8 --lr 1e-4 --seed 42 --max_hours 1.3 --final --out out/lora/scratch_std_n80000_r8_lr1e-4_s42.json
+2026-11-19T02:12:01Z scratch_std_n80000_r8_lr1e-4_s123 nseg=4 jobs: 15843013 15843014 15843015 15843016  cmd: b44_lora.py --task scratch --variant std --n 80000 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/scratch_std_n80000_r8_lr1e-4_s123.json
+2026-11-19T02:12:03Z scratch_std_n80000_r8_lr1e-4_s456 nseg=4 jobs: 15843017 15843018 15843019 15843021  cmd: b44_lora.py --task scratch --variant std --n 80000 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/scratch_std_n80000_r8_lr1e-4_s456.json
+2026-11-19T02:12:05Z scratch_ho_n80000_r8_lr1e-4_s42 nseg=4 jobs: 15843022 15843023 15843024 15843026  cmd: b44_lora.py --task scratch --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 42 --max_hours 1.3 --final --out out/lora/scratch_ho_n80000_r8_lr1e-4_s42.json
+2026-11-19T02:12:08Z scratch_ho_n80000_r8_lr1e-4_s123 nseg=4 jobs: 15843027 15843028 15843029 15843030  cmd: b44_lora.py --task scratch --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/scratch_ho_n80000_r8_lr1e-4_s123.json
+2026-11-19T02:12:10Z scratch_ho_n80000_r8_lr1e-4_s456 nseg=4 jobs: 15843032 15843033 15843034 15843035  cmd: b44_lora.py --task scratch --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 456 --max_hours 1.3 --final --out out/lora/scratch_ho_n80000_r8_lr1e-4_s456.json
+2026-11-19T04:59:24Z cls_std_n80000_r8_lr1e-4_s123 nseg=5 jobs: 15848676 15848677 15848678 15848679 15848680  cmd: b44_lora.py --task cls --variant std --n 80000 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/cls_std_n80000_r8_lr1e-4_s123.json
+2026-11-19T04:59:26Z cls_ho_n80000_r8_lr1e-4_s123 nseg=4 jobs: 15848681 15848682 15848683 15848684  cmd: b44_lora.py --task cls --variant ho --n 80000 --rank 8 --lr 1e-4 --seed 123 --max_hours 1.3 --final --out out/lora/cls_ho_n80000_r8_lr1e-4_s123.json

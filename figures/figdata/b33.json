@@ -1,0 +1,167 @@
+{
+ "_about": "B33 (prereg vsassm/prereg/B33_fresh_task2_prereg.md): the corrected bAbI task-2 parse on 1,500 questions that no part of the paper had scored (fresh = 1,000 generated; hfrest = official test rows 500-999). Verbatim verdict lines.",
+ "fresh": {
+  "memory": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    memory naming head, comm, corrected parse                                      mean 1.000 [1.000, 1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    memory naming head, comm, corrected parse                                      mean 1.000 [1.000, 1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    memory naming head, comm, corrected parse                                      mean 1.000 [1.000, 1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "ft_best": {
+   "mean": 0.964,
+   "seeds": [
+    {
+     "value": 0.968,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)      mean 0.964 [0.954, 0.974]  seeds 0.968 [0.955-0.977], 0.965 [0.952-0.975], 0.960 [0.946-0.970]",
+     "text": "0.968"
+    },
+    {
+     "value": 0.965,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)      mean 0.964 [0.954, 0.974]  seeds 0.968 [0.955-0.977], 0.965 [0.952-0.975], 0.960 [0.946-0.970]",
+     "text": "0.965"
+    },
+    {
+     "value": 0.96,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)      mean 0.964 [0.954, 0.974]  seeds 0.968 [0.955-0.977], 0.965 [0.952-0.975], 0.960 [0.946-0.970]",
+     "text": "0.960"
+    }
+   ]
+  },
+  "ft_first": {
+   "mean": 0.77,
+   "seeds": [
+    {
+     "value": 0.824,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)  mean 0.770 [0.742, 0.797]  seeds 0.824 [0.799-0.846], 0.677 [0.647-0.705], 0.808 [0.782-0.831]",
+     "text": "0.824"
+    },
+    {
+     "value": 0.677,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)  mean 0.770 [0.742, 0.797]  seeds 0.824 [0.799-0.846], 0.677 [0.647-0.705], 0.808 [0.782-0.831]",
+     "text": "0.677"
+    },
+    {
+     "value": 0.808,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)  mean 0.770 [0.742, 0.797]  seeds 0.824 [0.799-0.846], 0.677 [0.647-0.705], 0.808 [0.782-0.831]",
+     "text": "0.808"
+    }
+   ]
+  },
+  "prompt": {
+   "mean": 0.357,
+   "seeds": [
+    {
+     "value": 0.357,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    prompting (V-49 zero-shot)                                                     mean 0.357 [0.318, 0.395]  seeds 0.357 [0.328-0.387]",
+     "text": "0.357"
+    }
+   ]
+  }
+ },
+ "hfrest": {
+  "memory": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    memory naming head, comm, corrected parse                                      mean 1.000 [1.000, 1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    memory naming head, comm, corrected parse                                      mean 1.000 [1.000, 1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    memory naming head, comm, corrected parse                                      mean 1.000 [1.000, 1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "ft_best": {
+   "mean": 0.97,
+   "seeds": [
+    {
+     "value": 0.966,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)      mean 0.970 [0.960, 0.979]  seeds 0.966 [0.946-0.979], 0.974 [0.956-0.985], 0.970 [0.951-0.982]",
+     "text": "0.966"
+    },
+    {
+     "value": 0.974,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)      mean 0.970 [0.960, 0.979]  seeds 0.966 [0.946-0.979], 0.974 [0.956-0.985], 0.970 [0.951-0.982]",
+     "text": "0.974"
+    },
+    {
+     "value": 0.97,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)      mean 0.970 [0.960, 0.979]  seeds 0.966 [0.946-0.979], 0.974 [0.956-0.985], 0.970 [0.951-0.982]",
+     "text": "0.970"
+    }
+   ]
+  },
+  "ft_first": {
+   "mean": 0.803,
+   "seeds": [
+    {
+     "value": 0.838,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)  mean 0.803 [0.767, 0.836]  seeds 0.838 [0.803-0.868], 0.712 [0.671-0.750], 0.858 [0.825-0.886]",
+     "text": "0.838"
+    },
+    {
+     "value": 0.712,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)  mean 0.803 [0.767, 0.836]  seeds 0.838 [0.803-0.868], 0.712 [0.671-0.750], 0.858 [0.825-0.886]",
+     "text": "0.712"
+    },
+    {
+     "value": 0.858,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)  mean 0.803 [0.767, 0.836]  seeds 0.838 [0.803-0.868], 0.712 [0.671-0.750], 0.858 [0.825-0.886]",
+     "text": "0.858"
+    }
+   ]
+  },
+  "prompt": {
+   "mean": 0.376,
+   "seeds": [
+    {
+     "value": 0.376,
+     "file": "../results/vsassm/results/b33_verdict.txt",
+     "line": "    prompting (V-49 zero-shot)                                                     mean 0.376 [0.324, 0.428]  seeds 0.376 [0.335-0.419]",
+     "text": "0.376"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,23 @@
+===== V-133 Part A (prereg 9bcb703) model=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct =====
+  store artifact: n_eval=150 K=120 dims=[2048, 4096, 8192]
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:10,  1.46it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:09,  1.52it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:09,  1.55it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:08,  1.56it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:07,  1.56it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:07,  1.57it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.57it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:05<00:05,  1.57it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:05,  1.58it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.58it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:07<00:03,  1.58it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.59it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:08<00:02,  1.58it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:08<00:01,  1.58it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:09<00:01,  1.58it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:10<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.63it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.58it/s]
+  loaded; device map spans 4 module groups
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  k=2 direct acc 0.2133  (1.2 min)
+  k=2 cot    acc 0.9200  (4.0 min) trunc 0.000, mean 68 tok
+  k=2 store(d=4096) 0.9600 | direct 0.2133 | cot 0.9200  => gap(dir) +0.7467 gap(cot) +0.0400
+  k=3 direct acc 0.0667  (1.2 min)
+  k=3 cot    acc 0.9667  (5.2 min) trunc 0.000, mean 98 tok
+  k=3 store(d=4096) 0.8956 | direct 0.0667 | cot 0.9667  => gap(dir) +0.8289 gap(cot) -0.0711
+  k=4 direct acc 0.0600  (1.2 min)
+  k=4 cot    acc 0.9333  (7.4 min) trunc 0.007, mean 134 tok
+  k=4 store(d=4096) 0.7978 | direct 0.0600 | cot 0.9333  => gap(dir) +0.7378 gap(cot) -0.1356
+  k=5 direct acc 0.1000  (1.1 min)
+  k=5 cot    acc 0.9467  (7.9 min) trunc 0.000, mean 156 tok
+  k=5 store(d=4096) 0.7622 | direct 0.1000 | cot 0.9467  => gap(dir) +0.6622 gap(cot) -0.1844
+  k=6 direct acc 0.0267  (1.2 min)
+  k=6 cot    acc 0.9200  (7.7 min) trunc 0.000, mean 183 tok
+  k=6 store(d=4096) 0.7267 | direct 0.0267 | cot 0.9200  => gap(dir) +0.7000 gap(cot) -0.1933
+  total 38.1 min
+V133A-DONE
+V133A-WRAPPER-EXIT 0

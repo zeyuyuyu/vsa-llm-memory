@@ -1,0 +1,141 @@
+# B23 verdict (prereg/B23_babilong_finetune_baseline_prereg.md): Qwen3-1.7B fine-tuned end to end on BABILong,
+# no memory -- the referee baseline for the B18 reader + memory
+
+Metric: our implementation of the official BABILong rule (b18.correct_official) on the whole output; the verbatim
+official compare_answers is the second scorer. Test = RMT-team/babilong, all 100 samples per task (n = 500 per
+length). Cells: accuracy in per cent; QA1-5 with its 95% Wilson interval.
+
+## Dev (training split, indices 4900-4919, n = 100 per length) -- gate and choice of the primary arm
+  N_s0: 0k 99.0  4k 99.0  16k 98.0  32k 97.0  64k 92.0   five-length mean 97.0   bar 0 PASS
+  Y_s0: 0k 99.0  4k 100.0  16k 99.0  32k 98.0  64k 98.0   five-length mean 98.8   bar 0 PASS
+  Y_s1: 0k 99.0  4k 98.0  16k 98.0  32k 99.0  64k 96.0   five-length mean 98.0   bar 0 PASS
+  Primary arm: Y (dev five-length mean: N 97.0 vs Y 98.8 (tie -> Y))
+
+## Test, run Y_s0 (PRIMARY)
+length     qa1    qa2    qa3    qa4    qa5    QA1-5 [Wilson 95%]   official  no-label  ours (B18)  diff   McNemar p
+0k      100.0  100.0   96.0  100.0  100.0    99.2 [98.0-99.7]    99.2       0       99.6    +0.4   0.62 (3/1)
+4k      100.0  100.0   97.0  100.0   99.0    99.2 [98.0-99.7]    99.2       0       97.8    -1.4   0.092 (3/10)
+16k      99.0   99.0   95.0   99.0   99.0    98.2 [96.6-99.1]    98.2       1       99.2    +1.0   0.23 (8/3)
+32k     100.0   99.0   96.0   97.0   98.0    98.0 [96.4-98.9]    98.2       1          -        -
+64k     100.0   99.0   91.0   97.0  100.0    97.4 [95.6-98.5]    97.4       0       99.6    +2.2   0.0074 (13/2)
+128k    100.0   96.0   92.0   86.0   99.0    94.6 [92.3-96.3]    94.6       1       99.8    +5.2   2.2e-07 (27/1)
+  (diff = ours minus baseline, points; McNemar exact two-sided on the paired questions, discordant pairs ours-only/baseline-only; n = 500 per length)
+  Frontier subset (first 25 per task, n = 125): 0k: baseline 100.0, ours 100.0, GPT-6.1 Sol 100.0, Opus 5.5 100.0; 4k: baseline 100.0, ours 99.2, GPT-6.1 Sol 99.2, Opus 5.5 97.6; 16k: baseline 98.4, ours 100.0, GPT-6.1 Sol 100.0, Opus 5.5 95.2; 64k: baseline 97.6, ours 100.0, GPT-6.1 Sol 99.2, Opus 5.5 96.0; 128k: baseline 93.6, ours 100.0, GPT-6.1 Sol 96.8, Opus 5.5 97.6
+
+## Test, run N_s0
+length     qa1    qa2    qa3    qa4    qa5    QA1-5 [Wilson 95%]   official  no-label  ours (B18)  diff   McNemar p
+0k      100.0  100.0   92.0  100.0   99.0    98.2 [96.6-99.1]    98.2       0       99.6    +1.4   0.039 (8/1)
+4k      100.0  100.0   96.0  100.0   99.0    99.0 [97.7-99.6]    99.0       0       97.8    -1.2   0.18 (4/10)
+16k     100.0   98.0   94.0  100.0   99.0    98.2 [96.6-99.1]    98.2       1       99.2    +1.0   0.23 (8/3)
+32k     100.0   99.0   94.0   99.0   99.0    98.2 [96.6-99.1]    98.2       0          -        -
+64k     100.0   96.0   88.0   91.0   98.0    94.6 [92.3-96.3]    94.6       2       99.6    +5.0   4.2e-07 (26/1)
+128k    100.0   90.0   84.0   86.0   96.0    91.2 [88.4-93.4]    91.2       5       99.8    +8.6   2.3e-13 (43/0)
+  (diff = ours minus baseline, points; McNemar exact two-sided on the paired questions, discordant pairs ours-only/baseline-only; n = 500 per length)
+  Frontier subset (first 25 per task, n = 125): 0k: baseline 99.2, ours 100.0, GPT-6.1 Sol 100.0, Opus 5.5 100.0; 4k: baseline 100.0, ours 99.2, GPT-6.1 Sol 99.2, Opus 5.5 97.6; 16k: baseline 99.2, ours 100.0, GPT-6.1 Sol 100.0, Opus 5.5 95.2; 64k: baseline 95.2, ours 100.0, GPT-6.1 Sol 99.2, Opus 5.5 96.0; 128k: baseline 87.2, ours 100.0, GPT-6.1 Sol 96.8, Opus 5.5 97.6
+
+## Test, run Y_s1 (seed replicate)
+length     qa1    qa2    qa3    qa4    qa5    QA1-5 [Wilson 95%]   official  no-label  ours (B18)  diff   McNemar p
+0k      100.0  100.0   94.0  100.0   99.0    98.6 [97.1-99.3]    98.6       0       99.6    +1.0   0.062 (5/0)
+4k      100.0  100.0   99.0  100.0   99.0    99.6 [98.6-99.9]    99.6       0       97.8    -1.8   0.012 (1/10)
+16k      99.0   99.0   96.0   98.0   99.0    98.2 [96.6-99.1]    98.2       1       99.2    +1.0   0.23 (8/3)
+32k     100.0   97.0   94.0   99.0   99.0    97.8 [96.1-98.8]    97.8       0          -        -
+64k     100.0   98.0   93.0   99.0   98.0    97.6 [95.9-98.6]    97.8       1       99.6    +2.0   0.0063 (11/1)
+128k     99.0   96.0   91.0   92.0   97.0    95.0 [92.7-96.6]    95.0       2       99.8    +4.8   1.2e-07 (24/0)
+  (diff = ours minus baseline, points; McNemar exact two-sided on the paired questions, discordant pairs ours-only/baseline-only; n = 500 per length)
+  Frontier subset (first 25 per task, n = 125): 0k: baseline 100.0, ours 100.0, GPT-6.1 Sol 100.0, Opus 5.5 100.0; 4k: baseline 100.0, ours 99.2, GPT-6.1 Sol 99.2, Opus 5.5 97.6; 16k: baseline 99.2, ours 100.0, GPT-6.1 Sol 100.0, Opus 5.5 95.2; 64k: baseline 99.2, ours 100.0, GPT-6.1 Sol 99.2, Opus 5.5 96.0; 128k: baseline 95.2, ours 100.0, GPT-6.1 Sol 96.8, Opus 5.5 97.6
+
+## Bars (seed 0, primary arm)
+  Bar 1, 128k: ours - baseline >= 5.0 points and McNemar p < 0.05: diff +5.2, p = 2.2e-07 -> PASS
+  Bar 2, 64k: ours - baseline >= 5.0 points and McNemar p < 0.05: diff +2.2, p = 0.0074 -> FAIL
+  Bar 0 (dev QA1-5 at 0k >= 90): N_s0 PASS (99.0), Y_s0 PASS (99.0), Y_s1 PASS (99.0)
+
+## Predictions
+  0k: predicted 97, measured 99.2, off by +2.2 (range 90-100: HELD)
+  4k: predicted 95, measured 99.2, off by +4.2 (point prediction)
+  16k: predicted 93, measured 98.2, off by +5.2 (point prediction)
+  32k: predicted 90, measured 98.0, off by +8.0 (point prediction)
+  64k: predicted 85, measured 97.4, off by +12.4 (range 65-97: NOT HELD)
+  128k: predicted 72, measured 94.6, off by +22.6 (range 45-92: NOT HELD)
+  Bar 0 passes for every run with dev 0k >= 95: HELD
+  Arm Y is primary (dev Y >= N): HELD
+  Bars 1 and 2 both pass: NOT HELD
+  qa3 weakest at every length from 4k: NOT HELD (weakest per length: 4k qa3, 16k qa3, 32k qa3, 64k qa3, 128k qa4)
+  Arm N at 128k >= 5 points below arm Y: N 91.2 vs Y 94.6 -> NOT HELD
+  Baseline within 3 points of ours at 0k / 4k / 16k: 0k +0.4, 4k -1.4, 16k +1.0 -> HELD
+  At 128k (subset) baseline below GPT-6.1 Sol 96.8 and Opus 5.5 97.6: baseline 93.6 -> HELD
+
+## Compute (sacct elapsed x 1 GPU, every B23 GPU job including failed and cancelled ones)
+  15758342 Y_s0       FAILED     atl1-1-03-018-14-0     H200     0.06 h
+  15758343 N_s0       CANCELLED  atl1-1-03-018-14-0     H200     0.23 h
+  15758344 Y_s1       CANCELLED  atl1-1-01-002-28-0     A100     0.02 h
+  15758619 Y_s1       CANCELLED  atl1-1-03-018-14-0     H200     0.34 h
+  15758618 Y_s0       CANCELLED  atl1-1-01-002-28-0     A100     7.14 h
+  15758963 N_s0       COMPLETED  atl1-1-02-012-9-0      H200     4.28 h
+  15759628 Y_s1       COMPLETED  atl1-1-02-012-9-0      H200     5.12 h
+  15769169 Y_s0 part  COMPLETED  atl1-1-01-002-28-0     A100     0.64 h
+  Total 17.8 GPU-hours; at $1.17 per GPU-hour about $21 (actual PACE rates are lower on A100; CPU jobs for download / prep / token counts not included, < 0.3 CPU-node-hours).
+
+## Reading (written by hand after the generated part; the pre-registered reading rules are in the prereg)
+- The end-to-end fine-tuned 1.7B model is a strong baseline. With no memory it reaches 99.2 / 99.2 / 98.2 / 98.0 /
+  97.4 / 94.6 at 0k / 4k / 16k / 32k / 64k / 128k (primary arm Y, seed 0). That is far above the predictions (72 at
+  128k): the prediction ranges at 64k and 128k did NOT hold.
+- 0k-32k: the baseline matches our system. The differences are 0.4-1.4 points, and none is significant at n = 500.
+  At 4k the baseline is nominally better (99.2 vs 97.8, p = 0.09; seed 1: 99.6, p = 0.012, i.e. significantly
+  better than ours). Up to 32k, then, task fine-tuning alone accounts for the result, as the referee said.
+- 64k (the longest training length of arm Y): our system is better by 2.2 points (p = 0.007; seed 1: 2.0, p = 0.006).
+  The gap is real but smaller than the 5-point bar, so bar 2 FAILS. Under the pre-registered reading, at 64k the
+  fine-tuned model comes within the margin of our system.
+- 128k (twice the longest training length): our system is better by 5.2 points (27 questions only ours gets right,
+  1 only the baseline; p = 2e-7), so bar 1 PASSES. The margin is fragile: the seed-1 replicate gives 4.8 points
+  (p = 1e-7), just under the 5-point bar. The significance holds in both seeds; the size sits at the bar.
+- Arm N, trained only inside the native window with YaRN switched on at test, drops further: 94.6 at 64k and 91.2 at
+  128k (gaps of 5.0 and 8.6 points, both p < 1e-6).
+- Beyond the window: 512k, 1M and 10M inputs exceed the 131k-token YaRN window, so the baseline cannot read them at
+  all. Our system answers them (100% at 512k and 1M, n = 125; 10M, n = 25).
+- Small versus large at 128k: on the frontier subset (n = 125) the fine-tuned baseline (93.6; arm N 87.2, Y_s1 95.2)
+  is below GPT-6.1 Sol (96.8) and Opus 5.5 (97.6), and our system is at 100. At 128k, then, fine-tuning alone does
+  not reproduce "small beats large"; at 0k-64k the fine-tuned baseline is level with the large models.
+- In one sentence: fine-tuning explains most of the BABILong result up to 64k; the memory's advantage is a 2-point
+  gap at 64k, a 5-point gap at 128k, and inputs beyond the window, which only the memory can read.
+- Where the baseline errs: mostly qa3 at every length, plus qa4 at 128k (86%, the weakest cell; reversed-direction
+  questions). Outputs are clean single labels (2-4 generated tokens, none at the 32-token limit). A few wrong
+  answers are book words ("stomach").
+
+## Checks from other angles
+- Second scorer: the verbatim official compare_answers agrees on every test row except two, Y_s0 32k "Freddy" for
+  "Fred" and Y_s1 64k "Jefferson" for "Jeff". The official substring rule counts these as right; our whole-word rule
+  counts them as wrong. So our scorer is the stricter of the two, and the cells shift by at most 0.2.
+- Comparison rows: every paired question matched our banked B18 rows on question and target (0 mismatches). Our
+  per-length B18 accuracies recomputed from those rows equal the B18 verdict (99.6 / 97.8 / 99.2 / 99.6 / 99.8).
+- Read by hand: 10 wrong 128k answers (real wrong rooms or names, no format problem) and 8 random right answers (all
+  the exact label).
+- Determinism: two 128k qa4 samples were run in both Y_s0 test jobs, which were separate processes on different
+  GPUs. Their outputs are identical.
+- Seed replicate (Y_s1): within 0.6 points of Y_s0 at every length, and it agrees on every bar direction. It misses
+  bar 1 by 0.2 points.
+- Literature: the BABILong paper (Kuratov et al. 2024, Sec. 3.3) fine-tuned GPT-3.5 and Mistral-7B on 1,000 QA1
+  samples. It reports that fine-tuning "makes scores uniform across all input sizes" within their 16K / 32K
+  windows. That agrees with B23 and supports it: an end-to-end fine-tuned transformer closes the gap inside its
+  window. B23 adds that a gap opens past the trained length, and that such a model cannot read past its window.
+
+## Deviations and what went wrong (no design change; nothing selected on test results)
+- **Preflight bug (fixed before any run finished training; commit 1b01b8b).**
+  - The first Y_s0 job (15758342) ran out of memory in its preflight on 66k tokens. from_pretrained returns eval mode,
+    and in eval mode gradient checkpointing is skipped.
+  - Fix: model.train() is now called before the preflight. Training itself always ran in train mode.
+  - Y_s0 and Y_s1 were resubmitted. The first N_s0 job (15758343) was cancelled; it had started with the pre-fix code
+    and also sat on the slow node (next point).
+- **Slow node atl1-1-03-018-14-0 (H200).**
+  - Training there was more than 10x slower. The GPU showed 100% utilisation at about 128 W and 35 C, while the same
+    code ran normally on atl1-1-02-012-9-0.
+  - Two jobs on that node were cancelled (0.6 GPU-hours). The Y_s1 resubmission excludes the node via scontrol.
+- **Y_s0 test split across two jobs.**
+  - The run's own job did 0k-64k and 128k qa1-qa3. A parallel job (15769169, same adapter and code) did 128k qa4-qa5.
+  - The main job was cancelled after its 128k qa3. The two files were merged by (task, length, index), and the 2 rows
+    that overlap were identical.
+  - Raw files are in b23_out/parts/.
+- **Comparison data:** our system's numbers are the banked B18 per-question results (b23_ref/b18_s0); B18 was not
+  rerun. B18 has no 32k run, so 32k has no comparison.
+- **Unchanged from the prereg:** the window rule (testlen: longest 128k prompt 129,613 tokens, so factor 4 everywhere
+  and arm N native up to 32k), the gate, the primary choice and the scorer.
+- **Not used:** the A800 fallback; no PACE job waited more than about 15 minutes.

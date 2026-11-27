@@ -1,0 +1,3 @@
+b65_run.py eval --pos ops --arm disc --layer 17 --reader out/rd/ops_disc_lr1e-3_s0/e30 --ckpt out/dev/ops_disc_lr1e-2_s0 --split test --bs 32 --pred preds/ops/disc_s0.jsonl
+b65_run.py eval --pos ops --arm disc --layer 17 --reader out/rd/ops_disc_lr1e-3_s1/e30 --ckpt out/fin/ops_disc_s1 --split test --bs 32 --pred preds/ops/disc_s1.jsonl
+b65_run.py eval --pos ops --arm disc --layer 17 --reader out/rd/ops_disc_lr1e-3_s2/e30 --ckpt out/fin/ops_disc_s2 --split test --bs 32 --pred preds/ops/disc_s2.jsonl

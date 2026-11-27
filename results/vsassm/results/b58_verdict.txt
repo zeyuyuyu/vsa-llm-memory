@@ -1,0 +1,217 @@
+# B58 verdict (prereg/B58_protected_store_prereg.md): the VSA store protected by the tables' channel codes
+Stores 50, probed keys 4776. N* in cells per stored pair (>4096 = not reached on the grid).
+Best table = smallest N* of T-rep, E-BCH, E-LDPC, E-CAM; i.i.d.: B38's E-LDPC (OWN = PKG on i.i.d. inputs,
+compute note 5); damage: E-LDPC* = E-LDPC re-scored with OWN. P-best = smaller of P-LDPC, P-BCH (n/r = not run, compute note 5);
+'<=' = N* at the bottom of the cut window (at k1-k4 no code fits below 91 cells, so 91 is exact).
+P-any = smaller of P-best and B38's uncoded V-last.
+
+Table 1 (i.i.d.): N*
+                   k1       k2       k4      e05       k8      k16      k32
+  V-last           76       76       76       91      128      431     1722
+  P-LDPC         <=91     <=91     <=91      n/r      n/r     1024     3444
+  P-BCH          <=91     <=91     <=91      128      152      n/r      n/r
+  T-rep            19       23       91      128      256     1024     3444
+  E-BCH            19       19       27       38      108      431     1722
+  E-LDPC           23       23       27       38       54      215      724
+  E-CAM            45       45       64       91      256     1024     3444
+  T-vhdd           32       32       38       54       91      304     1024
+
+H1-P (Delta = steps(best table) - steps(P-best); +: store fewer cells):
+    k1   P-BCH       91 | best table E-BCH        19 | Delta -9 -> table fewer cells
+    k2   P-BCH       91 | best table E-BCH        19 | Delta -9 -> table fewer cells
+    k4   P-BCH       91 | best table E-BCH        27 | Delta -7 -> table fewer cells
+    e05  P-BCH      128 | best table E-BCH        38 | Delta -7 -> table fewer cells
+    k8   P-BCH      152 | best table E-LDPC       54 | Delta -6 -> table fewer cells
+    k16  P-LDPC    1024 | best table E-LDPC      215 | Delta -9 -> table fewer cells
+    k32  P-LDPC    3444 | best table E-LDPC      724 | Delta -9 -> table fewer cells
+  H1-P: TABLE WIN
+
+H1-Pany (Delta = steps(best table) - steps(P-any); +: store fewer cells):
+    k1   V-last      76 | best table E-BCH        19 | Delta -8 -> table fewer cells
+    k2   V-last      76 | best table E-BCH        19 | Delta -8 -> table fewer cells
+    k4   V-last      76 | best table E-BCH        27 | Delta -6 -> table fewer cells
+    e05  V-last      91 | best table E-BCH        38 | Delta -5 -> table fewer cells
+    k8   V-last     128 | best table E-LDPC       54 | Delta -5 -> table fewer cells
+    k16  V-last     431 | best table E-LDPC      215 | Delta -4 -> table fewer cells
+    k32  V-last    1722 | best table E-LDPC      724 | Delta -5 -> table fewer cells
+  H1-Pany: TABLE WIN
+
+G (does coding help the store? steps(V-last) - steps(P-best); >= +2 helps, <= -2 hurts):
+    k1   V-last     76  P-best     91 (P-BCH)  G -1 -> tie
+    k2   V-last     76  P-best     91 (P-BCH)  G -1 -> tie
+    k4   V-last     76  P-best     91 (P-BCH)  G -1 -> tie
+    e05  V-last     91  P-best    128 (P-BCH)  G -2 -> coding hurts
+    k8   V-last    128  P-best    152 (P-BCH)  G -1 -> tie
+    k16  V-last    431  P-best   1024 (P-LDPC)  G -5 -> coding hurts
+    k32  V-last   1722  P-best   3444 (P-LDPC)  G -4 -> coding hurts
+
+Table 2 (localized damage; f = 2 eps of the matched i.i.d. condition): N*
+                     V-last   P-LDPC    P-BCH    T-rep    E-BCH   E-LDPC  E-LDPC*    E-CAM   T-vhdd  | Delta P-best vs table | Delta V-last vs table
+  (part (a) damage conditions not run, compute notes 2 and 4: P columns empty, P labels not evaluated)
+  lines-il-k4            76                         91       27       27       27       64       45  | not run | -6 table fewer cells
+  lines-il-e05           91                        128       91       45       45       91       54  | not run | -4 table fewer cells
+  lines-il-k8           128                        256      128       76       76      256       91  | not run | -3 table fewer cells
+  lines-il-k16          431                       1024      431      215      215     1024      304  | not run | -4 table fewer cells
+  clust-il-k4            76                         91       27       27       27       64       38  | not run | -6 table fewer cells
+  clust-il-e05           91                        128       54       38       38       91       54  | not run | -5 table fewer cells
+  clust-il-k8           128                        256      128       64       64      256       91  | not run | -4 table fewer cells
+  clust-il-k16          431                       1024      512      304      304     1024      304  | not run | -2 table fewer cells
+  il: P-best vs table not run; V-last vs table TABLE WIN
+  lines-nat-k4           76                      >4096      181    >4096      128      304      512  | not run | +3 store fewer cells
+  lines-nat-e05          91                      >4096      431    >4096      304      724      861  | not run | +7 store fewer cells
+  lines-nat-k8          152                      >4096     2896    >4096     3444    >4096     1218  | not run | +17 store fewer cells
+  lines-nat-k16         512                      >4096    >4096    >4096    >4096    >4096     2896  | not run | +13 store fewer cells
+  clust-nat-k4           76                        724      215      512      128      512       91  | not run | +3 store fewer cells
+  clust-nat-e05          91                       1024      512      724      304     1024      128  | not run | +7 store fewer cells
+  clust-nat-k8          152                       1722     1024     1024      609     2435      215  | not run | +8 store fewer cells
+  clust-nat-k16         724                      >4096     2896     2435     2048    >4096     1448  | not run | +6 store fewer cells
+  nat: P-best vs table not run; V-last vs table VSA WIN
+
+Position independence (|N*(damage) - N*(matched i.i.d.)| <= 1 grid step), lines + clusters:
+    V-last   il 8/8   nat 7/8
+    T-rep    il 8/8   nat 0/8
+    E-BCH    il 6/8   nat 0/8
+    E-LDPC   il 6/8   nat 0/8
+    E-LDPC*  il 6/8   nat 0/8
+    E-CAM    il 8/8   nat 0/8
+    T-vhdd   il 8/8   nat 0/8
+
+Fig. 5b sentence rule: nat lead >= 2 steps in 8 / 8 (need >= 6); E-LDPC* interleaved within 1 step of i.i.d. in 6 / 8 (need >= 7); interleaved best store read vs best table: TABLE WIN (need TABLE WIN) -> DOES NOT HOLD as worded
+
+Store-cluster bootstrap (2,000 resamples): 95% range of Delta (H1-P), of P-best N* and of the best table N*:
+    k1   Delta [-9, -9]   P-best N* [91, 91]   best table N* [19, 19]
+    k2   Delta [-9, -9]   P-best N* [91, 91]   best table N* [19, 19]
+    k4   Delta [-7, -7]   P-best N* [91, 91]   best table N* [27, 27]
+    e05  Delta [-7, -6]   P-best N* [108, 128]   best table N* [38, 38]
+    k8   Delta [-8, -6]   P-best N* [152, 215]   best table N* [54, 54]
+    k16  Delta [-9, -8]   P-best N* [861, 1024]   best table N* [215, 215]
+    k32  Delta [-9, -9]   P-best N* [3444, 3444]   best table N* [724, 724]
+
+Part (b): value-vocabulary accounting. Audit: b25_pcm.codes builds the store's value codes from the
+vocabulary strings (bip(vocab, 'value', d)); every table stores vocabulary indices (b34_inmem.Store.vi,
+payload_bits) and T-vhdd regenerates its value codes from the same strings (hd_code('value:' + vocab[v]));
+every arm returns vocabulary indices scored against the same index lists. Both free (B38) = symmetric for
+V-last vs the tables; V-cb alone pays an item memory (its codebook) that no table has.
+Both charged: vocabulary strings on the cells of every memory at 1 / (1 - H2(eps)) cells per bit;
+N*' = N* + v c; Delta' = 4 log2(N*'(best table) / N*'(store)) grid steps (+: store fewer cells).
+  pooled (50 stores): v = 288.0 vocabulary bits per pair
+    k1   c 1.00 | V-last 76 vs 19: free -8.0, charged -1.0 (tie; difference 57 cells per pair) | P-any 76 vs 19: free -8.0, charged -1.0 (tie; difference 57 cells per pair) | V-cb 431 vs 19: free -18.0, charged -4.9 (table fewer cells; difference 412 cells per pair)
+    k2   c 1.00 | V-last 76 vs 19: free -8.0, charged -1.0 (tie; difference 57 cells per pair) | P-any 76 vs 19: free -8.0, charged -1.0 (tie; difference 57 cells per pair) | V-cb 431 vs 19: free -18.0, charged -4.9 (table fewer cells; difference 412 cells per pair)
+    k4   c 1.17 | V-last 76 vs 27: free -6.0, charged -0.7 (tie; difference 49 cells per pair) | P-any 76 vs 27: free -6.0, charged -0.7 (tie; difference 49 cells per pair) | V-cb 512 vs 27: free -17.0, charged -4.9 (table fewer cells; difference 485 cells per pair)
+    e05  c 1.40 | V-last 91 vs 38: free -5.0, charged -0.6 (tie; difference 52 cells per pair) | P-any 91 vs 38: free -5.0, charged -0.6 (tie; difference 52 cells per pair) | V-cb 724 vs 38: free -17.0, charged -5.4 (table fewer cells; difference 686 cells per pair)
+    k8   c 2.16 | V-last 128 vs 54: free -5.0, charged -0.6 (tie; difference 74 cells per pair) | P-any 128 vs 54: free -5.0, charged -0.6 (tie; difference 74 cells per pair) | V-cb 1448 vs 54: free -19.0, charged -6.5 (table fewer cells; difference 1394 cells per pair)
+    k16  c 6.66 | V-last 431 vs 215: free -4.0, charged -0.6 (tie; difference 215 cells per pair) | P-any 431 vs 215: free -4.0, charged -0.6 (tie; difference 215 cells per pair) | V-cb n/a
+    k32  c 21.74 | V-last 1722 vs 724: free -5.0, charged -0.8 (tie; difference 998 cells per pair) | P-any 1722 vs 724: free -5.0, charged -0.8 (tie; difference 998 cells per pair) | V-cb n/a
+  131072/niah_multikey_2: v = 56.0 vocabulary bits per pair
+    k1   c 1.00 | V-last 76 vs 19: free -8.0, charged -3.3 (table fewer cells; difference 57 cells per pair) | P-any 76 vs 19: free -8.0, charged -3.3 (table fewer cells; difference 57 cells per pair) | V-cb 431 vs 19: free -18.0, charged -10.8 (table fewer cells; difference 412 cells per pair)
+    k2   c 1.00 | V-last 76 vs 19: free -8.0, charged -3.3 (table fewer cells; difference 57 cells per pair) | P-any 76 vs 19: free -8.0, charged -3.3 (table fewer cells; difference 57 cells per pair) | V-cb 512 vs 19: free -19.0, charged -11.7 (table fewer cells; difference 493 cells per pair)
+    k4   c 1.17 | V-last 76 vs 27: free -6.0, charged -2.5 (table fewer cells; difference 49 cells per pair) | P-any 76 vs 27: free -6.0, charged -2.5 (table fewer cells; difference 49 cells per pair) | V-cb 724 vs 27: free -19.0, charged -12.4 (table fewer cells; difference 697 cells per pair)
+    e05  c 1.40 | V-last 91 vs 38: free -5.0, charged -2.1 (table fewer cells; difference 52 cells per pair) | P-any 91 vs 38: free -5.0, charged -2.1 (table fewer cells; difference 52 cells per pair) | V-cb 724 vs 38: free -17.0, charged -11.1 (table fewer cells; difference 686 cells per pair)
+    k8   c 2.16 | V-last 128 vs 54: free -5.0, charged -2.0 (table fewer cells; difference 74 cells per pair) | P-any 128 vs 54: free -5.0, charged -2.0 (table fewer cells; difference 74 cells per pair) | V-cb 1448 vs 54: free -19.0, charged -12.7 (table fewer cells; difference 1394 cells per pair)
+    k16  c 6.66 | V-last 431 vs 215: free -4.0, charged -1.8 (table fewer cells; difference 215 cells per pair) | P-any 431 vs 215: free -4.0, charged -1.8 (table fewer cells; difference 215 cells per pair) | V-cb n/a
+    k32  c 21.74 | V-last 2048 vs 724: free -6.0, charged -3.0 (table fewer cells; difference 1324 cells per pair) | P-any 2048 vs 724: free -6.0, charged -3.0 (table fewer cells; difference 1324 cells per pair) | V-cb n/a
+  32768/niah_multikey_2: v = 56.0 vocabulary bits per pair
+    k1   c 1.00 | V-last 76 vs 16: free -9.0, charged -3.5 (table fewer cells; difference 60 cells per pair) | P-any 76 vs 16: free -9.0, charged -3.5 (table fewer cells; difference 60 cells per pair) | V-cb 362 vs 16: free -18.0, charged -10.2 (table fewer cells; difference 346 cells per pair)
+    k2   c 1.00 | V-last 76 vs 16: free -9.0, charged -3.5 (table fewer cells; difference 60 cells per pair) | P-any 76 vs 16: free -9.0, charged -3.5 (table fewer cells; difference 60 cells per pair) | V-cb 362 vs 16: free -18.0, charged -10.1 (table fewer cells; difference 346 cells per pair)
+    k4   c 1.17 | V-last 91 vs 23: free -8.0, charged -3.3 (table fewer cells; difference 68 cells per pair) | P-any 91 vs 23: free -8.0, charged -3.3 (table fewer cells; difference 68 cells per pair) | V-cb 512 vs 23: free -18.0, charged -10.8 (table fewer cells; difference 489 cells per pair)
+    e05  c 1.40 | V-last 91 vs 32: free -6.0, charged -2.5 (table fewer cells; difference 59 cells per pair) | P-any 91 vs 32: free -6.0, charged -2.5 (table fewer cells; difference 59 cells per pair) | V-cb 609 vs 32: free -17.0, charged -10.5 (table fewer cells; difference 577 cells per pair)
+    k8   c 2.16 | V-last 128 vs 54: free -5.0, charged -2.0 (table fewer cells; difference 74 cells per pair) | P-any 128 vs 54: free -5.0, charged -2.0 (table fewer cells; difference 74 cells per pair) | V-cb 1448 vs 54: free -19.0, charged -12.7 (table fewer cells; difference 1394 cells per pair)
+    k16  c 6.66 | V-last 362 vs 181: free -4.0, charged -1.6 (table fewer cells; difference 181 cells per pair) | P-any 362 vs 181: free -4.0, charged -1.6 (table fewer cells; difference 181 cells per pair) | V-cb n/a
+    k32  c 21.74 | V-last 1722 vs 609: free -6.0, charged -2.7 (table fewer cells; difference 1113 cells per pair) | P-any 1722 vs 609: free -6.0, charged -2.7 (table fewer cells; difference 1113 cells per pair) | V-cb n/a
+  131072/niah_multikey_3: v = 288.0 vocabulary bits per pair
+    k1   c 1.00 | V-last 76 vs 16: free -9.0, charged -1.0 (tie; difference 60 cells per pair) | P-any 76 vs 16: free -9.0, charged -1.0 (tie; difference 60 cells per pair) | V-cb 431 vs 16: free -19.0, charged -5.0 (table fewer cells; difference 415 cells per pair)
+    k2   c 1.00 | V-last 76 vs 16: free -9.0, charged -1.0 (tie; difference 60 cells per pair) | P-any 76 vs 16: free -9.0, charged -1.0 (tie; difference 60 cells per pair) | V-cb 431 vs 16: free -19.0, charged -5.0 (table fewer cells; difference 415 cells per pair)
+    k4   c 1.17 | V-last 76 vs 23: free -7.0, charged -0.8 (tie; difference 53 cells per pair) | P-any 76 vs 23: free -7.0, charged -0.8 (tie; difference 53 cells per pair) | V-cb 609 vs 23: free -19.0, charged -5.6 (table fewer cells; difference 586 cells per pair)
+    e05  c 1.40 | V-last 91 vs 32: free -6.0, charged -0.7 (tie; difference 59 cells per pair) | P-any 91 vs 32: free -6.0, charged -0.7 (tie; difference 59 cells per pair) | V-cb 724 vs 32: free -18.0, charged -5.5 (table fewer cells; difference 692 cells per pair)
+    k8   c 2.16 | V-last 128 vs 54: free -5.0, charged -0.6 (tie; difference 74 cells per pair) | P-any 128 vs 54: free -5.0, charged -0.6 (tie; difference 74 cells per pair) | V-cb 1448 vs 54: free -19.0, charged -6.5 (table fewer cells; difference 1394 cells per pair)
+    k16  c 6.66 | V-last 362 vs 181: free -4.0, charged -0.5 (tie; difference 181 cells per pair) | P-any 362 vs 181: free -4.0, charged -0.5 (tie; difference 181 cells per pair) | V-cb n/a
+    k32  c 21.74 | V-last 1448 vs 609: free -5.0, charged -0.7 (tie; difference 839 cells per pair) | P-any 1448 vs 609: free -5.0, charged -0.7 (tie; difference 839 cells per pair) | V-cb n/a
+  131072/niah_multivalue: v = 97.4 vocabulary bits per pair
+    k1   c 1.00 | V-last 45 vs 10: free -9.0, charged -1.7 (table fewer cells; difference 36 cells per pair) | P-any 45 vs 10: free -9.0, charged -1.7 (table fewer cells; difference 36 cells per pair) | V-cb 431 vs 10: free -22.0, charged -9.2 (table fewer cells; difference 421 cells per pair)
+    k2   c 1.00 | V-last 45 vs 11: free -8.0, charged -1.6 (table fewer cells; difference 34 cells per pair) | P-any 45 vs 11: free -8.0, charged -1.6 (table fewer cells; difference 34 cells per pair) | V-cb 431 vs 11: free -21.0, charged -9.1 (table fewer cells; difference 419 cells per pair)
+    k4   c 1.17 | V-last 45 vs 13: free -7.0, charged -1.3 (tie; difference 32 cells per pair) | P-any 45 vs 13: free -7.0, charged -1.3 (tie; difference 32 cells per pair) | V-cb 431 vs 13: free -20.0, charged -8.4 (table fewer cells; difference 417 cells per pair)
+    e05  c 1.40 | V-last 54 vs 23: free -5.0, charged -1.0 (tie; difference 31 cells per pair) | P-any 54 vs 23: free -5.0, charged -1.0 (tie; difference 31 cells per pair) | V-cb 609 vs 23: free -19.0, charged -8.9 (table fewer cells; difference 586 cells per pair)
+    k8   c 2.16 | V-last 91 vs 38: free -5.0, charged -1.1 (tie; difference 52 cells per pair) | P-any 91 vs 38: free -5.0, charged -1.1 (tie; difference 52 cells per pair) | V-cb 1448 vs 38: free -21.0, charged -11.0 (table fewer cells; difference 1410 cells per pair)
+    k16  c 6.66 | V-last 256 vs 128: free -4.0, charged -0.9 (tie; difference 128 cells per pair) | P-any 256 vs 128: free -4.0, charged -0.9 (tie; difference 128 cells per pair) | V-cb n/a
+    k32  c 21.74 | V-last 1448 vs 512: free -6.0, charged -1.8 (table fewer cells; difference 936 cells per pair) | P-any 1448 vs 512: free -6.0, charged -1.8 (table fewer cells; difference 936 cells per pair) | V-cb n/a
+  131072/vt: v = 34.7 vocabulary bits per pair
+    k1   c 1.00 | V-last 32 vs 10: free -7.0, charged -2.4 (table fewer cells; difference 22 cells per pair) | P-any 32 vs 10: free -7.0, charged -2.4 (table fewer cells; difference 22 cells per pair) | V-cb 304 vs 10: free -20.0, charged -11.8 (table fewer cells; difference 295 cells per pair)
+    k2   c 1.00 | V-last 32 vs 10: free -7.0, charged -2.4 (table fewer cells; difference 22 cells per pair) | P-any 32 vs 10: free -7.0, charged -2.4 (table fewer cells; difference 22 cells per pair) | V-cb 304 vs 10: free -20.0, charged -11.8 (table fewer cells; difference 295 cells per pair)
+    k4   c 1.17 | V-last 45 vs 13: free -7.0, charged -2.7 (table fewer cells; difference 32 cells per pair) | P-any 45 vs 13: free -7.0, charged -2.7 (table fewer cells; difference 32 cells per pair) | V-cb 362 vs 13: free -19.0, charged -11.6 (table fewer cells; difference 349 cells per pair)
+    e05  c 1.40 | V-last 45 vs 19: free -5.0, charged -1.9 (table fewer cells; difference 26 cells per pair) | P-any 45 vs 19: free -5.0, charged -1.9 (table fewer cells; difference 26 cells per pair) | V-cb 362 vs 19: free -17.0, charged -10.4 (table fewer cells; difference 343 cells per pair)
+    k8   c 2.16 | V-last 64 vs 38: free -3.0, charged -1.2 (tie; difference 26 cells per pair) | P-any 64 vs 38: free -3.0, charged -1.2 (tie; difference 26 cells per pair) | V-cb 724 vs 38: free -17.0, charged -11.3 (table fewer cells; difference 686 cells per pair)
+    k16  c 6.66 | V-last 181 vs 128: free -2.0, charged -0.8 (tie; difference 53 cells per pair) | P-any 181 vs 128: free -2.0, charged -0.8 (tie; difference 53 cells per pair) | V-cb n/a
+    k32  c 21.74 | V-last 861 vs 512: free -3.0, charged -1.4 (tie; difference 349 cells per pair) | P-any 861 vs 512: free -3.0, charged -1.4 (tie; difference 349 cells per pair) | V-cb n/a
+
+Part (c): the LDPC decoder discrepancy (PKG = ldpc package BpDecoder, B38's registered decoder; OWN =
+b38_check._sp_decode, B38's second decoder).
+  c1, B38's 1,007 check codewords: agree 792; PKG decodes 705, OWN 874; PKG posterior non-finite in 173 of the 175
+    codewords OWN decodes and PKG does not (PKG better in 6); inputs floored at 1e-6: agree 818 (registered
+    mechanism test, needed >= 99%: not met).
+  Emulation of PKG's arithmetic (disclosed addition): identical to PKG on 1007 / 1007 codewords and 3600 / 3600
+    stuck-copy frames; with OWN's two guards added it decodes 874 codewords (OWN 874, PKG 705), output identical
+    to OWN on 995 / 1007, no non-finite value -> cause: PKG's unguarded product-sum update (a tanh product that
+    rounds to +-1 gives an infinite message; inf - inf and inf x 0 give NaN; 'posterior <= 0' reads NaN as 'no error').
+  c2, exhaustive ML on K = 16 IRA codes (400 frames per setting): block successes ML / PKG / OWN
+    channel A (i.i.d. flips, rho copies):
+      R 0.250 eps 0.2760 rho  4: 390 / 360 / 360
+      R 0.333 eps 0.2760 rho  4: 365 / 257 / 257
+      R 0.500 eps 0.1226 rho  4: 398 / 400 / 400
+      R 0.500 eps 0.2760 rho  4: 235 /  88 /  88
+      R 0.667 eps 0.1226 rho  4: 388 / 332 / 341
+      R 0.667 eps 0.2760 rho  4:  84 /  17 /  17
+      R 0.667 eps 0.2760 rho 16: 389 / 353 / 355
+      R 0.667 eps 0.2760 rho 30: 400 / 398 / 398
+    channel B (share 2 eps of coded bits with every copy stuck, the rest clean):
+      R 0.250 eps 0.0208 rho  4: 400 / 399 / 399
+      R 0.250 eps 0.0208 rho 16: 400 / 383 / 388
+      R 0.250 eps 0.0208 rho 30: 400 / 386 / 385
+      R 0.250 eps 0.0500 rho  4: 400 / 396 / 399
+      R 0.250 eps 0.0500 rho 16: 400 / 301 / 344
+      R 0.250 eps 0.0500 rho 30: 400 / 308 / 328
+      R 0.250 eps 0.1226 rho  4: 389 / 350 / 349
+      R 0.250 eps 0.1226 rho 16: 392 /  54 / 166
+      R 0.250 eps 0.1226 rho 30: 387 /  59 / 191
+      R 0.333 eps 0.0208 rho  4: 400 / 395 / 400
+      R 0.333 eps 0.0208 rho 16: 400 / 370 / 387
+      R 0.333 eps 0.0208 rho 30: 400 / 379 / 389
+      R 0.333 eps 0.0500 rho  4: 399 / 395 / 395
+      R 0.333 eps 0.0500 rho 16: 400 / 272 / 346
+      R 0.333 eps 0.0500 rho 30: 400 / 269 / 354
+      R 0.333 eps 0.1226 rho  4: 355 / 250 / 248
+      R 0.333 eps 0.1226 rho 16: 356 /  48 / 171
+      R 0.333 eps 0.1226 rho 30: 363 /  47 / 147
+      R 0.500 eps 0.0208 rho  4: 398 / 389 / 387
+      R 0.500 eps 0.0208 rho 16: 398 / 373 / 375
+      R 0.500 eps 0.0208 rho 30: 399 / 368 / 381
+      R 0.500 eps 0.0500 rho  4: 386 / 334 / 335
+      R 0.500 eps 0.0500 rho 16: 392 / 280 / 319
+      R 0.500 eps 0.0500 rho 30: 383 / 259 / 298
+      R 0.500 eps 0.1226 rho  4: 240 / 130 / 130
+      R 0.500 eps 0.1226 rho 16: 243 / 102 / 121
+      R 0.500 eps 0.1226 rho 30: 230 /  85 / 109
+      R 0.667 eps 0.0208 rho  4: 370 / 323 / 318
+      R 0.667 eps 0.0208 rho 16: 370 / 334 / 301
+      R 0.667 eps 0.0208 rho 30: 365 / 326 / 302
+      R 0.667 eps 0.0500 rho  4: 290 / 225 / 222
+      R 0.667 eps 0.0500 rho 16: 282 / 231 / 185
+      R 0.667 eps 0.0500 rho 30: 278 / 231 / 187
+      R 0.667 eps 0.1226 rho  4: 115 /  74 /  74
+      R 0.667 eps 0.1226 rho 16: 116 /  68 /  54
+      R 0.667 eps 0.1226 rho 30: 122 /  62 /  43
+    (channel A settings where all three decode every frame are omitted)
+    within 3 points of ML in every setting: PKG False, OWN False -> registered rule: OWN used (neither qualifies)
+    settings where the two differ: OWN ahead 22 (channel B 20), PKG ahead 12 (channel B 12)
+  Implementation: batched OWN bit-identical to _sp_decode on 1988 / 1988 synthetic words (numba port: 1581 / 1988, not used).
+
+Predictions (mechanical; Q11 = checks, see results/b58_check.txt):
+  Q1: True
+  Q2: False
+  Q3: True
+  Q4: False
+  Q7: True
+  Q8: False
+  Q9: False
+  Q9_parts: {'A_both_within3': False, 'B_own_within3': False, 'B_pkg_10_below': True}
+  Q10: False
+  Q10_parts: {'lines_nat_k4': 128.0, 'fig5b': False, 'iid_within1': 'not re-scored (compute note 5)'}

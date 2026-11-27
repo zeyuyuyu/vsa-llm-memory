@@ -1,0 +1,4 @@
+b65_run.py reader --pos ops --arm vsa --layer 17 --lr 1e-3 --epochs 100,300,1000 --seed 1 --out out/rd/ops_vsa_lr1e-3_s1
+b65_run.py reader --pos ops --arm vsa --layer 17 --lr 1e-3 --epochs 100,300,1000 --seed 2 --out out/rd/ops_vsa_lr1e-3_s2
+b65_run.py reader --pos ops --arm disc --layer 17 --lr 1e-3 --epochs 30,100,300 --seed 1 --out out/rd/ops_disc_lr1e-3_s1
+b65_run.py reader --pos ops --arm disc --layer 17 --lr 1e-3 --epochs 30,100,300 --seed 2 --out out/rd/ops_disc_lr1e-3_s2

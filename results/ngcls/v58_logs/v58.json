@@ -1,0 +1,29 @@
+{
+ "task": 4,
+ "n_train": 900,
+ "n_eval": 500,
+ "prompting_banked": 0.4411,
+ "arms": {
+  "floor": [
+   0.618,
+   0.61,
+   0.616
+  ],
+  "parser": [
+   0.674,
+   0.702,
+   0.696
+  ],
+  "probe_argmax": [
+   0.674,
+   0.702,
+   0.696
+  ],
+  "lora_direct": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "verdict": "CONDITION PREDICTS CORRECTLY (the algebra caps on a same-type-spurious task and the fine-tune passes it, as registered BEFORE the run)"
+}

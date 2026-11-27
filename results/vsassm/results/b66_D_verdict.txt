@@ -1,0 +1,520 @@
+# B66 part (D): store-level intervals (prereg/B66_*_prereg.md). Saved test predictions only; accuracy points.
+# point = mean over cells of the cell mean; one-level = b36_verdict.boot_region (entity clusters within each
+# cell resampled, test stores fixed; the verdicts' interval); two-level (registered) = test stores resampled,
+# then entity clusters within each drawn store; store-only (diagnostic) = test stores resampled, queries kept.
+# Ideal 10,000 draws, real 2,000. Label: "x leads" iff lower > 0, "y leads" iff upper < 0, else "level".
+# Note: with no between-store variation the two-level variance is about (2 - 1/S) x the one-level variance
+# (width x1.34-1.40 for S = 5-20), so the two-level interval is conservative by construction.
+
+## STORE-LAMC (B60, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -3.94 | [ -4.80,  -3.12] LAMC leads | [ -5.30,  -2.69] LAMC leads | [ -5.00,  -3.01] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -4.17 | [ -5.28,  -3.13] LAMC leads | [ -5.63,  -2.81] LAMC leads | [ -5.16,  -3.23] LAMC leads | no |
+| Qwen3-8B | R1 |  -4.06 | [ -4.73,  -3.40] LAMC leads | [ -5.05,  -3.10] LAMC leads | [ -4.77,  -3.40] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -4.09 | [ -5.02,  -3.16] LAMC leads | [ -5.39,  -2.80] LAMC leads | [ -4.98,  -3.16] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 |  -7.01 | [ -8.05,  -5.96] LAMC leads | [ -8.44,  -5.62] LAMC leads | [ -8.01,  -6.04] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -5.55 | [ -6.26,  -4.85] LAMC leads | [ -6.51,  -4.61] LAMC leads | [ -6.20,  -4.89] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -4.41 | [ -5.55,  -3.26] LAMC leads | [ -6.11,  -2.75] LAMC leads | [ -5.70,  -3.19] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -6.72 | [ -7.95,  -5.51] LAMC leads | [ -8.41,  -5.11] LAMC leads | [ -7.90,  -5.58] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -5.56 | [ -6.40,  -4.73] LAMC leads | [ -6.79,  -4.43] LAMC leads | [ -6.44,  -4.73] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -5.47 | [ -6.45,  -4.50] LAMC leads | [ -6.81,  -4.19] LAMC leads | [ -6.36,  -4.57] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -5.00 | [ -6.23,  -3.79] LAMC leads | [ -6.58,  -3.44] LAMC leads | [ -5.96,  -4.04] LAMC leads | no |
+| Mistral-7B | R1 |  -5.23 | [ -6.02,  -4.44] LAMC leads | [ -6.27,  -4.24] LAMC leads | [ -5.90,  -4.58] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -2.97 | [ -3.74,  -2.19] LAMC leads | [ -3.97,  -1.95] LAMC leads | [ -3.66,  -2.29] LAMC leads | no |
+| e5-base-v2 | R1-V16 | -10.10 | [-11.23,  -9.03] LAMC leads | [-11.64,  -8.61] LAMC leads | [-11.17,  -9.07] LAMC leads | no |
+| e5-base-v2 | R1 |  -6.53 | [ -7.21,  -5.86] LAMC leads | [ -7.46,  -5.66] LAMC leads | [ -7.16,  -5.92] LAMC leads | no |
+| bge-small | R1-V2 |  -1.05 | [ -1.99,  -0.15] LAMC leads | [ -2.51,  +0.29] level | [ -2.19,  -0.08] LAMC leads | YES |
+| bge-small | R1-V16 |  -7.30 | [ -8.29,  -6.33] LAMC leads | [ -8.52,  -6.11] LAMC leads | [ -8.05,  -6.56] LAMC leads | no |
+| bge-small | R1 |  -4.18 | [ -4.84,  -3.51] LAMC leads | [ -5.12,  -3.27] LAMC leads | [ -4.87,  -3.56] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  -0.19 | [ -1.28,  +0.86] level | [ -1.63,  +1.26] level | [ -1.16,  +0.81] level | no |
+| MiniLM-L6 | R1-V16 |  -8.41 | [ -9.33,  -7.50] LAMC leads | [ -9.67,  -7.17] LAMC leads | [ -9.26,  -7.55] LAMC leads | no |
+| MiniLM-L6 | R1 |  -4.30 | [ -5.00,  -3.60] LAMC leads | [ -5.26,  -3.35] LAMC leads | [ -4.95,  -3.64] LAMC leads | no |
+
+## VSAPCX-LAMC (B60, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -1.03 | [ -1.52,  -0.54] LAMC leads | [ -1.74,  -0.35] LAMC leads | [ -1.54,  -0.54] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -2.99 | [ -4.05,  -1.94] LAMC leads | [ -4.40,  -1.61] LAMC leads | [ -3.97,  -2.06] LAMC leads | no |
+| Qwen3-8B | R1 |  -2.01 | [ -2.60,  -1.42] LAMC leads | [ -2.80,  -1.24] LAMC leads | [ -2.56,  -1.48] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -1.27 | [ -1.89,  -0.65] LAMC leads | [ -2.17,  -0.35] LAMC leads | [ -1.93,  -0.61] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 |  -5.68 | [ -6.77,  -4.59] LAMC leads | [ -7.26,  -4.20] LAMC leads | [ -6.79,  -4.64] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -3.48 | [ -4.11,  -2.86] LAMC leads | [ -4.37,  -2.60] LAMC leads | [ -4.11,  -2.86] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -2.33 | [ -3.14,  -1.51] LAMC leads | [ -3.51,  -1.18] LAMC leads | [ -3.22,  -1.50] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -5.71 | [ -6.79,  -4.63] LAMC leads | [ -7.14,  -4.21] LAMC leads | [ -6.68,  -4.70] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -4.02 | [ -4.69,  -3.35] LAMC leads | [ -4.94,  -3.07] LAMC leads | [ -4.67,  -3.37] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -2.03 | [ -2.80,  -1.29] LAMC leads | [ -3.08,  -1.09] LAMC leads | [ -2.69,  -1.40] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -5.79 | [ -7.07,  -4.51] LAMC leads | [ -7.56,  -4.17] LAMC leads | [ -6.92,  -4.72] LAMC leads | no |
+| Mistral-7B | R1 |  -3.91 | [ -4.67,  -3.16] LAMC leads | [ -4.93,  -2.95] LAMC leads | [ -4.56,  -3.28] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -1.04 | [ -1.72,  -0.37] LAMC leads | [ -1.90,  -0.20] LAMC leads | [ -1.60,  -0.48] LAMC leads | no |
+| e5-base-v2 | R1-V16 |  -9.58 | [-10.73,  -8.43] LAMC leads | [-11.13,  -8.03] LAMC leads | [-10.67,  -8.51] LAMC leads | no |
+| e5-base-v2 | R1 |  -5.31 | [ -5.97,  -4.64] LAMC leads | [ -6.20,  -4.45] LAMC leads | [ -5.91,  -4.70] LAMC leads | no |
+| bge-small | R1-V2 |  -0.27 | [ -1.19,  +0.67] level | [ -1.74,  +1.12] level | [ -1.42,  +0.77] level | no |
+| bge-small | R1-V16 |  -6.68 | [ -7.63,  -5.72] LAMC leads | [ -7.90,  -5.47] LAMC leads | [ -7.42,  -5.94] LAMC leads | no |
+| bge-small | R1 |  -3.47 | [ -4.13,  -2.80] LAMC leads | [ -4.43,  -2.55] LAMC leads | [ -4.16,  -2.83] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  +0.72 | [ -0.29,  +1.72] level | [ -0.59,  +2.08] level | [ -0.12,  +1.63] level | no |
+| MiniLM-L6 | R1-V16 |  -8.04 | [ -8.91,  -7.15] LAMC leads | [ -9.33,  -6.82] LAMC leads | [ -8.94,  -7.18] LAMC leads | no |
+| MiniLM-L6 | R1 |  -3.66 | [ -4.35,  -2.98] LAMC leads | [ -4.59,  -2.72] LAMC leads | [ -4.27,  -3.04] LAMC leads | no |
+
+## VSAR-LAMC (B60, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -9.08 | [-10.21,  -8.00] LAMC leads | [-10.61,  -7.64] LAMC leads | [-10.09,  -8.07] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -5.84 | [ -6.91,  -4.82] LAMC leads | [ -7.29,  -4.45] LAMC leads | [ -6.87,  -4.83] LAMC leads | no |
+| Qwen3-8B | R1 |  -7.46 | [ -8.23,  -6.72] LAMC leads | [ -8.51,  -6.46] LAMC leads | [ -8.19,  -6.76] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -7.15 | [ -8.14,  -6.18] LAMC leads | [ -8.47,  -5.81] LAMC leads | [ -8.01,  -6.26] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 |  -8.01 | [ -9.00,  -7.00] LAMC leads | [ -9.41,  -6.57] LAMC leads | [ -9.03,  -7.02] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -7.58 | [ -8.28,  -6.89] LAMC leads | [ -8.54,  -6.62] LAMC leads | [ -8.23,  -6.91] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -8.65 | [-10.00,  -7.29] LAMC leads | [-10.61,  -6.74] LAMC leads | [-10.08,  -7.27] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -6.69 | [ -7.80,  -5.59] LAMC leads | [ -8.22,  -5.20] LAMC leads | [ -7.75,  -5.68] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -7.67 | [ -8.57,  -6.80] LAMC leads | [ -8.94,  -6.46] LAMC leads | [ -8.57,  -6.82] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -8.52 | [ -9.64,  -7.43] LAMC leads | [-10.04,  -7.15] LAMC leads | [ -9.49,  -7.57] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -7.03 | [ -8.32,  -5.75] LAMC leads | [ -8.62,  -5.43] LAMC leads | [ -8.01,  -6.01] LAMC leads | no |
+| Mistral-7B | R1 |  -7.78 | [ -8.63,  -6.92] LAMC leads | [ -8.88,  -6.69] LAMC leads | [ -8.47,  -7.06] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -3.18 | [ -3.89,  -2.48] LAMC leads | [ -4.22,  -2.18] LAMC leads | [ -3.92,  -2.44] LAMC leads | no |
+| e5-base-v2 | R1-V16 | -10.45 | [-11.54,  -9.41] LAMC leads | [-11.91,  -9.06] LAMC leads | [-11.43,  -9.49] LAMC leads | no |
+| e5-base-v2 | R1 |  -6.82 | [ -7.45,  -6.18] LAMC leads | [ -7.72,  -5.96] LAMC leads | [ -7.44,  -6.22] LAMC leads | no |
+| bge-small | R1-V2 |  -3.38 | [ -4.28,  -2.51] LAMC leads | [ -4.64,  -2.19] LAMC leads | [ -4.29,  -2.59] LAMC leads | no |
+| bge-small | R1-V16 |  -7.53 | [ -8.46,  -6.59] LAMC leads | [ -8.75,  -6.31] LAMC leads | [ -8.35,  -6.67] LAMC leads | no |
+| bge-small | R1 |  -5.45 | [ -6.10,  -4.83] LAMC leads | [ -6.35,  -4.58] LAMC leads | [ -6.08,  -4.87] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  -2.40 | [ -3.49,  -1.28] LAMC leads | [ -3.84,  -0.94] LAMC leads | [ -3.35,  -1.42] LAMC leads | no |
+| MiniLM-L6 | R1-V16 |  -7.46 | [ -8.54,  -6.37] LAMC leads | [ -8.91,  -5.96] LAMC leads | [ -8.49,  -6.39] LAMC leads | no |
+| MiniLM-L6 | R1 |  -4.93 | [ -5.69,  -4.16] LAMC leads | [ -5.93,  -3.89] LAMC leads | [ -5.62,  -4.21] LAMC leads | no |
+
+## VSAS-LAMC (B60, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -3.67 | [ -4.51,  -2.89] LAMC leads | [ -4.88,  -2.50] LAMC leads | [ -4.58,  -2.78] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -3.80 | [ -4.91,  -2.75] LAMC leads | [ -5.26,  -2.39] LAMC leads | [ -4.76,  -2.85] LAMC leads | no |
+| Qwen3-8B | R1 |  -3.73 | [ -4.42,  -3.06] LAMC leads | [ -4.67,  -2.81] LAMC leads | [ -4.39,  -3.09] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -4.14 | [ -5.08,  -3.22] LAMC leads | [ -5.39,  -2.88] LAMC leads | [ -4.99,  -3.26] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 |  -5.88 | [ -6.92,  -4.84] LAMC leads | [ -7.35,  -4.50] LAMC leads | [ -6.93,  -4.93] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -5.01 | [ -5.72,  -4.32] LAMC leads | [ -5.97,  -4.08] LAMC leads | [ -5.67,  -4.37] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -3.27 | [ -4.40,  -2.15] LAMC leads | [ -4.83,  -1.71] LAMC leads | [ -4.42,  -2.16] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -7.02 | [ -8.22,  -5.78] LAMC leads | [ -8.70,  -5.41] LAMC leads | [ -8.19,  -5.88] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -5.14 | [ -5.98,  -4.32] LAMC leads | [ -6.31,  -4.03] LAMC leads | [ -5.98,  -4.36] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -5.73 | [ -6.76,  -4.72] LAMC leads | [ -7.12,  -4.37] LAMC leads | [ -6.65,  -4.82] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -5.05 | [ -6.26,  -3.87] LAMC leads | [ -6.63,  -3.49] LAMC leads | [ -6.09,  -4.06] LAMC leads | no |
+| Mistral-7B | R1 |  -5.39 | [ -6.19,  -4.59] LAMC leads | [ -6.44,  -4.36] LAMC leads | [ -6.07,  -4.72] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -3.10 | [ -3.88,  -2.33] LAMC leads | [ -4.13,  -2.09] LAMC leads | [ -3.80,  -2.41] LAMC leads | no |
+| e5-base-v2 | R1-V16 |  -9.58 | [-10.73,  -8.45] LAMC leads | [-11.13,  -8.03] LAMC leads | [-10.67,  -8.51] LAMC leads | no |
+| e5-base-v2 | R1 |  -6.34 | [ -7.02,  -5.66] LAMC leads | [ -7.27,  -5.44] LAMC leads | [ -6.97,  -5.70] LAMC leads | no |
+| bge-small | R1-V2 |  -0.27 | [ -1.21,  +0.66] level | [ -1.74,  +1.12] level | [ -1.42,  +0.77] level | no |
+| bge-small | R1-V16 |  -6.68 | [ -7.62,  -5.72] LAMC leads | [ -7.90,  -5.47] LAMC leads | [ -7.42,  -5.94] LAMC leads | no |
+| bge-small | R1 |  -3.47 | [ -4.14,  -2.81] LAMC leads | [ -4.43,  -2.55] LAMC leads | [ -4.16,  -2.83] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  +0.08 | [ -0.98,  +1.13] level | [ -1.33,  +1.51] level | [ -0.86,  +1.05] level | no |
+| MiniLM-L6 | R1-V16 |  -8.04 | [ -8.95,  -7.15] LAMC leads | [ -9.33,  -6.82] LAMC leads | [ -8.94,  -7.18] LAMC leads | no |
+| MiniLM-L6 | R1 |  -3.98 | [ -4.69,  -3.29] LAMC leads | [ -4.94,  -3.03] LAMC leads | [ -4.62,  -3.32] LAMC leads | no |
+
+## VSAPC-LAMC (B60, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -1.03 | [ -1.53,  -0.54] LAMC leads | [ -1.74,  -0.35] LAMC leads | [ -1.54,  -0.54] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -6.99 | [ -8.05,  -5.94] LAMC leads | [ -8.40,  -5.61] LAMC leads | [ -7.97,  -6.08] LAMC leads | no |
+| Qwen3-8B | R1 |  -4.01 | [ -4.60,  -3.44] LAMC leads | [ -4.81,  -3.24] LAMC leads | [ -4.56,  -3.49] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -1.27 | [ -1.91,  -0.63] LAMC leads | [ -2.17,  -0.35] LAMC leads | [ -1.93,  -0.61] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 | -10.35 | [-11.57,  -9.17] LAMC leads | [-11.94,  -8.81] LAMC leads | [-11.44,  -9.30] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -5.81 | [ -6.48,  -5.15] LAMC leads | [ -6.71,  -4.91] LAMC leads | [ -6.44,  -5.18] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -2.22 | [ -3.01,  -1.41] LAMC leads | [ -3.41,  -1.06] LAMC leads | [ -3.09,  -1.39] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -9.09 | [-10.18,  -7.97] LAMC leads | [-10.52,  -7.59] LAMC leads | [-10.04,  -8.06] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -5.65 | [ -6.33,  -4.96] LAMC leads | [ -6.58,  -4.71] LAMC leads | [ -6.29,  -5.01] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -2.03 | [ -2.82,  -1.31] LAMC leads | [ -3.08,  -1.09] LAMC leads | [ -2.69,  -1.40] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -9.14 | [-10.61,  -7.70] LAMC leads | [-11.07,  -7.29] LAMC leads | [-10.43,  -7.90] LAMC leads | no |
+| Mistral-7B | R1 |  -5.59 | [ -6.40,  -4.77] LAMC leads | [ -6.67,  -4.53] LAMC leads | [ -6.29,  -4.89] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -1.13 | [ -1.56,  -0.72] LAMC leads | [ -1.74,  -0.57] LAMC leads | [ -1.53,  -0.72] LAMC leads | no |
+| e5-base-v2 | R1-V16 | -20.59 | [-21.70, -19.47] LAMC leads | [-22.29, -18.93] LAMC leads | [-21.89, -19.35] LAMC leads | no |
+| e5-base-v2 | R1 | -10.86 | [-11.45, -10.25] LAMC leads | [-11.76,  -9.99] LAMC leads | [-11.53, -10.20] LAMC leads | no |
+| bge-small | R1-V2 |  -1.75 | [ -2.55,  -0.96] LAMC leads | [ -2.80,  -0.66] LAMC leads | [ -2.46,  -0.96] LAMC leads | no |
+| bge-small | R1-V16 | -20.09 | [-21.11, -19.08] LAMC leads | [-21.56, -18.58] LAMC leads | [-21.15, -19.00] LAMC leads | no |
+| bge-small | R1 | -10.92 | [-11.57, -10.28] LAMC leads | [-11.84,  -9.98] LAMC leads | [-11.57, -10.24] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  +0.20 | [ -0.54,  +0.94] level | [ -0.79,  +1.19] level | [ -0.47,  +0.89] level | no |
+| MiniLM-L6 | R1-V16 | -21.11 | [-22.14, -20.12] LAMC leads | [-22.51, -19.79] LAMC leads | [-22.08, -20.22] LAMC leads | no |
+| MiniLM-L6 | R1 | -10.46 | [-11.09,  -9.84] LAMC leads | [-11.31,  -9.63] LAMC leads | [-11.03,  -9.89] LAMC leads | no |
+
+## STORE-NLMSC (B62, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -2.77 | [ -3.66,  -1.89] NLMSC leads | [ -4.05,  -1.55] NLMSC leads | [ -3.70,  -1.91] NLMSC leads | no |
+| Qwen3-8B | R1-V16 |  -1.44 | [ -2.47,  -0.40] NLMSC leads | [ -2.79,  -0.11] NLMSC leads | [ -2.32,  -0.54] NLMSC leads | no |
+| Qwen3-8B | R1 |  -2.11 | [ -2.80,  -1.46] NLMSC leads | [ -3.04,  -1.19] NLMSC leads | [ -2.76,  -1.50] NLMSC leads | no |
+| Granite-3.3-8B | R1-V2 |  -1.73 | [ -2.67,  -0.80] NLMSC leads | [ -2.98,  -0.50] NLMSC leads | [ -2.59,  -0.91] NLMSC leads | no |
+| Granite-3.3-8B | R1-V16 |  -4.01 | [ -5.05,  -2.99] NLMSC leads | [ -5.43,  -2.69] NLMSC leads | [ -4.89,  -3.16] NLMSC leads | no |
+| Granite-3.3-8B | R1 |  -2.87 | [ -3.57,  -2.17] NLMSC leads | [ -3.81,  -1.98] NLMSC leads | [ -3.48,  -2.27] NLMSC leads | no |
+| Llama-3.1-8B | R1-V2 |  -3.30 | [ -4.31,  -2.30] NLMSC leads | [ -4.74,  -1.83] NLMSC leads | [ -4.39,  -2.20] NLMSC leads | no |
+| Llama-3.1-8B | R1-V16 |  +0.27 | [ -0.75,  +1.28] level | [ -1.10,  +1.61] level | [ -0.64,  +1.16] level | no |
+| Llama-3.1-8B | R1 |  -1.51 | [ -2.24,  -0.80] NLMSC leads | [ -2.52,  -0.52] NLMSC leads | [ -2.22,  -0.81] NLMSC leads | no |
+| Mistral-7B | R1-V2 |  -4.76 | [ -5.70,  -3.84] NLMSC leads | [ -6.06,  -3.52] NLMSC leads | [ -5.65,  -3.88] NLMSC leads | no |
+| Mistral-7B | R1-V16 |  -4.82 | [ -6.10,  -3.57] NLMSC leads | [ -6.53,  -3.09] NLMSC leads | [ -6.00,  -3.68] NLMSC leads | no |
+| Mistral-7B | R1 |  -4.79 | [ -5.59,  -4.00] NLMSC leads | [ -5.85,  -3.73] NLMSC leads | [ -5.53,  -4.08] NLMSC leads | no |
+| e5-base-v2 | R1-V2 |  -1.55 | [ -2.33,  -0.77] NLMSC leads | [ -2.53,  -0.59] NLMSC leads | [ -2.17,  -0.94] NLMSC leads | no |
+| e5-base-v2 | R1-V16 |  -5.41 | [ -6.39,  -4.46] NLMSC leads | [ -6.64,  -4.16] NLMSC leads | [ -6.16,  -4.65] NLMSC leads | no |
+| e5-base-v2 | R1 |  -3.48 | [ -4.11,  -2.86] NLMSC leads | [ -4.27,  -2.70] NLMSC leads | [ -3.96,  -3.00] NLMSC leads | no |
+| bge-small | R1-V2 |  +1.04 | [ +0.10,  +1.98] STORE leads | [ -0.16,  +2.22] level | [ +0.26,  +1.74] STORE leads | YES |
+| bge-small | R1-V16 |  -5.09 | [ -6.05,  -4.11] NLMSC leads | [ -6.39,  -3.83] NLMSC leads | [ -5.95,  -4.24] NLMSC leads | no |
+| bge-small | R1 |  -2.02 | [ -2.70,  -1.35] NLMSC leads | [ -2.91,  -1.13] NLMSC leads | [ -2.61,  -1.47] NLMSC leads | no |
+| MiniLM-L6 | R1-V2 |  +1.08 | [ -0.07,  +2.23] level | [ -0.51,  +2.63] level | [ +0.01,  +2.17] STORE leads | no |
+| MiniLM-L6 | R1-V16 |  -5.39 | [ -6.26,  -4.54] NLMSC leads | [ -6.57,  -4.20] NLMSC leads | [ -6.18,  -4.58] NLMSC leads | no |
+| MiniLM-L6 | R1 |  -2.16 | [ -2.86,  -1.43] NLMSC leads | [ -3.14,  -1.18] NLMSC leads | [ -2.82,  -1.47] NLMSC leads | no |
+
+## VSAR-SDMT (B64, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -1.42 | [ -2.85,  -0.01] SDMT leads | [ -3.32,  +0.49] level | [ -2.74,  -0.07] SDMT leads | YES |
+| Qwen3-8B | R1-V16 |  -2.36 | [ -3.43,  -1.33] SDMT leads | [ -3.80,  -0.98] SDMT leads | [ -3.32,  -1.40] SDMT leads | no |
+| Qwen3-8B | R1 |  -1.89 | [ -2.76,  -1.02] SDMT leads | [ -3.12,  -0.70] SDMT leads | [ -2.71,  -1.06] SDMT leads | no |
+| Granite-3.3-8B | R1-V2 |  -1.00 | [ -2.25,  +0.29] level | [ -2.76,  +0.79] level | [ -2.28,  +0.29] level | no |
+| Granite-3.3-8B | R1-V16 |  -3.51 | [ -4.57,  -2.47] SDMT leads | [ -4.89,  -2.12] SDMT leads | [ -4.42,  -2.55] SDMT leads | no |
+| Granite-3.3-8B | R1 |  -2.25 | [ -3.06,  -1.43] SDMT leads | [ -3.35,  -1.12] SDMT leads | [ -3.03,  -1.47] SDMT leads | no |
+| Llama-3.1-8B | R1-V2 |  -0.68 | [ -2.18,  +0.81] level | [ -2.64,  +1.26] level | [ -2.02,  +0.59] level | no |
+| Llama-3.1-8B | R1-V16 |  -1.72 | [ -2.84,  -0.54] SDMT leads | [ -3.22,  -0.20] SDMT leads | [ -2.69,  -0.71] SDMT leads | no |
+| Llama-3.1-8B | R1 |  -1.20 | [ -2.14,  -0.26] SDMT leads | [ -2.43,  +0.05] level | [ -2.03,  -0.38] SDMT leads | YES |
+| Mistral-7B | R1-V2 |  -3.15 | [ -4.46,  -1.80] SDMT leads | [ -4.81,  -1.45] SDMT leads | [ -4.23,  -2.06] SDMT leads | no |
+| Mistral-7B | R1-V16 |  -3.96 | [ -5.28,  -2.65] SDMT leads | [ -5.75,  -2.18] SDMT leads | [ -5.15,  -2.81] SDMT leads | no |
+| Mistral-7B | R1 |  -3.56 | [ -4.53,  -2.58] SDMT leads | [ -4.79,  -2.31] SDMT leads | [ -4.36,  -2.76] SDMT leads | no |
+| e5-base-v2 | R1-V2 |  -1.51 | [ -2.73,  -0.25] SDMT leads | [ -3.21,  +0.22] level | [ -2.72,  -0.31] SDMT leads | YES |
+| e5-base-v2 | R1-V16 |  -0.34 | [ -1.41,  +0.72] level | [ -1.85,  +1.12] level | [ -1.34,  +0.69] level | no |
+| e5-base-v2 | R1 |  -0.92 | [ -1.75,  -0.11] SDMT leads | [ -2.06,  +0.21] level | [ -1.71,  -0.13] SDMT leads | YES |
+| bge-small | R1-V2 |  -4.69 | [ -6.13,  -3.28] SDMT leads | [ -6.61,  -2.71] SDMT leads | [ -6.01,  -3.30] SDMT leads | no |
+| bge-small | R1-V16 |  -4.77 | [ -5.87,  -3.64] SDMT leads | [ -6.45,  -3.11] SDMT leads | [ -5.98,  -3.51] SDMT leads | no |
+| bge-small | R1 |  -4.73 | [ -5.61,  -3.84] SDMT leads | [ -6.01,  -3.47] SDMT leads | [ -5.65,  -3.81] SDMT leads | no |
+| MiniLM-L6 | R1-V2 |  -4.82 | [ -6.12,  -3.56] SDMT leads | [ -6.52,  -3.03] SDMT leads | [ -5.96,  -3.59] SDMT leads | no |
+| MiniLM-L6 | R1-V16 |  -2.77 | [ -3.93,  -1.57] SDMT leads | [ -4.42,  -1.15] SDMT leads | [ -3.90,  -1.64] SDMT leads | no |
+| MiniLM-L6 | R1 |  -3.80 | [ -4.68,  -2.93] SDMT leads | [ -5.01,  -2.61] SDMT leads | [ -4.61,  -2.97] SDMT leads | no |
+
+## VSAR-BEST7 (B64, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed | bar one / two |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -1.42 | [ -2.84,  -0.03] BEST7 leads | [ -3.32,  +0.49] level | [ -2.74,  -0.07] BEST7 leads | YES | tie / tie |
+| Qwen3-8B | R1-V16 |  -2.89 | [ -3.96,  -1.87] BEST7 leads | [ -4.29,  -1.52] BEST7 leads | [ -3.84,  -1.94] BEST7 leads | no | loss / loss |
+| Qwen3-8B | R1 |  -2.15 | [ -3.05,  -1.27] BEST7 leads | [ -3.36,  -0.97] BEST7 leads | [ -2.98,  -1.32] BEST7 leads | no | loss / loss |
+| Granite-3.3-8B | R1-V2 |  -1.00 | [ -2.24,  +0.25] level | [ -2.76,  +0.79] level | [ -2.28,  +0.29] level | no | tie / tie |
+| Granite-3.3-8B | R1-V16 |  -3.51 | [ -4.56,  -2.46] BEST7 leads | [ -4.89,  -2.12] BEST7 leads | [ -4.42,  -2.55] BEST7 leads | no | loss / loss |
+| Granite-3.3-8B | R1 |  -2.25 | [ -3.07,  -1.43] BEST7 leads | [ -3.35,  -1.12] BEST7 leads | [ -3.03,  -1.47] BEST7 leads | no | loss / loss |
+| Llama-3.1-8B | R1-V2 |  -0.68 | [ -2.16,  +0.82] level | [ -2.64,  +1.26] level | [ -2.02,  +0.59] level | no | tie / tie |
+| Llama-3.1-8B | R1-V16 |  -1.72 | [ -2.87,  -0.56] BEST7 leads | [ -3.22,  -0.20] BEST7 leads | [ -2.69,  -0.71] BEST7 leads | no | tie / tie |
+| Llama-3.1-8B | R1 |  -1.20 | [ -2.16,  -0.26] BEST7 leads | [ -2.43,  +0.05] level | [ -2.03,  -0.38] BEST7 leads | YES | tie / tie |
+| Mistral-7B | R1-V2 |  -3.15 | [ -4.49,  -1.80] BEST7 leads | [ -4.81,  -1.45] BEST7 leads | [ -4.23,  -2.06] BEST7 leads | no | loss / loss |
+| Mistral-7B | R1-V16 |  -3.96 | [ -5.31,  -2.61] BEST7 leads | [ -5.75,  -2.18] BEST7 leads | [ -5.15,  -2.81] BEST7 leads | no | loss / loss |
+| Mistral-7B | R1 |  -3.56 | [ -4.51,  -2.61] BEST7 leads | [ -4.79,  -2.31] BEST7 leads | [ -4.36,  -2.76] BEST7 leads | no | loss / loss |
+| e5-base-v2 | R1-V2 |  -1.51 | [ -2.77,  -0.29] BEST7 leads | [ -3.21,  +0.22] level | [ -2.72,  -0.31] BEST7 leads | YES | tie / tie |
+| e5-base-v2 | R1-V16 |  -2.07 | [ -3.16,  -1.00] BEST7 leads | [ -3.56,  -0.64] BEST7 leads | [ -3.07,  -1.09] BEST7 leads | no | loss / loss |
+| e5-base-v2 | R1 |  -1.79 | [ -2.63,  -0.96] BEST7 leads | [ -2.94,  -0.66] BEST7 leads | [ -2.58,  -1.01] BEST7 leads | no | tie / tie |
+| bge-small | R1-V2 |  -4.69 | [ -6.10,  -3.27] BEST7 leads | [ -6.61,  -2.71] BEST7 leads | [ -6.01,  -3.30] BEST7 leads | no | loss / loss |
+| bge-small | R1-V16 |  -5.33 | [ -6.43,  -4.25] BEST7 leads | [ -6.94,  -3.72] BEST7 leads | [ -6.51,  -4.12] BEST7 leads | no | loss / loss |
+| bge-small | R1 |  -5.01 | [ -5.92,  -4.12] BEST7 leads | [ -6.26,  -3.76] BEST7 leads | [ -5.91,  -4.11] BEST7 leads | no | loss / loss |
+| MiniLM-L6 | R1-V2 |  -4.82 | [ -6.13,  -3.51] BEST7 leads | [ -6.52,  -3.03] BEST7 leads | [ -5.96,  -3.59] BEST7 leads | no | loss / loss |
+| MiniLM-L6 | R1-V16 |  -3.29 | [ -4.48,  -2.12] BEST7 leads | [ -4.83,  -1.76] BEST7 leads | [ -4.30,  -2.26] BEST7 leads | no | loss / loss |
+| MiniLM-L6 | R1 |  -4.06 | [ -4.92,  -3.20] BEST7 leads | [ -5.22,  -2.91] BEST7 leads | [ -4.83,  -3.26] BEST7 leads | no | loss / loss |
+
+## VSA-BEST7 (B64, ideal)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed | bar one / two |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  +3.72 | [ +2.43,  +5.03] VSA leads | [ +1.91,  +5.55] VSA leads | [ +2.43,  +4.95] VSA leads | no | passes / passes |
+| Qwen3-8B | R1-V16 |  -1.22 | [ -2.29,  -0.15] BEST7 leads | [ -2.77,  +0.27] level | [ -2.27,  -0.15] BEST7 leads | YES | tie / tie |
+| Qwen3-8B | R1 |  +1.25 | [ +0.43,  +2.11] VSA leads | [ +0.07,  +2.45] VSA leads | [ +0.42,  +2.07] VSA leads | no | tie / tie |
+| Granite-3.3-8B | R1-V2 |  +2.06 | [ +0.82,  +3.35] VSA leads | [ +0.37,  +3.78] VSA leads | [ +0.97,  +3.20] VSA leads | no | passes / passes |
+| Granite-3.3-8B | R1-V16 |  -2.50 | [ -3.61,  -1.39] BEST7 leads | [ -3.94,  -1.12] BEST7 leads | [ -3.42,  -1.56] BEST7 leads | no | loss / loss |
+| Granite-3.3-8B | R1 |  -0.22 | [ -1.05,  +0.63] level | [ -1.32,  +0.89] level | [ -0.92,  +0.50] level | no | tie / tie |
+| Llama-3.1-8B | R1-V2 |  +3.57 | [ +2.26,  +4.87] VSA leads | [ +1.84,  +5.25] VSA leads | [ +2.38,  +4.70] VSA leads | no | passes / passes |
+| Llama-3.1-8B | R1-V16 |  -1.75 | [ -2.84,  -0.70] BEST7 leads | [ -3.08,  -0.38] BEST7 leads | [ -2.59,  -0.88] BEST7 leads | no | tie / tie |
+| Llama-3.1-8B | R1 |  +0.91 | [ +0.09,  +1.74] VSA leads | [ -0.17,  +2.01] level | [ +0.19,  +1.63] VSA leads | YES | tie / tie |
+| Mistral-7B | R1-V2 |  -0.10 | [ -1.34,  +1.20] level | [ -1.74,  +1.58] level | [ -1.21,  +1.03] level | no | tie / tie |
+| Mistral-7B | R1-V16 |  -1.93 | [ -3.27,  -0.60] BEST7 leads | [ -3.92,  -0.02] BEST7 leads | [ -3.32,  -0.56] BEST7 leads | no | tie / tie |
+| Mistral-7B | R1 |  -1.02 | [ -1.96,  -0.08] BEST7 leads | [ -2.31,  +0.26] level | [ -1.90,  -0.14] BEST7 leads | YES | tie / tie |
+| e5-base-v2 | R1-V2 |  -1.30 | [ -2.53,  -0.07] BEST7 leads | [ -2.93,  +0.42] level | [ -2.42,  -0.19] BEST7 leads | YES | tie / tie |
+| e5-base-v2 | R1-V16 |  -1.72 | [ -2.83,  -0.59] BEST7 leads | [ -3.21,  -0.22] BEST7 leads | [ -2.69,  -0.72] BEST7 leads | no | tie / tie |
+| e5-base-v2 | R1 |  -1.51 | [ -2.35,  -0.66] BEST7 leads | [ -2.63,  -0.39] BEST7 leads | [ -2.24,  -0.76] BEST7 leads | no | tie / tie |
+| bge-small | R1-V2 |  -2.36 | [ -3.76,  -0.96] BEST7 leads | [ -4.18,  -0.49] BEST7 leads | [ -3.61,  -1.09] BEST7 leads | no | loss / loss |
+| bge-small | R1-V16 |  -5.10 | [ -6.21,  -4.00] BEST7 leads | [ -6.65,  -3.59] BEST7 leads | [ -6.16,  -4.04] BEST7 leads | no | loss / loss |
+| bge-small | R1 |  -3.73 | [ -4.63,  -2.86] BEST7 leads | [ -4.93,  -2.57] BEST7 leads | [ -4.57,  -2.92] BEST7 leads | no | loss / loss |
+| MiniLM-L6 | R1-V2 |  -2.62 | [ -3.83,  -1.41] BEST7 leads | [ -4.18,  -1.03] BEST7 leads | [ -3.57,  -1.61] BEST7 leads | no | loss / loss |
+| MiniLM-L6 | R1-V16 |  -4.24 | [ -5.22,  -3.28] BEST7 leads | [ -5.55,  -2.96] BEST7 leads | [ -5.10,  -3.37] BEST7 leads | no | loss / loss |
+| MiniLM-L6 | R1 |  -3.43 | [ -4.24,  -2.64] BEST7 leads | [ -4.45,  -2.43] BEST7 leads | [ -4.07,  -2.76] BEST7 leads | no | loss / loss |
+
+## STORE-LAMC (B60, real)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -3.97 | [ -4.80,  -3.12] LAMC leads | [ -5.38,  -2.75] LAMC leads | [ -5.07,  -3.05] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -4.17 | [ -5.26,  -3.12] LAMC leads | [ -5.69,  -2.79] LAMC leads | [ -5.19,  -3.25] LAMC leads | no |
+| Qwen3-8B | R1 |  -4.07 | [ -4.76,  -3.39] LAMC leads | [ -5.06,  -3.13] LAMC leads | [ -4.79,  -3.40] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -3.70 | [ -4.66,  -2.77] LAMC leads | [ -4.99,  -2.48] LAMC leads | [ -4.53,  -2.89] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 |  -7.41 | [ -8.44,  -6.40] LAMC leads | [ -8.79,  -6.08] LAMC leads | [ -8.39,  -6.42] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -5.55 | [ -6.27,  -4.86] LAMC leads | [ -6.47,  -4.59] LAMC leads | [ -6.18,  -4.95] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -3.74 | [ -4.93,  -2.47] LAMC leads | [ -5.56,  -1.98] LAMC leads | [ -5.14,  -2.39] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -6.72 | [ -7.97,  -5.52] LAMC leads | [ -8.41,  -5.15] LAMC leads | [ -7.87,  -5.63] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -5.23 | [ -6.07,  -4.37] LAMC leads | [ -6.44,  -4.01] LAMC leads | [ -6.13,  -4.37] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -5.56 | [ -6.63,  -4.58] LAMC leads | [ -6.99,  -4.23] LAMC leads | [ -6.41,  -4.71] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -5.17 | [ -6.36,  -3.96] LAMC leads | [ -6.61,  -3.63] LAMC leads | [ -6.09,  -4.26] LAMC leads | no |
+| Mistral-7B | R1 |  -5.37 | [ -6.20,  -4.57] LAMC leads | [ -6.31,  -4.36] LAMC leads | [ -5.96,  -4.75] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -2.93 | [ -3.72,  -2.14] LAMC leads | [ -3.97,  -1.92] LAMC leads | [ -3.61,  -2.27] LAMC leads | no |
+| e5-base-v2 | R1-V16 |  -9.65 | [-10.77,  -8.57] LAMC leads | [-11.13,  -8.15] LAMC leads | [-10.66,  -8.63] LAMC leads | no |
+| e5-base-v2 | R1 |  -6.29 | [ -6.99,  -5.66] LAMC leads | [ -7.21,  -5.40] LAMC leads | [ -6.90,  -5.69] LAMC leads | no |
+| bge-small | R1-V2 |  -0.97 | [ -1.86,  -0.02] LAMC leads | [ -2.41,  +0.33] level | [ -2.06,  -0.02] LAMC leads | YES |
+| bge-small | R1-V16 |  -7.37 | [ -8.35,  -6.47] LAMC leads | [ -8.57,  -6.11] LAMC leads | [ -8.16,  -6.58] LAMC leads | no |
+| bge-small | R1 |  -4.17 | [ -4.82,  -3.50] LAMC leads | [ -5.13,  -3.25] LAMC leads | [ -4.85,  -3.54] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  -0.41 | [ -1.49,  +0.66] level | [ -1.83,  +1.06] level | [ -1.41,  +0.57] level | no |
+| MiniLM-L6 | R1-V16 |  -8.41 | [ -9.28,  -7.47] LAMC leads | [ -9.64,  -7.15] LAMC leads | [ -9.23,  -7.58] LAMC leads | no |
+| MiniLM-L6 | R1 |  -4.41 | [ -5.09,  -3.71] LAMC leads | [ -5.34,  -3.47] LAMC leads | [ -5.06,  -3.78] LAMC leads | no |
+
+## VSAPCX-LAMC (B60, real)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -1.33 | [ -1.81,  -0.85] LAMC leads | [ -2.03,  -0.67] LAMC leads | [ -1.83,  -0.87] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -2.99 | [ -4.08,  -1.89] LAMC leads | [ -4.48,  -1.65] LAMC leads | [ -3.95,  -2.03] LAMC leads | no |
+| Qwen3-8B | R1 |  -2.16 | [ -2.72,  -1.59] LAMC leads | [ -2.98,  -1.40] LAMC leads | [ -2.70,  -1.64] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -1.78 | [ -2.27,  -1.31] LAMC leads | [ -2.47,  -1.11] LAMC leads | [ -2.21,  -1.30] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 |  -6.08 | [ -7.17,  -5.00] LAMC leads | [ -7.55,  -4.72] LAMC leads | [ -7.16,  -5.09] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -3.93 | [ -4.57,  -3.33] LAMC leads | [ -4.73,  -3.15] LAMC leads | [ -4.50,  -3.37] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -1.22 | [ -1.97,  -0.50] LAMC leads | [ -2.25,  -0.19] LAMC leads | [ -1.99,  -0.49] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -5.71 | [ -6.81,  -4.61] LAMC leads | [ -7.12,  -4.37] LAMC leads | [ -6.62,  -4.78] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -3.47 | [ -4.13,  -2.84] LAMC leads | [ -4.38,  -2.66] LAMC leads | [ -4.09,  -2.87] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -2.29 | [ -3.06,  -1.58] LAMC leads | [ -3.26,  -1.36] LAMC leads | [ -2.90,  -1.72] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -5.99 | [ -7.27,  -4.73] LAMC leads | [ -7.75,  -4.20] LAMC leads | [ -7.19,  -4.90] LAMC leads | no |
+| Mistral-7B | R1 |  -4.14 | [ -4.88,  -3.38] LAMC leads | [ -5.14,  -3.17] LAMC leads | [ -4.82,  -3.53] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -0.99 | [ -1.67,  -0.29] LAMC leads | [ -1.85,  -0.12] LAMC leads | [ -1.52,  -0.45] LAMC leads | no |
+| e5-base-v2 | R1-V16 |  -9.13 | [-10.25,  -8.02] LAMC leads | [-10.64,  -7.56] LAMC leads | [-10.14,  -8.11] LAMC leads | no |
+| e5-base-v2 | R1 |  -5.06 | [ -5.70,  -4.42] LAMC leads | [ -5.91,  -4.15] LAMC leads | [ -5.63,  -4.48] LAMC leads | no |
+| bge-small | R1-V2 |  -0.22 | [ -1.10,  +0.63] level | [ -1.63,  +1.08] level | [ -1.29,  +0.73] level | no |
+| bge-small | R1-V16 |  -6.79 | [ -7.68,  -5.88] LAMC leads | [ -7.92,  -5.55] LAMC leads | [ -7.59,  -6.06] LAMC leads | no |
+| bge-small | R1 |  -3.51 | [ -4.14,  -2.83] LAMC leads | [ -4.42,  -2.61] LAMC leads | [ -4.16,  -2.90] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  +0.34 | [ -0.63,  +1.37] level | [ -0.96,  +1.67] level | [ -0.51,  +1.25] level | no |
+| MiniLM-L6 | R1-V16 |  -8.04 | [ -8.96,  -7.13] LAMC leads | [ -9.30,  -6.79] LAMC leads | [ -8.90,  -7.22] LAMC leads | no |
+| MiniLM-L6 | R1 |  -3.85 | [ -4.52,  -3.18] LAMC leads | [ -4.75,  -2.96] LAMC leads | [ -4.44,  -3.22] LAMC leads | no |
+
+## VSAR-LAMC (B60, real)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -9.49 | [-10.61,  -8.36] LAMC leads | [-11.00,  -8.02] LAMC leads | [-10.59,  -8.51] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -5.75 | [ -6.84,  -4.77] LAMC leads | [ -7.27,  -4.43] LAMC leads | [ -6.77,  -4.77] LAMC leads | no |
+| Qwen3-8B | R1 |  -7.62 | [ -8.37,  -6.85] LAMC leads | [ -8.68,  -6.60] LAMC leads | [ -8.33,  -6.92] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -6.76 | [ -7.73,  -5.80] LAMC leads | [ -8.07,  -5.42] LAMC leads | [ -7.65,  -5.78] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 |  -8.41 | [ -9.38,  -7.39] LAMC leads | [ -9.71,  -7.03] LAMC leads | [ -9.33,  -7.50] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -7.59 | [ -8.31,  -6.92] LAMC leads | [ -8.51,  -6.59] LAMC leads | [ -8.23,  -6.93] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -8.19 | [ -9.56,  -6.78] LAMC leads | [-10.19,  -6.31] LAMC leads | [ -9.80,  -6.72] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -6.69 | [ -7.75,  -5.55] LAMC leads | [ -8.16,  -5.19] LAMC leads | [ -7.74,  -5.70] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -7.44 | [ -8.26,  -6.56] LAMC leads | [ -8.68,  -6.23] LAMC leads | [ -8.35,  -6.56] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -8.82 | [ -9.96,  -7.77] LAMC leads | [-10.30,  -7.39] LAMC leads | [ -9.76,  -7.87] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -6.84 | [ -8.12,  -5.56] LAMC leads | [ -8.45,  -5.31] LAMC leads | [ -7.83,  -5.87] LAMC leads | no |
+| Mistral-7B | R1 |  -7.83 | [ -8.67,  -6.99] LAMC leads | [ -8.88,  -6.71] LAMC leads | [ -8.50,  -7.16] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -3.87 | [ -4.66,  -3.08] LAMC leads | [ -5.02,  -2.77] LAMC leads | [ -4.67,  -3.06] LAMC leads | no |
+| e5-base-v2 | R1-V16 | -10.40 | [-11.52,  -9.34] LAMC leads | [-11.85,  -8.97] LAMC leads | [-11.34,  -9.52] LAMC leads | no |
+| e5-base-v2 | R1 |  -7.14 | [ -7.80,  -6.49] LAMC leads | [ -8.09,  -6.25] LAMC leads | [ -7.78,  -6.53] LAMC leads | no |
+| bge-small | R1-V2 |  -3.47 | [ -4.34,  -2.61] LAMC leads | [ -4.80,  -2.33] LAMC leads | [ -4.37,  -2.68] LAMC leads | no |
+| bge-small | R1-V16 |  -7.59 | [ -8.52,  -6.68] LAMC leads | [ -8.82,  -6.32] LAMC leads | [ -8.45,  -6.75] LAMC leads | no |
+| bge-small | R1 |  -5.53 | [ -6.15,  -4.92] LAMC leads | [ -6.41,  -4.68] LAMC leads | [ -6.16,  -4.97] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  -2.65 | [ -3.68,  -1.60] LAMC leads | [ -4.09,  -1.22] LAMC leads | [ -3.63,  -1.69] LAMC leads | no |
+| MiniLM-L6 | R1-V16 |  -7.46 | [ -8.51,  -6.39] LAMC leads | [ -8.92,  -5.97] LAMC leads | [ -8.45,  -6.44] LAMC leads | no |
+| MiniLM-L6 | R1 |  -5.05 | [ -5.79,  -4.32] LAMC leads | [ -6.06,  -3.99] LAMC leads | [ -5.75,  -4.32] LAMC leads | no |
+
+## VSAS-LAMC (B60, real)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -3.70 | [ -4.47,  -2.85] LAMC leads | [ -4.97,  -2.57] LAMC leads | [ -4.66,  -2.86] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -3.80 | [ -4.89,  -2.73] LAMC leads | [ -5.32,  -2.44] LAMC leads | [ -4.80,  -2.85] LAMC leads | no |
+| Qwen3-8B | R1 |  -3.75 | [ -4.42,  -3.06] LAMC leads | [ -4.69,  -2.87] LAMC leads | [ -4.41,  -3.12] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -3.75 | [ -4.72,  -2.78] LAMC leads | [ -5.03,  -2.51] LAMC leads | [ -4.59,  -2.90] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 |  -6.28 | [ -7.29,  -5.23] LAMC leads | [ -7.71,  -4.96] LAMC leads | [ -7.30,  -5.33] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -5.02 | [ -5.75,  -4.30] LAMC leads | [ -6.04,  -4.07] LAMC leads | [ -5.70,  -4.40] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -2.60 | [ -3.72,  -1.43] LAMC leads | [ -4.14,  -0.99] LAMC leads | [ -3.74,  -1.44] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -7.02 | [ -8.23,  -5.84] LAMC leads | [ -8.69,  -5.41] LAMC leads | [ -8.13,  -5.95] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -4.81 | [ -5.65,  -4.02] LAMC leads | [ -5.96,  -3.71] LAMC leads | [ -5.65,  -4.03] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -5.91 | [ -6.92,  -4.88] LAMC leads | [ -7.30,  -4.51] LAMC leads | [ -6.83,  -5.01] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -5.22 | [ -6.46,  -4.08] LAMC leads | [ -6.69,  -3.68] LAMC leads | [ -6.21,  -4.27] LAMC leads | no |
+| Mistral-7B | R1 |  -5.56 | [ -6.38,  -4.78] LAMC leads | [ -6.55,  -4.51] LAMC leads | [ -6.23,  -4.90] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -2.70 | [ -3.48,  -1.90] LAMC leads | [ -3.84,  -1.69] LAMC leads | [ -3.45,  -2.02] LAMC leads | no |
+| e5-base-v2 | R1-V16 |  -9.13 | [-10.26,  -7.96] LAMC leads | [-10.64,  -7.56] LAMC leads | [-10.14,  -8.11] LAMC leads | no |
+| e5-base-v2 | R1 |  -5.91 | [ -6.60,  -5.22] LAMC leads | [ -6.85,  -5.01] LAMC leads | [ -6.55,  -5.31] LAMC leads | no |
+| bge-small | R1-V2 |  -0.22 | [ -1.12,  +0.63] level | [ -1.63,  +1.08] level | [ -1.29,  +0.73] level | no |
+| bge-small | R1-V16 |  -6.79 | [ -7.69,  -5.81] LAMC leads | [ -7.92,  -5.55] LAMC leads | [ -7.59,  -6.06] LAMC leads | no |
+| bge-small | R1 |  -3.51 | [ -4.17,  -2.84] LAMC leads | [ -4.42,  -2.61] LAMC leads | [ -4.16,  -2.90] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  -0.17 | [ -1.29,  +0.82] level | [ -1.54,  +1.23] level | [ -1.10,  +0.82] level | no |
+| MiniLM-L6 | R1-V16 |  -8.04 | [ -8.92,  -7.15] LAMC leads | [ -9.30,  -6.79] LAMC leads | [ -8.90,  -7.22] LAMC leads | no |
+| MiniLM-L6 | R1 |  -4.11 | [ -4.79,  -3.43] LAMC leads | [ -5.05,  -3.15] LAMC leads | [ -4.76,  -3.47] LAMC leads | no |
+
+## VSAPC-LAMC (B60, real)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  -1.33 | [ -1.79,  -0.88] LAMC leads | [ -2.03,  -0.67] LAMC leads | [ -1.83,  -0.87] LAMC leads | no |
+| Qwen3-8B | R1-V16 |  -6.92 | [ -8.00,  -5.89] LAMC leads | [ -8.38,  -5.56] LAMC leads | [ -7.90,  -5.99] LAMC leads | no |
+| Qwen3-8B | R1 |  -4.12 | [ -4.69,  -3.55] LAMC leads | [ -4.93,  -3.37] LAMC leads | [ -4.69,  -3.60] LAMC leads | no |
+| Granite-3.3-8B | R1-V2 |  -1.78 | [ -2.28,  -1.28] LAMC leads | [ -2.47,  -1.11] LAMC leads | [ -2.21,  -1.30] LAMC leads | no |
+| Granite-3.3-8B | R1-V16 | -10.19 | [-11.31,  -9.09] LAMC leads | [-11.73,  -8.85] LAMC leads | [-11.17,  -9.25] LAMC leads | no |
+| Granite-3.3-8B | R1 |  -5.98 | [ -6.60,  -5.38] LAMC leads | [ -6.80,  -5.22] LAMC leads | [ -6.51,  -5.47] LAMC leads | no |
+| Llama-3.1-8B | R1-V2 |  -1.11 | [ -1.87,  -0.44] LAMC leads | [ -2.16,  -0.11] LAMC leads | [ -1.91,  -0.38] LAMC leads | no |
+| Llama-3.1-8B | R1-V16 |  -9.41 | [-10.52,  -8.35] LAMC leads | [-10.91,  -7.96] LAMC leads | [-10.36,  -8.39] LAMC leads | no |
+| Llama-3.1-8B | R1 |  -5.26 | [ -5.92,  -4.61] LAMC leads | [ -6.19,  -4.43] LAMC leads | [ -5.90,  -4.64] LAMC leads | no |
+| Mistral-7B | R1-V2 |  -2.29 | [ -3.09,  -1.53] LAMC leads | [ -3.26,  -1.36] LAMC leads | [ -2.90,  -1.72] LAMC leads | no |
+| Mistral-7B | R1-V16 |  -9.46 | [-10.98,  -7.98] LAMC leads | [-11.43,  -7.58] LAMC leads | [-10.77,  -8.14] LAMC leads | no |
+| Mistral-7B | R1 |  -5.88 | [ -6.70,  -5.05] LAMC leads | [ -7.01,  -4.77] LAMC leads | [ -6.62,  -5.14] LAMC leads | no |
+| e5-base-v2 | R1-V2 |  -1.02 | [ -1.47,  -0.56] LAMC leads | [ -1.69,  -0.42] LAMC leads | [ -1.45,  -0.57] LAMC leads | no |
+| e5-base-v2 | R1-V16 | -20.19 | [-21.24, -19.00] LAMC leads | [-21.74, -18.52] LAMC leads | [-21.41, -19.02] LAMC leads | no |
+| e5-base-v2 | R1 | -10.61 | [-11.24,  -9.98] LAMC leads | [-11.44,  -9.70] LAMC leads | [-11.25,  -9.98] LAMC leads | no |
+| bge-small | R1-V2 |  -1.69 | [ -2.48,  -0.92] LAMC leads | [ -2.73,  -0.63] LAMC leads | [ -2.34,  -0.95] LAMC leads | no |
+| bge-small | R1-V16 | -20.02 | [-21.04, -19.01] LAMC leads | [-21.45, -18.56] LAMC leads | [-21.07, -18.92] LAMC leads | no |
+| bge-small | R1 | -10.85 | [-11.52, -10.22] LAMC leads | [-11.74,  -9.95] LAMC leads | [-11.46, -10.21] LAMC leads | no |
+| MiniLM-L6 | R1-V2 |  -0.18 | [ -0.87,  +0.55] level | [ -1.14,  +0.86] level | [ -0.83,  +0.50] level | no |
+| MiniLM-L6 | R1-V16 | -21.37 | [-22.36, -20.40] LAMC leads | [-22.81, -20.02] LAMC leads | [-22.32, -20.49] LAMC leads | no |
+| MiniLM-L6 | R1 | -10.78 | [-11.42, -10.16] LAMC leads | [-11.63,  -9.91] LAMC leads | [-11.34, -10.21] LAMC leads | no |
+
+## STORE-NLMSC (B62, real): not available (missing arm)
+
+## VSAR-SDMT (B64, real)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  +0.21 | [ -1.15,  +1.60] level | [ -1.70,  +2.09] level | [ -1.15,  +1.54] level | no |
+| Qwen3-8B | R1-V16 |  +9.18 | [ +8.04, +10.27] VSAR leads | [ +7.47, +10.70] VSAR leads | [ +8.00, +10.30] VSAR leads | no |
+| Qwen3-8B | R1 |  +4.69 | [ +3.78,  +5.62] VSAR leads | [ +3.48,  +5.90] VSAR leads | [ +3.79,  +5.54] VSAR leads | no |
+| Granite-3.3-8B | R1-V2 |  +0.51 | [ -0.81,  +1.93] level | [ -1.26,  +2.46] level | [ -0.82,  +1.90] level | no |
+| Granite-3.3-8B | R1-V16 |  +7.67 | [ +6.71,  +8.61] VSAR leads | [ +6.48,  +8.95] VSAR leads | [ +6.90,  +8.47] VSAR leads | no |
+| Granite-3.3-8B | R1 |  +4.09 | [ +3.30,  +4.88] VSAR leads | [ +2.99,  +5.27] VSAR leads | [ +3.30,  +4.89] VSAR leads | no |
+| Llama-3.1-8B | R1-V2 |  -0.99 | [ -2.39,  +0.46] level | [ -3.04,  +0.97] level | [ -2.42,  +0.36] level | no |
+| Llama-3.1-8B | R1-V16 |  +9.72 | [ +8.69, +10.77] VSAR leads | [ +8.35, +11.04] VSAR leads | [ +8.84, +10.62] VSAR leads | no |
+| Llama-3.1-8B | R1 |  +4.37 | [ +3.45,  +5.23] VSAR leads | [ +3.11,  +5.54] VSAR leads | [ +3.50,  +5.21] VSAR leads | no |
+| Mistral-7B | R1-V2 |  -0.45 | [ -1.81,  +0.85] level | [ -2.19,  +1.26] level | [ -1.57,  +0.64] level | no |
+| Mistral-7B | R1-V16 |  +7.68 | [ +6.41,  +8.96] VSAR leads | [ +6.07,  +9.16] VSAR leads | [ +6.68,  +8.62] VSAR leads | no |
+| Mistral-7B | R1 |  +3.61 | [ +2.71,  +4.59] VSAR leads | [ +2.43,  +4.74] VSAR leads | [ +2.89,  +4.36] VSAR leads | no |
+| e5-base-v2 | R1-V2 |  -1.52 | [ -2.83,  -0.24] SDMT leads | [ -3.35,  +0.32] level | [ -2.79,  -0.25] SDMT leads | YES |
+| e5-base-v2 | R1-V16 |  +5.16 | [ +4.09,  +6.18] VSAR leads | [ +3.66,  +6.55] VSAR leads | [ +4.19,  +6.04] VSAR leads | no |
+| e5-base-v2 | R1 |  +1.82 | [ +1.02,  +2.71] VSAR leads | [ +0.62,  +2.94] VSAR leads | [ +1.01,  +2.62] VSAR leads | no |
+| bge-small | R1-V2 |  -2.22 | [ -3.50,  -0.89] SDMT leads | [ -3.99,  -0.49] SDMT leads | [ -3.48,  -0.99] SDMT leads | no |
+| bge-small | R1-V16 |  +4.31 | [ +3.28,  +5.33] VSAR leads | [ +3.02,  +5.67] VSAR leads | [ +3.44,  +5.22] VSAR leads | no |
+| bge-small | R1 |  +1.04 | [ +0.21,  +1.84] VSAR leads | [ -0.02,  +2.10] level | [ +0.26,  +1.80] VSAR leads | YES |
+| MiniLM-L6 | R1-V2 |  -3.57 | [ -4.78,  -2.35] SDMT leads | [ -5.22,  -1.87] SDMT leads | [ -4.72,  -2.35] SDMT leads | no |
+| MiniLM-L6 | R1-V16 |  +4.34 | [ +3.32,  +5.34] VSAR leads | [ +3.07,  +5.68] VSAR leads | [ +3.50,  +5.24] VSAR leads | no |
+| MiniLM-L6 | R1 |  +0.38 | [ -0.38,  +1.24] level | [ -0.68,  +1.44] level | [ -0.35,  +1.14] level | no |
+
+## VSAR-BEST7 (B64, real)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed | bar one / two |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  +0.21 | [ -1.13,  +1.56] level | [ -1.70,  +2.09] level | [ -1.15,  +1.54] level | no | tie / tie |
+| Qwen3-8B | R1-V16 |  +7.81 | [ +6.67,  +8.91] VSAR leads | [ +6.22,  +9.29] VSAR leads | [ +6.71,  +8.93] VSAR leads | no | passes / passes |
+| Qwen3-8B | R1 |  +4.01 | [ +3.17,  +4.87] VSAR leads | [ +2.79,  +5.19] VSAR leads | [ +3.11,  +4.84] VSAR leads | no | passes / passes |
+| Granite-3.3-8B | R1-V2 |  +0.51 | [ -0.80,  +1.83] level | [ -1.26,  +2.46] level | [ -0.82,  +1.90] level | no | tie / tie |
+| Granite-3.3-8B | R1-V16 |  +7.36 | [ +6.31,  +8.41] VSAR leads | [ +6.09,  +8.81] VSAR leads | [ +6.45,  +8.30] VSAR leads | no | passes / passes |
+| Granite-3.3-8B | R1 |  +3.94 | [ +3.09,  +4.83] VSAR leads | [ +2.79,  +5.16] VSAR leads | [ +3.12,  +4.76] VSAR leads | no | passes / passes |
+| Llama-3.1-8B | R1-V2 |  -0.99 | [ -2.33,  +0.54] level | [ -3.04,  +0.97] level | [ -2.42,  +0.36] level | no | tie / tie |
+| Llama-3.1-8B | R1-V16 |  +9.17 | [ +8.09, +10.27] VSAR leads | [ +7.75, +10.52] VSAR leads | [ +8.16, +10.12] VSAR leads | no | passes / passes |
+| Llama-3.1-8B | R1 |  +4.09 | [ +3.15,  +5.01] VSAR leads | [ +2.82,  +5.26] VSAR leads | [ +3.20,  +4.90] VSAR leads | no | passes / passes |
+| Mistral-7B | R1-V2 |  -0.45 | [ -1.73,  +0.82] level | [ -2.19,  +1.26] level | [ -1.57,  +0.64] level | no | tie / tie |
+| Mistral-7B | R1-V16 |  +7.85 | [ +6.52,  +9.10] VSAR leads | [ +6.12,  +9.45] VSAR leads | [ +6.75,  +8.94] VSAR leads | no | passes / passes |
+| Mistral-7B | R1 |  +3.70 | [ +2.76,  +4.57] VSAR leads | [ +2.51,  +4.82] VSAR leads | [ +2.90,  +4.48] VSAR leads | no | passes / passes |
+| e5-base-v2 | R1-V2 |  -1.52 | [ -2.86,  -0.16] BEST7 leads | [ -3.35,  +0.32] level | [ -2.79,  -0.25] BEST7 leads | YES | tie / tie |
+| e5-base-v2 | R1-V16 |  +5.27 | [ +4.19,  +6.37] VSAR leads | [ +3.71,  +6.85] VSAR leads | [ +4.18,  +6.38] VSAR leads | no | passes / passes |
+| e5-base-v2 | R1 |  +1.87 | [ +1.00,  +2.72] VSAR leads | [ +0.72,  +3.05] VSAR leads | [ +1.06,  +2.72] VSAR leads | no | tie / tie |
+| bge-small | R1-V2 |  -2.22 | [ -3.49,  -0.87] BEST7 leads | [ -3.99,  -0.49] BEST7 leads | [ -3.48,  -0.99] BEST7 leads | no | loss / loss |
+| bge-small | R1-V16 |  +4.04 | [ +3.09,  +5.02] VSAR leads | [ +2.70,  +5.32] VSAR leads | [ +3.14,  +4.89] VSAR leads | no | passes / passes |
+| bge-small | R1 |  +0.91 | [ +0.05,  +1.72] VSAR leads | [ -0.17,  +1.96] level | [ +0.17,  +1.64] VSAR leads | YES | tie / tie |
+| MiniLM-L6 | R1-V2 |  -3.57 | [ -4.80,  -2.39] BEST7 leads | [ -5.22,  -1.87] BEST7 leads | [ -4.72,  -2.35] BEST7 leads | no | loss / loss |
+| MiniLM-L6 | R1-V16 |  +3.02 | [ +1.84,  +4.18] VSAR leads | [ +1.47,  +4.63] VSAR leads | [ +2.02,  +4.08] VSAR leads | no | passes / passes |
+| MiniLM-L6 | R1 |  -0.28 | [ -1.13,  +0.56] level | [ -1.40,  +0.84] level | [ -1.04,  +0.54] level | no | tie / tie |
+
+## VSA-BEST7 (B64, real)
+| encoder | region | point | one-level 95% | two-level 95% | store-only 95% | label changed | bar one / two |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | R1-V2 |  +5.72 | [ +4.57,  +6.97] VSA leads | [ +4.02,  +7.45] VSA leads | [ +4.35,  +6.99] VSA leads | no | passes / passes |
+| Qwen3-8B | R1-V16 |  +9.39 | [ +8.30, +10.53] VSA leads | [ +7.81, +10.91] VSA leads | [ +8.23, +10.50] VSA leads | no | passes / passes |
+| Qwen3-8B | R1 |  +7.55 | [ +6.73,  +8.38] VSA leads | [ +6.36,  +8.73] VSA leads | [ +6.64,  +8.40] VSA leads | no | passes / passes |
+| Granite-3.3-8B | R1-V2 |  +3.57 | [ +2.28,  +4.92] VSA leads | [ +1.93,  +5.27] VSA leads | [ +2.46,  +4.77] VSA leads | no | passes / passes |
+| Granite-3.3-8B | R1-V16 |  +8.37 | [ +7.33,  +9.38] VSA leads | [ +7.04,  +9.74] VSA leads | [ +7.51,  +9.23] VSA leads | no | passes / passes |
+| Granite-3.3-8B | R1 |  +5.97 | [ +5.16,  +6.80] VSA leads | [ +4.94,  +7.06] VSA leads | [ +5.27,  +6.71] VSA leads | no | passes / passes |
+| Llama-3.1-8B | R1-V2 |  +3.47 | [ +2.08,  +4.81] VSA leads | [ +1.68,  +5.35] VSA leads | [ +2.14,  +4.75] VSA leads | no | passes / passes |
+| Llama-3.1-8B | R1-V16 |  +9.13 | [ +8.10, +10.17] VSA leads | [ +7.70, +10.40] VSA leads | [ +8.13, +10.03] VSA leads | no | passes / passes |
+| Llama-3.1-8B | R1 |  +6.30 | [ +5.48,  +7.16] VSA leads | [ +5.08,  +7.47] VSA leads | [ +5.46,  +7.08] VSA leads | no | passes / passes |
+| Mistral-7B | R1-V2 |  +2.80 | [ +1.59,  +4.07] VSA leads | [ +1.21,  +4.42] VSA leads | [ +1.82,  +3.80] VSA leads | no | passes / passes |
+| Mistral-7B | R1-V16 |  +9.52 | [ +8.34, +10.63] VSA leads | [ +8.01, +11.07] VSA leads | [ +8.43, +10.60] VSA leads | no | passes / passes |
+| Mistral-7B | R1 |  +6.16 | [ +5.29,  +7.02] VSA leads | [ +5.06,  +7.30] VSA leads | [ +5.42,  +6.87] VSA leads | no | passes / passes |
+| e5-base-v2 | R1-V2 |  -0.58 | [ -1.90,  +0.71] level | [ -2.40,  +1.17] level | [ -1.88,  +0.65] level | no | tie / tie |
+| e5-base-v2 | R1-V16 |  +6.03 | [ +4.87,  +7.17] VSA leads | [ +4.47,  +7.58] VSA leads | [ +4.89,  +7.18] VSA leads | no | passes / passes |
+| e5-base-v2 | R1 |  +2.72 | [ +1.86,  +3.58] VSA leads | [ +1.51,  +3.97] VSA leads | [ +1.87,  +3.57] VSA leads | no | passes / passes |
+| bge-small | R1-V2 |  +0.28 | [ -0.97,  +1.53] level | [ -1.39,  +2.04] level | [ -0.85,  +1.40] level | no | tie / tie |
+| bge-small | R1-V16 |  +4.26 | [ +3.26,  +5.30] VSA leads | [ +2.89,  +5.60] VSA leads | [ +3.36,  +5.11] VSA leads | no | passes / passes |
+| bge-small | R1 |  +2.27 | [ +1.43,  +3.09] VSA leads | [ +1.22,  +3.30] VSA leads | [ +1.54,  +2.96] VSA leads | no | passes / passes |
+| MiniLM-L6 | R1-V2 |  -1.34 | [ -2.50,  -0.16] BEST7 leads | [ -2.83,  +0.21] level | [ -2.30,  -0.28] BEST7 leads | YES | tie / tie |
+| MiniLM-L6 | R1-V16 |  +2.07 | [ +1.08,  +3.04] VSA leads | [ +0.84,  +3.37] VSA leads | [ +1.28,  +2.89] VSA leads | no | passes / passes |
+| MiniLM-L6 | R1 |  +0.37 | [ -0.40,  +1.11] level | [ -0.61,  +1.38] level | [ -0.26,  +1.04] level | no | tie / tie |
+
+## Width of the two-level (and store-only) 95% interval relative to the one-level interval (ideal; mean over encoders, [min, max])
+  STORE-LAMC     R1-V2   two-level x1.42 [1.31, 1.55]   store-only x1.02 [0.88, 1.19]
+  STORE-LAMC     R1-V16  two-level x1.33 [1.24, 1.38]   store-only x0.89 [0.76, 0.96]
+  STORE-LAMC     R1      two-level x1.37 [1.29, 1.46]   store-only x0.95 [0.84, 1.04]
+  VSAPCX-LAMC    R1-V2   two-level x1.39 [1.25, 1.53]   store-only x0.98 [0.82, 1.17]
+  VSAPCX-LAMC    R1-V16  two-level x1.35 [1.27, 1.42]   store-only x0.91 [0.77, 0.99]
+  VSAPCX-LAMC    R1      two-level x1.36 [1.30, 1.42]   store-only x0.94 [0.84, 1.01]
+  VSAR-LAMC      R1-V2   two-level x1.37 [1.31, 1.45]   store-only x0.94 [0.87, 1.05]
+  VSAR-LAMC      R1-V16  two-level x1.34 [1.24, 1.41]   store-only x0.92 [0.78, 1.00]
+  VSAR-LAMC      R1      two-level x1.36 [1.28, 1.40]   store-only x0.94 [0.82, 0.99]
+  VSAS-LAMC      R1-V2   two-level x1.39 [1.32, 1.52]   store-only x0.99 [0.89, 1.17]
+  VSAS-LAMC      R1-V16  two-level x1.34 [1.28, 1.39]   store-only x0.91 [0.78, 0.97]
+  VSAS-LAMC      R1      two-level x1.36 [1.30, 1.42]   store-only x0.94 [0.84, 1.01]
+  VSAPC-LAMC     R1-V2   two-level x1.39 [1.32, 1.46]   store-only x0.97 [0.86, 1.06]
+  VSAPC-LAMC     R1-V16  two-level x1.37 [1.30, 1.51]   store-only x0.95 [0.87, 1.14]
+  VSAPC-LAMC     R1      two-level x1.38 [1.32, 1.48]   store-only x0.96 [0.87, 1.11]
+  STORE-NLMSC    R1-V2   two-level x1.35 [1.24, 1.45]   store-only x0.93 [0.78, 1.09]
+  STORE-NLMSC    R1-V16  two-level x1.33 [1.28, 1.38]   store-only x0.87 [0.78, 0.93]
+  STORE-NLMSC    R1      two-level x1.34 [1.26, 1.39]   store-only x0.89 [0.77, 0.98]
+  VSAR-SDMT      R1-V2   two-level x1.35 [1.27, 1.40]   store-only x0.93 [0.82, 1.01]
+  VSAR-SDMT      R1-V16  two-level x1.37 [1.31, 1.50]   store-only x0.94 [0.86, 1.11]
+  VSAR-SDMT      R1      two-level x1.36 [1.27, 1.43]   store-only x0.94 [0.82, 1.04]
+  VSAR-BEST7     R1-V2   two-level x1.35 [1.25, 1.42]   store-only x0.93 [0.80, 1.03]
+  VSAR-BEST7     R1-V16  two-level x1.34 [1.30, 1.48]   store-only x0.91 [0.86, 1.10]
+  VSAR-BEST7     R1      two-level x1.34 [1.30, 1.39]   store-only x0.92 [0.84, 1.01]
+  VSA-BEST7      R1-V2   two-level x1.33 [1.30, 1.39]   store-only x0.89 [0.81, 0.97]
+  VSA-BEST7      R1-V16  two-level x1.35 [1.26, 1.46]   store-only x0.91 [0.80, 1.04]
+  VSA-BEST7      R1      two-level x1.33 [1.27, 1.41]   store-only x0.89 [0.82, 0.98]
+
+## "On every encoder" claims under the one-level (the verdicts' interval; continuity) interval (ideal)
+  (1) B60: LAMc leads the store (STORE - LAMC) over R1 on all 7: HOLDS
+  (2) B60: LAMc leads the store at R1-V16 on all 7: HOLDS
+  (3) B60: LAMc leads the store at R1-V2 on the 4 language models, e5 and bge: HOLDS
+  (4) B60: LAMc leads VSAPcX over R1 on all 7: HOLDS
+  (5) "least squares beat every Hebbian store variant on every encoder": LAMc leads STORE, VSAR, VSAS, VSAPC, VSAPCX over R1 on all 7: HOLDS
+  (6) B62: NLMSc leads the store over R1 on all 7: HOLDS
+  (7) B64: SDMt leads the first design (VSAR - SDMT) over R1 on all 7: HOLDS
+  (8) B64: the best of seven leads the first design (VSAR - BEST7) over R1 on all 7: HOLDS
+  (9) B64: VSA - BEST7 over R1 labels as reported (store leads Qwen3-8B, Llama; level Granite; memory leads Mistral + 3 sentence encoders): HOLDS; bar passes 0, tie 5, loss 2 (of 7)
+
+## "On every encoder" claims under the TWO-LEVEL (registered) interval (ideal)
+  (1) B60: LAMc leads the store (STORE - LAMC) over R1 on all 7: HOLDS
+  (2) B60: LAMc leads the store at R1-V16 on all 7: HOLDS
+  (3) B60: LAMc leads the store at R1-V2 on the 4 language models, e5 and bge: FAILS (bge-small STORE-LAMC R1-V2: -1.05 [ -2.51,  +0.29] level)
+  (4) B60: LAMc leads VSAPcX over R1 on all 7: HOLDS
+  (5) "least squares beat every Hebbian store variant on every encoder": LAMc leads STORE, VSAR, VSAS, VSAPC, VSAPCX over R1 on all 7: HOLDS
+  (6) B62: NLMSc leads the store over R1 on all 7: HOLDS
+  (7) B64: SDMt leads the first design (VSAR - SDMT) over R1 on all 7: FAILS (Llama-3.1-8B VSAR-SDMT R1: -1.20 [ -2.43,  +0.05] level; e5-base-v2 VSAR-SDMT R1: -0.92 [ -2.06,  +0.21] level)
+  (8) B64: the best of seven leads the first design (VSAR - BEST7) over R1 on all 7: FAILS (Llama-3.1-8B VSAR-BEST7 R1: -1.20 [ -2.43,  +0.05] level)
+  (9) B64: VSA - BEST7 over R1 labels as reported (store leads Qwen3-8B, Llama; level Granite; memory leads Mistral + 3 sentence encoders): CHANGES (Llama-3.1-8B: +0.91 [ -0.17,  +2.01] level (B64: VSA leads); Mistral-7B: -1.02 [ -2.31,  +0.26] level (B64: BEST7 leads)); bar passes 0, tie 5, loss 2 (of 7)
+
+## "On every encoder" claims under the store-only (diagnostic) interval (ideal)
+  (1) B60: LAMc leads the store (STORE - LAMC) over R1 on all 7: HOLDS
+  (2) B60: LAMc leads the store at R1-V16 on all 7: HOLDS
+  (3) B60: LAMc leads the store at R1-V2 on the 4 language models, e5 and bge: HOLDS
+  (4) B60: LAMc leads VSAPcX over R1 on all 7: HOLDS
+  (5) "least squares beat every Hebbian store variant on every encoder": LAMc leads STORE, VSAR, VSAS, VSAPC, VSAPCX over R1 on all 7: HOLDS
+  (6) B62: NLMSc leads the store over R1 on all 7: HOLDS
+  (7) B64: SDMt leads the first design (VSAR - SDMT) over R1 on all 7: HOLDS
+  (8) B64: the best of seven leads the first design (VSAR - BEST7) over R1 on all 7: HOLDS
+  (9) B64: VSA - BEST7 over R1 labels as reported (store leads Qwen3-8B, Llama; level Granite; memory leads Mistral + 3 sentence encoders): HOLDS; bar passes 0, tie 5, loss 2 (of 7)
+
+## Label changes one-level -> two-level (ideal): 13 of 189 (encoder, region, contrast) cases
+  bge-small R1-V2 STORE-LAMC: -1.05; one [ -1.99,  -0.15] LAMC leads -> two [ -2.51,  +0.29] level
+  bge-small R1-V2 STORE-NLMSC: +1.04; one [ +0.10,  +1.98] STORE leads -> two [ -0.16,  +2.22] level
+  e5-base-v2 R1-V2 VSA-BEST7: -1.30; one [ -2.53,  -0.07] BEST7 leads -> two [ -2.93,  +0.42] level
+  e5-base-v2 R1-V2 VSAR-BEST7: -1.51; one [ -2.77,  -0.29] BEST7 leads -> two [ -3.21,  +0.22] level
+  e5-base-v2 R1-V2 VSAR-SDMT: -1.51; one [ -2.73,  -0.25] SDMT leads -> two [ -3.21,  +0.22] level
+  e5-base-v2 R1 VSAR-SDMT: -0.92; one [ -1.75,  -0.11] SDMT leads -> two [ -2.06,  +0.21] level
+  Llama-3.1-8B R1 VSA-BEST7: +0.91; one [ +0.09,  +1.74] VSA leads -> two [ -0.17,  +2.01] level
+  Llama-3.1-8B R1 VSAR-BEST7: -1.20; one [ -2.16,  -0.26] BEST7 leads -> two [ -2.43,  +0.05] level
+  Llama-3.1-8B R1 VSAR-SDMT: -1.20; one [ -2.14,  -0.26] SDMT leads -> two [ -2.43,  +0.05] level
+  Mistral-7B R1 VSA-BEST7: -1.02; one [ -1.96,  -0.08] BEST7 leads -> two [ -2.31,  +0.26] level
+  Qwen3-8B R1-V16 VSA-BEST7: -1.22; one [ -2.29,  -0.15] BEST7 leads -> two [ -2.77,  +0.27] level
+  Qwen3-8B R1-V2 VSAR-BEST7: -1.42; one [ -2.84,  -0.03] BEST7 leads -> two [ -3.32,  +0.49] level
+  Qwen3-8B R1-V2 VSAR-SDMT: -1.42; one [ -2.85,  -0.01] SDMT leads -> two [ -3.32,  +0.49] level
+
+## Missing arms (reported, not imputed)
+  Qwen3-8B: STORE-NLMSC (real)
+  Granite-3.3-8B: STORE-NLMSC (real)
+  Llama-3.1-8B: STORE-NLMSC (real)
+  Mistral-7B: STORE-NLMSC (real)
+  e5-base-v2: STORE-NLMSC (real)
+  bge-small: STORE-NLMSC (real)
+  MiniLM-L6: STORE-NLMSC (real)

@@ -1,0 +1,94 @@
+B35 verdict (test split; accuracy = exact match; means over seeds; 95% paired bootstrap CIs over the 600 instances of each N)
+
+Full text with LoRA (zero-shot): N=8 hop1 1.000 (0.048), N=8 hop2 1.000 (0.003), N=32 hop1 1.000 (0.128), N=32 hop2 1.000 (nan), N=128 hop1 1.000 (0.012), N=128 hop2 0.998 (nan)
+
+== hop1: VSA vs learned memory tokens at equal budget (PRIMARY)
+ B    N   N/B    VSA    LMT   delta                CI    T-B     Vq    ext theory  class
+ 1    8     8  0.023  0.026  -0.003 [-0.009,+0.004]  0.035  1.000  1.000  1.000  FLOOR
+ 1   32    32  0.030  0.028  +0.002 [-0.005,+0.008]  0.038  0.995  1.000  1.000  FLOOR
+ 1  128   128  0.037  0.033  +0.003 [-0.005,+0.012]  0.020  0.673  0.948  0.958  FLOOR
+ 2    8     4  0.029  0.028  +0.002 [-0.004,+0.007]  0.043  1.000  1.000  1.000  FLOOR
+ 2   32    16  0.030  0.028  +0.002 [-0.007,+0.010]  0.037  1.000  1.000  1.000  FLOOR
+ 2  128    64  0.032  0.035  -0.003 [-0.012,+0.004]  0.030  0.685  1.000  0.999  FLOOR
+ 4    8     2  0.029  0.030  -0.001 [-0.007,+0.004]  0.035  1.000  1.000  1.000  FLOOR
+ 4   32     8  0.037  0.028  +0.009 [+0.002,+0.018]  0.038  1.000  1.000  1.000  FLOOR
+ 4  128    32  0.034  0.029  +0.005 [-0.003,+0.013]  0.018  0.750  1.000  1.000  FLOOR
+ 8    8     1  0.030  0.029  +0.001 [-0.006,+0.008]  0.107  1.000  1.000  1.000  FLOOR
+ 8   32     4  0.032  0.028  +0.004 [-0.004,+0.013]  0.062  0.985  1.000  1.000  FLOOR
+ 8  128    16  0.033  0.037  -0.003 [-0.011,+0.004]  0.028  0.577  1.000  1.000  FLOOR
+Reading (hop1): NO READING (every cell at the floor or at the reference)
+Soft memory beats text cut to the budget (>= +0.10, CI > 0): VSA in 0/12 cells, learned tokens in 0/12
+
+== hop2: VSA vs learned memory tokens at equal budget (secondary)
+ B    N   N/B    VSA    LMT   delta                CI    T-B     Vq    ext theory  class
+ 1    8     8  0.025  0.027  -0.002 [-0.008,+0.005]  0.035      -  1.000  1.000  FLOOR
+ 1   32    32  0.030  0.028  +0.003 [-0.004,+0.010]  0.012      -  1.000  1.000  FLOOR
+ 1  128   128  0.039  0.038  +0.001 [-0.007,+0.009]  0.028      -  0.765  0.770  FLOOR
+ 2    8     4  0.022  0.028  -0.007 [-0.015,+0.002]  0.035      -  1.000  1.000  FLOOR
+ 2   32    16  0.029  0.028  +0.002 [-0.006,+0.009]  0.022      -  1.000  1.000  FLOOR
+ 2  128    64  0.035  0.033  +0.002 [-0.007,+0.011]  0.022      -  0.992  0.991  FLOOR
+ 4    8     2  0.026  0.025  +0.001 [-0.006,+0.007]  0.027      -  1.000  1.000  FLOOR
+ 4   32     8  0.024  0.033  -0.009 [-0.016,-0.003]  0.018      -  1.000  1.000  FLOOR
+ 4  128    32  0.037  0.034  +0.003 [-0.003,+0.008]  0.027      -  1.000  1.000  FLOOR
+ 8    8     1  0.023  0.026  -0.003 [-0.009,+0.004]  0.117      -  1.000  1.000  FLOOR
+ 8   32     4  0.028  0.032  -0.004 [-0.012,+0.003]  0.052      -  1.000  1.000  FLOOR
+ 8  128    16  0.037  0.039  -0.002 [-0.009,+0.006]  0.045      -  1.000  1.000  FLOOR
+Reading (hop2): NO READING (every cell at the floor or at the reference)
+Soft memory beats text cut to the budget (>= +0.10, CI > 0): VSA in 0/12 cells, learned tokens in 0/12
+
+== Capacity: exact external decoding of the VSA bundles vs theory (test split)
+ext within tolerance of theory in every informative cell: True
+
+== How much of what the bundle holds does the LM read? (single hop, VSA arm)
+B=1 N=8 N/B=8: LM 0.023 of ext 1.000 (short of it)
+B=1 N=32 N/B=32: LM 0.030 of ext 1.000 (short of it)
+B=1 N=128 N/B=128: LM 0.037 of ext 0.948 (short of it)
+B=2 N=8 N/B=4: LM 0.029 of ext 1.000 (short of it)
+B=2 N=32 N/B=16: LM 0.030 of ext 1.000 (short of it)
+B=2 N=128 N/B=64: LM 0.032 of ext 1.000 (short of it)
+B=4 N=8 N/B=2: LM 0.029 of ext 1.000 (short of it)
+B=4 N=32 N/B=8: LM 0.037 of ext 1.000 (short of it)
+B=4 N=128 N/B=32: LM 0.034 of ext 1.000 (short of it)
+B=8 N=8 N/B=1: LM 0.030 of ext 1.000 (short of it)
+B=8 N=32 N/B=4: LM 0.032 of ext 1.000 (short of it)
+B=8 N=128 N/B=16: LM 0.033 of ext 1.000 (short of it)
+
+== VSA-q (unbinding outside the LM; single hop) vs exact clean-up of the same bundles
+B=1 N=8 N/B=8: Vq 1.000 vs ext 1.000 (theory 1.000) -> names what unbinding retrieves
+B=1 N=32 N/B=32: Vq 0.995 vs ext 1.000 (theory 1.000) -> names what unbinding retrieves
+B=1 N=128 N/B=128: Vq 0.673 vs ext 0.948 (theory 0.958) -> short of it
+B=2 N=8 N/B=4: Vq 1.000 vs ext 1.000 (theory 1.000) -> names what unbinding retrieves
+B=2 N=32 N/B=16: Vq 1.000 vs ext 1.000 (theory 1.000) -> names what unbinding retrieves
+B=2 N=128 N/B=64: Vq 0.685 vs ext 1.000 (theory 0.999) -> short of it
+B=4 N=8 N/B=2: Vq 1.000 vs ext 1.000 (theory 1.000) -> names what unbinding retrieves
+B=4 N=32 N/B=8: Vq 1.000 vs ext 1.000 (theory 1.000) -> names what unbinding retrieves
+B=4 N=128 N/B=32: Vq 0.750 vs ext 1.000 (theory 1.000) -> short of it
+B=8 N=8 N/B=1: Vq 1.000 vs ext 1.000 (theory 1.000) -> names what unbinding retrieves
+B=8 N=32 N/B=4: Vq 0.985 vs ext 1.000 (theory 1.000) -> names what unbinding retrieves
+B=8 N=128 N/B=16: Vq 0.577 vs ext 1.000 (theory 1.000) -> short of it
+
+== Full text zero-shot (frozen LM), lenient scoring (gold as a whole word in the first line)
+N=8 hop1 0.970, N=8 hop2 0.110, N=32 hop1 0.965, N=32 hop2 0.028, N=128 hop1 0.935, N=128 hop2 0.028
+
+== From-scratch transformer reader (CPU; B = 4; mean of seeds)
+vsa     (2 seeds): N32_hop1 0.037, N32_hop2 0.033, N8_hop1 0.025, N8_hop2 0.031  -> does not learn to read (N=8 single hop >= 0.5)
+vsakey  (2 seeds): N32_hop1 0.034, N32_hop2 0.035, N8_hop1 0.027, N8_hop2 0.036  -> does not learn to read (N=8 single hop >= 0.5)
+vsaq    (2 seeds): N32_hop1 0.671, N32_hop2 0.027, N8_hop1 0.995, N8_hop2 0.033  -> learns to read (N=8 single hop >= 0.5)
+lmt     (2 seeds): N32_hop1 0.102, N32_hop2 0.108, N8_hop1 0.258, N8_hop2 0.239  -> does not learn to read (N=8 single hop >= 0.5)
+
+== Machines: test_lmt_B1_s0: atl1-1-03-004-31-0.pace.gatech.edu / NVIDIA L40S; test_lmt_B1_s1: atl1-1-03-007-29-0.pace.gatech.edu / NVIDIA L40S; test_lmt_B2_s0: atl1-1-03-004-31-0.pace.gatech.edu / NVIDIA L40S; test_lmt_B2_s1: atl1-1-03-007-29-0.pace.gatech.edu / NVIDIA L40S; test_lmt_B4_s0: ucloud-gpu-01 / NVIDIA A800 80GB PCIe; test_lmt_B4_s1: atl1-1-03-008-32-0.pace.gatech.edu / NVIDIA H100 80GB HBM3; test_lmt_B8_s0: ucloud-gpu-01 / NVIDIA A800 80GB PCIe; test_lmt_B8_s1: atl1-1-03-008-32-0.pace.gatech.edu / NVIDIA H100 80GB HBM3; test_tfull_s0: atl1-1-01-002-2-0.pace.gatech.edu / NVIDIA L40S; test_tfull_zeroshot: atl1-1-01-002-2-0.pace.gatech.edu / NVIDIA L40S; test_ttrunc_B1_s0: atl1-1-01-002-2-0.pace.gatech.edu / NVIDIA L40S; test_ttrunc_B2_s0: atl1-1-01-002-2-0.pace.gatech.edu / NVIDIA L40S; test_ttrunc_B4_s0: atl1-1-01-002-2-0.pace.gatech.edu / NVIDIA L40S; test_ttrunc_B8_s0: atl1-1-01-002-2-0.pace.gatech.edu / NVIDIA L40S; test_vsa_B1_s0: atl1-1-03-004-31-0.pace.gatech.edu / NVIDIA L40S; test_vsa_B1_s1: atl1-1-03-007-29-0.pace.gatech.edu / NVIDIA L40S; test_vsa_B2_s0: atl1-1-03-004-31-0.pace.gatech.edu / NVIDIA L40S; test_vsa_B2_s1: atl1-1-03-007-29-0.pace.gatech.edu / NVIDIA L40S; test_vsa_B4_s0: ucloud-gpu-01 / NVIDIA A800 80GB PCIe; test_vsa_B4_s1: atl1-1-03-008-32-0.pace.gatech.edu / NVIDIA H100 80GB HBM3; test_vsa_B8_s0: ucloud-gpu-01 / NVIDIA A800 80GB PCIe; test_vsa_B8_s1: atl1-1-03-008-32-0.pace.gatech.edu / NVIDIA H100 80GB HBM3; test_vsaq_B1_s0: atl1-1-03-007-29-0.pace.gatech.edu / NVIDIA L40S; test_vsaq_B2_s0: atl1-1-03-007-29-0.pace.gatech.edu / NVIDIA L40S; test_vsaq_B4_s0: atl1-1-03-007-29-0.pace.gatech.edu / NVIDIA L40S; test_vsaq_B8_s0: atl1-1-03-007-29-0.pace.gatech.edu / NVIDIA L40S
+
+== Registered predictions (mechanical check; P14 second scorer and P15 GPU-hours are checked separately)
+  HELD   P1 DICT 1.000
+  HELD   P2 ext matches theory everywhere
+  HELD   P3 T-full >= .99 / .98
+  FAILED P4 T-B <= .08
+  HELD   P5 V <= .10 everywhere
+  HELD   P6 L <= .10 (B8 N8 <= .25)
+  HELD   P7 headline NO READING (<= 1 eligible)
+  HELD   P8 no soft arm beats text (V 0, L <= 1)
+  HELD   P9 V short of its bundle by >= .85 where ext >= .95
+  HELD   P10 Vq >= .95 at N=8
+  FAILED P11 Vq N=32 >= .80 (B>=4); N=128 short by >= .2 (B<=4); rises with B at N=128
+  HELD   P12 scratch: vsa, vsakey <= .10; vsaq >= .95; lmt >= .15 and >= vsa + .10 (N=8)
+  FAILED P13 zero-shot lenient <= .6

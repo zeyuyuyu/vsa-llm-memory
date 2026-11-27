@@ -1,0 +1,54 @@
+# B49 hand reading, minilm: R1 cells with the largest and the smallest VSA - BEST (ideal)
+
+## cell M=256 V=16 bpf=4: VSA 20.5, BEST LAM 19.4, diff +1.04, EXACT 70.9
+  only VSA right: 694 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'the States in rebellion'                | 'Confederate States of America'          | 'Confederate States of America'          | +0.593 | True
+    'Lost Bridegroom'                        | 'The Lost Bridegroom'                    | 'The Lost Bridegroom'                    | +0.963 | True
+    'West Oz'                                | 'Western Australia'                      | 'Western Australia'                      | +0.543 | True
+    'O.C.'                                   | 'The O.C.'                               | 'The O.C.'                               | +0.786 | True
+    'Li De'                                  | 'Li Xian'                                | 'Li Xian'                                | +0.553 | True
+    "Ya'akov ben Ha-Rosh"                    | 'Jacob ben Asher'                        | 'Jacob ben Asher'                        | +0.264 | True
+    'Voices'                                 | 'The Voices'                             | 'The Voices'                             | +0.885 | True
+    'Charlotte Napoléon Bonaparte'           | 'Charlotte Napoléone Bonaparte'          | 'Charlotte Napoléone Bonaparte'          | +0.975 | True
+    'Franciscus Floris'                      | 'Frans Floris I'                         | 'Frans Floris I'                         | +0.701 | True
+    'Frans Flore'                            | 'Frans Floris I'                         | 'Frans Floris I'                         | +0.652 | True
+    mean centred cosine over all 694: +0.676; EXACT right in 0.87
+  only BEST right: 645 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'RAT'                                    | 'Raduzhny Airport'                       | 'The Chicken'                            | -0.029 | False
+    'US-MS'                                  | 'Mississippi'                            | 'Us'                                     | +0.474 | False
+    'Pope Gregory I'                         | 'Gregory I'                              | 'Gregory I'                              | +0.742 | True
+    'Cafe Express'                           | 'Café Express'                           | 'Café Express'                           | +1.000 | True
+    'YEM'                                    | 'Yemen'                                  | 'A Separate Reality'                     | -0.048 | False
+    'Quotations from Chairman Mao Zedong'    | 'Quotations from Chairman Mao Tse-tung'  | 'Quotations from Chairman Mao Tse-tung'  | +0.887 | True
+    'Willie J. McCarter'                     | 'Willie McCarter'                        | 'Willie McCarter'                        | +0.978 | True
+    'Authorized Version'                     | 'King James Version'                     | 'King James Version'                     | +0.269 | True
+    'Raymond Bernard Strauss'                | 'Ray Strauss'                            | 'Ray Strauss'                            | +0.858 | True
+    'Howard, South Dakota'                   | 'Howard'                                 | 'Howard'                                 | +0.521 | True
+    mean centred cosine over all 645: +0.659; EXACT right in 0.87
+
+## cell M=1024 V=16 bpf=16: VSA 25.2, BEST LHI 40.2, diff -15.02, EXACT 65.6
+  only VSA right: 411 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Alisa'                                  | 'Alice of France'                        | 'Muhammad Ali Luqman'                    | +0.155 | False
+    'cu'                                     | 'Cuba'                                   | 'Tuvalu'                                 | +0.011 | False
+    'Richard Frank Keith Harris'             | 'Richard Harris'                         | 'Richard Harris'                         | +0.791 | True
+    'Jagadbandu'                             | 'Krishna'                                | 'Jalpaiguri district'                    | +0.279 | False
+    'Cleveland, Queensland, Australia'       | 'Cleveland'                              | 'Cleveland'                              | +0.664 | True
+    'Margrete I'                             | 'Margaret I of Denmark'                  | 'Richard Marles'                         | +0.046 | False
+    'Torino province'                        | 'Province of Turin'                      | 'Province of Turin'                      | +0.739 | True
+    'Ŷalāl al-Dīn Rūmī'                      | 'Rumi'                                   | 'Rumi'                                   | +0.578 | True
+    'peo'                                    | 'Old Persian'                            | 'Cro'                                    | +0.011 | False
+    'Jalālauddīna Rūmī'                      | 'Rumi'                                   | 'Rumi'                                   | +0.612 | True
+    mean centred cosine over all 411: +0.546; EXACT right in 0.79
+  only BEST right: 1065 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Rolling Stones'                         | 'The Rolling Stones'                     | 'The Rolling Stones'                     | +0.958 | True
+    'Sidehackers'                            | 'The Sidehackers'                        | 'The Sidehackers'                        | +0.958 | True
+    'Navy Royal'                             | 'Royal Navy'                             | 'Royal Navy'                             | +0.936 | True
+    'Taidong County'                         | 'Taitung County'                         | 'Taitung County'                         | +0.736 | True
+    'XJP'                                    | 'X Japan'                                | 'X Japan'                                | +0.520 | True
+    'der altere jeronimus francken'          | 'Hieronymous Francken I'                 | 'Hieronymous Francken I'                 | +0.465 | True
+    "The People's Princess"                  | 'Diana, Princess of Wales'               | 'Diana, Princess of Wales'               | +0.527 | True
+    'Amdy Moustapha Faye'                    | 'Amdy Faye'                              | 'Amdy Faye'                              | +0.867 | True
+    'j. h. ross'                             | 'Johann Heinrich Roos'                   | 'S.H.E'                                  | +0.120 | False
+    'White Russia'                           | 'Belarus'                                | 'White'                                  | +0.507 | False
+    mean centred cosine over all 1065: +0.751; EXACT right in 0.90
+

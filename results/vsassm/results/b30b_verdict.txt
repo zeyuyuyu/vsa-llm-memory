@@ -1,0 +1,188 @@
+# B30b verdict (prereg/B30b_referee_baselines_prereg.md): two referee baselines that may favour the system
+
+## Part (a): Qwen3-32B over the whole log, Qwen3's recommended thinking-mode sampling, 32,768-token reasoning budget
+Sets: location 414 (test2), impact 230 (nsr1), window 460 (nsr2); the paper's prompts (banked problem files) and
+scorers (verbatim copies). Accuracy = the 'forced' score as published (a run at the reasoning limit is scored on its
+budget-forced answer); strict in brackets. Intervals: 95% cluster bootstrap over the 40 logs (paired by question,
+10,000 resamples, numpy seed 0); stratified by scenario in braces.
+
+### where (n = 414); system 0.959
+  published (greedy, 8,192)            0.543 (0.531)
+  G-E re-run (greedy, 8,192, vLLM)     0.548 (0.536)
+  S32 R1                               0.592 (0.592)
+  S32 R2                               0.531 (0.531)
+    S32 R1 runs: {'n': 414, 'forced': 0, 'continued': 0, 'no_close_stop': 0, 'think_mean': 2991, 'think_median': 2119, 'think_max': 13535, 'gen_tokens': 1248283, 'past_40960': 0}
+    S32 R2 runs: {'n': 414, 'forced': 2, 'continued': 0, 'no_close_stop': 0, 'think_mean': 2960, 'think_median': 2188, 'think_max': 32768, 'gen_tokens': 1238943, 'past_40960': 2}
+  D1  S32 R1 - published                       +0.048 [-0.002, +0.099] {+0.000, +0.099}
+  D2  system - S32 R1                          +0.367 [+0.300, +0.434] {+0.322, +0.415}
+  D1e S32 R1 - G-E re-run (same engine)        +0.043 [-0.005, +0.092] {-0.005, +0.091}
+      S32 R2 - S32 R1 (seed spread)            -0.060 [-0.115, -0.007] {-0.115, -0.007}
+      system - S32 R2                          +0.428 [+0.371, +0.483] {+0.387, +0.467}
+      system - mean(R1, R2)                    +0.397 [+0.341, +0.453] {+0.363, +0.431}
+      mean(R1, R2) - published                 +0.018 [-0.018, +0.053] {-0.016, +0.052}
+  G-E re-run - published (engine)              +0.005 [-0.034, +0.045] {-0.032, +0.043}
+      system - published (as in the paper)     +0.415 [+0.355, +0.477] {+0.373, +0.457}
+  A1 (was the baseline handicapped?): inconclusive
+  A2 (does the system still lead?):   system ahead by >= 0.20
+
+### impact (n = 230); system 0.930
+  published (greedy, 8,192)            0.278 (0.265)
+  G-E re-run (greedy, 8,192, vLLM)     0.296 (0.296)
+  S32 R1                               0.300 (0.300)
+  S32 R2                               0.274 (0.274)
+    S32 R1 runs: {'n': 230, 'forced': 1, 'continued': 0, 'no_close_stop': 0, 'think_mean': 4666, 'think_median': 3046, 'think_max': 32768, 'gen_tokens': 1077751, 'past_40960': 1}
+    S32 R2 runs: {'n': 230, 'forced': 2, 'continued': 0, 'no_close_stop': 0, 'think_mean': 4959, 'think_median': 3226, 'think_max': 32768, 'gen_tokens': 1145219, 'past_40960': 1}
+  D1  S32 R1 - published                       +0.022 [-0.036, +0.076] {-0.035, +0.074}
+  D2  system - S32 R1                          +0.630 [+0.558, +0.702] {+0.570, +0.687}
+  D1e S32 R1 - G-E re-run (same engine)        +0.004 [-0.043, +0.052] {-0.039, +0.048}
+      S32 R2 - S32 R1 (seed spread)            -0.026 [-0.071, +0.020] {-0.070, +0.022}
+      system - S32 R2                          +0.657 [+0.582, +0.733] {+0.596, +0.717}
+      system - mean(R1, R2)                    +0.643 [+0.574, +0.714] {+0.585, +0.698}
+      mean(R1, R2) - published                 +0.009 [-0.047, +0.058] {-0.043, +0.057}
+  G-E re-run - published (engine)              +0.017 [-0.029, +0.063] {-0.030, +0.061}
+      system - published (as in the paper)     +0.652 [+0.572, +0.730] {+0.574, +0.722}
+  A1 (was the baseline handicapped?): inconclusive
+  A2 (does the system still lead?):   system ahead by >= 0.20
+  G-E: re-run greedy 0.296 vs published 0.278 (|d| <= 0.03: PASS); same parsed answer 113/230
+  excluding the 80 ambiguous home questions ('Which of Grandpa's things...'), n = 150:
+    published (greedy, 8,192)          0.273
+    G-E re-run (greedy, 8,192, vLLM)   0.280
+    S32 R1                             0.313
+    S32 R2                             0.280
+    system                             0.907
+    D1x S32 R1 - published           +0.040 [-0.029, +0.104]
+    D2x system - S32 R1              +0.593 [+0.503, +0.693]
+    A3 (system lead on the 150 unambiguous impact questions): system ahead by >= 0.20
+
+### window (n = 460); system 0.874
+  published (greedy, 8,192)            0.202 (0.193)
+  G-E re-run (greedy, 8,192, vLLM)     0.183 (0.174)
+  S32 R1                               0.193 (0.193)
+  S32 R2                               0.196 (0.193)
+    S32 R1 runs: {'n': 460, 'forced': 3, 'continued': 0, 'no_close_stop': 0, 'think_mean': 4534, 'think_median': 3062, 'think_max': 32768, 'gen_tokens': 2098717, 'past_40960': 3}
+    S32 R2 runs: {'n': 460, 'forced': 2, 'continued': 0, 'no_close_stop': 0, 'think_mean': 4667, 'think_median': 3257, 'think_max': 32768, 'gen_tokens': 2159371, 'past_40960': 1}
+  D1  S32 R1 - published                       -0.009 [-0.042, +0.023] {-0.043, +0.022}
+  D2  system - S32 R1                          +0.680 [+0.611, +0.749] {+0.617, +0.743}
+  D1e S32 R1 - G-E re-run (same engine)        +0.011 [-0.029, +0.050] {-0.028, +0.048}
+      S32 R2 - S32 R1 (seed spread)            +0.002 [-0.025, +0.032] {-0.024, +0.030}
+      system - S32 R2                          +0.678 [+0.606, +0.747] {+0.615, +0.737}
+      system - mean(R1, R2)                    +0.679 [+0.610, +0.746] {+0.617, +0.739}
+      mean(R1, R2) - published                 -0.008 [-0.035, +0.018] {-0.035, +0.018}
+  G-E re-run - published (engine)              -0.020 [-0.060, +0.018] {-0.057, +0.017}
+      system - published (as in the paper)     +0.672 [+0.601, +0.740] {+0.611, +0.730}
+  A1 (was the baseline handicapped?): no material handicap
+  A2 (does the system still lead?):   system ahead by >= 0.20
+  G-E: re-run greedy 0.183 vs published 0.202 (|d| <= 0.03: PASS); same parsed answer 251/460
+
+## Part (b): BABILong, the same reader's events as a notepad (analogue of RULER's facts-in-prompt arm)
+QA1-5, official test release; memory = b18.World over the re-run reader's grounded events; notepad = the same
+events as text lines, answered by a language model. Scorer: b18.correct_official on the whole answer (official
+compare_answers in brackets where it differs). Paired by sample: difference in points (memory - arm), discordant
+pairs (memory only / arm only), exact two-sided McNemar p.
+
+### 128k (n = 500): G-B memory answers equal to banked B18 500/500; memory 99.8 vs banked 99.8 -> PASS; notepad lines median 13, 90th pct 48, max 152
+  memory (B18 rules over the events)            99.8 [98.9, 100.0]  qa1 100 qa2 100 qa3 100 qa4 100 qa5 99
+  Qwen3-8B, thinking, recommended sampling      78.6 [74.8, 82.0]  d +21.2, discordant 106/0, p 2.5e-32 -> memory adds; qa1 99 qa2 90 qa3 43 qa4 92 qa5 69; forced 4
+  Qwen3-1.7B (reader's base), thinking          59.8 [55.4, 64.0]  d +40.0, discordant 200/0, p 1.2e-60 -> memory adds; qa1 95 qa2 43 qa3 22 qa4 66 qa5 73; forced 2
+  reader (1.7B + LoRA), thinking                45.4 [41.1, 49.8]  d +54.4, discordant 272/0, p 2.6e-82 -> memory adds; qa1 95 qa2 3 qa3 3 qa4 59 qa5 67; forced 5
+  Qwen3-8B, no thinking, greedy                 58.6 [54.2, 62.8]  d +41.2, discordant 206/0, p 1.9e-62 -> memory adds; qa1 89 qa2 48 qa3 24 qa4 62 qa5 70
+  Qwen3-1.7B, no thinking, greedy               34.2 [30.2, 38.5]  d +65.6, discordant 329/1, p 3e-97 -> memory adds; qa1 55 qa2 29 qa3 10 qa4 21 qa5 56
+  reader, no thinking, greedy                   25.2 [21.6, 29.2]  d +74.6, discordant 373/0, p 1e-112 -> memory adds; qa1 56 qa2 3 qa3 1 qa4 7 qa5 59
+  conservative rule, 8B answerers (q8T, q8N): memory adds (best notepad arm q8T 78.6)
+  conservative rule, 1.7B answerers (q17T, q17N, rdT, rdN): memory adds (best notepad arm q17T 59.8)
+
+### 512k (n = 125): G-B memory answers equal to banked B18 125/125; memory 100.0 vs banked 100.0 -> PASS; notepad lines median 18, 90th pct 56, max 171
+  memory (B18 rules over the events)           100.0 [97.0, 100.0]  qa1 100 qa2 100 qa3 100 qa4 100 qa5 100
+  Qwen3-8B, thinking, recommended sampling      83.2 [75.7, 88.7]  d +16.8, discordant 21/0, p 9.5e-07 -> memory adds; qa1 100 qa2 100 qa3 48 qa4 92 qa5 76; forced 1
+  Qwen3-1.7B (reader's base), thinking          56.8 [48.0, 65.2]  d +43.2, discordant 54/0, p 1.1e-16 -> memory adds; qa1 88 qa2 28 qa3 24 qa4 68 qa5 76; forced 2
+  reader (1.7B + LoRA), thinking                43.2 [34.8, 52.0]  d +56.8, discordant 71/0, p 8.5e-22 -> memory adds; qa1 84 qa2 0 qa3 0 qa4 60 qa5 72
+  Qwen3-8B, no thinking, greedy                 66.4 [57.7, 74.1]  d +33.6, discordant 42/0, p 4.5e-13 -> memory adds; qa1 84 qa2 72 qa3 32 qa4 72 qa5 72
+  Qwen3-1.7B, no thinking, greedy               37.6 [29.6, 46.3]  d +62.4, discordant 78/0, p 6.6e-24 -> memory adds; qa1 44 qa2 28 qa3 12 qa4 36 qa5 68
+  reader, no thinking, greedy                   25.6 [18.8, 33.9]  d +74.4, discordant 93/0, p 2e-28 -> memory adds; qa1 36 qa2 4 qa3 0 qa4 16 qa5 72
+  conservative rule, 8B answerers (q8T, q8N): memory adds (best notepad arm q8T 83.2)
+  conservative rule, 1.7B answerers (q17T, q17N, rdT, rdN): memory adds (best notepad arm q17T 56.8)
+
+### 1M (n = 125): G-B memory answers equal to banked B18 125/125; memory 100.0 vs banked 100.0 -> PASS; notepad lines median 27, 90th pct 69, max 170
+  memory (B18 rules over the events)           100.0 [97.0, 100.0]  qa1 100 qa2 100 qa3 100 qa4 100 qa5 100
+  Qwen3-8B, thinking, recommended sampling      77.6 [69.5, 84.0]  d +22.4, discordant 28/0, p 7.5e-09 -> memory adds; qa1 100 qa2 76 qa3 48 qa4 88 qa5 76; forced 3
+  Qwen3-1.7B (reader's base), thinking          57.6 [48.8, 65.9]  d +42.4, discordant 53/0, p 2.2e-16 -> memory adds; qa1 84 qa2 28 qa3 20 qa4 76 qa5 80; forced 1
+  reader (1.7B + LoRA), thinking                46.4 [37.9, 55.1]  d +53.6, discordant 67/0, p 1.4e-20 -> memory adds; qa1 88 qa2 0 qa3 4 qa4 64 qa5 76; forced 1
+  Qwen3-8B, no thinking, greedy                 61.6 [52.8, 69.7]  d +38.4, discordant 48/0, p 7.1e-15 -> memory adds; qa1 84 qa2 52 qa3 28 qa4 72 qa5 72
+  Qwen3-1.7B, no thinking, greedy               36.8 [28.9, 45.5]  d +63.2, discordant 79/0, p 3.3e-24 -> memory adds; qa1 56 qa2 20 qa3 20 qa4 28 qa5 60
+  reader, no thinking, greedy                   32.0 [24.5, 40.6]  d +68.0, discordant 85/0, p 5.2e-26 -> memory adds; qa1 48 qa2 0 qa3 4 qa4 36 qa5 72
+  conservative rule, 8B answerers (q8T, q8N): memory adds (best notepad arm q8T 77.6)
+  conservative rule, 1.7B answerers (q17T, q17N, rdT, rdN): memory adds (best notepad arm q17T 57.6)
+
+NB1 (128k, Qwen3-8B thinking): memory adds;  NB2 (128k, Qwen3-1.7B thinking): memory adds
+
+## Registered predictions vs outcome
+  [FAILED] G-E passes on impact and window with >= 80% identical parsed answers (pass: [True, True]; identical 113/230, 251/460)
+  [held] location under vLLM greedy within 0.05 of the published HF number (d = 0.0048)
+  [held] S32 R1 where in [0.55, 0.68] (got 0.5918)
+  [held] S32 R1 impact in [0.28, 0.4] (got 0.3)
+  [FAILED] S32 R1 window in [0.2, 0.32] (got 0.1935)
+  [held] S32 R1 impact on the 150 unambiguous questions about 0.32 (+-0.05; got 0.3133)
+  [FAILED] D1 in [0, +0.10] on every set (got {'where': 0.0483, 'impact': 0.0217, 'window': -0.0087})
+  [held] A1 'handicap material' on at most one set (got ['inconclusive', 'inconclusive', 'no material handicap'])
+  [held] A2 'system ahead by >= 0.20' on all three sets and A3 too (got ['system ahead by >= 0.20', 'system ahead by >= 0.20', 'system ahead by >= 0.20', 'system ahead by >= 0.20'])
+  [held] runs forced at the 32,768 budget <= 5% per set (got where 0/414, impact 1/230, window 3/460)
+  [held] runs past position 40,960 <= 2% per set (got where 0/414, impact 1/230, window 3/460)
+  [FAILED] R2 within 0.03 of R1 on every set (got {'where': -0.0604, 'impact': -0.0261, 'window': 0.0022})
+  [held] G-B passes at every length run (128k True, 512k True, 1M True)
+  [held] notepads at 128k: median <= 100 lines (got 13)
+  [FAILED] q8T at 128k in [85, 98] (got 78.6)
+  [held] qa3 is q8T's weakest task at 128k (per task {'qa1': 99.0, 'qa2': 90.0, 'qa3': 43.0, 'qa4': 92.0, 'qa5': 69.0})
+  [held] NB1 'memory adds' (got memory adds)
+  [FAILED] q17T at 128k in [60, 92] (got 59.8)
+  [held] NB2 'memory adds' (got memory adds)
+  [held] every N arm >= 5 points below the T arm of the same model (q8T 78.6 vs q8N 58.6, q17T 59.8 vs q17N 34.2, rdT 45.4 vs rdN 25.2)
+  [held] conservative rule 'memory adds' for both sizes at 128k (got ['memory adds', 'memory adds'])
+  [FAILED] q8T at 512k at least 2 points below its 128k score (got 83.2 vs 78.6)
+  [FAILED] q8T at 1M at least 2 points below its 128k score (got 77.6 vs 78.6)
+  15 held, 8 failed, 0 not run
+
+## Compute: 20.41 A800 GPU-hours over 44 finished jobs (cap 80); still running: 0
+  dev_merge                    gpus 5          0.00 h  rc=0
+  dev_hf                       gpus 5          0.01 h  rc=0
+  dev_gen32                    gpus 6,7        0.07 h  rc=1
+  dev_vllm                     gpus 5          0.02 h  rc=1
+  dev_gen17                    gpus 5          0.02 h  rc=0
+  dev_vllm2                    gpus 6          0.02 h  rc=0
+  GE_impact_a                  gpus 0,1        0.07 h  rc=1
+  GE_window_a                  gpus 0,1        0.04 h  rc=killed_compute_note_1
+  BR_read                      gpus 7          0.10 h  rc=0
+  dev_gen32b                   gpus 4,5        0.62 h  rc=0
+  GE_impact_b                  gpus 2,6        0.48 h  rc=0
+  GE_impact_a2                 gpus 0,1        0.74 h  rc=0
+  NP_128k_q8T                  gpus 7          0.24 h  rc=0
+  GE_impact_f                  gpus 0,1        0.22 h  rc=0
+  NP_128k_q17T                 gpus 7          0.09 h  rc=0
+  GE_window_b                  gpus 4,5        0.85 h  rc=0
+  NP_128k_rdT                  gpus 0          0.16 h  rc=0
+  NP_128k_q8N                  gpus 0          0.01 h  rc=0
+  NP_128k_q17N                 gpus 0          0.01 h  rc=0
+  NP_128k_rdN                  gpus 0          0.01 h  rc=0
+  GE_window_a                  gpus 2,6        1.17 h  rc=0
+  NP_512k_q8T                  gpus 0          0.15 h  rc=0
+  GE_window_f                  gpus 1,2        0.26 h  rc=0
+  NP_512k_q17T                 gpus 0          0.08 h  rc=0
+  NP_512k_rdT                  gpus 0          0.07 h  rc=0
+  NP_512k_q8N                  gpus 0          0.01 h  rc=0
+  NP_512k_q17N                 gpus 0          0.01 h  rc=0
+  NP_512k_rdN                  gpus 0          0.01 h  rc=0
+  NP_1M_q8T                    gpus 0          0.19 h  rc=0
+  NP_1M_q17T                   gpus 0          0.07 h  rc=0
+  NP_1M_rdT                    gpus 0          0.07 h  rc=0
+  NP_1M_q8N                    gpus 0          0.01 h  rc=0
+  NP_1M_q17N                   gpus 0          0.01 h  rc=0
+  NP_1M_rdN                    gpus 0          0.01 h  rc=0
+  GE_where_a                   gpus 6,7        1.08 h  rc=0
+  GE_where_b                   gpus 0,6        0.37 h  rc=0
+  S32_r1_where                 gpus 4,5        1.54 h  rc=0
+  GE_where_f                   gpus 0,6        0.10 h  rc=0
+  S32_r2_where                 gpus 4,5        1.80 h  rc=0
+  S32_r1_iw                    gpus 1,2        4.63 h  rc=0
+  GE_where_a                   gpus 1,2        0.00 h  rc=0
+  GE_where_b                   gpus 1,2        0.00 h  rc=0
+  GE_where_f                   gpus 1,2        0.00 h  rc=0
+  S32_r2_iw                    gpus 0,6        4.97 h  rc=0

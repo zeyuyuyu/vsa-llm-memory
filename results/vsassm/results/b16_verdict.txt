@@ -1,0 +1,35 @@
+# B16 verdict (prereg/B16_prereg.md), frozen hand-written set b16_accept.jsonl, 2026-10-20
+
+=== b16_preds/student_s0.jsonl
+  locations  Q-acc 0.914 (64/70)  lenient 0.914  stories 27/30  by category: A 23/23 B 16/16 C 17/17 D 8/14
+  containers Q-acc 1.000 (20/20)  lenient 1.000  stories 10/10  by category: K 20/20
+  events: precision 0.934 recall 0.941 (127 right of 136 parsed, 135 gold)
+  wrong answers with confidence < 0.5: 1/6
+=== b16_preds/student_s1.jsonl
+  locations  Q-acc 0.914 (64/70)  lenient 0.914  stories 27/30  by category: A 23/23 B 16/16 C 17/17 D 8/14
+  containers Q-acc 0.950 (19/20)  lenient 0.950  stories 9/10  by category: K 19/20
+  events: precision 0.906 recall 0.926 (125 right of 138 parsed, 135 gold)
+  wrong answers with confidence < 0.5: 2/7
+=== b16_preds/teacher.jsonl
+  locations  Q-acc 0.829 (58/70)  lenient 0.843  stories 23/30  by category: A 20/23 B 12/16 C 16/17 D 10/14
+  containers Q-acc 1.000 (20/20)  lenient 1.000  stories 10/10  by category: K 20/20
+  events: precision 0.858 recall 0.941 (127 right of 148 parsed, 135 gold)
+  wrong answers with confidence < 0.5: 2/12
+=== b16_preds/llm_1.7b_think.jsonl
+  locations  Q-acc 0.700 (49/70)  lenient 0.700  stories 15/30  by category: A 15/23 B 10/16 C 12/17 D 12/14
+  containers Q-acc 0.250 (5/20)  lenient 0.400  stories 1/10  by category: K 5/20
+=== b16_preds/llm_8b_think.jsonl
+  locations  Q-acc 0.871 (61/70)  lenient 0.900  stories 23/30  by category: A 18/23 B 13/16 C 16/17 D 14/14
+  containers Q-acc 0.700 (14/20)  lenient 0.800  stories 4/10  by category: K 14/20
+
+Student = Qwen3-1.7B + LoRA distilled from the B15 reader (Qwen3-8B, prompt C) on 3,264 free Qwen3-8B stories
+(~28,600 teacher-labelled sentences); ~21 generated tokens per sentence, no thinking.
+P1 locations >= 0.85: PASS both seeds (0.914, 0.914). P2 containers >= 0.80: PASS (1.000, 0.950).
+P3 within 0.05 of the teacher: FAIL as worded - the student is 0.085 ABOVE the teacher on locations (0.914 vs 0.829);
+containers within 0.05. Prediction (P3 holds for locations, not containers): wrong, the other way round.
+Development (spent B13/B14/B15 sets): student 0.925-0.950 / 0.90-1.00, teacher 0.914-0.963 / 0.90-1.00.
+Long model-written stories (post hoc, 8B-filtered): student s0 0.971 / 1.000, s1 0.912 / 1.000 at N=40 / 160;
+Qwen3-8B thinking 0.853 / 0.214, Qwen3-1.7B thinking 0.676 / 0.143.
+Student errors (s0, 6 questions, 3 stories, all category D): a move missed ("handed over to the club office"), and two
+swaps whose earlier contents are told AFTER the swap ("Before that, the left locker held ...") - the memory applies
+events in sentence order, so flashbacks are a structural limit.

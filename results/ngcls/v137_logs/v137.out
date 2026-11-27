@@ -1,0 +1,4 @@
+===== V-137 frontier readers at volume =====
+  models ['zai-org/glm-5.3', 'deepseek/deepseek-v4-pro'] | K [120, 2000] | n=60 | caps 400 calls, 4.0M prompt tokens
+  BUDGET STOP at K=120 zai-org/glm-5.3: HTTP 429 {"error":{"code":"rate_limit_exceeded","message":"Access key max cost limit exceeded (cap 100)","type":"rate_limit_exceeded"}}
+V137-WRAPPER-EXIT 0

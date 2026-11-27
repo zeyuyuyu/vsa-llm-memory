@@ -1,0 +1,14 @@
+# B69 checks C2 (independent recount) and C3 (sample recount)
+
+C2 (B): uncharged requirements recounted 112, mismatches 0; charged 448, mismatches 0
+C2 (A): charged requirements recounted 1120, mismatches 0
+
+C3 sample recount (B, uncharged): pooled failed keys / probed keys per budget around N*
+  T-rep|256|k16          N* 724  512:48/2400  609:16/2400  724:9/2400  861:7/2400  1024:1/2400
+  T-rep|256|k8           N* 215  152:55/2400  181:21/2400  215:5/2400  256:3/2400  304:0/2400
+  T-rep|6000|k8          N* 304  215:67/2400  256:27/2400  304:3/2400  362:2/2400  431:1/2400
+  H-SBC|6000|k4          N* 45  32:143/2400  38:37/2400  45:12/2400  54:0/2400  64:0/2400
+  O-BCH|1024|k1          N* 27  27:2/2400  32:2/2400  38:2/2400
+  T-rep|24000|k4         N* 108  76:95/2400  91:86/2400  108:6/2400  128:6/2400  152:0/2400
+  H-SBC|1024|k16         N* 304  215:52/2400  256:27/2400  304:8/2400  362:0/2400  431:0/2400
+  O-BCH|24000|k1         N* 32  32:0/2400  38:0/2400  45:0/2400

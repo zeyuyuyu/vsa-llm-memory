@@ -1,0 +1,162 @@
+0783516104b29cab09d3e034f90cec73  b32_lm_select.py
+f369b096f9edd953214193bc97c4ee32  b32_data/entities.json
+1db6556d2d3a0b1d8d904d7cf7961b1e  b32_data/emb_strings.json
+llama31i mean_L8: dev entity retrieval 0.5181 (stored 1838, queries 2152)
+llama31i mean_L16: dev entity retrieval 0.5929 (stored 1838, queries 2152)
+llama31i mean_L24: dev entity retrieval 0.6478 (stored 1838, queries 2152)
+llama31i mean_L32: dev entity retrieval 0.4452 (stored 1838, queries 2152)
+llama31i eol_L8: dev entity retrieval 0.2319 (stored 1838, queries 2152)
+llama31i eol_L16: dev entity retrieval 0.3058 (stored 1838, queries 2152)
+llama31i eol_L24: dev entity retrieval 0.6143 (stored 1838, queries 2152)
+llama31i eol_L32: dev entity retrieval 0.5609 (stored 1838, queries 2152)
+mistral7i mean_L8: dev entity retrieval 0.5493 (stored 1838, queries 2152)
+mistral7i mean_L16: dev entity retrieval 0.4805 (stored 1838, queries 2152)
+mistral7i mean_L24: dev entity retrieval 0.5962 (stored 1838, queries 2152)
+mistral7i mean_L32: dev entity retrieval 0.4693 (stored 1838, queries 2152)
+mistral7i eol_L8: dev entity retrieval 0.3095 (stored 1838, queries 2152)
+mistral7i eol_L16: dev entity retrieval 0.3485 (stored 1838, queries 2152)
+mistral7i eol_L24: dev entity retrieval 0.6427 (stored 1838, queries 2152)
+mistral7i eol_L32: dev entity retrieval 0.5804 (stored 1838, queries 2152)
+granite33i mean_L10: dev entity retrieval 0.6199 (stored 1838, queries 2152)
+granite33i mean_L20: dev entity retrieval 0.6348 (stored 1838, queries 2152)
+granite33i mean_L30: dev entity retrieval 0.6538 (stored 1838, queries 2152)
+granite33i mean_L40: dev entity retrieval 0.3713 (stored 1838, queries 2152)
+granite33i eol_L10: dev entity retrieval 0.2495 (stored 1838, queries 2152)
+granite33i eol_L20: dev entity retrieval 0.2974 (stored 1838, queries 2152)
+granite33i eol_L30: dev entity retrieval 0.3072 (stored 1838, queries 2152)
+granite33i eol_L40: dev entity retrieval 0.4600 (stored 1838, queries 2152)
+{
+ "chosen": {
+  "tag": "granite33i",
+  "variant": "mean_L30",
+  "score_float32": 0.6538104089219331,
+  "file_tag": "b46_granite33i_mean_L30_f16",
+  "md5_f16": "c474cf933dc90f0d0f3eaff1b95e26a3",
+  "n_tied_within_0.001": 1
+ },
+ "all": [
+  {
+   "tag": "granite33i",
+   "variant": "mean_L30",
+   "score": 0.6538104089219331
+  },
+  {
+   "tag": "llama31i",
+   "variant": "mean_L24",
+   "score": 0.6477695167286245
+  },
+  {
+   "tag": "mistral7i",
+   "variant": "eol_L24",
+   "score": 0.6426579925650557
+  },
+  {
+   "tag": "granite33i",
+   "variant": "mean_L20",
+   "score": 0.6347583643122676
+  },
+  {
+   "tag": "granite33i",
+   "variant": "mean_L10",
+   "score": 0.6198884758364313
+  },
+  {
+   "tag": "llama31i",
+   "variant": "eol_L24",
+   "score": 0.6143122676579925
+  },
+  {
+   "tag": "mistral7i",
+   "variant": "mean_L24",
+   "score": 0.5961895910780669
+  },
+  {
+   "tag": "llama31i",
+   "variant": "mean_L16",
+   "score": 0.5929368029739777
+  },
+  {
+   "tag": "mistral7i",
+   "variant": "eol_L32",
+   "score": 0.5803903345724907
+  },
+  {
+   "tag": "llama31i",
+   "variant": "eol_L32",
+   "score": 0.5608736059479554
+  },
+  {
+   "tag": "mistral7i",
+   "variant": "mean_L8",
+   "score": 0.5492565055762082
+  },
+  {
+   "tag": "llama31i",
+   "variant": "mean_L8",
+   "score": 0.5181226765799256
+  },
+  {
+   "tag": "mistral7i",
+   "variant": "mean_L16",
+   "score": 0.4804832713754647
+  },
+  {
+   "tag": "mistral7i",
+   "variant": "mean_L32",
+   "score": 0.46933085501858735
+  },
+  {
+   "tag": "granite33i",
+   "variant": "eol_L40",
+   "score": 0.4600371747211896
+  },
+  {
+   "tag": "llama31i",
+   "variant": "mean_L32",
+   "score": 0.4451672862453532
+  },
+  {
+   "tag": "granite33i",
+   "variant": "mean_L40",
+   "score": 0.3712825278810409
+  },
+  {
+   "tag": "mistral7i",
+   "variant": "eol_L16",
+   "score": 0.34851301115241634
+  },
+  {
+   "tag": "mistral7i",
+   "variant": "eol_L8",
+   "score": 0.30947955390334575
+  },
+  {
+   "tag": "granite33i",
+   "variant": "eol_L30",
+   "score": 0.30715613382899626
+  },
+  {
+   "tag": "llama31i",
+   "variant": "eol_L16",
+   "score": 0.30576208178438663
+  },
+  {
+   "tag": "granite33i",
+   "variant": "eol_L20",
+   "score": 0.29739776951672864
+  },
+  {
+   "tag": "granite33i",
+   "variant": "eol_L10",
+   "score": 0.24953531598513012
+  },
+  {
+   "tag": "llama31i",
+   "variant": "eol_L8",
+   "score": 0.23187732342007436
+  }
+ ]
+}
+qwen8chk mean_L9: dev entity retrieval 0.7035 (stored 1838, queries 2152)
+qwen8chk vs B32 qwen8 mean_L9: row cosine min 0.893409 median 1.000000; share >= 0.999 0.9909; share >= 0.99 0.9942
+SELECT_DONE

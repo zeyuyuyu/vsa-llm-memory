@@ -1,0 +1,346 @@
+{
+ "prereg": "6f3ea10",
+ "config": {
+  "models": [
+   "qwen/qwen3-8b",
+   "qwen/qwen3-14b",
+   "qwen/qwen3-32b",
+   "qwen/qwen3-30b-a3b",
+   "qwen/qwen3-next-80b-a3b-instruct",
+   "qwen/qwen3.5-122b-a10b",
+   "qwen/qwen3-235b-a22b",
+   "qwen/qwen3.5-397b-a17b",
+   "z-ai/glm-5",
+   "deepseek/deepseek-v4-flash"
+  ],
+  "n_eval": 300,
+  "budget": 1200,
+  "tokenizer": "Qwen/Qwen3-8B",
+  "workers": 8,
+  "max_tokens": 512,
+  "cap_usd": 25.0,
+  "keyfile": "/path/to/pace-home/.orkey",
+  "out": "/path/to/pace-home/v108_logs/v108.json"
+ },
+ "prompt_tokens": {
+  "single_pass": 197733,
+  "evidence_in_prompt": 50974
+ },
+ "reference": {
+  "store": 0.974,
+  "store_seed_range": [
+   0.97,
+   0.977
+  ],
+  "phi2_single_pass": 0.253,
+  "phi2_evidence_in_prompt": 0.95,
+  "qwen3_8b_single_pass": 0.397,
+  "qwen3_8b_evidence_in_prompt": 0.953
+ },
+ "models": {
+  "qwen/qwen3-8b": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.47,
+    "providers": [
+     "Alibaba"
+    ],
+    "usd": 0.101622781,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.9633333333333334,
+    "providers": [
+     "Alibaba"
+    ],
+    "usd": 0.03344147300000002,
+    "first_errors": []
+   },
+   "minutes": 10.035949552059174
+  },
+  "qwen/qwen3-14b": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.38,
+    "providers": [
+     "Alibaba",
+     "DeepInfra",
+     "NextBit"
+    ],
+    "usd": 0.06019511750000001,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.96,
+    "providers": [
+     "Alibaba",
+     "DeepInfra",
+     "NextBit"
+    ],
+    "usd": 0.019788334999999994,
+    "first_errors": []
+   },
+   "minutes": 6.021995655695597
+  },
+  "qwen/qwen3-32b": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.4633333333333333,
+    "providers": [
+     "DeepInfra",
+     "SiliconFlow"
+    ],
+    "usd": 0.28186927000000017,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.9533333333333334,
+    "providers": [
+     "DeepInfra",
+     "SiliconFlow"
+    ],
+    "usd": 0.06082832,
+    "first_errors": []
+   },
+   "minutes": 66.836022233963
+  },
+  "qwen/qwen3-30b-a3b": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.43666666666666665,
+    "providers": [
+     "Alibaba",
+     "DeepInfra"
+    ],
+    "usd": 0.09742297,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.9433333333333334,
+    "providers": [
+     "Alibaba",
+     "DeepInfra"
+    ],
+    "usd": 0.03391677000000001,
+    "first_errors": []
+   },
+   "minutes": 4.213041285673778
+  },
+  "qwen/qwen3-next-80b-a3b-instruct": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.48,
+    "providers": [
+     "Alibaba",
+     "DeepInfra",
+     "Google",
+     "Novita",
+     "Parasail"
+    ],
+    "usd": 0.023144122500000006,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.9533333333333334,
+    "providers": [
+     "Alibaba",
+     "DeepInfra",
+     "Google",
+     "Novita",
+     "Parasail"
+    ],
+    "usd": 0.007225442500000009,
+    "first_errors": []
+   },
+   "minutes": 0.8093960046768188
+  },
+  "qwen/qwen3.5-122b-a10b": {
+   "single_pass": {
+    "n_scored": 300,
+    "n_error": 0,
+    "acc": 0.4033333333333333,
+    "providers": [
+     "Alibaba",
+     "AtlasCloud",
+     "DeepInfra",
+     "Novita",
+     "SiliconFlow"
+    ],
+    "usd": 1.357566270000001,
+    "first_errors": []
+   },
+   "evidence_in_prompt": {
+    "n_scored": 299,
+    "n_error": 1,
+    "acc": 0.8862876254180602,
+    "providers": [
+     "Alibaba",
+     "AtlasCloud",
+     "DeepInfra",
+     "Novita",
+     "SiliconFlow"
+    ],
+    "usd": 0.4326928599999998,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credi"
+    ]
+   },
+   "minutes": 12.561007928848266
+  },
+  "qwen/qwen3-235b-a22b": {
+   "single_pass": {
+    "n_scored": 197,
+    "n_error": 103,
+    "acc": 0.4365482233502538,
+    "providers": [
+     "Alibaba"
+    ],
+    "usd": 0.27881990500000026,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credi",
+     "http 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credi",
+     "http 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credi"
+    ]
+   },
+   "evidence_in_prompt": {
+    "n_scored": 51,
+    "n_error": 249,
+    "acc": 1.0,
+    "providers": [
+     "Alibaba"
+    ],
+    "usd": 0.028597660000000004,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credi",
+     "http 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credi",
+     "http 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credi"
+    ]
+   },
+   "minutes": 20.986867030461628
+  },
+  "qwen/qwen3.5-397b-a17b": {
+   "single_pass": {
+    "n_scored": 0,
+    "n_error": 300,
+    "acc": NaN,
+    "providers": [],
+    "usd": 0.0,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 47. To increase, visit https:/",
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 48. To increase, visit https:/",
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 48. To increase, visit https:/"
+    ]
+   },
+   "evidence_in_prompt": {
+    "n_scored": 0,
+    "n_error": 300,
+    "acc": NaN,
+    "providers": [],
+    "usd": 0.0,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 47. To increase, visit https:/",
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 48. To increase, visit https:/",
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 47. To increase, visit https:/"
+    ]
+   },
+   "minutes": 25.69296648899714
+  },
+  "z-ai/glm-5": {
+   "single_pass": {
+    "n_scored": 0,
+    "n_error": 300,
+    "acc": NaN,
+    "providers": [],
+    "usd": 0.0,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 53. To increase, visit https:/",
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 76. To increase, visit https:/",
+     "http 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 512 tokens, but can only afford 53. To increase, visit https:/"
+    ]
+   },
+   "evidence_in_prompt": {
+    "n_scored": 0,
+    "n_error": 300,
+    "acc": NaN,
+    "providers": [],
+    "usd": 0.0,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re",
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re",
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re"
+    ]
+   },
+   "minutes": 25.661229046185813
+  },
+  "deepseek/deepseek-v4-flash": {
+   "single_pass": {
+    "n_scored": 0,
+    "n_error": 300,
+    "acc": NaN,
+    "providers": [],
+    "usd": 0.0,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re",
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re",
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re"
+    ]
+   },
+   "evidence_in_prompt": {
+    "n_scored": 0,
+    "n_error": 300,
+    "acc": NaN,
+    "providers": [],
+    "usd": 0.0,
+    "first_errors": [
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re",
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re",
+     "http 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"re"
+    ]
+   },
+   "minutes": 25.698279496033987
+  }
+ },
+ "usd_total": 2.8171312965000013,
+ "merge": {
+  "main": "v108_logs/v108.json",
+  "extra": "v108_logs/v108b.json",
+  "discarded": [
+   {
+    "model": "qwen/qwen3-235b-a22b",
+    "kept_main": 0.4365482233502538,
+    "dropped_extra": 0.4633333333333333
+   },
+   {
+    "model": "qwen/qwen3.5-397b-a17b",
+    "kept_main": NaN,
+    "dropped_extra": 0.36
+   },
+   {
+    "model": "z-ai/glm-5",
+    "kept_main": NaN,
+    "dropped_extra": 0.28
+   },
+   {
+    "model": "deepseek/deepseek-v4-flash",
+    "kept_main": NaN,
+    "dropped_extra": 0.4766666666666667
+   }
+  ],
+  "taken_from_extra": []
+ }
+}

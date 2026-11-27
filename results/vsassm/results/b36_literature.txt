@@ -1,0 +1,273 @@
+# B36 literature check (before the B36 test run; sources verified on 2026-11-18)
+# Each entry opened on its own page (arXiv/author/publisher copy, PDF text via pdftotext; missing fields from Crossref /
+# Open Library). "(abstract only)" = only abstract or record seen; "our arithmetic" = numbers we derived. Claims:
+# C-exact = static functions need ~log2 V bits/key for EXACT keys; C-lsh = key-free structures keyed by LSH/PQ signatures
+# can answer alias queries; C-vsa = MAP store spends no bits on keys; C-B36 = VSA beats the best key-free classical
+# structure at equal bits for alias queries; C-rate = bits retrieved per stored number; C-gap = no equal-bits comparison.
+
+== 1. Static functions / retrieval structures and their space ==
+[Bl70] Bloom, B. H. Space/time trade-offs in hash coding with allowable errors. Commun. ACM 13(7):422-426, 1970
+  (doi:10.1145/362686.362692; scanned copy). Text: new methods "reduce the amount of space required to contain the
+  hash-coded information" by "exploiting the possibility that a small fraction of errors of commission may be tolerable".
+  -> METHOD SOURCE (Bloom arm). Membership only: values need one filter per value or per value bit.
+[CKRT04] Chazelle, B., Kilian, J., Rubinfeld, R., Tal, A. The Bloomier filter: an efficient data structure for static
+  support lookup tables. SODA 2004, pp. 30-39 (author copy cs.princeton.edu/~chazelle/pubs/soda-rev04.pdf). Text:
+  "query f at any point of S always correctly and at any point of D \ S almost always correctly"; "the space
+  requirement is O(nr)"; if S may change, "linear size (measured in bits) is impossible to achieve".
+  -> METHOD SOURCE; CONTEXT for C-exact: correctness only for keys in S. An alias is a key outside S, so recall rests
+     entirely on its LSH/PQ signature equalling the stored one.
+[DP08] Dietzfelbinger, M., Pagh, R. Succinct data structures for retrieval and approximate membership. ICALP 2008,
+  LNCS 5125:385-396 (Crossref; arXiv:0803.3693). Abstract: minimal perfect hashing "induces a space overhead of
+  Theta(n) bits in addition to the nr bits needed for function values"; overhead "can be reduced to O(log log n) bits
+  whp" with logarithmic evaluation time. (abstract only)
+  -> SUPPORTS C-exact: the floor is n*r bits (log2 V per key) and is approachable in theory.
+[GOV16] Genuzio, M., Ottaviano, G., Vigna, S. Fast scalable construction of (minimal perfect hash) functions. SEA 2016
+  (arXiv:1603.04330). Abstract: lazy Gaussian elimination "reduces the multiplicative overhead from 1.23 to 1.03" for
+  static functions. (abstract only) -> SUPPORTS C-exact: ~1.03 r bits per key in practice (large n).
+[GL20] Graf, T. M., Lemire, D. Xor filters: faster and smaller than Bloom and cuckoo filters. ACM J. Exp. Algorithmics
+  25:1-16, 2020 (Crossref; arXiv:1912.08258). Abstract: "Dietzfelbinger and Pagh described a variation on the Bloomier
+  filter"; per [GL22], success is "greater than 90% when the array contains 1.23n + 32 words".
+  -> METHOD SOURCE (XOR arm). 1.23n + 32 is ~1.36 r bits/key at n = 256 and ~1.26 r at n = 1,024 (our arithmetic).
+[GL22] Graf, T. M., Lemire, D. Binary fuse filters: fast and smaller than xor filters. ACM J. Exp. Algorithmics 27,
+  2022 (arXiv:2201.01174). Text: xor filters "within 23% of the theoretical lower bound ... as opposed to 44% for Bloom
+  filters"; fuse within 13% (8%); Table 1: 3-wise array ~[0.875 + 0.25*max(1, log 10^6 / log n)]*n; "For tiny sets
+  (fewer than 20 000 keys), xor filters might even be slightly smaller".
+  -> CONTEXT (small n): ~1.50n at n = 256, ~1.37n at n = 1,024 (our arithmetic); not the arm to use at B36's M.
+[DW21] Dillinger, P. C., Walzer, S. Ribbon filter: practically smaller than Bloom and Xor. arXiv:2103.02515, 2021.
+  Text: for a static function "a query for x in U \ S may return any value from {0,1}^r"; memory "takes m/n r bits per
+  key"; Standard Ribbon "has increasing space overhead or running time as the number of keys increases"; Balanced
+  Ribbon extends "the extreme space efficiency of small Standard Ribbon filters" ("1.005 lambda + 0.008 bits per key").
+  -> METHOD SOURCE; SUPPORTS C-exact: ribbon is most space-efficient at SMALL n, so at M = 256-1,024 the ribbon arm
+     should sit near log2 V bits/key; an alias whose signature differs gets an arbitrary value (chance 1/V).
+[DHSW22] Dillinger, P. C., Hubschle-Schneider, L., Sanders, P., Walzer, S. Fast succinct retrieval and approximate
+  membership using ribbon. SEA 2022, LIPIcs 233, 4:1-4:20 (arXiv:2109.01892). Text: "The information-theoretic lower
+  bound for both tasks is r|S| bits"; BuRR "achieves space overheads well below 1 %"; standard ribbon at n = 10^6,
+  w = 128: smallest overhead "around 3.3 %".
+  -> SUPPORTS C-exact. No overhead figure for n = 256-1,024 was found in either ribbon paper.
+[HLVW26] Hermann, S., Lehmann, H.-P., Vinciguerra, G., Walzer, S. Learned static function data structures. PVLDB
+  19(5):917-930, 2026 (arXiv:2510.27588). Abstract: "For each key, a model predicts a probability distribution over the
+  values"; "up to one order of magnitude on real data" over compressed static functions. (abstract only) -> CONTEXT:
+     a learned classical variant exists; it exploits key->value structure, absent in B36's random values.
+
+== 2. Sketches and LSH-keyed structures as key-value / associative memories ==
+[CM05] Cormode, G., Muthukrishnan, S. An improved data stream summary: the count-min sketch and its applications.
+  J. Algorithms 55(1):58-75, 2005 (journal PDF copy). Text: "set w = e/eps and d = ln(1/delta)"; the bounded event is
+  Pr[a^_i > a_i + eps*||a||_1].
+  -> METHOD SOURCE (count-min arm). Our arithmetic: error scales with ||a||_1 = M, so separating every stored value
+     from zero needs eps < 1/M, i.e. ~e*M counters per row, far above log2 V bits per fact.
+[CCF02] Charikar, M., Chen, K., Farach-Colton, M. Finding frequent items in data streams. ICALP 2002, LNCS 2380:693-703
+  (Crossref; author copy). Text: count sketch = "array of t hash tables, each containing b buckets" with +/-1 signs;
+  "Estimate(C, q): return median_i {h_i[q] * s_i[q]}".
+  -> METHOD SOURCE (count-sketch arm); with value codes in buckets it is the sparse analogue of sum phi(key)*c(value).
+[Mi02] Mitzenmacher, M. Compressed Bloom filters. IEEE/ACM Trans. Netw. 10(5):604-612, 2002 (author PDF). Text: they
+  "improve performance when the Bloom filter is passed as a message, and its transmission size is a limiting factor".
+  -> METHOD SOURCE for fair bit counting: tune Bloom/sketch arms for stored (compressed) size, as for the VSA vector.
+[KM06] Kirsch, A., Mitzenmacher, M. Distance-sensitive Bloom filters. ALENEX 2006, pp. 41-50 (Crossref; author PDF).
+  Text: answers "Is x close to an element of S?" "using locality-sensitive hash functions as a building block"; "allow
+  false positives and false negatives"; Hamming case "only efficient and effective for constant delta when eps =
+  O(1/log n)"; open: are there information-theoretic bounds "in this setting?"
+  -> SUPPORTS C-lsh (the referee's LSH-Bloom arm); CONTEXT for C-B36: LSH keying tolerates only small perturbations,
+     and the equal-bits optimum for approximate queries was left open.
+[HXVF12] Hua, Y., Xiao, B., Veeravalli, B., Feng, D. Locality-sensitive Bloom filter for approximate membership query.
+  IEEE Trans. Computers 61(6):817-830, 2012 (author PDF). Abstract: "replacing uniform and independent hash functions
+  with locality-sensitive hash functions". -> METHOD SOURCE (LSH-Bloom arm; membership only).
+[GPSS17] Goswami, M., Pagh, R., Silvestri, F., Sivertsen, J. Distance sensitive Bloom filters without false negatives.
+  SODA 2017 (arXiv:1607.05451). Text: prior work "accepted false positive and false negative answers"; Thm 3.1: with
+  error 0 "the optimal filter is no better than one that stores S explicitly" (Omega(nd) bits for d = omega(log n));
+  with false-positive rate eps the bounds are of order n(r^2/d + log 1/eps); upper bounds use "a succinct version of a
+  CountSketch".
+  -> CONTEXT for C-B36: exact distance-sensitive answers cost as much as storing the vectors; compact key-free
+     structures for approximate keys must accept errors, the regime B36 measures.
+[LJWCL07] Lv, Q., Josephson, W., Wang, Z., Charikar, M., Li, K. Multi-probe LSH: efficient indexing for high-dimensional
+  similarity search. VLDB 2007, pp. 950-961 (author PDF). Text: multi-probe "intelligently probes multiple buckets";
+  "reduces the number of hash tables by a factor of 14 to 18".
+  -> METHOD SOURCE for a stronger key-free arm: probe the static function / Bloom filter at the alias signature's
+     low-margin bit flips (more recall, zero extra stored bits).
+[PWZ21] Panigrahy, R., Wang, X., Zaheer, M. Sketch based memory for neural networks. AISTATS 2021, PMLR 130:3169-3177.
+  Text: memory "hashes x into k bucket ids using k independent LSH functions"; each bucket "contains a learnable
+  vector"; "Claim 3.4. The LSH hash function maps the fuzzy keys in a ball B(x, eps) into at most N^O(eps) hash
+  buckets", so N fuzzy pairs become "a problem of N^(1+O(eps)) (bucket-id, value) pairs".
+  -> CLOSEST PRECEDENT for C-lsh (LSH-indexed, key-free, summed key-value memory with fuzzy keys); CONTEXT for C-B36:
+     fuzzy keys cost an N^O(eps) factor in bucket memories. No comparison with VSA/HRR.
+[DSN17] Dasgupta, S., Stevens, C. F., Navlakha, S. A neural algorithm for a fundamental computing problem. Science
+  358(6364):793-796, 2017 (PDF copy). Text: the fly circuit uses "a variant of a computer science algorithm (called
+  locality-sensitive hashing)"; "Fifty PNs project to 2000 Kenyon cells", sparse binary random, then winner-take-all.
+  -> METHOD SOURCE (fly-hash signatures as an alternative key code).
+[DSSN18] Dasgupta, S., Sheehan, T. C., Stevens, C. F., Navlakha, S. A neural data structure for novelty detection.
+  PNAS 115(51):13093-13098, 2018 (Europe PMC). Abstract: fly circuit "evolved a variant of a Bloom filter"; "distance-
+  and time-sensitive Bloom filters that outperform prior filters". (abstract only) -> SUPPORTS C-lsh (LSH-keyed Bloom).
+[SR21] Sinha, K., Ram, P. Fruit-fly inspired neighborhood encoding for classification. KDD 2021, pp. 1470-1480
+  (Crossref; arXiv:2008.08685). Abstract: "a per-class Fly Bloom Filter"; agrees with the nearest-neighbour classifier
+  "with high probability"; competitive with "nearest-neighbor classifiers". (abstract only)
+  -> CLOSEST CLASSICAL ANALOGUE of the VSA store at small V: one LSH-keyed Bloom filter per value, read by overlap with
+     the query's code, no keys stored. Should be a B36 arm ("Bloom-per-value"); no equal-bits comparison with VSA.
+[KNRB17] Kaiser, L., Nachum, O., Roy, A., Bengio, S. Learning to remember rare events. ICLR 2017 (arXiv:1703.03129).
+  Text: "Our memory consists of a matrix K of memory keys, a vector V of memory values, and ... A [ages]". -> CONTEXT:
+     the usual neural key-value memory stores keys (a per-fact index), not a key-free structure.
+[CS20] Coleman, B., Shrivastava, A. Sub-linear RACE sketches for approximate kernel density estimation on streaming
+  data. WWW 2020, pp. 1739-1749 (Crossref; arXiv:1912.02283). Abstract: "RACE compresses a set of N high dimensional
+  vectors into a small array of integer counters". (abstract only) -> METHOD SOURCE for LSH count arrays ([CBS20]).
+[RBL19] Rae, J. W., Bartunov, S., Lillicrap, T. P. Meta-learning neural Bloom filters. ICML 2019 (arXiv:1906.04304).
+  Text: Bloom filters are near-optimal "when data is drawn uniformly ... but ... sub-optimal when there is more
+  structure"; without structure the model "learns a solution similar to a Bloom Filter derivative", with structure it
+  is "considerably more compressive (e.g. 30x for a database task)".
+  -> SUPPORTS the mechanism behind C-B36: a distributed memory wins at equal space only by using structure; in B36 the
+     structure is alias-to-name code similarity, which exact hashing discards.
+[Ch02] Charikar, M. S. Similarity estimation techniques from rounding algorithms. STOC 2002, pp. 380-388 (Crossref;
+  author PDF). Text: random-hyperplane family with Pr[h(u) = h(v)] = 1 - theta(u,v)/pi.
+  -> METHOD SOURCE (SimHash keys); each alias signature bit flips with probability theta/pi.
+[GLGP13] Gong, Y., Lazebnik, S., Gordo, A., Perronnin, F. Iterative quantization: a Procrustean approach to learning
+  binary codes for large-scale image retrieval. IEEE TPAMI 35(12):2916-2929, 2013 (Crossref; author PDF). Abstract:
+  "finding a rotation of zero-centered data so as to minimize the quantization error". -> METHOD SOURCE (ITQ keys).
+[JDS11] Jegou, H., Douze, M., Schmid, C. Product quantization for nearest neighbor search. IEEE TPAMI 33(1):117-128,
+  2011 (HAL postprint). Abstract: "decomposes the space into a Cartesian product of low dimensional subspaces and to
+  quantize each subspace separately". -> METHOD SOURCE (PQ keys).
+
+== 3. Sparse distributed memory and associative-memory capacity ==
+[Ka88] Kanerva, P. Sparse Distributed Memory. MIT Press, 1988 (ISBN 0262111322; Open Library record only; design as in
+  [KPS10]: "the first memory matrix A1 is a fixed random projection", only the second is learned). -> METHOD SOURCE.
+[Jae89] Jaeckel, L. A. An alternative design for a sparse distributed memory. RIACS TR 89.28 (NASA-CR-188847), 1989
+  (NTRS record). Abstract: locations defined by "ten selected coordinates (bit positions in the address vectors)",
+  active when the address matches them; TR 89.30: "Kanerva's original design and the selected-coordinate design are
+  related". (abstract only) -> METHOD SOURCE: selected-coordinate SDM is an LSH-bucket memory (bridge to section 2).
+[Chou89] Chou, P. A. The capacity of the Kanerva associative memory. IEEE Trans. Inf. Theory 35(2):281-298, 1989
+  (Crossref); NIPS 1987 abstract: the sphere-packing exponential bound "can actually be achieved by the Kanerva
+  associative memory" with optimal parameters. (abstract only) -> CONTEXT: capacity per address length, not per bit.
+[Kee88] Keeler, J. D. Comparison between Kanerva's SDM and Hopfield-type neural networks. Cognitive Science
+  12(3):299-329, 1988 (Crossref); read in RIACS TR 86.31 (1986). Text: "the total number of stored bits per matrix
+  element is the same in the two models"; "a good rule of thumb for the capacity of the SDM is 0.13m (for n =
+  100-1000)"; total information "is a constant times the number of matrix elements, independent of the particular model".
+  -> SUPPORTS treating SDM as a calibration arm: at equal counters it should not beat linear superposition by more
+     than a constant.
+[WWGL18] Wu, Y., Wayne, G., Graves, A., Lillicrap, T. The Kanerva Machine: a generative distributed memory. ICLR 2018
+  (arXiv:1804.01756). Abstract: "Inspired by Kanerva's sparse distributed memory". (abstract only) -> CONTEXT.
+[BP21] Bricken, T., Pehlevan, C. Attention approximates sparse distributed memory. NeurIPS 2021 (arXiv:2111.05498).
+  Abstract: attention "can be closely related ... to Kanerva's Sparse Distributed Memory". (abstract only) -> CONTEXT.
+[KPS10] Knoblauch, A., Palm, G., Sommer, F. T. Memory capacities for synaptic and structural plasticity. Neural
+  Computation 22:289-341, 2010 (Redwood PDF). Text: Willshaw/Hopfield store "<= ln 2 ~ 0.7" bits per synapse;
+  compression reaches "C^I -> 1"; "the performance of the grandmother cell model [look-up table] is superior to that of
+  the single-layer model in many cases"; "no (distributed) associative memory model is known that equals look-up
+  tables in their ability to store an arbitrary large number of patterns without any errors"; the compressed LUT
+  "outperforms the Willshaw network for almost all parameters" (retrieval cost, sequential hardware).
+  -> CONFLICTS (caution) in principle: the one careful equal-resource comparison of distributed associative memory with
+     look-up tables found tables ahead in most regimes. Binary Willshaw nets, mostly exact addresses: bounds C-B36.
+
+== 4. VSA/HDC links to sketches, Bloom filters and capacity ==
+[Kan09] Kanerva, P. Hyperdimensional computing: an introduction ... Cogn. Comput. 1:139-159, 2009 (PDF copy). Text:
+  record H = X*A + Y*B + Z*C; "multiply H with (the inverse of) X and probe the item memory with the result, retrieving
+  A"; the cross terms "act as random noise".
+  -> METHOD SOURCE (VSA store and read: unbind with the key, clean up over value codes).
+[Pla95] Plate, T. A. Holographic reduced representations. IEEE Trans. Neural Netw. 6(3):623-641, 1995 (Redwood PDF).
+  Text: associations storable are "approximately linear in the dimensionality"; fit "n = 4.5(k + 0.7) ln(m/(30 q^4))"
+  (q = probability of one or more decoding errors); recognition needs "about 2k log2 M bits of information".
+  -> CONTEXT for C-rate: ~4.5 ln(m/30q^4) real numbers per pair for error-free whole-trace decoding.
+[FKS18] Frady, E. P., Kleyko, D., Sommer, F. T. A theory of sequence indexing and working memory in recurrent neural
+  networks. Neural Computation 30(6):1449-1513, 2018 (Crossref; arXiv:1803.00412). Text: "a capacity bound of 0.39 bits
+  per neuron in the high-fidelity regime"; "reaching over 0.5 bits per neuron for large D"; Plate's estimate "at least
+  0.16 bits per neuron"; "different VSA frameworks from the literature have universal properties".
+  -> CONFLICTS for exact keys (C-rate): superposition + nearest-neighbour clean-up yields <= ~0.5 bits per stored analog
+     number; a static function returns ~0.74-0.99 bits per stored bit (1/1.36 to 1/1.01). At exact keys the static
+     function should win at equal bits; a B36 win must come from the alias regime.
+[KBHK23] Kleyko, D., Bybee, C., Huang, P.-C., Kymn, C. J., Olshausen, B. A., Frady, E. P., Sommer, F. T. Efficient
+  decoding of compositional structure in holistic representations. Neural Computation 35(7):1159-1186, 2023
+  (Crossref; arXiv:2305.16873). Abstract: rate raised "from 1.20 to 1.40 bits per dimension for smaller codebooks and
+  from 0.60 to 1.26 bits per dimension for larger codebooks". (abstract only)
+  -> CONTEXT for C-rate: iterative decoders exceed 1 bit/dimension; B36's single-shot clean-up is not the best reader.
+[TDR21] Thomas, A., Dasgupta, S., Rosing, T. A theoretical perspective on hyperdimensional computing. JAIR 72:215-249,
+  2021 (Crossref; arXiv:2010.07426v3). Text: thresholded sparse bundling "is essentially a standard implementation of
+  the popular 'Bloom filter' data structure"; dimension "on the order of s ln(1/delta)" for false-positive rate delta.
+  -> SUPPORTS: the Bloom arm is a special case of HDC set encoding.
+[KRRO22] Kleyko, D., Rachkovskij, D. A., Osipov, E., Rahimi, A. A survey on hyperdimensional computing aka vector
+  symbolic architectures, Part I. ACM Computing Surveys 55(6), 2022 (arXiv:2111.06077). Text: a Bloom filter "is an HV
+  where the superposition operation is obtained by the component-wise disjunction ... and, thus, can be seen as a
+  special case of HDC/VSA"; decoders reach "1.2 bits/component" and "up to 1.4 bits/component".
+  -> SUPPORTS the Bloom-HDC equivalence; CONTEXT for C-rate.
+[KRGO20] Kleyko, D., Rahimi, A., Gayler, R. W., Osipov, E. Autoscaling Bloom filter: controlling trade-off between true
+  and false positives. Neural Comput. Appl. 32(8):3675-3684, 2020 (Crossref; arXiv:1705.03934). Text: "a binarized
+  counting Bloom filter with an adjustable binarization threshold"; "BFs are treated as a special case application of
+  distributed representations".
+  -> SUPPORTS: counting/threshold filters and superposition stores form one continuum; giving up perfect recall buys
+     capacity (the accuracy-vs-bits trade B36 measures).
+[CUY23] Clarkson, K. L., Ubaru, S., Yang, E. Capacity analysis of vector symbolic architectures. arXiv:2301.10352v2,
+  2023 (Crossref lists JAIR 2026, doi:10.1613/jair.1.18335, not opened). Text: VSA operations recast in "the language
+  of sketching matrices ... or of hashing-based data structures (like Bloom Filters)"; block-sparse bundling "is called
+  a count-min sketch in the data structures literature, and the Sparse Block Codes model in the VSA literature";
+  Table 3: MAP-B membership and key-value membership need dimension O(||v||_1 log(d/delta)).
+  -> SUPPORTS: count-min is a VSA (sparse keys), and MAP-B needs O(log(d/delta)) bits per pair, Bloom-like; constants
+     are not compared at equal bits.
+[SS22] Steinberg, J., Sompolinsky, H. Associative memory of structured knowledge. Sci. Rep. 12:21808, 2022 (Europe PMC).
+  Abstract: structures as "binary relations between events and attributes", VSA-encoded, stored as fixed points and
+  retrieved from partial cues. (abstract only) -> CONTEXT for C-vsa; no comparison with tables or sketches.
+[DWUKG16] Danihelka, I., Wayne, G., Uria, B., Kalchbrenner, N., Graves, A. Associative long short-term memory. ICML
+  2016 (arXiv:1602.03032). Abstract: "Holographic Reduced Representations have limited capacity"; "redundant copies of
+  stored information ... enables retrieval with reduced noise". (abstract only) -> CONTEXT (HRR key-value store).
+[SNP21] Schlegel, K., Neubert, P., Protzel, P. A comparison of vector symbolic architectures. Artif. Intell. Rev.
+  55:4523-4555, 2022 (Crossref; arXiv:2001.11797). Text: evaluation uses "the required number of dimensions ... instead
+  of the physical memory consumption"; "using the number of dimensions introduces a bias towards VSAs with high memory
+  requirements per dimension".
+  -> SUPPORTS C-gap: the main VSA comparison is at equal dimension, not equal bits, and says so.
+
+== 5. Sources that conflict with (or bound) C-B36 ==
+[CBS20] Coleman, B., Baraniuk, R. G., Shrivastava, A. Sub-linear memory sketches for near neighbor search on streaming
+  data. ICML 2020 (arXiv:1902.06687v3). Text: "the first sublinear memory sketch that can be queried to find the
+  nearest neighbors"; size "O(N^b log^3 N)", b < 1; it "can correctly report the nearest neighbors of any query that
+  satisfies a stability condition"; "consists entirely of short integer arrays" built from LSH-based estimators.
+  -> CONFLICTS with reading C-B36 as "only superposition beats per-item storage for approximate keys": a classical
+     LSH-keyed counter sketch already reports neighbour identities in sub-linear memory (SUPPORTS the principle). Its
+     RACE/count-array design is the strongest key-free classical arm to add.
+Also bounding C-B36 (entries above): [KPS10] tables ahead of distributed associative memory in most regimes; [FKS18]
+superposition <= ~0.5 bits per stored number at exact keys; [GPSS17] zero-error distance-sensitive filters are no
+better than storing S. No source reports count-min, Bloom or static functions beating HDC/VSA at equal bits.
+
+== Supporting (summary) ==
+- Exact-key baselines are near-optimal and documented: floor r|S| bits [DHSW22]; ribbon best at small n [DW21]; BuRR
+  <1% at large n; XOR ~1.26-1.36 r at M = 1,024/256 [GL20, GL22]; binary fuse worse at small n. All return arbitrary
+  values outside S [DW21, CKRT04], so alias accuracy = P(match) + (1 - P(match))/V for single-signature reads.
+- Key-free LSH-keyed arms exist in print: LSH Bloom [KM06, HXVF12, DSSN18], Bloom-per-value [SR21], LSH bucket memory
+  [PWZ21], LSH count arrays [CS20, CBS20], multi-probe reads [LJWCL07]. One family with the VSA store: Bloom =
+  thresholded sparse HDC [TDR21, KRRO22, KRGO20]; count-min = sparse-block-code VSA [CUY23].
+- Approximate keys are costly for hashing: N^(1+O(eps)) pairs [PWZ21]; eps = O(1/log n) [KM06]; zero error costs as
+  much as storing S [GPSS17]; distributed memories beat Bloom at equal space only via structure [RBL19]. Consistent
+  with the predecessor (VSA ahead only at small V and low bits per fact).
+
+== Conflicting (summary) ==
+- Exact keys favour static functions (~0.74-0.99 bits per stored bit) over superposition with clean-up (<= ~0.5 bits
+  per analog number [FKS18]; more only with iterative decoders [KBHK23]): B36 should show the VSA losing there.
+- Key-free superposed retrieval for approximate keys is not VSA-specific [CBS20]: test C-B36 against an LSH
+  count-sketch / Bloom-per-value arm with multi-probe, not only single-signature static functions.
+- The equal-resource associative-memory vs look-up-table comparison [KPS10] favoured tables in most regimes.
+
+== Gap: what we did NOT find ==
+Searches (WebSearch, standard + extended): "hyperdimensional computing compared with count-min sketch OR Bloom filter
+equal memory budget bits key-value store"; "holographic reduced representations OR vector symbolic key-value memory
+compared to hash table memory efficiency bits per item"; "vector symbolic architecture superposition memory versus
+Bloomier filter OR ribbon retrieval OR xor filter comparison same number of bits"; "associative memory noisy key
+retrieval bits per item versus hash table with locality sensitive hashing ..."; "hyperdimensional count sketch OR
+count-min equivalence ..."; "Bloomier filter locality-sensitive hashing approximate key lookup similarity".
+Result: no equal-bits comparison of VSA/HRR/HDC with Bloomier/ribbon/XOR, Bloom, count-min/count sketch or SDM, with
+or without LSH/PQ keys; no paper keys a static function by LSH signatures for approximate lookup; the bound for
+distance-sensitive lookup is posed as open [KM06]; VSA comparisons are at equal dimension [SNP21]; link papers [CUY23,
+TDR21, KRGO20] give bounds, not head-to-head bits. Nearest prior art: [PWZ21], [SR21], [CBS20].
+Seen, not entered: Phadke 2025 arXiv:2512.00378 (single-author preprint, no comparison); Heddes et al. 2022 DAC
+"Hyperdimensional hashing" (listing only); Gallant & Okaywe 2013 (abstract, no capacity figure). Not verified in their
+own text: Willshaw et al. 1969, Palm 1980 (ln 2 quoted via [KPS10]); Hersche et al. 2021 (1.2 bits/component via the
+survey [KRRO22]); Pagh 2016; the Kanerva 1988 book text; the 2020 Information and Computation version of [GOV16].
+
+== After the result (B36 test, results/b36_verdict.txt): support / conflict for each conclusion ==
+- "Exact-signature key-free structures fail on alias queries": SUPPORTED by [KM06] (LSH-keyed Bloom filters only for
+  eps = O(1/log n)) and [PWZ21] (N^O(eps) buckets for fuzzy keys): with alias-label cosines of 0.43-0.51 (median),
+  the static-function arm (SF) trails the VSA by 9.1 points over R1 on Qwen3-8B and the Bloom filter by 13.4, and both
+  saturate below the index at high budgets (RH: VSA - SF +17.0 on Qwen3-8B); dev chose coarse signatures (k <= 8).
+- "The strongest key-free competitors are superposition-type sketches": SUPPORTED by [CUY23] (count-min = sparse
+  block code VSA), [TDR21, KRRO22, KRGO20] (Bloom filters are HDC) and [SR21] (fly Bloom filter per class): the
+  dev-chosen BEST in low-budget cells is a coarse LSH/PQ bucket sketch (CM) or a fly Bloom filter (FBF).
+- "The VSA beats every key-free classical memory at equal bits": QUALIFIED by [CBS20] (LSH count arrays are already a
+  key-free near-neighbour sketch): true on Qwen3-8B codes (R1 +6.77 vs BEST, +7.86 vs CM), not on e5 codes, where the
+  coarse bucket sketch ties the store (R1 VSA - BEST +0.60 [-0.27, +1.43]; VSA - CM +2.09). The win is reader-specific.
+- "Per-fact tables win with many values and many bits": SUPPORTED by [KPS10] (look-up tables ahead of distributed
+  associative memories in most regimes): BEST = the index at V = 1,024 (R2 -3.88 / -6.21) and on e5 at 32-64 bits
+  per fact (RH -11.13).
+- Exact keys ([FKS18], static functions at ~1 bit per stored bit) were not tested here; the conflict noted before the
+  test stands for exact keys.
+- Gap: still no published equal-bits comparison of a VSA/HDC store with static functions, LSH sketches, Bloom filters
+  or SDM for approximate keys; B36 is, as far as we found, the first.

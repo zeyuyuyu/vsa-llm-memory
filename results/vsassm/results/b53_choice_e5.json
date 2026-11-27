@@ -1,0 +1,622 @@
+{
+ "choice": {
+  "1024|16|16|ideal|VSA": {
+   "best_dev_acc": 0.28006671744432327,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.28006671744432327,
+   "n_tied": 1
+  },
+  "1024|16|16|raw|VSA": {
+   "best_dev_acc": 0.28006671744432327,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.28006671744432327,
+   "n_tied": 1
+  },
+  "1024|16|1|ideal|VSA": {
+   "best_dev_acc": 0.12597616539842568,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.12597616539842568,
+   "n_tied": 1
+  },
+  "1024|16|1|raw|VSA": {
+   "best_dev_acc": 0.12597616539842568,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.12597616539842568,
+   "n_tied": 1
+  },
+  "1024|16|2|ideal|VSA": {
+   "best_dev_acc": 0.15153831315729058,
+   "cfg": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.15153831315729058,
+   "n_tied": 1
+  },
+  "1024|16|2|raw|VSA": {
+   "best_dev_acc": 0.1556140099604029,
+   "cfg": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.1556140099604029,
+   "n_tied": 1
+  },
+  "1024|16|32|ideal|VSA": {
+   "best_dev_acc": 0.3253677508129717,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.3253677508129717,
+   "n_tied": 1
+  },
+  "1024|16|32|raw|VSA": {
+   "best_dev_acc": 0.3253677508129717,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.3253677508129717,
+   "n_tied": 1
+  },
+  "1024|16|4|ideal|VSA": {
+   "best_dev_acc": 0.17503399037368414,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.17503399037368414,
+   "n_tied": 1
+  },
+  "1024|16|4|raw|VSA": {
+   "best_dev_acc": 0.17503399037368414,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.17503399037368414,
+   "n_tied": 1
+  },
+  "1024|16|64|ideal|VSA": {
+   "best_dev_acc": 0.36237157645233115,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.3619971461133042,
+   "n_tied": 2
+  },
+  "1024|16|64|raw|VSA": {
+   "best_dev_acc": 0.36237157645233115,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.3619971461133042,
+   "n_tied": 2
+  },
+  "1024|16|8|ideal|VSA": {
+   "best_dev_acc": 0.2305803664266702,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.2305803664266702,
+   "n_tied": 1
+  },
+  "1024|16|8|raw|VSA": {
+   "best_dev_acc": 0.2305803664266702,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.2305803664266702,
+   "n_tied": 1
+  },
+  "1024|2|16|ideal|VSA": {
+   "best_dev_acc": 0.6455239762013475,
+   "cfg": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6455239762013475,
+   "n_tied": 1
+  },
+  "1024|2|16|raw|VSA": {
+   "best_dev_acc": 0.6455239762013475,
+   "cfg": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6455239762013475,
+   "n_tied": 1
+  },
+  "1024|2|1|ideal|VSA": {
+   "best_dev_acc": 0.6215227098275914,
+   "cfg": [
+    "whiten",
+    "lin",
+    4,
+    1.0
+   ],
+   "dev_acc": 0.6215227098275914,
+   "n_tied": 1
+  },
+  "1024|2|1|raw|VSA": {
+   "best_dev_acc": 0.6253298650161857,
+   "cfg": [
+    "whiten",
+    "lin",
+    4,
+    1.0
+   ],
+   "dev_acc": 0.6253298650161857,
+   "n_tied": 1
+  },
+  "1024|2|2|ideal|VSA": {
+   "best_dev_acc": 0.6330105353312031,
+   "cfg": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6330105353312031,
+   "n_tied": 1
+  },
+  "1024|2|2|raw|VSA": {
+   "best_dev_acc": 0.6257940641985638,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6257940641985638,
+   "n_tied": 1
+  },
+  "1024|2|32|ideal|VSA": {
+   "best_dev_acc": 0.6638927988121681,
+   "cfg": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6638927988121681,
+   "n_tied": 2
+  },
+  "1024|2|32|raw|VSA": {
+   "best_dev_acc": 0.6638927988121681,
+   "cfg": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6638927988121681,
+   "n_tied": 1
+  },
+  "1024|2|4|ideal|VSA": {
+   "best_dev_acc": 0.6322220236115969,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6316063036655951,
+   "n_tied": 3
+  },
+  "1024|2|4|raw|VSA": {
+   "best_dev_acc": 0.6339618344198441,
+   "cfg": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6339618344198441,
+   "n_tied": 1
+  },
+  "1024|2|64|ideal|VSA": {
+   "best_dev_acc": 0.7046071384524518,
+   "cfg": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7046071384524518,
+   "n_tied": 1
+  },
+  "1024|2|64|raw|VSA": {
+   "best_dev_acc": 0.7046071384524518,
+   "cfg": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7046071384524518,
+   "n_tied": 1
+  },
+  "1024|2|8|ideal|VSA": {
+   "best_dev_acc": 0.6359762473871919,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6359762473871919,
+   "n_tied": 1
+  },
+  "1024|2|8|raw|VSA": {
+   "best_dev_acc": 0.6359762473871919,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6359762473871919,
+   "n_tied": 1
+  },
+  "256|16|16|ideal|VSA": {
+   "best_dev_acc": 0.40567712121989713,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.40567712121989713,
+   "n_tied": 1
+  },
+  "256|16|16|raw|VSA": {
+   "best_dev_acc": 0.40567712121989713,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.40567712121989713,
+   "n_tied": 1
+  },
+  "256|16|1|ideal|VSA": {
+   "best_dev_acc": 0.1240909072703696,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.1240909072703696,
+   "n_tied": 1
+  },
+  "256|16|1|raw|VSA": {
+   "best_dev_acc": 0.12892644879810425,
+   "cfg": [
+    "center",
+    "sgn",
+    2,
+    0.5
+   ],
+   "dev_acc": 0.12892644879810425,
+   "n_tied": 1
+  },
+  "256|16|2|ideal|VSA": {
+   "best_dev_acc": 0.15233985207460918,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.15233985207460918,
+   "n_tied": 1
+  },
+  "256|16|2|raw|VSA": {
+   "best_dev_acc": 0.15233985207460918,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.15233985207460918,
+   "n_tied": 1
+  },
+  "256|16|32|ideal|VSA": {
+   "best_dev_acc": 0.5045112598743333,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5045112598743333,
+   "n_tied": 1
+  },
+  "256|16|32|raw|VSA": {
+   "best_dev_acc": 0.5045112598743333,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5045112598743333,
+   "n_tied": 1
+  },
+  "256|16|4|ideal|VSA": {
+   "best_dev_acc": 0.21281894298036805,
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.21281894298036805,
+   "n_tied": 1
+  },
+  "256|16|4|raw|VSA": {
+   "best_dev_acc": 0.21281894298036805,
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.21281894298036805,
+   "n_tied": 1
+  },
+  "256|16|64|ideal|VSA": {
+   "best_dev_acc": 0.5598806013484678,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5598806013484678,
+   "n_tied": 1
+  },
+  "256|16|64|raw|VSA": {
+   "best_dev_acc": 0.5598806013484678,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5598806013484678,
+   "n_tied": 1
+  },
+  "256|16|8|ideal|VSA": {
+   "best_dev_acc": 0.28785252881359963,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.28785252881359963,
+   "n_tied": 1
+  },
+  "256|16|8|raw|VSA": {
+   "best_dev_acc": 0.28785252881359963,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.28785252881359963,
+   "n_tied": 1
+  },
+  "256|2|16|ideal|VSA": {
+   "best_dev_acc": 0.7091629187669465,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7091629187669465,
+   "n_tied": 1
+  },
+  "256|2|16|raw|VSA": {
+   "best_dev_acc": 0.7091629187669465,
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7091629187669465,
+   "n_tied": 1
+  },
+  "256|2|1|ideal|VSA": {
+   "best_dev_acc": 0.5943611497112354,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.5943611497112354,
+   "n_tied": 1
+  },
+  "256|2|1|raw|VSA": {
+   "best_dev_acc": 0.5943611497112354,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.5943611497112354,
+   "n_tied": 1
+  },
+  "256|2|2|ideal|VSA": {
+   "best_dev_acc": 0.632059015094181,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.632059015094181,
+   "n_tied": 1
+  },
+  "256|2|2|raw|VSA": {
+   "best_dev_acc": 0.632059015094181,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.632059015094181,
+   "n_tied": 1
+  },
+  "256|2|32|ideal|VSA": {
+   "best_dev_acc": 0.7116834077114542,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7116834077114542,
+   "n_tied": 1
+  },
+  "256|2|32|raw|VSA": {
+   "best_dev_acc": 0.7116834077114542,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7116834077114542,
+   "n_tied": 1
+  },
+  "256|2|4|ideal|VSA": {
+   "best_dev_acc": 0.6665566783702092,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6665566783702092,
+   "n_tied": 2
+  },
+  "256|2|4|raw|VSA": {
+   "best_dev_acc": 0.6665566783702092,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6665566783702092,
+   "n_tied": 1
+  },
+  "256|2|64|ideal|VSA": {
+   "best_dev_acc": 0.7177250355728328,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7177250355728328,
+   "n_tied": 1
+  },
+  "256|2|64|raw|VSA": {
+   "best_dev_acc": 0.7177250355728328,
+   "cfg": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7177250355728328,
+   "n_tied": 1
+  },
+  "256|2|8|ideal|VSA": {
+   "best_dev_acc": 0.6829379835026136,
+   "cfg": [
+    "whiten",
+    "sgn",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6829379835026136,
+   "n_tied": 1
+  },
+  "256|2|8|raw|VSA": {
+   "best_dev_acc": 0.6832602976551287,
+   "cfg": [
+    "whiten",
+    "sgn",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6832602976551287,
+   "n_tied": 1
+  }
+ },
+ "devfile": "/path/to/vsassm/b53_out/e5/dev_e5_center_lin.jsonl,/path/to/vsassm/b53_out/e5/dev_e5_center_sgn.jsonl,/path/to/vsassm/b53_out/e5/dev_e5_center_sgn3.jsonl,/path/to/vsassm/b53_out/e5/dev_e5_whiten_lin.jsonl,/path/to/vsassm/b53_out/e5/dev_e5_whiten_sgn.jsonl,/path/to/vsassm/b53_out/e5/dev_e5_whiten_sgn3.jsonl",
+ "enc": "e5"
+}

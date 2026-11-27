@@ -1,0 +1,281 @@
+store 131072/niah_multikey_2/162015  arm V-S  x8  30 d  probed keys 150  pairs 5995  values 5993  S 375
+store bit errors 0.1226
+failed 1 of 150
+  key 'mighty-ketch'  want ['8467981']  got []  shard 179  flipped cells in shard 993 / 8192
+    j=0  true sim 0.465 (noiseless 0.638)  best '8467981' 0.465  threshold 0.50
+    j=1  true sim - (noiseless -)  best '7817248' 0.205  threshold 0.50
+store 131072/niah_multikey_2/170650  arm V-S  x8  30 d  probed keys 150  pairs 5990  values 5989  S 375
+store bit errors 0.1225
+failed 2 of 150
+  key 'zippy-corporation'  want ['2707965']  got []  shard 30  flipped cells in shard 1032 / 8192
+    j=0  true sim 0.465 (noiseless 0.679)  best '2707965' 0.465  threshold 0.50
+    j=1  true sim - (noiseless -)  best '2610890' 0.219  threshold 0.50
+  key 'abnormal-pension'  want ['2565704']  got []  shard 270  flipped cells in shard 1003 / 8192
+    j=0  true sim 0.496 (noiseless 0.733)  best '2565704' 0.496  threshold 0.50
+    j=1  true sim - (noiseless -)  best '9590407' 0.150  threshold 0.50
+store 131072/niah_multikey_2/92134  arm V-Snt  x16  30 d  probed keys 150  pairs 5992  values 5992  S 375
+store bit errors 0.2759
+failed 1 of 150
+  key 'rough-catalyst'  want ['7851904', '5525873']  got ['7851904']  shard 301  flipped cells in shard 2234 / 8192
+    j=0  true sim 0.438 (noiseless 0.857)  best '7851904' 0.438  threshold 0.50
+    j=1  true sim 0.316 (noiseless 0.816)  best '5525873' 0.316  threshold 0.50
+    j=2  true sim - (noiseless -)  best '6789181' 0.166  threshold 0.50
+store 131072/niah_multivalue/304101  arm V-Snt  x16  30 d  probed keys 18  pairs 23  values 21  S 2
+store bit errors 0.2725
+failed 3 of 18
+  key 'northern italy'  want ['800', '1100']  got ['800']  shard 0  flipped cells in shard 2254 / 8192
+    j=0  true sim 0.321 (noiseless 0.815)  best '800' 0.321  threshold 0.50
+    j=1  true sim 0.475 (noiseless 0.883)  best '1100' 0.475  threshold 0.50
+    j=2  true sim - (noiseless -)  best '1070' 0.155  threshold 0.50
+  key 'england'  want ['1800', '1974']  got ['1800']  shard 1  flipped cells in shard 2210 / 8192
+    j=0  true sim 0.399 (noiseless 0.799)  best '1800' 0.399  threshold 0.50
+    j=1  true sim 0.325 (noiseless 0.781)  best '1974' 0.325  threshold 0.50
+    j=2  true sim - (noiseless -)  best '-1.5 to +2 seconds' 0.067  threshold 0.50
+  key 'swift-bronze'  want ['9770838', '8033426', '6307805', '2375453']  got ['9770838']  shard 0  flipped cells in shard 2254 / 8192
+    j=0  true sim 0.319 (noiseless 0.771)  best '9770838' 0.319  threshold 0.50
+    j=1  true sim 0.313 (noiseless 0.726)  best '8033426' 0.313  threshold 0.50
+    j=2  true sim 0.369 (noiseless 0.782)  best '6307805' 0.369  threshold 0.50
+    j=3  true sim 0.328 (noiseless 0.747)  best '2375453' 0.328  threshold 0.50
+    j=4  true sim - (noiseless -)  best '70' 0.074  threshold 0.50
+store 131072/niah_multikey_2/162015  arm T-i  x4  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'wk': 225, 'rv': 22, 'Lmax': 28}  cells/C 0.997
+  array rows: 3063445 cells, flipped 0.0211
+failed 150 of 150
+  key 'rural-messy'  want ['3149341']  got []
+    j=0 true row 0: 7 of 225 key cells flipped (exact match needs 0)
+  key 'unbiased-pharmacopoeia'  want ['6201627']  got []
+    j=0 true row 39: 5 of 225 key cells flipped (exact match needs 0)
+  key 'momentous-mukluk'  want ['4281356']  got []
+    j=0 true row 78: 7 of 225 key cells flipped (exact match needs 0)
+store 131072/niah_multikey_2/170650  arm T-i  x4  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'wk': 233, 'rv': 21, 'Lmax': 29}  cells/C 0.987
+  array rows: 3030940 cells, flipped 0.0208
+failed 150 of 150
+  key 'long-workshop'  want ['9598611']  got []
+    j=0 true row 0: 1 of 233 key cells flipped (exact match needs 0)
+  key 'warm-drum'  want ['9519575']  got []
+    j=0 true row 39: 6 of 233 key cells flipped (exact match needs 0)
+  key 'brief-trafficker'  want ['5660982']  got []
+    j=0 true row 78: 4 of 233 key cells flipped (exact match needs 0)
+store 131072/niah_multikey_2/162015  arm T-iih  x4  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'wk': 225, 'r': 2, 'Lmax': 28}  cells/C 0.929
+  array rows: 2853620 cells, flipped 0.0211
+failed 147 of 150
+  key 'rural-messy'  want ['3149341']  got []
+    j=0 true row 0: 2 of 225 key bits wrong after the 2-copy majority
+  key 'unbiased-pharmacopoeia'  want ['6201627']  got []
+    j=0 true row 39: 7 of 225 key bits wrong after the 2-copy majority
+  key 'momentous-mukluk'  want ['4281356']  got []
+    j=0 true row 78: 11 of 225 key bits wrong after the 2-copy majority
+store 131072/niah_multikey_2/170650  arm T-iih  x4  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'wk': 233, 'r': 2, 'Lmax': 29}  cells/C 0.959
+  array rows: 2947080 cells, flipped 0.0209
+failed 150 of 150
+  key 'long-workshop'  want ['9598611']  got []
+    j=0 true row 0: 2 of 233 key bits wrong after the 2-copy majority
+  key 'warm-drum'  want ['9519575']  got []
+    j=0 true row 39: 3 of 233 key bits wrong after the 2-copy majority
+  key 'brief-trafficker'  want ['5660982']  got []
+    j=0 true row 78: 4 of 233 key bits wrong after the 2-copy majority
+store 131072/niah_multikey_2/162015  arm T-iis  x4  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'Lmax': 28, 'wk': 225, 'rd': 1, 'rp': 20}  cells/C 0.986
+  array rows: 3027475 cells, flipped 0.0207
+failed 2 of 150
+  key 'repulsive-bust'  want ['9633013']  got ['8162378']
+    j=0 chose row 2927 ('repulsive-fax', j=0) at distance 12 (noiseless 10); true row 2536 at distance 13 (its own flipped cells 13 of 225)
+  key 'hot-box'  want ['8831283']  got ['9902358']
+    j=0 chose row 4093 ('hot-fob', j=0) at distance 5 (noiseless 4); true row 2926 at distance 6 (its own flipped cells 6 of 225)
+store 131072/niah_multikey_2/180562  arm T-iis  x4  30 d  probed keys 150  pairs 5986  values 5984  S 375
+layout {'W': 513, 'Lmax': 29, 'wk': 233, 'rd': 1, 'rp': 20}  cells/C 1.000
+  array rows: 3070818 cells, flipped 0.0207
+failed 2 of 150
+  key 'roomy-bout'  want ['2967471']  got ['6725039']
+    j=0 chose row 1412 ('roomy-coal', j=0) at distance 6 (noiseless 5); true row 156 at distance 9 (its own flipped cells 9 of 233)
+  key 'roasted-air'  want ['2800144']  got ['8397341']
+    j=0 chose row 2772 ('roasted-car', j=0) at distance 5 (noiseless 2); true row 5268 at distance 8 (its own flipped cells 8 of 233)
+store 131072/niah_multikey_2/162015  arm T-iix  x16  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'h': 27, 'wk': 27, 'rd': 8, 'rp': 21}  cells/C 0.995
+  array rows: 3057450 cells, flipped 0.2764
+failed 60 of 150
+  key 'momentous-mukluk'  want ['4281356']  got ['6612082']
+    j=0 chose row 78 ('momentous-mukluk', j=0) at distance 59 (noiseless 0); true row 78 at distance 59 (its own flipped cells 59 of 216)
+  key 'sharp-hurricane'  want ['4059767']  got ['2695232']
+    j=0 chose row 234 ('sharp-hurricane', j=0) at distance 67 (noiseless 0); true row 234 at distance 67 (its own flipped cells 67 of 216)
+  key 'bashful-chandelier'  want ['2797131']  got ['4474160']
+    j=0 chose row 4841 ('pleasant-hire', j=0) at distance 68 (noiseless 72); true row 273 at distance 69 (its own flipped cells 69 of 216)
+store 131072/niah_multikey_2/170650  arm T-iix  x16  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'h': 26, 'wk': 26, 'rd': 8, 'rp': 21}  cells/C 0.979
+  array rows: 3006980 cells, flipped 0.2762
+failed 54 of 150
+  key 'zippy-corporation'  want ['2707965']  got ['6821158']
+    j=0 chose row 195 ('zippy-corporation', j=0) at distance 55 (noiseless 0); true row 195 at distance 55 (its own flipped cells 55 of 208)
+  key 'aloof-validate'  want ['9901564']  got ['2953943']
+    j=0 chose row 312 ('aloof-validate', j=0) at distance 51 (noiseless 0); true row 312 at distance 51 (its own flipped cells 51 of 208)
+  key 'warlike-boat'  want ['4355871']  got ['1560958']
+    j=0 chose row 2294 ('telling-inhibition', j=0) at distance 64 (noiseless 48); true row 1014 at distance 67 (its own flipped cells 67 of 208)
+store 131072/niah_multikey_2/162015  arm T-v  x16  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'R': 6007, 'B': 1199, 'db': 16, 'r': 29}  cells/C 0.975
+  array disp: 556336 cells, flipped 0.2759
+  array rows: 2438842 cells, flipped 0.2763
+failed 19 of 150
+  key 'momentous-mukluk'  want ['4281356']  got ['3713790']
+    j=0 bucket 597 sigma 77 decoded 76 (copies agreeing per bit: [19, 24, 25, 17, 19, 20, 20, 22, 21, 20, 22, 24, 24, 20, 22, 12]); row 4419 payload votes for the stored bit per bit: [20, 21, 19, 20, 19, 20, 22, 23, 19, 21, 21, 20, 24, 21]
+  key 'chunky-fingerling'  want ['9904485']  got ['2353938']
+    j=0 bucket 382 sigma 290 decoded 1314 (copies agreeing per bit: [21, 19, 25, 22, 22, 14, 17, 21, 20, 18, 19, 21, 23, 15, 24, 21]); row 2561 payload votes for the stored bit per bit: [20, 24, 19, 21, 21, 19, 16, 21, 26, 20, 24, 19, 22, 23]
+  key 'agreeable-landmine'  want ['5363326']  got ['4734461']
+    j=0 bucket 929 sigma 4 decoded 0 (copies agreeing per bit: [21, 20, 25, 20, 24, 22, 23, 21, 16, 19, 17, 23, 23, 12, 21, 21]); row 4931 payload votes for the stored bit per bit: [19, 21, 23, 20, 23, 22, 20, 25, 17, 24, 21, 20, 24, 23]
+store 131072/niah_multikey_2/170650  arm T-v  x16  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'R': 6007, 'B': 1198, 'db': 15, 'r': 30}  cells/C 0.997
+  array disp: 539100 cells, flipped 0.2757
+  array rows: 2522940 cells, flipped 0.2759
+failed 19 of 150
+  key 'orange-plenty'  want ['1836959']  got ['1549157']
+    j=0 bucket 918 sigma 36 decoded 548 (copies agreeing per bit: [25, 25, 20, 23, 24, 15, 25, 22, 23, 20, 28, 23, 19, 20, 26]); row 4206 payload votes for the stored bit per bit: [21, 27, 24, 20, 17, 20, 23, 23, 24, 22, 24, 22, 21, 19]
+  key 'bizarre-hardcover'  want ['7903468']  got ['2998676']
+    j=0 bucket 791 sigma 12 decoded 268 (copies agreeing per bit: [18, 22, 22, 25, 21, 25, 15, 21, 22, 22, 23, 19, 15, 20, 21]); row 1136 payload votes for the stored bit per bit: [23, 17, 21, 23, 25, 22, 24, 25, 26, 22, 23, 23, 19, 20]
+  key 'ruddy-traveler'  want ['4690725']  got ['6359520']
+    j=0 bucket 58 sigma 7 decoded 23 (copies agreeing per bit: [20, 27, 19, 20, 23, 23, 19, 18, 22, 16, 14, 24, 22, 22, 26]); row 16 payload votes for the stored bit per bit: [25, 24, 24, 18, 18, 26, 18, 25, 22, 20, 24, 21, 18, 24]
+store 131072/niah_multikey_2/162015  arm T-iiia  x16  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'wk': 205, 'rp': 21}  cells/C 0.974
+  array rows: 2991505 cells, flipped 0.2761
+failed 20 of 150
+  key 'bawdy-minister'  want ['8676499']  got ['5120862']
+    j=0 chose row 429 ('bawdy-minister', j=0) at distance 52 (noiseless 0); true row 429 at distance 52 (its own flipped cells 52 of 205)
+  key 'evasive-flanker'  want ['2468742']  got ['3929149']
+    j=0 chose row 468 ('evasive-flanker', j=0) at distance 46 (noiseless 0); true row 468 at distance 46 (its own flipped cells 46 of 205)
+  key 'rural-venti'  want ['1444602']  got ['4392704']
+    j=0 chose row 663 ('rural-venti', j=0) at distance 48 (noiseless 0); true row 663 at distance 48 (its own flipped cells 48 of 205)
+store 131072/niah_multikey_2/170650  arm T-iiia  x16  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'wk': 205, 'rp': 21}  cells/C 0.973
+  array rows: 2989010 cells, flipped 0.2761
+failed 26 of 150
+  key 'zippy-corporation'  want ['2707965']  got ['9845226']
+    j=0 chose row 195 ('zippy-corporation', j=0) at distance 54 (noiseless 0); true row 195 at distance 54 (its own flipped cells 54 of 205)
+  key 'mammoth-return'  want ['1558897']  got ['8424634']
+    j=0 chose row 351 ('mammoth-return', j=0) at distance 60 (noiseless 0); true row 351 at distance 60 (its own flipped cells 60 of 205)
+  key 'merciful-pipeline'  want ['7253987']  got ['1474823']
+    j=0 chose row 605 ('obnoxious-cappelletti', j=0) at distance 67 (noiseless 88); true row 507 at distance 73 (its own flipped cells 73 of 205)
+store 131072/niah_multikey_2/162015  arm T-iiib  x32  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'wk': 256, 'wv': 256}  cells/C 0.999
+  array rows: 3069440 cells, flipped 0.3745
+failed 95 of 150
+  key 'unbiased-pharmacopoeia'  want ['6201627']  got ['4070774']
+    j=0 chose row 5518 ('animated-coordination', j=0) at distance 98 (noiseless 98); true row 39 at distance 104 (its own flipped cells 104 of 256)
+  key 'momentous-mukluk'  want ['4281356']  got ['1945474']
+    j=0 chose row 78 ('momentous-mukluk', j=0) at distance 95 (noiseless 0); true row 78 at distance 95 (its own flipped cells 95 of 256)
+  key 'tender-hermit'  want ['8433532']  got ['5886970']
+    j=0 chose row 5011 ('imported-necklace', j=0) at distance 97 (noiseless 122); true row 195 at distance 103 (its own flipped cells 103 of 256)
+store 131072/niah_multikey_2/170650  arm T-iiib  x32  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'wk': 256, 'wv': 256}  cells/C 0.998
+  array rows: 3066880 cells, flipped 0.3744
+failed 105 of 150
+  key 'long-workshop'  want ['9598611']  got ['4821780']
+    j=0 chose row 2703 ('ludicrous-anesthesiology', j=0) at distance 99 (noiseless 130); true row 0 at distance 102 (its own flipped cells 102 of 256)
+  key 'brief-trafficker'  want ['5660982']  got ['5711396']
+    j=0 chose row 4461 ('faint-laborer', j=0) at distance 99 (noiseless 117); true row 78 at distance 104 (its own flipped cells 104 of 256)
+  key 'zippy-corporation'  want ['2707965']  got ['4388172']
+    j=0 chose row 195 ('zippy-corporation', j=0) at distance 89 (noiseless 0); true row 195 at distance 89 (its own flipped cells 89 of 256)
+store 131072/niah_multikey_2/162015  arm T-vhd  x32  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'R': 6007, 'B': 1199, 'db': 16, 'rd': 80, 'wv': 255}  cells/C 0.998
+  array disp: 1534720 cells, flipped 0.3754
+  array rows: 1531785 cells, flipped 0.3744
+failed 85 of 150
+  key 'rural-messy'  want ['3149341']  got ['6562925']
+Traceback (most recent call last):
+  File "/data1/path/to/work/b34/b34_check.py", line 465, in <module>
+    handread(a[2], a[3], a[4], a[5], float(a[6]), a[7], int(a[8]) if len(a) > 8 else 5)
+  File "/data1/path/to/work/b34/b34_check.py", line 437, in handread
+    kf, wk, rk = M._field(sig["rows"], meta, "key")
+  File "/data1/path/to/work/b34/b34_inmem.py", line 414, in _field
+    raise KeyError(name)
+KeyError: 'key'
+store 131072/niah_multikey_2/170650  arm T-vhd  x32  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'R': 6007, 'B': 1198, 'db': 15, 'rd': 85, 'wv': 257}  cells/C 1.000
+  array disp: 1527450 cells, flipped 0.3746
+  array rows: 1543799 cells, flipped 0.3747
+failed 77 of 150
+  key 'brief-trafficker'  want ['5660982']  got ['8847420', '1727215']
+Traceback (most recent call last):
+  File "/data1/path/to/work/b34/b34_check.py", line 465, in <module>
+    handread(a[2], a[3], a[4], a[5], float(a[6]), a[7], int(a[8]) if len(a) > 8 else 5)
+  File "/data1/path/to/work/b34/b34_check.py", line 437, in handread
+    kf, wk, rk = M._field(sig["rows"], meta, "key")
+  File "/data1/path/to/work/b34/b34_inmem.py", line 414, in _field
+    raise KeyError(name)
+KeyError: 'key'
+store 131072/niah_multikey_2/162015  arm T-vhdd  x32  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'R': 6007, 'B': 1199, 'db': 16, 'wv': 358}  cells/C 1.000
+  array disp: 920832 cells, flipped 0.3753
+  array rows: 2150506 cells, flipped 0.3741
+failed 30 of 150
+  key 'momentous-mukluk'  want ['4281356']  got ['2013775', '5665057']
+Traceback (most recent call last):
+  File "/data1/path/to/work/b34/b34_check.py", line 465, in <module>
+    handread(a[2], a[3], a[4], a[5], float(a[6]), a[7], int(a[8]) if len(a) > 8 else 5)
+  File "/data1/path/to/work/b34/b34_check.py", line 437, in handread
+    kf, wk, rk = M._field(sig["rows"], meta, "key")
+  File "/data1/path/to/work/b34/b34_inmem.py", line 414, in _field
+    raise KeyError(name)
+KeyError: 'key'
+store 131072/niah_multikey_2/170650  arm T-vhdd  x32  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'R': 6007, 'B': 1198, 'db': 15, 'wv': 358}  cells/C 1.000
+  array disp: 920064 cells, flipped 0.3745
+  array rows: 2150506 cells, flipped 0.3746
+failed 33 of 150
+  key 'aloof-validate'  want ['9901564']  got ['7833959', '7954977']
+Traceback (most recent call last):
+  File "/data1/path/to/work/b34/b34_check.py", line 465, in <module>
+    handread(a[2], a[3], a[4], a[5], float(a[6]), a[7], int(a[8]) if len(a) > 8 else 5)
+  File "/data1/path/to/work/b34/b34_check.py", line 437, in handread
+    kf, wk, rk = M._field(sig["rows"], meta, "key")
+  File "/data1/path/to/work/b34/b34_inmem.py", line 414, in _field
+    raise KeyError(name)
+KeyError: 'key'
+store 131072/niah_multikey_2/162015  arm V-S  x16  30 d  probed keys 150  pairs 5995  values 5993  S 375
+store bit errors 0.2767
+failed 149 of 150
+  key 'rural-messy'  want ['3149341']  got []  shard 21  flipped cells in shard 2266 / 8192
+    j=0  true sim 0.396 (noiseless 0.854)  best '3149341' 0.396  threshold 0.50
+    j=1  true sim - (noiseless -)  best '6275225' 0.159  threshold 0.50
+  key 'unbiased-pharmacopoeia'  want ['6201627']  got []  shard 183  flipped cells in shard 2260 / 8192
+    j=0  true sim 0.409 (noiseless 0.830)  best '6201627' 0.409  threshold 0.50
+    j=1  true sim - (noiseless -)  best '4058196' 0.188  threshold 0.50
+  key 'momentous-mukluk'  want ['4281356']  got []  shard 159  flipped cells in shard 2273 / 8192
+    j=0  true sim 0.348 (noiseless 0.809)  best '4281356' 0.348  threshold 0.50
+    j=1  true sim - (noiseless -)  best '3558076' 0.164  threshold 0.50
+store 131072/niah_multikey_2/170650  arm V-S  x16  30 d  probed keys 150  pairs 5990  values 5989  S 375
+store bit errors 0.2761
+failed 149 of 150
+  key 'long-workshop'  want ['9598611']  got []  shard 0  flipped cells in shard 2300 / 8192
+    j=0  true sim 0.313 (noiseless 0.749)  best '9598611' 0.313  threshold 0.50
+    j=1  true sim - (noiseless -)  best '4305059' 0.173  threshold 0.50
+  key 'warm-drum'  want ['9519575']  got []  shard 246  flipped cells in shard 2270 / 8192
+    j=0  true sim 0.357 (noiseless 0.830)  best '9519575' 0.357  threshold 0.50
+    j=1  true sim - (noiseless -)  best '6372741' 0.182  threshold 0.50
+  key 'brief-trafficker'  want ['5660982']  got []  shard 173  flipped cells in shard 2153 / 8192
+    j=0  true sim 0.387 (noiseless 0.753)  best '5660982' 0.387  threshold 0.50
+    j=1  true sim - (noiseless -)  best '9538079' 0.177  threshold 0.50
+store 131072/niah_multikey_2/162015  arm V-Snt  x32  30 d  probed keys 150  pairs 5995  values 5993  S 375
+store bit errors 0.3753
+failed 43 of 150
+  key 'unbiased-pharmacopoeia'  want ['6201627']  got ['8877105']  shard 183  flipped cells in shard 3124 / 8192
+    j=0  true sim 0.210 (noiseless 0.830)  best '8877105' 0.216  threshold 0.50
+    j=1  true sim - (noiseless -)  best '2995295' 0.239  threshold 0.50
+  key 'momentous-mukluk'  want ['4281356']  got ['6764088']  shard 159  flipped cells in shard 3147 / 8192
+    j=0  true sim 0.114 (noiseless 0.809)  best '6764088' 0.190  threshold 0.50
+    j=1  true sim - (noiseless -)  best '1407068' 0.186  threshold 0.50
+  key 'petite-fur'  want ['4627933']  got ['2184852']  shard 114  flipped cells in shard 3076 / 8192
+    j=0  true sim 0.162 (noiseless 0.786)  best '2184852' 0.175  threshold 0.50
+    j=1  true sim - (noiseless -)  best '8605139' 0.152  threshold 0.50
+store 131072/niah_multikey_2/170650  arm V-Snt  x32  30 d  probed keys 150  pairs 5990  values 5989  S 375
+store bit errors 0.3748
+failed 43 of 150
+  key 'long-workshop'  want ['9598611']  got ['3835939']  shard 0  flipped cells in shard 3089 / 8192
+    j=0  true sim 0.186 (noiseless 0.749)  best '3835939' 0.204  threshold 0.50
+    j=1  true sim - (noiseless -)  best '2832022' 0.153  threshold 0.50
+  key 'faded-gearshift'  want ['7705917']  got ['2744837']  shard 342  flipped cells in shard 3083 / 8192
+    j=0  true sim 0.148 (noiseless 0.790)  best '2744837' 0.196  threshold 0.50
+    j=1  true sim - (noiseless -)  best '3838240' 0.179  threshold 0.50
+  key 'zippy-corporation'  want ['2707965']  got ['7761712']  shard 30  flipped cells in shard 3168 / 8192
+    j=0  true sim 0.090 (noiseless 0.679)  best '7761712' 0.215  threshold 0.50
+    j=1  true sim - (noiseless -)  best '6659032' 0.196  threshold 0.50

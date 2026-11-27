@@ -1,0 +1,12 @@
+# B63 checks (prereg/B63_online_directory_prereg.md, 'Checks'; b63_check.py)
+
+Second scorer by plain loops (b63_check.py scorer; results/b63_check_scorer.json): 24 sampled test cells (both arms; k1, k4, k8, k16; one large, one medium, one small store each; a failing cell where one exists), re-run locally; an independent reader (own hash code, bit-by-bit slot extraction, explicit candidate loops, targets from the store's own pairs) on the same decoded bits: 24 / 24 failed-key lists identical to the committed reader's; box vs local failed-key lists identical in 24 / 24 (ldpc 2.3.9 / numpy 1.26 on the box, 2.4.1 / 2.2 locally).
+  failed keys in the sampled cells: O-BCH k1 32 1, O-BCH k1 64 0, O-BCH k1 54 0, O-BCH k4 32 33, O-BCH k4 38 1, O-BCH k4 23 3, O-BCH k8 152 4, O-BCH k8 128 8, O-BCH k8 91 4, O-BCH k16 431 51, O-BCH k16 609 1, O-BCH k16 431 1, O-LDPC k1 45 1, O-LDPC k1 32 1, O-LDPC k1 54 0, O-LDPC k4 38 1, O-LDPC k4 32 32, O-LDPC k4 27 6, O-LDPC k8 76 86, O-LDPC k8 64 87, O-LDPC k8 54 8, O-LDPC k16 181 148, O-LDPC k16 512 3, O-LDPC k16 181 14
+
+Cells audit (b63_check.py bits; results/b63_check_bits.json): 5350 test evaluations, 0 over budget; logical bits = m x 4 x (f + payload bits) in every evaluation (0 mismatches); share of the logical bits that are fingerprints or empty slots: min 0.49, median 0.61, max 0.86.
+
+N* by a second rule (b63_check.py nstar): 0 / 14 mismatches (O-BCH and O-LDPC x 7 conditions).
+
+Insertion audit (b63_check.py insert; results/b63_check_insert.json): 200 (store, f) builds (50 test stores x f in the test plan), 0 bad; every placed pair in one of its two buckets under its own fingerprint, placed + lost = n, half build + continued insertion = full build in every build; lost insertions 0; load 0.750-0.950 (tiny stores below 0.95 by bucket granularity).
+
+Sample reading by the AI-assisted process: results/b63_sample_reading.txt (summary in prereg/B63_note_after_test.md).

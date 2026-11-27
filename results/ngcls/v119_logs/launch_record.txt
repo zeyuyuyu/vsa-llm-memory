@@ -1,0 +1,51 @@
+V-119 launch record — written LATE, 2026-09-05 ~01:10+08 (tick), for a run already in flight.
+Prereg-of-record: commit 63530b9 (text carries stale label V-109; binding name map = the 3ac47b0 ledger entry).
+Stamp commit: 9545e9b ("prereg": "63530b9" is written into the dump by the running code — verified in source).
+
+PACE Phoenix job 12826493, partition cpu-small, account gts-nimam6.
+Submitted 2026-09-04T12:24:55 ET = 2026-09-05T00:24:55+08 — 8 minutes BEFORE the relabel commit 3ac47b0
+(00:32:14+08). Filenames on PACE remain v109.py / v109_score.py (pre-relabel copies of the prereg commit).
+Job discovered RUNNING at this tick's PACE check; NOT relaunched.
+
+Import-closure checksums (sha1 of PACE working copy vs `git show 9545e9b:<file>`), closure traced to fixpoint
+(v109 -> v85_data, v98_train, v108 -> v106, v97_store -> v100, v102, v99_train):
+v109.py        922b64e1910b612467adc77244c7701f727b9ce3  MATCH
+v109_score.py  e01cfc39ea942521be66df54ab2c908fa0898923  MATCH
+v85_data.py    71d70814c233d6c3acacb98137df19ac3cde0c44  MATCH
+v98_train.py   aa8016ae3b34d9c6f0bba4e143fcd549e62bfdfa  MATCH
+v108.py        62bb61c78df224a05fbbc4c8365be59b9c4df2c7  MATCH
+v106.py        844bd863900c35c9d50bcdc5963220aa19a387cb  MATCH
+v97_store.py   6ff98025f193dcfeefa4129fe8ee71330bf03bad  MATCH
+v100.py        PACE 8079cc3a7d21594470cfa3dcf330f91204884605 vs commit ec0a3a9ad0afbe56d30223a4851bab01acb2c03f
+               **MISMATCH** — see ledger: PACE carries the
+               repaired (FEWSHOT-template) V-100 that was never committed; diff confined to v100's
+               __main__ run path, executed by NOTHING in this job (import-only); repaired at HEAD this tick.
+v102.py        564b6523b63360471fb08bb7ad25bffd847a887b  MATCH
+v99_train.py   a333986948613839fb764819eec8e5896972884b  MATCH
+9/10 exact; the one mismatch is off this run's execution path.
+
+Output path: PACE $HOME/v109_logs/v109.json (set by the sbatch --out). This OVERWRITES the PACE-side copy of
+the closed 09-04 V-109's dump (observed mtime already advanced to 09-04 13:01 ET). The banked V-109 dump
+survives ONLY as repo v109_logs/v109.json — retrieval of this run's dump goes to v119_logs/v119.json;
+nothing may be written into v109_logs/.
+
+sbatch script as running (scontrol write batch_script 12826493), verbatim — note the stale V-108 comment,
+it is a recycled wrapper; the payload line is the prereg's:
+  #!/bin/bash
+  #SBATCH -J v109
+  #SBATCH --account=gts-nimam6
+  #SBATCH -p cpu-small
+  #SBATCH -N1 --ntasks-per-node=4
+  #SBATCH --mem=16G
+  #SBATCH --time=8:00:00
+  #SBATCH -o %x_%j.out
+  # V-108 (prereg 6f3ea10 + correction 339e003): OpenRouter ladder, no GPU needed.
+  # Runs as a batch job because the PACE login node reaps long-running background processes -- two
+  # setsid/nohup launches were killed mid-sweep before this was submitted properly.
+  export HF_HOME=/path/to/pace-scratch/hf
+  export TOKENIZERS_PARALLELISM=false
+  cd "$HOME"
+  mkdir -p v108_logs
+  mkdir -p "$HOME/v109_logs"
+  python3 -u v109.py --out "$HOME/v109_logs/v109.json"
+  echo "V108-SBATCH-DONE"

@@ -1,0 +1,3585 @@
+{
+ "_about": "B38 (prereg vsassm/prereg/B38_ecc_equal_cells_prereg.md): cells per stored pair for >= 99.5% exact reads of 4,776 probed RULER keys, every stored bit on simulated phase-change cells; localized damage; fixed designs beyond their design point. Verbatim verdict lines.",
+ "iid": {
+  "conds": [
+   "k1",
+   "k2",
+   "k4",
+   "e05",
+   "k8",
+   "k16",
+   "k32"
+  ],
+  "eps": [
+   {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  eps        0.0000   0.0001   0.0208   0.0500   0.1226   0.2760   0.3744",
+    "text": "0.0000"
+   },
+   {
+    "value": 0.0001,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  eps        0.0000   0.0001   0.0208   0.0500   0.1226   0.2760   0.3744",
+    "text": "0.0001"
+   },
+   {
+    "value": 0.0208,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  eps        0.0000   0.0001   0.0208   0.0500   0.1226   0.2760   0.3744",
+    "text": "0.0208"
+   },
+   {
+    "value": 0.05,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  eps        0.0000   0.0001   0.0208   0.0500   0.1226   0.2760   0.3744",
+    "text": "0.0500"
+   },
+   {
+    "value": 0.1226,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  eps        0.0000   0.0001   0.0208   0.0500   0.1226   0.2760   0.3744",
+    "text": "0.1226"
+   },
+   {
+    "value": 0.276,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  eps        0.0000   0.0001   0.0208   0.0500   0.1226   0.2760   0.3744",
+    "text": "0.2760"
+   },
+   {
+    "value": 0.3744,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  eps        0.0000   0.0001   0.0208   0.0500   0.1226   0.2760   0.3744",
+    "text": "0.3744"
+   }
+  ],
+  "V-pub": [
+   {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-pub         108      108      108      152      861    >4096    >4096",
+    "text": "108"
+   },
+   {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-pub         108      108      108      152      861    >4096    >4096",
+    "text": "108"
+   },
+   {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-pub         108      108      108      152      861    >4096    >4096",
+    "text": "108"
+   },
+   {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-pub         108      108      108      152      861    >4096    >4096",
+    "text": "152"
+   },
+   {
+    "value": 861.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-pub         108      108      108      152      861    >4096    >4096",
+    "text": "861"
+   },
+   {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-pub         108      108      108      152      861    >4096    >4096",
+    "text": ">4096"
+   },
+   {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-pub         108      108      108      152      861    >4096    >4096",
+    "text": ">4096"
+   }
+  ],
+  "V-Snt": [
+   {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-Snt          91       91      108      108      128    >4096    >4096",
+    "text": "91"
+   },
+   {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-Snt          91       91      108      108      128    >4096    >4096",
+    "text": "91"
+   },
+   {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-Snt          91       91      108      108      128    >4096    >4096",
+    "text": "108"
+   },
+   {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-Snt          91       91      108      108      128    >4096    >4096",
+    "text": "108"
+   },
+   {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-Snt          91       91      108      108      128    >4096    >4096",
+    "text": "128"
+   },
+   {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-Snt          91       91      108      108      128    >4096    >4096",
+    "text": ">4096"
+   },
+   {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-Snt          91       91      108      108      128    >4096    >4096",
+    "text": ">4096"
+   }
+  ],
+  "V-am": [
+   {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-am           91       91      108      108      152      609     2896",
+    "text": "91"
+   },
+   {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-am           91       91      108      108      152      609     2896",
+    "text": "91"
+   },
+   {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-am           91       91      108      108      152      609     2896",
+    "text": "108"
+   },
+   {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-am           91       91      108      108      152      609     2896",
+    "text": "108"
+   },
+   {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-am           91       91      108      108      152      609     2896",
+    "text": "152"
+   },
+   {
+    "value": 609.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-am           91       91      108      108      152      609     2896",
+    "text": "609"
+   },
+   {
+    "value": 2896.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-am           91       91      108      108      152      609     2896",
+    "text": "2896"
+   }
+  ],
+  "V-last": [
+   {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-last         76       76       76       91      128      431     1722",
+    "text": "76"
+   },
+   {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-last         76       76       76       91      128      431     1722",
+    "text": "76"
+   },
+   {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-last         76       76       76       91      128      431     1722",
+    "text": "76"
+   },
+   {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-last         76       76       76       91      128      431     1722",
+    "text": "91"
+   },
+   {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-last         76       76       76       91      128      431     1722",
+    "text": "128"
+   },
+   {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-last         76       76       76       91      128      431     1722",
+    "text": "431"
+   },
+   {
+    "value": 1722.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-last         76       76       76       91      128      431     1722",
+    "text": "1722"
+   }
+  ],
+  "V-cb": [
+   {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-cb          431      431      512      724     1448    >4096    >4096",
+    "text": "431"
+   },
+   {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-cb          431      431      512      724     1448    >4096    >4096",
+    "text": "431"
+   },
+   {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-cb          431      431      512      724     1448    >4096    >4096",
+    "text": "512"
+   },
+   {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-cb          431      431      512      724     1448    >4096    >4096",
+    "text": "724"
+   },
+   {
+    "value": 1448.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-cb          431      431      512      724     1448    >4096    >4096",
+    "text": "1448"
+   },
+   {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-cb          431      431      512      724     1448    >4096    >4096",
+    "text": ">4096"
+   },
+   {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  V-cb          431      431      512      724     1448    >4096    >4096",
+    "text": ">4096"
+   }
+  ],
+  "T-rep": [
+   {
+    "value": 19.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-rep          19       23       91      128      256     1024     3444",
+    "text": "19"
+   },
+   {
+    "value": 23.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-rep          19       23       91      128      256     1024     3444",
+    "text": "23"
+   },
+   {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-rep          19       23       91      128      256     1024     3444",
+    "text": "91"
+   },
+   {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-rep          19       23       91      128      256     1024     3444",
+    "text": "128"
+   },
+   {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-rep          19       23       91      128      256     1024     3444",
+    "text": "256"
+   },
+   {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-rep          19       23       91      128      256     1024     3444",
+    "text": "1024"
+   },
+   {
+    "value": 3444.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-rep          19       23       91      128      256     1024     3444",
+    "text": "3444"
+   }
+  ],
+  "T-vhdd": [
+   {
+    "value": 32.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-vhdd         32       32       38       54       91      304     1024",
+    "text": "32"
+   },
+   {
+    "value": 32.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-vhdd         32       32       38       54       91      304     1024",
+    "text": "32"
+   },
+   {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-vhdd         32       32       38       54       91      304     1024",
+    "text": "38"
+   },
+   {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-vhdd         32       32       38       54       91      304     1024",
+    "text": "54"
+   },
+   {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-vhdd         32       32       38       54       91      304     1024",
+    "text": "91"
+   },
+   {
+    "value": 304.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-vhdd         32       32       38       54       91      304     1024",
+    "text": "304"
+   },
+   {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  T-vhdd         32       32       38       54       91      304     1024",
+    "text": "1024"
+   }
+  ],
+  "E-BCH": [
+   {
+    "value": 19.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-BCH          19       19       27       38      108      431     1722",
+    "text": "19"
+   },
+   {
+    "value": 19.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-BCH          19       19       27       38      108      431     1722",
+    "text": "19"
+   },
+   {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-BCH          19       19       27       38      108      431     1722",
+    "text": "27"
+   },
+   {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-BCH          19       19       27       38      108      431     1722",
+    "text": "38"
+   },
+   {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-BCH          19       19       27       38      108      431     1722",
+    "text": "108"
+   },
+   {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-BCH          19       19       27       38      108      431     1722",
+    "text": "431"
+   },
+   {
+    "value": 1722.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-BCH          19       19       27       38      108      431     1722",
+    "text": "1722"
+   }
+  ],
+  "E-LDPC": [
+   {
+    "value": 23.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-LDPC         23       23       27       38       54      215      724",
+    "text": "23"
+   },
+   {
+    "value": 23.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-LDPC         23       23       27       38       54      215      724",
+    "text": "23"
+   },
+   {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-LDPC         23       23       27       38       54      215      724",
+    "text": "27"
+   },
+   {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-LDPC         23       23       27       38       54      215      724",
+    "text": "38"
+   },
+   {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-LDPC         23       23       27       38       54      215      724",
+    "text": "54"
+   },
+   {
+    "value": 215.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-LDPC         23       23       27       38       54      215      724",
+    "text": "215"
+   },
+   {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-LDPC         23       23       27       38       54      215      724",
+    "text": "724"
+   }
+  ],
+  "E-CAM": [
+   {
+    "value": 45.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-CAM          45       45       64       91      256     1024     3444",
+    "text": "45"
+   },
+   {
+    "value": 45.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-CAM          45       45       64       91      256     1024     3444",
+    "text": "45"
+   },
+   {
+    "value": 64.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-CAM          45       45       64       91      256     1024     3444",
+    "text": "64"
+   },
+   {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-CAM          45       45       64       91      256     1024     3444",
+    "text": "91"
+   },
+   {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-CAM          45       45       64       91      256     1024     3444",
+    "text": "256"
+   },
+   {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-CAM          45       45       64       91      256     1024     3444",
+    "text": "1024"
+   },
+   {
+    "value": 3444.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  E-CAM          45       45       64       91      256     1024     3444",
+    "text": "3444"
+   }
+  ],
+  "capacity": [
+   {
+    "value": 13.5,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  capacity     13.5     13.6     15.9     19.0     29.3     90.3    294.6   (directory-free table at BSC capacity, max over stores)",
+    "text": "13.5"
+   },
+   {
+    "value": 13.6,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  capacity     13.5     13.6     15.9     19.0     29.3     90.3    294.6   (directory-free table at BSC capacity, max over stores)",
+    "text": "13.6"
+   },
+   {
+    "value": 15.9,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  capacity     13.5     13.6     15.9     19.0     29.3     90.3    294.6   (directory-free table at BSC capacity, max over stores)",
+    "text": "15.9"
+   },
+   {
+    "value": 19.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  capacity     13.5     13.6     15.9     19.0     29.3     90.3    294.6   (directory-free table at BSC capacity, max over stores)",
+    "text": "19.0"
+   },
+   {
+    "value": 29.3,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  capacity     13.5     13.6     15.9     19.0     29.3     90.3    294.6   (directory-free table at BSC capacity, max over stores)",
+    "text": "29.3"
+   },
+   {
+    "value": 90.3,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  capacity     13.5     13.6     15.9     19.0     29.3     90.3    294.6   (directory-free table at BSC capacity, max over stores)",
+    "text": "90.3"
+   },
+   {
+    "value": 294.6,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  capacity     13.5     13.6     15.9     19.0     29.3     90.3    294.6   (directory-free table at BSC capacity, max over stores)",
+    "text": "294.6"
+   }
+  ]
+ },
+ "damage": {
+  "lines-il-k4": {
+   "V-pub": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "91"
+   },
+   "V-last": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "76"
+   },
+   "V-cb": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "512"
+   },
+   "T-rep": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "91"
+   },
+   "T-vhdd": {
+    "value": 45.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "45"
+   },
+   "E-BCH": {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "27"
+   },
+   "E-LDPC": {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "27"
+   },
+   "E-CAM": {
+    "value": 64.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells",
+    "text": "64"
+   }
+  },
+  "lines-il-e05": {
+   "V-pub": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "181"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "108"
+   },
+   "V-last": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "91"
+   },
+   "V-cb": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "724"
+   },
+   "T-rep": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "128"
+   },
+   "T-vhdd": {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "54"
+   },
+   "E-BCH": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "91"
+   },
+   "E-LDPC": {
+    "value": 45.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "45"
+   },
+   "E-CAM": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells",
+    "text": "91"
+   }
+  },
+  "lines-il-k8": {
+   "V-pub": {
+    "value": 1448.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "1448"
+   },
+   "V-Snt": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "152"
+   },
+   "V-am": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "152"
+   },
+   "V-last": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "128"
+   },
+   "V-cb": {
+    "value": 1448.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "1448"
+   },
+   "T-rep": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "256"
+   },
+   "T-vhdd": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "91"
+   },
+   "E-BCH": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "128"
+   },
+   "E-LDPC": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "76"
+   },
+   "E-CAM": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells",
+    "text": "256"
+   }
+  },
+  "lines-il-k16": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": ">4096"
+   },
+   "V-am": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "724"
+   },
+   "V-last": {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "431"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "1024"
+   },
+   "T-vhdd": {
+    "value": 304.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "304"
+   },
+   "E-BCH": {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "431"
+   },
+   "E-LDPC": {
+    "value": 215.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "215"
+   },
+   "E-CAM": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "1024"
+   }
+  },
+  "lines-nat-k4": {
+   "V-pub": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": "128"
+   },
+   "V-Snt": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": "91"
+   },
+   "V-am": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": "108"
+   },
+   "V-last": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": "76"
+   },
+   "V-cb": {
+    "value": 1218.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": "1218"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": "512"
+   },
+   "E-BCH": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": "181"
+   },
+   "E-LDPC": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": ">4096"
+   },
+   "E-CAM": {
+    "value": 304.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells",
+    "text": "304"
+   }
+  },
+  "lines-nat-e05": {
+   "V-pub": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": "181"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": "108"
+   },
+   "V-last": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": "91"
+   },
+   "V-cb": {
+    "value": 1448.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": "1448"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "value": 861.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": "861"
+   },
+   "E-BCH": {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": "431"
+   },
+   "E-LDPC": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": ">4096"
+   },
+   "E-CAM": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells",
+    "text": "724"
+   }
+  },
+  "lines-nat-k8": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": "152"
+   },
+   "V-am": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": "181"
+   },
+   "V-last": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": "152"
+   },
+   "V-cb": {
+    "value": 3444.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": "3444"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "value": 1218.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": "1218"
+   },
+   "E-BCH": {
+    "value": 2896.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": "2896"
+   },
+   "E-LDPC": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": ">4096"
+   },
+   "E-CAM": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells",
+    "text": ">4096"
+   }
+  },
+  "lines-nat-k16": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": ">4096"
+   },
+   "V-am": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": "724"
+   },
+   "V-last": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": "512"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "value": 2896.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": "2896"
+   },
+   "E-BCH": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": ">4096"
+   },
+   "E-LDPC": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": ">4096"
+   },
+   "E-CAM": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells",
+    "text": ">4096"
+   }
+  },
+  "clust-il-k4": {
+   "V-pub": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "91"
+   },
+   "V-last": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "76"
+   },
+   "V-cb": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "512"
+   },
+   "T-rep": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "91"
+   },
+   "T-vhdd": {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "38"
+   },
+   "E-BCH": {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "27"
+   },
+   "E-LDPC": {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "27"
+   },
+   "E-CAM": {
+    "value": 64.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "64"
+   }
+  },
+  "clust-il-e05": {
+   "V-pub": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "152"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "108"
+   },
+   "V-last": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "91"
+   },
+   "V-cb": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "724"
+   },
+   "T-rep": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "128"
+   },
+   "T-vhdd": {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "54"
+   },
+   "E-BCH": {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "54"
+   },
+   "E-LDPC": {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "38"
+   },
+   "E-CAM": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells",
+    "text": "91"
+   }
+  },
+  "clust-il-k8": {
+   "V-pub": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "1024"
+   },
+   "V-Snt": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "128"
+   },
+   "V-am": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "152"
+   },
+   "V-last": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "128"
+   },
+   "V-cb": {
+    "value": 1448.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "1448"
+   },
+   "T-rep": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "256"
+   },
+   "T-vhdd": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "91"
+   },
+   "E-BCH": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "128"
+   },
+   "E-LDPC": {
+    "value": 64.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "64"
+   },
+   "E-CAM": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells",
+    "text": "256"
+   }
+  },
+  "clust-il-k16": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": ">4096"
+   },
+   "V-am": {
+    "value": 609.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": "609"
+   },
+   "V-last": {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": "431"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": "1024"
+   },
+   "T-vhdd": {
+    "value": 304.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": "304"
+   },
+   "E-BCH": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": "512"
+   },
+   "E-LDPC": {
+    "value": 304.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": "304"
+   },
+   "E-CAM": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells",
+    "text": "1024"
+   }
+  },
+  "clust-nat-k4": {
+   "V-pub": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "128"
+   },
+   "V-Snt": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "91"
+   },
+   "V-am": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "91"
+   },
+   "V-last": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "76"
+   },
+   "V-cb": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "512"
+   },
+   "T-rep": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "724"
+   },
+   "T-vhdd": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "91"
+   },
+   "E-BCH": {
+    "value": 215.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "215"
+   },
+   "E-LDPC": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "512"
+   },
+   "E-CAM": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells",
+    "text": "512"
+   }
+  },
+  "clust-nat-e05": {
+   "V-pub": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "181"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "128"
+   },
+   "V-last": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "91"
+   },
+   "V-cb": {
+    "value": 861.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "861"
+   },
+   "T-rep": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "1024"
+   },
+   "T-vhdd": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "128"
+   },
+   "E-BCH": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "512"
+   },
+   "E-LDPC": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "724"
+   },
+   "E-CAM": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells",
+    "text": "1024"
+   }
+  },
+  "clust-nat-k8": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "152"
+   },
+   "V-am": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "181"
+   },
+   "V-last": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "152"
+   },
+   "V-cb": {
+    "value": 2435.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "2435"
+   },
+   "T-rep": {
+    "value": 1722.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "1722"
+   },
+   "T-vhdd": {
+    "value": 215.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "215"
+   },
+   "E-BCH": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "1024"
+   },
+   "E-LDPC": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "1024"
+   },
+   "E-CAM": {
+    "value": 2435.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells",
+    "text": "2435"
+   }
+  },
+  "clust-nat-k16": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": ">4096"
+   },
+   "V-am": {
+    "value": 861.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": "861"
+   },
+   "V-last": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": "724"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "value": 1448.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": "1448"
+   },
+   "E-BCH": {
+    "value": 2896.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": "2896"
+   },
+   "E-LDPC": {
+    "value": 2435.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": "2435"
+   },
+   "E-CAM": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells",
+    "text": ">4096"
+   }
+  },
+  "contig-il-k4": {
+   "V-pub": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-last": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "76"
+   },
+   "V-cb": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "512"
+   },
+   "T-rep": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "91"
+   },
+   "T-vhdd": {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "38"
+   },
+   "E-BCH": {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "27"
+   },
+   "E-LDPC": {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "27"
+   },
+   "E-CAM": {
+    "value": 64.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells",
+    "text": "64"
+   }
+  },
+  "contig-il-e05": {
+   "V-pub": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "181"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "108"
+   },
+   "V-last": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "91"
+   },
+   "V-cb": {
+    "value": 724.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "724"
+   },
+   "T-rep": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "128"
+   },
+   "T-vhdd": {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "54"
+   },
+   "E-BCH": {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "38"
+   },
+   "E-LDPC": {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "38"
+   },
+   "E-CAM": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells",
+    "text": "91"
+   }
+  },
+  "contig-il-k8": {
+   "V-pub": {
+    "value": 861.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "861"
+   },
+   "V-Snt": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "128"
+   },
+   "V-am": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "181"
+   },
+   "V-last": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "128"
+   },
+   "V-cb": {
+    "value": 1218.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "1218"
+   },
+   "T-rep": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "256"
+   },
+   "T-vhdd": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "91"
+   },
+   "E-BCH": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "108"
+   },
+   "E-LDPC": {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "54"
+   },
+   "E-CAM": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells",
+    "text": "256"
+   }
+  },
+  "contig-il-k16": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": ">4096"
+   },
+   "V-am": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "512"
+   },
+   "V-last": {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "431"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "1024"
+   },
+   "T-vhdd": {
+    "value": 304.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "304"
+   },
+   "E-BCH": {
+    "value": 431.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "431"
+   },
+   "E-LDPC": {
+    "value": 215.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "215"
+   },
+   "E-CAM": {
+    "value": 1024.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells",
+    "text": "1024"
+   }
+  },
+  "contig-nat-k4": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-am": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-last": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-BCH": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-LDPC": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-CAM": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   }
+  },
+  "contig-nat-e05": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-am": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-last": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-BCH": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-LDPC": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-CAM": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   }
+  },
+  "contig-nat-k8": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-am": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-last": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-BCH": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-LDPC": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-CAM": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   }
+  },
+  "contig-nat-k16": {
+   "V-pub": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-Snt": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-am": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-last": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "V-cb": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "T-rep": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "T-vhdd": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-BCH": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-LDPC": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   },
+   "E-CAM": {
+    "censored": true,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie",
+    "text": ">4096"
+   }
+  },
+  "lines-il-known-k4": {
+   "V-pub": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "108"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "91"
+   },
+   "V-last": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "76"
+   },
+   "V-cb": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "512"
+   },
+   "T-rep": {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "54"
+   },
+   "T-vhdd": {
+    "value": 32.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "32"
+   },
+   "E-BCH": {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "27"
+   },
+   "E-LDPC": {
+    "value": 23.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "23"
+   },
+   "E-CAM": {
+    "value": 54.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells",
+    "text": "54"
+   }
+  },
+  "lines-il-known-e05": {
+   "V-pub": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-Snt": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-am": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "91"
+   },
+   "V-last": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "76"
+   },
+   "V-cb": {
+    "value": 512.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "512"
+   },
+   "T-rep": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "76"
+   },
+   "T-vhdd": {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "38"
+   },
+   "E-BCH": {
+    "value": 45.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "45"
+   },
+   "E-LDPC": {
+    "value": 27.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "27"
+   },
+   "E-CAM": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells",
+    "text": "91"
+   }
+  },
+  "lines-il-known-k8": {
+   "V-pub": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "152"
+   },
+   "V-Snt": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "152"
+   },
+   "V-am": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-last": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "108"
+   },
+   "V-cb": {
+    "value": 861.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "861"
+   },
+   "T-rep": {
+    "value": 108.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "108"
+   },
+   "T-vhdd": {
+    "value": 45.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "45"
+   },
+   "E-BCH": {
+    "value": 76.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "76"
+   },
+   "E-LDPC": {
+    "value": 38.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "38"
+   },
+   "E-CAM": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells",
+    "text": "152"
+   }
+  },
+  "lines-il-known-k16": {
+   "V-pub": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "256"
+   },
+   "V-Snt": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "256"
+   },
+   "V-am": {
+    "value": 215.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "215"
+   },
+   "V-last": {
+    "value": 181.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "181"
+   },
+   "V-cb": {
+    "value": 2435.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "2435"
+   },
+   "T-rep": {
+    "value": 256.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "256"
+   },
+   "T-vhdd": {
+    "value": 91.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "91"
+   },
+   "E-BCH": {
+    "value": 152.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "152"
+   },
+   "E-LDPC": {
+    "value": 128.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "128"
+   },
+   "E-CAM": {
+    "value": 304.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells",
+    "text": "304"
+   }
+  }
+ },
+ "graceful": {
+  "k8": {
+   "V-pub": {
+    "value": 86.93,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "86.93"
+   },
+   "V-Snt": {
+    "value": 99.64,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "99.64"
+   },
+   "V-am": {
+    "value": 99.02,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "99.02"
+   },
+   "V-last": {
+    "value": 99.79,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "99.79"
+   },
+   "V-cb": {
+    "value": 38.32,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "38.32"
+   },
+   "T-rep": {
+    "value": 90.05,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "90.05"
+   },
+   "T-vhdd": {
+    "value": 100.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "100.00"
+   },
+   "E-BCH": {
+    "value": 100.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "100.00"
+   },
+   "E-LDPC": {
+    "value": 100.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "100.00"
+   },
+   "E-CAM": {
+    "value": 64.13,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie",
+    "text": "64.13"
+   }
+  },
+  "e16": {
+   "V-pub": {
+    "value": 67.96,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "67.96"
+   },
+   "V-Snt": {
+    "value": 98.89,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "98.89"
+   },
+   "V-am": {
+    "value": 96.82,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "96.82"
+   },
+   "V-last": {
+    "value": 98.7,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "98.70"
+   },
+   "V-cb": {
+    "value": 24.06,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "24.06"
+   },
+   "T-rep": {
+    "value": 74.18,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "74.18"
+   },
+   "T-vhdd": {
+    "value": 99.96,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "99.96"
+   },
+   "E-BCH": {
+    "value": 91.88,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "91.88"
+   },
+   "E-LDPC": {
+    "value": 100.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "100.00"
+   },
+   "E-CAM": {
+    "value": 35.49,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie",
+    "text": "35.49"
+   }
+  },
+  "e20": {
+   "V-pub": {
+    "value": 40.45,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "40.45"
+   },
+   "V-Snt": {
+    "value": 94.7,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "94.70"
+   },
+   "V-am": {
+    "value": 89.95,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "89.95"
+   },
+   "V-last": {
+    "value": 94.83,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "94.83"
+   },
+   "V-cb": {
+    "value": 11.31,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "11.31"
+   },
+   "T-rep": {
+    "value": 52.07,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "52.07"
+   },
+   "T-vhdd": {
+    "value": 98.91,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "98.91"
+   },
+   "E-BCH": {
+    "value": 21.63,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "21.63"
+   },
+   "E-LDPC": {
+    "value": 99.41,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "99.41"
+   },
+   "E-CAM": {
+    "value": 16.48,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small",
+    "text": "16.48"
+   }
+  },
+  "e24": {
+   "V-pub": {
+    "value": 16.71,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "16.71"
+   },
+   "V-Snt": {
+    "value": 85.26,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "85.26"
+   },
+   "V-am": {
+    "value": 74.92,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "74.92"
+   },
+   "V-last": {
+    "value": 84.02,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "84.02"
+   },
+   "V-cb": {
+    "value": 4.54,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "4.54"
+   },
+   "T-rep": {
+    "value": 28.14,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "28.14"
+   },
+   "T-vhdd": {
+    "value": 91.37,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "91.37"
+   },
+   "E-BCH": {
+    "value": 9.3,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "9.30"
+   },
+   "E-LDPC": {
+    "value": 98.35,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "98.35"
+   },
+   "E-CAM": {
+    "value": 7.01,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead",
+    "text": "7.01"
+   }
+  },
+  "k16": {
+   "V-pub": {
+    "value": 5.28,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "5.28"
+   },
+   "V-Snt": {
+    "value": 69.81,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "69.81"
+   },
+   "V-am": {
+    "value": 55.03,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "55.03"
+   },
+   "V-last": {
+    "value": 65.75,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "65.75"
+   },
+   "V-cb": {
+    "value": 2.26,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "2.26"
+   },
+   "T-rep": {
+    "value": 12.44,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "12.44"
+   },
+   "T-vhdd": {
+    "value": 70.37,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "70.37"
+   },
+   "E-BCH": {
+    "value": 3.48,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "3.48"
+   },
+   "E-LDPC": {
+    "value": 12.63,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "12.63"
+   },
+   "E-CAM": {
+    "value": 3.39,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead",
+    "text": "3.39"
+   }
+  },
+  "e32": {
+   "V-pub": {
+    "value": 0.67,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "0.67"
+   },
+   "V-Snt": {
+    "value": 43.34,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "43.34"
+   },
+   "V-am": {
+    "value": 29.02,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "29.02"
+   },
+   "V-last": {
+    "value": 37.54,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "37.54"
+   },
+   "V-cb": {
+    "value": 0.94,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "0.94"
+   },
+   "T-rep": {
+    "value": 3.81,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "3.81"
+   },
+   "T-vhdd": {
+    "value": 29.29,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "29.29"
+   },
+   "E-BCH": {
+    "value": 1.01,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "1.01"
+   },
+   "E-LDPC": {
+    "value": 3.77,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "3.77"
+   },
+   "E-CAM": {
+    "value": 1.15,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead",
+    "text": "1.15"
+   }
+  },
+  "k32": {
+   "V-pub": {
+    "value": 0.06,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "0.06"
+   },
+   "V-Snt": {
+    "value": 14.68,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "14.68"
+   },
+   "V-am": {
+    "value": 9.25,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "9.25"
+   },
+   "V-last": {
+    "value": 12.29,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "12.29"
+   },
+   "V-cb": {
+    "value": 0.23,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "0.23"
+   },
+   "T-rep": {
+    "value": 0.86,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "0.86"
+   },
+   "T-vhdd": {
+    "value": 3.66,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "3.66"
+   },
+   "E-BCH": {
+    "value": 0.25,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "0.25"
+   },
+   "E-LDPC": {
+    "value": 0.31,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "0.31"
+   },
+   "E-CAM": {
+    "value": 0.31,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead",
+    "text": "0.31"
+   }
+  },
+  "lines-nat-k8": {
+   "V-pub": {
+    "value": 84.19,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "84.19"
+   },
+   "V-Snt": {
+    "value": 99.08,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "99.08"
+   },
+   "V-am": {
+    "value": 98.18,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "98.18"
+   },
+   "V-last": {
+    "value": 99.08,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "99.08"
+   },
+   "V-cb": {
+    "value": 40.41,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "40.41"
+   },
+   "T-rep": {
+    "value": 68.82,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "68.82"
+   },
+   "T-vhdd": {
+    "value": 73.81,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "73.81"
+   },
+   "E-BCH": {
+    "value": 70.98,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "70.98"
+   },
+   "E-LDPC": {
+    "value": 41.46,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "41.46"
+   },
+   "E-CAM": {
+    "value": 80.95,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead",
+    "text": "80.95"
+   }
+  },
+  "lines-nat-e16": {
+   "V-pub": {
+    "value": 64.61,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "64.61"
+   },
+   "V-Snt": {
+    "value": 97.49,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "97.49"
+   },
+   "V-am": {
+    "value": 95.18,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "95.18"
+   },
+   "V-last": {
+    "value": 97.07,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "97.07"
+   },
+   "V-cb": {
+    "value": 32.81,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "32.81"
+   },
+   "T-rep": {
+    "value": 58.94,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "58.94"
+   },
+   "T-vhdd": {
+    "value": 64.49,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "64.49"
+   },
+   "E-BCH": {
+    "value": 53.92,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "53.92"
+   },
+   "E-LDPC": {
+    "value": 39.89,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "39.89"
+   },
+   "E-CAM": {
+    "value": 67.94,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead",
+    "text": "67.94"
+   }
+  },
+  "lines-nat-e20": {
+   "V-pub": {
+    "value": 39.89,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "39.89"
+   },
+   "V-Snt": {
+    "value": 92.46,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "92.46"
+   },
+   "V-am": {
+    "value": 86.66,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "86.66"
+   },
+   "V-last": {
+    "value": 91.37,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "91.37"
+   },
+   "V-cb": {
+    "value": 25.25,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "25.25"
+   },
+   "T-rep": {
+    "value": 47.05,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "47.05"
+   },
+   "T-vhdd": {
+    "value": 56.05,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "56.05"
+   },
+   "E-BCH": {
+    "value": 36.2,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "36.20"
+   },
+   "E-LDPC": {
+    "value": 43.24,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "43.24"
+   },
+   "E-CAM": {
+    "value": 49.16,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead",
+    "text": "49.16"
+   }
+  },
+  "lines-nat-e24": {
+   "V-pub": {
+    "value": 18.68,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "18.68"
+   },
+   "V-Snt": {
+    "value": 80.8,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "80.80"
+   },
+   "V-am": {
+    "value": 71.0,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "71.00"
+   },
+   "V-last": {
+    "value": 78.96,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "78.96"
+   },
+   "V-cb": {
+    "value": 16.86,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "16.86"
+   },
+   "T-rep": {
+    "value": 36.1,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "36.10"
+   },
+   "T-vhdd": {
+    "value": 47.4,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "47.40"
+   },
+   "E-BCH": {
+    "value": 21.92,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "21.92"
+   },
+   "E-LDPC": {
+    "value": 41.08,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "41.08"
+   },
+   "E-CAM": {
+    "value": 31.51,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead",
+    "text": "31.51"
+   }
+  },
+  "lines-nat-k16": {
+   "V-pub": {
+    "value": 8.33,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "8.33"
+   },
+   "V-Snt": {
+    "value": 65.16,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "65.16"
+   },
+   "V-am": {
+    "value": 52.62,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "52.62"
+   },
+   "V-last": {
+    "value": 61.75,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "61.75"
+   },
+   "V-cb": {
+    "value": 9.48,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "9.48"
+   },
+   "T-rep": {
+    "value": 25.23,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "25.23"
+   },
+   "T-vhdd": {
+    "value": 39.2,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "39.20"
+   },
+   "E-BCH": {
+    "value": 12.5,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "12.50"
+   },
+   "E-LDPC": {
+    "value": 23.79,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "23.79"
+   },
+   "E-CAM": {
+    "value": 18.76,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead",
+    "text": "18.76"
+   }
+  },
+  "lines-nat-e32": {
+   "V-pub": {
+    "value": 2.43,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "2.43"
+   },
+   "V-Snt": {
+    "value": 42.46,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "42.46"
+   },
+   "V-am": {
+    "value": 29.61,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "29.61"
+   },
+   "V-last": {
+    "value": 38.21,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "38.21"
+   },
+   "V-cb": {
+    "value": 4.06,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "4.06"
+   },
+   "T-rep": {
+    "value": 13.94,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "13.94"
+   },
+   "T-vhdd": {
+    "value": 29.69,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "29.69"
+   },
+   "E-BCH": {
+    "value": 6.03,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "6.03"
+   },
+   "E-LDPC": {
+    "value": 4.31,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "4.31"
+   },
+   "E-CAM": {
+    "value": 9.09,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead",
+    "text": "9.09"
+   }
+  },
+  "lines-nat-k32": {
+   "V-pub": {
+    "value": 0.1,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "0.10"
+   },
+   "V-Snt": {
+    "value": 16.98,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "16.98"
+   },
+   "V-am": {
+    "value": 10.2,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "10.20"
+   },
+   "V-last": {
+    "value": 13.38,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "13.38"
+   },
+   "V-cb": {
+    "value": 1.03,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "1.03"
+   },
+   "T-rep": {
+    "value": 4.27,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "4.27"
+   },
+   "T-vhdd": {
+    "value": 16.67,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "16.67"
+   },
+   "E-BCH": {
+    "value": 1.44,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "1.44"
+   },
+   "E-LDPC": {
+    "value": 0.73,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "0.73"
+   },
+   "E-CAM": {
+    "value": 2.76,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead",
+    "text": "2.76"
+   }
+  },
+  "contig-nat-k8": {
+   "V-pub": {
+    "value": 76.59,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "76.59"
+   },
+   "V-Snt": {
+    "value": 78.18,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "78.18"
+   },
+   "V-am": {
+    "value": 77.81,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "77.81"
+   },
+   "V-last": {
+    "value": 78.18,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "78.18"
+   },
+   "V-cb": {
+    "value": 39.76,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "39.76"
+   },
+   "T-rep": {
+    "value": 56.26,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "56.26"
+   },
+   "T-vhdd": {
+    "value": 56.83,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "56.83"
+   },
+   "E-BCH": {
+    "value": 56.72,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "56.72"
+   },
+   "E-LDPC": {
+    "value": 58.52,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "58.52"
+   },
+   "E-CAM": {
+    "value": 74.77,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small",
+    "text": "74.77"
+   }
+  },
+  "contig-nat-e16": {
+   "V-pub": {
+    "value": 68.01,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "68.01"
+   },
+   "V-Snt": {
+    "value": 71.08,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "71.08"
+   },
+   "V-am": {
+    "value": 70.79,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "70.79"
+   },
+   "V-last": {
+    "value": 71.27,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "71.27"
+   },
+   "V-cb": {
+    "value": 30.72,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "30.72"
+   },
+   "T-rep": {
+    "value": 42.5,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "42.50"
+   },
+   "T-vhdd": {
+    "value": 44.12,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "44.12"
+   },
+   "E-BCH": {
+    "value": 42.78,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "42.78"
+   },
+   "E-LDPC": {
+    "value": 43.97,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "43.97"
+   },
+   "E-CAM": {
+    "value": 67.15,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small",
+    "text": "67.15"
+   }
+  },
+  "contig-nat-e20": {
+   "V-pub": {
+    "value": 58.77,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "58.77"
+   },
+   "V-Snt": {
+    "value": 63.21,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "63.21"
+   },
+   "V-am": {
+    "value": 63.3,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "63.30"
+   },
+   "V-last": {
+    "value": 63.94,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "63.94"
+   },
+   "V-cb": {
+    "value": 23.05,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "23.05"
+   },
+   "T-rep": {
+    "value": 30.55,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "30.55"
+   },
+   "T-vhdd": {
+    "value": 31.05,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "31.05"
+   },
+   "E-BCH": {
+    "value": 30.8,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "30.80"
+   },
+   "E-LDPC": {
+    "value": 31.43,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "31.43"
+   },
+   "E-CAM": {
+    "value": 59.21,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small",
+    "text": "59.21"
+   }
+  },
+  "contig-nat-e24": {
+   "V-pub": {
+    "value": 49.71,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "49.71"
+   },
+   "V-Snt": {
+    "value": 55.15,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "55.15"
+   },
+   "V-am": {
+    "value": 55.32,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "55.32"
+   },
+   "V-last": {
+    "value": 56.03,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "56.03"
+   },
+   "V-cb": {
+    "value": 15.77,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "15.77"
+   },
+   "T-rep": {
+    "value": 21.71,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "21.71"
+   },
+   "T-vhdd": {
+    "value": 20.77,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "20.77"
+   },
+   "E-BCH": {
+    "value": 21.84,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "21.84"
+   },
+   "E-LDPC": {
+    "value": 23.85,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "23.85"
+   },
+   "E-CAM": {
+    "value": 50.9,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead",
+    "text": "50.90"
+   }
+  },
+  "contig-nat-k16": {
+   "V-pub": {
+    "value": 42.57,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "42.57"
+   },
+   "V-Snt": {
+    "value": 48.16,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "48.16"
+   },
+   "V-am": {
+    "value": 48.3,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "48.30"
+   },
+   "V-last": {
+    "value": 49.14,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "49.14"
+   },
+   "V-cb": {
+    "value": 9.63,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "9.63"
+   },
+   "T-rep": {
+    "value": 14.47,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "14.47"
+   },
+   "T-vhdd": {
+    "value": 13.53,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "13.53"
+   },
+   "E-BCH": {
+    "value": 14.51,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "14.51"
+   },
+   "E-LDPC": {
+    "value": 15.83,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "15.83"
+   },
+   "E-CAM": {
+    "value": 44.41,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small",
+    "text": "44.41"
+   }
+  },
+  "contig-nat-e32": {
+   "V-pub": {
+    "value": 34.38,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "34.38"
+   },
+   "V-Snt": {
+    "value": 39.78,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "39.78"
+   },
+   "V-am": {
+    "value": 39.55,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "39.55"
+   },
+   "V-last": {
+    "value": 40.33,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "40.33"
+   },
+   "V-cb": {
+    "value": 4.98,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "4.98"
+   },
+   "T-rep": {
+    "value": 8.73,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "8.73"
+   },
+   "T-vhdd": {
+    "value": 7.52,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "7.52"
+   },
+   "E-BCH": {
+    "value": 9.02,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "9.02"
+   },
+   "E-LDPC": {
+    "value": 10.15,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "10.15"
+   },
+   "E-CAM": {
+    "value": 35.55,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small",
+    "text": "35.55"
+   }
+  },
+  "contig-nat-k32": {
+   "V-pub": {
+    "value": 23.68,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "23.68"
+   },
+   "V-Snt": {
+    "value": 28.06,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "28.06"
+   },
+   "V-am": {
+    "value": 27.32,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "27.32"
+   },
+   "V-last": {
+    "value": 28.06,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "28.06"
+   },
+   "V-cb": {
+    "value": 1.51,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "1.51"
+   },
+   "T-rep": {
+    "value": 2.58,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "2.58"
+   },
+   "T-vhdd": {
+    "value": 2.78,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "2.78"
+   },
+   "E-BCH": {
+    "value": 2.62,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "2.62"
+   },
+   "E-LDPC": {
+    "value": 2.81,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "2.81"
+   },
+   "E-CAM": {
+    "value": 24.9,
+    "file": "../results/vsassm/results/b38_verdict.txt",
+    "line": "  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small",
+    "text": "24.90"
+   }
+  }
+ },
+ "graceful_eps_note": "e16, e20, e24, e32 are i.i.d. cell-error rates 0.16, 0.20, 0.24, 0.32 (prereg line 133); k8, k16, k32 take eps from Table 1"
+}

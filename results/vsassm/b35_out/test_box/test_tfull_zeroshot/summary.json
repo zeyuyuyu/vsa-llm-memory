@@ -1,0 +1,49 @@
+{
+ "host": "ucloud-gpu-01",
+ "gpu": "NVIDIA A800 80GB PCIe",
+ "config": {
+  "arm": "tfull",
+  "B": 4,
+  "seed": 0,
+  "steps": 0,
+  "bs": 32,
+  "lr": 0.0002,
+  "lora_r": 0,
+  "codes": "rand",
+  "proj": "mlp",
+  "lmt_layers": 2,
+  "eval_splits": "dev,test",
+  "eval_every": 0,
+  "eval_sub": 100,
+  "tok_budget": 24000,
+  "device": "cuda",
+  "qfirst": 0,
+  "max_new": 16,
+  "mem_lr": 0,
+  "out": "out/test_tfull_zeroshot"
+ },
+ "n_trainable_lm": 0,
+ "n_trainable_mem": 0,
+ "emb_rms": 0.03449790179729462,
+ "curve": [],
+ "train_seconds": 3.337860107421875e-06,
+ "dev": {
+  "N8_hop1": 0.08,
+  "N8_hop2": 0.006666666666666667,
+  "N32_hop1": 0.12,
+  "N32_hop2": 0.0,
+  "N128_hop1": 0.013333333333333334,
+  "N128_hop2": 0.0
+ },
+ "dev_seconds": 194.9990770816803,
+ "test": {
+  "N8_hop1": 0.07166666666666667,
+  "N8_hop2": 0.0016666666666666668,
+  "N32_hop1": 0.125,
+  "N32_hop2": 0.0016666666666666668,
+  "N128_hop1": 0.011666666666666667,
+  "N128_hop2": 0.0
+ },
+ "test_seconds": 391.61503767967224,
+ "total_seconds": 590.7341773509979
+}

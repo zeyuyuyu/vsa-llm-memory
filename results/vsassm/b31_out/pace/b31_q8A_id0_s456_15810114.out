@@ -1,0 +1,36 @@
+---------------------------------------
+Begin Slurm Prolog: Nov-18-2026 03:47:52
+Job ID:    15810114
+User ID:   <user>
+Account:   gts-nimam6
+Job name:  b31_q8A_id0_s456
+Partition: gpu-a100
+QOS:       inferno
+---------------------------------------
+B31-PACE start 2026-11-18T08:47:52Z host atl1-1-01-002-28-0.pace.gatech.edu job 15810114
+NVIDIA A100-SXM4-80GB, 81920 MiB
+B31 LoRA {"n": {"train": 2000, "dev": 500, "test": 1000}, "max_len": {"train": 486, "dev": 482, "test": 483}, "gpu": "NVIDIA A100-SXM4-80GB"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:02,  1.73it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.13it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.03it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:06<00:02,  2.08s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]
+  qwen8 A r8 lr1e-04 id0 sd456 ep1 loss 0.8312 train_sub 0.6060 dev 0.5380 (348s)
+  qwen8 A r8 lr1e-04 id0 sd456 ep2 loss 0.3411 train_sub 0.9980 dev 0.9980 (695s)
+  qwen8 A r8 lr1e-04 id0 sd456 ep3 loss 0.0603 train_sub 1.0000 dev 1.0000 (1043s)
+  qwen8 A r8 lr1e-04 id0 sd456 ep4 loss 0.0472 train_sub 1.0000 dev 1.0000 (1391s)
+  qwen8 A r8 lr1e-04 id0 sd456 ep5 loss 0.0000 train_sub 1.0000 dev 1.0000 (1739s)
+  qwen8 A r8 lr1e-04 id0 sd456 ep6 loss 0.0000 train_sub 1.0000 dev 1.0000 (2086s)
+  qwen8 A r8 lr1e-04 id0 sd456 ep7 loss 0.0000 train_sub 1.0000 dev 1.0000 (2434s)
+  qwen8 A r8 lr1e-04 id0 sd456 ep8 loss 0.0000 train_sub 1.0000 dev 1.0000 (2782s)
+  TEST qwen8 A seed 456 at dev-best epoch 3: 0.9990
+B31-PACE end 2026-11-18T09:38:09Z rc=0
+---------------------------------------
+Begin Slurm Epilog: Nov-18-2026 04:38:10
+Job ID:        15810114
+User ID:       <user>
+Account:       gts-nimam6
+Job name:      b31_q8A_id0_s456
+Resources:     cpu=8,gres/gpu:a100=1,mem=120G,node=1
+Rsrc Used:     cput=06:43:36,vmem=0,walltime=00:50:27,mem=14613040K,energy_used=0
+Partition:     gpu-a100
+QOS:           inferno
+Nodes:         atl1-1-01-002-28-0
+---------------------------------------

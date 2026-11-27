@@ -1,0 +1,13 @@
+store 131072/niah_multikey_2/162015  arm T-vhdd  x32  30 d  probed keys 150  pairs 5995  values 5993  S 375
+layout {'W': 512, 'R': 6007, 'B': 1199, 'db': 16, 'wv': 358}  cells/C 1.000
+  array disp: 920832 cells, flipped 0.3753
+  array rows: 2150506 cells, flipped 0.3741
+failed 30 of 150
+  key 'momentous-mukluk'  want ['4281356']  got ['2013775', '5665057']
+    j=0 bucket 597 sigma 77 decoded 77 -> row 4419 (true row 4419); in that row the best candidate is 5347 (2013775, last=0) at similarity 70 of 358; the true value+flag code at 58
+    j=1 bucket 1 sigma 1 decoded 1 -> row 4188 (true row None); in that row the best candidate is 9994 (5665057, last=1) at similarity 92 of 358; the true value+flag code at -
+  key 'tender-hermit'  want ['8433532']  got ['6011452', '6727801']
+    j=0 bucket 1185 sigma 2 decoded 2 -> row 5613 (true row 5613); in that row the best candidate is 5843 (6011452, last=0) at similarity 72 of 358; the true value+flag code at 66
+    j=1 bucket 853 sigma 95 decoded 95 -> row 5654 (true row None); in that row the best candidate is 2530 (6727801, last=0) at similarity 78 of 358; the true value+flag code at -
+  key 'sharp-hurricane'  want ['4059767']  got ['8249897']
+    j=0 bucket 967 sigma 14 decoded 191 -> row 4576 (true row 632); in that row the best candidate is 8954 (8249897, last=1) at similarity 94 of 358; the true value+flag code at -

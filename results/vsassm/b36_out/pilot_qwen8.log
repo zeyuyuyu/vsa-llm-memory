@@ -1,0 +1,28 @@
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/path/to/vsassm/b36_run.py", line 124, in _dev_one
+    res = run_store(_S, st, fams, BPF, ACCTS)
+  File "/path/to/vsassm/b36_run.py", line 97, in run_store
+    o = K.run_cm(st, P, bank, cf[f], bpfs, accts, ptag)
+  File "/path/to/vsassm/b36_common.py", line 482, in run_cm
+    sk = signatures(PK, bank, hashf, t, k, 1)[:, 0]
+  File "/path/to/vsassm/b36_common.py", line 195, in signatures
+    return sim_sig(P, t, k, T) if hashf == 'sim' else pq_sig(P, bank, t, k, T)
+  File "/path/to/vsassm/b36_common.py", line 150, in sim_sig
+    sig = (bits << np.arange(k, dtype=np.int64)).sum(1)
+ValueError: operands could not be broadcast together with shapes (256,0) (4,) 
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/path/to/vsassm/b36_run.py", line 395, in <module>
+    elif a[0] == 'dev32':
+  File "/path/to/vsassm/b36_run.py", line 151, in dev
+    for r in it:
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 873, in next
+    raise value
+ValueError: operands could not be broadcast together with shapes (256,0) (4,) 

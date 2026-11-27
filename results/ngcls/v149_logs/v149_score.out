@@ -1,0 +1,57 @@
+================================================================================================
+V-149  is the store result HRR's, or the VSA family's?   4 models, algebra swapped, all else fixed
+================================================================================================
+
+  ---- M1 capacity grid (accuracy at pool size k; V-101 protocol) ----
+  model  d           k=32     k=64    k=128    k=256    k=512
+  HRR    512        0.845    0.403    0.085    0.007    0.005
+  HRR    1024       0.935    0.792    0.303    0.047    0.007
+  HRR    2048       0.938    0.938    0.743    0.245    0.040
+  HRR    4096       0.940    0.938    0.928    0.732    0.158
+  MAP    512        0.855    0.425    0.092    0.010    0.002
+  MAP    1024       0.940    0.847    0.312    0.057    0.013
+  MAP    2048       0.938    0.940    0.768    0.275    0.047
+  MAP    4096       0.938    0.938    0.938    0.680    0.182
+  BSC    512        0.655    0.193    0.032    0.008    0.005
+  BSC    1024       0.917    0.587    0.137    0.018    0.003
+  BSC    2048       0.937    0.902    0.463    0.075    0.012
+  BSC    4096       0.938    0.938    0.873    0.390    0.057
+  FHRR   512        0.940    0.840    0.367    0.057    0.012
+  FHRR   1024       0.940    0.938    0.753    0.245    0.025
+  FHRR   2048       0.940    0.938    0.932    0.688    0.167
+  FHRR   4096       0.938    0.940    0.938    0.928    0.628
+
+  k* (largest k at accuracy >= 0.70):
+    HRR    d512=32  d1024=64  d2048=128  d4096=256   alpha = 1.000
+    MAP    d512=32  d1024=64  d2048=128  d4096=128   alpha = 0.700
+    BSC    d512=0  d1024=32  d2048=64  d4096=128   alpha = 1.000
+    FHRR   d512=64  d1024=128  d2048=128  d4096=256   alpha = 0.600
+
+  ---- M2 task readout (300 banked rows, d=2048, shard 64) ----
+    HRR    EM 0.9778   seeds 0.9767 0.9833 0.9733   float32 FFT (O(d log d))                   
+    MAP    EM 0.9789   seeds 0.9833 0.9767 0.9767   float32 multiply-add (O(d))                
+    BSC    EM 0.9800   seeds 0.9833 0.9833 0.9733   uint8 XOR + popcount (O(d), integer only)  INTEGER-ONLY
+    FHRR   EM 0.9856   seeds 0.9800 0.9900 0.9867   complex64 multiply (O(d))                  
+
+  ---- P0 gate ----
+    P0a HRR reproduces V-101 (k128 0.7433 vs 0.7417, k256 0.2450 vs 0.2417, tol 0.05): True
+    P0b HRR reproduces store_rebase (0.9778 vs 0.9778, tol 0.010): True
+
+  ---- P1 / P2 / P3 ----
+    P1 models at EM >= 0.90: 4 of 4 (HRR,MAP,BSC,FHRR), bar >= 3 => HOLDS
+    P2 spread FHRR - HRR = +0.0078  CI [-0.0011, +0.0178]  bar >= 0.05 and CI excludes 0 => FAILS
+    P3 alpha in [0.85,1.15] for every model: HRR=1.000, MAP=0.700, BSC=1.000, FHRR=0.600 => FAILS (MAP,FHRR)
+
+  ---- P4 descriptive: the accuracy / arithmetic frontier ----
+    FHRR   EM 0.9856  0.0006 s/query  complex64 multiply (O(d))                  
+    BSC    EM 0.9800  0.0005 s/query  uint8 XOR + popcount (O(d), integer only)  INTEGER-ONLY
+    MAP    EM 0.9789  0.0004 s/query  float32 multiply-add (O(d))                
+    HRR    EM 0.9778  0.0009 s/query  float32 FFT (O(d log d))                   
+
+================================================================================================
+V-149 VERDICT: P1 HOLDS | P2 FAILS | P3 FAILS
+
+  SCOPE: one task, one identity scheme, one cleanup rule; four of the eleven models Survey
+  Part I catalogues. The sparse families and the matrix binders are not tested.
+================================================================================================
+V149-SCORED

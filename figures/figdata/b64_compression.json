@@ -1,0 +1,96 @@
+{
+ "_about": "Fig. compression (r63 after B64): the store's first design (VSAR) minus the best of seven unsupervised classical\nmemories (B36's six plus the SDM with training-split hard locations, SDMT; B36's choice rule on dev) over the\npre-specified region R1, per encoder, as verbatim lines of vsassm results/b64_verdict.txt ('## VSAR - BEST7 (ideal)').",
+ "encoders": [
+  {
+   "name": "Qwen3-8B",
+   "key": "qwen8",
+   "best7": {
+    "value": -2.15,
+    "lo": -3.05,
+    "hi": -1.28,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| Qwen3-8B |  -1.42 [ -2.85,  +0.01] | level |  -2.89 [ -3.95,  -1.86] | memory leads |  -2.15 [ -3.05,  -1.28] | memory leads | loss |",
+    "cell": 5,
+    "text": "-2.15"
+   }
+  },
+  {
+   "name": "Granite-3.3-8B",
+   "key": "b46",
+   "best7": {
+    "value": -2.25,
+    "lo": -3.05,
+    "hi": -1.41,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| Granite-3.3-8B |  -1.00 [ -2.22,  +0.26] | level |  -3.51 [ -4.55,  -2.47] | memory leads |  -2.25 [ -3.05,  -1.41] | memory leads | loss |",
+    "cell": 5,
+    "text": "-2.25"
+   }
+  },
+  {
+   "name": "Llama-3.1-8B",
+   "key": "llama",
+   "best7": {
+    "value": -1.2,
+    "lo": -2.13,
+    "hi": -0.27,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| Llama-3.1-8B |  -0.68 [ -2.17,  +0.77] | level |  -1.72 [ -2.84,  -0.59] | memory leads |  -1.20 [ -2.13,  -0.27] | memory leads | tie |",
+    "cell": 5,
+    "text": "-1.20"
+   }
+  },
+  {
+   "name": "Mistral-7B",
+   "key": "mistral",
+   "best7": {
+    "value": -3.56,
+    "lo": -4.51,
+    "hi": -2.61,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| Mistral-7B |  -3.15 [ -4.51,  -1.80] | memory leads |  -3.96 [ -5.31,  -2.63] | memory leads |  -3.56 [ -4.51,  -2.61] | memory leads | loss |",
+    "cell": 5,
+    "text": "-3.56"
+   }
+  },
+  {
+   "name": "e5-base-v2",
+   "key": "e5",
+   "best7": {
+    "value": -1.79,
+    "lo": -2.63,
+    "hi": -0.96,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| e5-base-v2 |  -1.51 [ -2.71,  -0.28] | memory leads |  -2.07 [ -3.20,  -0.96] | memory leads |  -1.79 [ -2.63,  -0.96] | memory leads | tie |",
+    "cell": 5,
+    "text": "-1.79"
+   }
+  },
+  {
+   "name": "bge-small",
+   "key": "bge",
+   "best7": {
+    "value": -5.01,
+    "lo": -5.9,
+    "hi": -4.12,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| bge-small |  -4.69 [ -6.08,  -3.28] | memory leads |  -5.33 [ -6.45,  -4.25] | memory leads |  -5.01 [ -5.90,  -4.12] | memory leads | loss |",
+    "cell": 5,
+    "text": "-5.01"
+   }
+  },
+  {
+   "name": "MiniLM-L6",
+   "key": "minilm",
+   "best7": {
+    "value": -4.06,
+    "lo": -4.94,
+    "hi": -3.19,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| MiniLM-L6 |  -4.82 [ -6.08,  -3.53] | memory leads |  -3.29 [ -4.48,  -2.16] | memory leads |  -4.06 [ -4.94,  -3.19] | memory leads | loss |",
+    "cell": 5,
+    "text": "-4.06"
+   }
+  }
+ ]
+}

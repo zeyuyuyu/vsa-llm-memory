@@ -1,0 +1,44 @@
+{
+ "source": "vsassm/r1_out/test_8B_think.jsonl (CLUTRR gen_train23_test2to10, test split; frozen Qwen3-8B reader, reasoning on, + rule memory); field `ok`, grouped by len(gold_path)",
+ "source_md5": "942f3cacceaeeaa139d1cd7437c24cf6",
+ "n_rows": 1146,
+ "correct": 822,
+ "by_k": {
+  "2": {
+   "n": 38,
+   "correct": 36
+  },
+  "3": {
+   "n": 105,
+   "correct": 70
+  },
+  "4": {
+   "n": 190,
+   "correct": 153
+  },
+  "5": {
+   "n": 174,
+   "correct": 136
+  },
+  "6": {
+   "n": 107,
+   "correct": 84
+  },
+  "7": {
+   "n": 144,
+   "correct": 98
+  },
+  "8": {
+   "n": 150,
+   "correct": 94
+  },
+  "9": {
+   "n": 119,
+   "correct": 77
+  },
+  "10": {
+   "n": 119,
+   "correct": 74
+  }
+ }
+}

@@ -1,0 +1,12 @@
+# B71 (D2): labels with side information charged beyond what the compared store design uses (8 bits per entry).
+
+| encoder | LAMc - store (as run) | LAMc - store (D2) | SDMt - first design (as run) | SDMt - first design (D2) |
+| --- | --- | --- | --- | --- |
+| Qwen3-8B | +4.06 [+3.39, +4.76] LAMC leads | +3.47 [+2.81, +4.14] LAMCD2 leads | +1.89 [+1.02, +2.79] SDMT leads | -4.32 [-5.32, -3.30] VSAR leads |
+| Granite-3.3-8B | +5.55 [+4.88, +6.25] LAMC leads | +4.10 [+3.43, +4.76] LAMCD2 leads | +2.25 [+1.44, +3.05] SDMT leads | -5.68 [-6.58, -4.78] VSAR leads |
+| Llama-3.1-8B | +5.56 [+4.73, +6.40] LAMC leads | +5.30 [+4.47, +6.13] LAMCD2 leads | +1.20 [+0.24, +2.14] SDMT leads | -2.48 [-3.49, -1.46] VSAR leads |
+| Mistral-7B | +5.23 [+4.44, +6.02] LAMC leads | +5.23 [+4.46, +6.03] LAMCD2 leads | +3.56 [+2.59, +4.53] SDMT leads | +2.82 [+1.90, +3.72] SDMTD2 leads |
+| e5-base-v2 | +6.53 [+5.86, +7.20] LAMC leads | +5.73 [+5.10, +6.34] LAMCD2 leads | +0.92 [+0.09, +1.76] SDMT leads | -7.22 [-8.12, -6.34] VSAR leads |
+| bge-small | +4.18 [+3.52, +4.84] LAMC leads | +4.38 [+3.73, +5.04] LAMCD2 leads | +4.73 [+3.85, +5.63] SDMT leads | -8.21 [-9.37, -7.08] VSAR leads |
+| MiniLM-L6 | +4.30 [+3.59, +5.00] LAMC leads | +3.53 [+2.82, +4.25] LAMCD2 leads | +3.80 [+2.94, +4.69] SDMT leads | -7.04 [-8.04, -6.05] VSAR leads |
+Labels changed by D2 (R1, one-level): LAMc - store 0 of 7; SDMt - first design 6 of 7.

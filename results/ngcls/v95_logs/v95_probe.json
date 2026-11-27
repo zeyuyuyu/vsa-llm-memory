@@ -1,0 +1,23 @@
+{
+ "prereg": "477dcbb",
+ "curve": [
+  {
+   "target_c": 0.0,
+   "crosstalk": 0.00013061525532975793,
+   "acc": 0.9100000262260437,
+   "acc_per_seed": [
+    0.9100000262260437
+   ]
+  },
+  {
+   "target_c": 0.9,
+   "crosstalk": 0.9000081419944763,
+   "acc": 0.5299999713897705,
+   "acc_per_seed": [
+    0.5299999713897705
+   ]
+  }
+ ],
+ "verdict": "P1 gate: c=0 reproduces the codebook arm (0.9100 vs 0.9244): True ; P2 monotone non-increasing in cross-talk (0.03 tolerance): True ; threshold: largest cross-talk still clearing 0.615 is 0.0001 (target c=0.00) ; P3 threshold < 0.39 (a perfect classifier's cosine): True ; QUANTITATIVE JUSTIFICATION FOR THE HANDOVER: two-hop binding over 32 superposed pairs survives only below cross-talk 0.0001; the best continuous route available reaches 0.3904, which is on the wrong side. The discrete lookup is a requirement, not a convenience.",
+ "threshold_crosstalk": 0.00013061525532975793
+}

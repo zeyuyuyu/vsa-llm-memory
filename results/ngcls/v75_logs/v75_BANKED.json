@@ -1,0 +1,27 @@
+{
+ "random_ref_K200": 0.2,
+ "Ks": {
+  "50": {
+   "random": 0.9566666666666667,
+   "trained": 0.03333333333333333,
+   "trained_held_entity": 0.0,
+   "n_held": 241,
+   "gain": -0.9233333333333333
+  },
+  "100": {
+   "random": 0.8666666666666667,
+   "trained": 0.01,
+   "trained_held_entity": 0.0,
+   "n_held": 241,
+   "gain": -0.8566666666666667
+  },
+  "200": {
+   "random": 0.44,
+   "trained": 0.023333333333333334,
+   "trained_held_entity": 0.0,
+   "n_held": 241,
+   "gain": -0.4166666666666667
+  }
+ },
+ "verdict": "P1 K=200 trained beats random by >= .10: False (0.0233 vs 0.4400) | P2 decay persists (monotone in K): True [0.033, 0.01, 0.023] | P3 held-entity gain present: False (held 0.0000 vs random 0.4400 on n=241) | NEGATIVE READING: random codes near-optimal at this dimension; capacity bound is intrinsic"
+}

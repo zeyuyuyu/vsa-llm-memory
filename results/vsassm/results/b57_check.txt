@@ -1,0 +1,27 @@
+- bits: 38500 (store, cell, arm) configurations; over budget 0; not maximal under the cap 0
+- rls: genuine recursion vs batch ridge (e5, MiniLM; M = 256; V 2 / 16; 4 / 16 bpf; chosen pca configurations): max relative |W difference| 3.31e-15; unquantized read agreement 1.00000 over 1820 queries
+- score: 2744 cell accuracies re-scored by plain loops; max |difference| 0.00e+00; R1 regions 1.35e-16; per-map R1 points 1.04e-16
+- rederive llama VSAPL: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 0.9999 over 7191 queries; worst cell 0.9964
+- rederive llama VSAPT: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive mistral VSAPL: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive mistral VSAPT: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive b46 VSAPL: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive b46 VSAPT: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive qwen8 VSAPL: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive qwen8 VSAPT: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 0.9985 over 7191 queries; worst cell 0.9590
+- rederive bge VSAPL: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive bge VSAPT: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive minilm VSAPL: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 0.9700 over 7191 queries; worst cell 0.9171
+- rederive minilm VSAPT: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 0.9549 over 7191 queries; worst cell 0.8757
+- rederive e5 VSAPL: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive e5 VSAPT: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive minilm VSAPL (diagnostic: LamFeat basis): float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 0.9729 over 7191 queries; worst cell 0.9252
+- rederive minilm VSAPT (diagnostic: LamFeat basis): float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 0.9595 over 7191 queries; worst cell 0.8884
+  cell below 0.99: minilm VSAPL M=1024 V=16 bpf=4 cfg=[384, 4, 512, 'center', 'psgn'] read=(4, inf) agreement 0.9229
+  cell below 0.99: minilm VSAPT M=1024 V=16 bpf=4 cfg=[384, 4, 512, 'center', 'psgn'] read=(4, '1:0.1') agreement 0.8446
+  cell below 0.99: minilm VSAPL M=1024 V=16 bpf=16 cfg=[384, 4, 512, 'center', 'psgn'] read=(4, inf) agreement 0.9229
+  cell below 0.99: minilm VSAPT M=1024 V=16 bpf=16 cfg=[384, 4, 512, 'center', 'psgn'] read=(4, '1:0.1') agreement 0.8446
+  cell below 0.99: minilm VSAPL M=1024 V=16 bpf=64 cfg=[384, 4, 512, 'center', 'psgn'] read=(4, inf) agreement 0.9229
+  cell below 0.99: minilm VSAPT M=1024 V=16 bpf=64 cfg=[384, 4, 512, 'center', 'psgn'] read=(4, '1:0.1') agreement 0.8446
+- rederive minilm VSAPL: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 0.9720 over 7191 queries; worst cell 0.9229
+- rederive minilm VSAPT: float64 own basis / codes / quantizer / read, 1 test store per (M, V), bpf 4 / 16 / 64: agreement 0.9437 over 7191 queries; worst cell 0.8446

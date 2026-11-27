@@ -1,0 +1,31 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 50.02it/s]
+  sd42   stage1: probe_acc=0.9997  fidelity=0.9981  -> GATED-IN (n_spans tr=151854 ev=75996)
+      armA init-eval=0.6290 (trainable=2)
+      armA ep1 eval=0.6510 (37s)
+      armA ep2 eval=0.6710 (74s)
+      armB init-eval=0.6290 (trainable=5,244,930)
+      armB ep1 eval=0.5100 (58s)
+      armB ep2 eval=0.5140 (115s)
+  sd123  stage1: probe_acc=0.9997  fidelity=0.9985  -> GATED-IN (n_spans tr=151854 ev=75996)
+      armA init-eval=0.6290 (trainable=2)
+      armA ep1 eval=0.6540 (38s)
+      armA ep2 eval=0.6720 (76s)
+      armB init-eval=0.6290 (trainable=5,244,930)
+      armB ep1 eval=0.4990 (59s)
+      armB ep2 eval=0.5180 (116s)
+  sd456  stage1: probe_acc=0.9945  fidelity=0.9985  -> GATED-IN (n_spans tr=151854 ev=75996)
+      armA init-eval=0.6330 (trainable=2)
+      armA ep1 eval=0.6570 (39s)
+      armA ep2 eval=0.6770 (76s)
+      armB init-eval=0.6330 (trainable=5,244,930)
+      armB ep1 eval=0.4800 (57s)
+      armB ep2 eval=0.4860 (114s)
+
+  banked references: vsa_parser 0.918 | vsa_spans (V-8, end-task-trained proj) 0.501
+  sd42   fid=0.9981 GATED armA init=0.6290 best=0.6710 | armB final=0.5140 best=0.6290
+  sd123  fid=0.9985 GATED armA init=0.6290 best=0.6720 | armB final=0.5180 best=0.6290
+  sd456  fid=0.9985 GATED armA init=0.6330 best=0.6770 | armB final=0.4860 best=0.6330
+  >>> V-9 VERDICT: INTERMEDIATE (or <3 gated seeds) — report the interpolation verbatim
+V9-DONE
+V9-ALL-DONE

@@ -1,0 +1,39 @@
+
+
+                                         64k        128k        500k        1M          10M         50M
+ QA1 – SINGLE SUPPORTING FACT
+ GPT-4 (Few-shot)                        30.0       24.0        -           -           -           -
+ GPT-4 + RAG (Few-shot)                  50.0       56.0        50.0        56.0        16.0        -
+ RMT (137M)                              99.6       99.1        96.4        94.2        76.4        - (64,8*)
+ RMT-R                                   99.7       99.5        97.5        97.4        86.0        -
+ Mamba (130M)                            100±0.0    99.5±0.2    92.3±1.1    -           -           -
+ ARMT (145M)                             100±0.0    99.9±0.2    99.3±0.9    98.5±1.0    89.4±8.1    49,6±40.4 (79,9*)
+ QA2 – TWO SUPPORTING FACTS
+ GPT-4 (Few-shot)                        4.0        8.0         -           -           -           -
+ RMT (137M)                              72.7       56.3        32.0        25.5        16.2        -
+ RMT-R                                   71,6       54,9        31.8        26.3        13.0        -
+ Mamba (130M)                            95.0±4.2   86.7±6.2    -           -           -           -
+ ARMT (145M)                             100±0.0    99.8±0.2    99.4±0.3    99.4±0.3    84.4±4.0    -
+ QA3 – THREE SUPPORTING FACTS
+ GPT-4 (Few-shot)                        12.0       4.0         -           -           -           -
+ RMT (137M)                              51.9       42.9        25.9        24.8        21.0        -
+ RMT-R                                   52.9       41.9        25.5        22.2        16.4        -
+ Mamba (130M)                            91.8±0.3   81.4±1.0    -           -           -           -
+ ARMT (145M)                             90.4±2.2   86.0±4.8    79.7±10.8   72.1±14.2   37.0±10.3   -
+ QA4 – TWO ARG RELATIONS
+ GPT-4 (Few-shot)                        20.0       36.0        -           -           -           -
+ RMT (137M)                              51.2       40.0        29.4        27.3        17.2        -
+ RMT-R                                   58.8       50.1        32.1        26.0        14.0        -
+ Mamba (130M)                            99.7±0.2   97.6±2.8    -           -           -           -
+ ARMT (145M)                             100±0.1    100±0.1     99.9±0.2    99.8±0.3    91.5±1.7    -
+ QA5 – THREE ARG RELATIONS
+ GPT-4 (Few-shot)                        64.0       48.0        -           -           -           -
+ RMT (137M)                              88.5       78.1        56.4        48.0        27.3        -
+ RMT-R                                   86.2       77.4        55.9        49.9        35.0        -
+ Mamba (130M)                            98.7±0.1   97.5±1.1    -           -           -           -
+ ARMT (145M)                             99.0±0.3   98.7±0.4    98.4±0.3    97.3±0.6    80.9±7.6    -
+
+Table 1: Exact match metric on QA1-5 Babilong subsets. Each column corresponds to some constant
+context length. Context includes both noise sentences and facts. * The 50M exact-match on QA1 is
+measured on 1 best model. ARMT rows are 3 runs averaged. Mamba rows are 2 runs averaged. The
+metric is marked bold if its ±std interval intersects the ±std interval of the best model.

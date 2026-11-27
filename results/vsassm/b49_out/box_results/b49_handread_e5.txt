@@ -1,0 +1,54 @@
+# B49 hand reading, e5: R1 cells with the largest and the smallest VSA - BEST (ideal)
+
+## cell M=1024 V=2 bpf=8: VSA 62.4, BEST LAM 63.7, diff -1.39, EXACT 84.7
+  only VSA right: 251 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'South Osetia'                           | 'South Ossetia'                          | 'South Ossetia'                          | +0.717 | True
+    'The Shield'                             | 'Aspis'                                  | 'The Wrestling'                          | -0.038 | True
+    'Van Arp'                                | 'Willem van Herp'                        | 'Willem van Herp'                        | +0.383 | True
+    'Il Tamerlano'                           | 'Bajazet'                                | 'Luciano Lollo'                          | +0.024 | True
+    'Downshire'                              | 'County Down'                            | 'County Down'                            | +0.327 | True
+    'International Language: Preface and Complete Textbook' | 'Unua Libro'                             | 'International Islamic Fiqh Academy'     | +0.245 | True
+    'canton of Basel-Country'                | 'Basel-Landschaft'                       | 'Basel-Landschaft'                       | +0.661 | True
+    'Heart of Dixie'                         | 'Alabama'                                | 'Dixie Union'                            | +0.216 | True
+    'Torino province'                        | 'Province of Turin'                      | 'Province of Turin'                      | +0.640 | True
+    'Charlton'                               | 'Charlton Athletic F.C.'                 | 'Charlton Athletic F.C.'                 | +0.714 | True
+    mean centred cosine over all 251: +0.496; EXACT right in 0.85
+  only BEST right: 314 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Football Club Inter'                    | 'FC Internazionale Milano'               | 'FC Internazionale Milano'               | +0.642 | True
+    'Ralph'                                  | 'Ralph Wiggum'                           | 'Ralph Wiggum'                           | +0.530 | True
+    'WCHL'                                   | 'Western Hockey League'                  | 'Western Hockey League'                  | +0.584 | True
+    'Emperor of the East Leo VI'             | 'Leo VI the Wise'                        | 'Leo VI the Wise'                        | +0.669 | True
+    'Welling'                                | 'Welling United F.C.'                    | 'Welling United F.C.'                    | +0.601 | True
+    'City of Bradford'                       | 'Bradford'                               | 'Bradford'                               | +0.775 | True
+    'Symphony No. 4 in A Major, Op. 90'      | 'Symphony No. 4'                         | 'Symphony No. 4'                         | +0.723 | True
+    'Ernest Thompson Willows'                | 'Ernest Willows'                         | 'Ernest Willows'                         | +0.831 | True
+    'Perfectos'                              | 'St. Louis Cardinals'                    | 'Deivos'                                 | -0.007 | True
+    "République d'Haïti"                     | 'Haiti'                                  | 'Haiti'                                  | +0.675 | True
+    mean centred cosine over all 314: +0.545; EXACT right in 0.84
+
+## cell M=1024 V=16 bpf=16: VSA 30.0, BEST LHI 37.8, diff -7.88, EXACT 71.1
+  only VSA right: 597 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'J. Cook'                                | 'James Cook'                             | 'James Cook'                             | +0.681 | True
+    'Old Ross'                               | 'Johann Heinrich Roos'                   | 'Red Rose'                               | -0.031 | False
+    'Give'                                   | 'The Giver'                              | 'Please Give'                            | +0.527 | False
+    'S Ossetia'                              | 'South Ossetia'                          | 'South Ossetia'                          | +0.790 | True
+    "Vall d'Aran"                            | "Val d'Aran"                             | "Val d'Aran"                             | +0.881 | True
+    'Juan Cardinal Soldevilla y Romero'      | 'Juan Soldevilla y Romero'               | 'Juan Soldevilla y Romero'               | +0.877 | True
+    'Gardener'                               | 'The Gardener'                           | 'The Gardener'                           | +0.826 | True
+    'Ferdinando Sor'                         | 'Fernando Sor'                           | 'Fernando Sor'                           | +0.666 | True
+    'Gregory'                                | 'Gregory I'                              | 'Gregory I'                              | +0.727 | True
+    'Runner'                                 | 'The Runner'                             | 'The Runner'                             | +0.860 | True
+    mean centred cosine over all 597: +0.641; EXACT right in 0.89
+  only BEST right: 940 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'British Royal Navy'                     | 'Royal Navy'                             | 'Royal Navy'                             | +0.929 | True
+    'Ciudad de México'                       | 'Mexico City'                            | 'Mexico City'                            | +0.723 | True
+    'guidestar.org'                          | 'GuideStar'                              | 'GuideStar'                              | +0.864 | True
+    'Bosnia'                                 | 'Bosnia and Herzegovina'                 | 'Bosnia and Herzegovina'                 | +0.892 | True
+    'Nun'                                    | 'The Nun'                                | 'The Nun'                                | +0.854 | True
+    'Mancomunidad Filipina'                  | 'Commonwealth of the Philippines'        | 'Commonwealth of the Philippines'        | +0.427 | True
+    'Alice Capet'                            | 'Alice of France'                        | 'Alice of France'                        | +0.543 | True
+    'Business'                               | 'The Business'                           | 'The Business'                           | +0.803 | True
+    'Zablati'                                | 'Záblatí'                                | 'Záblatí'                                | +1.000 | True
+    'Cho Geung-yeon'                         | 'Cho Keung-yeon'                         | 'Cho Keung-yeon'                         | +0.830 | True
+    mean centred cosine over all 940: +0.721; EXACT right in 0.91
+

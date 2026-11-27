@@ -1,0 +1,55 @@
+# ngcls scan (box, 2026-11-18 ~05:50-06:00 UTC): n_test defaults and loaders of Muennighoff/babi
+== n_test defaults
+v152_v50.py:105:    ap.add_argument("--n_test", type=int, default=500)
+v30.py:82:    ap.add_argument("--n_test", type=int, default=500)
+v31.py:35:    ap.add_argument("--n_test", type=int, default=500)
+v32.py:36:    ap.add_argument("--n_test", type=int, default=500)
+v33.py:38:    ap.add_argument("--n_test", type=int, default=500)
+v35.py:67:    ap.add_argument("--n_test", type=int, default=500)
+v36.py:30:    ap.add_argument("--n_test", type=int, default=500)
+v37b.py:121:    ap.add_argument("--n_test", type=int, default=500)
+v37.py:105:    ap.add_argument("--n_test", type=int, default=500)
+v45.py:44:    ap.add_argument("--n_test", type=int, default=2000)
+v46.py:34:    ap.add_argument("--n_test", type=int, default=500)
+v46.py:54:    def cell(name, n_tr, n_te, filt):
+v46.py:55:        d = load_babi(1, n_tr, 200, n_te)
+v47.py:55:    ap.add_argument("--n_test", type=int, default=2000)
+v48.py:34:    ap.add_argument("--n_test", type=int, default=500)
+v49.py:51:    ap.add_argument("--n_test", type=int, default=500)
+v50.py:88:    ap.add_argument("--n_test", type=int, default=500)
+v51.py:49:    ap.add_argument("--n_test", type=int, default=300)
+v52.py:94:    ap.add_argument("--n_test", type=int, default=500)
+v53.py:40:    ap.add_argument("--n_test", type=int, default=500)
+v58.py:88:    ap.add_argument("--n_test", type=int, default=500)
+v59.py:103:    ap.add_argument("--n_test", type=int, default=500)
+v5.py:217:    ap.add_argument("--n_test", type=int, default=1000)
+v7.py:173:def get_arena(name, n_tr, n_va, n_te):
+v7.py:175:        d = load_babi(name, n_tr, n_va, n_te)
+v7.py:181:    sp = make_splits(name, n_tr, n_va, n_te, seed=0)
+v7.py:193:    ap.add_argument("--n_test", type=int, default=1000)
+== shell/cmd mentions of n_test
+./ledger.md:9184:42/123/456; same lr 2e-4, bs 2, n_train 600, n_test 400; cuda:0 (GPU 1 reserved); out v15b_logs/.
+./ledger.md:9401:frozen_cont), seeds 42/123/456, identical budget to V-13 (n_train 800, n_test 500, epochs 2, batch 4,
+./ledger.md:11514:Everything else exactly the mechanism table's settings (n_train 800, n_test 500, epochs 2, bs 4, lr 3e-4,
+./v13_logs/v34.log:2:              [--n_train N_TRAIN] [--n_test N_TEST] [--epochs EPOCHS]
+./v44_logs/v44.log:2:              [--n_train N_TRAIN] [--n_test N_TEST]
+./v152_prereg.md:17:n_test)` and returns `{"train", "val", "test"}`; `v50.build_rows` calls it with `n_val = 200` and then
+== Muennighoff outside ngcls
+/path/to/work/b28/b28_babi.py
+/path/to/work/b28/b28_lora2.py
+/path/to/work/b28/b28_ngcls/v30.py
+/path/to/work/b28/b28_ngcls/v37b.py
+/path/to/work/b28/b28_ngcls/v5.py
+/path/to/work/b28/b28_ngcls/v50.py
+/path/to/work/b28/b28_ngcls/v52.py
+/path/to/work/b28/b28_ngcls/v58.py
+/path/to/work/b28/b28_handread.py
+/path/to/work/b33/tools/b33_count.py
+
+# V-5 / V-6 / V-7 logs
+v5_logs/v5.log:25:=== bAbI task 2 ===  |vocab|=6  n=900/100/1000  majority(test)=0.1870  oov={'train': 0, 'val': 0, 'test': 0}
+v7_logs/v7.log:47:=== babi2 (pool=last) === n_class=6 majority=0.1870  probe=[0.303, 0.324, 0.262]  ADMITTED=True
+v7_logs/v7.log:84:  ADMITTED: ['variable_tracking', 'babi1', 'babi2', 'babi16']   (of 8 arenas)
+v5_logs/v5.json 2644 [{"task": 1, "n_class": 6, "majority": 0.187, "arms": {"probe": [{"val": 0.38999998569488525, "val_epoch": 57, "test": 0.3630000054836273, "trainable": 15366}, {"val": 0.3799999952316284, "val_epoch": 25, "test": 0.33900001645088196, "trainable": 15366}, {"val": 0.38999998569488525, "val_epoch": 48, "test": 0.3440000116825104, "trainable": 15366}], "hd": [{"val": 0.12, "test":
+v7_logs/v7_last.json 4463 [{"arena": "variable_tracking", "pool": "last", "n_class": 2, "majority": 0.512, "arms": {"probe": [{"val": 0.7940000295639038, "test": 0.7900000214576721, "trainable": 5122}, {"val": 0.784000039100647, "test": 0.7660000324249268, "trainable": 5122}, {"val": 0.7920000553131104, "test": 0.7850000262260437, "trainable": 5122}], "hd": [{"val": 0.538, "test": 0.515, "trainabl
+v6_logs/v6.json 563 [{"arena": "variable_tracking", "majority": 0.512, "n_class": 2, "probe": {"mean": [0.656000018119812, 0.6490000486373901, 0.6640000343322754], "last": [0.7890000343322754, 0.7850000262260437, 0.7880000472068787], "max": [0.6930000185966492, 0.6970000267028809, 0.7100000381469727]}}, {"arena": "babi_task1", "majority": 0.187, "n_class": 6, "probe": {"mean": [0.3750000298023224,

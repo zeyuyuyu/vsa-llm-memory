@@ -1,0 +1,28 @@
+- bits: 19600 (store, cell, arm) configurations; over budget or logged bits inconsistent 0; not maximal 0
+- repro qwen8: VSAL with alpha = inf at B53's q in 32 cell-accountings: agreement with B53's VSA 1.00000 (0 of 147230 queries differ)
+- repro b46: VSAL with alpha = inf at B53's q in 29 cell-accountings: agreement with B53's VSA 1.00000 (0 of 132588 queries differ)
+- repro llama: VSAL with alpha = inf at B53's q in 21 cell-accountings: agreement with B53's VSA 1.00000 (0 of 96102 queries differ)
+- repro mistral: VSAL with alpha = inf at B53's q in 32 cell-accountings: agreement with B53's VSA 0.99876 (183 of 147277 queries differ)
+- repro e5: VSAL with alpha = inf at B53's q in 17 cell-accountings: agreement with B53's VSA 0.99513 (385 of 79071 queries differ)
+- repro bge: VSAL with alpha = inf at B53's q in 24 cell-accountings: agreement with B53's VSA 1.00000 (0 of 109848 queries differ)
+- repro minilm: VSAL with alpha = inf at B53's q in 14 cell-accountings: agreement with B53's VSA 1.00000 (0 of 64708 queries differ)
+- ties e5 M=256 V=16 1 bpf real: 385 differing queries, 385 of them exact ties on the quantizer lattice
+- ties mistral M=256 V=2 1 bpf real: 66 differing queries, 66 of them exact ties on the quantizer lattice
+- ties mistral M=256 V=2 2 bpf ideal: 53 differing queries, 53 of them exact ties on the quantizer lattice
+- ties mistral M=256 V=2 2 bpf real: 57 differing queries, 57 of them exact ties on the quantizer lattice
+- ties mistral M=256 V=2 64 bpf real: 7 differing queries, 7 of them exact ties on the quantizer lattice
+- score: 3136 cell accuracies re-scored by plain loops; max |difference| from the verdict 0.00e+00; R1 VSAS - LAM / BEST max |difference| 1.98e-16
+- rederive mistral VSAL: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive mistral VSAT: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive llama VSAL: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 0.9997 over 7191 queries; worst cell 0.9980
+- rederive llama VSAT: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 0.9999 over 7191 queries; worst cell 0.9990
+- rederive b46 VSAL: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive b46 VSAT: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive qwen8 VSAL: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive qwen8 VSAT: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 1.0000 over 7191 queries; worst cell 1.0000
+- rederive bge VSAL: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 0.9986 over 7191 queries; worst cell 0.9898
+- rederive bge VSAT: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 0.9926 over 7191 queries; worst cell 0.9735
+- rederive minilm VSAL: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 0.9999 over 7191 queries; worst cell 0.9990
+- rederive minilm VSAT: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 0.9978 over 7191 queries; worst cell 0.9816
+- rederive e5 VSAL: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 0.9921 over 7191 queries; worst cell 0.9665
+- rederive e5 VSAT: float64 own implementation, 1 test store per (M, V), bpf 4 / 16 / 64 (ideal): agreement 0.9947 over 7191 queries; worst cell 0.9726

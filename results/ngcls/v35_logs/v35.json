@@ -1,0 +1,161 @@
+{
+ "n_sym": 10,
+ "id_space": 20,
+ "floor": 0.7713,
+ "parser": 1.0,
+ "bar_robust": 0.97713,
+ "bar_brittle": 0.79417,
+ "cells": [
+  {
+   "family": "none",
+   "rate": 0.0,
+   "chain": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "consistency": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "chain_mean": 1.0,
+   "cons_mean": 1.0
+  },
+  {
+   "family": "merge",
+   "rate": 0.05,
+   "chain": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "consistency": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "chain_mean": 1.0,
+   "cons_mean": 1.0
+  },
+  {
+   "family": "merge",
+   "rate": 0.1,
+   "chain": [
+    0.706,
+    1.0,
+    0.868
+   ],
+   "consistency": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "chain_mean": 0.858,
+   "cons_mean": 1.0
+  },
+  {
+   "family": "merge",
+   "rate": 0.2,
+   "chain": [
+    0.844,
+    0.568,
+    0.718
+   ],
+   "consistency": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "chain_mean": 0.71,
+   "cons_mean": 1.0
+  },
+  {
+   "family": "merge",
+   "rate": 0.4,
+   "chain": [
+    0.432,
+    0.606,
+    0.83
+   ],
+   "consistency": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "chain_mean": 0.6226666666666666,
+   "cons_mean": 1.0
+  },
+  {
+   "family": "split",
+   "rate": 0.05,
+   "chain": [
+    0.992,
+    0.974,
+    0.978
+   ],
+   "consistency": [
+    0.994,
+    0.988,
+    0.972
+   ],
+   "chain_mean": 0.9813333333333333,
+   "cons_mean": 0.9846666666666666
+  },
+  {
+   "family": "split",
+   "rate": 0.1,
+   "chain": [
+    0.964,
+    0.956,
+    0.918
+   ],
+   "consistency": [
+    0.982,
+    0.982,
+    0.908
+   ],
+   "chain_mean": 0.9460000000000001,
+   "cons_mean": 0.9573333333333333
+  },
+  {
+   "family": "split",
+   "rate": 0.2,
+   "chain": [
+    0.842,
+    0.818,
+    0.814
+   ],
+   "consistency": [
+    0.932,
+    0.82,
+    0.838
+   ],
+   "chain_mean": 0.8246666666666665,
+   "cons_mean": 0.8633333333333333
+  },
+  {
+   "family": "split",
+   "rate": 0.4,
+   "chain": [
+    0.466,
+    0.528,
+    0.552
+   ],
+   "consistency": [
+    0.602,
+    0.586,
+    0.604
+   ],
+   "chain_mean": 0.5153333333333333,
+   "cons_mean": 0.5973333333333333
+  }
+ ],
+ "verdict_merge": "GRADED",
+ "verdict_split": "GRADED",
+ "asymmetry": "ASYMMETRY INCONCLUSIVE (seeds disagree; report the numbers, license neither reading)",
+ "monotone": {
+  "merge": true,
+  "split": true
+ }
+}

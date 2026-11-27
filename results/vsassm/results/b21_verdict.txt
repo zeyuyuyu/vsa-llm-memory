@@ -1,0 +1,44 @@
+# B21 verdict (prereg/B21_ruler_vsa_prereg.md + amendments 1-2): RULER with a sharded Fourier HRR store, 2026-11-14
+
+Data: the B19 test sets (official RULER scripts, Qwen3 tokenizer, seed 42, 100 samples per task and length).
+System: B19's reader (prompted Qwen3-8B, no RULER training) and, in place of B19's fact table, a sharded Fourier HRR
+store (d = 8192, at most 16 pairs per vector on average, separate key and value codebooks, clean-up threshold 0.5).
+Both stores answered from the same reader output in the same run. CWE / FWE / QA do not use the memory; their B19
+predictions are reused for the 13-task averages.
+Compute (amendment 2): PACE, paid account; jobs 15493950 (4k-32k, H200) and 15493872 (64k/128k, mostly L40S, one
+A100-80GB). 5,400 samples, all complete, no errors. 24.3 GPU-hours in all (sacct elapsed, summed over the 22
+array tasks); 12.9 GPU-hours for the 900 samples at 128k (51.6 GPU-s per sample).
+
+13-task average             4k     8k    16k    32k    64k   128k
+VSA store (ours)          95.8   95.5   95.3   95.6   95.2   94.9
+table, this run           95.8   95.5   95.3   95.6   95.2   94.9
+Qwen3-8B direct (B19)     95.2   93.9   93.5   92.1   80.8   77.3
+Without CWE / FWE (11 tasks):
+VSA store (ours)          95.1   94.7   94.4   94.8   94.3   94.0
+Qwen3-8B direct (B19)     95.8   94.3   93.9   93.5   81.0   78.7
+NIAH + VT mean (9 tasks):
+VSA store (ours)          99.5   99.9   99.6   99.7   99.5   99.6
+table, B19                99.7   99.9   99.6   99.7   99.7   99.6
+Qwen3-8B direct (B19)    100.0   99.9   99.9   99.3   86.3   84.5
+VSA and table predictions identical: 5400 of 5400 samples (every length 1.0000).
+
+Bars:
+  - P1 (NIAH + VT mean of the VSA store >= 99.0 at every length): PASS, 99.47-99.91.
+  - P2 (VSA and table predictions identical on >= 99% of NIAH + VT samples at every length): PASS, 100% at every length.
+  - P3 (13-task average at 128k with the VSA store >= 94.0): PASS, 94.94.
+Predictions: P1-P3 held. Predicted disagreements on niah_multikey_3 at 64k / 128k: none occurred (0 disagreements).
+Reproducibility (table arm of this run against B19, NIAH + VT mean): within 0.25 points at every length; the
+greedy reader ran on different GPUs (amendment 2).
+Store size: up to 5996 pairs per sample (median 13), up to 375 vectors, at most 38 pairs in one vector.
+
+Leaderboard context at 128k (RULER README, 13-task average, 500 samples per task): Jamba-1.5-large 95.1,
+Gemini-1.5-pro 94.4, Qwen2.5-14B-Instruct-1M 92.2, Qwen3-235B-A22B 90.6, GPT-4-1106-preview 81.2, Qwen3-8B 77.4,
+Llama-3.1-70B 66.6. Ours: 94.9 (n = 100 per task).
+Caveats (must accompany any quote), as B19: CWE / FWE are counted by the memory's word counter, not read by a model;
+one example in the reader's prompt is close to RULER's needle wording (chosen on dev); QA is query-aware;
+n = 100 per task; the reader is Qwen3-8B, prompted, not the 1.7B BABILong reader.
+Frontier references (B19 amendment 2, 10 samples per task at 128k): GPT-6.1 Sol 96.2 and Claude Opus 5.5 93.1;
+both match or exceed us. The claim at 128k is parity with the leaderboard top at a fraction of its size.
+Literature check: HRR capacity theory (Plate 1995, 2003; Frady et al. 2018) predicts exact read-out when the load per
+vector is well below d / (2 ln N); 38 pairs at d = 8192 is far inside it (supporting). A quick search found no
+published RULER-128k result above 94.9 outside the leaderboard (weak evidence; not exhaustive).

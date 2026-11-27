@@ -1,0 +1,64 @@
+{
+ "args": {
+  "cmd": "train",
+  "task": "N",
+  "arm": "vsa",
+  "split": "dev",
+  "layers": "17",
+  "layer": 20,
+  "subset": 0,
+  "bs": 16,
+  "epochs": 100,
+  "eval_every": 250,
+  "lr": 0.0003,
+  "seed": 0,
+  "steps": 1000,
+  "rank": 6,
+  "reader": "out/rd/N_vsa_e1000_s0",
+  "ckpt": "",
+  "out": "out/dev/N_vsa_zero_lr3e-4_s0",
+  "pred": "",
+  "noise": 0.0,
+  "noise_seed": 12345,
+  "soft_beta": 0.0,
+  "dec_init": "zero",
+  "recon_epochs": 100,
+  "limit": 0,
+  "max_new": 6,
+  "cot_max_new": 512,
+  "cot_bs": 48,
+  "shuffle_facts": 0,
+  "dev_split": "dev",
+  "dev_subset": 0,
+  "dev_limit": 0
+ },
+ "trainable_params": 8388608,
+ "hist": [
+  {
+   "step": 0,
+   "dev": 0.17375
+  },
+  {
+   "step": 250,
+   "dev": 0.90125,
+   "loss": 0.09547527879476547
+  },
+  {
+   "step": 500,
+   "dev": 0.9075,
+   "loss": 0.007464522495865822
+  },
+  {
+   "step": 750,
+   "dev": 0.91,
+   "loss": 0.00785981584340334
+  },
+  {
+   "step": 1000,
+   "dev": 0.90875,
+   "loss": 0.026066184043884277
+  }
+ ],
+ "best_dev": 0.91,
+ "best_step": 750
+}

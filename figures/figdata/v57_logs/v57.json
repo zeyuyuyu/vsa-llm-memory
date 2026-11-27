@@ -1,0 +1,93 @@
+{
+ "depths": [
+  1,
+  2,
+  3
+ ],
+ "cells": {
+  "1": {
+   "floor": [
+    0.54,
+    0.528,
+    0.554
+   ],
+   "parser": [
+    0.954,
+    0.96,
+    0.96
+   ],
+   "probe_argmax": [
+    0.954,
+    0.96,
+    0.96
+   ],
+   "lora_direct": [
+    0.52,
+    0.522,
+    0.48
+   ]
+  },
+  "2": {
+   "floor": [
+    0.512,
+    0.53,
+    0.504
+   ],
+   "parser": [
+    0.932,
+    0.932,
+    0.938
+   ],
+   "probe_argmax": [
+    0.932,
+    0.932,
+    0.938
+   ],
+   "lora_direct": [
+    0.488,
+    0.54,
+    0.474
+   ]
+  },
+  "3": {
+   "floor": [
+    0.528,
+    0.518,
+    0.544
+   ],
+   "parser": [
+    0.884,
+    0.88,
+    0.876
+   ],
+   "probe_argmax": [
+    0.884,
+    0.88,
+    0.876
+   ],
+   "lora_direct": [
+    0.52,
+    0.52,
+    0.506
+   ]
+  }
+ },
+ "gaps": {
+  "1": [
+   0.43399999999999994,
+   0.43799999999999994,
+   0.48
+  ],
+  "2": [
+   0.44400000000000006,
+   0.392,
+   0.46399999999999997
+  ],
+  "3": [
+   0.364,
+   0.36,
+   0.37
+  ]
+ },
+ "verdict": "THE GAIN DOES NOT SCALE (it is not larger at three hops than at two; the twenty points stays a single-depth result and the manuscript says the gain does not grow)"
+}

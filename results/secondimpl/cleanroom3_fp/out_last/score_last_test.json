@@ -1,0 +1,103 @@
+{
+ "split": "test",
+ "n_items": 2000,
+ "seed": 0,
+ "accuracy": {
+  "base": 0.183,
+  "vec_published": 0.93,
+  "vec_best_match": 0.984,
+  "discrete": 0.947
+ },
+ "accuracy_wilson95": {
+  "base": [
+   0.1667,
+   0.2005
+  ],
+  "vec_published": [
+   0.918,
+   0.9404
+  ],
+  "vec_best_match": [
+   0.9775,
+   0.9886
+  ],
+  "discrete": [
+   0.9363,
+   0.956
+  ]
+ },
+ "module_answer_correct_and_gate_open": {
+  "vec_published": 0.9295,
+  "vec_best_match": 0.9845,
+  "discrete": 0.963
+ },
+ "followed_given_module_right": {
+  "vec_published": 0.9989,
+  "vec_best_match": 0.999,
+  "discrete": 0.9834
+ },
+ "vector_published_minus_discrete": {
+  "diff_points": -1.7,
+  "ci95_points": [
+   -2.95,
+   -0.45
+  ]
+ },
+ "vector_best_match_minus_discrete": {
+  "diff_points": 3.7,
+  "ci95_points": [
+   2.7,
+   4.7
+  ]
+ },
+ "per_op": {
+  "bitwise_and": {
+   "base": 0.048,
+   "vec_published": 0.96,
+   "vec_best_match": 0.992,
+   "discrete": 0.992
+  },
+  "bitwise_or": {
+   "base": 0.036,
+   "vec_published": 0.988,
+   "vec_best_match": 0.996,
+   "discrete": 0.944
+  },
+  "bitwise_xor": {
+   "base": 0.108,
+   "vec_published": 0.996,
+   "vec_best_match": 0.996,
+   "discrete": 0.956
+  },
+  "gcd": {
+   "base": 0.636,
+   "vec_published": 0.948,
+   "vec_best_match": 0.996,
+   "discrete": 0.984
+  },
+  "lcm": {
+   "base": 0.032,
+   "vec_published": 0.9,
+   "vec_best_match": 0.984,
+   "discrete": 0.984
+  },
+  "modulo": {
+   "base": 0.532,
+   "vec_published": 0.992,
+   "vec_best_match": 1.0,
+   "discrete": 0.976
+  },
+  "multiplication": {
+   "base": 0.008,
+   "vec_published": 0.976,
+   "vec_best_match": 0.988,
+   "discrete": 0.964
+  },
+  "square_mod": {
+   "base": 0.064,
+   "vec_published": 0.68,
+   "vec_best_match": 0.92,
+   "discrete": 0.776
+  }
+ }
+}

@@ -1,0 +1,206 @@
+[
+ {
+  "cond": "N r=3 | 8 per vector",
+  "kw": {
+   "r": 3,
+   "per_shard": 8
+  },
+  "keys_exact": 4775,
+  "keys": 4776,
+  "frac": 0.9997906197654941,
+  "stores_all_exact": 49,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1499,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1500,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "N r=3 | 4 per vector",
+  "kw": {
+   "r": 3,
+   "per_shard": 4
+  },
+  "keys_exact": 4776,
+  "keys": 4776,
+  "frac": 1.0,
+  "stores_all_exact": 50,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1500,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "N r=3 | d=16384",
+  "kw": {
+   "r": 3,
+   "d": 16384
+  },
+  "keys_exact": 4776,
+  "keys": 4776,
+  "frac": 1.0,
+  "stores_all_exact": 50,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1500,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "F p=0.5 | 8 per vector",
+  "kw": {
+   "p": 0.5,
+   "per_shard": 8
+  },
+  "keys_exact": 2400,
+  "keys": 4776,
+  "frac": 0.5025125628140703,
+  "stores_all_exact": 0,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    721,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    731,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    771,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    124,
+    177
+   ],
+   "131072/vt": [
+    53,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "F p=0.5 | 4 per vector",
+  "kw": {
+   "p": 0.5,
+   "per_shard": 4
+  },
+  "keys_exact": 2451,
+  "keys": 4776,
+  "frac": 0.5131909547738693,
+  "stores_all_exact": 0,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    763,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    781,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    760,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    99,
+    177
+   ],
+   "131072/vt": [
+    48,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "F p=0.5 | d=16384",
+  "kw": {
+   "p": 0.5,
+   "d": 16384
+  },
+  "keys_exact": 2446,
+  "keys": 4776,
+  "frac": 0.5121440536013401,
+  "stores_all_exact": 0,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    759,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    782,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    753,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    97,
+    177
+   ],
+   "131072/vt": [
+    55,
+    99
+   ]
+  }
+ }
+]

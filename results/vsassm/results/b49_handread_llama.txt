@@ -1,0 +1,54 @@
+# B49 hand reading, llama: R1 cells with the largest and the smallest VSA - BEST (ideal)
+
+## cell M=256 V=16 bpf=8: VSA 27.3, BEST LAM 22.0, diff +5.32, EXACT 82.5
+  only VSA right: 895 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Spain'                                  | 'Spanish Empire'                         | 'Spanish Empire'                         | +0.545 | True
+    'XJapan'                                 | 'X Japan'                                | 'X Japan'                                | +0.966 | True
+    'Hieronymus Franck I'                    | 'Hieronymous Francken I'                 | 'Hieronymous Francken I'                 | +0.889 | True
+    'Budapeszt'                              | 'Budapest'                               | 'Budapest'                               | +0.565 | True
+    'Riley County, Kansas'                   | 'Riley County'                           | 'Riley County'                           | +0.825 | True
+    'Suzumiya Haruhi no Shōshitsu'           | 'The Disappearance of Haruhi Suzumiya'   | 'The Disappearance of Haruhi Suzumiya'   | +0.652 | True
+    'Great Road'                             | 'The Big Road'                           | 'The Big Road'                           | +0.430 | True
+    'Ipox'                                   | 'Ipoh'                                   | 'Ipoh'                                   | +0.632 | True
+    'Frans I Floris De Vriendt'              | 'Frans Floris I'                         | 'Frans Floris I'                         | +0.841 | True
+    'Republic of Estonia'                    | 'Estonia'                                | 'Estonia'                                | +0.476 | True
+    mean centred cosine over all 895: +0.624; EXACT right in 0.95
+  only BEST right: 644 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Rajalakshmi Engineering College, Chennai' | 'Rajalakshmi Engineering College'        | 'Rajalakshmi Engineering College'        | +0.939 | True
+    'the Confederate States'                 | 'Confederate States of America'          | 'Confederate States of America'          | +0.769 | True
+    'Aston Villa'                            | 'Aston Villa F.C.'                       | 'Aston Villa F.C.'                       | +0.738 | True
+    'Essex'                                  | 'Kingdom of Essex'                       | 'Kingdom of Essex'                       | +0.307 | True
+    'tn'                                     | 'Tunisia'                                | 'Ten Seconds to Hell'                    | +0.119 | False
+    'Tad, Isfahan'                           | 'Tad'                                    | 'Tad'                                    | +0.540 | True
+    'South Sandwich Islands'                 | 'South Georgia and the South Sandwich Islands' | 'South Georgia and the South Sandwich Islands' | +0.755 | True
+    'British American Tobacco plc'           | 'British American Tobacco'               | 'British American Tobacco'               | +0.921 | True
+    'linked in'                              | 'LinkedIn'                               | 'LinkedIn'                               | +0.756 | True
+    'Dënéndeh'                               | 'Northwest Territories'                  | 'Northwest Territories'                  | +0.120 | True
+    mean centred cosine over all 644: +0.592; EXACT right in 0.92
+
+## cell M=256 V=2 bpf=8: VSA 64.8, BEST LAM 78.4, diff -13.59, EXACT 89.4
+  only VSA right: 536 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Tsarist Russia'                         | 'Russian Empire'                         | 'Russian Empire'                         | +0.459 | True
+    'Little Red Book'                        | 'Quotations from Chairman Mao Tse-tung'  | 'The Book'                               | +0.065 | True
+    'Expose'                                 | 'Exposé'                                 | 'Exposé'                                 | +0.833 | True
+    'W. Nieulandt'                           | 'Willem van Nieulandt II'                | 'Willem van Nieulandt II'                | +0.558 | True
+    'Francis Floreriss'                      | 'Frans Floris I'                         | 'Frans Floris I'                         | +0.497 | True
+    'Prince Levan of Kartli'                 | 'Levan Gruzinsky'                        | 'Levan Gruzinsky'                        | +0.559 | True
+    'es pro'                                 | 'Maximilian I of Mexico'                 | 'Pre'                                    | -0.079 | False
+    'Kaiser Friedrich Deutsches Reich'       | 'Frederick William IV of Prussia'        | 'Frederick William IV of Prussia'        | +0.302 | True
+    'Li Er'                                  | 'Emperor Taizong of Tang'                | 'Murong Wei'                             | +0.136 | False
+    'Francesco Frorez'                       | 'Frans Floris I'                         | 'Francesco Reda'                         | +0.360 | False
+    mean centred cosine over all 536: +0.294; EXACT right in 0.76
+  only BEST right: 1197 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'J. H. Rooz'                             | 'Johann Heinrich Roos'                   | 'Johann Heinrich Roos'                   | +0.312 | True
+    'Sancta Maria College'                   | 'Trocaire College'                       | 'Świętokrzyskie Voivodeship'             | +0.160 | True
+    'Republic of Guyana'                     | 'Guyana'                                 | 'Guyana'                                 | +0.590 | True
+    'Joh. Heinrich Roos gen. Rosa Di Tivoli' | 'Johann Heinrich Roos'                   | 'Johann Heinrich Roos'                   | +0.661 | True
+    'John Roos'                              | 'Johann Heinrich Roos'                   | 'Johann Heinrich Roos'                   | +0.402 | True
+    "Jeanne Antoinette Poisson d' Etoilles"  | 'Madame de Pompadour'                    | 'Madame de Pompadour'                    | +0.488 | True
+    'Maximilian I'                           | 'Maximilian I of Mexico'                 | 'Maximilian I of Mexico'                 | +0.884 | True
+    'Cote divoire'                           | 'Ivory Coast'                            | 'Ivory Coast'                            | +0.352 | True
+    'Ramon Luis Valcarcel Siso'              | 'Ramón Luis Valcárcel Siso'              | 'Ramón Luis Valcárcel Siso'              | +0.797 | True
+    'KT'                                     | 'Katie Taylor'                           | 'Katie Taylor'                           | +0.159 | True
+    mean centred cosine over all 1197: +0.484; EXACT right in 0.92
+

@@ -1,0 +1,73 @@
+{
+ "builder": "1.0",
+ "built": "2026-11-28T05:01:40+0800",
+ "manifest_sha256": "f9dfe122d30ee0ea5492543a167873df131e4f78d3403cb59ee8f204ccb2daa5",
+ "sources": {
+  "vsassm": {
+   "present": true,
+   "git": true,
+   "head": "1ac768b69c024ea2d72fb7851c74d12ff6c777f6",
+   "prefer": "head",
+   "expected_head": null
+  },
+  "nsengine": {
+   "present": true,
+   "git": true,
+   "head": "3fd1fb72a693c7260c67ad72da985f3656d380d9",
+   "prefer": "head",
+   "expected_head": null
+  },
+  "paper": {
+   "present": true,
+   "git": true,
+   "head": "e7e9715027c393fda20cbbaaf84287c749424f3d",
+   "prefer": "worktree",
+   "expected_head": null
+  },
+  "ngcls": {
+   "present": true,
+   "git": true,
+   "head": "3240200c976d3cda6c9f5fdf3e3aaef13af53b92",
+   "prefer": "head",
+   "expected_head": "3240200"
+  },
+  "curated": {
+   "present": true,
+   "git": false,
+   "head": null,
+   "prefer": "head",
+   "expected_head": null
+  },
+  "secondimpl": {
+   "present": true,
+   "git": false,
+   "head": null,
+   "prefer": "head",
+   "expected_head": null
+  }
+ },
+ "status": {
+  "BABILONG": "DONE",
+  "RULER": "DONE",
+  "HARDWARE": "DONE",
+  "CLUTRR": "DONE",
+  "OPLOGS_LOCATION": "DONE",
+  "OPLOGS_NSR": "DONE",
+  "SOLVER": "DONE",
+  "CONTROLLED": "DONE",
+  "B27": "DONE (verdict committed at c60254dead)",
+  "FIGURES": "DONE",
+  "EQUALBITS": "DONE",
+  "EQUALCELLS": "DONE",
+  "INTERFACES": "DONE",
+  "FORWARDPASS": "DONE",
+  "THEORY": "DONE",
+  "COMPOSITION": "DONE",
+  "BENCHREFEREE": "DONE",
+  "SECONDIMPL": "DONE",
+  "CURATED": "DONE"
+ },
+ "files": 26031,
+ "bytes": 1177153705,
+ "tidied": "2026-11-28: run logs, smoke tests, internal review notes and full commit logs left out (WITHHELD.md)"
+}

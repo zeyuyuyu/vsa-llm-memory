@@ -1,0 +1,9134 @@
+{
+ "prereg": "b5a6828",
+ "config": {
+  "n_eval": 300,
+  "budget": 1200,
+  "tokenizer": "Qwen/Qwen3-8B",
+  "workers": 8,
+  "cap_usd": 4.0,
+  "keyfile": "/path/to/work/.orkey",
+  "out": "v125_logs/v125.json",
+  "dump_calibration": false
+ },
+ "prompt_tokens": 197733,
+ "prompt_sha256": "49eaa80a685bd4e7dfb82ce3",
+ "canonical": {
+  "tokens": 197733,
+  "sha256": "49eaa80a685bd4e7dfb82ce3"
+ },
+ "p0_match": true,
+ "n_rows": 300,
+ "n_decidable": 287,
+ "decidable": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  26,
+  27,
+  28,
+  29,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61,
+  63,
+  64,
+  65,
+  66,
+  67,
+  69,
+  71,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  82,
+  83,
+  84,
+  85,
+  86,
+  87,
+  88,
+  89,
+  90,
+  91,
+  92,
+  93,
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119,
+  120,
+  121,
+  122,
+  123,
+  124,
+  125,
+  126,
+  127,
+  128,
+  129,
+  130,
+  131,
+  133,
+  134,
+  135,
+  136,
+  137,
+  138,
+  139,
+  140,
+  141,
+  142,
+  143,
+  144,
+  145,
+  146,
+  147,
+  148,
+  149,
+  150,
+  151,
+  152,
+  153,
+  154,
+  155,
+  156,
+  157,
+  158,
+  159,
+  160,
+  161,
+  162,
+  163,
+  164,
+  166,
+  168,
+  169,
+  170,
+  171,
+  172,
+  173,
+  174,
+  175,
+  176,
+  177,
+  178,
+  179,
+  180,
+  181,
+  182,
+  183,
+  184,
+  185,
+  186,
+  187,
+  188,
+  189,
+  190,
+  191,
+  193,
+  194,
+  195,
+  196,
+  197,
+  198,
+  199,
+  200,
+  201,
+  202,
+  203,
+  204,
+  205,
+  206,
+  207,
+  208,
+  209,
+  210,
+  211,
+  212,
+  213,
+  214,
+  215,
+  216,
+  217,
+  218,
+  219,
+  220,
+  221,
+  222,
+  223,
+  224,
+  225,
+  226,
+  227,
+  228,
+  229,
+  230,
+  231,
+  232,
+  233,
+  234,
+  235,
+  236,
+  237,
+  238,
+  239,
+  240,
+  241,
+  242,
+  243,
+  244,
+  245,
+  246,
+  247,
+  248,
+  249,
+  250,
+  251,
+  252,
+  253,
+  254,
+  255,
+  256,
+  257,
+  258,
+  259,
+  260,
+  261,
+  262,
+  263,
+  264,
+  265,
+  266,
+  267,
+  268,
+  269,
+  270,
+  271,
+  272,
+  273,
+  274,
+  275,
+  276,
+  277,
+  278,
+  279,
+  280,
+  281,
+  282,
+  283,
+  284,
+  285,
+  286,
+  287,
+  288,
+  289,
+  290,
+  291,
+  292,
+  293,
+  294,
+  295,
+  297,
+  298,
+  299
+ ],
+ "undecidable": [
+  16,
+  25,
+  30,
+  62,
+  68,
+  70,
+  94,
+  112,
+  132,
+  165,
+  167,
+  192,
+  296
+ ],
+ "calibration_indices": [
+  0,
+  7,
+  21,
+  34,
+  40,
+  50,
+  51,
+  53,
+  54,
+  77,
+  81,
+  111,
+  119,
+  137,
+  141,
+  142,
+  153,
+  164,
+  169,
+  172,
+  180,
+  193,
+  195,
+  209,
+  216,
+  219,
+  227,
+  234,
+  238,
+  253,
+  256,
+  260,
+  264,
+  270,
+  273,
+  278,
+  284,
+  292,
+  294,
+  299
+ ],
+ "pins": {
+  "deepseek/deepseek-v4-flash": {
+   "provider": "DigitalOcean",
+   "quantization": "unknown",
+   "n_endpoints": 15
+  },
+  "z-ai/glm-5.3": {
+   "provider": "StreamLake",
+   "quantization": "fp8",
+   "n_endpoints": 28
+  }
+ },
+ "facts": {
+  "0": {
+   "hop1": {
+    "s": "Polish-Russian War",
+    "r": "director",
+    "o": "Xawery \u017bu\u0142awski"
+   },
+   "hop2": {
+    "s": "Xawery \u017bu\u0142awski",
+    "r": "mother",
+    "o": "Ma\u0142gorzata Braunek"
+   }
+  },
+  "1": {
+   "hop1": {
+    "s": "John V of Anhalt-Zerbst",
+    "r": "father",
+    "o": "Ernest I, Prince of Anhalt-Dessau"
+   },
+   "hop2": {
+    "s": "Ernest I, Prince of Anhalt-Dessau",
+    "r": "date of death",
+    "o": "12 June 1516"
+   }
+  },
+  "2": {
+   "hop1": {
+    "s": "Wearing Velvet Slippers under a Golden Umbrella",
+    "r": "director",
+    "o": "Wunna"
+   },
+   "hop2": {
+    "s": "Wunna",
+    "r": "award received",
+    "o": "Myanmar Motion Picture Academy Awards"
+   }
+  },
+  "3": {
+   "hop1": {
+    "s": "Ronnie Rocket",
+    "r": "director",
+    "o": "David Lynch"
+   },
+   "hop2": {
+    "s": "David Lynch",
+    "r": "place of birth",
+    "o": "Missoula, Montana"
+   }
+  },
+  "4": {
+   "hop1": {
+    "s": "\u0218tefan I. Neni\u021bescu",
+    "r": "father",
+    "o": "Ioan S. Neni\u021bescu"
+   },
+   "hop2": {
+    "s": "Ioan S. Neni\u021bescu",
+    "r": "place of birth",
+    "o": "Gala\u021bi"
+   }
+  },
+  "5": {
+   "hop1": {
+    "s": "Thomas Jefferson",
+    "r": "director",
+    "o": "Ken Burns"
+   },
+   "hop2": {
+    "s": "Ken Burns",
+    "r": "place of birth",
+    "o": "Brooklyn"
+   }
+  },
+  "6": {
+   "hop1": {
+    "s": "Grand Duke Kirill Vladimirovich of Russia",
+    "r": "spouse",
+    "o": "Princess Victoria Melita of Saxe-Coburg and Gotha"
+   },
+   "hop2": {
+    "s": "Princess Victoria Melita of Saxe-Coburg and Gotha",
+    "r": "cause of death",
+    "o": "stroke"
+   }
+  },
+  "7": {
+   "hop1": {
+    "s": "Beat Girl",
+    "r": "director",
+    "o": "Edmond T. Gr\u00e9ville"
+   },
+   "hop2": {
+    "s": "Edmond T. Gr\u00e9ville",
+    "r": "place of death",
+    "o": "Nice"
+   }
+  },
+  "8": {
+   "hop1": {
+    "s": "Jean Martin",
+    "r": "spouse",
+    "o": "William Black"
+   },
+   "hop2": {
+    "s": "William Black",
+    "r": "date of death",
+    "o": "1983"
+   }
+  },
+  "9": {
+   "hop1": {
+    "s": "World and Time Enough",
+    "r": "director",
+    "o": "Eric Mueller"
+   },
+   "hop2": {
+    "s": "Eric Mueller",
+    "r": "country of citizenship",
+    "o": "United States"
+   }
+  },
+  "10": {
+   "hop1": {
+    "s": "Eden and After",
+    "r": "director",
+    "o": "Alain Robbe-Grillet"
+   },
+   "hop2": {
+    "s": "Alain Robbe-Grillet",
+    "r": "spouse",
+    "o": "Catherine Robbe-Grillet"
+   }
+  },
+  "11": {
+   "hop1": {
+    "s": "Anastasia of Serbia",
+    "r": "spouse",
+    "o": "Stefan Nemanja"
+   },
+   "hop2": {
+    "s": "Stefan Nemanja",
+    "r": "place of death",
+    "o": "Hilandar"
+   }
+  },
+  "12": {
+   "hop1": {
+    "s": "John Middleton Murry",
+    "r": "spouse",
+    "o": "Katherine Mansfield"
+   },
+   "hop2": {
+    "s": "Katherine Mansfield",
+    "r": "cause of death",
+    "o": "tuberculosis"
+   }
+  },
+  "13": {
+   "hop1": {
+    "s": "And the Spring Comes",
+    "r": "director",
+    "o": "Gu Changwei"
+   },
+   "hop2": {
+    "s": "Gu Changwei",
+    "r": "place of birth",
+    "o": "Xi'an"
+   }
+  },
+  "14": {
+   "hop1": {
+    "s": "Prince Nikolaus Wilhelm of Nassau",
+    "r": "mother",
+    "o": "Princess Pauline of W\u00fcrttemberg"
+   },
+   "hop2": {
+    "s": "Princess Pauline of W\u00fcrttemberg",
+    "r": "country of citizenship",
+    "o": "German"
+   }
+  },
+  "15": {
+   "hop1": {
+    "s": "Caterina Visconti",
+    "r": "spouse",
+    "o": "Gian Galeazzo Visconti"
+   },
+   "hop2": {
+    "s": "Gian Galeazzo Visconti",
+    "r": "place of birth",
+    "o": "Pavia"
+   }
+  },
+  "17": {
+   "hop1": {
+    "s": "Man at Bath",
+    "r": "director",
+    "o": "Christophe Honor\u00e9"
+   },
+   "hop2": {
+    "s": "Christophe Honor\u00e9",
+    "r": "employer",
+    "o": "Cahiers du cin\u00e9ma"
+   }
+  },
+  "18": {
+   "hop1": {
+    "s": "Lord Patrick Crichton-Stuart",
+    "r": "father",
+    "o": "John Stuart"
+   },
+   "hop2": {
+    "s": "John Stuart",
+    "r": "place of birth",
+    "o": "London"
+   }
+  },
+  "19": {
+   "hop1": {
+    "s": "Daadagiri",
+    "r": "director",
+    "o": "Arshad Khan"
+   },
+   "hop2": {
+    "s": "Arshad Khan",
+    "r": "country of citizenship",
+    "o": "Pakistan"
+   }
+  },
+  "20": {
+   "hop1": {
+    "s": "Douglas Leiterman",
+    "r": "spouse",
+    "o": "Beryl Fox"
+   },
+   "hop2": {
+    "s": "Beryl Fox",
+    "r": "place of birth",
+    "o": "Winnipeg, Manitoba"
+   }
+  },
+  "21": {
+   "hop1": {
+    "s": "Who...",
+    "r": "performer",
+    "o": "Ayumi Hamasaki"
+   },
+   "hop2": {
+    "s": "Ayumi Hamasaki",
+    "r": "place of birth",
+    "o": "Fukuoka"
+   }
+  },
+  "22": {
+   "hop1": {
+    "s": "Mole Men Against the Son of Hercules",
+    "r": "director",
+    "o": "Antonio Leonviola"
+   },
+   "hop2": {
+    "s": "Antonio Leonviola",
+    "r": "place of death",
+    "o": "Roma"
+   }
+  },
+  "23": {
+   "hop1": {
+    "s": "Alexandre Gaydamak",
+    "r": "father",
+    "o": "Arcadi Gaydamak"
+   },
+   "hop2": {
+    "s": "Arcadi Gaydamak",
+    "r": "place of birth",
+    "o": "Moscow, USSR"
+   }
+  },
+  "24": {
+   "hop1": {
+    "s": "The Half-Way Girl",
+    "r": "director",
+    "o": "John Francis Dillon"
+   },
+   "hop2": {
+    "s": "John Francis Dillon",
+    "r": "place of birth",
+    "o": "New York"
+   }
+  },
+  "26": {
+   "hop1": {
+    "s": "Highway Dragnet",
+    "r": "director",
+    "o": "Nathan Juran"
+   },
+   "hop2": {
+    "s": "Nathan Juran",
+    "r": "place of birth",
+    "o": "Gura Humorului"
+   }
+  },
+  "27": {
+   "hop1": {
+    "s": "Prince Gustav of Thurn and Taxis (1848\u20131914)",
+    "r": "mother",
+    "o": "Princess Mathilde Sophie of Oettingen-Oettingen and Oettingen-Spielberg"
+   },
+   "hop2": {
+    "s": "Princess Mathilde Sophie of Oettingen-Oettingen and Oettingen-Spielberg",
+    "r": "place of death",
+    "o": "Meran"
+   }
+  },
+  "28": {
+   "hop1": {
+    "s": "Sunday Papers",
+    "r": "performer",
+    "o": "Joe Jackson"
+   },
+   "hop2": {
+    "s": "Joe Jackson",
+    "r": "award received",
+    "o": "Grammy"
+   }
+  },
+  "29": {
+   "hop1": {
+    "s": "Prince Ioann Konstantinovich of Russia",
+    "r": "mother",
+    "o": "Princess Elisabeth of Saxe-Altenburg"
+   },
+   "hop2": {
+    "s": "Princess Elisabeth of Saxe-Altenburg",
+    "r": "date of death",
+    "o": "24 March 1927"
+   }
+  },
+  "31": {
+   "hop1": {
+    "s": "Letter to the King",
+    "r": "director",
+    "o": "Hisham Zaman"
+   },
+   "hop2": {
+    "s": "Hisham Zaman",
+    "r": "place of birth",
+    "o": "Kurdish"
+   }
+  },
+  "32": {
+   "hop1": {
+    "s": "God",
+    "r": "performer",
+    "o": "John Lennon"
+   },
+   "hop2": {
+    "s": "John Lennon",
+    "r": "place of birth",
+    "o": "Liverpool"
+   }
+  },
+  "33": {
+   "hop1": {
+    "s": "Marianela",
+    "r": "director",
+    "o": "Benito Perojo"
+   },
+   "hop2": {
+    "s": "Benito Perojo",
+    "r": "place of birth",
+    "o": "Madrid"
+   }
+  },
+  "34": {
+   "hop1": {
+    "s": "Karin Stoltenberg",
+    "r": "spouse",
+    "o": "Thorvald Stoltenberg"
+   },
+   "hop2": {
+    "s": "Thorvald Stoltenberg",
+    "r": "employer",
+    "o": "United Nations"
+   }
+  },
+  "35": {
+   "hop1": {
+    "s": "Lettre ouverte",
+    "r": "director",
+    "o": "Alex Joff\u00e9"
+   },
+   "hop2": {
+    "s": "Alex Joff\u00e9",
+    "r": "place of birth",
+    "o": "Paris"
+   }
+  },
+  "36": {
+   "hop1": {
+    "s": "Clara Anastasia Novello",
+    "r": "father",
+    "o": "Vincent Novello"
+   },
+   "hop2": {
+    "s": "Vincent Novello",
+    "r": "place of birth",
+    "o": "London"
+   }
+  },
+  "37": {
+   "hop1": {
+    "s": "Albert Frederick",
+    "r": "mother",
+    "o": "Anna Marie of Brunswick-L\u00fcneburg"
+   },
+   "hop2": {
+    "s": "Anna Marie of Brunswick-L\u00fcneburg",
+    "r": "place of burial",
+    "o": "K\u00f6nigsberg"
+   }
+  },
+  "38": {
+   "hop1": {
+    "s": "Juan Carlos Gumucio",
+    "r": "spouse",
+    "o": "Marie Colvin"
+   },
+   "hop2": {
+    "s": "Marie Colvin",
+    "r": "place of death",
+    "o": "Homs"
+   }
+  },
+  "39": {
+   "hop1": {
+    "s": "Papy fait de la r\u00e9sistance",
+    "r": "director",
+    "o": "Jean-Marie Poir\u00e9"
+   },
+   "hop2": {
+    "s": "Jean-Marie Poir\u00e9",
+    "r": "father",
+    "o": "Alain Poir\u00e9"
+   }
+  },
+  "40": {
+   "hop1": {
+    "s": "Heaven",
+    "r": "performer",
+    "o": "Namie Amuro"
+   },
+   "hop2": {
+    "s": "Namie Amuro",
+    "r": "place of birth",
+    "o": "Naha, Okinawa"
+   }
+  },
+  "41": {
+   "hop1": {
+    "s": "Philip of Ibelin",
+    "r": "mother",
+    "o": "Maria Komnene"
+   },
+   "hop2": {
+    "s": "Maria Komnene",
+    "r": "country of citizenship",
+    "o": "Byzantine"
+   }
+  },
+  "42": {
+   "hop1": {
+    "s": "List of The Dillinger Escape Plan band members",
+    "r": "has part",
+    "o": "Ben Weinman"
+   },
+   "hop2": {
+    "s": "Ben Weinman",
+    "r": "date of birth",
+    "o": "August 8, 1975"
+   }
+  },
+  "43": {
+   "hop1": {
+    "s": "Huma Mahmood Abedin",
+    "r": "spouse",
+    "o": "Anthony Weiner"
+   },
+   "hop2": {
+    "s": "Anthony Weiner",
+    "r": "employer",
+    "o": "Chuck Schumer"
+   }
+  },
+  "44": {
+   "hop1": {
+    "s": "Giacomo Feo",
+    "r": "spouse",
+    "o": "Caterina Sforza"
+   },
+   "hop2": {
+    "s": "Caterina Sforza",
+    "r": "place of death",
+    "o": "Florence"
+   }
+  },
+  "45": {
+   "hop1": {
+    "s": "Swedenhielms",
+    "r": "director",
+    "o": "Gustaf Molander"
+   },
+   "hop2": {
+    "s": "Gustaf Molander",
+    "r": "place of birth",
+    "o": "Helsingfors"
+   }
+  },
+  "46": {
+   "hop1": {
+    "s": "Jan Baptist van Rensselaer",
+    "r": "father",
+    "o": "Kiliaen van Rensselaer"
+   },
+   "hop2": {
+    "s": "Kiliaen van Rensselaer",
+    "r": "country of citizenship",
+    "o": "Dutch"
+   }
+  },
+  "47": {
+   "hop1": {
+    "s": "Gigi Causey",
+    "r": "spouse",
+    "o": "Andrew Bowler"
+   },
+   "hop2": {
+    "s": "Andrew Bowler",
+    "r": "educated at",
+    "o": "Tisch"
+   }
+  },
+  "48": {
+   "hop1": {
+    "s": "Geodeung of Gaya",
+    "r": "mother",
+    "o": "Heo Hwang-ok"
+   },
+   "hop2": {
+    "s": "Heo Hwang-ok",
+    "r": "country of citizenship",
+    "o": "India"
+   }
+  },
+  "49": {
+   "hop1": {
+    "s": "Alex Matthiessen",
+    "r": "father",
+    "o": "Peter Matthiessen"
+   },
+   "hop2": {
+    "s": "Peter Matthiessen",
+    "r": "cause of death",
+    "o": "leukemia"
+   }
+  },
+  "50": {
+   "hop1": {
+    "s": "Remigius of Rouen",
+    "r": "father",
+    "o": "Charles Martel"
+   },
+   "hop2": {
+    "s": "Charles Martel",
+    "r": "place of birth",
+    "o": "Herstal"
+   }
+  },
+  "51": {
+   "hop1": {
+    "s": "Lord Patrick Crichton-Stuart",
+    "r": "father",
+    "o": "John Stuart"
+   },
+   "hop2": {
+    "s": "John Stuart",
+    "r": "date of death",
+    "o": "22 January 1794"
+   }
+  },
+  "52": {
+   "hop1": {
+    "s": "Gero II, Margrave of the Saxon Ostmark",
+    "r": "father",
+    "o": "Thietmar, Margrave of Meissen"
+   },
+   "hop2": {
+    "s": "Thietmar, Margrave of Meissen",
+    "r": "date of death",
+    "o": "3 August 979"
+   }
+  },
+  "53": {
+   "hop1": {
+    "s": "Red 2",
+    "r": "director",
+    "o": "Dean Parisot"
+   },
+   "hop2": {
+    "s": "Dean Parisot",
+    "r": "father",
+    "o": "Aldo Parisot"
+   }
+  },
+  "54": {
+   "hop1": {
+    "s": "American Scientist",
+    "r": "publisher",
+    "o": "Sigma Xi"
+   },
+   "hop2": {
+    "s": "Sigma Xi",
+    "r": "inception",
+    "o": "1886"
+   }
+  },
+  "55": {
+   "hop1": {
+    "s": "Jo Planckaert",
+    "r": "father",
+    "o": "Willy Planckaert"
+   },
+   "hop2": {
+    "s": "Willy Planckaert",
+    "r": "place of birth",
+    "o": "Nevele"
+   }
+  },
+  "56": {
+   "hop1": {
+    "s": "Gwilym Lloyd George, 1st Viscount Tenby",
+    "r": "father",
+    "o": "David Lloyd George"
+   },
+   "hop2": {
+    "s": "David Lloyd George",
+    "r": "place of birth",
+    "o": "Manchester"
+   }
+  },
+  "57": {
+   "hop1": {
+    "s": "James Douglas, 3rd Earl of Angus",
+    "r": "father",
+    "o": "William Douglas, 2nd Earl of Angus"
+   },
+   "hop2": {
+    "s": "William Douglas, 2nd Earl of Angus",
+    "r": "place of birth",
+    "o": "Tantallon Castle"
+   }
+  },
+  "58": {
+   "hop1": {
+    "s": "They Call It Love",
+    "r": "director",
+    "o": "John Reinhardt"
+   },
+   "hop2": {
+    "s": "John Reinhardt",
+    "r": "country of citizenship",
+    "o": "American"
+   }
+  },
+  "59": {
+   "hop1": {
+    "s": "Zhanna Borisovna Nemtsova",
+    "r": "father",
+    "o": "Boris Nemtsov"
+   },
+   "hop2": {
+    "s": "Boris Nemtsov",
+    "r": "place of birth",
+    "o": "Sochi"
+   }
+  },
+  "60": {
+   "hop1": {
+    "s": "Continental, a Film Without Guns",
+    "r": "composer",
+    "o": "St\u00e9phane Lafleur"
+   },
+   "hop2": {
+    "s": "St\u00e9phane Lafleur",
+    "r": "country of citizenship",
+    "o": "French"
+   }
+  },
+  "61": {
+   "hop1": {
+    "s": "Age-Old Friends",
+    "r": "director",
+    "o": "Allan Kroeker"
+   },
+   "hop2": {
+    "s": "Allan Kroeker",
+    "r": "place of birth",
+    "o": "Winnipeg, Manitoba"
+   }
+  },
+  "63": {
+   "hop1": {
+    "s": "The Last Night of the Barbary Coast",
+    "r": "director",
+    "o": "Sol Lesser"
+   },
+   "hop2": {
+    "s": "Sol Lesser",
+    "r": "award received",
+    "o": "Jean Hersholt Humanitarian Award"
+   }
+  },
+  "64": {
+   "hop1": {
+    "s": "The Marquise of O",
+    "r": "director",
+    "o": "\u00c9ric Rohmer"
+   },
+   "hop2": {
+    "s": "\u00c9ric Rohmer",
+    "r": "employer",
+    "o": "Cahiers du cin\u00e9ma"
+   }
+  },
+  "65": {
+   "hop1": {
+    "s": "Mohammed Ahmed Al-Modiahki",
+    "r": "spouse",
+    "o": "Zhu Chen"
+   },
+   "hop2": {
+    "s": "Zhu Chen",
+    "r": "country of citizenship",
+    "o": "China"
+   }
+  },
+  "66": {
+   "hop1": {
+    "s": "My Heidelberg, I Can Not Forget You",
+    "r": "director",
+    "o": "James Bauer"
+   },
+   "hop2": {
+    "s": "James Bauer",
+    "r": "place of death",
+    "o": "Argentina"
+   }
+  },
+  "67": {
+   "hop1": {
+    "s": "Wonders of the Sea 3D",
+    "r": "director",
+    "o": "Jean-Michel Cousteau"
+   },
+   "hop2": {
+    "s": "Jean-Michel Cousteau",
+    "r": "father",
+    "o": "Jacques Cousteau"
+   }
+  },
+  "69": {
+   "hop1": {
+    "s": "Guilty of Treason",
+    "r": "director",
+    "o": "Felix E. Feist"
+   },
+   "hop2": {
+    "s": "Felix E. Feist",
+    "r": "place of birth",
+    "o": "New York"
+   }
+  },
+  "71": {
+   "hop1": {
+    "s": "I Wish",
+    "r": "performer",
+    "o": "Gabrielle"
+   },
+   "hop2": {
+    "s": "Gabrielle",
+    "r": "place of birth",
+    "o": "Hackney"
+   }
+  },
+  "72": {
+   "hop1": {
+    "s": "Jinpa",
+    "r": "director",
+    "o": "Pema Tseden"
+   },
+   "hop2": {
+    "s": "Pema Tseden",
+    "r": "date of birth",
+    "o": "1969"
+   }
+  },
+  "73": {
+   "hop1": {
+    "s": "Tamatoa VI",
+    "r": "father",
+    "o": "Ari'imate"
+   },
+   "hop2": {
+    "s": "Ari'imate",
+    "r": "place of death",
+    "o": "Huahine"
+   }
+  },
+  "74": {
+   "hop1": {
+    "s": "Old Man Drinking a Glass of Beer",
+    "r": "director",
+    "o": "George Albert Smith"
+   },
+   "hop2": {
+    "s": "George Albert Smith",
+    "r": "place of death",
+    "o": "Brighton"
+   }
+  },
+  "75": {
+   "hop1": {
+    "s": "Henry St John, 18th Baron St John of Bletso",
+    "r": "father",
+    "o": "Beauchamp St John, 17th Baron St John of Bletso"
+   },
+   "hop2": {
+    "s": "Beauchamp St John, 17th Baron St John of Bletso",
+    "r": "date of death",
+    "o": "10 May 1912"
+   }
+  },
+  "76": {
+   "hop1": {
+    "s": "Alexander Carl Otto Westphal",
+    "r": "father",
+    "o": "Carl Friedrich Otto Westphal"
+   },
+   "hop2": {
+    "s": "Carl Friedrich Otto Westphal",
+    "r": "place of death",
+    "o": "Kreuzlingen"
+   }
+  },
+  "77": {
+   "hop1": {
+    "s": "Alessandro Vitelli",
+    "r": "father",
+    "o": "Paolo Vitelli"
+   },
+   "hop2": {
+    "s": "Paolo Vitelli",
+    "r": "place of death",
+    "o": "Florence"
+   }
+  },
+  "78": {
+   "hop1": {
+    "s": "Bag Skyerne",
+    "r": "performer",
+    "o": "Anne Gadegaard"
+   },
+   "hop2": {
+    "s": "Anne Gadegaard",
+    "r": "place of birth",
+    "o": "\u00c5rhus"
+   }
+  },
+  "79": {
+   "hop1": {
+    "s": "Francis II of France",
+    "r": "mother",
+    "o": "Catherine de' Medici"
+   },
+   "hop2": {
+    "s": "Catherine de' Medici",
+    "r": "place of birth",
+    "o": "Florence"
+   }
+  },
+  "80": {
+   "hop1": {
+    "s": "Madeleine",
+    "r": "director",
+    "o": "David Lean"
+   },
+   "hop2": {
+    "s": "David Lean",
+    "r": "country of citizenship",
+    "o": "British"
+   }
+  },
+  "81": {
+   "hop1": {
+    "s": "Desolation Angels",
+    "r": "director",
+    "o": "Tim McCann"
+   },
+   "hop2": {
+    "s": "Tim McCann",
+    "r": "educated at",
+    "o": "State University of New York at Purchase"
+   }
+  },
+  "82": {
+   "hop1": {
+    "s": "Richard Annesley, 2nd Earl Annesley",
+    "r": "father",
+    "o": "William Annesley, 1st Viscount Glerawly"
+   },
+   "hop2": {
+    "s": "William Annesley, 1st Viscount Glerawly",
+    "r": "date of death",
+    "o": "2 September 1770"
+   }
+  },
+  "83": {
+   "hop1": {
+    "s": "Conan II, Duke of Brittany",
+    "r": "mother",
+    "o": "Bertha of Blois"
+   },
+   "hop2": {
+    "s": "Bertha of Blois",
+    "r": "date of death",
+    "o": "1080"
+   }
+  },
+  "84": {
+   "hop1": {
+    "s": "Reykjav\u00edk-Rotterdam",
+    "r": "director",
+    "o": "\u00d3skar J\u00f3nasson"
+   },
+   "hop2": {
+    "s": "\u00d3skar J\u00f3nasson",
+    "r": "date of birth",
+    "o": "30 June 1963"
+   }
+  },
+  "85": {
+   "hop1": {
+    "s": "Eiludd Powys",
+    "r": "father",
+    "o": "Cynan Garwyn"
+   },
+   "hop2": {
+    "s": "Cynan Garwyn",
+    "r": "place of birth",
+    "o": "Wales"
+   }
+  },
+  "86": {
+   "hop1": {
+    "s": "At the End of the Tunnel",
+    "r": "director",
+    "o": "Rodrigo Grande"
+   },
+   "hop2": {
+    "s": "Rodrigo Grande",
+    "r": "place of birth",
+    "o": "Rosario"
+   }
+  },
+  "87": {
+   "hop1": {
+    "s": "Ferdinand III of Limburg Stirum",
+    "r": "father",
+    "o": "Ferdinand I of Limburg Stirum"
+   },
+   "hop2": {
+    "s": "Ferdinand I of Limburg Stirum",
+    "r": "date of birth",
+    "o": "1701"
+   }
+  },
+  "88": {
+   "hop1": {
+    "s": "Ulzhan",
+    "r": "director",
+    "o": "Volker Schl\u00f6ndorff"
+   },
+   "hop2": {
+    "s": "Volker Schl\u00f6ndorff",
+    "r": "country of citizenship",
+    "o": "German"
+   }
+  },
+  "89": {
+   "hop1": {
+    "s": "Samir Zaid al- Rifai",
+    "r": "father",
+    "o": "Zaid al-Rifai"
+   },
+   "hop2": {
+    "s": "Zaid al-Rifai",
+    "r": "place of birth",
+    "o": "Amman"
+   }
+  },
+  "90": {
+   "hop1": {
+    "s": "Peter's Friends",
+    "r": "director",
+    "o": "Kenneth Branagh"
+   },
+   "hop2": {
+    "s": "Kenneth Branagh",
+    "r": "place of birth",
+    "o": "Belfast"
+   }
+  },
+  "91": {
+   "hop1": {
+    "s": "Love Story 1999",
+    "r": "composer",
+    "o": "Deva"
+   },
+   "hop2": {
+    "s": "Deva",
+    "r": "place of birth",
+    "o": "Tamil"
+   }
+  },
+  "92": {
+   "hop1": {
+    "s": "Antonio Gonz\u00e1lez Flores",
+    "r": "mother",
+    "o": "Lola Flores"
+   },
+   "hop2": {
+    "s": "Lola Flores",
+    "r": "place of birth",
+    "o": "Jerez de la Frontera"
+   }
+  },
+  "93": {
+   "hop1": {
+    "s": "Down Ass Bitch",
+    "r": "performer",
+    "o": "Ja Rule"
+   },
+   "hop2": {
+    "s": "Ja Rule",
+    "r": "place of birth",
+    "o": "Queens"
+   }
+  },
+  "95": {
+   "hop1": {
+    "s": "Aleksandra Marianna Wiesio\u0142owska",
+    "r": "father",
+    "o": "Marek Sobieski"
+   },
+   "hop2": {
+    "s": "Marek Sobieski",
+    "r": "country of citizenship",
+    "o": "Polish\u2013Lithuanian Commonwealth"
+   }
+  },
+  "96": {
+   "hop1": {
+    "s": "Tivala",
+    "r": "father",
+    "o": "Ashoka"
+   },
+   "hop2": {
+    "s": "Ashoka",
+    "r": "country of citizenship",
+    "o": "Maurya dynasty"
+   }
+  },
+  "97": {
+   "hop1": {
+    "s": "Double or Nothing",
+    "r": "director",
+    "o": "Roy Mack"
+   },
+   "hop2": {
+    "s": "Roy Mack",
+    "r": "place of birth",
+    "o": "New Brunswick, New Jersey"
+   }
+  },
+  "98": {
+   "hop1": {
+    "s": "Kathputli",
+    "r": "director",
+    "o": "Brij"
+   },
+   "hop2": {
+    "s": "Brij",
+    "r": "place of death",
+    "o": "Bombay"
+   }
+  },
+  "99": {
+   "hop1": {
+    "s": "R\u0119ce do g\u00f3ry",
+    "r": "director",
+    "o": "Jerzy Skolimowski"
+   },
+   "hop2": {
+    "s": "Jerzy Skolimowski",
+    "r": "educated at",
+    "o": "National Film School in \u0141\u00f3d\u017a"
+   }
+  },
+  "100": {
+   "hop1": {
+    "s": "Suzanne Farrington",
+    "r": "mother",
+    "o": "Vivien Leigh"
+   },
+   "hop2": {
+    "s": "Vivien Leigh",
+    "r": "place of death",
+    "o": "London"
+   }
+  },
+  "101": {
+   "hop1": {
+    "s": "Name the Man",
+    "r": "director",
+    "o": "Victor Sj\u00f6str\u00f6m"
+   },
+   "hop2": {
+    "s": "Victor Sj\u00f6str\u00f6m",
+    "r": "country of citizenship",
+    "o": "Swedish"
+   }
+  },
+  "102": {
+   "hop1": {
+    "s": "Aurora",
+    "r": "director",
+    "o": "Yam Laranas"
+   },
+   "hop2": {
+    "s": "Yam Laranas",
+    "r": "place of birth",
+    "o": "Davao"
+   }
+  },
+  "103": {
+   "hop1": {
+    "s": "Napol\u00e9on Joseph Charles Paul Bonaparte",
+    "r": "father",
+    "o": "J\u00e9r\u00f4me Bonaparte"
+   },
+   "hop2": {
+    "s": "J\u00e9r\u00f4me Bonaparte",
+    "r": "date of birth",
+    "o": "15 November 1784"
+   }
+  },
+  "104": {
+   "hop1": {
+    "s": "How Long Has This Been Going On?",
+    "r": "composer",
+    "o": "George Gershwin"
+   },
+   "hop2": {
+    "s": "George Gershwin",
+    "r": "place of death",
+    "o": "Hollywood"
+   }
+  },
+  "105": {
+   "hop1": {
+    "s": "William S. Burroughs Jr.",
+    "r": "father",
+    "o": "William Seward Burroughs II"
+   },
+   "hop2": {
+    "s": "William Seward Burroughs II",
+    "r": "educated at",
+    "o": "Harvard"
+   }
+  },
+  "106": {
+   "hop1": {
+    "s": "Natalie Portman",
+    "r": "spouse",
+    "o": "Benjamin Millepied"
+   },
+   "hop2": {
+    "s": "Benjamin Millepied",
+    "r": "country of citizenship",
+    "o": "French"
+   }
+  },
+  "107": {
+   "hop1": {
+    "s": "Hunter",
+    "r": "performer",
+    "o": "Bj\u00f6rk"
+   },
+   "hop2": {
+    "s": "Bj\u00f6rk",
+    "r": "place of birth",
+    "o": "Reykjav\u00edk"
+   }
+  },
+  "108": {
+   "hop1": {
+    "s": "Carol's Journey",
+    "r": "director",
+    "o": "Imanol Uribe"
+   },
+   "hop2": {
+    "s": "Imanol Uribe",
+    "r": "spouse",
+    "o": "Mar\u00eda Barranco"
+   }
+  },
+  "109": {
+   "hop1": {
+    "s": "August Wilhelm, Duke of Brunswick-Bevern",
+    "r": "father",
+    "o": "Ernest Ferdinand, Duke of Brunswick-L\u00fcneburg"
+   },
+   "hop2": {
+    "s": "Ernest Ferdinand, Duke of Brunswick-L\u00fcneburg",
+    "r": "place of birth",
+    "o": "Osterholz"
+   }
+  },
+  "110": {
+   "hop1": {
+    "s": "Woman's Century",
+    "r": "publisher",
+    "o": "National Council of Women of Canada"
+   },
+   "hop2": {
+    "s": "National Council of Women of Canada",
+    "r": "inception",
+    "o": "October 27, 1893"
+   }
+  },
+  "111": {
+   "hop1": {
+    "s": "Gevherhan Sultan",
+    "r": "father",
+    "o": "Selim II"
+   },
+   "hop2": {
+    "s": "Selim II",
+    "r": "country of citizenship",
+    "o": "Ottoman Empire"
+   }
+  },
+  "113": {
+   "hop1": {
+    "s": "The Last Horror Movie",
+    "r": "director",
+    "o": "Julian Richards"
+   },
+   "hop2": {
+    "s": "Julian Richards",
+    "r": "place of birth",
+    "o": "Newport"
+   }
+  },
+  "114": {
+   "hop1": {
+    "s": "Ghost in the Machine",
+    "r": "director",
+    "o": "Rachel Talalay"
+   },
+   "hop2": {
+    "s": "Rachel Talalay",
+    "r": "employer",
+    "o": "University of British Columbia"
+   }
+  },
+  "115": {
+   "hop1": {
+    "s": "Anne of Burgundy",
+    "r": "father",
+    "o": "John the Fearless"
+   },
+   "hop2": {
+    "s": "John the Fearless",
+    "r": "country of citizenship",
+    "o": "France"
+   }
+  },
+  "116": {
+   "hop1": {
+    "s": "Joan of Ch\u00e2tillon (\"Jeanne de Blois",
+    "r": "mother",
+    "o": "Alix of Brittany, Dame de Pontarcy"
+   },
+   "hop2": {
+    "s": "Alix of Brittany, Dame de Pontarcy",
+    "r": "date of death",
+    "o": "2 August 1288"
+   }
+  },
+  "117": {
+   "hop1": {
+    "s": "\" Lolita",
+    "r": "performer",
+    "o": "Leah LaBelle"
+   },
+   "hop2": {
+    "s": "Leah LaBelle",
+    "r": "spouse",
+    "o": "Rasual Butler"
+   }
+  },
+  "118": {
+   "hop1": {
+    "s": "Chris Warren",
+    "r": "father",
+    "o": "Ray Warren"
+   },
+   "hop2": {
+    "s": "Ray Warren",
+    "r": "employer",
+    "o": "Nine Network"
+   }
+  },
+  "119": {
+   "hop1": {
+    "s": "Davey Boy Smith Jr.",
+    "r": "mother",
+    "o": "Diana Hart"
+   },
+   "hop2": {
+    "s": "Diana Hart",
+    "r": "educated at",
+    "o": "Stampede Wrestling"
+   }
+  },
+  "120": {
+   "hop1": {
+    "s": "Thomas George Lyon-Bowes, Lord Glamis",
+    "r": "father",
+    "o": "Thomas Lyon-Bowes, 11th Earl of Strathmore and Kinghorne"
+   },
+   "hop2": {
+    "s": "Thomas Lyon-Bowes, 11th Earl of Strathmore and Kinghorne",
+    "r": "country of citizenship",
+    "o": "British"
+   }
+  },
+  "121": {
+   "hop1": {
+    "s": "Adore You",
+    "r": "performer",
+    "o": "Jessie Ware"
+   },
+   "hop2": {
+    "s": "Jessie Ware",
+    "r": "country of citizenship",
+    "o": "United Kingdom"
+   }
+  },
+  "122": {
+   "hop1": {
+    "s": "Andrew Balding",
+    "r": "father",
+    "o": "Ian Balding"
+   },
+   "hop2": {
+    "s": "Ian Balding",
+    "r": "place of birth",
+    "o": "US"
+   }
+  },
+  "123": {
+   "hop1": {
+    "s": "Pataakha",
+    "r": "composer",
+    "o": "Vishal Bhardwaj"
+   },
+   "hop2": {
+    "s": "Vishal Bhardwaj",
+    "r": "award received",
+    "o": "National Film Award for Best Music Direction"
+   }
+  },
+  "124": {
+   "hop1": {
+    "s": "Damage",
+    "r": "performer",
+    "o": "Pharoahe Monch"
+   },
+   "hop2": {
+    "s": "Pharoahe Monch",
+    "r": "place of birth",
+    "o": "Queens"
+   }
+  },
+  "125": {
+   "hop1": {
+    "s": "Henry Clark Lord",
+    "r": "father",
+    "o": "Nathan Lord"
+   },
+   "hop2": {
+    "s": "Nathan Lord",
+    "r": "educated at",
+    "o": "Bowdoin College"
+   }
+  },
+  "126": {
+   "hop1": {
+    "s": "Prince Bernhard of Orange-Nassau, van Vollenhoven",
+    "r": "father",
+    "o": "Pieter van Vollenhoven"
+   },
+   "hop2": {
+    "s": "Pieter van Vollenhoven",
+    "r": "date of birth",
+    "o": "April 30, 1939"
+   }
+  },
+  "127": {
+   "hop1": {
+    "s": "Conan the Adventurer",
+    "r": "creator",
+    "o": "Robert E. Howard"
+   },
+   "hop2": {
+    "s": "Robert E. Howard",
+    "r": "place of death",
+    "o": "Cross Plains"
+   }
+  },
+  "128": {
+   "hop1": {
+    "s": "The FJ Holden",
+    "r": "director",
+    "o": "Michael Thornhill"
+   },
+   "hop2": {
+    "s": "Michael Thornhill",
+    "r": "place of birth",
+    "o": "Sydney, Australia"
+   }
+  },
+  "129": {
+   "hop1": {
+    "s": "\"Step Into The Light",
+    "r": "performer",
+    "o": "Myra"
+   },
+   "hop2": {
+    "s": "Myra",
+    "r": "place of birth",
+    "o": "California"
+   }
+  },
+  "130": {
+   "hop1": {
+    "s": "One Night at McCool's",
+    "r": "director",
+    "o": "Harald Zwart"
+   },
+   "hop2": {
+    "s": "Harald Zwart",
+    "r": "country of citizenship",
+    "o": "Norwegian"
+   }
+  },
+  "131": {
+   "hop1": {
+    "s": "George Thomas Orlando Bridgeman",
+    "r": "father",
+    "o": "George Bridgeman, 2nd Earl of Bradford"
+   },
+   "hop2": {
+    "s": "George Bridgeman, 2nd Earl of Bradford",
+    "r": "place of death",
+    "o": "Weston Park"
+   }
+  },
+  "133": {
+   "hop1": {
+    "s": "Anthemiolus",
+    "r": "father",
+    "o": "Anthemius"
+   },
+   "hop2": {
+    "s": "Anthemius",
+    "r": "country of citizenship",
+    "o": "Roman Empire"
+   }
+  },
+  "134": {
+   "hop1": {
+    "s": "This Time",
+    "r": "performer",
+    "o": "Waylon Jennings"
+   },
+   "hop2": {
+    "s": "Waylon Jennings",
+    "r": "place of burial",
+    "o": "Arizona"
+   }
+  },
+  "135": {
+   "hop1": {
+    "s": "Ferdinand of Portugal, Duke of Guarda",
+    "r": "mother",
+    "o": "Maria of Aragon"
+   },
+   "hop2": {
+    "s": "Maria of Aragon",
+    "r": "country of citizenship",
+    "o": "Spanish"
+   }
+  },
+  "136": {
+   "hop1": {
+    "s": "Consort Liang",
+    "r": "spouse",
+    "o": "Emperor Zhang of Han"
+   },
+   "hop2": {
+    "s": "Emperor Zhang of Han",
+    "r": "place of birth",
+    "o": "Chinese"
+   }
+  },
+  "137": {
+   "hop1": {
+    "s": "Muza Niyazova",
+    "r": "spouse",
+    "o": "Saparmurat Niyazov"
+   },
+   "hop2": {
+    "s": "Saparmurat Niyazov",
+    "r": "place of death",
+    "o": "Ashgabat"
+   }
+  },
+  "138": {
+   "hop1": {
+    "s": "Bhookh",
+    "r": "composer",
+    "o": "Anil Biswas"
+   },
+   "hop2": {
+    "s": "Anil Biswas",
+    "r": "award received",
+    "o": "Sangeet Natak Akademi Award"
+   }
+  },
+  "139": {
+   "hop1": {
+    "s": "Prince Charles Louis of Orl\u00e9ans, Duke of Chartres",
+    "r": "father",
+    "o": "Prince Jacques, Duke of Orl\u00e9ans"
+   },
+   "hop2": {
+    "s": "Prince Jacques, Duke of Orl\u00e9ans",
+    "r": "place of birth",
+    "o": "Rabat"
+   }
+  },
+  "140": {
+   "hop1": {
+    "s": "\u00c6lfgar",
+    "r": "mother",
+    "o": "Godgifu"
+   },
+   "hop2": {
+    "s": "Godgifu",
+    "r": "place of burial",
+    "o": "Coventry"
+   }
+  },
+  "141": {
+   "hop1": {
+    "s": "Dexter Young",
+    "r": "mother",
+    "o": "Connie Chan"
+   },
+   "hop2": {
+    "s": "Connie Chan",
+    "r": "country of citizenship",
+    "o": "China"
+   }
+  },
+  "142": {
+   "hop1": {
+    "s": "\u00c4ngeln i rummet",
+    "r": "performer",
+    "o": "Eva Dahlgren"
+   },
+   "hop2": {
+    "s": "Eva Dahlgren",
+    "r": "spouse",
+    "o": "Efva Attling"
+   }
+  },
+  "143": {
+   "hop1": {
+    "s": "\u00c9g\u00e9rie",
+    "r": "performer",
+    "o": "Nekfeu"
+   },
+   "hop2": {
+    "s": "Nekfeu",
+    "r": "place of birth",
+    "o": "La Trinit\u00e9"
+   }
+  },
+  "144": {
+   "hop1": {
+    "s": "Stopp! T\u00e4nk p\u00e5 n\u00e5got annat",
+    "r": "director",
+    "o": "\u00c5ke Ohberg"
+   },
+   "hop2": {
+    "s": "\u00c5ke Ohberg",
+    "r": "place of birth",
+    "o": "V\u00e4ster\u00e5s"
+   }
+  },
+  "145": {
+   "hop1": {
+    "s": "Lo que le pas\u00f3 a Reynoso",
+    "r": "director",
+    "o": "Leopoldo Torres R\u00edos"
+   },
+   "hop2": {
+    "s": "Leopoldo Torres R\u00edos",
+    "r": "child",
+    "o": "Leopoldo Torre Nilsson"
+   }
+  },
+  "146": {
+   "hop1": {
+    "s": "Vestire gli ignudi",
+    "r": "director",
+    "o": "Marcello Pagliero"
+   },
+   "hop2": {
+    "s": "Marcello Pagliero",
+    "r": "place of death",
+    "o": "Paris"
+   }
+  },
+  "147": {
+   "hop1": {
+    "s": "Mirage",
+    "r": "director",
+    "o": "Armando Robles Godoy"
+   },
+   "hop2": {
+    "s": "Armando Robles Godoy",
+    "r": "father",
+    "o": "Daniel Alom\u00eda Robles"
+   }
+  },
+  "148": {
+   "hop1": {
+    "s": "Claudio Silva",
+    "r": "spouse",
+    "o": "Juliana Freire"
+   },
+   "hop2": {
+    "s": "Juliana Freire",
+    "r": "educated at",
+    "o": "Stony Brook University"
+   }
+  },
+  "149": {
+   "hop1": {
+    "s": "A Woman's Face",
+    "r": "director",
+    "o": "Gustaf Molander"
+   },
+   "hop2": {
+    "s": "Gustaf Molander",
+    "r": "place of birth",
+    "o": "Helsingfors"
+   }
+  },
+  "150": {
+   "hop1": {
+    "s": "The Merry Monahans",
+    "r": "composer",
+    "o": "Hans J. Salter"
+   },
+   "hop2": {
+    "s": "Hans J. Salter",
+    "r": "place of death",
+    "o": "Studio City"
+   }
+  },
+  "151": {
+   "hop1": {
+    "s": "My Three Merry Widows",
+    "r": "director",
+    "o": "Fernando Cort\u00e9s"
+   },
+   "hop2": {
+    "s": "Fernando Cort\u00e9s",
+    "r": "spouse",
+    "o": "Mapy Cort\u00e9s"
+   }
+  },
+  "152": {
+   "hop1": {
+    "s": "Meritaten",
+    "r": "father",
+    "o": "Akhenaten"
+   },
+   "hop2": {
+    "s": "Akhenaten",
+    "r": "place of death",
+    "o": "Akhetaten"
+   }
+  },
+  "153": {
+   "hop1": {
+    "s": "Esc\u00e1ndalo de estrellas",
+    "r": "director",
+    "o": "Ismael Rodr\u00edguez"
+   },
+   "hop2": {
+    "s": "Ismael Rodr\u00edguez",
+    "r": "date of death",
+    "o": "August 7, 2004"
+   }
+  },
+  "154": {
+   "hop1": {
+    "s": "Terror in the Aisles",
+    "r": "composer",
+    "o": "John Beal"
+   },
+   "hop2": {
+    "s": "John Beal",
+    "r": "place of birth",
+    "o": "California"
+   }
+  },
+  "155": {
+   "hop1": {
+    "s": "Oh boy, oh boy, oh boy!",
+    "r": "performer",
+    "o": "Lasse Dahlquist"
+   },
+   "hop2": {
+    "s": "Lasse Dahlquist",
+    "r": "cause of death",
+    "o": "laryngeal cancer"
+   }
+  },
+  "156": {
+   "hop1": {
+    "s": "Beatrice I, Countess of Burgundy",
+    "r": "spouse",
+    "o": "Frederick Barbarossa"
+   },
+   "hop2": {
+    "s": "Frederick Barbarossa",
+    "r": "country of citizenship",
+    "o": "Germany"
+   }
+  },
+  "157": {
+   "hop1": {
+    "s": "George Lane-Fox",
+    "r": "father",
+    "o": "James Fox-Lane"
+   },
+   "hop2": {
+    "s": "James Fox-Lane",
+    "r": "educated at",
+    "o": "Christ's College, Cambridge"
+   }
+  },
+  "158": {
+   "hop1": {
+    "s": "Johanna Christiana Sophie Vulpius",
+    "r": "spouse",
+    "o": "Goethe"
+   },
+   "hop2": {
+    "s": "Goethe",
+    "r": "place of death",
+    "o": "Weimar"
+   }
+  },
+  "159": {
+   "hop1": {
+    "s": "Catherine of Guelders",
+    "r": "father",
+    "o": "Arnold, Duke of Guelders"
+   },
+   "hop2": {
+    "s": "Arnold, Duke of Guelders",
+    "r": "date of death",
+    "o": "23 February 1473"
+   }
+  },
+  "160": {
+   "hop1": {
+    "s": "I Miss You",
+    "r": "composer",
+    "o": "Miley Cyrus"
+   },
+   "hop2": {
+    "s": "Miley Cyrus",
+    "r": "father",
+    "o": "Billy Ray Cyrus"
+   }
+  },
+  "161": {
+   "hop1": {
+    "s": "Operation Secret",
+    "r": "director",
+    "o": "Lewis Seiler"
+   },
+   "hop2": {
+    "s": "Lewis Seiler",
+    "r": "place of birth",
+    "o": "New York"
+   }
+  },
+  "162": {
+   "hop1": {
+    "s": "Bianca Riario",
+    "r": "father",
+    "o": "Girolamo Riario"
+   },
+   "hop2": {
+    "s": "Girolamo Riario",
+    "r": "place of death",
+    "o": "Forl\u00ec"
+   }
+  },
+  "163": {
+   "hop1": {
+    "s": "Bollywood Calling",
+    "r": "director",
+    "o": "Nagesh Kukunoor"
+   },
+   "hop2": {
+    "s": "Nagesh Kukunoor",
+    "r": "place of birth",
+    "o": "Hyderabad"
+   }
+  },
+  "164": {
+   "hop1": {
+    "s": "Feel Good",
+    "r": "performer",
+    "o": "Robin Thicke"
+   },
+   "hop2": {
+    "s": "Robin Thicke",
+    "r": "mother",
+    "o": "Gloria Loring"
+   }
+  },
+  "166": {
+   "hop1": {
+    "s": "James Adam",
+    "r": "father",
+    "o": "William Adam"
+   },
+   "hop2": {
+    "s": "William Adam",
+    "r": "place of death",
+    "o": "Edinburgh"
+   }
+  },
+  "168": {
+   "hop1": {
+    "s": "Ae Dil Hai Mushkil",
+    "r": "director",
+    "o": "Karan Johar"
+   },
+   "hop2": {
+    "s": "Karan Johar",
+    "r": "father",
+    "o": "Yash Johar"
+   }
+  },
+  "169": {
+   "hop1": {
+    "s": "Dawn of Life",
+    "r": "director",
+    "o": "Fernando Cort\u00e9s"
+   },
+   "hop2": {
+    "s": "Fernando Cort\u00e9s",
+    "r": "place of birth",
+    "o": "San Juan, Puerto Rico"
+   }
+  },
+  "170": {
+   "hop1": {
+    "s": "Jeanne Richomme Raunay",
+    "r": "spouse",
+    "o": "Andr\u00e9 Beaunier"
+   },
+   "hop2": {
+    "s": "Andr\u00e9 Beaunier",
+    "r": "place of birth",
+    "o": "\u00c9vreux"
+   }
+  },
+  "171": {
+   "hop1": {
+    "s": "Pluto",
+    "r": "performer",
+    "o": "Bj\u00f6rk"
+   },
+   "hop2": {
+    "s": "Bj\u00f6rk",
+    "r": "place of birth",
+    "o": "Reykjav\u00edk"
+   }
+  },
+  "172": {
+   "hop1": {
+    "s": "Princess Margaretha of Saxony",
+    "r": "mother",
+    "o": "Amalie Auguste of Bavaria"
+   },
+   "hop2": {
+    "s": "Amalie Auguste of Bavaria",
+    "r": "place of birth",
+    "o": "Munich"
+   }
+  },
+  "173": {
+   "hop1": {
+    "s": "West of Shanghai",
+    "r": "director",
+    "o": "John Farrow"
+   },
+   "hop2": {
+    "s": "John Farrow",
+    "r": "spouse",
+    "o": "Maureen O'Sullivan"
+   }
+  },
+  "174": {
+   "hop1": {
+    "s": "Look at Me!",
+    "r": "composer",
+    "o": "XXXTentacion"
+   },
+   "hop2": {
+    "s": "XXXTentacion",
+    "r": "cause of death",
+    "o": "shot"
+   }
+  },
+  "175": {
+   "hop1": {
+    "s": "Lucky Me, Lucky You",
+    "r": "performer",
+    "o": "Lee Roy Parnell"
+   },
+   "hop2": {
+    "s": "Lee Roy Parnell",
+    "r": "place of birth",
+    "o": "Abilene"
+   }
+  },
+  "176": {
+   "hop1": {
+    "s": "Miss Seventeen",
+    "r": "creator",
+    "o": "Atoosa Rubenstein"
+   },
+   "hop2": {
+    "s": "Atoosa Rubenstein",
+    "r": "place of birth",
+    "o": "Tehran"
+   }
+  },
+  "177": {
+   "hop1": {
+    "s": "Brenda Brave",
+    "r": "director",
+    "o": "Daniel Bergman"
+   },
+   "hop2": {
+    "s": "Daniel Bergman",
+    "r": "mother",
+    "o": "K\u00e4bi Laretei"
+   }
+  },
+  "178": {
+   "hop1": {
+    "s": "Meritites I",
+    "r": "spouse",
+    "o": "Khufu"
+   },
+   "hop2": {
+    "s": "Khufu",
+    "r": "place of burial",
+    "o": "Great Pyramid of Giza"
+   }
+  },
+  "179": {
+   "hop1": {
+    "s": "Duchess Maria Dorothea of W\u00fcrttemberg",
+    "r": "father",
+    "o": "Duke Louis of W\u00fcrttemberg"
+   },
+   "hop2": {
+    "s": "Duke Louis of W\u00fcrttemberg",
+    "r": "place of death",
+    "o": "Kirchheim unter Teck"
+   }
+  },
+  "180": {
+   "hop1": {
+    "s": "The Pride of Jennico",
+    "r": "director",
+    "o": "J. Searle Dawley"
+   },
+   "hop2": {
+    "s": "J. Searle Dawley",
+    "r": "place of birth",
+    "o": "Colorado"
+   }
+  },
+  "181": {
+   "hop1": {
+    "s": "Gently My Songs Entreat",
+    "r": "director",
+    "o": "Willi Forst"
+   },
+   "hop2": {
+    "s": "Willi Forst",
+    "r": "place of birth",
+    "o": "Viennese"
+   }
+  },
+  "182": {
+   "hop1": {
+    "s": "Eleanor de Clare",
+    "r": "spouse",
+    "o": "Hugh Despenser the Younger"
+   },
+   "hop2": {
+    "s": "Hugh Despenser the younger",
+    "r": "cause of death",
+    "o": "hanged, drawn and quartered"
+   }
+  },
+  "183": {
+   "hop1": {
+    "s": "Voi Voi",
+    "r": "performer",
+    "o": "Nora Brockstedt"
+   },
+   "hop2": {
+    "s": "Nora Brockstedt",
+    "r": "cause of death",
+    "o": "illness"
+   }
+  },
+  "184": {
+   "hop1": {
+    "s": "Engelbert of Cleves, Count of Nevers",
+    "r": "mother",
+    "o": "Elizabeth of Nevers"
+   },
+   "hop2": {
+    "s": "Elizabeth of Nevers",
+    "r": "date of death",
+    "o": "21 June 1483"
+   }
+  },
+  "185": {
+   "hop1": {
+    "s": "Ludlow Massacre",
+    "r": "performer",
+    "o": "Woody Guthrie"
+   },
+   "hop2": {
+    "s": "Woody Guthrie",
+    "r": "cause of death",
+    "o": "Huntington's disease"
+   }
+  },
+  "186": {
+   "hop1": {
+    "s": "Slingshot",
+    "r": "director",
+    "o": "Jay Alaimo"
+   },
+   "hop2": {
+    "s": "Jay Alaimo",
+    "r": "place of birth",
+    "o": "Suffield, Connecticut"
+   }
+  },
+  "187": {
+   "hop1": {
+    "s": "Florent of Hainaut",
+    "r": "mother",
+    "o": "Adelaide of Holland"
+   },
+   "hop2": {
+    "s": "Adelaide of Holland",
+    "r": "country of citizenship",
+    "o": "Germany"
+   }
+  },
+  "188": {
+   "hop1": {
+    "s": "The Love Captive",
+    "r": "director",
+    "o": "Max Marcin"
+   },
+   "hop2": {
+    "s": "Max Marcin",
+    "r": "place of birth",
+    "o": "Pozna\u0144"
+   }
+  },
+  "189": {
+   "hop1": {
+    "s": "Noc nev\u011bsty",
+    "r": "director",
+    "o": "Karel Kachy\u0148a"
+   },
+   "hop2": {
+    "s": "Karel Kachy\u0148a",
+    "r": "spouse",
+    "o": "Alena Mihulov\u00e1"
+   }
+  },
+  "190": {
+   "hop1": {
+    "s": "Henry V",
+    "r": "composer",
+    "o": "William Walton"
+   },
+   "hop2": {
+    "s": "William Walton",
+    "r": "place of death",
+    "o": "Ischia"
+   }
+  },
+  "191": {
+   "hop1": {
+    "s": "The Gallant Lords of Bois-Dor\u00e9",
+    "r": "director",
+    "o": "Bernard Borderie"
+   },
+   "hop2": {
+    "s": "Bernard Borderie",
+    "r": "place of death",
+    "o": "Paris"
+   }
+  },
+  "193": {
+   "hop1": {
+    "s": "Los Motivos de Luz",
+    "r": "director",
+    "o": "Felipe Cazals"
+   },
+   "hop2": {
+    "s": "Felipe Cazals",
+    "r": "place of birth",
+    "o": "France"
+   }
+  },
+  "194": {
+   "hop1": {
+    "s": "Fast Car",
+    "r": "performer",
+    "o": "Namie Amuro"
+   },
+   "hop2": {
+    "s": "Namie Amuro",
+    "r": "place of birth",
+    "o": "Naha, Okinawa"
+   }
+  },
+  "195": {
+   "hop1": {
+    "s": "En Aasai Rasave",
+    "r": "director",
+    "o": "Kasthuri Raja"
+   },
+   "hop2": {
+    "s": "Kasthuri Raja",
+    "r": "place of birth",
+    "o": "Theni"
+   }
+  },
+  "196": {
+   "hop1": {
+    "s": "High",
+    "r": "director",
+    "o": "Larry Kent"
+   },
+   "hop2": {
+    "s": "Larry Kent",
+    "r": "place of birth",
+    "o": "Johannesburg, South Africa"
+   }
+  },
+  "197": {
+   "hop1": {
+    "s": "Ginevra d'Este",
+    "r": "spouse",
+    "o": "Sigismondo Pandolfo Malatesta"
+   },
+   "hop2": {
+    "s": "Sigismondo Pandolfo Malatesta",
+    "r": "place of death",
+    "o": "Rimini"
+   }
+  },
+  "198": {
+   "hop1": {
+    "s": "T\u0159i chlapi v chalup\u011b",
+    "r": "director",
+    "o": "Josef Mach"
+   },
+   "hop2": {
+    "s": "Josef Mach",
+    "r": "place of birth",
+    "o": "Prost\u011bjov"
+   }
+  },
+  "199": {
+   "hop1": {
+    "s": "Esperanza Escolar Limjap Osme\u00f1a",
+    "r": "spouse",
+    "o": "Sergio Osme\u00f1a"
+   },
+   "hop2": {
+    "s": "Sergio Osme\u00f1a",
+    "r": "place of birth",
+    "o": "Cebu"
+   }
+  },
+  "200": {
+   "hop1": {
+    "s": "Scugnizzi",
+    "r": "director",
+    "o": "Nanni Loy"
+   },
+   "hop2": {
+    "s": "Nanni Loy",
+    "r": "place of death",
+    "o": "Rome"
+   }
+  },
+  "201": {
+   "hop1": {
+    "s": "Music in Darkness",
+    "r": "director",
+    "o": "Ingmar Bergman"
+   },
+   "hop2": {
+    "s": "Ingmar Bergman",
+    "r": "place of death",
+    "o": "F\u00e5r\u00f6"
+   }
+  },
+  "202": {
+   "hop1": {
+    "s": "Aleksander Koniecpolski",
+    "r": "father",
+    "o": "Stanis\u0142aw Koniecpolski"
+   },
+   "hop2": {
+    "s": "Stanis\u0142aw Koniecpolski",
+    "r": "country of citizenship",
+    "o": "Polish-Lithuanian Commonwealth"
+   }
+  },
+  "203": {
+   "hop1": {
+    "s": "William de Warenne, 2nd Earl of Surrey",
+    "r": "father",
+    "o": "William de Warenne, 1st Earl of Surrey"
+   },
+   "hop2": {
+    "s": "William de Warenne, 1st Earl of Surrey",
+    "r": "place of death",
+    "o": "Lewes"
+   }
+  },
+  "204": {
+   "hop1": {
+    "s": "I Love, You Love",
+    "r": "director",
+    "o": "Du\u0161an Han\u00e1k"
+   },
+   "hop2": {
+    "s": "Du\u0161an Han\u00e1k",
+    "r": "place of birth",
+    "o": "Bratislava"
+   }
+  },
+  "205": {
+   "hop1": {
+    "s": "Don Juan",
+    "r": "director",
+    "o": "Albert Heine"
+   },
+   "hop2": {
+    "s": "Albert Heine",
+    "r": "place of death",
+    "o": "Westerland"
+   }
+  },
+  "206": {
+   "hop1": {
+    "s": "\"I See You",
+    "r": "performer",
+    "o": "Leona Lewis"
+   },
+   "hop2": {
+    "s": "Leona Lewis",
+    "r": "place of birth",
+    "o": "London"
+   }
+  },
+  "207": {
+   "hop1": {
+    "s": "Plunkett & Macleane",
+    "r": "director",
+    "o": "Jake Scott"
+   },
+   "hop2": {
+    "s": "Jake Scott",
+    "r": "father",
+    "o": "Ridley Scott"
+   }
+  },
+  "208": {
+   "hop1": {
+    "s": "Rise Above: The Tribe 8 Documentary",
+    "r": "director",
+    "o": "Tracy Flannigan"
+   },
+   "hop2": {
+    "s": "Tracy Flannigan",
+    "r": "country of citizenship",
+    "o": "United States"
+   }
+  },
+  "209": {
+   "hop1": {
+    "s": "I See You",
+    "r": "director",
+    "o": "Vivek Agrawal"
+   },
+   "hop2": {
+    "s": "Vivek Agrawal",
+    "r": "country of citizenship",
+    "o": "India"
+   }
+  },
+  "210": {
+   "hop1": {
+    "s": "Gilduin of Le Puiset",
+    "r": "father",
+    "o": "Hugh I of Le Puiset"
+   },
+   "hop2": {
+    "s": "Hugh I of Le Puiset",
+    "r": "country of citizenship",
+    "o": "France"
+   }
+  },
+  "211": {
+   "hop1": {
+    "s": "The Last Company",
+    "r": "director",
+    "o": "Curtis Bernhardt"
+   },
+   "hop2": {
+    "s": "Curtis Bernhardt",
+    "r": "place of burial",
+    "o": "Forest Lawn Memorial Park"
+   }
+  },
+  "212": {
+   "hop1": {
+    "s": "John Castriot II",
+    "r": "father",
+    "o": "Skanderbeg"
+   },
+   "hop2": {
+    "s": "Skanderbeg",
+    "r": "place of burial",
+    "o": "Lezh\u00eb"
+   }
+  },
+  "213": {
+   "hop1": {
+    "s": "Matilda of Frisia",
+    "r": "spouse",
+    "o": "Henry I"
+   },
+   "hop2": {
+    "s": "Henry I",
+    "r": "country of citizenship",
+    "o": "France"
+   }
+  },
+  "214": {
+   "hop1": {
+    "s": "Emilie Hegh Arntzen",
+    "r": "mother",
+    "o": "Hanne Hegh"
+   },
+   "hop2": {
+    "s": "Hanne Hegh",
+    "r": "place of birth",
+    "o": "Oslo"
+   }
+  },
+  "215": {
+   "hop1": {
+    "s": "West 32nd",
+    "r": "director",
+    "o": "Michael Kang"
+   },
+   "hop2": {
+    "s": "Michael Kang",
+    "r": "country of citizenship",
+    "o": "American"
+   }
+  },
+  "216": {
+   "hop1": {
+    "s": "The 3 Rooms of Melancholia",
+    "r": "director",
+    "o": "Pirjo Honkasalo"
+   },
+   "hop2": {
+    "s": "Pirjo Honkasalo",
+    "r": "place of birth",
+    "o": "Helsinki"
+   }
+  },
+  "217": {
+   "hop1": {
+    "s": "My Country's Wings",
+    "r": "director",
+    "o": "Carlos F. Borcosque"
+   },
+   "hop2": {
+    "s": "Carlos F. Borcosque",
+    "r": "place of birth",
+    "o": "Valpara\u00edso"
+   }
+  },
+  "218": {
+   "hop1": {
+    "s": "XYZ",
+    "r": "has part",
+    "o": "Chris Squire"
+   },
+   "hop2": {
+    "s": "Chris Squire",
+    "r": "place of birth",
+    "o": "Kingsbury, London"
+   }
+  },
+  "219": {
+   "hop1": {
+    "s": "The Stone Rider",
+    "r": "director",
+    "o": "Fritz Wendhausen"
+   },
+   "hop2": {
+    "s": "Fritz Wendhausen",
+    "r": "place of death",
+    "o": "K\u00f6nigstein im Taunus"
+   }
+  },
+  "220": {
+   "hop1": {
+    "s": "Prince Gustav of Thurn and Taxis (1848\u20131914)",
+    "r": "father",
+    "o": "Maximilian Karl, 6th Prince of Thurn and Taxis"
+   },
+   "hop2": {
+    "s": "Maximilian Karl, 6th Prince of Thurn and Taxis",
+    "r": "date of death",
+    "o": "10 November 1871"
+   }
+  },
+  "221": {
+   "hop1": {
+    "s": "Elizabeth of Denmark, Electress of Brandenburg",
+    "r": "mother",
+    "o": "Christina of Saxony"
+   },
+   "hop2": {
+    "s": "Christina of Saxony",
+    "r": "place of birth",
+    "o": "Torgau"
+   }
+  },
+  "222": {
+   "hop1": {
+    "s": "Aylwin",
+    "r": "director",
+    "o": "Henry Edwards"
+   },
+   "hop2": {
+    "s": "Henry Edwards",
+    "r": "place of birth",
+    "o": "Weston-super-Mare, Somerset"
+   }
+  },
+  "223": {
+   "hop1": {
+    "s": "Siemowit V of Masovia",
+    "r": "mother",
+    "o": "Alexandra of Lithuania"
+   },
+   "hop2": {
+    "s": "Alexandra of Lithuania",
+    "r": "date of death",
+    "o": "20 April 1434"
+   }
+  },
+  "224": {
+   "hop1": {
+    "s": "Barracuda",
+    "r": "director",
+    "o": "Wayne Crawford"
+   },
+   "hop2": {
+    "s": "Wayne Crawford",
+    "r": "educated at",
+    "o": "Florida Atlantic"
+   }
+  },
+  "225": {
+   "hop1": {
+    "s": "Lou Henry Hoover",
+    "r": "spouse",
+    "o": "Herbert Hoover"
+   },
+   "hop2": {
+    "s": "Herbert Hoover",
+    "r": "place of birth",
+    "o": "West Branch, Iowa"
+   }
+  },
+  "226": {
+   "hop1": {
+    "s": "Julia Parker",
+    "r": "spouse",
+    "o": "Derek Parker"
+   },
+   "hop2": {
+    "s": "Derek Parker",
+    "r": "country of citizenship",
+    "o": "British"
+   }
+  },
+  "227": {
+   "hop1": {
+    "s": "Neith",
+    "r": "spouse",
+    "o": "Pepi II Neferkare"
+   },
+   "hop2": {
+    "s": "Pepi II Neferkare",
+    "r": "place of burial",
+    "o": "Saqqara"
+   }
+  },
+  "228": {
+   "hop1": {
+    "s": "Seconds",
+    "r": "composer",
+    "o": "Bono"
+   },
+   "hop2": {
+    "s": "Bono",
+    "r": "country of citizenship",
+    "o": "Irish"
+   }
+  },
+  "229": {
+   "hop1": {
+    "s": "Princess Louise Auguste of Denmark",
+    "r": "mother",
+    "o": "Caroline Matilda of Great Britain"
+   },
+   "hop2": {
+    "s": "Caroline Matilda of Great Britain",
+    "r": "place of death",
+    "o": "Celle"
+   }
+  },
+  "230": {
+   "hop1": {
+    "s": "P\u00e5 solsiden",
+    "r": "director",
+    "o": "Edith Carlmar"
+   },
+   "hop2": {
+    "s": "Edith Carlmar",
+    "r": "spouse",
+    "o": "Otto Carlmar"
+   }
+  },
+  "231": {
+   "hop1": {
+    "s": "At\u00e9 que a Sorte nos Separe 2",
+    "r": "director",
+    "o": "Roberto Santucci"
+   },
+   "hop2": {
+    "s": "Roberto Santucci",
+    "r": "educated at",
+    "o": "University of California"
+   }
+  },
+  "232": {
+   "hop1": {
+    "s": "Kitty Dukakis",
+    "r": "spouse",
+    "o": "Michael Dukakis"
+   },
+   "hop2": {
+    "s": "Michael Dukakis",
+    "r": "employer",
+    "o": "UCLA"
+   }
+  },
+  "233": {
+   "hop1": {
+    "s": "Isabella of England",
+    "r": "mother",
+    "o": "Isabella of Angoul\u00eame"
+   },
+   "hop2": {
+    "s": "Isabella of Angoul\u00eame",
+    "r": "country of citizenship",
+    "o": "France"
+   }
+  },
+  "234": {
+   "hop1": {
+    "s": "Louise Sophie of Hanau-Lichtenberg",
+    "r": "mother",
+    "o": "Countess Palatine Anna Magdalena of Birkenfeld-Bischweiler"
+   },
+   "hop2": {
+    "s": "Countess Palatine Anna Magdalena of Birkenfeld-Bischweiler",
+    "r": "place of birth",
+    "o": "Strasbourg"
+   }
+  },
+  "235": {
+   "hop1": {
+    "s": "Quatre-vingt-treize",
+    "r": "director",
+    "o": "Albert Capellani"
+   },
+   "hop2": {
+    "s": "Albert Capellani",
+    "r": "place of death",
+    "o": "Paris"
+   }
+  },
+  "236": {
+   "hop1": {
+    "s": "Atomised",
+    "r": "director",
+    "o": "Oskar Roehler"
+   },
+   "hop2": {
+    "s": "Oskar Roehler",
+    "r": "mother",
+    "o": "Gisela Elsner"
+   }
+  },
+  "237": {
+   "hop1": {
+    "s": "Guglielma Pallavicini",
+    "r": "mother",
+    "o": "Maria dalle Carceri"
+   },
+   "hop2": {
+    "s": "Maria dalle Carceri",
+    "r": "date of death",
+    "o": "1323"
+   }
+  },
+  "238": {
+   "hop1": {
+    "s": "Mohammed bin Nawwaf bin Abdulaziz",
+    "r": "father",
+    "o": "Nawwaf bin Abdulaziz Al Saud"
+   },
+   "hop2": {
+    "s": "Nawwaf bin Abdulaziz Al Saud",
+    "r": "date of birth",
+    "o": "16 August 1932"
+   }
+  },
+  "239": {
+   "hop1": {
+    "s": "Encino Man",
+    "r": "director",
+    "o": "Les Mayfield"
+   },
+   "hop2": {
+    "s": "Les Mayfield",
+    "r": "place of birth",
+    "o": "Albuquerque, New Mexico"
+   }
+  },
+  "240": {
+   "hop1": {
+    "s": "Kunigunde of Poland",
+    "r": "father",
+    "o": "W\u0142adys\u0142aw I the Elbow-high"
+   },
+   "hop2": {
+    "s": "W\u0142adys\u0142aw I the Elbow-high",
+    "r": "place of burial",
+    "o": "Wawel Cathedral"
+   }
+  },
+  "241": {
+   "hop1": {
+    "s": "I Might Have Been Queen",
+    "r": "performer",
+    "o": "Tina Turner"
+   },
+   "hop2": {
+    "s": "Tina Turner",
+    "r": "country of citizenship",
+    "o": "Swiss"
+   }
+  },
+  "242": {
+   "hop1": {
+    "s": "Pierre-Marie Gault de Saint-Germain",
+    "r": "spouse",
+    "o": "Anna Rajecka"
+   },
+   "hop2": {
+    "s": "Anna Rajecka",
+    "r": "place of birth",
+    "o": "Warsaw"
+   }
+  },
+  "243": {
+   "hop1": {
+    "s": "Sultan Walad",
+    "r": "father",
+    "o": "Rumi"
+   },
+   "hop2": {
+    "s": "Rumi",
+    "r": "place of death",
+    "o": "Konya"
+   }
+  },
+  "244": {
+   "hop1": {
+    "s": "Mister Scarface",
+    "r": "director",
+    "o": "Fernando Di Leo"
+   },
+   "hop2": {
+    "s": "Fernando Di Leo",
+    "r": "place of birth",
+    "o": "San Ferdinando di Puglia"
+   }
+  },
+  "245": {
+   "hop1": {
+    "s": "Salin Mibaya",
+    "r": "spouse",
+    "o": "Thado Dhamma Yaza II of Prome"
+   },
+   "hop2": {
+    "s": "Thado Dhamma Yaza II of Prome",
+    "r": "place of death",
+    "o": "Pyay"
+   }
+  },
+  "246": {
+   "hop1": {
+    "s": "Broadway Bad",
+    "r": "director",
+    "o": "Sidney Lanfield"
+   },
+   "hop2": {
+    "s": "Sidney Lanfield",
+    "r": "place of burial",
+    "o": "Westwood Village Memorial Park Cemetery"
+   }
+  },
+  "247": {
+   "hop1": {
+    "s": "Matilda of Boulogne, Duchess of Brabant",
+    "r": "mother",
+    "o": "Marie I, Countess of Boulogne"
+   },
+   "hop2": {
+    "s": "Marie I, Countess of Boulogne",
+    "r": "date of death",
+    "o": "25 July 1182"
+   }
+  },
+  "248": {
+   "hop1": {
+    "s": "Are You Really Mine?",
+    "r": "performer",
+    "o": "Jimmie Rodgers"
+   },
+   "hop2": {
+    "s": "Jimmie Rodgers",
+    "r": "place of birth",
+    "o": "Camas"
+   }
+  },
+  "249": {
+   "hop1": {
+    "s": "Cecilia Renata of Austria",
+    "r": "spouse",
+    "o": "W\u0142adys\u0142aw IV Vasa"
+   },
+   "hop2": {
+    "s": "W\u0142adys\u0142aw IV Vasa",
+    "r": "country of citizenship",
+    "o": "Polish\u2013Lithuanian Commonwealth"
+   }
+  },
+  "250": {
+   "hop1": {
+    "s": "Francis Otto, Duke of Brunswick-L\u00fcneburg",
+    "r": "father",
+    "o": "Ernest I, Duke of Brunswick-L\u00fcneburg"
+   },
+   "hop2": {
+    "s": "Ernest I, Duke of Brunswick-L\u00fcneburg",
+    "r": "date of birth",
+    "o": "27 June 1497"
+   }
+  },
+  "251": {
+   "hop1": {
+    "s": "The Naked Angel",
+    "r": "director",
+    "o": "Carlos Hugo Christensen"
+   },
+   "hop2": {
+    "s": "Carlos Hugo Christensen",
+    "r": "place of birth",
+    "o": "Santiago del Estero"
+   }
+  },
+  "252": {
+   "hop1": {
+    "s": "Pareherwenemef",
+    "r": "mother",
+    "o": "Nefertari"
+   },
+   "hop2": {
+    "s": "Nefertari",
+    "r": "place of burial",
+    "o": "QV66"
+   }
+  },
+  "253": {
+   "hop1": {
+    "s": "Jessie Harlan Lincoln",
+    "r": "father",
+    "o": "Robert Todd Lincoln"
+   },
+   "hop2": {
+    "s": "Robert Todd Lincoln",
+    "r": "country of citizenship",
+    "o": "American"
+   }
+  },
+  "254": {
+   "hop1": {
+    "s": "George Howard, 4th Earl of Suffolk",
+    "r": "father",
+    "o": "Theophilus Howard, 2nd Earl of Suffolk"
+   },
+   "hop2": {
+    "s": "Theophilus Howard, 2nd Earl of Suffolk",
+    "r": "place of birth",
+    "o": "Saffron Walden"
+   }
+  },
+  "255": {
+   "hop1": {
+    "s": "Elizabeth Stafford",
+    "r": "mother",
+    "o": "Dorothy Stafford"
+   },
+   "hop2": {
+    "s": "Dorothy Stafford",
+    "r": "place of birth",
+    "o": "English"
+   }
+  },
+  "256": {
+   "hop1": {
+    "s": "If You Want to Be My Woman",
+    "r": "performer",
+    "o": "Merle Haggard"
+   },
+   "hop2": {
+    "s": "Merle Haggard",
+    "r": "place of birth",
+    "o": "Bakersfield"
+   }
+  },
+  "257": {
+   "hop1": {
+    "s": "Neurotic Society",
+    "r": "performer",
+    "o": "Lauryn Hill"
+   },
+   "hop2": {
+    "s": "Lauryn Hill",
+    "r": "spouse",
+    "o": "Rohan Marley"
+   }
+  },
+  "258": {
+   "hop1": {
+    "s": "Veera Thalattu",
+    "r": "director",
+    "o": "Kasthuri Raja"
+   },
+   "hop2": {
+    "s": "Kasthuri Raja",
+    "r": "place of birth",
+    "o": "Theni"
+   }
+  },
+  "259": {
+   "hop1": {
+    "s": "Brecha",
+    "r": "director",
+    "o": "Iv\u00e1n Noel"
+   },
+   "hop2": {
+    "s": "Iv\u00e1n Noel",
+    "r": "country of citizenship",
+    "o": "Argentine"
+   }
+  },
+  "260": {
+   "hop1": {
+    "s": "Basta guardarla",
+    "r": "director",
+    "o": "Luciano Salce"
+   },
+   "hop2": {
+    "s": "Luciano Salce",
+    "r": "place of death",
+    "o": "Rome"
+   }
+  },
+  "261": {
+   "hop1": {
+    "s": "Min kone er uskyldig",
+    "r": "director",
+    "o": "Johan Jacobsen"
+   },
+   "hop2": {
+    "s": "Johan Jacobsen",
+    "r": "spouse",
+    "o": "Annelise Hovmand"
+   }
+  },
+  "262": {
+   "hop1": {
+    "s": "Princess Alexandra Therese Marie of Anhalt",
+    "r": "spouse",
+    "o": "Sizzo, Prince of Schwarzburg"
+   },
+   "hop2": {
+    "s": "Sizzo, Prince of Schwarzburg",
+    "r": "place of birth",
+    "o": "Rudolstadt"
+   }
+  },
+  "263": {
+   "hop1": {
+    "s": "Princess Katherine of Greece and Denmark",
+    "r": "mother",
+    "o": "Sophia of Prussia"
+   },
+   "hop2": {
+    "s": "Sophia of Prussia",
+    "r": "country of citizenship",
+    "o": "German"
+   }
+  },
+  "264": {
+   "hop1": {
+    "s": "House in the Sun",
+    "r": "director",
+    "o": "Gaston Roud\u00e8s"
+   },
+   "hop2": {
+    "s": "Gaston Roud\u00e8s",
+    "r": "place of birth",
+    "o": "B\u00e9ziers"
+   }
+  },
+  "265": {
+   "hop1": {
+    "s": "Die Abfahrer",
+    "r": "director",
+    "o": "Adolf Winkelmann"
+   },
+   "hop2": {
+    "s": "Adolf Winkelmann",
+    "r": "employer",
+    "o": "Dortmund University of Applied Sciences and Arts"
+   }
+  },
+  "266": {
+   "hop1": {
+    "s": "She Asked for It",
+    "r": "director",
+    "o": "Erle C. Kenton"
+   },
+   "hop2": {
+    "s": "Erle C. Kenton",
+    "r": "cause of death",
+    "o": "Parkinson"
+   }
+  },
+  "267": {
+   "hop1": {
+    "s": "\u00c6thelwald (died 962) was ealdorman of East Anglia",
+    "r": "spouse",
+    "o": "\u00c6lfthryth"
+   },
+   "hop2": {
+    "s": "\u00c6lfthryth",
+    "r": "country of citizenship",
+    "o": "English"
+   }
+  },
+  "268": {
+   "hop1": {
+    "s": "Blood Father",
+    "r": "director",
+    "o": "Jean-Fran\u00e7ois Richet"
+   },
+   "hop2": {
+    "s": "Jean-Fran\u00e7ois Richet",
+    "r": "place of birth",
+    "o": "Paris"
+   }
+  },
+  "269": {
+   "hop1": {
+    "s": "Zabak",
+    "r": "director",
+    "o": "Homi Wadia"
+   },
+   "hop2": {
+    "s": "Homi Wadia",
+    "r": "spouse",
+    "o": "Fearless Nadia"
+   }
+  },
+  "270": {
+   "hop1": {
+    "s": "Maurice de Saxe",
+    "r": "father",
+    "o": "Augustus II the Strong"
+   },
+   "hop2": {
+    "s": "Augustus II the Strong",
+    "r": "place of birth",
+    "o": "Dresden"
+   }
+  },
+  "271": {
+   "hop1": {
+    "s": "The Blue and White Lion",
+    "r": "director",
+    "o": "Werner Jacobs"
+   },
+   "hop2": {
+    "s": "Werner Jacobs",
+    "r": "place of birth",
+    "o": "Berlin"
+   }
+  },
+  "272": {
+   "hop1": {
+    "s": "Claire Annabel Caroline Grant Duff",
+    "r": "father",
+    "o": "Sir Mountstuart Grant Duff"
+   },
+   "hop2": {
+    "s": "Sir Mountstuart Grant Duff",
+    "r": "country of citizenship",
+    "o": "British"
+   }
+  },
+  "273": {
+   "hop1": {
+    "s": "Anne Charlotte of Lorraine",
+    "r": "mother",
+    "o": "\u00c9lisabeth Charlotte d'Orl\u00e9ans"
+   },
+   "hop2": {
+    "s": "\u00c9lisabeth Charlotte d'Orl\u00e9ans",
+    "r": "place of death",
+    "o": "Commercy"
+   }
+  },
+  "274": {
+   "hop1": {
+    "s": "Princess Jos\u00e9phine Marie of Belgium",
+    "r": "mother",
+    "o": "Princess Marie of Hohenzollern-Sigmaringen"
+   },
+   "hop2": {
+    "s": "Princess Marie of Hohenzollern-Sigmaringen",
+    "r": "date of birth",
+    "o": "17 November 1845"
+   }
+  },
+  "275": {
+   "hop1": {
+    "s": "We",
+    "r": "director",
+    "o": "Vojt\u011bch Jasn\u00fd"
+   },
+   "hop2": {
+    "s": "Vojt\u011bch Jasn\u00fd",
+    "r": "place of death",
+    "o": "P\u0159erov"
+   }
+  },
+  "276": {
+   "hop1": {
+    "s": "Downloaded",
+    "r": "director",
+    "o": "Alex Winter"
+   },
+   "hop2": {
+    "s": "Alex Winter",
+    "r": "country of citizenship",
+    "o": "American"
+   }
+  },
+  "277": {
+   "hop1": {
+    "s": "Joanna of Durazzo",
+    "r": "mother",
+    "o": "Maria of Calabria"
+   },
+   "hop2": {
+    "s": "Maria of Calabria",
+    "r": "place of death",
+    "o": "Neapolitan"
+   }
+  },
+  "278": {
+   "hop1": {
+    "s": "Lin Liguo",
+    "r": "father",
+    "o": "Lin Biao"
+   },
+   "hop2": {
+    "s": "Lin Biao",
+    "r": "place of death",
+    "o": "\u00d6nd\u00f6rkhaan"
+   }
+  },
+  "279": {
+   "hop1": {
+    "s": "Valley of the Giants",
+    "r": "director",
+    "o": "William Keighley"
+   },
+   "hop2": {
+    "s": "William Keighley",
+    "r": "place of death",
+    "o": "New York"
+   }
+  },
+  "280": {
+   "hop1": {
+    "s": "The Wedding Video",
+    "r": "director",
+    "o": "Norman Korpi"
+   },
+   "hop2": {
+    "s": "Norman Korpi",
+    "r": "place of birth",
+    "o": "American"
+   }
+  },
+  "281": {
+   "hop1": {
+    "s": "Libera Universit\u00e0 Internazionale degli Studi Sociali Guido Carli",
+    "r": "founded by",
+    "o": "Umberto Agnelli"
+   },
+   "hop2": {
+    "s": "Umberto Agnelli",
+    "r": "mother",
+    "o": "Virginia Bourbon del Monte"
+   }
+  },
+  "282": {
+   "hop1": {
+    "s": "Worldly Goods",
+    "r": "director",
+    "o": "Paul Bern"
+   },
+   "hop2": {
+    "s": "Paul Bern",
+    "r": "spouse",
+    "o": "Jean Harlow"
+   }
+  },
+  "283": {
+   "hop1": {
+    "s": "Blondie",
+    "r": "director",
+    "o": "Sergio Gobbi"
+   },
+   "hop2": {
+    "s": "Sergio Gobbi",
+    "r": "country of citizenship",
+    "o": "Italy"
+   }
+  },
+  "284": {
+   "hop1": {
+    "s": "Elizabeth of Moravia",
+    "r": "mother",
+    "o": "Margaret of Opava"
+   },
+   "hop2": {
+    "s": "Margaret of Opava",
+    "r": "place of death",
+    "o": "Brno"
+   }
+  },
+  "285": {
+   "hop1": {
+    "s": "Mate Me\u0161trovi\u0107",
+    "r": "father",
+    "o": "Ivan Me\u0161trovi\u0107"
+   },
+   "hop2": {
+    "s": "Ivan Me\u0161trovi\u0107",
+    "r": "educated at",
+    "o": "Academy of Fine Arts Vienna"
+   }
+  },
+  "286": {
+   "hop1": {
+    "s": "Funny Games U.S.",
+    "r": "director",
+    "o": "Michael Haneke"
+   },
+   "hop2": {
+    "s": "Michael Haneke",
+    "r": "country of citizenship",
+    "o": "Austrian"
+   }
+  },
+  "287": {
+   "hop1": {
+    "s": "Rivers and Tides",
+    "r": "composer",
+    "o": "Fred Frith"
+   },
+   "hop2": {
+    "s": "Fred Frith",
+    "r": "employer",
+    "o": "Mills College"
+   }
+  },
+  "288": {
+   "hop1": {
+    "s": "Top Floor Girl",
+    "r": "director",
+    "o": "Max Varnel"
+   },
+   "hop2": {
+    "s": "Max Varnel",
+    "r": "country of citizenship",
+    "o": "French"
+   }
+  },
+  "289": {
+   "hop1": {
+    "s": "Polish-Russian War",
+    "r": "director",
+    "o": "Xawery \u017bu\u0142awski"
+   },
+   "hop2": {
+    "s": "Xawery \u017bu\u0142awski",
+    "r": "educated at",
+    "o": "National Film School in \u0141\u00f3d\u017a"
+   }
+  },
+  "290": {
+   "hop1": {
+    "s": "Roberto F. Civita",
+    "r": "father",
+    "o": "Victor Civita"
+   },
+   "hop2": {
+    "s": "Victor Civita",
+    "r": "place of death",
+    "o": "S\u00e3o Paulo"
+   }
+  },
+  "291": {
+   "hop1": {
+    "s": "FitzRoy John Somerset, 5th Baron Raglan",
+    "r": "father",
+    "o": "Fitzroy Richard Somerset"
+   },
+   "hop2": {
+    "s": "Fitzroy Richard Somerset",
+    "r": "date of death",
+    "o": "14 September 1964"
+   }
+  },
+  "292": {
+   "hop1": {
+    "s": "Martial Law",
+    "r": "director",
+    "o": "Steve Cohen"
+   },
+   "hop2": {
+    "s": "Steve Cohen",
+    "r": "place of birth",
+    "o": "Memphis"
+   }
+  },
+  "293": {
+   "hop1": {
+    "s": "John Fitzgerald Kennedy Jr.",
+    "r": "mother",
+    "o": "Jacqueline Kennedy"
+   },
+   "hop2": {
+    "s": "Jacqueline Kennedy",
+    "r": "place of birth",
+    "o": "Southampton"
+   }
+  },
+  "294": {
+   "hop1": {
+    "s": "Detachment",
+    "r": "director",
+    "o": "Tony Kaye"
+   },
+   "hop2": {
+    "s": "Tony Kaye",
+    "r": "country of citizenship",
+    "o": "British"
+   }
+  },
+  "295": {
+   "hop1": {
+    "s": "Podokkhep",
+    "r": "director",
+    "o": "Suman Ghosh"
+   },
+   "hop2": {
+    "s": "Suman Ghosh",
+    "r": "employer",
+    "o": "Florida Atlantic"
+   }
+  },
+  "297": {
+   "hop1": {
+    "s": "Augustus Paulet, 15th Marquess of Winchester",
+    "r": "father",
+    "o": "John Paulet, 14th Marquess of Winchester"
+   },
+   "hop2": {
+    "s": "John Paulet, 14th Marquess of Winchester",
+    "r": "date of birth",
+    "o": "3 June 1801"
+   }
+  },
+  "298": {
+   "hop1": {
+    "s": "Nigel de Brus",
+    "r": "father",
+    "o": "Robert de Brus, 6th Lord of Annandale"
+   },
+   "hop2": {
+    "s": "Robert de Brus, 6th Lord of Annandale",
+    "r": "place of birth",
+    "o": "Writtle"
+   }
+  },
+  "299": {
+   "hop1": {
+    "s": "Samarpane",
+    "r": "director",
+    "o": "H. R. Bhargava"
+   },
+   "hop2": {
+    "s": "H. R. Bhargava",
+    "r": "place of birth",
+    "o": "Hunsur"
+   }
+  }
+ },
+ "judges": {
+  "deepseek/deepseek-v4-flash": {
+   "model": "deepseek/deepseek-v4-flash",
+   "pinned": "DigitalOcean",
+   "n_scored": 287,
+   "n_error": 0,
+   "providers": [
+    "DigitalOcean"
+   ],
+   "pin_honoured": true,
+   "usd": 0.0181183086,
+   "rows": [
+    {
+     "i": 0,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 1,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 2,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 3,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 4,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 5,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 6,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 7,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 8,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 9,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 10,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 11,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 12,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 13,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 14,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 15,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 17,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 18,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 19,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 20,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 21,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 22,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 23,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 24,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 26,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 27,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 28,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 29,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 31,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 32,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 33,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 34,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 35,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 36,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 37,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 38,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 39,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 40,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 41,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 42,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 43,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 44,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 45,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 46,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 47,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 48,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 49,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 50,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 51,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 52,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 53,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 54,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 55,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 56,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 57,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 58,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 59,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 60,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 61,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 63,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 64,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 65,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 66,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 67,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 69,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 71,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 72,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 73,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 74,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 75,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 76,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 77,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 78,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 79,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 80,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 81,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 82,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 83,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 84,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 85,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 86,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 87,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 88,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 89,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 90,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 91,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 92,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 93,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 95,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 96,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 97,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 98,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 99,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 100,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 101,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 102,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 103,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 104,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 105,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 106,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 107,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 108,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 109,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 110,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 111,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 113,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 114,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 115,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 116,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 117,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 118,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 119,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 120,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 121,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 122,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 123,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 124,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 125,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 126,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 127,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 128,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 129,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 130,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 131,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 133,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 134,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 135,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 136,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 137,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 138,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 139,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 140,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 141,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 142,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 143,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 144,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 145,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 146,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 147,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 148,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 149,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 150,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 151,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 152,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 153,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 154,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 155,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 156,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 157,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 158,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 159,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 160,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 161,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 162,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 163,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 164,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 166,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 168,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 169,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 170,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 171,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 172,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 173,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 174,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 175,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 176,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 177,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 178,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 179,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 180,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 181,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 182,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 183,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 184,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 185,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 186,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 187,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 188,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 189,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 190,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 191,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 193,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 194,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 195,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 196,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 197,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 198,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 199,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 200,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 201,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 202,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 203,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 204,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 205,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 206,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 207,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 208,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 209,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 210,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 211,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 212,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 213,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 214,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 215,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 216,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 217,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 218,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 219,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 220,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 221,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 222,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 223,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 224,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 225,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 226,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 227,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 228,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 229,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 230,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 231,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 232,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 233,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 234,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 235,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 236,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 237,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 238,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 239,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 240,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 241,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 242,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 243,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 244,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 245,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 246,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 247,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 248,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 249,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 250,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 251,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 252,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 253,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 254,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 255,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 256,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 257,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 258,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 259,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 260,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 261,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 262,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 263,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 264,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 265,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 266,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 267,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 268,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 269,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 270,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 271,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 272,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 273,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 274,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 275,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 276,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 277,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 278,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 279,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 280,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 281,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 282,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 283,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 284,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 285,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 286,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 287,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 288,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 289,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 290,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 291,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 292,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 293,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 294,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 295,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 297,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 298,
+     "verdict": {
+      "hop1": "ENTAILED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"ENTAILED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 299,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "DigitalOcean",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    }
+   ]
+  },
+  "z-ai/glm-5.3": {
+   "model": "z-ai/glm-5.3",
+   "pinned": "StreamLake",
+   "n_scored": 133,
+   "n_error": 154,
+   "providers": [
+    "StreamLake"
+   ],
+   "pin_honoured": true,
+   "usd": 1.3999887078000002,
+   "rows": [
+    {
+     "i": 0,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 1,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 2,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 3,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 4,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 5,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 6,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 7,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 8,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 9,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 10,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 11,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 12,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 13,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 14,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 15,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 17,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 18,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 19,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 20,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 21,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 22,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 23,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 24,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 26,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 27,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 28,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 29,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 31,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 32,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 33,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 34,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 35,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 36,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 37,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 38,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 39,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 40,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 41,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 42,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 43,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 44,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 45,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 46,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 47,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 48,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 49,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 50,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 51,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 52,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 53,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 54,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 55,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 56,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 57,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 58,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 59,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 60,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 61,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 63,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 64,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 65,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 66,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 67,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 69,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 71,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 72,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 73,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 74,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 75,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 76,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 77,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 78,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 79,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 80,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 81,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 82,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 83,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 84,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 85,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 86,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 87,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 88,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 89,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 90,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 91,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 92,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 93,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 95,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 96,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 97,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 98,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 99,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 100,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 101,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "{\"",
+     "err": "PARSE"
+    },
+    {
+     "i": 102,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 103,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 104,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 105,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 106,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 107,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 108,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 109,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 110,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 111,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 113,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 114,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ENTAILED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ENTAILED\"}",
+     "err": ""
+    },
+    {
+     "i": 115,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 116,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 117,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 118,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 119,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 120,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 121,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 122,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 123,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 124,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 125,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 126,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 127,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 128,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 129,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 130,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 131,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 133,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 134,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 135,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 136,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 137,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 138,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 139,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 140,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 141,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 142,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 143,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 144,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 145,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 146,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 147,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 148,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 149,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 150,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 151,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 152,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 153,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 154,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 155,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 156,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 157,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 158,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 159,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 160,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 161,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 162,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 163,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 164,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 166,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 168,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 169,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 170,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 171,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 172,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 173,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 174,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 175,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 176,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 177,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 178,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 179,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 180,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 181,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 182,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 183,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 184,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 185,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 186,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 187,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 188,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 189,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 190,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 191,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 193,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 194,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 195,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 196,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 197,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 198,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 199,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 200,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 201,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 202,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 203,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 204,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 205,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 206,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 207,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 208,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 209,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 210,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 211,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 212,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 213,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 214,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 215,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 216,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 217,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 218,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 219,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 220,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 221,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 222,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 223,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 224,
+     "verdict": {
+      "hop1": "ABSENT",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"ABSENT\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 225,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\":\"STATED\",\"hop2\":\"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 226,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 227,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 228,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 229,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 230,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 231,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 232,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 233,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 234,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 235,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 236,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 237,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 238,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 239,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 240,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 241,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 242,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 243,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 244,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 245,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 246,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 247,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 248,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 249,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 250,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 251,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 252,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 253,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 254,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 255,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 256,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 257,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 258,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 259,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 260,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 261,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 262,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 263,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 264,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 265,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 266,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 267,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 268,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 269,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 270,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 271,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 272,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 273,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 274,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 275,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 276,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 277,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 278,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 279,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 280,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 281,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 282,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 283,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 284,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 285,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 286,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 287,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 288,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 289,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 290,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 291,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "STATED"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"STATED\"}",
+     "err": ""
+    },
+    {
+     "i": 292,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 293,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 294,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 295,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 297,
+     "verdict": null,
+     "provider": "StreamLake",
+     "raw": "",
+     "err": "PARSE"
+    },
+    {
+     "i": 298,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    },
+    {
+     "i": 299,
+     "verdict": {
+      "hop1": "STATED",
+      "hop2": "ABSENT"
+     },
+     "provider": "StreamLake",
+     "raw": "{\"hop1\": \"STATED\", \"hop2\": \"ABSENT\"}",
+     "err": ""
+    }
+   ]
+  }
+ },
+ "usd_total": 1.3999887078000002,
+ "usd_account": 1.3703148799999951
+}

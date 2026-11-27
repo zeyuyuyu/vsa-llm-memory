@@ -1,0 +1,145 @@
+{
+ "_about": "Fig. 2a: BABILong QA1-5 mean at 128k tokens against parameter count. Accuracy is read from babilong_leaderboard_v0_results.csv (task 'avg') by make_figures.py; sizes and their sources are listed here. Models whose size is not public are drawn in a separate column.",
+ "length": "128k",
+ "models": [
+  {
+   "row": "~ ARMT (137M) fine-tune",
+   "label": "ARMT",
+   "params_b": 0.145,
+   "params_source": "ARMT paper (arXiv 2407.04841) Table 1 'ARMT (145M)'; the leaderboard row says 137M",
+   "fine_tuned_on_babilong": true
+  },
+  {
+   "row": "~ Mamba (130M) fine-tune",
+   "label": "Mamba",
+   "params_b": 0.13,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": true
+  },
+  {
+   "row": "~ RMT (137M) fine-tune",
+   "label": "RMT",
+   "params_b": 0.137,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": true
+  },
+  {
+   "row": "Meta-Llama-3.1-70B-Instruct",
+   "label": "Llama-3.1-70B",
+   "params_b": 70,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "Llama3-ChatQA-1.5-8B + RAG",
+   "label": "ChatQA-1.5-8B + RAG",
+   "params_b": 8,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "Meta-Llama-3.1-8B-Instruct",
+   "label": "Llama-3.1-8B",
+   "params_b": 8,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "c4ai-command-r-v01",
+   "label": "Command R",
+   "params_b": 35,
+   "params_source": "model card (35B)",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "ai21labs/Jamba-v0.1",
+   "label": "Jamba",
+   "params_b": 52,
+   "params_source": "model card (52B total, 12B active)",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "Phi-3-medium-128k-instruct",
+   "label": "Phi-3-medium",
+   "params_b": 14,
+   "params_source": "model card (14B)",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "01-ai/Yi-9B-200k",
+   "label": "Yi-9B-200k",
+   "params_b": 9,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "activation-beacon-mistral-7b",
+   "label": "Activation Beacon (Mistral-7B)",
+   "params_b": 7,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "chatglm3-6b-128k",
+   "label": "ChatGLM3-6B",
+   "params_b": 6,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "Yarn-Mistral-7b-128k",
+   "label": "YaRN-Mistral-7B",
+   "params_b": 7,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "Phi-3-mini-128k-instruct",
+   "label": "Phi-3-mini",
+   "params_b": 3.8,
+   "params_source": "model card (3.8B)",
+   "fine_tuned_on_babilong": false
+  },
+  {
+   "row": "activation-beacon-llama2-7b-chat",
+   "label": "Activation Beacon (Llama-2-7B)",
+   "params_b": 7,
+   "params_source": "model name",
+   "fine_tuned_on_babilong": false
+  }
+ ],
+ "undisclosed": [
+  {
+   "row": "gpt-4-0125-preview",
+   "label": "GPT-4",
+   "source": "leaderboard"
+  },
+  {
+   "series": "gpt61sol",
+   "label": "GPT-6.1 Sol",
+   "source": "babilong.json (our runs, 25 questions per task)"
+  },
+  {
+   "series": "opus55",
+   "label": "Claude Opus 5.5",
+   "source": "babilong.json (our runs, 25 questions per task)"
+  }
+ ],
+ "longest": {
+  "_about": "Fig. 2b: systems with results at 1M and 10M tokens",
+  "rows": [
+   {
+    "label": "ARMT (145M, fine-tuned)",
+    "row": "~ ARMT (137M) fine-tune"
+   },
+   {
+    "label": "RMT (137M, fine-tuned)",
+    "row": "~ RMT (137M) fine-tune"
+   },
+   {
+    "label": "ChatQA-1.5-8B + RAG",
+    "row": "Llama3-ChatQA-1.5-8B + RAG"
+   }
+  ]
+ }
+}

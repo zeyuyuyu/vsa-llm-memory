@@ -1,0 +1,14 @@
+- xmachine bge devm m1 center:sgn (box vs local): 18 / 18 stores, 3024 configuration accuracies, 105 differ, max |difference| 1.80e-02
+- xmachine b46 decm m1 dev M256 V2 (box vs local): 1139040 predictions, 44 differ, in 12 of 630 configurations
+- xmachine test (registered map, B53 bge VSA test re-run on the box with B53's committed choice, compute note 2): 258342 predictions, 8 differ, in 1 of 56 (bpf, accounting, M, V) configurations; R1 (ideal) VSA point box minus local +0.000 points (cells 12; per-cell max |change| 0.000)
+- reuse: 20 reused B58 test evaluations recomputed by b58_store.evaluate: 20 identical (failed-key lists and censoring)
+- U identity: 20 B38 V-last test evaluations recomputed by b38_eq.run_job (the T1 code path): 20 identical failed-key lists
+- score: 4032 cell accuracies re-scored by plain loops; max |difference| 0.00e+00; per-map R1 points (both accountings, VSAS / VSA x 4 comparisons) max |difference| 2.78e-17
+- bits: 48300 (store, cell, arm, map) configurations of the B59 map arms; over budget 0; store not maximal under the cap 0
+- boot b46 VSAS-LAM: loop two-level 95% [-2.70, -0.43] vs run [-2.62, -0.43]; max |end difference| 0.08 points
+- boot b46 VSAS-BEST: loop two-level 95% [-4.08, -2.18] vs run [-4.08, -2.10]; max |end difference| 0.08 points
+- boot bge VSAS-LAM: loop two-level 95% [-1.88, -0.19] vs run [-1.85, -0.21]; max |end difference| 0.03 points
+- boot bge VSAS-BEST: loop two-level 95% [-4.10, -2.63] vs run [-4.05, -2.61]; max |end difference| 0.05 points
+- N* second rule (families U / P-BCH / P-LDPC and P-best, 7 conditions): 28 recomputed, 0 mismatches
+- part 2 second scorer by plain loops (b58_check.scorer on B59 T2 / T6 cells; full decode, no shard cache): 10 cells, 0 differing failed-key lists
+- part 2 bits (b58_check.bits on every B59 coded test evaluation): 16642 evaluations, cells over budget 0, information bits over floor(b n) 0, budget used min 1.000 median 1.000

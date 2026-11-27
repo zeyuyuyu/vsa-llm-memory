@@ -1,0 +1,333 @@
+# B66 part (B) verdict: LSfc = least squares with LAMc's corrected options (B60) on the STORE's own features.
+# STORE = B53's final design (Hebbian write, matched filter); LSFR = LSfc on the store's random map of the cell
+# (B53's chosen prep / fmap); LSFP = LSfc on the store's principal map (VSAPc's chosen prep / pfmap, corrected
+# basis); LSFX = per cell the dev-best of LSFR / LSFP (ties LSFR); LAMC = B60's corrected least squares on its
+# own dev-chosen features; VSAPC = B60's store on the corrected principal basis (B57 / B56 read rules).
+# Accuracy points over R1 (V 2 / 16 x 4, 8, 16 bits per fact x M 256 / 1,024); 95% cluster bootstrap (entity
+# within store, resampled within each cell; b36_verdict.boot_region); ideal 10,000 draws, real 2,000.
+# Label (B60's rule): "X leads" iff lower > 0 (first arm) / upper < 0 (second arm); else "level".
+
+## STORE - LSFR (ideal)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  -2.14 [ -2.74,  -1.53] | LSFR leads |  -0.87 [ -1.74,  -0.02] | LSFR leads |  -1.50 [ -2.03,  -0.99] | LSFR leads |
+| Granite-3.3-8B |  -1.03 [ -1.39,  -0.68] | LSFR leads |  -2.72 [ -3.61,  -1.78] | LSFR leads |  -1.87 [ -2.37,  -1.38] | LSFR leads |
+| Llama-3.1-8B |  -2.83 [ -3.72,  -1.92] | LSFR leads |  -0.53 [ -1.38,  +0.31] | level |  -1.68 [ -2.29,  -1.07] | LSFR leads |
+| Mistral-7B |  -1.66 [ -2.46,  -0.86] | LSFR leads |  -1.31 [ -2.47,  -0.20] | LSFR leads |  -1.49 [ -2.18,  -0.80] | LSFR leads |
+| e5-base-v2 |  -0.96 [ -1.39,  -0.56] | LSFR leads |  -2.46 [ -3.46,  -1.50] | LSFR leads |  -1.71 [ -2.25,  -1.19] | LSFR leads |
+| bge-small |  -1.64 [ -2.25,  -1.06] | LSFR leads |  -2.87 [ -3.75,  -2.02] | LSFR leads |  -2.26 [ -2.79,  -1.74] | LSFR leads |
+| MiniLM-L6 |  -0.77 [ -1.43,  -0.14] | LSFR leads |  -2.98 [ -3.82,  -2.13] | LSFR leads |  -1.88 [ -2.42,  -1.35] | LSFR leads |
+  R1-V2   LLM     : STORE leads 0, level 0, LSFR leads 4 (of 4)
+  R1-V2   sentence: STORE leads 0, level 0, LSFR leads 3 (of 3)
+  R1-V16  LLM     : STORE leads 0, level 1, LSFR leads 3 (of 4)
+  R1-V16  sentence: STORE leads 0, level 0, LSFR leads 3 (of 3)
+  R1      LLM     : STORE leads 0, level 0, LSFR leads 4 (of 4)
+  R1      sentence: STORE leads 0, level 0, LSFR leads 3 (of 3)
+
+## LSFR - LAMC (ideal)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  -1.80 [ -2.63,  -0.98] | LAMC leads |  -3.31 [ -4.29,  -2.35] | LAMC leads |  -2.55 [ -3.20,  -1.91] | LAMC leads |
+| Granite-3.3-8B |  -3.06 [ -3.96,  -2.16] | LAMC leads |  -4.29 [ -5.35,  -3.24] | LAMC leads |  -3.68 [ -4.38,  -2.98] | LAMC leads |
+| Llama-3.1-8B |  -1.57 [ -2.56,  -0.60] | LAMC leads |  -6.19 [ -7.35,  -5.05] | LAMC leads |  -3.88 [ -4.65,  -3.13] | LAMC leads |
+| Mistral-7B |  -3.81 [ -4.67,  -2.92] | LAMC leads |  -3.69 [ -5.01,  -2.39] | LAMC leads |  -3.75 [ -4.55,  -2.96] | LAMC leads |
+| e5-base-v2 |  -2.01 [ -2.78,  -1.25] | LAMC leads |  -7.64 [ -8.62,  -6.65] | LAMC leads |  -4.82 [ -5.45,  -4.19] | LAMC leads |
+| bge-small |  +0.59 [ -0.24,  +1.42] | level |  -4.42 [ -5.34,  -3.47] | LAMC leads |  -1.92 [ -2.54,  -1.30] | LAMC leads |
+| MiniLM-L6 |  +0.58 [ -0.49,  +1.64] | level |  -5.43 [ -6.35,  -4.49] | LAMC leads |  -2.43 [ -3.12,  -1.72] | LAMC leads |
+  R1-V2   LLM     : LSFR leads 0, level 0, LAMC leads 4 (of 4)
+  R1-V2   sentence: LSFR leads 0, level 2, LAMC leads 1 (of 3)
+  R1-V16  LLM     : LSFR leads 0, level 0, LAMC leads 4 (of 4)
+  R1-V16  sentence: LSFR leads 0, level 0, LAMC leads 3 (of 3)
+  R1      LLM     : LSFR leads 0, level 0, LAMC leads 4 (of 4)
+  R1      sentence: LSFR leads 0, level 0, LAMC leads 3 (of 3)
+
+## VSAPC - LSFP (ideal)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  -1.03 [ -1.53,  -0.53] | LSFP leads |  -6.99 [ -8.03,  -5.93] | LSFP leads |  -4.01 [ -4.59,  -3.42] | LSFP leads |
+| Granite-3.3-8B |  -1.27 [ -1.91,  -0.63] | LSFP leads | -10.14 [-11.36,  -8.96] | LSFP leads |  -5.71 [ -6.39,  -5.04] | LSFP leads |
+| Llama-3.1-8B |  -2.12 [ -2.89,  -1.34] | LSFP leads |  -9.09 [-10.20,  -7.97] | LSFP leads |  -5.61 [ -6.29,  -4.92] | LSFP leads |
+| Mistral-7B |  -2.03 [ -2.78,  -1.30] | LSFP leads |  -9.14 [-10.63,  -7.72] | LSFP leads |  -5.59 [ -6.40,  -4.77] | LSFP leads |
+| e5-base-v2 |  -1.13 [ -1.54,  -0.73] | LSFP leads | -20.59 [-21.68, -19.45] | LSFP leads | -10.86 [-11.45, -10.27] | LSFP leads |
+| bge-small |  -2.28 [ -2.85,  -1.70] | LSFP leads | -20.09 [-21.13, -19.06] | LSFP leads | -11.19 [-11.76, -10.61] | LSFP leads |
+| MiniLM-L6 |  -1.34 [ -1.98,  -0.69] | LSFP leads | -17.27 [-18.19, -16.34] | LSFP leads |  -9.30 [ -9.88,  -8.74] | LSFP leads |
+  R1-V2   LLM     : VSAPC leads 0, level 0, LSFP leads 4 (of 4)
+  R1-V2   sentence: VSAPC leads 0, level 0, LSFP leads 3 (of 3)
+  R1-V16  LLM     : VSAPC leads 0, level 0, LSFP leads 4 (of 4)
+  R1-V16  sentence: VSAPC leads 0, level 0, LSFP leads 3 (of 3)
+  R1      LLM     : VSAPC leads 0, level 0, LSFP leads 4 (of 4)
+  R1      sentence: VSAPC leads 0, level 0, LSFP leads 3 (of 3)
+
+## LSFP - LAMC (ideal)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| Granite-3.3-8B |  +0.00 [ +0.00,  +0.00] | level |  -0.20 [ -0.61,  +0.24] | level |  -0.10 [ -0.31,  +0.12] | level |
+| Llama-3.1-8B |  -0.09 [ -0.63,  +0.43] | level |  +0.00 [ +0.00,  +0.00] | level |  -0.05 [ -0.32,  +0.22] | level |
+| Mistral-7B |  +0.00 [ -0.01,  +0.01] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ -0.01,  +0.01] | level |
+| e5-base-v2 |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| bge-small |  +0.53 [ -0.08,  +1.16] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.27 [ -0.05,  +0.58] | level |
+| MiniLM-L6 |  +1.53 [ +1.02,  +2.05] | LSFP leads |  -3.84 [ -4.45,  -3.26] | LAMC leads |  -1.15 [ -1.55,  -0.76] | LAMC leads |
+  R1-V2   LLM     : LSFP leads 0, level 4, LAMC leads 0 (of 4)
+  R1-V2   sentence: LSFP leads 1, level 2, LAMC leads 0 (of 3)
+  R1-V16  LLM     : LSFP leads 0, level 4, LAMC leads 0 (of 4)
+  R1-V16  sentence: LSFP leads 0, level 2, LAMC leads 1 (of 3)
+  R1      LLM     : LSFP leads 0, level 4, LAMC leads 0 (of 4)
+  R1      sentence: LSFP leads 0, level 2, LAMC leads 1 (of 3)
+
+## STORE - LSFX (ideal)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  -3.94 [ -4.80,  -3.12] | LSFX leads |  -4.17 [ -5.24,  -3.14] | LSFX leads |  -4.06 [ -4.75,  -3.38] | LSFX leads |
+| Granite-3.3-8B |  -4.09 [ -5.04,  -3.17] | LSFX leads |  -6.80 [ -7.84,  -5.74] | LSFX leads |  -5.45 [ -6.15,  -4.75] | LSFX leads |
+| Llama-3.1-8B |  -4.31 [ -5.41,  -3.22] | LSFX leads |  -6.72 [ -7.94,  -5.50] | LSFX leads |  -5.52 [ -6.34,  -4.71] | LSFX leads |
+| Mistral-7B |  -5.47 [ -6.47,  -4.49] | LSFX leads |  -5.00 [ -6.22,  -3.77] | LSFX leads |  -5.23 [ -6.03,  -4.46] | LSFX leads |
+| e5-base-v2 |  -2.97 [ -3.75,  -2.22] | LSFX leads | -10.10 [-11.17,  -9.03] | LSFX leads |  -6.53 [ -7.20,  -5.88] | LSFX leads |
+| bge-small |  -2.57 [ -3.25,  -1.89] | LSFX leads |  -7.30 [ -8.26,  -6.34] | LSFX leads |  -4.94 [ -5.52,  -4.36] | LSFX leads |
+| MiniLM-L6 |  -1.66 [ -2.30,  -1.03] | LSFX leads |  -7.03 [ -7.92,  -6.17] | LSFX leads |  -4.35 [ -4.88,  -3.81] | LSFX leads |
+  R1-V2   LLM     : STORE leads 0, level 0, LSFX leads 4 (of 4)
+  R1-V2   sentence: STORE leads 0, level 0, LSFX leads 3 (of 3)
+  R1-V16  LLM     : STORE leads 0, level 0, LSFX leads 4 (of 4)
+  R1-V16  sentence: STORE leads 0, level 0, LSFX leads 3 (of 3)
+  R1      LLM     : STORE leads 0, level 0, LSFX leads 4 (of 4)
+  R1      sentence: STORE leads 0, level 0, LSFX leads 3 (of 3)
+
+## LSFX - LAMC (ideal)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| Granite-3.3-8B |  +0.00 [ +0.00,  +0.00] | level |  -0.20 [ -0.62,  +0.25] | level |  -0.10 [ -0.31,  +0.12] | level |
+| Llama-3.1-8B |  -0.09 [ -0.64,  +0.41] | level |  +0.00 [ +0.00,  +0.00] | level |  -0.05 [ -0.32,  +0.21] | level |
+| Mistral-7B |  +0.00 [ -0.01,  +0.01] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ -0.01,  +0.01] | level |
+| e5-base-v2 |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| bge-small |  +1.52 [ +0.71,  +2.34] | LSFX leads |  +0.00 [ +0.00,  +0.00] | level |  +0.76 [ +0.34,  +1.17] | LSFX leads |
+| MiniLM-L6 |  +1.47 [ +0.48,  +2.45] | LSFX leads |  -1.37 [ -1.90,  -0.83] | LAMC leads |  +0.05 [ -0.52,  +0.61] | level |
+  R1-V2   LLM     : LSFX leads 0, level 4, LAMC leads 0 (of 4)
+  R1-V2   sentence: LSFX leads 2, level 1, LAMC leads 0 (of 3)
+  R1-V16  LLM     : LSFX leads 0, level 4, LAMC leads 0 (of 4)
+  R1-V16  sentence: LSFX leads 0, level 2, LAMC leads 1 (of 3)
+  R1      LLM     : LSFX leads 0, level 4, LAMC leads 0 (of 4)
+  R1      sentence: LSFX leads 1, level 2, LAMC leads 0 (of 3)
+
+## STORE - LSFR (real)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  -2.01 [ -2.64,  -1.36] | LSFR leads |  -1.23 [ -2.14,  -0.32] | LSFR leads |  -1.62 [ -2.15,  -1.11] | LSFR leads |
+| Granite-3.3-8B |  -0.77 [ -1.28,  -0.25] | LSFR leads |  -2.72 [ -3.62,  -1.76] | LSFR leads |  -1.74 [ -2.26,  -1.20] | LSFR leads |
+| Llama-3.1-8B |  -2.75 [ -3.60,  -1.84] | LSFR leads |  +0.10 [ -0.72,  +0.89] | level |  -1.32 [ -1.91,  -0.74] | LSFR leads |
+| Mistral-7B |  -1.70 [ -2.48,  -0.93] | LSFR leads |  -1.31 [ -2.52,  -0.22] | LSFR leads |  -1.50 [ -2.22,  -0.83] | LSFR leads |
+| e5-base-v2 |  -1.05 [ -1.54,  -0.54] | LSFR leads |  -2.46 [ -3.43,  -1.47] | LSFR leads |  -1.75 [ -2.31,  -1.20] | LSFR leads |
+| bge-small |  -1.23 [ -1.79,  -0.67] | LSFR leads |  -2.34 [ -3.26,  -1.46] | LSFR leads |  -1.78 [ -2.29,  -1.26] | LSFR leads |
+| MiniLM-L6 |  -0.74 [ -1.37,  -0.11] | LSFR leads |  -2.94 [ -3.81,  -2.09] | LSFR leads |  -1.84 [ -2.37,  -1.30] | LSFR leads |
+  R1-V2   LLM     : STORE leads 0, level 0, LSFR leads 4 (of 4)
+  R1-V2   sentence: STORE leads 0, level 0, LSFR leads 3 (of 3)
+  R1-V16  LLM     : STORE leads 0, level 1, LSFR leads 3 (of 4)
+  R1-V16  sentence: STORE leads 0, level 0, LSFR leads 3 (of 3)
+  R1      LLM     : STORE leads 0, level 0, LSFR leads 4 (of 4)
+  R1      sentence: STORE leads 0, level 0, LSFR leads 3 (of 3)
+
+## LSFR - LAMC (real)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  -1.96 [ -2.79,  -1.12] | LAMC leads |  -2.95 [ -3.93,  -1.99] | LAMC leads |  -2.46 [ -3.09,  -1.82] | LAMC leads |
+| Granite-3.3-8B |  -2.93 [ -3.87,  -1.99] | LAMC leads |  -4.69 [ -5.70,  -3.71] | LAMC leads |  -3.81 [ -4.54,  -3.11] | LAMC leads |
+| Llama-3.1-8B |  -0.99 [ -1.96,  +0.00] | level |  -6.82 [ -8.03,  -5.66] | LAMC leads |  -3.91 [ -4.65,  -3.17] | LAMC leads |
+| Mistral-7B |  -3.86 [ -4.77,  -3.00] | LAMC leads |  -3.86 [ -5.17,  -2.60] | LAMC leads |  -3.86 [ -4.63,  -3.05] | LAMC leads |
+| e5-base-v2 |  -1.89 [ -2.67,  -1.13] | LAMC leads |  -7.19 [ -8.13,  -6.19] | LAMC leads |  -4.54 [ -5.16,  -3.88] | LAMC leads |
+| bge-small |  +0.26 [ -0.58,  +1.07] | level |  -5.03 [ -5.94,  -4.12] | LAMC leads |  -2.38 [ -3.00,  -1.74] | LAMC leads |
+| MiniLM-L6 |  +0.33 [ -0.71,  +1.39] | level |  -5.47 [ -6.37,  -4.52] | LAMC leads |  -2.57 [ -3.27,  -1.85] | LAMC leads |
+  R1-V2   LLM     : LSFR leads 0, level 1, LAMC leads 3 (of 4)
+  R1-V2   sentence: LSFR leads 0, level 2, LAMC leads 1 (of 3)
+  R1-V16  LLM     : LSFR leads 0, level 0, LAMC leads 4 (of 4)
+  R1-V16  sentence: LSFR leads 0, level 0, LAMC leads 3 (of 3)
+  R1      LLM     : LSFR leads 0, level 0, LAMC leads 4 (of 4)
+  R1      sentence: LSFR leads 0, level 0, LAMC leads 3 (of 3)
+
+## VSAPC - LSFP (real)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  -1.33 [ -1.80,  -0.86] | LSFP leads |  -6.92 [ -8.07,  -5.92] | LSFP leads |  -4.12 [ -4.70,  -3.54] | LSFP leads |
+| Granite-3.3-8B |  -1.78 [ -2.29,  -1.26] | LSFP leads |  -9.51 [-10.58,  -8.41] | LSFP leads |  -5.64 [ -6.28,  -5.04] | LSFP leads |
+| Llama-3.1-8B |  -1.39 [ -2.07,  -0.67] | LSFP leads |  -9.41 [-10.53,  -8.29] | LSFP leads |  -5.40 [ -6.01,  -4.78] | LSFP leads |
+| Mistral-7B |  -2.29 [ -3.10,  -1.55] | LSFP leads |  -9.46 [-10.90,  -8.02] | LSFP leads |  -5.88 [ -6.70,  -5.09] | LSFP leads |
+| e5-base-v2 |  -1.02 [ -1.47,  -0.59] | LSFP leads | -20.19 [-21.26, -19.09] | LSFP leads | -10.61 [-11.16,  -9.99] | LSFP leads |
+| bge-small |  -2.28 [ -2.84,  -1.72] | LSFP leads | -20.02 [-21.05, -19.02] | LSFP leads | -11.15 [-11.74, -10.58] | LSFP leads |
+| MiniLM-L6 |  -0.71 [ -1.35,  -0.03] | LSFP leads | -17.80 [-18.73, -16.91] | LSFP leads |  -9.25 [ -9.84,  -8.71] | LSFP leads |
+  R1-V2   LLM     : VSAPC leads 0, level 0, LSFP leads 4 (of 4)
+  R1-V2   sentence: VSAPC leads 0, level 0, LSFP leads 3 (of 3)
+  R1-V16  LLM     : VSAPC leads 0, level 0, LSFP leads 4 (of 4)
+  R1-V16  sentence: VSAPC leads 0, level 0, LSFP leads 3 (of 3)
+  R1      LLM     : VSAPC leads 0, level 0, LSFP leads 4 (of 4)
+  R1      sentence: VSAPC leads 0, level 0, LSFP leads 3 (of 3)
+
+## LSFP - LAMC (real)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| Granite-3.3-8B |  +0.00 [ +0.00,  +0.00] | level |  -0.68 [ -1.09,  -0.30] | LAMC leads |  -0.34 [ -0.54,  -0.13] | LAMC leads |
+| Llama-3.1-8B |  +0.28 [ -0.23,  +0.78] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.14 [ -0.10,  +0.39] | level |
+| Mistral-7B |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| e5-base-v2 |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| bge-small |  +0.59 [ -0.02,  +1.18] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.30 [ -0.02,  +0.61] | level |
+| MiniLM-L6 |  +0.53 [ +0.08,  +0.98] | LSFP leads |  -3.58 [ -4.16,  -3.03] | LAMC leads |  -1.52 [ -1.90,  -1.17] | LAMC leads |
+  R1-V2   LLM     : LSFP leads 0, level 4, LAMC leads 0 (of 4)
+  R1-V2   sentence: LSFP leads 1, level 2, LAMC leads 0 (of 3)
+  R1-V16  LLM     : LSFP leads 0, level 3, LAMC leads 1 (of 4)
+  R1-V16  sentence: LSFP leads 0, level 2, LAMC leads 1 (of 3)
+  R1      LLM     : LSFP leads 0, level 3, LAMC leads 1 (of 4)
+  R1      sentence: LSFP leads 0, level 2, LAMC leads 1 (of 3)
+
+## STORE - LSFX (real)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  -3.97 [ -4.80,  -3.16] | LSFX leads |  -4.17 [ -5.23,  -3.10] | LSFX leads |  -4.07 [ -4.77,  -3.41] | LSFX leads |
+| Granite-3.3-8B |  -3.70 [ -4.63,  -2.76] | LSFX leads |  -6.73 [ -7.75,  -5.66] | LSFX leads |  -5.22 [ -5.92,  -4.55] | LSFX leads |
+| Llama-3.1-8B |  -4.02 [ -5.16,  -2.93] | LSFX leads |  -6.72 [ -7.92,  -5.56] | LSFX leads |  -5.37 [ -6.21,  -4.57] | LSFX leads |
+| Mistral-7B |  -5.56 [ -6.60,  -4.55] | LSFX leads |  -5.17 [ -6.38,  -3.96] | LSFX leads |  -5.37 [ -6.16,  -4.56] | LSFX leads |
+| e5-base-v2 |  -2.93 [ -3.72,  -2.09] | LSFX leads |  -9.65 [-10.77,  -8.59] | LSFX leads |  -6.29 [ -6.99,  -5.61] | LSFX leads |
+| bge-small |  -2.73 [ -3.45,  -2.01] | LSFX leads |  -7.37 [ -8.30,  -6.39] | LSFX leads |  -5.05 [ -5.62,  -4.46] | LSFX leads |
+| MiniLM-L6 |  -0.88 [ -1.53,  -0.18] | LSFX leads |  -7.03 [ -7.89,  -6.23] | LSFX leads |  -3.96 [ -4.52,  -3.41] | LSFX leads |
+  R1-V2   LLM     : STORE leads 0, level 0, LSFX leads 4 (of 4)
+  R1-V2   sentence: STORE leads 0, level 0, LSFX leads 3 (of 3)
+  R1-V16  LLM     : STORE leads 0, level 0, LSFX leads 4 (of 4)
+  R1-V16  sentence: STORE leads 0, level 0, LSFX leads 3 (of 3)
+  R1      LLM     : STORE leads 0, level 0, LSFX leads 4 (of 4)
+  R1      sentence: STORE leads 0, level 0, LSFX leads 3 (of 3)
+
+## LSFX - LAMC (real)
+| encoder | R1-V2 | label | R1-V16 | label | R1 | label |
+| --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| Granite-3.3-8B |  +0.00 [ +0.00,  +0.00] | level |  -0.68 [ -1.07,  -0.27] | LAMC leads |  -0.34 [ -0.53,  -0.15] | LAMC leads |
+| Llama-3.1-8B |  +0.28 [ -0.22,  +0.77] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.14 [ -0.11,  +0.38] | level |
+| Mistral-7B |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| e5-base-v2 |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |  +0.00 [ +0.00,  +0.00] | level |
+| bge-small |  +1.76 [ +0.96,  +2.57] | LSFX leads |  +0.00 [ +0.00,  +0.00] | level |  +0.88 [ +0.48,  +1.28] | LSFX leads |
+| MiniLM-L6 |  +0.47 [ -0.49,  +1.41] | level |  -1.37 [ -1.91,  -0.86] | LAMC leads |  -0.45 [ -0.98,  +0.10] | level |
+  R1-V2   LLM     : LSFX leads 0, level 4, LAMC leads 0 (of 4)
+  R1-V2   sentence: LSFX leads 1, level 2, LAMC leads 0 (of 3)
+  R1-V16  LLM     : LSFX leads 0, level 3, LAMC leads 1 (of 4)
+  R1-V16  sentence: LSFX leads 0, level 2, LAMC leads 1 (of 3)
+  R1      LLM     : LSFX leads 0, level 3, LAMC leads 1 (of 4)
+  R1      sentence: LSFX leads 1, level 2, LAMC leads 0 (of 3)
+
+## Per-cell test accuracy (ideal), points: STORE / LSFR / LSFP / LSFX / LAMC / VSAPC / VSAPCX
+  Qwen3-8B
+    M=  256 V=  2 b=  4:  69.5 /  71.2 /  73.6 /  73.6 /  73.6 /  72.1 /  72.1   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 1] p=992; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 1] p=992; LSFX=LSFP
+    M=  256 V=  2 b=  8:  73.5 /  75.6 /  76.4 /  76.4 /  76.4 /  76.4 /  76.4   LSFR ['whiten', 'lin', 'col', 'V-1', 0.0001, 1] p=2016; LSFP ['whiten', 'plin', 'col', 'V-1', 100.0, 1] p=2016; LSFX=LSFP
+    M=  256 V=  2 b= 16:  77.3 /  77.8 /  79.0 /  79.0 /  79.0 /  79.3 /  79.3   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 1] p=4064; LSFX=LSFP
+    M=  256 V= 16 b=  4:  18.0 /  16.6 /  22.6 /  22.6 /  22.6 /  20.4 /  20.4   LSFR ['whiten', 'lin', 'flat', 'V-1', 10.0, 2] p=34; LSFP ['whiten', 'plin', 'flat', 'V', 100.0, 1] p=62; LSFX=LSFP
+    M=  256 V= 16 b=  8:  22.7 /  27.8 /  33.7 /  33.7 /  33.7 /  26.7 /  26.7   LSFR ['center', 'lin', 'flat', 'V', 1.0, 1] p=126; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=126; LSFX=LSFP
+    M=  256 V= 16 b= 16:  36.3 /  38.6 /  44.3 /  44.3 /  44.3 /  36.7 /  36.7   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 1.0, 1] p=254; LSFX=LSFP
+    M= 1024 V=  2 b=  4:  66.4 /  68.9 /  71.6 /  71.6 /  71.6 /  71.1 /  71.1   LSFR ['whiten', 'lin', 'col', 'V-1', 1.0, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 1] p=4064; LSFX=LSFP
+    M= 1024 V=  2 b=  8:  68.5 /  71.9 /  73.9 /  73.9 /  73.9 /  72.0 /  72.0   LSFR ['whiten', 'lin', 'col', 'V-1', 1.0, 1] p=8160; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 2] p=4096; LSFX=LSFP
+    M= 1024 V=  2 b= 16:  70.2 /  73.0 /  74.5 /  74.5 /  74.5 /  72.0 /  72.0   LSFR ['whiten', 'lin', 'col', 'V-1', 1.0, 2] p=8572; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 4] p=4096; LSFX=LSFP
+    M= 1024 V= 16 b=  4:  19.8 /  18.8 /  17.6 /  17.6 /  17.6 /  16.8 /  19.8   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 0.0001, 1] p=254; LSFX=LSFP
+    M= 1024 V= 16 b=  8:  27.3 /  26.4 /  28.6 /  28.6 /  28.6 /  21.0 /  27.7   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=510; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=510; LSFX=LSFP
+    M= 1024 V= 16 b= 16:  36.2 /  37.2 /  38.5 /  38.5 /  38.5 /  21.8 /  36.0   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=1020; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=1020; LSFX=LSFP
+  Granite-3.3-8B
+    M=  256 V=  2 b=  4:  68.8 /  68.9 /  71.3 /  71.3 /  71.3 /  71.8 /  71.8   LSFR ['whiten', 'lin', 'col', 'V-1', 100.0, 1] p=992; LSFP ['whiten', 'plin', 'col', 'V-1', 0.0001, 1] p=992; LSFX=LSFP
+    M=  256 V=  2 b=  8:  72.0 /  72.2 /  78.1 /  78.1 /  78.1 /  75.0 /  75.0   LSFR ['whiten', 'lin', 'col', 'V-1', 100.0, 1] p=2016; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=1058; LSFX=LSFP
+    M=  256 V=  2 b= 16:  75.6 /  75.7 /  77.6 /  77.6 /  77.6 /  78.3 /  78.3   LSFR ['whiten', 'lin', 'col', 'V-1', 10.0, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 4] p=1128; LSFX=LSFP
+    M=  256 V= 16 b=  4:  19.7 /  21.7 /  25.9 /  25.9 /  25.9 /  22.5 /  22.5   LSFR ['center', 'lin', 'flat', 'V', 1.0, 1] p=62; LSFP ['whiten', 'plin', 'flat', 'V', 1.0, 1] p=62; LSFX=LSFP
+    M=  256 V= 16 b=  8:  26.3 /  29.1 /  36.1 /  36.1 /  36.1 /  25.7 /  27.7   LSFR ['center', 'lin', 'flat', 'V', 1.0, 1] p=126; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=126; LSFX=LSFP
+    M=  256 V= 16 b= 16:  33.2 /  42.8 /  48.2 /  48.2 /  48.2 /  33.7 /  37.9   LSFR ['center', 'lin', 'flat', 'V', 1.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 1.0, 1] p=254; LSFX=LSFP
+    M= 1024 V=  2 b=  4:  64.7 /  65.2 /  69.4 /  69.4 /  69.4 /  66.4 /  66.4   LSFR ['whiten', 'lin', 'col', 'V-1', 10.0, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 1] p=4064; LSFX=LSFP
+    M= 1024 V=  2 b=  8:  66.6 /  69.6 /  71.8 /  71.8 /  71.8 /  70.6 /  70.6   LSFR ['whiten', 'lin', 'col', 'V-1', 1.0, 1] p=8160; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=4096; LSFX=LSFP
+    M= 1024 V=  2 b= 16:  67.8 /  70.1 /  71.8 /  71.8 /  71.8 /  70.4 /  70.4   LSFR ['whiten', 'lin', 'col', 'V-1', 1.0, 1] p=16320; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=4096; LSFX=LSFP
+    M= 1024 V= 16 b=  4:  19.1 /  16.9 /  17.9 /  17.9 /  19.2 /  17.7 /  17.7   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=254; LSFP ['center', 'plin', 'col', 'V-1', 10.0, 2] p=126; LSFX=LSFP
+    M= 1024 V= 16 b=  8:  24.7 /  25.6 /  26.2 /  26.2 /  26.2 /  16.6 /  24.7   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=510; LSFP ['center', 'plin', 'flat', 'V', 1.0, 1] p=510; LSFX=LSFP
+    M= 1024 V= 16 b= 16:  32.0 /  35.2 /  41.4 /  41.4 /  41.4 /  18.6 /  32.4   LSFR ['whiten', 'lin', 'col', 'V', 1.0, 1] p=992; LSFP ['whiten', 'plin', 'col', 'V', 1.0, 1] p=992; LSFX=LSFP
+  Llama-3.1-8B
+    M=  256 V=  2 b=  4:  66.4 /  72.6 /  72.9 /  72.9 /  72.9 /  66.6 /  66.6   LSFR ['center', 'lin', 'col', 'V-1', 0.1, 1] p=992; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=521; LSFX=LSFP
+    M=  256 V=  2 b=  8:  74.1 /  75.8 /  76.9 /  76.9 /  76.9 /  75.8 /  75.8   LSFR ['whiten', 'lin', 'col', 'V-1', 0.0001, 1] p=2016; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=1058; LSFX=LSFP
+    M=  256 V=  2 b= 16:  77.8 /  79.4 /  79.9 /  79.9 /  79.9 /  78.1 /  78.1   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=2134; LSFX=LSFP
+    M=  256 V= 16 b=  4:  18.6 /  18.5 /  26.0 /  26.0 /  26.0 /  21.8 /  21.8   LSFR ['whiten', 'lin', 'flat', 'V', 100.0, 1] p=62; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=62; LSFX=LSFP
+    M=  256 V= 16 b=  8:  26.3 /  26.9 /  36.6 /  36.6 /  36.6 /  29.9 /  29.9   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=126; LSFP ['whiten', 'plin', 'flat', 'V', 1.0, 1] p=126; LSFX=LSFP
+    M=  256 V= 16 b= 16:  38.5 /  38.0 /  49.3 /  49.3 /  49.3 /  39.3 /  39.3   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 1.0, 1] p=254; LSFX=LSFP
+    M= 1024 V=  2 b=  4:  66.4 /  68.7 /  71.4 /  71.4 /  71.4 /  71.3 /  71.3   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 2] p=2134; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 2] p=2134; LSFX=LSFP
+    M= 1024 V=  2 b=  8:  68.5 /  71.4 /  73.6 /  73.6 /  73.9 /  72.5 /  72.5   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 2] p=4286; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 2] p=4096; LSFX=LSFP
+    M= 1024 V=  2 b= 16:  70.6 /  72.6 /  74.9 /  74.9 /  75.1 /  72.5 /  71.8   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 1] p=16320; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 4] p=4096; LSFX=LSFP
+    M= 1024 V= 16 b=  4:  19.3 /  18.8 /  22.0 /  22.0 /  22.0 /  16.3 /  17.7   LSFR ['whiten', 'lin', 'flat', 'V', 100.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=254; LSFX=LSFP
+    M= 1024 V= 16 b=  8:  26.3 /  26.9 /  31.5 /  31.5 /  31.5 /  20.8 /  26.4   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=510; LSFP ['whiten', 'plin', 'flat', 'V', 1.0, 1] p=510; LSFX=LSFP
+    M= 1024 V= 16 b= 16:  35.2 /  38.3 /  39.1 /  39.1 /  39.1 /  21.9 /  35.2   LSFR ['whiten', 'lin', 'col', 'V', 1.0, 1] p=992; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=1020; LSFX=LSFP
+  Mistral-7B
+    M=  256 V=  2 b=  4:  66.2 /  67.4 /  76.9 /  76.9 /  76.9 /  75.3 /  75.3   LSFR ['whiten', 'sgn', 'col', 'V-1', 1.0, 1] p=992; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 1] p=992; LSFX=LSFP
+    M=  256 V=  2 b=  8:  74.9 /  78.0 /  80.4 /  80.4 /  80.4 /  78.3 /  78.3   LSFR ['whiten', 'lin', 'col', 'V-1', 0.0001, 1] p=2016; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 1] p=2016; LSFX=LSFP
+    M=  256 V=  2 b= 16:  77.9 /  80.1 /  83.0 /  83.0 /  83.0 /  80.7 /  80.7   LSFR ['whiten', 'lin', 'col', 'V-1', 0.01, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 1] p=4064; LSFX=LSFP
+    M=  256 V= 16 b=  4:  21.7 /  22.1 /  24.4 /  24.4 /  24.4 /  18.2 /  18.2   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=62; LSFP ['whiten', 'plin', 'flat', 'V-1', 10.0, 1] p=66; LSFX=LSFP
+    M=  256 V= 16 b=  8:  31.6 /  34.2 /  38.7 /  38.7 /  38.7 /  30.4 /  31.6   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=126; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=126; LSFX=LSFP
+    M=  256 V= 16 b= 16:  43.9 /  45.1 /  54.1 /  54.1 /  54.1 /  42.1 /  42.1   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 1.0, 1] p=254; LSFX=LSFP
+    M= 1024 V=  2 b=  4:  69.3 /  70.9 /  74.1 /  74.1 /  74.1 /  71.4 /  71.4   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 1] p=4064; LSFX=LSFP
+    M= 1024 V=  2 b=  8:  71.8 /  72.4 /  74.9 /  74.9 /  74.9 /  73.1 /  73.1   LSFR ['whiten', 'lin', 'col', 'V-1', 0.0001, 1] p=8160; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 2] p=4096; LSFX=LSFP
+    M= 1024 V=  2 b= 16:  72.3 /  73.6 /  75.9 /  75.9 /  75.9 /  74.4 /  74.4   LSFR ['whiten', 'lin', 'col', 'V-1', 0.0001, 2] p=8572; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 4] p=4096; LSFX=LSFP
+    M= 1024 V= 16 b=  4:  20.0 /  20.8 /  18.5 /  18.5 /  18.5 /  20.1 /  20.1   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=254; LSFP ['whiten', 'plin', 'col', 'V', 1.0, 2] p=117; LSFX=LSFP
+    M= 1024 V= 16 b=  8:  28.6 /  27.9 /  31.5 /  31.5 /  31.5 /  23.2 /  28.9   LSFR ['whiten', 'lin', 'col', 'V', 10.0, 1] p=480; LSFP ['whiten', 'plin', 'col', 'V', 1.0, 1] p=480; LSFX=LSFP
+    M= 1024 V= 16 b= 16:  37.2 /  40.7 /  45.8 /  45.8 /  45.8 /  24.2 /  37.3   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=1020; LSFP ['whiten', 'plin', 'col', 'V', 1.0, 1] p=992; LSFX=LSFP
+  e5-base-v2
+    M=  256 V=  2 b=  4:  66.3 /  67.2 /  71.1 /  71.1 /  71.1 /  71.6 /  71.6   LSFR ['whiten', 'sgn', 'col', 'V-1', 1.0, 1] p=992; LSFP ['whiten', 'plin', 'col', 'V-1', 10.0, 1] p=768; LSFX=LSFP
+    M=  256 V=  2 b=  8:  67.8 /  68.4 /  75.0 /  75.0 /  75.0 /  71.6 /  71.6   LSFR ['whiten', 'sgn', 'col', 'V-1', 10.0, 2] p=1058; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=768; LSFX=LSFP
+    M=  256 V=  2 b= 16:  71.8 /  74.5 /  76.0 /  76.0 /  76.0 /  73.1 /  73.1   LSFR ['whiten', 'lin', 'col', 'V-1', 1.0, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 4] p=768; LSFX=LSFP
+    M=  256 V= 16 b=  4:  21.2 /  22.1 /  30.8 /  30.8 /  30.8 /  20.0 /  21.9   LSFR ['center', 'lin', 'flat', 'V', 10.0, 1] p=62; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=62; LSFX=LSFP
+    M=  256 V= 16 b=  8:  28.8 /  26.0 /  43.9 /  43.9 /  43.9 /  21.9 /  28.8   LSFR ['whiten', 'lin', 'flat', 'V-1', 1.0, 1] p=134; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=126; LSFX=LSFP
+    M=  256 V= 16 b= 16:  39.2 /  44.8 /  51.4 /  51.4 /  51.4 /  23.0 /  39.2   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 2] p=133; LSFX=LSFP
+    M= 1024 V=  2 b=  4:  61.1 /  61.8 /  63.3 /  63.3 /  63.3 /  63.0 /  61.7   LSFR ['whiten', 'lin', 'col', 'V-1', 10.0, 2] p=2134; LSFP ['whiten', 'plin', 'col', 'V-1', 100.0, 4] p=768; LSFX=LSFP
+    M= 1024 V=  2 b=  8:  62.1 /  62.2 /  63.3 /  63.3 /  63.3 /  63.0 /  63.0   LSFR ['whiten', 'lin', 'col', 'V-1', 100.0, 1] p=8160; LSFP ['whiten', 'plin', 'col', 'V-1', 100.0, 4] p=768; LSFX=LSFP
+    M= 1024 V=  2 b= 16:  65.1 /  65.9 /  63.3 /  63.3 /  63.3 /  63.0 /  64.9   LSFR ['center', 'sgn3', 'col', 'V-1', 1.0, 1] p=16320; LSFP ['whiten', 'plin', 'col', 'V-1', 100.0, 4] p=768; LSFX=LSFP
+    M= 1024 V= 16 b=  4:  17.9 /  20.8 /  26.2 /  26.2 /  26.2 /  11.6 /  18.2   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=254; LSFX=LSFP
+    M= 1024 V= 16 b=  8:  26.1 /  28.1 /  32.1 /  32.1 /  32.1 /  11.6 /  26.7   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=510; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 2] p=267; LSFX=LSFP
+    M= 1024 V= 16 b= 16:  29.5 /  35.6 /  38.8 /  38.8 /  38.8 /  11.6 /  30.9   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=1020; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 2] p=535; LSFX=LSFP
+  bge-small
+    M=  256 V=  2 b=  4:  67.5 /  69.1 /  72.4 /  72.4 /  72.4 /  70.1 /  67.5   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 1] p=992; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=384; LSFX=LSFP
+    M=  256 V=  2 b=  8:  68.1 /  71.1 /  73.2 /  73.2 /  73.2 /  69.2 /  67.0   LSFR ['whiten', 'lin', 'col', 'V-1', 0.1, 4] p=559; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 4] p=384; LSFX=LSFP
+    M=  256 V=  2 b= 16:  68.0 /  72.1 /  73.2 /  72.1 /  73.2 /  69.2 /  70.5   LSFR ['whiten', 'lin', 'col', 'V-1', 1.0, 2] p=2134; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 4] p=384; LSFX=LSFR
+    M=  256 V= 16 b=  4:  21.1 /  21.6 /  27.1 /  27.1 /  27.1 /  15.0 /  21.1   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=62; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=62; LSFX=LSFP
+    M=  256 V= 16 b=  8:  28.8 /  30.5 /  36.7 /  36.7 /  36.7 /  16.3 /  28.8   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=126; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=126; LSFX=LSFP
+    M=  256 V= 16 b= 16:  38.7 /  44.8 /  50.0 /  50.0 /  50.0 /  16.3 /  39.0   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 1.0, 1] p=254; LSFX=LSFP
+    M= 1024 V=  2 b=  4:  56.2 /  59.3 /  59.4 /  59.4 /  58.1 /  58.3 /  59.8   LSFR ['center', 'sgn', 'col', 'V-1', 10.0, 2] p=2134; LSFP ['center', 'plin', 'col', 'V-1', 10.0, 1] p=384; LSFX=LSFP
+    M= 1024 V=  2 b=  8:  62.2 /  61.8 /  59.4 /  61.8 /  58.6 /  58.3 /  62.5   LSFR ['center', 'sgn3', 'col', 'V-1', 1.0, 1] p=8160; LSFP ['center', 'plin', 'col', 'V-1', 10.0, 1] p=384; LSFX=LSFR
+    M= 1024 V=  2 b= 16:  65.6 /  64.1 /  59.4 /  64.1 /  58.4 /  58.3 /  64.9   LSFR ['center', 'sgn3', 'col', 'V-1', 0.0001, 1] p=16320; LSFP ['center', 'plin', 'col', 'V-1', 10.0, 1] p=384; LSFX=LSFR
+    M= 1024 V= 16 b=  4:  17.2 /  18.7 /  24.2 /  24.2 /  24.2 /   9.8 /  19.4   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=254; LSFX=LSFP
+    M= 1024 V= 16 b=  8:  21.1 /  23.9 /  25.5 /  25.5 /  25.5 /   9.8 /  21.9   LSFR ['whiten', 'lin', 'col', 'V', 1.0, 2] p=252; LSFP ['whiten', 'plin', 'flat', 'V-1', 100.0, 2] p=285; LSFX=LSFP
+    M= 1024 V= 16 b= 16:  27.0 /  31.6 /  34.2 /  34.2 /  34.2 /   9.8 /  27.3   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=1020; LSFP ['whiten', 'plin', 'col', 'V', 1.0, 2] p=384; LSFX=LSFP
+  MiniLM-L6
+    M=  256 V=  2 b=  4:  63.6 /  65.7 /  69.0 /  69.0 /  66.9 /  67.0 /  67.0   LSFR ['whiten', 'sgn', 'col', 'V-1', 1.0, 1] p=992; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 2] p=384; LSFX=LSFP
+    M=  256 V=  2 b=  8:  66.9 /  68.4 /  70.5 /  70.5 /  67.1 /  68.0 /  68.0   LSFR ['whiten', 'sgn', 'col', 'V-1', 0.1, 1] p=2016; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 4] p=384; LSFX=LSFP
+    M=  256 V=  2 b= 16:  68.0 /  71.4 /  70.5 /  71.4 /  67.1 /  68.0 /  68.7   LSFR ['whiten', 'sgn', 'col', 'V-1', 0.1, 1] p=4064; LSFP ['whiten', 'plin', 'col', 'V-1', 1.0, 4] p=384; LSFX=LSFR
+    M=  256 V= 16 b=  4:  19.2 /  19.2 /  29.3 /  29.3 /  29.3 /  14.9 /  20.4   LSFR ['center', 'lin', 'flat', 'V', 0.01, 2] p=32; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=62; LSFX=LSFP
+    M=  256 V= 16 b=  8:  28.3 /  31.1 /  38.2 /  38.2 /  38.2 /  15.8 /  28.7   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=126; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=126; LSFX=LSFP
+    M=  256 V= 16 b= 16:  38.3 /  41.3 /  48.3 /  48.3 /  48.3 /  15.8 /  38.0   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=254; LSFP ['whiten', 'plin', 'flat', 'V', 10.0, 1] p=254; LSFX=LSFP
+    M= 1024 V=  2 b=  4:  59.5 /  55.4 /  61.8 /  55.4 /  61.5 /  61.4 /  58.6   LSFR ['center', 'sgn3', 'flat', 'V', 0.1, 1] p=2032; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 2] p=384; LSFX=LSFR
+    M= 1024 V=  2 b=  8:  61.4 /  62.3 /  61.8 /  62.3 /  61.8 /  61.4 /  61.9   LSFR ['center', 'sgn3', 'col', 'V-1', 0.1, 1] p=8160; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 2] p=384; LSFX=LSFR
+    M= 1024 V=  2 b= 16:  65.5 /  66.3 /  61.8 /  66.3 /  61.8 /  61.4 /  66.3   LSFR ['center', 'sgn3', 'col', 'V-1', 1.0, 1] p=16320; LSFP ['whiten', 'plin', 'col', 'V-1', 0.1, 2] p=384; LSFX=LSFR
+    M= 1024 V= 16 b=  4:  16.1 /  18.9 /  17.0 /  18.9 /  24.0 /   8.2 /  16.7   LSFR ['whiten', 'lin', 'flat', 'V', 10.0, 1] p=254; LSFP ['center', 'psgn', 'flat', 'V', 1.0, 1] p=254; LSFX=LSFR
+    M= 1024 V= 16 b=  8:  20.9 /  24.9 /  19.5 /  24.9 /  25.1 /   8.2 /  20.0   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=510; LSFP ['center', 'psgn', 'col', 'V', 100.0, 2] p=252; LSFX=LSFR
+    M= 1024 V= 16 b= 16:  24.2 /  29.7 /  22.2 /  29.7 /  32.6 /   8.2 /  25.6   LSFR ['whiten', 'lin', 'flat', 'V', 1.0, 1] p=1020; LSFP ['center', 'psgn', 'flat', 'V-1', 10.0, 4] p=302; LSFX=LSFR
+
+## Dev choice composition (ideal, R1, pooled over the encoders shown)
+  V=  2 LSFR scale : col 41, flat 1 (of 42)
+  V=  2 LSFR target: V 1, V-1 41 (of 42)
+  V=  2 LSFR alpha : 0.0001 6, 0.01 1, 0.1 14, 1.0 13, 10.0 5, 100.0 3 (of 42)
+  V=  2 LSFR q     : 1 33, 2 8, 4 1 (of 42)
+  V=  2 LSFR prep  : center 8, whiten 34 (of 42)
+  V=  2 LSFR fmap  : lin 29, sgn 7, sgn3 6 (of 42)
+  V=  2 LSFP scale : col 42 (of 42)
+  V=  2 LSFP target: V-1 42 (of 42)
+  V=  2 LSFP alpha : 0.0001 1, 0.1 9, 1.0 24, 10.0 4, 100.0 4 (of 42)
+  V=  2 LSFP q     : 1 14, 2 16, 4 12 (of 42)
+  V=  2 LSFP prep  : center 3, whiten 39 (of 42)
+  V=  2 LSFP fmap  : plin 42 (of 42)
+  V=  2 LSFX picks: LSFR 7, LSFP 35 (of 42)
+  V= 16 LSFR scale : col 4, flat 38 (of 42)
+  V= 16 LSFR target: V 40, V-1 2 (of 42)
+  V= 16 LSFR alpha : 0.01 1, 1.0 26, 10.0 13, 100.0 2 (of 42)
+  V= 16 LSFR q     : 1 39, 2 3 (of 42)
+  V= 16 LSFR prep  : center 6, whiten 36 (of 42)
+  V= 16 LSFR fmap  : lin 42 (of 42)
+  V= 16 LSFP scale : col 7, flat 35 (of 42)
+  V= 16 LSFP target: V 38, V-1 4 (of 42)
+  V= 16 LSFP alpha : 0.0001 1, 1.0 15, 10.0 23, 100.0 3 (of 42)
+  V= 16 LSFP q     : 1 33, 2 8, 4 1 (of 42)
+  V= 16 LSFP prep  : center 5, whiten 37 (of 42)
+  V= 16 LSFP fmap  : plin 39, psgn 3 (of 42)
+  V= 16 LSFX picks: LSFR 3, LSFP 39 (of 42)

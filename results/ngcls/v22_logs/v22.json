@@ -1,0 +1,31 @@
+{
+ "hops": 2,
+ "n_ctx": 32,
+ "n_sym": 64,
+ "seeds": [],
+ "det": [
+  {
+   "seed": 42,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "exact_frac": 1.0
+  },
+  {
+   "seed": 123,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "exact_frac": 1.0
+  },
+  {
+   "seed": 456,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "exact_frac": 1.0
+  }
+ ],
+ "f1_mean": 1.0,
+ "exact_mean": 1.0
+}

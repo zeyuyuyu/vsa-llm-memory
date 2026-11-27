@@ -1,0 +1,22 @@
+{
+ "floor": 0.5153,
+ "parser": 0.934,
+ "arms": {
+  "softmax_scratch": [
+   0.491,
+   0.509,
+   0.509
+  ],
+  "hrr_scratch": [
+   0.491,
+   0.509,
+   0.509
+  ],
+  "hrr_posthoc": [
+   0.526,
+   0.526,
+   0.526
+  ]
+ },
+ "verdict": "softmax_scratch FAILS (0.5030) | hrr_scratch FAILS (0.5030) | hrr_posthoc FAILS (0.5260) | P1 softmax_scratch PARTIAL+: False | P2 hrr_scratch PARTIAL+: False | P3 scratch beats through-the-loss (.55) by >=.10: False (0.503, 0.503) | P4 posthoc in [.55,.75]: False (0.5260) | CORRECTION TO OUR OWN FRAMING: from-scratch also fails, so the negative is about the task, not frozen states"
+}

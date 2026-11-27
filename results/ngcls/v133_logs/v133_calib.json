@@ -1,0 +1,58 @@
+{
+ "prereg": "9bcb703",
+ "kind": "calibration",
+ "n": 40,
+ "dim": 4096,
+ "grid": {
+  "K24_k2": {
+   "direct": 0.675,
+   "store": 1.0
+  },
+  "K24_k4": {
+   "direct": 0.4,
+   "store": 0.95
+  },
+  "K32_k2": {
+   "direct": 0.6,
+   "store": 1.0
+  },
+  "K32_k4": {
+   "direct": 0.225,
+   "store": 0.925
+  },
+  "K48_k2": {
+   "direct": 0.45,
+   "store": 1.0
+  },
+  "K48_k4": {
+   "direct": 0.15,
+   "store": 0.975
+  },
+  "K72_k2": {
+   "direct": 0.425,
+   "store": 0.95
+  },
+  "K72_k4": {
+   "direct": 0.125,
+   "store": 0.95
+  },
+  "K96_k2": {
+   "direct": 0.125,
+   "store": 0.95
+  },
+  "K96_k4": {
+   "direct": 0.05,
+   "store": 0.95
+  },
+  "K120_k2": {
+   "direct": 0.2,
+   "store": 0.95
+  },
+  "K120_k4": {
+   "direct": 0.075,
+   "store": 0.925
+  }
+ },
+ "anchor_satisfying_Ks": [],
+ "chosen_K": null
+}

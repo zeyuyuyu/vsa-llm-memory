@@ -1,0 +1,63 @@
+B43 hand reading (prereg/B43_natural_text_and_chunked_baseline_prereg.md, Checks)
+
+== Part A: ProPara test, the 10 paragraphs with the largest |store - direct_think| state-accuracy difference ==
+Material: b43_out/pp_test/handread_raw.txt (b43_handread.py propara b43_out/pp_test test): every sentence with the
+extractor's events, and gold / store / direct grids per participant. Read by hand against the text.
+
+Paragraphs (store vs direct state accuracy): 409 (0.25 vs 1.00), 400 (0.17 vs 0.83), 904 (0.04 vs 0.62),
+661 (0.68 vs 0.14), 791 (0.43 vs 0.93), 533 (0.40 vs 0.85), 410 (0.29 vs 0.71), 401 (0.33 vs 0.75), 503 (0.61 vs 0.21),
+654 (0.50 vs 0.89). Store worse in 8, direct worse in 2 (661, 503).
+
+Where the store loses (every case is an extraction error; the memory reads back exactly what was written, and the VSA
+store equals the dict on 1,910 / 1,910 cells):
+ 1. Anticipatory creates (6 of the 8: 409, 400, 401, 410, 503, 654). The extractor sees the whole participant list and
+    writes "create" for products in an early sentence that does not produce them ("Light enters the eyes" ->
+    create image, create electrical impulses; "Sun shines on solar panels" -> create direct current, alternating
+    current). Every later state of that participant is then wrong until another event overwrites it.
+ 2. Conversions without the destroy (791: "fed into an inverter to change it to AC" writes create AC but never
+    destroys DC; 400, 904 similar). ProPara marks the input of a conversion as destroyed; a sentence-local reader often
+    misses it.
+ 3. "create" for something that already exists (533 seed, 503 battery / piston / crankshaft, 654 tree): the read rule
+    then sets state 0 to "-" ("created later"), so the initial states are wrong.
+ 4. Locations that are not in the text (533, 503, 661 "surface", copied from the worked example; 401 "sky",
+    "location of inverter"; 409 "eyes" for an image).
+ 5. A move after a destroy resurrects a participant (503 gasoline destroyed in 5, moved to the piston in 6).
+Where the direct arm loses (661, 503): it marks participants that exist from the start as "-" until they are first
+mentioned (503: car, battery, pistons, crankshaft, wheels; 661: plant, animal), and writes "?" where gold has a
+location. It reads the whole paragraph, so it does not make errors of types 1, 2 and 5 as often.
+Gold quirks seen (not counted as model errors): 503 gasoline stays in "car" after it burns; 654 seedling persists after
+the tree forms; 904 "electrical pulses" moves to "lateral geniculate nucleus and the visual cortex" (a long span).
+Reading: the store route's deficit on ProPara is an extraction deficit, as in the paper's 2Wiki failure. A
+sentence-at-a-time extractor without the state so far, on short paragraphs that fit in context, is a worse reader than
+the same model reading the whole paragraph with reasoning on.
+
+== Part B: RULER 128k, Chain-of-Agents failures (read on the 700 samples finished by 2026-11-19 05:00 UTC) ==
+Material: b43_out/coa_test/handread_raw_131072.txt (b43_handread.py ruler; 40 of the 402 failures, numpy seed 0):
+question, gold, which communication units (CUs) held each gold value, the final CU and the manager's answer.
+Mechanical classes of the 40: gold never in any CU 24; partly never in any CU 15; written then lost 1; manager error
+with every gold value in the final CU 0.
+Mechanism, counted over every missed gold value of all 402 failures (1,029 values): the gold value is inside the
+window its worker read in every case (no chunking or packing artifact); the worker for that window
+  - re-emitted the previous CU verbatim and never added the value: 767 (75%);
+  - rewrote the summary but left the value out: 140 (14%);
+  - wrote a rejection ("not explicitly stated", "does not mention"): 116 (11%);
+  - wrote the value, which a later worker dropped: 6 (0.6%).
+Across all 700 samples, 65-91% of worker steps return a CU identical to the one they were given (successes and
+failures alike); the chain mostly reproduces the first summary it formed. Read by hand:
+ - single_2 pos 0: CU 13-16 are the same 527-token essay summary; the needle (window 14) never enters; the manager
+   answers "20-30" (an essay number).
+ - single_1 pos 83 / 95 (repeated "grass is green" haystack): the first CU says the number is "not explicitly stated";
+   every later worker repeats it (the camera-ready CoA paper's "catastrophic collapse"); manager: "not determinable".
+ - vt pos 0: the CU records a distractor chain (72955: IWS -> HAY -> CSM -> TRQ -> MUC) and keeps it; one queried
+   variable (CYQVS) enters at window 4, the other four never do; the manager returns the distractor chain.
+ - multiquery pos 2: the CU is an essay summary; none of the four values is ever written; the manager improvises.
+Reading: this is the copy/collapse failure of sequential summary passing with an 8B model at 17 hops, the same
+pattern as the third-party CoA re-run in LLMxMapReduce (Llama3-70B: PassKey 9.3, KV 1.8). It is not evidence that
+chunked reading as such fails: a map-reduce reader that reads each window independently with the question
+(LLMxMapReduce: 98.9 on InfiniteBench KV) was not run here.
+
+Update over all 850 finished samples (results/b43_check.txt): 503 failed samples, 1,244 missed gold values; the gold
+value lay inside the window its worker read in every case; that worker re-emitted the previous CU verbatim for 922
+(74%), rewrote it without the value for 168 (14%), wrote a rejection for 143 (11%); 11 (1%) were written and later
+lost; the manager failed with every gold value in the final CU in 0 samples. 75% of all worker steps (10,209 of
+13,589) return the CU they were given unchanged.

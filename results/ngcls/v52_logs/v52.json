@@ -1,0 +1,35 @@
+{
+ "task": 15,
+ "n_train": 900,
+ "n_eval": 500,
+ "codebook": 8,
+ "prompting_banked": 0.3867,
+ "arms": {
+  "floor": [
+   0.442,
+   0.51,
+   0.468
+  ],
+  "parser": [
+   0.824,
+   0.848,
+   0.836
+  ],
+  "probe_argmax": [
+   0.824,
+   0.848,
+   0.836
+  ],
+  "spans": [
+   0.462,
+   0.47,
+   0.492
+  ],
+  "lora_direct": [
+   0.992,
+   0.992,
+   0.99
+  ]
+ },
+ "verdict": "NO GAIN on task 15 (the fine-tune matches the handover)"
+}

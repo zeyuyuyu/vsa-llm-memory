@@ -1,0 +1,52 @@
+{
+ "n_sym": 10,
+ "conditions": [
+  {
+   "query_in_training": false,
+   "seeds": [
+    {
+     "seed": 42,
+     "stmt_acc": 1.0,
+     "query_acc": 0.722,
+     "chain": 0.762
+    },
+    {
+     "seed": 123,
+     "stmt_acc": 1.0,
+     "query_acc": 0.718,
+     "chain": 0.772
+    },
+    {
+     "seed": 456,
+     "stmt_acc": 1.0,
+     "query_acc": 0.71,
+     "chain": 0.776
+    }
+   ]
+  },
+  {
+   "query_in_training": true,
+   "seeds": [
+    {
+     "seed": 42,
+     "stmt_acc": 1.0,
+     "query_acc": 1.0,
+     "chain": 1.0
+    },
+    {
+     "seed": 123,
+     "stmt_acc": 1.0,
+     "query_acc": 1.0,
+     "chain": 1.0
+    },
+    {
+     "seed": 456,
+     "stmt_acc": 1.0,
+     "query_acc": 1.0,
+     "chain": 1.0
+    }
+   ]
+  }
+ ],
+ "verdict": "MY TRAINING SET, NOT THE LANGUAGE (adding query spans recovers the chain; the abstract's inversion is an artifact of my construction and must come out)"
+}

@@ -1,0 +1,24 @@
+## Execution record (deviations from the plan are compute-only unless stated)
+- Registration: prereg + code committed at 461160b before any test run; 638404b (before any test output was read)
+  caches the deterministic HRR codes in the assembler (same outputs; selftest 0 mismatches in 444 checks).
+- Gates were read before any new-arm output: G1 (8B replay) and G2 (1.7B re-run on all three log sets) passed.
+- A800 jobs ran through b29_run.sh (idle GPUs only, never GPU 3). Two sequential job chains (32B logs; 1.7B RULER +
+  8B logs) were replaced by independent jobs once GPUs freed up (no setting changed).
+- The 32B full read (vLLM, store arm): the second half of the prompts was stopped after 80,000 of 143,713 prompts
+  (a chunk boundary, 21:50:39Z) and its remaining 63,713 prompts were split over four GPUs (R32_full1r00-03); the
+  stopped job's vLLM engine process outlived its parent and held GPU 7 until 22:08:30Z (killed; 0.3 GPU-hours added to
+  the ledger by hand as R32_full1_orphan_engine). The assembler reads all six output files.
+- GPT-6.1 Sol through api_zheng: the gateway served about 0.9-1.3 calls per second in total, whatever the
+  concurrency. The location-set run (third in the registered order) was started early, then paused three times so
+  that the impact and window runs (first and second in the order) and the impact re-run finished first; its completed calls replay from the client's
+  prompt cache, so the restarted run asks only the remaining prompts.
+- GPT-6.1 Sol failed calls (gateway HTTP 429 "rate_limit_exceeded" after the client's retries; returned as no events):
+  impact run 1, 103 of 7,070 calls (1.46% > 0.5%): re-run once as registered (run 1 kept as b29_out/logs/run1_*;
+  the re-run replays every answered prompt from the cache and asks the rest with 16 workers instead of 40); window,
+  29 of 7,026 (0.41%): not re-run, sensitivity analysis without the logs those calls touched (above).
+- Exploratory, not registered: the GPT window set re-run with the 29 refused calls re-asked (tag gpt61low_wr; 44 new
+  calls, everything else replayed from the cache); reported in the Exploratory block above, not used for any bar.
+- Claude Opus 5.5: the window set was started by the registered rule (frontier total USD 35 < 90 when the impact
+  set finished).
+- Hand-reading: results/b29_handread.txt. Discordance listings: b29_out/ruler/discord_q32_vs_8b.txt,
+  b29_out/logs/discord_<set>_<reader>_vs_banked.txt.

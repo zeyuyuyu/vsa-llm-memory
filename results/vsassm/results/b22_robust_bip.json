@@ -1,0 +1,141 @@
+[
+ {
+  "cond": "Q b=1 bipolar",
+  "kw": {
+   "bits": 1,
+   "bipolar": true
+  },
+  "keys_exact": 4776,
+  "keys": 4776,
+  "frac": 1.0,
+  "stores_all_exact": 50,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1500,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "Q b=1 bipolar | 8 per vector",
+  "kw": {
+   "bits": 1,
+   "bipolar": true,
+   "per_shard": 8
+  },
+  "keys_exact": 4776,
+  "keys": 4776,
+  "frac": 1.0,
+  "stores_all_exact": 50,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1500,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "Q b=1 bipolar | 4 per vector",
+  "kw": {
+   "bits": 1,
+   "bipolar": true,
+   "per_shard": 4
+  },
+  "keys_exact": 4776,
+  "keys": 4776,
+  "frac": 1.0,
+  "stores_all_exact": 50,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1500,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "Q b=1 bipolar | d=16384",
+  "kw": {
+   "bits": 1,
+   "bipolar": true,
+   "d": 16384
+  },
+  "keys_exact": 4776,
+  "keys": 4776,
+  "frac": 1.0,
+  "stores_all_exact": 50,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1500,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ }
+]

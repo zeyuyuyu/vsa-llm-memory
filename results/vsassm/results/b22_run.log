@@ -1,0 +1,29 @@
+stores 50 pairs max 5995
+float                          4776/4776   1.0000  stores 50/50
+Q b=1                          4648/4776   0.9732  stores 20/50
+Q b=3                          4776/4776   1.0000  stores 50/50
+Q b=2                          4776/4776   1.0000  stores 50/50
+Q b=4                          4776/4776   1.0000  stores 50/50
+Q b=6                          4776/4776   1.0000  stores 50/50
+Q b=8                          4776/4776   1.0000  stores 50/50
+N r=0.25                       4776/4776   1.0000  stores 50/50
+N r=0.5                        4776/4776   1.0000  stores 50/50
+N r=1                          4776/4776   1.0000  stores 50/50
+N r=2                          4776/4776   1.0000  stores 50/50
+F p=0.05                       4776/4776   1.0000  stores 50/50
+F p=0.1                        4776/4776   1.0000  stores 50/50
+F p=0.2                        4776/4776   1.0000  stores 50/50
+F p=0.3                        4776/4776   1.0000  stores 50/50
+Q b=1 | 8 per vector           4723/4776   0.9889  stores 23/50
+Q b=1 | 4 per vector           4554/4776   0.9535  stores 6/50
+Q b=2 | 8 per vector           4776/4776   1.0000  stores 50/50
+Q b=2 | 4 per vector           4776/4776   1.0000  stores 50/50
+Q b=1 | d=16384                4762/4776   0.9971  stores 39/50
+N r=2 | 8 per vector           4776/4776   1.0000  stores 50/50
+N r=2 | 4 per vector           4776/4776   1.0000  stores 50/50
+F p=0.3 | 8 per vector         4776/4776   1.0000  stores 50/50
+Q b=2 | d=16384                4776/4776   1.0000  stores 50/50
+F p=0.3 | 4 per vector         4776/4776   1.0000  stores 50/50
+N r=2 | d=16384                4776/4776   1.0000  stores 50/50
+F p=0.3 | d=16384              4776/4776   1.0000  stores 50/50
+exit 0

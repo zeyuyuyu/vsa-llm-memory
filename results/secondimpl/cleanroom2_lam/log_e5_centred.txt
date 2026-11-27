@@ -1,0 +1,30 @@
+[    0.2s] codes (18292, 768)
+[    0.7s] train codes 5621 eps 3.4930719686135e-06
+[    0.7s] stores ('dev', 256, 2) 6 queries 1901
+[    0.7s] stores ('dev', 256, 16) 6 queries 1662
+[    0.7s] stores ('dev', 1024, 2) 3 queries 3392
+[    0.7s] stores ('dev', 1024, 16) 3 queries 3828
+[    0.7s] stores ('test', 256, 2) 20 queries 4415
+[    0.7s] stores ('test', 256, 16) 20 queries 4827
+[    0.7s] stores ('test', 1024, 2) 5 queries 4255
+[    0.7s] stores ('test', 1024, 16) 5 queries 4344
+[    1.2s] prep centred
+[   18.6s] store maps done centred
+[   19.1s] store centred 256 2 done
+[   20.3s] store centred 256 2 done
+[   23.0s] store centred 256 2 done
+[   23.7s] store centred 256 16 done
+[   25.9s] store centred 256 16 done
+[   29.3s] store centred 256 16 done
+[   32.3s] store centred 1024 2 done
+[   41.8s] store centred 1024 2 done
+[   77.0s] store centred 1024 2 done
+[   81.7s] store centred 1024 16 done
+[   92.3s] store centred 1024 16 done
+[  124.5s] store centred 1024 16 done
+[  127.8s] ls random features done centred
+[  224.8s] ls centred 256 2 done
+[  257.0s] ls centred 256 16 done
+[  414.8s] ls centred 1024 2 done
+[  493.3s] ls centred 1024 16 done
+[  493.3s] wrote raw_e5_centred.json

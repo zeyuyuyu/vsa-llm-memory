@@ -1,0 +1,25 @@
+[    0.4s] codes (18292, 4096)
+[    9.7s] train codes 5621 eps 1.4882999142613125e-06
+[    9.7s] stores ('dev', 256, 2) 6 queries 1901
+[    9.7s] stores ('dev', 256, 16) 6 queries 1662
+[    9.7s] stores ('dev', 1024, 2) 3 queries 3392
+[    9.7s] stores ('dev', 1024, 16) 3 queries 3828
+[    9.7s] stores ('test', 256, 2) 20 queries 4415
+[    9.7s] stores ('test', 256, 16) 20 queries 4827
+[    9.7s] stores ('test', 1024, 2) 5 queries 4255
+[    9.7s] stores ('test', 1024, 16) 5 queries 4344
+qwen8|ideal|256|2|4 rederived store 69.45 (my_cells 69.45)  ls 70.08 (my_cells 70.08)
+qwen8|ideal|256|2|8 rederived store 71.37 (my_cells 71.37)  ls 78.21 (my_cells 78.21)
+qwen8|ideal|256|2|16 rederived store 74.81 (my_cells 74.81)  ls 80.97 (my_cells 80.97)
+qwen8|ideal|256|16|4 rederived store 18.50 (my_cells 18.50)  ls 22.89 (my_cells 22.89)
+qwen8|ideal|256|16|8 rederived store 26.97 (my_cells 26.97)  ls 33.50 (my_cells 33.50)
+qwen8|ideal|256|16|16 rederived store 35.82 (my_cells 35.82)  ls 44.96 (my_cells 44.96)
+qwen8|ideal|1024|2|4 rederived store 65.76 (my_cells 65.76)  ls 68.95 (my_cells 68.95)
+qwen8|ideal|1024|2|8 rederived store 66.84 (my_cells 66.84)  ls 69.85 (my_cells 69.85)
+qwen8|ideal|1024|2|16 rederived store 66.27 (my_cells 66.27)  ls 72.08 (my_cells 72.08)
+qwen8|ideal|1024|16|4 rederived store 19.77 (my_cells 19.77)  ls 20.49 (my_cells 20.49)
+qwen8|ideal|1024|16|8 rederived store 25.16 (my_cells 25.16)  ls 29.86 (my_cells 29.86)
+qwen8|ideal|1024|16|16 rederived store 32.80 (my_cells 32.80)  ls 40.15 (my_cells 40.15)
+qwen8 V2 -4.27 [-5.43, -3.08] least squares leads
+qwen8 V16 -5.47 [-7.08, -3.78] least squares leads
+qwen8 R1 -4.87 [-5.92, -3.88] least squares leads

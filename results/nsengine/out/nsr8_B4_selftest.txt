@@ -1,0 +1,29 @@
+family      L   n  ok   gen mean/max s   solve mean/max s  z3 agree/unk  z3 alt  details
+----------------------------------------------------------------------------------------
+meetings    1   6   6     0.05/   0.15     0.000/   0.000           6/0       1  impossible 3/6; text 1404-1586 chars
+meetings    2   6   6     0.02/   0.05     0.000/   0.000           6/0       2  impossible 3/6; text 1555-1752 chars
+meetings    3   6   6     0.06/   0.14     0.001/   0.001           6/0       3  impossible 3/6; text 2233-2461 chars
+meetings    4   6   6     0.34/   1.25     0.001/   0.001           6/0       2  impossible 3/6; text 2686-3329 chars
+meetings    5   6   6     0.36/   1.16     0.001/   0.002           6/0       3  impossible 3/6; text 3113-3975 chars
+roster      1   6   6     0.00/   0.00     0.000/   0.001           6/0       5  ; text 1560-1614 chars
+roster      2   6   6     0.00/   0.00     0.000/   0.001           6/0       6  ; text 1636-1688 chars
+roster      3   6   6     0.00/   0.00     0.001/   0.001           6/0       6  ; text 1798-1841 chars
+roster      4   6   6     0.22/   0.56     0.191/   0.550           6/0       6  ; text 2020-2085 chars
+roster      5   6   6     0.07/   0.14     0.057/   0.114           6/0       6  ; text 2290-2332 chars
+project     1   6   6     0.00/   0.01     0.003/   0.005           6/0       5  optimum 13-20; text 1245-1309 chars
+project     2   6   6     0.01/   0.02     0.006/   0.010           6/0       6  optimum 16-24; text 1491-1586 chars
+project     3   6   6     0.02/   0.04     0.017/   0.037           6/0       6  optimum 25-35; text 1740-1788 chars
+project     4   6   6     0.03/   0.05     0.028/   0.046           6/0       6  optimum 27-38; text 2070-2129 chars
+project     5   6   6     0.11/   0.27     0.132/   0.311           6/0       6  optimum 28-42; text 2349-2432 chars
+islanders   1   6   6     0.00/   0.00     0.000/   0.000           6/0       0  ; text 967-1045 chars
+islanders   2   6   6     0.00/   0.00     0.000/   0.000           6/0       0  ; text 1083-1270 chars
+islanders   3   6   6     0.00/   0.00     0.001/   0.001           6/0       0  ; text 1244-1437 chars
+islanders   4   6   6     0.00/   0.00     0.001/   0.001           6/0       0  ; text 1572-1698 chars
+islanders   5   6   6     0.03/   0.05     0.003/   0.006           6/0       0  ; text 1957-2173 chars
+vans        1   6   6     0.00/   0.00     0.000/   0.000           6/0       4  optimum 2-5; text 1094-1147 chars
+vans        2   6   6     0.00/   0.00     0.000/   0.000           6/0       6  optimum 3-6; text 1375-1429 chars
+vans        3   6   6     0.01/   0.02     0.001/   0.001           6/0       6  optimum 4-5; text 1668-1710 chars
+vans        4   6   6     0.01/   0.03     0.001/   0.002           6/0       6  optimum 6-7; text 2058-2100 chars
+vans        5   6   6     6.00/  35.52     0.086/   0.493           6/0       6  optimum 8-9; text 2512-2542 chars
+
+150 items, 0 with failures, 83.6s wall

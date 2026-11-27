@@ -1,0 +1,46 @@
+  INCOMPLETE ARM-RUNS EXCLUDED (n_scored != 300):
+    deepseek/deepseek-v4-pro       rep1  arms ['single_pass', 'evidence_in_prompt']  n_scored {'single_pass': 299, 'evidence_in_prompt': 290}
+    deepseek/deepseek-v4-pro       rep2  arms ['single_pass', 'evidence_in_prompt']  n_scored {'single_pass': 295, 'evidence_in_prompt': 297}
+    moonshotai/kimi-k3             rep1  arms ['single_pass']  n_scored {'single_pass': 299}
+    deepseek/deepseek-v4-flash     rep2  arms ['single_pass']  n_scored {'single_pass': 298}
+    MODELS WITH NO COMPLETE REPEAT, excluded entirely: ['deepseek/deepseek-v4-pro']
+===== V-124: ladder to 2.4T, thresholds with a band =====
+  store readout 0.974 (no model involved) | measured band +-0.02 | robust-cross bar 0.994
+  prompt fingerprint 49eaa80a685bd4e7dfb82ce3 @ 197733 (canonical 49eaa80a685bd4e7dfb82ce3 @ 197733)
+  pin qwen/qwen3.8-2.4t-a95b         -> Novita           quant=unknown  (of 7 endpoints)
+  pin deepseek/deepseek-v4-pro       -> DigitalOcean     quant=unknown  (of 16 endpoints)
+  pin z-ai/glm-5.3                   -> GMICloud         quant=fp8      (of 28 endpoints)
+  pin moonshotai/kimi-k3             -> Morph            quant=fp4      (of 18 endpoints)
+  pin deepseek/deepseek-v4-flash     -> DigitalOcean     quant=unknown  (of 15 endpoints)
+
+  model                    rep   single_pass    evid_in_prompt reasoning honoured 
+  qwen3.8-2.4t-a95b        1     0.4933         0.9600         300/300   True     
+  qwen3.8-2.4t-a95b        2     0.4867         0.9533         300/300   True     
+  glm-5.3                  1     0.5533         0.9967         300/300   True     
+  glm-5.3                  2     0.5500         0.9933         300/300   True     
+  kimi-k3                  1     0.5500         0.9933         300/300   True     
+  deepseek-v4-flash        1     0.5033         0.9833         0/300     True     
+
+  cost: per-call field $7.4023 | ACCOUNT METER $8.5661
+
+  >>> P0 validity gate: fingerprint canonical (True) and pin honoured everywhere (True) : True
+  >>> P1 harness gate: anchor evidence_in_prompt 0.9833 vs V-108 0.9900 +-.03 : True
+  >>> P2 no model crosses T1 (single_pass > 0.974) in either repeat : True
+  >>> P3 no model crosses T2 ROBUSTLY (evidence_in_prompt > 0.994 in BOTH repeats) : True
+      for reference, mean evidence_in_prompt per model: {'qwen3.8-2.4t-a95b': 0.9567, 'glm-5.3': 0.995, 'kimi-k3': 0.9933, 'deepseek-v4-flash': 0.9833}
+  >>> P4 (descriptive, no bar) PERMUTATION EFFECT on single_pass: anchor 0.5033 under the canonical permutation vs V-108's 0.4767 under an arbitrary one -> delta +0.0266
+      this is the band every previously banked single_pass number carries, the paper's phi-2 .253 and
+      Qwen3-8B .397 included.
+  >>> P5 (descriptive, no bar):
+      qwen3.8-2.4t-a95b        within-run agreement 0.9267 | rep1 cats {'em_hit': '49.3%', 'form_miss': '22.3%', 'hop2_miss': '28.0%', 'hop1_miss': '0.3%'} | reasoning 300/300
+      glm-5.3                  within-run agreement 0.9367 | rep1 cats {'em_hit': '55.3%', 'form_miss': '25.7%', 'hop2_miss': '18.7%', 'hop1_miss': '0.3%'} | reasoning 300/300
+      kimi-k3                  only 1 repeat
+      deepseek-v4-flash        only 1 repeat
+
+  --- readings, as registered ---
+  P3 holds: nothing crosses the robust bar, so V-108's .9900 sat inside the noise after all. The
+  sentence survives, and my V-108 reading of it was wrong twice over -- once in calling it refuted,
+  once in expecting it to be refuted here.
+  scoping: the store is not re-measured (no model in it); nothing here bears on acquisition (.4678 vs a
+  fine-tune's .7333). Nothing enters the 9/16 submission.
+V124-SCORE-DONE

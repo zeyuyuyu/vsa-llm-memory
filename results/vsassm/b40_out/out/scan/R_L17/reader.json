@@ -1,0 +1,47 @@
+{
+ "args": {
+  "cmd": "reader",
+  "task": "R",
+  "arm": "vsa",
+  "split": "dev",
+  "layers": "17",
+  "layer": 17,
+  "subset": 3000,
+  "bs": 16,
+  "epochs": 100,
+  "eval_every": 100,
+  "lr": 0.001,
+  "seed": 0,
+  "steps": 1000,
+  "rank": 6,
+  "reader": "",
+  "ckpt": "",
+  "out": "out/scan/R_L17",
+  "pred": "",
+  "noise": 0.0,
+  "noise_seed": 12345,
+  "soft_beta": 0.0,
+  "dec_init": "recon",
+  "recon_epochs": 100,
+  "limit": 0,
+  "max_new": 6,
+  "cot_max_new": 512,
+  "cot_bs": 48,
+  "shuffle_facts": 0,
+  "dev_split": "dev",
+  "dev_subset": 0,
+  "dev_limit": 0
+ },
+ "hist": [
+  {
+   "exact": 1.0,
+   "epoch": 100,
+   "loss": 0.005120280664414167
+  }
+ ],
+ "final": {
+  "exact": 1.0,
+  "epoch": 100,
+  "loss": 0.005120280664414167
+ }
+}

@@ -1,0 +1,70 @@
+# B66 verdict summary (prereg/B66_reconciliation_prereg.md). Accuracy points over R1 (V 2 / 16 x 4, 8, 16 bits per
+# fact x M 256 / 1,024), ideal accounting unless stated. Full tables: results/b66_A1.txt (A1), b66_A2.txt (A2),
+# b66_B_verdict.txt (B), b66_C_verdict.txt (C), b66_D_verdict.txt (D). Labels: B60's rule on the 95% interval.
+
+## (A1) first design - SDMt, two codes x two grids (Qwen3-8B / Llama-3.1-8B)
+| cell | Qwen3-8B | Llama-3.1-8B |
+| --- | --- | --- |
+| pipeline code, B64 grid (504) | -1.89 [-2.76, -1.00] SDMt leads | -1.20 [-2.14, -0.26] SDMt leads |
+| pipeline code, clean grid (32) | +1.86 [+0.88, +2.88] first leads | +2.03 [+0.99, +3.05] first leads |
+| clean-room code, B64 grid (504) | -0.95 [-1.81, -0.11] SDMt leads | -0.16 [-0.99, +0.66] level |
+| clean-room code, clean grid (32) | +2.44 [+1.64, +3.26] first leads | +2.22 [+1.39, +3.06] first leads |
+| grid effect / code effect / interaction | +3.57 / +0.76 / -0.36 | +2.81 / +0.62 / -0.84 |
+| registered attribution | GRID | GRID |
+Clean-room re-run reproduces its original run exactly (108 / 108 arm-cell accuracies per encoder). SDMt R1 means:
+pipeline 47.30 / 48.08 (B64 grid), 43.54 / 44.85 (clean grid); clean room 47.12 / 47.90 (B64 grid), 43.73 / 45.51 (clean
+grid). First design minus best of seven follows the same pattern (pipeline -2.15 / -1.20 vs +1.57 / +2.03; clean room
+-0.95 / -0.16 vs +2.34 / +2.13). Pipeline code on the clean grid, all 7 encoders: first - SDMt +1.86, +1.24, +2.03, -0.63,
++1.08, -1.58, -1.90 (first leads on 4, level on Mistral, SDMt leads on bge and MiniLM).
+
+## (A2) random-map replicates (maps 0-3; two-level bootstrap over maps; R1)
+| encoder | VSARm - SDMTm map mean [95%], SD, label | VSAm - BEST7m map mean [95%], SD, label |
+| --- | --- | --- |
+| Qwen3-8B | -0.80 [-1.84, +0.20], 0.80, level (map 0 -1.89) | +0.81 [-0.08, +1.71], 0.55, level (map 0 +1.25) |
+| Granite-3.3-8B | -2.46 [-3.34, -1.60], 0.59, SDMt leads | -0.80 [-1.72, +0.16], 0.66, level |
+| Llama-3.1-8B | -1.33 [-2.60, -0.10], 1.17, SDMt leads | +0.70 [-0.15, +1.55], 0.50, level (map 0 +0.91) |
+| Mistral-7B | -2.58 [-3.68, -1.44], 0.92, SDMt leads | -1.12 [-1.93, -0.30], 0.26, memory leads |
+| e5-base-v2 | -1.19 [-1.96, -0.44], 0.24, SDMt leads | -0.90 [-1.75, -0.07], 0.50, memory leads |
+| bge-small | -4.48 [-5.54, -3.37], 0.95, SDMt leads | -3.39 [-4.36, -2.42], 0.75, memory leads |
+| MiniLM-L6 | -3.94 [-4.74, -3.18], 0.30, SDMt leads | -3.48 [-4.39, -2.66], 0.54, memory leads |
+B36's bar on the map means: VSAR - BEST7m passes 0 / tie 2 / loss 5; VSA - BEST7m passes 0 / tie 5 / loss 2.
+Map 0 of VSARm reproduces B49's VSAR dev choice and dev accuracy in 168 / 168 cells.
+
+## (B) LSfc (R1; 7 encoders)
+| encoder | STORE - LSFR | LSFR - LAMC | VSAPC - LSFP | LSFX - LAMC |
+| --- | --- | --- | --- | --- |
+| Qwen3-8B | -1.50 [-2.03, -0.99] LSFR | -2.55 [-3.20, -1.91] LAMC | -4.01 LSFP | +0.00 level |
+| Granite-3.3-8B | -1.87 [-2.37, -1.38] LSFR | -3.68 [-4.38, -2.98] LAMC | -5.71 LSFP | -0.10 level |
+| Llama-3.1-8B | -1.68 [-2.29, -1.07] LSFR | -3.88 [-4.65, -3.13] LAMC | -5.61 LSFP | -0.05 level |
+| Mistral-7B | -1.49 [-2.18, -0.80] LSFR | -3.75 [-4.55, -2.96] LAMC | -5.59 LSFP | +0.00 level |
+| e5-base-v2 | -1.71 [-2.25, -1.19] LSFR | -4.82 [-5.45, -4.19] LAMC | -10.86 LSFP | +0.00 level |
+| bge-small | -2.26 [-2.79, -1.74] LSFR | -1.92 [-2.54, -1.30] LAMC | -11.19 LSFP | +0.76 [+0.34, +1.17] LSFX |
+| MiniLM-L6 | -1.88 [-2.42, -1.35] LSFR | -2.43 [-3.12, -1.72] LAMC | -9.30 LSFP | +0.05 level |
+STORE - LSFR by V: R1-V2 LSFR leads on 7 / 7 (-0.77 to -2.83); R1-V16 on 6 / 7 (Llama level, -0.53). Real accounting: the
+same labels. Registered reading: BOTH (write rule at identical features on 7 / 7; LAMc's features on top on 7 / 7).
+
+## (C) matched grids (4 language models; KF6 cut, compute note 2)
+Median of 20 draws of 72 configurations vs the full grid, R1 test accuracy: LAMC -0.68 to -1.33; SDMT -1.45 to -2.01.
+STORE - LAMC72: full -4.06 / -5.55 / -5.56 / -5.23, draw medians -3.01 / -4.87 / -4.23 / -4.44, range -1.48 to -5.95;
+full-grid sign in 20 / 20 draws on all 4. VSAR - SDMT72: full -1.89 / -2.25 / -1.20 / -3.56, medians +0.11 / -0.33 / +0.25
+/ -2.06; full-grid sign in 10 / 12 / 7 / 16 of 20. VSA - SDMT72: full +1.51 / -0.22 / +0.91 / -1.02, medians +3.52 / +1.70
+/ +2.36 / +0.48; full-grid sign 20 / 2 / 20 / 6 of 20. Registered reading: "not material" for none of these (STORE -
+LAMC72 keeps its sign everywhere, but its median moves by more than 1 point on Qwen3-8B (1.05) and Llama (1.33)).
+
+## (D) store-level (two-level) intervals: "on every encoder" claims
+(1) LAMc leads the store over R1 on all 7: HOLDS. (2) at R1-V16 on all 7: HOLDS. (3) at R1-V2 on the 4 language models,
+e5 and bge: FAILS (bge -1.05 [-2.51, +0.29] level). (4) LAMc leads VSAPcX on all 7: HOLDS. (5) least squares beats every
+Hebbian variant (STORE, VSAR, VSAS, VSAPC, VSAPCX) on all 7: HOLDS. (6) NLMSc leads the store on all 7: HOLDS. (7) SDMt
+leads the first design on all 7: FAILS (Llama -1.20 [-2.43, +0.05], e5 -0.92 [-2.06, +0.21] level). (8) BEST7 leads the
+first design on all 7: FAILS (Llama level). (9) VSA - BEST7 labels: CHANGE on Llama (+0.91 level) and Mistral (-1.02
+level); bar 0 / 7 unchanged. 13 of 189 labels change; every change is a small effect (|diff| <= 1.5). The two-level
+interval is 1.32-1.39 times as wide as the one-level one, about what the scheme gives with no store effect at all
+(1.34-1.40); the store-only (cluster) diagnostic is 0.87-1.02 times as wide and keeps every claim.
+
+## Checks
+A: plain-loop scorer 1,428 values, max |diff| 1.4e-16 PASS; bits SDMTCR / SDMTm 1,151,472 rows 0 over budget, VSARm
+6,300 sizes 0 over / 0 not maximal PASS; float64 re-derivation SDMTCR 56 stores min 0.9989, SDMTm 72 stores min 0.9988
+(N identical 128 / 128), VSARm 36 stores min 1.0000 PASS. B: scorer 1,050 values 1.4e-17; bits 113,064 rows 0 over / 0
+not maximal / 0 formula mismatch; float64 re-derivation 28 stores x 2 budgets min 0.9949 PASS. C: plain-loop scorer from
+the raw job files, 168 region values, max |diff| 1.7e-16 PASS (results/b66_C_check.txt). D: 357 point statistics by plain loops, max |diff|
+1.4e-17 PASS. Sample reading: results/b66_sample_reading.txt.

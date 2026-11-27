@@ -1,0 +1,19 @@
+B44 LoRA {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 143.34it/s]
+  cls qwen8 ho n8000 r8 lr1e-04 sd42 step 500/4000 (ep 0.50) loss 0.5340 train_sub 0.4940 dev 0.4880 (776s)
+  cls qwen8 ho n8000 r8 lr1e-04 sd42 step 1000/4000 (ep 1.00) loss 0.5233 train_sub 0.6460 dev 0.6180 (1554s)
+  cls qwen8 ho n8000 r8 lr1e-04 sd42 step 1500/4000 (ep 1.50) loss 0.0230 train_sub 0.8040 dev 0.8040 (2331s)
+  cls qwen8 ho n8000 r8 lr1e-04 sd42 step 2000/4000 (ep 2.00) loss 0.6329 train_sub 0.8200 dev 0.7900 (3107s)
+  cls qwen8 ho n8000 r8 lr1e-04 sd42 step 2500/4000 (ep 2.50) loss 0.2616 train_sub 0.8080 dev 0.7480 (3884s)
+  cls qwen8 ho n8000 r8 lr1e-04 sd42 step 3000/4000 (ep 3.00) loss 0.1439 train_sub 0.8420 dev 0.7880 (4662s)
+  cls qwen8 ho n8000 r8 lr1e-04 sd42 step 3500/4000 (ep 3.50) loss 0.2050 train_sub 0.8400 dev 0.7840 (5441s)
+  cls qwen8 ho n8000 r8 lr1e-04 sd42 step 4000/4000 (ep 4.00) loss 0.3351 train_sub 0.8540 dev 0.7800 (6220s)
+B44 LoRA {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 522, "dev": 520}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 133.02it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 std n8000 r8 lr1e-04 sd42 step 500/4000 (ep 0.50) loss 0.0000 train_sub 0.9980 dev 1.0000 bridge 1.000 unparsed 0.000 (840s)
+  scratch qwen8 std n8000 r8 lr1e-04 sd42 step 1000/4000 (ep 1.00) loss 0.0000 train_sub 0.9980 dev 0.9900 bridge 1.000 unparsed 0.000 (1680s)
+  scratch qwen8 std n8000 r8 lr1e-04 sd42 step 1500/4000 (ep 1.50) loss 0.0000 train_sub 1.0000 dev 1.0000 bridge 1.000 unparsed 0.000 (2518s)
+  scratch qwen8 std n8000 r8 lr1e-04 sd42 step 2000/4000 (ep 2.00) loss 0.0000 train_sub 1.0000 dev 1.0000 bridge 1.000 unparsed 0.000 (3357s)

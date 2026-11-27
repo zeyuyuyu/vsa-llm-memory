@@ -1,0 +1,73 @@
+{
+ "n": 212,
+ "hop_dist": {
+  "2": 181,
+  "3": 5,
+  "4": 26
+ },
+ "by_hop": {
+  "p0": {
+   "overall": 0.9481132075471698,
+   "cells": {
+    "2": {
+     "n": 181,
+     "em": 0.9521178637200737
+    },
+    "3": {
+     "n": 5,
+     "em": 0.6666666666666666
+    },
+    "4": {
+     "n": 26,
+     "em": 0.9743589743589743
+    }
+   }
+  },
+  "p50": {
+   "overall": 0.9323899371069182,
+   "cells": {
+    "2": {
+     "n": 181,
+     "em": 0.9373848987108656
+    },
+    "3": {
+     "n": 5,
+     "em": 0.6
+    },
+    "4": {
+     "n": 26,
+     "em": 0.9615384615384616
+    }
+   }
+  },
+  "p150": {
+   "overall": 0.6556603773584906,
+   "cells": {
+    "2": {
+     "n": 181,
+     "em": 0.6298342541436464
+    },
+    "3": {
+     "n": 5,
+     "em": 0.5333333333333333
+    },
+    "4": {
+     "n": 26,
+     "em": 0.8589743589743589
+    }
+   }
+  }
+ },
+ "collisions": {
+  "p0": {
+   "mean_distractors_sharing_a_gold_relation": 0.0
+  },
+  "p50": {
+   "mean_distractors_sharing_a_gold_relation": 5.639937106918239
+  },
+  "p150": {
+   "mean_distractors_sharing_a_gold_relation": 16.573899371069185
+  }
+ },
+ "verdict": "P1 2-hop exceeds 4-hop by >=.20 at +150: False (gap -0.2291; 2h=0.6298 n=181, 4h=0.8590 n=26) -> DEPTH IS NOT THE STORY: the manuscript reports the drop WITHOUT a mechanism"
+}

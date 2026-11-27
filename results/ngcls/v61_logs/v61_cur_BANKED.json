@@ -1,0 +1,40 @@
+{
+ "codebook": 128,
+ "arms": {
+  "floor": [
+   0.512,
+   0.53,
+   0.504
+  ],
+  "parser": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "vq_ema_cur": [
+   0.528,
+   0.524,
+   0.5
+  ]
+ },
+ "diag": {
+  "vq_ema_cur": [
+   {
+    "codebook_used": 125,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.06983558521894839
+   },
+   {
+    "codebook_used": 127,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.08871886700309295
+   },
+   {
+    "codebook_used": 118,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.1136252645287319
+   }
+  ]
+ },
+ "verdict": "vq_ema_cur: FAILS"
+}

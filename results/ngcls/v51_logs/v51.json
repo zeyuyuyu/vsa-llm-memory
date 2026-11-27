@@ -1,0 +1,495 @@
+{
+ "expressible": [
+  1,
+  2,
+  4,
+  5,
+  11,
+  12,
+  13,
+  15,
+  16
+ ],
+ "not_expressible_reasons": {
+  "3": "asks 'before' -- temporal order a superposition cannot hold",
+  "6": "yes/no",
+  "7": "counting",
+  "8": "lists with cardinality",
+  "9": "yes/no",
+  "10": "indefinite knowledge",
+  "14": "temporal",
+  "17": "positional relations",
+  "18": "size relations",
+  "19": "path finding",
+  "20": "motivation, not retrieval"
+ },
+ "tasks": {
+  "1": {
+   "n_eval": 300,
+   "n_answers": 6,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.7933333333333333,
+    0.7933333333333333,
+    0.7933333333333333
+   ],
+   "fewshot": [
+    0.8266666666666667,
+    0.7433333333333333,
+    0.8233333333333334
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.8266666666666667,
+    0.7433333333333333,
+    0.8233333333333334
+   ],
+   "candidate": false,
+   "majority": 0.17666666666666667
+  },
+  "2": {
+   "n_eval": 300,
+   "n_answers": 6,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.39,
+    0.39,
+    0.39
+   ],
+   "fewshot": [
+    0.44,
+    0.4266666666666667,
+    0.44
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.44,
+    0.4266666666666667,
+    0.44
+   ],
+   "candidate": true,
+   "majority": 0.22666666666666666
+  },
+  "3": {
+   "n_eval": 300,
+   "n_answers": 6,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.2733333333333333,
+    0.2733333333333333,
+    0.2733333333333333
+   ],
+   "fewshot": [
+    0.22,
+    0.22,
+    0.22
+   ],
+   "best_arm": "zeroshot",
+   "best": [
+    0.2733333333333333,
+    0.2733333333333333,
+    0.2733333333333333
+   ],
+   "candidate": false,
+   "majority": 0.22
+  },
+  "4": {
+   "n_eval": 300,
+   "n_answers": 6,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.36666666666666664,
+    0.36666666666666664,
+    0.36666666666666664
+   ],
+   "fewshot": [
+    0.41333333333333333,
+    0.49666666666666665,
+    0.41333333333333333
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.41333333333333333,
+    0.49666666666666665,
+    0.41333333333333333
+   ],
+   "candidate": true,
+   "majority": 0.19333333333333333
+  },
+  "5": {
+   "n_eval": 300,
+   "n_answers": 7,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.5766666666666667,
+    0.5766666666666667,
+    0.5766666666666667
+   ],
+   "fewshot": [
+    0.7733333333333333,
+    0.8666666666666667,
+    0.81
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.7733333333333333,
+    0.8666666666666667,
+    0.81
+   ],
+   "candidate": false,
+   "majority": 0.19666666666666666
+  },
+  "6": {
+   "n_eval": 300,
+   "n_answers": 2,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.8466666666666667,
+    0.8466666666666667,
+    0.8466666666666667
+   ],
+   "fewshot": [
+    0.68,
+    0.7233333333333334,
+    0.6933333333333334
+   ],
+   "best_arm": "zeroshot",
+   "best": [
+    0.8466666666666667,
+    0.8466666666666667,
+    0.8466666666666667
+   ],
+   "candidate": false,
+   "majority": 0.51
+  },
+  "7": {
+   "n_eval": 300,
+   "n_answers": 3,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.20666666666666667,
+    0.20666666666666667,
+    0.20666666666666667
+   ],
+   "fewshot": [
+    0.7033333333333334,
+    0.6666666666666666,
+    0.54
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.7033333333333334,
+    0.6666666666666666,
+    0.54
+   ],
+   "candidate": false,
+   "majority": 0.5266666666666666
+  },
+  "8": {
+   "n_eval": 286,
+   "n_answers": 4,
+   "coverage": 0.5714285714285714,
+   "expressible": false,
+   "zeroshot": [
+    0.6013986013986014,
+    0.6013986013986014,
+    0.6013986013986014
+   ],
+   "fewshot": [
+    0.8356643356643356,
+    0.8671328671328671,
+    0.8006993006993007
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.8356643356643356,
+    0.8671328671328671,
+    0.8006993006993007
+   ],
+   "candidate": false,
+   "majority": 0.4195804195804196
+  },
+  "9": {
+   "n_eval": 300,
+   "n_answers": 2,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.88,
+    0.88,
+    0.88
+   ],
+   "fewshot": [
+    0.8466666666666667,
+    0.8366666666666667,
+    0.7933333333333333
+   ],
+   "best_arm": "zeroshot",
+   "best": [
+    0.88,
+    0.88,
+    0.88
+   ],
+   "candidate": false,
+   "majority": 0.6266666666666667
+  },
+  "10": {
+   "n_eval": 300,
+   "n_answers": 3,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.7266666666666667,
+    0.7266666666666667,
+    0.7266666666666667
+   ],
+   "fewshot": [
+    0.47,
+    0.7266666666666667,
+    0.7033333333333334
+   ],
+   "best_arm": "zeroshot",
+   "best": [
+    0.7266666666666667,
+    0.7266666666666667,
+    0.7266666666666667
+   ],
+   "candidate": false,
+   "majority": 0.43666666666666665
+  },
+  "11": {
+   "n_eval": 300,
+   "n_answers": 6,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.6433333333333333,
+    0.6433333333333333,
+    0.6433333333333333
+   ],
+   "fewshot": [
+    0.84,
+    0.84,
+    0.8266666666666667
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.84,
+    0.84,
+    0.8266666666666667
+   ],
+   "candidate": false,
+   "majority": 0.19
+  },
+  "12": {
+   "n_eval": 300,
+   "n_answers": 6,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.7366666666666667,
+    0.7366666666666667,
+    0.7366666666666667
+   ],
+   "fewshot": [
+    0.8066666666666666,
+    0.8133333333333334,
+    0.8
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.8066666666666666,
+    0.8133333333333334,
+    0.8
+   ],
+   "candidate": false,
+   "majority": 0.19
+  },
+  "13": {
+   "n_eval": 300,
+   "n_answers": 6,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.6866666666666666,
+    0.6866666666666666,
+    0.6866666666666666
+   ],
+   "fewshot": [
+    0.9166666666666666,
+    0.9533333333333334,
+    0.9566666666666667
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.9166666666666666,
+    0.9533333333333334,
+    0.9566666666666667
+   ],
+   "candidate": false,
+   "majority": 0.2
+  },
+  "14": {
+   "n_eval": 300,
+   "n_answers": 6,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.4766666666666667,
+    0.4766666666666667,
+    0.4766666666666667
+   ],
+   "fewshot": [
+    0.49333333333333335,
+    0.48333333333333334,
+    0.45666666666666667
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.49333333333333335,
+    0.48333333333333334,
+    0.45666666666666667
+   ],
+   "candidate": false,
+   "majority": 0.21
+  },
+  "15": {
+   "n_eval": 300,
+   "n_answers": 4,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.24666666666666667,
+    0.24666666666666667,
+    0.24666666666666667
+   ],
+   "fewshot": [
+    0.31333333333333335,
+    0.4766666666666667,
+    0.37
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.31333333333333335,
+    0.4766666666666667,
+    0.37
+   ],
+   "candidate": true,
+   "majority": 0.3433333333333333
+  },
+  "16": {
+   "n_eval": 300,
+   "n_answers": 4,
+   "coverage": 1.0,
+   "expressible": true,
+   "zeroshot": [
+    0.7466666666666667,
+    0.7466666666666667,
+    0.7466666666666667
+   ],
+   "fewshot": [
+    0.56,
+    0.5166666666666667,
+    0.5366666666666666
+   ],
+   "best_arm": "zeroshot",
+   "best": [
+    0.7466666666666667,
+    0.7466666666666667,
+    0.7466666666666667
+   ],
+   "candidate": false,
+   "majority": 0.29
+  },
+  "17": {
+   "n_eval": 300,
+   "n_answers": 2,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "fewshot": [
+    0.4533333333333333,
+    0.5433333333333333,
+    0.56
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.4533333333333333,
+    0.5433333333333333,
+    0.56
+   ],
+   "candidate": false,
+   "majority": 0.5466666666666666
+  },
+  "18": {
+   "n_eval": 300,
+   "n_answers": 2,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.6833333333333333,
+    0.6833333333333333,
+    0.6833333333333333
+   ],
+   "fewshot": [
+    0.79,
+    0.8233333333333334,
+    0.76
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.79,
+    0.8233333333333334,
+    0.76
+   ],
+   "candidate": false,
+   "majority": 0.5266666666666666
+  },
+  "20": {
+   "n_eval": 300,
+   "n_answers": 7,
+   "coverage": 1.0,
+   "expressible": false,
+   "zeroshot": [
+    0.68,
+    0.68,
+    0.68
+   ],
+   "fewshot": [
+    0.7933333333333333,
+    0.8433333333333334,
+    0.7633333333333333
+   ],
+   "best_arm": "fewshot",
+   "best": [
+    0.7933333333333333,
+    0.8433333333333334,
+    0.7633333333333333
+   ],
+   "candidate": false,
+   "majority": 0.19666666666666666
+  }
+ },
+ "candidates": [
+  2,
+  4,
+  15
+ ],
+ "hard_but_inexpressible": [
+  3,
+  14,
+  17
+ ],
+ "verdict": "SEARCH SUCCEEDS (candidates besides task 2: [4, 15] -- these get the full arm set with a supervised opponent in V-52)"
+}

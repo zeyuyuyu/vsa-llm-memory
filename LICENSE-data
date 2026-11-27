@@ -1,0 +1,21 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Zeyu Wang and Nabil Imam
+
+The preregistrations (prereg/), the run outputs and verdicts (results/), the simulated operational logs and the
+generated solver problems (data/), the figure data and rendered figures (figures/figdata/, figures/figs/), and the
+ledger (ledger/) of this repository are licensed under the Creative Commons Attribution 4.0 International License.
+To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/ .
+
+You are free to share and adapt this material for any purpose, provided that you give appropriate credit (cite the
+manuscript listed in README.md), provide a link to the license, and indicate if changes were made.
+
+Exceptions (not ours; their own terms apply):
+- figures/figdata/benchmarks/babilong_leaderboard_v0_results.csv: values of the public BABILong leaderboard
+  (RMT-team/babilong), kept so that the plotted leaderboard values can be checked.
+- figures/figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md: the README of NVIDIA/RULER (Apache License 2.0),
+  kept as the source of the leaderboard values plotted in Fig. 2c.
+- figures/figdata/benchmarks/armt_table1_arxiv2407.04841.txt: a transcription of Table 1 of Rodkin et al.,
+  arXiv:2407.04841, kept as the source of the ARMT values plotted in Fig. 2a and Supplementary Fig. 3.
+- Answers of GPT-6.1 Sol and Claude Opus 5.5 in results/ were produced through the providers' APIs and are released
+  as run outputs; questions, gold answers and sample ids of BABILong, RULER and CLUTRR belong to those benchmarks.

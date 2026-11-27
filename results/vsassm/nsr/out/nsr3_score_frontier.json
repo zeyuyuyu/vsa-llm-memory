@@ -1,0 +1,52 @@
+{
+ "history": {
+  "biobank": 0.9333,
+  "ALL": 0.8739,
+  "home": 0.8375,
+  "ops": 0.9625,
+  "warehouse": 0.725
+ },
+ "gpt61_strict": {
+  "warehouse": 0.85,
+  "ALL": 0.8304,
+  "biobank": 0.7167,
+  "home": 0.75,
+  "ops": 0.9437
+ },
+ "gpt61n_strict": {
+  "warehouse": 0.85,
+  "ALL": 0.8587,
+  "biobank": 0.7167,
+  "home": 0.8313,
+  "ops": 0.9437
+ },
+ "llm_qwen3-32b_forced": {
+  "warehouse": 0.1125,
+  "ALL": 0.2022,
+  "biobank": 0.0833,
+  "home": 0.0875,
+  "ops": 0.4062
+ },
+ "sor": {
+  "biobank": 0.0667,
+  "ALL": 0.2174,
+  "home": 0.1625,
+  "ops": 0.3625,
+  "warehouse": 0.15
+ },
+ "final": {
+  "biobank": 0.05,
+  "ALL": 0.0413,
+  "home": 0.0187,
+  "ops": 0.075,
+  "warehouse": 0.0125
+ },
+ "sanity": {
+  "biobank": 1.0,
+  "ALL": 1.0,
+  "home": 1.0,
+  "ops": 1.0,
+  "warehouse": 1.0
+ },
+ "n_questions": 460
+}

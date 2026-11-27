@@ -1,0 +1,116 @@
+{
+ "prereg": "b5a6828",
+ "step": 5,
+ "answerable_n": 204,
+ "judged_n": 287,
+ "store_validity_gate": true,
+ "store": {
+  "wrong_full300_mean": 7.666666666666667,
+  "wrong_answerable_mean": 0.6666666666666666,
+  "acc_answerable": 0.9967320261437909,
+  "per_seed_full_em": {
+   "42": 0.97,
+   "123": 0.9766666666666667,
+   "456": 0.9766666666666667
+  }
+ },
+ "v124_completeness_dropped": [
+  [
+   "deepseek/deepseek-v4-pro",
+   1,
+   [
+    "single_pass",
+    "evidence_in_prompt"
+   ]
+  ],
+  [
+   "deepseek/deepseek-v4-pro",
+   2,
+   [
+    "single_pass",
+    "evidence_in_prompt"
+   ]
+  ],
+  [
+   "moonshotai/kimi-k3",
+   1,
+   [
+    "single_pass"
+   ]
+  ],
+  [
+   "deepseek/deepseek-v4-flash",
+   2,
+   [
+    "single_pass"
+   ]
+  ]
+ ],
+ "models": {
+  "qwen/qwen3.8-2.4t-a95b": {
+   "single_pass": {
+    "full_acc": 0.49,
+    "ans_acc": 0.607843137254902,
+    "ans_acc_form_credited": 0.8406862745098039,
+    "er_raw_full": 0.9498910675381265,
+    "er_raw_ans": 0.9916666666666666,
+    "er_cons_ans": 0.9794871794871794
+   },
+   "evidence_in_prompt": {
+    "full_acc": 0.9566666666666667,
+    "ans_acc": 0.9656862745098039,
+    "ans_acc_form_credited": 0.9656862745098039
+   }
+  },
+  "z-ai/glm-5.3": {
+   "single_pass": {
+    "full_acc": 0.5516666666666667,
+    "ans_acc": 0.6299019607843137,
+    "ans_acc_form_credited": 0.8848039215686274,
+    "er_raw_full": 0.942998760842627,
+    "er_raw_ans": 0.9911699779249448,
+    "er_cons_ans": 0.9716312056737588
+   },
+   "evidence_in_prompt": {
+    "full_acc": 0.995,
+    "ans_acc": 0.9950980392156863,
+    "ans_acc_form_credited": 0.9950980392156863
+   }
+  },
+  "moonshotai/kimi-k3": {
+   "single_pass": {
+    "full_acc": 0.55,
+    "ans_acc": 0.6274509803921569,
+    "ans_acc_form_credited": 0.9019607843137255,
+    "er_raw_full": 0.9432098765432099,
+    "er_raw_ans": 0.9912280701754386,
+    "er_cons_ans": 0.9666666666666666
+   },
+   "evidence_in_prompt": {
+    "full_acc": 0.9933333333333333,
+    "ans_acc": 1.0,
+    "ans_acc_form_credited": 1.0
+   }
+  },
+  "deepseek/deepseek-v4-flash": {
+   "single_pass": {
+    "full_acc": 0.5033333333333333,
+    "ans_acc": 0.5980392156862745,
+    "ans_acc_form_credited": 0.8872549019607843,
+    "er_raw_full": 0.9485458612975393,
+    "er_raw_ans": 0.991869918699187,
+    "er_cons_ans": 0.9710144927536232
+   },
+   "evidence_in_prompt": {
+    "full_acc": 0.9833333333333333,
+    "ans_acc": 0.9901960784313726,
+    "ans_acc_form_credited": 0.9901960784313726
+   }
+  }
+ },
+ "per_row_dumps": {
+  "v124": "present",
+  "v108_all_files": "ABSENT (qwen3-8b not restrictable)",
+  "phi2_v65": "per-seed means only, ABSENT"
+ }
+}

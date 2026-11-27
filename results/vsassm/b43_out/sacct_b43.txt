@@ -1,0 +1,31 @@
+JobID                                   JobName  Partition    Account    Elapsed ElapsedRaw      State                                     AllocTRES 
+15836667                              b43_ppdev   gpu-h100 gts-nimam6   00:46:41       2801  COMPLETED billing=35160,cpu=8,gres/gpu:h100=1,gres/gpu+ 
+15836670                              b43_dev16   gpu-h100 gts-nimam6   00:49:40       2980  COMPLETED billing=35160,cpu=8,gres/gpu:h100=1,gres/gpu+ 
+15837470                 b43_r128_niah_single_1   gpu-h200 gts-nimam6   02:00:30       7230  COMPLETED billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu+ 
+15837481                 b43_r128_niah_single_2   gpu-h100 gts-nimam6   05:35:57      20157  COMPLETED billing=35160,cpu=8,gres/gpu:h100=1,gres/gpu+ 
+15837483                 b43_r128_niah_single_3   gpu-a100 gts-nimam6   04:03:28      14608 CANCELLED+ billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu+ 
+15837484               b43_r128_niah_multikey_1   gpu-h200 gts-nimam6   05:59:29      21569    RUNNING billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu+ 
+15837486               b43_r128_niah_multikey_2   gpu-h200 gts-nimam6   01:39:28       5968  COMPLETED billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu+ 
+15837487               b43_r128_niah_multikey_3   gpu-a100 gts-nimam6   03:13:43      11623  COMPLETED billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu+ 
+15837488               b43_r128_niah_multivalue   gpu-a100 gts-nimam6   04:51:38      17498 CANCELLED+ billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu+ 
+15837489               b43_r128_niah_multiquery   gpu-h200 gts-nimam6   05:34:49      20089  COMPLETED billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu+ 
+15837490                            b43_r128_vt   gpu-a100 gts-nimam6   05:04:16      18256  COMPLETED billing=18587,cpu=8,gres/gpu:a100=1,gres/gpu+ 
+15837493                             b43_ppdev2 gpu-h200,+ gts-nimam6   00:00:00          0 CANCELLED+                                               
+15838072                             b43_pptest   gpu-h200 gts-nimam6   00:51:24       3084  COMPLETED billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu+ 
+15838971                  b43_r64_niah_single_1   gpu-h200 gts-nimam6   00:37:06       2226 CANCELLED+ billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu+ 
+15838973                  b43_r64_niah_single_2   gpu-h200 gts-nimam6   00:23:15       1395 CANCELLED+ billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu+ 
+15838974                  b43_r64_niah_single_3   gpu-h200 gts-nimam6   00:16:44       1004 CANCELLED+ billing=52381,cpu=8,gres/gpu:h200=1,gres/gpu+ 
+15838975                b43_r64_niah_multikey_1 gpu-h200,+ gts-nimam6   00:00:00          0 CANCELLED+                                               
+15838976                b43_r64_niah_multikey_2 gpu-h200,+ gts-nimam6   00:00:00          0 CANCELLED+                                               
+15838977                b43_r64_niah_multikey_3 gpu-h200,+ gts-nimam6   00:00:00          0 CANCELLED+                                               
+15838978                b43_r64_niah_multivalue gpu-h200,+ gts-nimam6   00:00:00          0 CANCELLED+                                               
+15838979                b43_r64_niah_multiquery gpu-h200,+ gts-nimam6   00:00:00          0 CANCELLED+                                               
+15838980                             b43_r64_vt gpu-h200,+ gts-nimam6   00:00:00          0 CANCELLED+                                               
+15845044             b43_r128s_niah_single_3_50 gpu-h200,+ gts-nimam6   00:00:00          0    PENDING                                               
+15845045             b43_r128s_niah_single_3_75 gpu-h200,+ gts-nimam6   00:00:00          0    PENDING                                               
+15845317           b43_r128s_niah_multikey_1_50 gpu-h200,+ gts-nimam6   00:00:00          0    PENDING                                               
+15845318           b43_r128s_niah_multikey_1_75 gpu-h200,+ gts-nimam6   00:00:00          0    PENDING                                               
+15845319           b43_r128s_niah_multivalue_50 gpu-h200,+ gts-nimam6   00:00:00          0    PENDING                                               
+15845320           b43_r128s_niah_multivalue_75 gpu-h200,+ gts-nimam6   00:00:00          0    PENDING                                               
+15848303            b43_r128s_niah_multikey_1_0 gpu-h200,+ gts-nimam6   00:00:00          0 CANCELLED+                                               
+15848304           b43_r128s_niah_multikey_1_25 gpu-h200,+ gts-nimam6   00:00:00          0    PENDING                                               

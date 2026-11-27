@@ -1,0 +1,166 @@
+# NSR5 verdict: does the frontier model hold up as the record grows? (prereg/NSR5_prereg.md, amendments 1-6)
+
+Date: 2026-11-11. Scored once with the independent scorer (nsr/nsr5_score.py: own replay of the concatenated true events
++ nsr1_score.gold). Paired analysis: nsr/nsr5_compare.py (post hoc). Parsers: registered; underscore-normalising (n,
+preregistered sensitivity); glued-"Answer:" repair (r, frontier amendment 2, POST HOC).
+
+## Correction to the prereg's sizes
+The prereg gave prompts of ~20k (K = 4) and ~41k (K = 8) tokens. Measured: K = 4 mean 33.5k gpt tokens (36.6k Claude),
+K = 8 mean 69.8k gpt tokens (72.6k Claude, max 90.5k); K = 1 about 9.5k. The records are about 1.7x longer than stated.
+
+## Set-exact (micro-F1)
+| arm                                 | K = 1 (230)   | K = 4 (161)   | K = 8 (69)    |
+| pipeline (reader + replay)          | 0.930 (0.965) | 0.801 (0.959) | 0.710 (0.942) |
+| gpt-6.1-sol xhigh, registered       | 0.922 (0.963) | 0.677 (0.897) | 0.739 (0.848) |
+|   normalised                        | 0.926 (0.965) | 0.702 (0.904) | 0.739 (0.849) |
+|   repaired                          | 0.943 (0.978) | 0.702 (0.932) | 0.783 (0.933) |
+|   repaired + normalised             | 0.948 (0.979) | 0.727 (0.939) | 0.783 (0.935) |
+| Opus 5.5 medium, registered         | 0.852 (0.930) | 0.714 (0.928) | 0.536 (0.865) |
+|   normalised (= repaired+normalised)| 0.935 (0.980) | 0.845 (0.959) | 0.754 (0.894) |
+K = 1 gpt = NSR1 frontier addendum after correction 1 (dropped stream re-run); 0.917 before it.
+Per scenario, K = 8 (warehouse / biobank / home / ops): pipeline .17/.33/1.0/.83; gpt registered .42/.33/.92/.88,
+repaired .42/.56/.92/.92; Opus normalised .50/.22/.92/.92.
+Per scenario, K = 4: pipeline .50/.62/.93/.89; gpt registered .75/.62/.73/.61, repaired+normalised .86/.67/.80/.61;
+Opus normalised .75/.43/.96/.93.
+
+## Registered bars (primary arm gpt-6.1-sol, registered parse)
+- Z1 pipeline - frontier set-exact at K = 8 >= 0.10: -0.029 (paired CI -0.130 to +0.072). FAIL.
+- Z2 (K = 8 gap) - (K = 1 gap) >= 0.10: -0.029 - (+0.013 as registered; +0.009 after correction 1) = -0.042 / -0.038. FAIL.
+- Z3 pipeline - frontier micro-F1 at K = 8 >= 0.03: +0.094. PASS on the registered parse.
+  With the stream-reassembly repair (post hoc) the gap is +0.008: FAIL. The registered pass comes from 6 K = 8 answers whose
+  "Answer:" line the gateway glued to a progress note (no answer parsed), not from the model's state tracking.
+  Read: on the model's own answers, Z3 does not hold.
+
+## Secondary bars (Opus 5.5 at effort medium; Z2 uses its own K = 1 gap)
+| bar | registered parse                        | normalised parse                        |
+| Z1  | +0.174 (CI +0.043 to +0.304) PASS        | -0.043 (CI -0.130 to +0.043) FAIL        |
+| Z2  | +0.174 - (+0.078) = +0.096 FAIL          | -0.043 - (-0.004) = -0.039 FAIL          |
+| Z3  | +0.077 PASS                              | +0.048 PASS                              |
+Opus's registered losses are a format effect: it writes item IDs with underscores ("house_keys, phone_charger"), which
+the registered parser does not match (home K = 8 0.29 registered, 0.92 normalised). The normalised Z3 pass is real: at K = 8
+Opus ties on set-exact but misses items, mostly in biobank (biobank 0.80 / 0.43 / 0.22 at K = 1 / 4 / 8). At K = 4 its
+micro-F1 equals the pipeline's (0.959 vs 0.959).
+
+## K = 4 (reported on every measure, no bar)
+gpt registered 0.677 vs pipeline 0.801: +0.124 (CI +0.043 to +0.205); repaired + normalised +0.075 (CI -0.006 to +0.155).
+21 of 161 calls used the whole 32,000-token reasoning budget with no answer (ops 13, home 8; 25 calls reached exactly 32,000,
+4 of them with a partial text). That is 13% at K = 4 against 2 of 69 (3%) at K = 8, so the K = 4 deficit (ops 0.61) is
+budget exhaustion, not a wrong answer. The 64k sensitivity re-run (frontier amendment 1, rule 3) was NOT run: about 21 x USD
+1.9, and the Sidrune wallet holds USD 8.06. It runs on top-up.
+(The gateway did not enforce the 32k cap consistently at K = 8: 2 of 69 calls went past it, one to 80,194 tokens.)
+Opus normalised 0.845 vs pipeline 0.801: -0.043 (CI -0.112 to +0.019).
+
+## Effort sensitivity (amendment 6, not used for any bar): Opus 5.5 at xhigh on K = 8
+68 of 69 questions (the budget guard stopped the last). Normalised 0.725 (micro-F1 0.771) vs 0.754 (0.894) at medium.
+12 calls used the whole 64,000-token budget with no answer, 11 of them the 12 warehouse questions (warehouse 0.08).
+On the 56 questions that finished at xhigh: 50 right vs 46 at medium. Biobank rises from 2/9 to 6/9.
+Read: thinking longer helps the nested-containment questions and costs the aisle questions their answer. USD 33.26 vs 18.25.
+K = 1 at xhigh: 17 of 230 calls before the USD 180 guard; not scored.
+
+## Predictions (made before any result)
+gpt: K = 8 set-exact about 0.45, K = 4 about 0.6, K = 8 micro-F1 about 0.85, so Z1-Z3 hold.
+Outcome: 0.739, 0.677, 0.848. The K = 8 set-exact prediction was wrong by 0.29. The F1 and K = 4 predictions were close for
+the wrong reason (glued answers and budget exhaustion, not degraded tracking). Z1 and Z2 fail.
+Opus: K = 1 about 0.90, K = 8 about 0.6, Z1 holds. Outcome: 0.852 / 0.935 normalised at K = 1; 0.536 / 0.754 at K = 8;
+Z1 holds only on the registered parse, through the underscore format effect.
+
+## Conclusion
+Up to 8 days of record (about 70k tokens), neither frontier model falls behind the read-then-replay pipeline on set-exact
+accuracy. The registered bars that test that (Z1, Z2) fail for both models. What separates them is not state tracking
+but three operational failures of the frontier arm: answers that use up the reasoning budget (gpt K = 4: 13%; Opus xhigh
+K = 8 warehouse: 11/12), transport artefacts (glued answers), and output format (underscore IDs). Opus also loses item-level
+recall at K = 8 in the deepest-nesting scenario (biobank). The pipeline itself degrades with K (0.93 -> 0.80 -> 0.71), mostly
+in warehouse aisle-closure questions, where reader errors accumulate across days.
+The errors are complementary: at K = 8, pipeline or gpt-repaired is right on 58/69 (0.84); at K = 1 on 0.99.
+As the prereg stated in advance for this outcome, the pipeline's case at these scales rests on cost (USD 0 vs about
+USD 0.2-0.5 per question for gpt-6.1-sol at K = 8), latency, on-device operation, traceability and the absence of
+budget-exhaustion failures, not on accuracy.
+
+## Spend
+Sidrune (gpt-6.1-sol): K = 8 USD 31.1 (69 calls + re-runs, one re-run alone USD 6.90), K = 4 about USD 15.0. Wallet USD 8.06.
+Anthropic ledger (nsr/out/api/claude_ledger.jsonl), USD 162.04 of the USD 180 budget:
+  Fable 5.1 calibration and exploratory sample USD 57.48 (not scored; amendment 5);
+  Opus 5.5: K = 8 medium 18.25, K = 1 medium 10.12, K = 4 medium 22.25, NSR3 medium 19.51, K = 8 xhigh 33.26, K = 1 xhigh 1.16.
+
+## Literature check (conclusion -> literature)
+PARTIAL CONFLICT: TLDM (arXiv 2505.14925, abstract read): none of seven frontier LLMs keeps a stable understanding of a novel's
+storyworld configuration beyond 64k tokens. Here two 2026 reasoning models track state at a mean of 70k tokens as well as a
+replay pipeline. Differences: structured operational logs, not prose; reasoning models; questions about the final state.
+CONSISTENT: "The Deterministic Horizon" (arXiv 2606.00376, abstract read): extended chain-of-thought can degrade
+deterministic state tracking. Here more thinking (Opus xhigh) lowered set-exact and micro-F1 at K = 8 through budget
+exhaustion, though it helped biobank.
+NOT VERIFIED: Ai2 StateBench (frontier models fail on the hardest long state-tracking tier) is known only from secondary
+news coverage; not used.
+
+## Files
+Answers of record: nsr/out/api/nsr5_K{4,8}_gpt-6.1-sol_xhigh.final.jsonl, nsr/out/api/nsr5_K{4,8}_claude-opus-5-5_medium.jsonl,
+nsr/out/api/nsr5_K8_claude-opus-5-5_xhigh.jsonl, nsr/out/api/nsr1_claude-opus-5-5_medium.jsonl.
+Parsed: nsr/out/nsr5_K{4,8}_{pipeline,frontier,frontiern,frontierr,frontierrn,opus,opusn,opusrn,opusx,opusxn}.jsonl,
+nsr/out/nsr1_nsr1_arm3{,n}_opus*_strict.jsonl.
+
+## Addendum (2026-11-12): K = 4 64k sensitivity (amendment 7; frontier amendment 1, rule 3; not used for any bar)
+The 21 K = 4 questions whose Sidrune call used the whole 32,000-token budget with no answer were re-run once at 64,000
+tokens, same model id (gpt-6.1-sol), same prompts, xhigh, through api.openai.com (Sidrune wallet USD 1.53).
+nsr/out/api/nsr5_K4_gpt-6.1-sol_xhigh_64k.jsonl; merged answer file ..._64kmerged.jsonl (the 21 records replaced).
+- All 21 finished, 0 errors, 0 hit the limit. They used 251-4,144 completion tokens (median 629), 6-85 s each.
+  On Sidrune every one of them had used 32,000+. So the 64k budget was never needed: none came within 10% of 32k.
+- 20 of 21 are right (one ops us-east-1 region question misses 1 of 4 services).
+- K = 4 set-exact with the 21 counted: registered 0.801 (micro-F1 0.931), normalised 0.826, repaired 0.826,
+  repaired + normalised 0.851 (0.971). Per scenario (registered): warehouse .75, biobank .62, home .88, ops .82.
+- Pipeline - frontier at K = 4: registered +0.000 (paired CI -0.068 to +0.068; 16 only-pipeline, 16 only-frontier);
+  repaired + normalised -0.050 (CI -0.118 to +0.012). It was +0.124 with the 21 scored as no answer.
+- Cost: 494,708 input + 19,727 output tokens = about USD 1.19 at USD 2 / 10 per million (list price from third-party
+  trackers; OpenAI's page not read directly).
+Prediction (amendment 7): most finish and are right, gap about +0.03. Outcome: all finish, 20/21 right, gap 0.000.
+Direction right; the gap closed fully.
+Read: the K = 4 deficit was budget exhaustion, as stated above, and with the budget question removed gpt-6.1-sol ties the
+pipeline at K = 4 too. But the route matters and is now a confound: the same questions that ran away to 32k on
+Sidrune finished in under 4.2k on OpenAI direct. On Sidrune, home/ops calls that did finish had a median of about 500
+tokens but a p90 of 26-31k. If the direct route had that tail, about 30% of these 21 would pass 25k; none passed 4.2k
+(chance about 0.7^21 < 0.001 under Sidrune's distribution). So the runaway-reasoning tail, like the glued answers, may be a
+property of the Sidrune route rather than of the model. Amendment 8 tests that.
+
+## Addendum (2026-11-12): route replication on OpenAI direct (amendment 8)
+The whole gpt arm re-run on api.openai.com at the registered settings (gpt-6.1-sol, xhigh, 32,000-token budget, same
+prompts). 460 calls (K = 1 230, K = 4 161, K = 8 69): all valid, 0 transport errors, 0 hit the budget, 0 glued
+"Answer:" lines. Completion tokens: median 355 / 735 / 852, p90 1,762 / 10,632 / 16,614, max 3,103 / 13,174 / 29,863.
+Cost about USD 27 (4.12M + 3.50M + 1.53M input, 0.97M output, at USD 2 / 10 per million).
+Files: nsr/out/api/nsr5_K{4,8}_gpt-6.1-sol_xhigh_direct.jsonl, nsr1_gpt-6.1-sol_xhigh_direct.jsonl.
+Cost and time per question on the direct route (mean; median in brackets): K = 4 USD 0.075 (0.055) and 51 s (19 s);
+K = 8 USD 0.152 (0.103) and 83 s (21 s); K = 1 USD 0.020 (0.016) and 12 s (8 s).
+
+| set-exact (micro-F1)          | K = 1 (230)   | K = 4 (161)   | K = 8 (69)    |
+| pipeline                      | 0.930 (0.965) | 0.801 (0.959) | 0.710 (0.942) |
+| gpt via Sidrune, registered   | 0.922 (0.963) | 0.677 (0.897) | 0.739 (0.848) |
+| gpt via Sidrune, rep. + norm. | 0.948 (0.979) | 0.727 (0.939) | 0.783 (0.935) |
+| gpt via OpenAI direct (*)     | 0.952 (0.983) | 0.925 (0.986) | 0.855 (0.983) |
+(*) registered, normalised and repaired parses give identical scores on this route.
+Per scenario, direct (warehouse / biobank / home / ops): K = 4 .93/.71/.98/.95; K = 8 .75/.67/.92/.92.
+Pipeline - direct (paired): K = 1 -0.022 (CI -0.061 to +0.022); K = 4 -0.124 (CI -0.186 to -0.062; 5 only-pipeline,
+25 only-direct); K = 8 -0.145 (CI -0.261 to -0.043; 3 / 13).
+Bars recomputed on the direct route (reported, not replacing the registered outcomes): Z1 -0.145 FAIL; Z2 -0.145 - (-0.022)
+= -0.123 FAIL; Z3 0.942 - 0.983 = -0.041 FAIL.
+Predictions (amendment 8): (1) hit_limit at most 2%: holds (0%). (2) parses agree: holds (identical). (3) K = 4 at least
+0.78, K = 8 at least 0.70: holds (0.925, 0.855). (4) Z1 fails: holds. All four held. I did not predict that the frontier
+model would beat the pipeline.
+
+Why the routes differ. For the same prompt text, Sidrune's reported prompt_tokens are 0.72-2.71 times OpenAI's (median
+1.13 at every K). One tokenizer cannot give that spread on identical text, so Sidrune's "gpt-6.1-sol" is a different
+model or deployment, or its usage figures are not the model's. Quality differs as well as budget: on the questions where
+Sidrune finished (no budget exhaustion), the direct route is right on 13 that Sidrune (repaired + normalised) got
+wrong and wrong on 1 that Sidrune got right at K = 4 (140 questions); at K = 8, 9 vs 4 (69). Sidrune's runaway-reasoning tail (K = 4: 21 of 161 calls at
+32k) does not occur on the direct route (largest K = 4 call 13,174 tokens).
+Correction to the conclusion above. Two of the three "operational failures of the frontier arm" (budget exhaustion,
+glued answers) belong to the Sidrune route, not to gpt-6.1-sol. The third (underscore IDs) was Opus's and is unaffected.
+On the official route, gpt-6.1-sol matches the pipeline on 1-day records and beats it on 4- and 8-day records (by 0.12 and
+0.15, CIs excluding 0). The pipeline's case is therefore cost (USD 0 vs about USD 0.02 / 0.07 / 0.15 per question at
+K = 1 / 4 / 8 on the direct route), latency, on-device operation and traceability, not accuracy, and at K >= 4 it is
+less accurate. The Opus 5.5 arm (Anthropic direct) is unaffected by the route question.
+Literature check (route finding -> literature). CONSISTENT: model substitution by API resellers is a known, hard-to-detect
+problem. Cai et al. (arXiv 2504.04715) formalise substitution detection in LLM APIs and find output-based tests weak
+against quantised or randomised substitution. Zhu et al. (arXiv 2506.06975) audit black-box APIs with a rank-based test.
+Both were read only through their abstracts and secondary summaries. Our evidence is of a different kind and simpler: inconsistent token
+accounting on identical prompts, plus a measured accuracy and reasoning-length difference on a fixed task. It does not
+identify what Sidrune serves.
+The finding also sharpens the earlier PARTIAL CONFLICT with TLDM (arXiv 2505.14925): on the official route a 2026
+reasoning model tracks state over 8-day, about 70k-token operational logs better than a replay pipeline.

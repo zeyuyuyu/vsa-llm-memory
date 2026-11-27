@@ -1,0 +1,58 @@
+[
+ {
+  "task": "variable_tracking",
+  "P1_test": 0.488,
+  "majority": 0.512,
+  "bow": 0.497,
+  "probe_test": [
+   0.6600000262260437,
+   0.6600000262260437,
+   0.6360000371932983
+  ],
+  "probe_mean": 0.6520000298817953,
+  "admitted": true,
+  "trainable": 5122
+ },
+ {
+  "task": "rule_priority",
+  "P1_test": 0.483,
+  "majority": 0.517,
+  "bow": 0.48,
+  "probe_test": [
+   0.9920000433921814,
+   0.9940000176429749,
+   0.9880000352859497
+  ],
+  "probe_mean": 0.9913333654403687,
+  "admitted": false,
+  "trainable": 5122
+ },
+ {
+  "task": "state_update",
+  "P1_test": 0.498,
+  "majority": 0.502,
+  "bow": 0.489,
+  "probe_test": [
+   0.9330000281333923,
+   0.9330000281333923,
+   0.937000036239624
+  ],
+  "probe_mean": 0.9343333641688029,
+  "admitted": true,
+  "trainable": 5122
+ },
+ {
+  "task": "binding_test",
+  "P1_test": 0.497,
+  "majority": 0.503,
+  "bow": 0.517,
+  "probe_test": [
+   0.9860000610351562,
+   0.9810000658035278,
+   0.987000048160553
+  ],
+  "probe_mean": 0.9846667249997457,
+  "admitted": false,
+  "trainable": 5122
+ }
+]

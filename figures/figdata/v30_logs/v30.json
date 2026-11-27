@@ -1,0 +1,38 @@
+{
+ "task": 1,
+ "n_sym": 10,
+ "recency_frac": 0.65,
+ "n_train": 900,
+ "n_eval": 500,
+ "arms": {
+  "floor": [
+   0.78,
+   0.782,
+   0.752
+  ],
+  "parser_plain": [
+   0.67,
+   0.66,
+   0.66
+  ],
+  "parser_recency": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "probe_argmax": [
+   0.778,
+   0.774,
+   0.77
+  ],
+  "spans": [
+   0.98,
+   0.97,
+   0.978
+  ]
+ },
+ "floor": 0.7713333333333333,
+ "parser": 1.0,
+ "headroom": 0.22866666666666668,
+ "verdict": "MECHANISM FAILS ON NATURAL TEXT (the discrete handover does not transfer off synthetic markup)"
+}

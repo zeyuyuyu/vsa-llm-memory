@@ -1,0 +1,23 @@
+
+================================================================================================
+V-133 PART A (local, greedy, row-replicable)  model=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct  K=120 facts  N=150 per depth
+================================================================================================
+
+  depth  store     direct    cot       | gap(dir)  gap(cot) 
+  k=2    0.9600    0.2133    0.9200    |   +0.7467   +0.0400
+  k=3    0.8956    0.0667    0.9667    |   +0.8289   -0.0711
+  k=4    0.7978    0.0600    0.9333    |   +0.7378   -0.1356
+  k=5    0.7622    0.1000    0.9467    |   +0.6622   -0.1844
+  k=6    0.7267    0.0267    0.9200    |   +0.7000   -0.1933
+
+  ---- P0 validity gate ----
+  P0(a) task well-formed: re-derive 750/750, unique-relation 750/750: True
+  P0(b) two-hop anchor: store 0.9600 >= .95 and direct 0.2133 >= .80: False
+  P0(c) cot truncation k2=0.000, k3=0.000, k4=0.007, k5=0.000, k6=0.000 all <= .02: True
+
+  >>> P0 GATE FAILS. No reading is taken from PART A (local, greedy, row-replicable).
+
+================================================================================================
+V-133 VERDICT: no reading taken (completeness or gate).
+================================================================================================
+V133-SCORED

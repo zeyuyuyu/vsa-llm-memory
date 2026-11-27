@@ -1,0 +1,122 @@
+12 of 12 conditions
+{
+ "store_first": 47.737,
+ "store_final": 48.516,
+ "index": 39.761,
+ "static": 32.812,
+ "cms": 33.811,
+ "bloom": 31.829,
+ "fly": 36.927,
+ "sdm": 45.512,
+ "best_keyfree": 45.606,
+ "store_first_minus_best_keyfree": {
+  "mean": 2.13,
+  "ci95": [
+   1.349,
+   2.922
+  ]
+ },
+ "store_first_minus_index": {
+  "mean": 7.976,
+  "ci95": [
+   6.766,
+   9.11
+  ]
+ },
+ "store_first_minus_static": {
+  "mean": 14.924,
+  "ci95": [
+   13.79,
+   16.053
+  ]
+ },
+ "store_first_minus_cms": {
+  "mean": 13.925,
+  "ci95": [
+   12.85,
+   14.932
+  ]
+ },
+ "store_first_minus_bloom": {
+  "mean": 15.907,
+  "ci95": [
+   14.802,
+   17.05
+  ]
+ },
+ "store_first_minus_fly": {
+  "mean": 10.81,
+  "ci95": [
+   9.992,
+   11.644
+  ]
+ },
+ "store_first_minus_sdm": {
+  "mean": 2.225,
+  "ci95": [
+   1.394,
+   3.064
+  ]
+ },
+ "store_final_minus_best_keyfree": {
+  "mean": 2.91,
+  "ci95": [
+   2.098,
+   3.715
+  ]
+ },
+ "store_final_minus_index": {
+  "mean": 8.755,
+  "ci95": [
+   7.533,
+   9.933
+  ]
+ },
+ "store_final_minus_static": {
+  "mean": 15.704,
+  "ci95": [
+   14.602,
+   16.742
+  ]
+ },
+ "store_final_minus_cms": {
+  "mean": 14.705,
+  "ci95": [
+   13.622,
+   15.693
+  ]
+ },
+ "store_final_minus_bloom": {
+  "mean": 16.687,
+  "ci95": [
+   15.613,
+   17.738
+  ]
+ },
+ "store_final_minus_fly": {
+  "mean": 11.59,
+  "ci95": [
+   10.709,
+   12.477
+  ]
+ },
+ "store_final_minus_sdm": {
+  "mean": 3.004,
+  "ci95": [
+   2.18,
+   3.819
+  ]
+ }
+}
+256 2 4 first 60.9 final 69.1 index=58.5 static=50.4 cms=51.3 bloom=54.2 fly=57.2 sdm=61.7 best=sdm 61.7
+256 2 8 first 70.7 final 74.5 index=59.6 static=51.3 cms=55.0 bloom=53.0 fly=61.0 sdm=69.8 best=sdm 69.8
+256 2 16 first 75.0 final 77.4 index=64.7 static=59.8 cms=59.4 bloom=55.4 fly=64.9 sdm=74.2 best=sdm 74.2
+256 16 4 first 20.4 final 17.9 index=14.5 static=10.7 cms=10.3 bloom=9.1 fly=9.7 sdm=15.4 best=sdm 15.4
+256 16 8 first 24.7 final 19.2 index=20.3 static=14.6 cms=17.1 bloom=11.3 fly=15.0 sdm=29.0 best=sdm 29.0
+256 16 16 first 38.5 final 39.9 index=33.2 static=15.4 cms=17.7 bloom=15.2 fly=24.4 sdm=32.1 best=index 33.2
+1024 2 4 first 66.7 final 68.3 index=53.3 static=53.0 cms=54.2 bloom=51.0 fly=55.5 sdm=61.9 best=sdm 61.9
+1024 2 8 first 69.4 final 70.5 index=55.4 static=50.2 cms=52.7 bloom=51.4 fly=56.1 sdm=66.5 best=sdm 66.5
+1024 2 16 first 68.6 final 70.1 index=62.1 static=55.1 cms=52.6 bloom=54.9 fly=60.1 sdm=67.4 best=sdm 67.4
+1024 16 4 first 17.0 final 19.7 index=13.9 static=9.7 cms=9.9 bloom=8.8 fly=10.2 sdm=17.8 best=sdm 17.8
+1024 16 8 first 25.4 final 20.0 index=15.1 static=10.7 cms=11.4 bloom=8.7 fly=12.3 sdm=25.6 best=sdm 25.6
+1024 16 16 first 35.7 final 35.4 index=26.6 static=12.9 cms=14.0 bloom=9.0 fly=16.7 sdm=24.9 best=sdm 24.9

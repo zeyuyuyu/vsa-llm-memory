@@ -1,0 +1,13 @@
+store 131072/niah_multikey_2/170650  arm T-vhdd  x32  30 d  probed keys 150  pairs 5990  values 5989  S 375
+layout {'W': 512, 'R': 6007, 'B': 1198, 'db': 15, 'wv': 358}  cells/C 1.000
+  array disp: 920064 cells, flipped 0.3745
+  array rows: 2150506 cells, flipped 0.3746
+failed 33 of 150
+  key 'aloof-validate'  want ['9901564']  got ['7833959', '7954977']
+    j=0 bucket 1140 sigma 1 decoded 1 -> row 3716 (true row 3716); in that row the best candidate is 3293 (7833959, last=0) at similarity 74 of 358; the true value+flag code at 68
+    j=1 bucket 711 sigma 0 decoded 0 -> row 4780 (true row None); in that row the best candidate is 6062 (7954977, last=1) at similarity 98 of 358; the true value+flag code at -
+  key 'versed-glove'  want ['8972402']  got ['5404575']
+    j=0 bucket 202 sigma 4 decoded 4 -> row 3796 (true row 3796); in that row the best candidate is 10809 (5404575, last=1) at similarity 74 of 358; the true value+flag code at 66
+  key 'wide-eyed-advantage'  want ['2611501']  got ['3032839', '4852007']
+    j=0 bucket 387 sigma 164 decoded 164 -> row 4446 (true row 4446); in that row the best candidate is 1050 (3032839, last=0) at similarity 74 of 358; the true value+flag code at 74
+    j=1 bucket 863 sigma 127 decoded 127 -> row 4439 (true row None); in that row the best candidate is 7563 (4852007, last=1) at similarity 72 of 358; the true value+flag code at -

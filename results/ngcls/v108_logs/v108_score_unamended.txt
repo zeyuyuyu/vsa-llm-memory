@@ -1,0 +1,54 @@
+===== V-108: does the 97%% headline survive parameter scale? =====
+  store (not re-measured, model-independent by construction): 0.974  [seed range 0.970-0.977]
+  banked: Phi-2 single_pass 0.253 / evidence_in_prompt 0.950 ; Qwen3-8B 0.397 / 0.953
+
+  model                          single_pass  evidence_in_prompt err removed    $       
+  qwen/qwen3-8b                  0.4700       0.9633             95.1%          0.135   
+  qwen/qwen3-14b                 0.3800       0.9600             95.8%          0.080   
+  qwen/qwen3-32b                 0.4633       0.9533             95.2%          0.343   
+  qwen/qwen3-30b-a3b             0.4367       0.9433             95.4%          0.131   
+  qwen/qwen3-next-80b-a3b-instruct 0.4800       0.9533             95.0%          0.030   
+  qwen/qwen3.5-122b-a10b         0.4033       0.8863             95.6%          1.790   
+  qwen/qwen3-235b-a22b           0.4365       1.0000             95.4%          0.307   
+  qwen/qwen3.5-397b-a17b         nan          nan                nan%           0.000   
+  z-ai/glm-5                     nan          nan                nan%           0.000   
+  deepseek/deepseek-v4-flash     nan          nan                nan%           0.000   
+
+  total spend $2.817
+  NOTE qwen/qwen3-14b/single_pass: 0 call errors, providers ['Alibaba', 'DeepInfra', 'NextBit']
+  NOTE qwen/qwen3-14b/evidence_in_prompt: 0 call errors, providers ['Alibaba', 'DeepInfra', 'NextBit']
+  NOTE qwen/qwen3-32b/single_pass: 0 call errors, providers ['DeepInfra', 'SiliconFlow']
+  NOTE qwen/qwen3-32b/evidence_in_prompt: 0 call errors, providers ['DeepInfra', 'SiliconFlow']
+  NOTE qwen/qwen3-30b-a3b/single_pass: 0 call errors, providers ['Alibaba', 'DeepInfra']
+  NOTE qwen/qwen3-30b-a3b/evidence_in_prompt: 0 call errors, providers ['Alibaba', 'DeepInfra']
+  NOTE qwen/qwen3-next-80b-a3b-instruct/single_pass: 0 call errors, providers ['Alibaba', 'DeepInfra', 'Google', 'Novita', 'Parasail']
+  NOTE qwen/qwen3-next-80b-a3b-instruct/evidence_in_prompt: 0 call errors, providers ['Alibaba', 'DeepInfra', 'Google', 'Novita', 'Parasail']
+  NOTE qwen/qwen3.5-122b-a10b/single_pass: 0 call errors, providers ['Alibaba', 'AtlasCloud', 'DeepInfra', 'Novita', 'SiliconFlow']
+  NOTE qwen/qwen3.5-122b-a10b/evidence_in_prompt: 1 call errors, providers ['Alibaba', 'AtlasCloud', 'DeepInfra', 'Novita', 'SiliconFlow']
+  NOTE qwen/qwen3-235b-a22b/single_pass: 103 call errors, providers ['Alibaba']
+  NOTE qwen/qwen3-235b-a22b/evidence_in_prompt: 249 call errors, providers ['Alibaba']
+  NOTE qwen/qwen3.5-397b-a17b/single_pass: 300 call errors, providers []
+  NOTE qwen/qwen3.5-397b-a17b/evidence_in_prompt: 300 call errors, providers []
+  NOTE z-ai/glm-5/single_pass: 300 call errors, providers []
+  NOTE z-ai/glm-5/evidence_in_prompt: 300 call errors, providers []
+  NOTE deepseek/deepseek-v4-flash/single_pass: 300 call errors, providers []
+  NOTE deepseek/deepseek-v4-flash/evidence_in_prompt: 300 call errors, providers []
+
+  >>> P1 gate (DIRECTIONAL, per correction 339e003): qwen/qwen3-8b single_pass 0.4700 >= 0.397 (True) and evidence_in_prompt 0.9633 vs 0.953 +-.05 (True) : True
+      for the record, the SUPERSEDED reproduction form |single_pass - .397| <= .05 would read: False (|0.4700 - 0.397| = 0.0730) -- superseded because the interface differs, not because it failed
+  >>> P2 no model crosses T1 (single_pass > 0.974) : True
+  >>> P3 no model crosses T2 (evidence_in_prompt > 0.974) : False  VIOLATED BY: [('qwen/qwen3-235b-a22b', 1.0)]
+  >>> P4 single_pass rises monotonically within the Qwen3 family : False | steps [('qwen3-14b', -0.09), ('qwen3-32b', 0.0833), ('qwen3-235b-a22b', -0.0268)]
+  >>> P5 (descriptive, no bar) error removal per model: [('qwen3-8b', '95.1%'), ('qwen3-14b', '95.8%'), ('qwen3-32b', '95.2%'), ('qwen3-30b-a3b', '95.4%'), ('qwen3-next-80b-a3b-instruct', '95.0%'), ('qwen3.5-122b-a10b', '95.6%'), ('qwen3-235b-a22b', '95.4%'), ('qwen3.5-397b-a17b', 'nan%'), ('glm-5', 'nan%'), ('deepseek-v4-flash', 'nan%')]
+
+  --- readings, as registered ---
+  REPORTED FIRST -- P3 FAILED: [('qwen/qwen3-235b-a22b', 1.0)] exceeds the store with the evidence in the prompt, so
+  'the algebra halves the residual error, 5.0%% to 2.6%%' is a small-model claim. That sentence needs
+  the qualification the bulky-evidence paragraph got after V-100 -- PROPOSED to the co-author, NOT
+  applied unilaterally, since it edits a claim sentence close to the deadline.
+  SURVIVING HALF: the error-removal headline still holds; removal stays at [('qwen3-8b', '95.1%'), ('qwen3-14b', '95.8%'), ('qwen3-32b', '95.2%'), ('qwen3-30b-a3b', '95.4%'), ('qwen3-next-80b-a3b-instruct', '95.0%'), ('qwen3.5-122b-a10b', '95.6%'), ('qwen3-235b-a22b', '95.4%'), ('qwen3.5-397b-a17b', 'nan%'), ('glm-5', 'nan%'), ('deepseek-v4-flash', 'nan%')].
+  P4 failed, which CONFIRMS the manuscript's existing line that two-hop composition 'is not bought by
+  parameter count within a generation'. Not written up as a negative.
+  scoping: GOLD-triple setting; says nothing about acquisition (end-to-end .4678 vs a fine-tune's .7333).
+  the store arm was not re-measured: no model participates in it.
+V108-SCORE-DONE

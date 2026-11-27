@@ -1,0 +1,28 @@
+qwen8    H: lin cells 12 max |diff| 0.49 pts; sign cells 0 max nan pts
+qwen8    L: checked 14 of 24 arm-cells, max |diff| L 3.712 pts, L' 3.828 pts
+b46      H: lin cells 12 max |diff| 0.50 pts; sign cells 0 max nan pts
+b46      L: checked 16 of 24 arm-cells, max |diff| L 3.841 pts, L' 3.980 pts
+llama    H: lin cells 12 max |diff| 0.48 pts; sign cells 0 max nan pts
+llama    L: checked 15 of 24 arm-cells, max |diff| L 0.052 pts, L' 0.033 pts
+mistral  H: lin cells 11 max |diff| 0.53 pts; sign cells 1 max 0.38 pts
+mistral  L: checked 13 of 24 arm-cells, max |diff| L 0.032 pts, L' 0.032 pts
+e5       H: lin cells 9 max |diff| 0.49 pts; sign cells 3 max 6.17 pts
+e5       L: checked 18 of 24 arm-cells, max |diff| L 0.056 pts, L' 0.056 pts
+bge      H: lin cells 9 max |diff| 0.27 pts; sign cells 3 max 5.95 pts
+bge      L: checked 20 of 24 arm-cells, max |diff| L 0.056 pts, L' 0.034 pts
+minilm   H: lin cells 6 max |diff| 0.48 pts; sign cells 6 max 6.11 pts
+minilm   L: checked 16 of 24 arm-cells, max |diff| L 0.062 pts, L' 0.030 pts
+b46      C2: rows by split {'dev': 3990}, guard raises on test: True
+e5       C2: rows by split {'dev': 3990}, guard raises on test: True
+bge      C2: rows by split {'dev': 3990}, guard raises on test: True
+minilm   C2: rows by split {'dev': 3990}, guard raises on test: True
+llama    C2: rows by split {'dev': 3990}, guard raises on test: True
+mistral  C2: rows by split {'dev': 3990}, guard raises on test: True
+qwen8    C2: rows by split {'dev': 3990}, guard raises on test: True
+(b) k1: agree {'D-a': True, 'S-a': True, 'T-b': True, 'D-b': True, 'S-b': True}
+(b) k2: agree {'D-a': True, 'S-a': True, 'T-b': True, 'D-b': True, 'S-b': True}
+(b) k4: agree {'D-a': True, 'S-a': True, 'T-b': True, 'D-b': True, 'S-b': True}
+(b) e05: agree {'D-a': True, 'S-a': True, 'T-b': True, 'D-b': True, 'S-b': True}
+(b) k8: agree {'D-a': True, 'S-a': True, 'T-b': True, 'D-b': True, 'S-b': True}
+(b) k16: agree {'D-a': True, 'S-a': True, 'T-b': True, 'D-b': True, 'S-b': True}
+(b) k32: agree {'D-a': True, 'S-a': True, 'T-b': True, 'D-b': True, 'S-b': True}

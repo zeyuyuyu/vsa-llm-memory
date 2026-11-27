@@ -1,0 +1,16 @@
+# B72 predictions (prereg), evaluated
+
+QA1 OPTR leads STORE on 7/7 (>= 4); |diff| <= 2.5 on all: True; OPTR - STORE < LSFR - STORE on 5/7 (>= 5) -> HELD
+QA2 LAMc leads OPTR 7/7, OPTX 7/7 over R1; at R1-V16 7/7, 7/7 (all 7) -> HELD
+QA3 NLMSc leads OPTR 3/7 (>= 4), OPTX 2/7 (>= 3) -> FAILED
+QA4 OPTX leads VSAPcX 7/7 (>= 4) -> HELD
+QA5 features term largest on 6/7 (>= 5); format term <= 0 on 5/7 (>= 5) -> HELD
+QA6 OPTQ - OPTR in [-0.5, +1.0] on 7/7 (>= 5) -> HELD
+QC1 t label = one-level label in 28/28 (>= 26); permutation rejects in 23/25 leads with |diff| >= 1 (all) -> FAILED
+QC2 width ratio t / one-level mean 1.36 (> 1.0); t / two-level mean 1.01 (< 1.0) -> FAILED
+QD1 |LAMc+ - LAMc| <= 0.5 on 5/7 (>= 5); LAMc+ takes a sign map in 6/84 cells (<= 21) -> HELD
+QD2 LAMc+ leads STORE 7/7 (7) -> HELD
+QD3 store point > LAMc in 7/84 (<= 8), all at V = 2: False; store leads in 4 (<= 3) -> FAILED
+QB1 LAMc leads STORE (of 4) at K: k3 4, k4 4, k5 4, inf 4 (>= 3 each) -> HELD
+QB2 first design leads SDMt at K = 1e3 4/4, 1e4 3/4 (>= 3 each); SDMt lead lost at 1e5 3/4 (>= 2) -> HELD
+QB3 NLMSc leads STORE at K = 1e5 4/4 (>= 3) -> HELD

@@ -1,0 +1,336 @@
+B52 literature check (raw) -- 2026-11-20
+Scope: three robustness checks (layer choice for naming head; seed/map variance; PCM drift horizon).
+Method: arXiv API metadata+abstracts (4 batch queries, 37 ids, all resolved), full-text reads of 4 PDFs
+(Nandakumar 2018 JAP preprint, Joshi 2020 arXiv, Rasch 2021 aihwkit arXiv, Le Gallo 2018 AEM preprint,
+Kim 2018 HDM), ~10 web searches, aihwkit source docstring.
+VERIFIED  = I saw the paper's abstract page / API record or read the full text.
+UNVERIFIED = only a search-result snippet or a secondary mention; do not cite without opening.
+Details marked "(venue from memory)" = arXiv record verified, published venue not re-checked.
+
+======================================================================
+TOPIC 1. Layer choice for reading discrete symbol identity from frozen LLM states
+======================================================================
+
+(a) Intermediate vs final layers: token identity / surface information
+
+T1-1  Voita, Sennrich, Titov (2019). "The Bottom-up Evolution of Representations in the Transformer:
+      A Study with Machine Translation and Language Modeling Objectives." EMNLP 2019 (venue from memory).
+      arXiv:1909.01380. VERIFIED (abstract).
+      Says: with CCA and mutual-information estimators, in left-to-right LMs "information about the past
+      ... gets vanished and predictions about the future get formed" going bottom to top; MLM partially
+      forgets token identity then reconstructs it. Most direct support for "final layer of a causal LM is
+      specialised to next-token prediction, so current-token identity is better read lower down".
+
+T1-2  Brunner, Liu, Pascual, Richter, Ciaramita, Wattenhofer (2020). "On Identifiability in
+      Transformers." ICLR 2020 (venue from memory). arXiv:1908.04211. VERIFIED (abstract).
+      Says: input tokens largely retain their identity across the model, identity information is mainly
+      in the angle of the embeddings and "gradually decreases with depth" (BERT). Supports reading
+      identity below the top, and angle-based (cosine) read-out.
+
+T1-3  Skean, Arefin, Zhao, Patel, Naghiyev, LeCun, et al. (2025). "Layer by Layer: Uncovering Hidden
+      Representations in Language Models." arXiv:2502.02013 (ICML 2025, venue from memory). VERIFIED
+      (abstract). Says: intermediate layers "consistently provide stronger features" than the last layer
+      on 32 text-embedding tasks across transformers and SSMs; explained by a compression/signal-
+      preservation trade-off. Caveat: tasks are semantic embedding tasks, not exact token identity.
+
+T1-4  Tenney, Das, Pavlick (2019). "BERT Rediscovers the Classical NLP Pipeline." ACL 2019, pp. 4593-4601.
+      arXiv:1905.05950. VERIFIED (abstract + journal_ref). Says: lower-level information (POS) is
+      localised in lower layers and higher-level (coreference) higher up, in pipeline order. Encoder-only;
+      classic citation for "surface/lexical info lives lower".
+
+T1-5  Liu, Gardner, Belinkov, Peters, Smith (2019). "Linguistic Knowledge and Transferability of
+      Contextual Representations." NAACL 2019 (venue from memory). arXiv:1903.08855. VERIFIED (abstract).
+      Says: linear probes on frozen layers; higher RNN layers are more task-specific, while transformer
+      layers do not show a monotonic trend; middle layers are often the most transferable.
+
+T1-6  Belrose, Ostrovsky, McKinney, Furman, Smith, Halawi, et al. (2023). "Eliciting Latent Predictions
+      from Transformers with the Tuned Lens." arXiv:2303.08112. VERIFIED (abstract).
+      Says: trains an affine probe per block of a frozen LM to decode every hidden state to a vocabulary
+      distribution; more reliable than the earlier "logit lens" (nostalgebraist 2020, LessWrong blog --
+      UNVERIFIED, seen only as a secondary mention here). Relevant precedent for per-layer affine
+      read-outs on frozen LMs (our naming head is the same kind of object).
+
+T1-7  Feucht, Atkinson, Wallace, Bau (2024). "Token Erasure as a Footprint of Implicit Vocabulary Items
+      in LLMs." arXiv:2406.20086 (EMNLP 2024, venue from memory). VERIFIED (abstract).
+      Says: in Llama-2-7b / Llama-3-8B, the last-token representation of multi-token words and named
+      entities shows an "erasure" effect where information about previous and current tokens is rapidly
+      forgotten in EARLY layers. Caution for our hex/decimal strings: a multi-token symbol's identity is
+      re-assembled into a word-like unit, so the best read-out layer depends on whether one reads
+      per-token or whole-symbol identity.
+
+(b) How single-digit-tokenised LLMs represent multi-digit numbers
+
+T1-8  Levy, Geva (2024). "Language Models Encode Numbers Using Digit Representations in Base 10."
+      arXiv:2410.11781 (NAACL 2025, venue from memory). VERIFIED (abstract).
+      Says: probing + causal interventions show LLMs represent numbers with individual circular
+      representations PER DIGIT in base 10, not as a single value; explains digit-distributed errors.
+      Supports a digit-wise (compositional) code that a linear naming head can read at mid layers.
+
+T1-9  Zhu, Dai, Sui (2024). "Language Models Encode the Value of Numbers Linearly." arXiv:2401.03735
+      (COLING 2025, venue from memory). VERIFIED (abstract).
+      Says: linear probes read input-number values from hidden states "on different layers"; calculation
+      results are stored similarly and can be steered by vector addition.
+
+T1-10 Zhou, Fu, Sharan, Jia (2024). "Pre-trained Large Language Models Use Fourier Features to Compute
+      Addition." arXiv:2406.03445 (NeurIPS 2024, venue from memory). VERIFIED (abstract).
+      Says: numbers are represented by features sparse in the frequency domain (low freq = magnitude,
+      high freq = mod-k such as parity); pre-training is crucial for this.
+
+T1-11 Singh, Strouse (2024). "Tokenization counts: the impact of tokenization on arithmetic in frontier
+      LLMs." arXiv:2402.14903. VERIFIED (abstract).
+      Says: LLaMA/PaLM use single-digit tokenisation, GPT-3.5/4 use 1-3 digit tokens; left-to-right vs
+      right-to-left chunking changes arithmetic accuracy markedly and errors are stereotyped. Supports
+      noting that Qwen3's single-digit tokenisation shapes what a read-out head has to compose.
+
+(c) Anisotropy / common direction and centring / whitening fixes
+
+T1-12 Ethayarajh (2019). "How Contextual are Contextualized Word Representations? Comparing the Geometry
+      of BERT, ELMo, and GPT-2 Embeddings." EMNLP-IJCNLP 2019 (venue from memory). arXiv:1909.00512.
+      VERIFIED (abstract). Says: representations are not isotropic in ANY layer; same-word self-similarity
+      is much lower in upper layers (upper layers more context-specific); <5% of variance explained by a
+      static embedding.
+
+T1-13 Mu, Bhat, Viswanath (2018). "All-but-the-Top: Simple and Effective Postprocessing for Word
+      Representations." arXiv:1702.01417 (ICLR 2018, venue from memory). VERIFIED (abstract).
+      Says: removing the common mean vector and a few dominating directions makes embeddings stronger
+      on lexical and sentence tasks. Direct precedent for our centring step.
+
+T1-14 Su, Cao, Liu, Ou (2021). "Whitening Sentence Representations for Better Semantics and Faster
+      Retrieval." arXiv:2103.15316. VERIFIED (abstract).
+      Says: anisotropy is a bottleneck for BERT sentence vectors; plain whitening restores isotropy, is
+      competitive with flow-based fixes, and reduces dimension.
+
+T1-15 Timkey, van Schijndel (2021). "All Bark and No Bite: Rogue Dimensions in Transformer Language Models
+      Obscure Representational Quality." arXiv:2109.04404 (EMNLP 2021, venue from memory). VERIFIED
+      (abstract). Says: 1-3 "rogue" dimensions dominate cosine/Euclidean similarity; simple
+      standardisation corrects this and reveals representational quality.
+
+T1-16 Sun, Chen, Kolter, Liu (2024). "Massive Activations in Large Language Models." arXiv:2402.17762
+      (COLM 2024, venue from memory). VERIFIED (abstract).
+      Says: a very few activations are ~100,000x larger than the rest, largely input-independent, and act
+      as bias terms. An input-independent common component of the kind centring removes.
+
+T1-17 Razzhigaev, Mikhalchuk, Goncharova, Oseledets, Dimitrov, Kuznetsov (2023). "The Shape of Learning:
+      Anisotropy and Intrinsic Dimensions in Transformer-Based Models." arXiv:2311.05928 (EACL 2024
+      findings?, venue from memory). VERIFIED (abstract).
+      Says: in DECODERS the anisotropy profile is bell-shaped with the HIGHEST anisotropy in the MIDDLE
+      layers (encoders are flatter). NUANCE for us: mid-layer read-out is not explained by lower
+      anisotropy there; anisotropy is if anything higher at mid depth, so centring/whitening should be
+      tried at layers 9/27 as well, not only at the final layer.
+
+T1-18 Godey, de la Clergerie, Sagot (2024). "Anisotropy Is Inherent to Self-Attention in Transformers."
+      arXiv:2401.12143 (EACL 2024, venue from memory). VERIFIED (abstract).
+      Says: anisotropy appears even where the long-tailed cross-entropy explanation should not apply and
+      across modalities; argues it is inherent to Transformers.
+
+Not found: a paper that specifically probes exact identity of arbitrary multi-token strings (hex/IDs)
+across layers of a Qwen/Llama-class decoder. T1-1, T1-2, T1-7 are the closest.
+
+======================================================================
+TOPIC 2. Variance from random seeds / random maps and configuration selection
+======================================================================
+
+T2-1  Bouthillier, Delaunay, Bronzi, Trofimov, Nichyporuk, Szeto, et al. (2021). "Accounting for Variance
+      in Machine Learning Benchmarks." arXiv:2103.03098 (MLSys 2021, venue from memory). VERIFIED
+      (abstract). Says: variance from data sampling, parameter initialisation and HYPERPARAMETER CHOICE
+      markedly changes conclusions; randomising more sources of variation (including the HP search)
+      approaches the ideal estimator at 51x lower cost than full re-runs; gives recommendations.
+      Closest match to "re-select the configuration on dev for each new random map".
+
+T2-2  Dodge, Ilharco, Schwartz, Farhadi, Hajishirzi, Smith (2020). "Fine-Tuning Pretrained Language
+      Models: Weight Initializations, Data Orders, and Early Stopping." arXiv:2002.06305. VERIFIED
+      (abstract). Says: hundreds of BERT fine-tunes varying only the seed give substantially different
+      results; weight init and data order contribute comparably; best-of-N grows with trials.
+
+T2-3  Reimers, Gurevych (2017). "Reporting Score Distributions Makes a Difference: Performance Study of
+      LSTM-networks for Sequence Tagging." arXiv:1707.09861 (EMNLP 2017, venue from memory). VERIFIED
+      (abstract). Says: seed alone produces statistically significant (p < 1e-4) differences, ~1 F1 point
+      for NER; recommends comparing score distributions over multiple runs, not single scores.
+
+T2-4  Saravanan, Berman, Sober (2020). "Application of the Hierarchical Bootstrap to Multi-Level Data in
+      Neuroscience." Neurons, Behavior, Data Analysis, and Theory 3(5), 2020; bioRxiv 10.1101/819334;
+      PMC7906290; also arXiv:2007.07797. VERIFIED (search results show PubMed/PMC/bioRxiv records with
+      matching metadata; abstract content summarised from those records). Says: nested data (e.g.
+      neurons within animals) are not independent; resampling level by level keeps Type-I error at its
+      nominal rate while retaining more power than summarise-first methods. Direct methodological
+      precedent for our two-level (maps x entity clusters) bootstrap.
+      (Classical source, not opened: Davison & Hinkley 1997 "Bootstrap Methods and their Application",
+      Ch. 3.8 on hierarchical data -- UNVERIFIED.)
+
+T2-5  Madaan, Singh, Schaeffer, Poulton, Koyejo, Stenetorp, et al. (2024). "Quantifying Variance in
+      Evaluation Benchmarks." arXiv:2406.10229. VERIFIED (abstract).
+      Says: measures seed variance across initialisations and other variance metrics for LLM benchmarks;
+      urges practitioners to factor variance into model comparisons.
+
+T2-6  Picard (2021). "Torch.manual_seed(3407) is all you need: On the influence of random seeds in deep
+      learning architectures for computer vision." arXiv:2109.08203. VERIFIED (abstract).
+      Says: scanning up to 1e4 seeds on CIFAR-10, variance is not huge but outlier seeds much better or
+      worse than average are easy to find -- i.e. a single draw can be cherry-picked by accident.
+
+T2-7  Henderson, Islam, Bachman, Pineau, Precup, Meger (2018). "Deep Reinforcement Learning that
+      Matters." arXiv:1709.06560 (AAAI 2018, venue from memory). VERIFIED (abstract).
+      Says: variance intrinsic to methods plus nondeterminism makes reported results hard to interpret
+      without significance metrics; gives reporting guidelines.
+
+Random-feature / random-projection variance across draws:
+
+T2-8  Rahimi, Recht (2007). "Random Features for Large-Scale Kernel Machines." NIPS 20 (2007).
+      VERIFIED (proceedings page papers.nips.cc/paper/3182 seen in search results; not opened in full).
+      Says: random feature maps approximate shift-invariant kernels with convergence bounds -- the
+      approximation quality is a random variable of the draw.
+
+T2-9  Sutherland, Schneider (2015). "On the Error of Random Fourier Features." arXiv:1506.02785
+      (UAI 2015, venue from memory). VERIFIED (abstract). Says: improves the uniform error bound of
+      Rahimi & Recht and analyses the embedding's VARIANCE; the more widely used variant is strictly
+      higher-variance for the Gaussian kernel. Best citation for "results depend on the random draw".
+
+T2-10 Dasgupta, Gupta (2003). "An Elementary Proof of a Theorem of Johnson and Lindenstrauss." Random
+      Structures & Algorithms 22(1):60-65. VERIFIED (dblp record seen in search; not opened).
+      Says: random projections to k >= 24 ln n / (3 eps^2 - 2 eps^3) dims preserve pairwise distances
+      within (1 +- eps) with high probability -- concentration, so draw-to-draw variance shrinks with k.
+
+T2-11 Thomas, Dasgupta, Rosing (2021). "A Theoretical Perspective on Hyperdimensional Computing."
+      J. Artificial Intelligence Research 72:215-249. arXiv:2010.07426. VERIFIED (abstract+journal_ref).
+      Says: unified theory of HD representations (random high-dimensional codes), incl. capacity and
+      suitability for learning; the natural VSA-side citation for concentration of random codes.
+
+T2-12 Frady, Kleyko, Sommer (2018). "A Theory of Sequence Indexing and Working Memory in Recurrent
+      Neural Networks." arXiv:1803.00412 (Neural Computation 30(6), 2018, venue from memory). VERIFIED
+      (abstract). Says: capacity theory for VSA-style storage with randomized input weights; crosstalk
+      noise limits retrieval; diverse VSA models share universal performance properties. Supports
+      treating map-to-map differences as crosstalk noise with predictable spread.
+
+Not found: a paper that specifically re-draws the random VSA codebook and re-tunes per draw as a
+benchmark-variance protocol. T2-1 is the general-ML precedent.
+
+======================================================================
+TOPIC 3. Phase-change memory conductance drift: time horizons of the device models
+======================================================================
+
+(a) The statistical PCM model papers and the time span their drift data/fits cover
+
+T3-1  Nandakumar, Le Gallo, Boybat, Rajendran, Sebastian, Eleftheriou (2018). "A phase-change memory model
+      for neuromorphic computing." J. Appl. Phys. 124, 152135. DOI 10.1063/1.5042408. VERIFIED (full
+      preprint text, Zenodo record 1492261).
+      Drift time span: 10,000 devices (90 nm mushroom cells, doped GST); after each partial-SET pulse an
+      immediate read at ~100 ns, then 50 reads "at time intervals in the order of seconds" (each read of
+      the 10k devices ~1 s; average 38.6 s between pulses). Fig. 4 time axis ~1e-7 to 1e2 s.
+      Drift fitted with G(t) = G(T0) (t/T0)^-nu, mean nu = 0.04, nu decreasing with conductance; each
+      partial SET re-initiates drift. => This model's drift fit covers ~100 ns to ~tens of seconds only.
+
+T3-2  Joshi, Le Gallo, Haefeli, Boybat, Nandakumar, Piveteau, et al. (2020). "Accurate deep neural network
+      inference using computational phase-change memory." Nature Communications 11, 2473. arXiv:1906.03138.
+      VERIFIED (full arXiv text).
+      Drift time span: weights first measured ~25 s after programming, then "periodically read from
+      hardware over a period of 1 day". The behavioural PCM model (Gaussian drift exponent with mean and
+      SD depending on target conductance; 1/f^1.21 read noise growing with time) was "built based on an
+      extensive experimental characterization" and reproduces the array statistics "over the duration of
+      the experiment" (one day). The authors THEMSELVES extrapolate with the model to one year:
+      "This improvement becomes 1.8% for one year when extrapolating the results using the PCM model";
+      ImageNet weight evolution "simulate[d] ... for one year". => fitted on ~25 s to ~1 day; one-year
+      numbers are model extrapolations, not measurements.
+
+T3-3  Rasch, Moreda, Gokmen, Le Gallo, Carta, Goldberg, et al. (2021). "A flexible and fast PyTorch toolkit
+      for simulating training and inference on analog crossbar arrays" (IBM aihwkit). arXiv:2104.02184
+      (IEEE AICAS 2021, venue from memory). VERIFIED (full arXiv text).
+      Says: the inference tile's "noise strength and temporal profile is calibrated on a 1M phase-change
+      memory (PCM) device array [Joshi et al.]"; Fig. 3C compares model vs experiment on a time axis of
+      ~1e2 to 1e5 s (about one day); small model/experiment mismatch below ~1000 s due to programming
+      jitter. The aihwkit source docstring of PCMLikeNoiseModel (read online) says the model "was fitted
+      and characterized on real PCM devices", cites Nandakumar et al. ICECS 2019, uses t_0 = 20 s as
+      "first reading time", and states NO validity range or caveat about extrapolating t_inference.
+      => If our hardware comparison used aihwkit's PCMLikeNoiseModel, its fit window is ~20 s to ~1 day.
+
+T3-4  Nandakumar, Boybat, Joshi, Piveteau, Le Gallo, Rajendran, Sebastian, Eleftheriou (2019).
+      "Phase-change memory models for deep learning training and inference." IEEE ICECS 2019.
+      UNVERIFIED (title seen in EPFL Infoscience search result and cited by the aihwkit docstring; not
+      opened). Likely the direct source of aihwkit's PCMLikeNoiseModel parameters.
+
+T3-5  Boybat, Le Gallo, Nandakumar, Moraitis, Parnell, Tuma, et al. (2018). "Neuromorphic computing with
+      multi-memristive synapses." Nature Communications 9, 2514. arXiv:1711.06507. VERIFIED (abstract).
+      Says: comprehensive PCM model + experiments on >1M PCM devices. (Search snippet, UNVERIFIED: a
+      related Boybat/Nandakumar conference paper reports nu depends on conductance and drift history is
+      erased by partial SET pulses -- consistent with T3-1.)
+
+(b) Does the power law hold over long horizons (days to years)?
+
+T3-6  Le Gallo, Krebs, Zipoli, Salinga, Sebastian (2018). "Collective structural relaxation in
+      phase-change memory devices." Advanced Electronic Materials 4, 1700627 (article number from memory).
+      VERIFIED (full IBM preprint text).
+      Says: "the log(t) kinetics have been observed over a wide range of time (from ~100 ns up to
+      months)"; their collective-relaxation model matches drift measurements over 10 decades of time at
+      160-420 K; "At room temperature, the model yields the logarithmic law from 100 ns ... up to 10
+      years"; "no saturation of the temporal evolution of the electrical conductivity of phase-change
+      materials has yet been observed experimentally", saturation time exceeding crystallisation time.
+      => SUPPORTS extrapolating the power-law FORM to 30 days at room temperature (for the amorphous /
+      RESET state of doped GST). It does not validate the per-device nu DISTRIBUTION or the 1/f noise
+      growth of a statistical model fitted on 1 day, nor intermediate (partial-SET) states, nor elevated
+      temperature (drift accelerates with T).
+
+T3-7  Kersting, Sarwat, Le Gallo, Brew, Walfort, Saulnier, et al. (2021). "Measurement of onset of
+      structural relaxation in melt-quenched phase change materials." arXiv:2106.06270. VERIFIED
+      (abstract). Says: the logarithmic time dependence "is valid only in a certain observable
+      timescale"; they measure the ONSET of drift at short times. The deviation documented is at the
+      short-time end, not at days-to-months.
+
+T3-8  Kersting (2024). "Quest for a solution to drift in phase change memory devices." PhD thesis,
+      arXiv:2401.09462. VERIFIED (abstract). Says: drift measured over 9 orders of magnitude in time;
+      appraises Gibbs vs collective relaxation models; state-dependent drift in projected cells.
+
+T3-9  Pries et al. (2022). Adv. Funct. Mater. (title not captured). UNVERIFIED (search snippet only).
+      Snippet: drift is dominated by glass dynamics; ageing moves the glass toward equilibrium so drift
+      should eventually level off; proposes an "extended power law". Do not cite without opening.
+
+T3-10 Elliott (Cambridge repository), "Electronic mechanism for resistance drift in phase-change memory
+      materials: link to persistent photoconductivity." UNVERIFIED (search snippet only). Snippet: drift
+      follows a weak power law over at least 14 orders of magnitude in time starting from ~30 ns.
+
+(c) Error-correcting codes vs distributed / hyperdimensional storage on noisy hardware
+
+T3-11 Kim, Hun-Seok (2018). "HDM: Hyper-Dimensional Modulation for Robust Low-Power Communications."
+      IEEE ICC 2018, DOI 10.1109/ICC.2018.8422472. VERIFIED (full PDF text).
+      Says: "uncoded HDM with 256-dimension exhibits the bit error rate (BER) comparable to that of
+      low-density parity check (LDPC) and Polar codes, while HDM demodulation complexity is lower ...
+      for the same block length of 256"; a CRC-based correction adds 1.75 dB. The only DIRECT
+      HD-vs-ECC head-to-head found -- but on a noisy wireless channel, not on NVM.
+
+T3-12 Karunaratne, Le Gallo, Cherubini, Benini, Rahimi, Sebastian (2020). "In-memory hyperdimensional
+      computing." Nature Electronics 3, 327-337 (venue/pages from memory). arXiv:1906.01548. VERIFIED
+      (abstract). Says: HDC's robustness to substrate imperfections makes it suited to in-memory
+      computing; complete in-memory HDC system on 760,000 PCM devices reaches accuracies comparable to
+      software. No ECC baseline.
+
+T3-13 Kleyko, Davies, Frady, Kanerva, Kent, Olshausen, et al. (2022). "Vector Symbolic Architectures as a
+      Computing Framework for Emerging Hardware." Proceedings of the IEEE 110(10). arXiv:2106.05268.
+      VERIFIED (abstract+journal_ref). Says: VSA is well suited to stochastic emerging hardware and
+      computing in superposition; reference review for the robustness argument. No ECC comparison.
+
+T3-14 Langenegger, Karunaratne, Hersche, Benini, Sebastian, Rahimi (2023). "In-memory factorization of
+      holographic perceptual representations." arXiv:2211.05052 (Nature Nanotechnology 2023, venue from
+      memory). VERIFIED (abstract). Says: uses the intrinsic stochasticity of PCM in-memory compute as a
+      resource for a holographic (HDC) factorizer on two PCM chips.
+
+T3-15 HDC-resilience papers on SRAM/FeFET (par.nsf.gov hits; COSIME arXiv:2207.12188). UNVERIFIED
+      (snippets only). Snippets claim ECC is "not cost-effective due to the large implementation
+      overhead" and cite a CIM-SECDED scheme sacrificing 20% of memory cells; HDC tolerates ~10% device
+      error. Not opened; do not cite as is.
+
+Not found: a controlled comparison of ECC-protected conventional storage vs distributed/holographic (HD)
+storage on PCM/RRAM bit-error models at equal bit budget. Our hardware check would be the first such
+comparison we know of -- but phrase as "we found no direct comparison", not as a novelty claim.
+
+======================================================================
+BOTTOM LINE FOR B52
+======================================================================
+T1: Mid-layer > final-layer for identity is well supported (T1-1, T1-2, T1-3; T1-7 for multi-token
+    units). Digit-wise number codes (T1-8) fit our decimal result. Anisotropy nuance: decoders are MOST
+    anisotropic at mid depth (T1-17), so apply centring/whitening at layers 9/27 too.
+T2: Re-drawing maps and re-selecting config per map is exactly Bouthillier et al.'s recommendation
+    (T2-1); two-level bootstrap = hierarchical bootstrap (T2-4); random-feature variance (T2-9, T2-10).
+T3: The aihwkit / Joshi 2020 PCM model is fitted on ~20-25 s to ~1 day (1e2-1e5 s) of 1M-device data
+    (T3-2, T3-3); the older Nandakumar 2018 JAP model's drift fit spans only ~100 ns to tens of seconds
+    (T3-1). Joshi et al. themselves extrapolate to one year with the model, and Le Gallo 2018 reports
+    log(t) drift observed up to months with no saturation (T3-6) -- so a 30-day number is a defensible
+    MODEL EXTRAPOLATION of the mean drift law, but the device-statistics (nu spread, 1/f growth) are
+    only validated to ~1 day; reporting the 1-day number as primary and 30 days as extrapolation is the
+    conservative choice.

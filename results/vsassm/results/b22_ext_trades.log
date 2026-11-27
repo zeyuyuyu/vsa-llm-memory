@@ -1,0 +1,8 @@
+stores 50 pairs max 5995
+F p=0.5 | 8 per vector         2400/4776   0.5025  stores 0/50
+N r=3 | 8 per vector           4775/4776   0.9998  stores 49/50
+N r=3 | 4 per vector           4776/4776   1.0000  stores 50/50
+F p=0.5 | 4 per vector         2451/4776   0.5132  stores 0/50
+N r=3 | d=16384                4776/4776   1.0000  stores 50/50
+F p=0.5 | d=16384              2446/4776   0.5121  stores 0/50
+exit 0

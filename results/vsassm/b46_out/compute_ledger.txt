@@ -1,0 +1,23 @@
+# B46 compute ledger (prereg/B46_second_llm_family_prereg.md). Box clock = Asia/Shanghai (UTC+8); GPU times from the
+# box's /path/to/work/b46/logs/gpu_ledger.txt (UTC). No paid API.
+# machine            what                                                        start            end              notes
+A800 box (network)   Mistral-7B-Instruct-v0.3 download, ModelScope, 14.5 GB       05:54 (box)      06:35:59 (box)   sha256 OK (all 3 shards)
+A800 box CPU         tokenizer-only probes (no weights)                          ~06:05           ~06:15
+A800 GPU 1           embedA: Llama-3.1-8B-Instruct, Granite-3.3-8B-Instruct, Qwen3-8B check  22:21:05Z   22:25:51Z   0.080 GPU-h
+A800 box CPU         dev criterion (b32_lm_select.py) Llama / Granite / qwen8chk  ~06:40 (box)     ~06:42 (box)
+local 16-core        diagnostics of Qwen3-8B / e5 codes (b46_diag.py)            06:3x            06:3x
+local                literature subagent (web only)                              ~06:00           ~06:17
+A800 GPU 7           embedM: Mistral-7B-Instruct-v0.3                            22:47:14Z        22:49:00Z        0.030 GPU-h
+# GPU total so far: 0.11 GPU-hours (cap 5). Encoder criterion for Mistral + choice: box CPU, ~06:50 box clock.
+local 16-core        dev phase started (b46_dev.sh): 14 OPQ fits + PQ fits + B36 PQ codebooks + B32 VSA grid  06:52:17
+local 16-core        06:56:43 memory full (swap 8/8 GB): whiten OPQ fits stopped (my processes), driver replaced by
+                     b46_dev2.sh (same steps; whiten fits after the centre fits; index grids after all fits)
+local 16-core        centre OPQ fits 06:52-07:47; VSA grid 06:52-07:24; B36 PQ codebooks ~07:00-07:20; B36 families'
+                     dev grid (3 workers x 2 threads) 07:25-~08:00; whiten OPQ fits 07:47-08:45; index grid 08:45-09:12;
+                     dev32 08:45-~09:00 (by hand, parallel); choices 09:13
+local 16-core        test (B32 VSA / index 4 threads each; B36 families 4 workers x 2 threads; test32) 09:14-09:27;
+                     merge; verdict (10,000 bootstrap resamples, both encoders' rows) 09:27-09:31
+local 16-core        checks: scorer + bits audit ~09:33; re-derivations (B36 new families, B32 VSA / index; 10% of test
+                     stores) from 09:33
+# totals: A800 0.11 GPU-hours (encoding only; cap 5); A800 CPU: tokenizer probes, criterion (minutes); local CPU
+# about 2.5 h wall-clock for dev + test, roughly 15-20 core-hours; no paid API; no PACE.

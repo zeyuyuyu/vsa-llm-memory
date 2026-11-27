@@ -1,0 +1,84 @@
+{"arm": "FX", "enc": "qwen8", "kind": "P", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [0, 1, 2, 3, 4, 5], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 1024, "cells": [[4, 1], [8, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 4096, "cells": [[16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "P", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0, 1, 2, 3, 4, 5], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 1024, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [1], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [2], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [1], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [2], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "qwen8", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [0, 1, 2, 3, 4, 5], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 1024, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0, 1, 2, 3, 4, 5], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 256, "cells": [[4, 1], [8, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 1024, "cells": [[16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [1], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [2], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "center", "fmap": "plin", "reps": [0], "cells": [[4, 1], [8, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "center", "fmap": "plin", "reps": [1], "cells": [[4, 1], [8, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "center", "fmap": "plin", "reps": [2], "cells": [[4, 1], [8, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [1], "cells": [[16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [2], "cells": [[16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 1024, "cells": [[8, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 1024, "cells": [[8, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 1024, "cells": [[8, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 4096, "cells": [[16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 4096, "cells": [[16, 1]]}
+{"arm": "FX", "enc": "b46", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 4096, "cells": [[16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "P", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [0, 1, 2, 3, 4, 5], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 1024, "cells": [[8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "P", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0, 1, 2, 3, 4, 5], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 1024, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [1], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [2], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 4096, "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [1], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [2], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 4096, "cells": [[8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 4096, "cells": [[8, 1], [16, 1]]}
+{"arm": "FX", "enc": "llama", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 4096, "cells": [[8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "P", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [0, 1, 2, 3, 4, 5], "cells": [[4, 2], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 1024, "cells": [[4, 2]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 256, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 4096, "cells": [[8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "P", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0, 1, 2, 3, 4, 5], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 256, "V": 16, "prep": "center", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 4096, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 256, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0, 1, 2, 3, 4, 5], "p": 1024, "cells": [[8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 1], [8, 1], [16, 2]]}
+{"arm": "FX", "enc": "mistral", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [1], "cells": [[4, 1], [8, 1], [16, 2]]}
+{"arm": "FX", "enc": "mistral", "kind": "P", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "plin", "reps": [2], "cells": [[4, 1], [8, 1], [16, 2]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 4096, "cells": [[4, 1], [8, 1], [16, 2]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 4096, "cells": [[4, 1], [8, 1], [16, 2]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 2, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 4096, "cells": [[4, 1], [8, 1], [16, 2]]}
+{"arm": "FX", "enc": "mistral", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [1], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "P", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [2], "cells": [[4, 1], [8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 256, "cells": [[4, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 4096, "cells": [[8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [1], "p": 4096, "cells": [[8, 1], [16, 1]]}
+{"arm": "FX", "enc": "mistral", "kind": "T", "split": "dev", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [2], "p": 4096, "cells": [[8, 1], [16, 1]]}

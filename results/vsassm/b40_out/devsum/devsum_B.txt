@@ -1,0 +1,16 @@
+[N] layer scan (VSA encoder, 100 epochs, dev read exact): {8: 0.005, 12: 0.0, 14: 0.0275, 16: 0.7113, 17: 0.8363, 18: 0.8188, 20: 0.865, 24: 0.6662} -> L = 20
+[N] reader vsa epochs: {} -> epochs None
+[N] reader disc epochs: {} -> epochs None
+[R] layer scan (VSA encoder, 100 epochs, dev read exact): {8: 1.0, 12: 1.0, 14: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 20: 1.0, 24: 1.0} -> L = 17
+[R] reader vsa epochs: {} -> epochs None
+[R] reader disc epochs: {} -> epochs None
+N_vsa_         {} -> choice None
+N_disc_        {} -> choice None
+N_lora1l_      {} -> choice None
+R_vsa_         {} -> choice None
+R_disc_        {} -> choice None
+N_lora_        {} -> choice None
+R_lora_        {} -> choice None
+R_e2e_vsa_     {} -> choice None
+R_e2e_tab_     {} -> choice None
+R_e2e_const_   {} -> choice None

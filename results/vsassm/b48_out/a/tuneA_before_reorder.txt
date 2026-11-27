@@ -1,0 +1,105 @@
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup st --heads 1 --lr 0.001 --mult 4 --out out/tune/phi2_C1_dkvb_cleanupst_heads1_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup st --heads 8 --lr 0.001 --mult 4 --out out/tune/phi2_C1_dkvb_cleanupst_heads8_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 0 --lr 0.0003 --out out/tune/phi2_C1_gumbel_cleanuphard_div0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 0 --lr 0.001 --out out/tune/phi2_C1_gumbel_cleanuphard_div0_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 0.1 --lr 0.0003 --out out/tune/phi2_C1_gumbel_cleanuphard_div0.1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 0.1 --lr 0.001 --out out/tune/phi2_C1_gumbel_cleanuphard_div0.1_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 1 --lr 0.0003 --out out/tune/phi2_C1_gumbel_cleanuphard_div1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 1 --lr 0.001 --out out/tune/phi2_C1_gumbel_cleanuphard_div1_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 0 --lr 0.0003 --out out/tune/phi2_C1_gumbel_cleanupst_div0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 0 --lr 0.001 --out out/tune/phi2_C1_gumbel_cleanupst_div0_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 0.1 --lr 0.0003 --out out/tune/phi2_C1_gumbel_cleanupst_div0.1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 0.1 --lr 0.001 --out out/tune/phi2_C1_gumbel_cleanupst_div0.1_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 1 --lr 0.0003 --out out/tune/phi2_C1_gumbel_cleanupst_div1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 1 --lr 0.001 --out out/tune/phi2_C1_gumbel_cleanupst_div1_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 0 --lr 0.0003 --out out/tune/phi2_C1_st_cleanuphard_div0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 0 --lr 0.001 --out out/tune/phi2_C1_st_cleanuphard_div0_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 0.1 --lr 0.0003 --out out/tune/phi2_C1_st_cleanuphard_div0.1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 0.1 --lr 0.001 --out out/tune/phi2_C1_st_cleanuphard_div0.1_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 1 --lr 0.0003 --out out/tune/phi2_C1_st_cleanuphard_div1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 1 --lr 0.001 --out out/tune/phi2_C1_st_cleanuphard_div1_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 0 --lr 0.0003 --out out/tune/phi2_C1_st_cleanupst_div0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 0 --lr 0.001 --out out/tune/phi2_C1_st_cleanupst_div0_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 0.1 --lr 0.0003 --out out/tune/phi2_C1_st_cleanupst_div0.1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 0.1 --lr 0.001 --out out/tune/phi2_C1_st_cleanupst_div0.1_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 1 --lr 0.0003 --out out/tune/phi2_C1_st_cleanupst_div1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 1 --lr 0.001 --out out/tune/phi2_C1_st_cleanupst_div1_lr0.001.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code center --inw 0 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanuphard_codecenter_inw0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code inst --inw 0 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanuphard_codeinst_inw0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code zca --inw 0 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanuphard_codezca_inw0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code center --inw 1 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanuphard_codecenter_inw1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code inst --inw 1 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanuphard_codeinst_inw1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code zca --inw 1 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanuphard_codezca_inw1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code center --inw 0 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanupst_codecenter_inw0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code inst --inw 0 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanupst_codeinst_inw0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code zca --inw 0 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanupst_codezca_inw0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code center --inw 1 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanupst_codecenter_inw1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code inst --inw 1 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanupst_codeinst_inw1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model phi2 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code zca --inw 1 --lr 0.0003 --out out/tune/phi2_C1_cw_cleanupst_codezca_inw1_lr0.0003.json
+b48_run.py b31_arms.py --enc_model qwen8 --arena C --arm bind --mode tune --lr 0.001 --epochs 10 --feats feats --out out/g0/qwen8_C1_bind_b31.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam bind --mode tune --seeds 42 --feats feats --lr 0.0003 --out out/bindtune/qwen8_C1_bind_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam bind --mode tune --seeds 42 --feats feats --lr 0.001 --out out/bindtune/qwen8_C1_bind_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --idlam 1 --lr 0.0003 --out out/g1/qwen8_C1_gumbel_g1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --idlam 1 --lr 0.0003 --out out/g1/qwen8_C1_st_g1.json
+b48_run.py b31_probe.py --enc qwen8 --arena C --mode tune --feats feats --out out/probe_tune/qwen8_C1.json
+b48_run.py b31_arms.py --enc_model qwen8 --arena C --arm name --mode tune --epochs 4 --feats feats --out out/nametune/qwen8_C1_name.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup hard --inw 0 --lr 0.0003 --mult 1 --out out/tune/qwen8_C1_vq_cleanuphard_inw0_lr0.0003_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup hard --inw 0 --lr 0.001 --mult 1 --out out/tune/qwen8_C1_vq_cleanuphard_inw0_lr0.001_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup hard --inw 1 --lr 0.0003 --mult 1 --out out/tune/qwen8_C1_vq_cleanuphard_inw1_lr0.0003_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup hard --inw 1 --lr 0.001 --mult 1 --out out/tune/qwen8_C1_vq_cleanuphard_inw1_lr0.001_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup hard --inw 0 --lr 0.0003 --mult 4 --out out/tune/qwen8_C1_vq_cleanuphard_inw0_lr0.0003_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup hard --inw 0 --lr 0.001 --mult 4 --out out/tune/qwen8_C1_vq_cleanuphard_inw0_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup hard --inw 1 --lr 0.0003 --mult 4 --out out/tune/qwen8_C1_vq_cleanuphard_inw1_lr0.0003_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup hard --inw 1 --lr 0.001 --mult 4 --out out/tune/qwen8_C1_vq_cleanuphard_inw1_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup st --inw 0 --lr 0.0003 --mult 1 --out out/tune/qwen8_C1_vq_cleanupst_inw0_lr0.0003_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup st --inw 0 --lr 0.001 --mult 1 --out out/tune/qwen8_C1_vq_cleanupst_inw0_lr0.001_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup st --inw 1 --lr 0.0003 --mult 1 --out out/tune/qwen8_C1_vq_cleanupst_inw1_lr0.0003_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup st --inw 1 --lr 0.001 --mult 1 --out out/tune/qwen8_C1_vq_cleanupst_inw1_lr0.001_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup st --inw 0 --lr 0.0003 --mult 4 --out out/tune/qwen8_C1_vq_cleanupst_inw0_lr0.0003_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup st --inw 0 --lr 0.001 --mult 4 --out out/tune/qwen8_C1_vq_cleanupst_inw0_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup st --inw 1 --lr 0.0003 --mult 4 --out out/tune/qwen8_C1_vq_cleanupst_inw1_lr0.0003_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam vq --mode tune --seeds 42 --feats feats --cleanup st --inw 1 --lr 0.001 --mult 4 --out out/tune/qwen8_C1_vq_cleanupst_inw1_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup hard --heads 1 --lr 0.001 --mult 1 --out out/tune/qwen8_C1_dkvb_cleanuphard_heads1_lr0.001_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup hard --heads 8 --lr 0.001 --mult 1 --out out/tune/qwen8_C1_dkvb_cleanuphard_heads8_lr0.001_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup hard --heads 1 --lr 0.001 --mult 4 --out out/tune/qwen8_C1_dkvb_cleanuphard_heads1_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup hard --heads 8 --lr 0.001 --mult 4 --out out/tune/qwen8_C1_dkvb_cleanuphard_heads8_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup st --heads 1 --lr 0.001 --mult 1 --out out/tune/qwen8_C1_dkvb_cleanupst_heads1_lr0.001_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup st --heads 8 --lr 0.001 --mult 1 --out out/tune/qwen8_C1_dkvb_cleanupst_heads8_lr0.001_mult1.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup st --heads 1 --lr 0.001 --mult 4 --out out/tune/qwen8_C1_dkvb_cleanupst_heads1_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam dkvb --mode tune --seeds 42 --feats feats --cleanup st --heads 8 --lr 0.001 --mult 4 --out out/tune/qwen8_C1_dkvb_cleanupst_heads8_lr0.001_mult4.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 0 --lr 0.0003 --out out/tune/qwen8_C1_gumbel_cleanuphard_div0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 0 --lr 0.001 --out out/tune/qwen8_C1_gumbel_cleanuphard_div0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 0.1 --lr 0.0003 --out out/tune/qwen8_C1_gumbel_cleanuphard_div0.1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 0.1 --lr 0.001 --out out/tune/qwen8_C1_gumbel_cleanuphard_div0.1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 1 --lr 0.0003 --out out/tune/qwen8_C1_gumbel_cleanuphard_div1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup hard --div 1 --lr 0.001 --out out/tune/qwen8_C1_gumbel_cleanuphard_div1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 0 --lr 0.0003 --out out/tune/qwen8_C1_gumbel_cleanupst_div0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 0 --lr 0.001 --out out/tune/qwen8_C1_gumbel_cleanupst_div0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 0.1 --lr 0.0003 --out out/tune/qwen8_C1_gumbel_cleanupst_div0.1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 0.1 --lr 0.001 --out out/tune/qwen8_C1_gumbel_cleanupst_div0.1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 1 --lr 0.0003 --out out/tune/qwen8_C1_gumbel_cleanupst_div1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam gumbel --mode tune --seeds 42 --feats feats --cleanup st --div 1 --lr 0.001 --out out/tune/qwen8_C1_gumbel_cleanupst_div1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 0 --lr 0.0003 --out out/tune/qwen8_C1_st_cleanuphard_div0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 0 --lr 0.001 --out out/tune/qwen8_C1_st_cleanuphard_div0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 0.1 --lr 0.0003 --out out/tune/qwen8_C1_st_cleanuphard_div0.1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 0.1 --lr 0.001 --out out/tune/qwen8_C1_st_cleanuphard_div0.1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 1 --lr 0.0003 --out out/tune/qwen8_C1_st_cleanuphard_div1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup hard --div 1 --lr 0.001 --out out/tune/qwen8_C1_st_cleanuphard_div1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 0 --lr 0.0003 --out out/tune/qwen8_C1_st_cleanupst_div0_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 0 --lr 0.001 --out out/tune/qwen8_C1_st_cleanupst_div0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 0.1 --lr 0.0003 --out out/tune/qwen8_C1_st_cleanupst_div0.1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 0.1 --lr 0.001 --out out/tune/qwen8_C1_st_cleanupst_div0.1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 1 --lr 0.0003 --out out/tune/qwen8_C1_st_cleanupst_div1_lr0.0003.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam st --mode tune --seeds 42 --feats feats --cleanup st --div 1 --lr 0.001 --out out/tune/qwen8_C1_st_cleanupst_div1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code center --inw 0 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanuphard_codecenter_inw0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code inst --inw 0 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanuphard_codeinst_inw0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code zca --inw 0 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanuphard_codezca_inw0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code center --inw 1 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanuphard_codecenter_inw1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code inst --inw 1 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanuphard_codeinst_inw1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup hard --code zca --inw 1 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanuphard_codezca_inw1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code center --inw 0 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanupst_codecenter_inw0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code inst --inw 0 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanupst_codeinst_inw0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code zca --inw 0 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanupst_codezca_inw0_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code center --inw 1 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanupst_codecenter_inw1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code inst --inw 1 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanupst_codeinst_inw1_lr0.001.json
+b48_run.py b42_arms.py --enc_model qwen8 --arena C --fam cw --mode tune --seeds 42 --feats feats --cleanup st --code zca --inw 1 --lr 0.001 --out out/tune/qwen8_C1_cw_cleanupst_codezca_inw1_lr0.001.json

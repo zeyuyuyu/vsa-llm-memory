@@ -1,0 +1,54 @@
+# Cluster bootstrap of the paired operational-log comparisons (2026-11-17)
+# Difference = ours - other (negative: the other arm is ahead). 10,000 resamples, percentile 95% intervals.
+# q-level: nsr3_compare.py / nsr5_compare.py procedure verbatim (random.seed(0), random.choice over sorted ids).
+# cluster: whole logs (1-day sets) or whole multi-day sites resampled with replacement, numpy default_rng(0),
+#          statistic sum(d)/sum(n) over the resampled clusters (pooled accuracy difference).
+# strat:   the same cluster bootstrap with logs/sites resampled within each of the 4 scenarios (sensitivity).
+# Script: /path/to/vsassm/cluster_bootstrap.py (python3 -I -B; imports the nsr/apps-real scorers read-only).
+
+| comparison | n q | n clusters (size min-max) | acc ours / other (repro) | diff | q-level CI (paper) | cluster CI | strat. cluster CI | conclusion |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1  impact 1-day: ours vs GPT-6.1 Sol direct | 230 | 40 (3-8) | 0.930 / 0.952 (yes) | -0.022 | -0.061 to +0.022 (paper -0.061 to +0.022) | -0.073 to +0.025 | -0.070 to +0.026 | unchanged: includes 0 |
+| 1x impact 1-day: ours vs Opus 5.5 normalised | 230 | 40 (3-8) | 0.930 / 0.935 (yes) | -0.004 | -0.048 to +0.039 | -0.057 to +0.043 | -0.057 to +0.043 | unchanged: includes 0 |
+| 2  window 1-day: ours vs GPT-6.1 Sol direct | 460 | 40 (6-16) | 0.874 / 0.904 (yes) | -0.030 | -0.067 to +0.007 (paper -0.067 to +0.007) | -0.090 to +0.026 | -0.083 to +0.022 | unchanged: includes 0 |
+| 2b window 1-day: ours vs Opus 5.5 normalised | 460 | 40 (6-16) | 0.874 / 0.878 (yes) | -0.004 | -0.046 to +0.035 (paper -0.046 to +0.035) | -0.064 to +0.053 | -0.059 to +0.050 | unchanged: includes 0 |
+| 3a impact 4-day: ours vs GPT-6.1 Sol direct | 161 | 28 (3-8) | 0.801 / 0.925 (yes) | -0.124 | -0.186 to -0.062 (paper -0.186 to -0.062) | -0.225 to -0.039 | -0.205 to -0.050 | unchanged: excludes 0 |
+| 3b impact 8-day: ours vs GPT-6.1 Sol direct | 69 | 12 (3-8) | 0.710 / 0.855 (yes) | -0.145 | -0.261 to -0.043 (paper -0.261 to -0.043) | -0.321 to -0.012 | -0.217 to -0.072 | unchanged: excludes 0 |
+| 3x impact 4-day: ours vs Opus 5.5 normalised | 161 | 28 (3-8) | 0.801 / 0.845 (yes) | -0.043 | -0.112 to +0.019 | -0.142 to +0.048 | -0.130 to +0.043 | unchanged: includes 0 |
+| 3y impact 8-day: ours vs Opus 5.5 normalised | 69 | 12 (3-8) | 0.710 / 0.754 (yes) | -0.043 | -0.130 to +0.043 | -0.159 to +0.062 | -0.116 to +0.029 | unchanged: includes 0 |
+| 4a location 1-day: ours vs Qwen3-32B (forced) | 414 | 40 (8-12) | 0.959 / 0.543 (yes) | +0.415 | +0.365 to +0.466 | +0.355 to +0.477 | +0.373 to +0.457 | unchanged: excludes 0 |
+| 4b impact 1-day: ours vs Qwen3-32B (forced) | 230 | 40 (3-8) | 0.930 / 0.278 (yes) | +0.652 | +0.587 to +0.713 | +0.572 to +0.730 | +0.574 to +0.722 | unchanged: excludes 0 |
+| 4c window 1-day: ours vs Qwen3-32B (forced) | 460 | 40 (6-16) | 0.874 / 0.202 (yes) | +0.672 | +0.628 to +0.715 | +0.601 to +0.740 | +0.611 to +0.730 | unchanged: excludes 0 |
+
+## Files and scoring functions (all under /path/to/vsassm/)
+- impact1: logs nsr/data/{warehouse,biobank,home,ops}_nsr1.jsonl; answers nsr/out/nsr1_nsr1_<arm>.jsonl; gold nsr1_score.gold(log, qtype, target); ok = pred is not None and sorted(pred) == gold (nsr1_score.main); cluster = record['log']
+- window1: logs nsr/data/*_nsr2.jsonl; answers nsr/out/nsr3_nsr2_<arm>.jsonl; gold nsr3_compare.gold_all('nsr2') (union of nsr3_score.states/affected over the window); ok = pred is not None and set(pred) == gold; cluster = id.split('|')[0] (the log)
+- K4: sites nsr5_sites.sites(4) (logs of splits test/nsr1/nsr2, 4 consecutive days per site); answers nsr/out/nsr5_K4_<arm>.jsonl; gold nsr1_score.gold(site, qtype, target); ok as nsr5_compare.py; cluster = id.split('|')[0] (the site)
+- K8: as K4 with K = 8: nsr5_sites.sites(8), nsr/out/nsr5_K8_<arm>.jsonl
+- loc: logs apps/real/data/*_test2.jsonl (run_real.load('test2')); ours apps/real/out/reader_test2_verify_v4.jsonl; Qwen3-32B apps/real/out/test2a/qwen3-32b_REAL_n*.jsonl + forced_qwen3-32b.jsonl; ok = run_real.ok with run_real.resolve_answer, forced answers via build_real.parse_forced (as build_real.main); cluster = log id
+
+## Arms (answer files)
+- 1  impact 1-day: ours vs GPT-6.1 Sol direct: ours = arm1, other = arm3_gptD_strict
+- 1x impact 1-day: ours vs Opus 5.5 normalised: ours = arm1, other = arm3n_opusr_strict
+- 2  window 1-day: ours vs GPT-6.1 Sol direct: ours = history, other = gptD_strict
+- 2b window 1-day: ours vs Opus 5.5 normalised: ours = history, other = opusrnn_strict
+- 3a impact 4-day: ours vs GPT-6.1 Sol direct: ours = pipeline, other = direct
+- 3b impact 8-day: ours vs GPT-6.1 Sol direct: ours = pipeline, other = direct
+- 3x impact 4-day: ours vs Opus 5.5 normalised: ours = pipeline, other = opusn
+- 3y impact 8-day: ours vs Opus 5.5 normalised: ours = pipeline, other = opusn
+- 4a location 1-day: ours vs Qwen3-32B (forced): ours = rm, other = qwen3-32b
+- 4b impact 1-day: ours vs Qwen3-32B (forced): ours = arm1, other = arm3_qwen3-32b_forced
+- 4c window 1-day: ours vs Qwen3-32B (forced): ours = history, other = llm_qwen3-32b_forced
+
+## Robustness notes
+- Accuracies of every arm reproduce the paper / verdict files at three decimals, and the question-level CIs reproduce
+  the paper's printed intervals exactly (same procedure, same seed).
+- Seeds 0-4 for the cluster bootstrap: K = 4 upper bound -0.039 to -0.042; K = 8 upper bound -0.011 to -0.012
+  (lower -0.321 to -0.333). Stable, but at K = 8 only 12 sites (3 per scenario) support it, and percentile cluster
+  intervals with this few clusters tend to be too narrow; the 8-day exclusion of zero is marginal.
+- Per-site sign (sum over a site's questions of ours-correct minus GPT-correct): K = 4, GPT ahead at 10 sites, tied 16,
+  ours ahead 2 (28 sites); K = 8, GPT ahead 6, tied 5, ours ahead 1 (12 sites); GPT's lead comes mostly from the
+  warehouse sites (K = 4: 5 of the 10 sites; K = 8: 3 of the 6 sites).
+- One-day comparisons: the cluster intervals are 18 % (impact) and 57 % (window) wider than the question-level ones (lower bounds move
+  from -0.061 to -0.073 for impact and from -0.067 to -0.090 for window, against GPT-6.1 Sol), so "GPT-6.1 Sol up to
+  seven points ahead" becomes "up to seven (impact) / nine (window) points ahead".

@@ -1,0 +1,13 @@
+setup qwen8 done 130s
+[qwen8 sdm_gauss M1024 V16 b4] test=9.06 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 0.5) 85s
+[qwen8 sdm_gauss M1024 V2 b4] test=55.35 cfg=('sdm', 'centre', 'gauss', 16, 'bits', 1.0) 91s
+[qwen8 sdm_gauss M1024 V2 b8] test=57.46 cfg=('sdm', 'whiten', 'gauss', 16, 'bits', 1.0) 109s
+[qwen8 sdm_gauss M1024 V2 b16] test=59.36 cfg=('sdm', 'centre', 'gauss', 16, 'bits', 1.0) 123s
+[qwen8 sdm_gauss M256 V2 b4] test=56.57 cfg=('sdm', 'centre', 'gauss', 4, 'bits', 0.5) 68s
+[qwen8 sdm_gauss M1024 V16 b8] test=10.37 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 0.5) 96s
+[qwen8 sdm_gauss M1024 V16 b16] test=12.79 cfg=('sdm', 'centre', 'gauss', 16, 'onehot', 0.5) 97s
+[qwen8 sdm_gauss M256 V2 b8] test=58.97 cfg=('sdm', 'centre', 'gauss', 4, 'bits', 1.0) 76s
+[qwen8 sdm_gauss M256 V16 b4] test=12.47 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 1.0) 58s
+[qwen8 sdm_gauss M256 V2 b16] test=63.50 cfg=('sdm', 'centre', 'gauss', 16, 'bits', 1.0) 70s
+[qwen8 sdm_gauss M256 V16 b8] test=16.10 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 1.0) 63s
+[qwen8 sdm_gauss M256 V16 b16] test=20.43 cfg=('sdm', 'centre', 'gauss', 4, 'onehot', 1.0) 66s

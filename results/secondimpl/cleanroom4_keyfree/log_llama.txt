@@ -1,0 +1,37 @@
+setup llama done 124s
+[llama M1024 V2 b4] store done 119s first=66.65 final=68.34
+[llama M1024 V16 b4] store done 121s first=17.02 final=19.70
+[llama M1024 V16 b8] store done 211s first=25.38 final=20.04
+[llama M1024 V2 b8] store done 217s first=69.38 final=70.53
+[llama M1024 V2 b16] store done 358s first=68.63 final=70.06
+[llama M1024 V16 b16] store done 363s first=35.66 final=35.37
+[llama M1024 V16 b4] family dev done 366s
+[llama M1024 V2 b4] family dev done 376s
+[llama M1024 V16 b4] ALL done 384s index=13.9 static=9.7 cms=9.9 bloom=8.8 fly=10.2 sdm=17.8 best=sdm
+[llama M1024 V2 b4] ALL done 402s index=53.3 static=53.0 cms=54.2 bloom=51.0 fly=55.5 sdm=61.9 best=sdm
+[llama M256 V2 b4] store done 20s first=60.88 final=69.15
+[llama M1024 V16 b8] family dev done 439s
+[llama M256 V2 b8] store done 45s first=70.67 final=74.54
+[llama M1024 V16 b8] ALL done 462s index=15.1 static=10.7 cms=11.4 bloom=8.7 fly=12.3 sdm=25.6 best=sdm
+[llama M1024 V2 b8] family dev done 481s
+[llama M256 V2 b4] family dev done 123s
+[llama M1024 V2 b8] ALL done 508s index=55.4 static=50.2 cms=52.7 bloom=51.4 fly=56.1 sdm=66.5 best=sdm
+[llama M256 V2 b4] ALL done 150s index=58.5 static=50.4 cms=51.3 bloom=54.2 fly=57.2 sdm=61.7 best=sdm
+[llama M256 V16 b4] store done 26s first=20.36 final=17.94
+[llama M256 V2 b16] store done 78s first=74.98 final=77.42
+[llama M256 V2 b8] family dev done 172s
+[llama M256 V16 b8] store done 47s first=24.69 final=19.22
+[llama M256 V2 b8] ALL done 195s index=59.6 static=51.3 cms=55.0 bloom=53.0 fly=61.0 sdm=69.8 best=sdm
+[llama M1024 V16 b16] family dev done 664s
+[llama M256 V16 b16] store done 70s first=38.53 final=39.88
+[llama M256 V16 b4] family dev done 167s
+[llama M1024 V16 b16] ALL done 680s index=26.6 static=12.9 cms=14.0 bloom=9.0 fly=16.7 sdm=24.9 best=sdm
+[llama M256 V2 b16] family dev done 221s
+[llama M256 V16 b4] ALL done 183s index=14.5 static=10.7 cms=10.3 bloom=9.1 fly=9.7 sdm=15.4 best=sdm
+[llama M256 V2 b16] ALL done 237s index=64.7 static=59.8 cms=59.4 bloom=55.4 fly=64.9 sdm=74.2 best=sdm
+[llama M1024 V2 b16] family dev done 702s
+[llama M256 V16 b8] family dev done 176s
+[llama M1024 V2 b16] ALL done 718s index=62.1 static=55.2 cms=52.6 bloom=54.9 fly=60.1 sdm=67.4 best=sdm
+[llama M256 V16 b8] ALL done 192s index=20.3 static=14.6 cms=17.1 bloom=11.3 fly=15.0 sdm=29.0 best=sdm
+[llama M256 V16 b16] family dev done 171s
+[llama M256 V16 b16] ALL done 181s index=33.2 static=15.4 cms=17.7 bloom=15.2 fly=24.4 sdm=32.1 best=index

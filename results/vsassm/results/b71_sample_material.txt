@@ -1,0 +1,98 @@
+# B71 sample-reading material (prereg: Qwen3-8B and e5-base-v2; VSADR1 - STORE largest R1 cell; VSAPR - VSAPC largest R1-V16 cell)
+
+## qwen8 VSADR1 vs STORE: cell M=256 V=16 8 bits/fact; acc VSADR1 25.26 vs STORE 22.67
+### only VSADR1 right (494 queries in the cell); first 10: (alias | label | gold | VSADR1 | STORE)
+  Guinea-Conakry | Guinea | 1 | 1 | 5
+  Republic of Guinea | Guinea | 1 | 1 | 14
+  Bukan pasar malam | It's Not an All Night Fair | 0 | 0 | 5
+  Tranmere Rovers Football Club | Tranmere Rovers F.C. | 2 | 2 | 7
+  Tranmere Rovers FC | Tranmere Rovers F.C. | 2 | 2 | 7
+  Tranmere Rovers | Tranmere Rovers F.C. | 2 | 2 | 7
+  Joan III | Jeanne d'Albret | 11 | 11 | 2
+  Jeanne III | Jeanne d'Albret | 11 | 11 | 14
+  Perfect Murder | A Perfect Murder | 5 | 5 | 1
+  Gerard Kornelis van het Reve | Gerard Reve | 9 | 9 | 11
+### only STORE right (372 queries in the cell); first 10: (alias | label | gold | VSADR1 | STORE)
+  Thomas Lincoln | Tad Lincoln | 11 | 14 | 11
+  Mexico City, Mexico | Mexico City | 6 | 1 | 6
+  Une autre vie | Another Life | 14 | 2 | 14
+  La bella addormentata nel bosco | La bella dormente nel bosco | 11 | 8 | 11
+  Wa Special Region 2 | Wa State | 15 | 1 | 15
+  Mr. Clutch | Jerry West | 0 | 7 | 0
+  Mark Thomas Vande Hei | Mark T. Vande Hei | 11 | 15 | 11
+  Simon van het Reve | Gerard Reve | 9 | 12 | 9
+  Richard Michael Hawtin | Richie Hawtin | 15 | 9 | 15
+  Eiríkr | Eric Anundsson | 13 | 5 | 13
+
+## qwen8 VSAPR vs VSAPC: cell M=1024 V=16 16 bits/fact; acc VSAPR 34.58 vs VSAPC 21.79
+### only VSAPR right (1019 queries in the cell); first 10: (alias | label | gold | VSAPR | VSAPC)
+  anti-chess | antichess | 11 | 11 | 6
+  Pope Marcellus II | Marcellus II | 14 | 14 | 15
+  Marcello Cervini | Marcellus II | 14 | 14 | 0
+  Marcellus PP. II | Marcellus II | 14 | 14 | 3
+  Marcellus II. Papst | Marcellus II | 14 | 14 | 3
+  NGA | Nigeria | 9 | 9 | 6
+  Praha | Prague | 12 | 12 | 3
+  City of Prague | Prague | 12 | 12 | 11
+  Francis Mairs Huntington Wilson | Huntington Wilson | 12 | 12 | 0
+  AINA | Aina Kusuda | 8 | 8 | 12
+### only VSAPC right (462 queries in the cell); first 10: (alias | label | gold | VSAPR | VSAPC)
+  Under solen | Under the Sun | 13 | 9 | 13
+  Kasper Kapanen | Kasperi Kapanen | 14 | 8 | 14
+  Painted House | A Painted House | 2 | 4 | 2
+  L. Duck | Jacob Duck | 7 | 9 | 7
+  Ruth Jason | Ruth Harriet Louise | 8 | 11 | 8
+  Ruth Goldstein | Ruth Harriet Louise | 8 | 9 | 8
+  Crowd | The Crowd | 4 | 10 | 4
+  r.c. minor | Robert Crannell Minor | 11 | 6 | 11
+  Juventus Turin | Juventus F.C. | 0 | 2 | 0
+  Mexico D.F. | Mexico City | 10 | 14 | 10
+
+## e5 VSADR1 vs STORE: cell M=256 V=2 16 bits/fact; acc VSADR1 72.97 vs STORE 71.78
+### only VSADR1 right (347 queries in the cell); first 10: (alias | label | gold | VSADR1 | STORE)
+  Balcony | The Balcony | 0 | 0 | 1
+  KB | Komerční banka | 0 | 0 | 1
+  Jeanne-Antoinette Poisson | Madame de Pompadour | 1 | 1 | 0
+  Jeanne Antoinette Poisson d' Etoilles | Madame de Pompadour | 1 | 1 | 0
+  Marquise de Pompadour Jeanne Antoinette Poisson | Madame de Pompadour | 1 | 1 | 0
+  Kent, England | Kent | 1 | 1 | 0
+  Vasudeva | Krishna | 0 | 0 | 1
+  Keshava | Krishna | 0 | 0 | 1
+  Brajamohan | Krishna | 0 | 0 | 1
+  Devakinandan | Krishna | 0 | 0 | 1
+### only STORE right (289 queries in the cell); first 10: (alias | label | gold | VSADR1 | STORE)
+  Dr. Dre 2001 | 2001 | 1 | 0 | 1
+  Japanese Empire | Empire of Japan | 1 | 0 | 1
+  Imperial Japan | Empire of Japan | 1 | 0 | 1
+  Great Empire of Japan | Empire of Japan | 1 | 0 | 1
+  Jeanne Antoinette Lenormand d'Etioles | Madame de Pompadour | 1 | 0 | 1
+  Mad.e De Pompadour | Madame de Pompadour | 1 | 0 | 1
+  Derecho de familia | Family Law | 0 | 1 | 0
+  Alois Boudry | Aloïs Boudry | 1 | 0 | 1
+  Adolf ni Tsugu | Message to Adolf | 0 | 1 | 0
+  Ptolemy Epiphanes | Ptolemy V Epiphanes | 0 | 1 | 0
+
+## e5 VSAPR vs VSAPC: cell M=1024 V=16 16 bits/fact; acc VSAPR 30.24 vs VSAPC 11.60
+### only VSAPR right (1077 queries in the cell); first 10: (alias | label | gold | VSAPR | VSAPC)
+  anti-chess | antichess | 11 | 11 | 8
+  LBR | Liberia | 11 | 11 | 9
+  Marcello Cervini degli Spannochi | Marcellus II | 14 | 14 | 11
+  Marcellus PP. II | Marcellus II | 14 | 14 | 5
+  papa Marcello II | Marcellus II | 14 | 14 | 8
+  SLE | Sierra Leone | 3 | 3 | 12
+  CK1 | Crusader Kings | 1 | 1 | 7
+  Praha | Prague | 12 | 12 | 0
+  City of Prague | Prague | 12 | 12 | 9
+  TE | tight end | 12 | 12 | 1
+### only VSAPC right (265 queries in the cell); first 10: (alias | label | gold | VSAPR | VSAPC)
+  giveaway chess | antichess | 11 | 15 | 11
+  pape Marcel II | Marcellus II | 14 | 8 | 14
+  Marcellus II. Papst | Marcellus II | 14 | 7 | 14
+  NG | Nigeria | 9 | 14 | 9
+  Republic of Sierra Leone | Sierra Leone | 3 | 9 | 3
+  Essex | Kingdom of Essex | 5 | 0 | 5
+  Williamson County, Texas | Williamson County | 3 | 6 | 3
+  DE-NI | Lower Saxony | 12 | 5 | 12
+  Duck | Jacob Duck | 7 | 15 | 7
+  Perfect Man | The Perfect Man | 7 | 1 | 7
+

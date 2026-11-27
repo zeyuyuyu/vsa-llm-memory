@@ -1,0 +1,40 @@
+B65 verdict: task N, trained types (primary, 2000 items), held-out types (500 items, secondary)
+layers: {'last': 20, 'ops': 17}
+
+arm accuracies (seed-mean over items; per seed; Wilson on the seed-mean; read exact / module answer right and gate open / followed given module right / held-out acc / held-out gate open; first-token CE on trained types)
+  last vsapub acc 0.8975 [0.883, 0.910] seeds [0.9005, 0.893, 0.899] read-exact 0.8875 module-right 0.9062 followed 0.9833 HO 0.9653 HO-gate 0.015 CE 0.899
+  last vsabm  acc 0.9607 [0.951, 0.968] seeds [0.9595, 0.9615, 0.961] read-exact 0.9700 module-right 0.9737 followed 0.9866 HO 0.9653 HO-gate 0.015 CE 0.471
+  last disc   acc 0.9477 [0.937, 0.957] seeds [0.9455, 0.945, 0.9525] read-exact 0.9518 module-right 0.9638 followed 0.9832 HO 0.3400 HO-gate 0.672 CE 0.827
+  ops  vsapub acc 0.9773 [0.970, 0.983] seeds [0.9865, 0.9675, 0.978] read-exact 0.9922 module-right 0.9908 followed 0.9862 HO 0.9727 HO-gate 0.007 CE 0.198
+  ops  vsabm  acc 0.9797 [0.972, 0.985] seeds [0.9875, 0.976, 0.9755] read-exact 0.9983 module-right 0.9960 followed 0.9833 HO 0.9593 HO-gate 0.021 CE 0.060
+  ops  disc   acc 0.9852 [0.979, 0.990] seeds [0.995, 0.9825, 0.978] read-exact 1.0000 module-right 1.0000 followed 0.9852 HO 0.4413 HO-gate 0.565 CE 0.002
+
+PRIMARY (decision rule: two-level 95% interval, seeds then items; AHEAD if lower > 0, BEHIND if upper < 0, EQUIVALENT if it contains 0 and lies within +/-2 points, else INCONCLUSIVE); points:
+  last vsapub - disc: -5.02 [-6.45, -3.58] -> BEHIND   (one-level items -5.02 [-6.30, -3.72] -> BEHIND; all seeds A<B)
+  last vsabm - disc: +1.30 [+0.35, +2.25] -> AHEAD   (one-level items +1.30 [+0.42, +2.15] -> AHEAD; all seeds A>B)
+  ops  vsapub - disc: -0.78 [-2.10, +0.47] -> INCONCLUSIVE   (one-level items -0.78 [-1.25, -0.37] -> BEHIND; mixed seeds)
+  ops  vsabm - disc: -0.55 [-1.68, +0.50] -> EQUIVALENT   (one-level items -0.55 [-0.87, -0.27] -> BEHIND; all seeds A<B)
+
+SECONDARY (same two-level interval and labels; no headline)
+  last vsabm - vsapub: +6.32 [+5.17, +7.52] -> AHEAD
+  ops vsabm - vsapub: +0.23 [-0.90, +1.43] -> EQUIVALENT
+  vsapub ops - last: +7.98 [+6.38, +9.57] -> AHEAD
+  vsabm ops - last: +1.90 [+0.90, +2.93] -> AHEAD
+  disc ops - last: +3.75 [+2.55, +5.07] -> AHEAD
+  vsapub@ops - disc@ops (each at its dev-best position): -0.78 [-2.13, +0.50] -> INCONCLUSIVE
+  vsabm@ops - disc@ops (each at its dev-best position): -0.55 [-1.67, +0.55] -> EQUIVALENT
+
+per type (seed-mean accuracy)
+  type             last-vsapub   last-vsabm    last-disc   ops-vsapub    ops-vsabm     ops-disc
+  multiplication         0.912        0.963        0.943        0.995        0.996        1.000
+  modulo                 0.983        0.996        0.989        1.000        1.000        0.999
+  gcd                    0.905        0.979        0.955        1.000        1.000        1.000
+  lcm                    0.820        0.963        0.960        0.979        0.984        0.999
+  square_mod             0.856        0.967        0.948        0.972        0.992        1.000
+  bitwise_and            0.905        0.961        0.964        0.996        0.996        1.000
+  bitwise_xor            0.944        0.985        0.967        0.996        0.997        0.995
+  bitwise_or             0.855        0.872        0.856        0.881        0.872        0.889
+  addition               0.971        0.971        0.056        1.000        1.000        0.875
+  division               0.960        0.960        0.624        0.945        0.919        0.008
+
+plain-loop scorer (pred == gold) vs numpy 'correct': max |diff| 0.00e+00

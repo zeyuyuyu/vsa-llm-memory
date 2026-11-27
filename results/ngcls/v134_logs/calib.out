@@ -1,0 +1,29 @@
+===== V-134 (prereg 9444197) model=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct =====
+  1 KBs x 160 facts; LoRA r=32, 12 epochs, lr=0.0001; 40 queries per (KB, depth)
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:10,  1.47it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:09,  1.52it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:09,  1.55it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:08,  1.56it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:07,  1.56it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:07,  1.56it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.57it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:05<00:05,  1.57it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:05,  1.57it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.58it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:07<00:03,  1.58it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.55it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:08<00:02,  1.55it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:08<00:01,  1.56it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:09<00:01,  1.57it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:10<00:00,  1.57it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.62it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.57it/s]
+trainable params: 268,435,456 || all params: 33,032,311,808 || trainable%: 0.8126
+
+  ---- KB 0: 160 facts, 40 entities ----
+    sharded store: 160 facts => PRIMARY S=3 (~53 facts/shard, manuscript rule)
+    store done: k1 d4096=0.792  k2 d4096=0.667  k3 d4096=0.550  k4 d4096=0.592
+    training adapter kb0 on 800 single-hop texts ...
+    epoch  1/12  loss 2.1147
+    epoch  2/12  loss 0.6992
+    epoch  3/12  loss 0.5123
+    epoch  4/12  loss 0.4161
+    epoch  5/12  loss 0.4009
+    epoch  6/12  loss 0.3896
+    epoch  7/12  loss 0.3799
+    epoch  8/12  loss 0.3785
+    epoch  9/12  loss 0.3720
+    epoch 10/12  loss 0.3715
+    epoch 11/12  loss 0.3732
+    epoch 12/12  loss 0.3652
+    trained in 5.4 min
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+    k=1  store 0.7917 | lora_weights 1.0000 | ctx_cot 0.9000 | base_nofacts 0.0000
+    k=2  store 0.6667 | lora_weights 0.7750 | ctx_cot 0.9250 | base_nofacts 0.0000
+    k=3  store 0.5500 | lora_weights 0.5750 | ctx_cot 0.7750 | base_nofacts 0.0000
+    k=4  store 0.5917 | lora_weights 0.5500 | ctx_cot 0.8500 | base_nofacts 0.0000
+  shard curve at d=4096 (descriptive): {"1": {"1": 0.6, "2": 0.65, "3": 0.75, "4": 0.85, "8": 0.95}, "2": {"1": 0.625, "2": 0.675, "3": 0.6, "4": 0.625, "8": 0.85}, "3": {"1": 0.475, "2": 0.475, "3": 0.475, "4": 0.625, "8": 0.825}, "4": {"1": 0.375, "2": 0.4, "3": 0.55, "4": 0.75, "8": 0.85}}
+V134-DONE

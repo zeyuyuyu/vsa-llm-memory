@@ -1,0 +1,30 @@
+# B71 predictions (prereg/B71_hebbian_remedies_prereg.md) against the test (results/b71_verdict.txt, b71_audit.txt,
+# b71_side.txt, b71_d2_verdict.txt). R1, ideal, one-level labels unless stated.
+
+Q1  FAILED in part. VSAPCX - NLMSC: level on Qwen3-8B (-0.06) and Llama (+0.03) as predicted; NLMSc leads on Mistral, e5, bge,
+    MiniLM as predicted; Granite predicted level, observed NLMSc leads (-0.80 [-1.44, -0.16]; two-level level). 6 of 7 labels.
+    VSAS - NLMSC: NLMSc leads on 7 of 7 (held).
+Q2  HELD. Two-level labels differ from one-level labels in 4 of 84 (bound 6).
+Q3  HELD. VSAPCX - LSFM: LSFM leads on 7 of 7; feature term smaller than the write term on 4 of 7 (Qwen3-8B, Granite,
+    Llama, Mistral); for VSAS the feature term is the larger on 7 of 7 (features 5, both 2).
+Q4  HELD. NLMSFR - LSFR below 0 on 7 of 7 (-0.86 to -2.05); NLMSFM - NLMSC: NLMSc leads on 5 of 7.
+Q5  HELD. VSAPR - VSAPC over R1-V16: +10.4, +13.4, +13.1 on the sentence encoders; +1.7 to +5.5 with the interval above 0 on
+    4 of 4 language models.
+Q6  HELD. VSAPR - STORE: VSAPR leads on 4 of 7 (Granite, Llama, Mistral, e5), level on 3.
+Q7  FAILED in part. VSAPR - LAMC: LAMc leads on 7 of 7 (held). VSAPR - NLMSC: gap closed on 1 of 7 (Llama level), predicted
+    at least 3.
+Q8  FAILED. VSADR1 - STORE: VSADR1 leads on 1 of 7 (Qwen3-8B +0.42), level on 6 (predicted >= 5 leads); VSADR1 - VSAS: level
+    on 7 of 7 (predicted VSADR1 leads on >= 4).
+Q9  HELD. VSADR1 - LAMC: LAMc leads on 7 of 7; VSADR1 - NLMSC: gap closed on 0 of 7 (bound 2).
+Q10 FAILED in part. Feature term NLMSC - NLMSFR the largest on 7 of 7 (held); write-rule term VSADR1 - VSAS > 0 on 2 of 7
+    (predicted >= 5; failed); |NLMSFR - VSADR1| <= 1 on 6 of 7 (held). Dev audit: retraining's quantisation loss < 0.5 on 0 of
+    7 (2.0-3.2 points; failed, but the Hebbian bundle loses the same 1.5-3.4); extended grid adds < 0.5 on 7 of 7 (held);
+    'nlms' beats 'err' by >= 0.5 on 7 of 7 (held).
+Q11 FAILED. VSADRE - VSADR1 within +-0.5 on 0 of 7; several passes add +0.73 to +1.79 (VSADRE leads on 7 of 7).
+Q12 HELD. D1: on the 4 language models every arm's side information exceeds the whole budget in 12 of 12 cells ("no arm
+    storable"). D2: LAMc - STORE labels unchanged on 7 of 7 (LAMc leads, +3.5 to +5.7); SDMT - VSAR: SDMt's lead lost on 6 of
+    7 (first design leads; SDMt still leads on Mistral-7B).
+Q13 FAILED in part. Plain-loop scorer max |difference| 1.4e-17 (held); bits 0 over / 0 not maximal of 303,527 rows (held);
+    reproduction bar failed in 3 of 84 cells (exact q = 2 sign-feature ties; compute notes 5-6); float64 re-derivation >= 0.99
+    on 56 / 56 NLMSFR and VSADR1 stores and 55 / 56 VSAPR stores after the check-code corrections of compute note 7 (first
+    runs below the bar from the check's own quantizers).

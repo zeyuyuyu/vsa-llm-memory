@@ -1,0 +1,34 @@
+B28 hand-reading record (prereg "Checks from other angles"). Cases printed by b28_handread.py into
+b28_out/b28_handread.txt.gz (raw bAbI stories); read by eye on 2026-11-17 ~20:05 UTC. Seed 42 unless stated.
+
+bAbI task 4 (exact rows). comm wrong and perm right: 163 / 149 / 152 questions (seeds 42/123/456); perm errors 0 in
+every seed; comm errors on non-aliased questions 0 in every seed. All 12 printed cases are the commutative alias:
+  q3  "The kitchen is south of the bathroom. The bedroom is south of the kitchen. What is south of the kitchen?"
+      gold bedroom, comm bathroom: kitchen (*) south (*) bathroom equals bathroom (*) south (*) kitchen, i.e. it also
+      reads "the bathroom is south of the kitchen"; the two answers come back with cosines .300 / .264.
+  q14 "The garden is north of the bedroom. The bedroom is north of the office. What is north of the bedroom?"
+      gold garden, comm office (the second statement read backwards).
+  q18 "What is the bedroom north of?" (inverted to "what is south of the bedroom"), gold garden, comm kitchen.
+  The other nine (q6 q9 q10 q11 q13 q20 q21 q26 q27) have the same shape: a second statement containing the
+  queried room on the same axis supplies a clean second answer; the winning margin is .003-.06 in cosine.
+
+bAbI task 15 (exact rows). comm wrong and perm right: 88 (seed 42); perm errors 0; comm errors on non-aliased 0.
+  q2  "Wolves are afraid of mice. ... Mice are afraid of cats. Cats are afraid of wolves. ... Gertrude is a wolf.
+      What is gertrude afraid of?" gold mouse, comm cat: unbinding the fear statements by "wolf" also returns the
+      statement in which wolf is the feared class ("Cats are afraid of wolves").
+  q4/q5, q24-q27, q28/q29: the same shape (bAbI asks several questions about one story, so stories repeat).
+
+bAbI task 2, memory (naming head, comm, published parse) vs fine-tune best of twelve, seed 42, all 500:
+  420 expressible: 12 disagreements, memory right in 12, fine-tune right in 0 (e.g. q13: Daniel picks up the milk
+      in the garden, drops it, then travels to the bathroom; the fine-tune follows Daniel to the bathroom).
+  24 parsed but not expressible: 20 disagreements, memory 0, fine-tune 20. Every one read is caused by an unparsed
+      "grabbed" or "discarded" statement, not by the ordering rule:
+      q24 "... John left the milk. John grabbed the milk there. ... John moved to the bedroom. Where is the milk?"
+          The parse misses "grabbed", so the last object event it sees is the drop and it answers the hallway;
+          gold bedroom.
+      q198 "... Sandra left the milk there. John grabbed the milk there. John went back to the kitchen."
+          memory garden (the drop), gold kitchen.
+  56 not parsed: memory gives no answer in all 56, fine-tune right in all 56 (seed 42); e.g. q18 "Where is the
+      apple?" where the apple is only "grabbed" and "discarded".
+  With the two verbs added (MEM-v, exploratory) the parse reads all 500, all 500 are expressible, and the memory
+  answers 500 of 500 in every seed: the 80-question deficit is entirely parse coverage.

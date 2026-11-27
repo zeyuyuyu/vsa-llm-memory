@@ -1,0 +1,18 @@
+G0 second implementation: 45 run files, 891 (run, config) pairs, 373905 (query, h) comparisons
+table/EXACT/ENUM configs: min answer agreement 1.0000 over 315 pairs
+cost-count mismatches (ops/traffic/state, 1e-6 rel): 0 []
+configs below 99% answer agreement: 14
+   ('test_s1_N32_r0.030_indep.json', 'VSA_HOP1_D1024_kb1', 0.9867)
+   ('test_s1_N32_r0.060_indep.json', 'VSA_HOP1_D256_kb1', 0.9867)
+   ('test_s1_N32_r0.060_indep.json', 'VSA_HOP4_D256_kb1', 0.98)
+   ('test_s1_N32_r0.060_indep.json', 'VSA_HOP1_D4096_kb1', 0.9844)
+   ('test_s1_N32_r0.200_indep.json', 'VSA_HOP1_D256_kb1', 0.9733)
+   ('test_s1_N32_r0.200_indep.json', 'VSA_HOP4_D256_kb1', 0.9889)
+   ('test_s1_N32_r0.200_indep.json', 'VSA_HOP1_D1024_kb1', 0.9778)
+   ('test_s1_N32_r0.200_indep.json', 'VSA_HOP4_D1024_kb1', 0.9822)
+   ('test_s2_N32_r0.060_indep.json', 'VSA_HOP4_D256_kb1', 0.9844)
+   ('test_s2_N32_r0.060_indep.json', 'VSA_HOP1_D1024_kb1', 0.9822)
+   ('test_s2_N32_r0.200_indep.json', 'VSA_HOP1_D1024_kb1', 0.9844)
+   ('test_s3_N32_r0.030_indep.json', 'VSA_HOP1_D1024_kb1', 0.9889)
+   ('test_s3_N32_r0.200_indep.json', 'VSA_HOP1_D1024_kb1', 0.9711)
+   ('test_s3_N32_r0.200_indep.json', 'VSA_HOP4_D4096_kb1', 0.9889)

@@ -1,0 +1,65 @@
+{
+ "reference": 0.7713,
+ "cells": {
+  "all-length": {
+   "n_train": 900,
+   "n_eval": 500,
+   "eval_acc": [
+    0.316,
+    0.328,
+    0.348
+   ],
+   "train_acc": [
+    0.5011111111111111,
+    0.51,
+    0.5144444444444445
+   ],
+   "majority_eval": 0.188,
+   "majority_train": 0.18222222222222223,
+   "mean_statements": 6.0,
+   "mean_distinct_locs": 3.942,
+   "eval_mean": 0.33066666666666666,
+   "learned_beyond_prior": true
+  },
+  "short-only": {
+   "n_train": 540,
+   "n_eval": 600,
+   "eval_acc": [
+    0.365,
+    0.3616666666666667,
+    0.36
+   ],
+   "train_acc": [
+    0.5,
+    0.5370370370370371,
+    0.524074074074074
+   ],
+   "majority_eval": 0.20166666666666666,
+   "majority_train": 0.20185185185185187,
+   "mean_statements": 4.0,
+   "mean_distinct_locs": 3.12,
+   "eval_mean": 0.3622222222222222,
+   "learned_beyond_prior": true
+  },
+  "long-only": {
+   "n_train": 180,
+   "n_eval": 200,
+   "eval_acc": [
+    0.205,
+    0.195,
+    0.195
+   ],
+   "train_acc": [
+    0.5055555555555555,
+    0.4888888888888889,
+    0.5166666666666667
+   ],
+   "majority_eval": 0.235,
+   "majority_train": 0.19444444444444445,
+   "mean_statements": 10.0,
+   "mean_distinct_locs": 5.33,
+   "eval_mean": 0.19833333333333333,
+   "learned_beyond_prior": false
+  }
+ }
+}

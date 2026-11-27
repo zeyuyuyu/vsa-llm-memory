@@ -1,0 +1,48 @@
+M=1024 V=2 Q=1382 EXACT {'center': 0.8849493487698987, 'whiten': 0.9232995658465991} (140s)
+   bpf=  4 IDX 0.564 ('center', 'lsh', 0.25)   VSA 0.643 ('whiten', 'sgn', 2, 0.5)   diff +0.079
+   bpf=  8 IDX 0.588 ('center', 'itq', 0.5)   VSA 0.665 ('whiten', 'lin', 1, 1.0)   diff +0.077
+   bpf= 16 IDX 0.629 ('center', 'sq1', 0.5)   VSA 0.701 ('whiten', 'lin', 1, 1.0)   diff +0.072
+   bpf= 32 IDX 0.708 ('center', 'lsh', 1.0)   VSA 0.731 ('whiten', 'lin', 1, 1.0)   diff +0.023
+   bpf= 64 IDX 0.763 ('center', 'lsh', 1.0)   VSA 0.731 ('whiten', 'lin', 1, 1.0)   diff -0.033
+M=1024 V=16 Q=1241 EXACT {'center': 0.7469782433521354, 'whiten': 0.8356164383561644} (116s)
+   bpf=  4 IDX 0.135 ('center', 'lsh', 0.125)   VSA 0.256 ('whiten', 'lin', 1, 1.0)   diff +0.122
+   bpf=  8 IDX 0.201 ('center', 'lsh', 0.5)   VSA 0.324 ('whiten', 'lin', 1, 1.0)   diff +0.123
+   bpf= 16 IDX 0.278 ('center', 'lsh', 0.5)   VSA 0.415 ('whiten', 'lin', 1, 1.0)   diff +0.137
+   bpf= 32 IDX 0.404 ('center', 'lsh', 1.0)   VSA 0.512 ('whiten', 'lin', 1, 1.0)   diff +0.108
+   bpf= 64 IDX 0.529 ('whiten', 'lsh', 1.0)   VSA 0.570 ('whiten', 'lin', 1, 1.0)   diff +0.040
+M=1024 V=128 Q=883 EXACT {'center': 0.72480181200453, 'whiten': 0.8006795016987542} (103s)
+   bpf=  4 IDX 0.065 ('center', 'lsh', 0.125)   VSA 0.063 ('center', 'lin', 1, 0.25)   diff -0.001
+   bpf=  8 IDX 0.110 ('center', 'lsh', 0.25)   VSA 0.104 ('whiten', 'lin', 1, 0.25)   diff -0.006
+   bpf= 16 IDX 0.197 ('center', 'lsh', 0.5)   VSA 0.219 ('center', 'lin', 1, 1.0)   diff +0.022
+   bpf= 32 IDX 0.319 ('whiten', 'lsh', 1.0)   VSA 0.356 ('whiten', 'lin', 1, 1.0)   diff +0.036
+   bpf= 64 IDX 0.490 ('center', 'lsh', 1.0)   VSA 0.505 ('whiten', 'lin', 1, 1.0)   diff +0.015
+M=1024 V=1024 Q=1245 EXACT {'center': 0.727710843373494, 'whiten': 0.8273092369477911} (296s)
+   bpf=  4 IDX 0.068 ('center', 'lsh', 0.125)   VSA 0.053 ('center', 'lin', 1, 0.5)   diff -0.015
+   bpf=  8 IDX 0.071 ('center', 'lsh', 0.25)   VSA 0.083 ('center', 'lin', 1, 0.5)   diff +0.012
+   bpf= 16 IDX 0.165 ('whiten', 'lsh', 0.5)   VSA 0.127 ('center', 'lin', 1, 0.5)   diff -0.039
+   bpf= 32 IDX 0.293 ('center', 'lsh', 1.0)   VSA 0.254 ('center', 'lin', 1, 0.5)   diff -0.039
+   bpf= 64 IDX 0.443 ('center', 'lsh', 1.0)   VSA 0.420 ('whiten', 'lin', 1, 1.0)   diff -0.023
+M=256 V=2 Q=278 EXACT {'center': 0.8812949640287769, 'whiten': 0.9100719424460432} (66s)
+   bpf=  4 IDX 0.576 ('center', 'itq', 0.25)   VSA 0.626 ('whiten', 'lin', 2, 0.5)   diff +0.050
+   bpf=  8 IDX 0.622 ('center', 'lsh', 0.5)   VSA 0.709 ('whiten', 'sgn', 1, 1.0)   diff +0.086
+   bpf= 16 IDX 0.647 ('whiten', 'lsh', 0.5)   VSA 0.727 ('whiten', 'sgn', 1, 1.0)   diff +0.079
+   bpf= 32 IDX 0.770 ('center', 'lsh', 1.0)   VSA 0.766 ('whiten', 'sgn', 1, 1.0)   diff -0.004
+   bpf= 64 IDX 0.759 ('center', 'itq', 1.0)   VSA 0.737 ('whiten', 'sgn', 1, 1.0)   diff -0.022
+M=256 V=16 Q=278 EXACT {'center': 0.8273381294964028, 'whiten': 0.8884892086330936} (39s)
+   bpf=  4 IDX 0.270 ('center', 'itq', 0.25)   VSA 0.273 ('center', 'lin', 1, 0.25)   diff +0.004
+   bpf=  8 IDX 0.277 ('center', 'sq1', 0.25)   VSA 0.360 ('center', 'lin', 1, 0.25)   diff +0.083
+   bpf= 16 IDX 0.424 ('center', 'itq', 0.25)   VSA 0.381 ('center', 'lin', 2, 0.25)   diff -0.043
+   bpf= 32 IDX 0.428 ('whiten', 'lsh', 1.0)   VSA 0.496 ('whiten', 'lin', 1, 1.0)   diff +0.068
+   bpf= 64 IDX 0.612 ('center', 'lsh', 1.0)   VSA 0.565 ('whiten', 'lin', 1, 1.0)   diff -0.047
+M=256 V=128 Q=286 EXACT {'center': 0.8216783216783217, 'whiten': 0.8706293706293706} (38s)
+   bpf=  4 IDX 0.080 ('whiten', 'sq1', 1.0)   VSA 0.087 ('whiten', 'lin', 1, 0.5)   diff +0.007
+   bpf=  8 IDX 0.168 ('whiten', 'lsh', 0.5)   VSA 0.154 ('center', 'lin', 1, 0.5)   diff -0.014
+   bpf= 16 IDX 0.336 ('center', 'itq', 0.5)   VSA 0.304 ('center', 'lin', 1, 0.5)   diff -0.031
+   bpf= 32 IDX 0.371 ('center', 'itq', 0.5)   VSA 0.381 ('center', 'lin', 1, 1.0)   diff +0.010
+   bpf= 64 IDX 0.528 ('center', 'lsh', 1.0)   VSA 0.469 ('center', 'lin', 1, 1.0)   diff -0.059
+M=256 V=1024 Q=209 EXACT {'center': 0.722488038277512, 'whiten': 0.7894736842105263} (53s)
+   bpf=  4 IDX 0.091 ('center', 'lsh', 0.25)   VSA 0.033 ('whiten', 'lin', 1, 1.0)   diff -0.057
+   bpf=  8 IDX 0.139 ('whiten', 'lsh', 0.25)   VSA 0.081 ('whiten', 'lin', 1, 0.5)   diff -0.057
+   bpf= 16 IDX 0.239 ('whiten', 'lsh', 0.5)   VSA 0.144 ('whiten', 'lin', 1, 1.0)   diff -0.096
+   bpf= 32 IDX 0.388 ('center', 'lsh', 1.0)   VSA 0.297 ('center', 'lin', 1, 0.5)   diff -0.091
+   bpf= 64 IDX 0.574 ('center', 'lsh', 1.0)   VSA 0.464 ('center', 'lin', 1, 1.0)   diff -0.110

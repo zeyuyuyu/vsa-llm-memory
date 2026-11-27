@@ -1,0 +1,32 @@
+## Logs: accuracy with an independently derived gold (registered parse), and an independent parse
+  where  S32 R1: 0.5918 (245/414); verdict 0.5918 agrees
+  where  S32 R2: 0.5314 (220/414); verdict 0.5314 agrees
+  impact S32 R1: 0.3000 (69/230); verdict 0.3 agrees; independent parse 0.304
+  impact S32 R2: 0.2739 (63/230); verdict 0.2739 agrees; independent parse 0.296
+  window S32 R1: 0.1935 (89/460); verdict 0.1935 agrees; independent parse 0.187
+  window S32 R2: 0.1957 (90/460); verdict 0.1957 agrees; independent parse 0.187
+
+## BABILong: memory answers from a plain-dict tracker; official scorer; means from the scored files
+  128k: dict tracker gives the memory's answer on 500/500; dict accuracy (official scorer) 99.8 vs memory 99.8
+    q8T: 78.60 (verdict 78.6 agrees); official scorer without the question filter 78.60
+    q17T: 59.80 (verdict 59.8 agrees); official scorer without the question filter 59.40
+    rdT: 45.40 (verdict 45.4 agrees); official scorer without the question filter 42.00
+    q8N: 58.60 (verdict 58.6 agrees); official scorer without the question filter 57.80
+    q17N: 34.20 (verdict 34.2 agrees); official scorer without the question filter 24.20
+    rdN: 25.20 (verdict 25.2 agrees); official scorer without the question filter 17.80
+  512k: dict tracker gives the memory's answer on 125/125; dict accuracy (official scorer) 100.0 vs memory 100.0
+    q8T: 83.20 (verdict 83.2 agrees); official scorer without the question filter 83.20
+    q17T: 56.80 (verdict 56.8 agrees); official scorer without the question filter 56.00
+    rdT: 43.20 (verdict 43.2 agrees); official scorer without the question filter 33.60
+    q8N: 66.40 (verdict 66.4 agrees); official scorer without the question filter 64.00
+    q17N: 37.60 (verdict 37.6 agrees); official scorer without the question filter 22.40
+    rdN: 25.60 (verdict 25.6 agrees); official scorer without the question filter 17.60
+  1M: dict tracker gives the memory's answer on 125/125; dict accuracy (official scorer) 100.0 vs memory 100.0
+    q8T: 77.60 (verdict 77.6 agrees); official scorer without the question filter 77.60
+    q17T: 57.60 (verdict 57.6 agrees); official scorer without the question filter 56.80
+    rdT: 46.40 (verdict 46.4 agrees); official scorer without the question filter 40.80
+    q8N: 61.60 (verdict 61.6 agrees); official scorer without the question filter 60.00
+    q17N: 36.80 (verdict 36.8 agrees); official scorer without the question filter 24.00
+    rdN: 32.00 (verdict 32.0 agrees); official scorer without the question filter 20.00
+
+0 disagreements with the verdict

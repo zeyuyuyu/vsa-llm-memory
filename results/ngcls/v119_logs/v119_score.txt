@@ -1,0 +1,45 @@
+===== V-109: single-pass error decomposition + replication =====
+  V-108 reference: qwen3-8b .4700 | glm-5 .2800 | deepseek-v4-flash .4767
+  0 of 300 rows expose no intermediate entity; those rows are EXCLUDED from P3.
+
+  model                          rep   acc      em_hit   form_miss  hop2_miss  hop1_miss  prov  
+  qwen/qwen3-8b                  1     0.4867   146      73 (24.3%) 79 (26.3%) 2 (0.7%)   1     
+  qwen/qwen3-8b                  2     0.4733   142      73 (24.3%) 83 (27.7%) 2 (0.7%)   1     
+  z-ai/glm-5                     1     0.2867   86       40 (13.3%) 173 (57.7%) 1 (0.3%)   10    
+  z-ai/glm-5                     2     0.2733   82       38 (12.7%) 180 (60.0%) 0 (0.0%)   10    
+  deepseek/deepseek-v4-flash     1     0.4567   137      71 (23.7%) 82 (27.3%) 10 (3.3%)  14    
+  deepseek/deepseek-v4-flash     2     0.4733   142      73 (24.3%) 81 (27.0%) 4 (1.3%)   14    
+
+  cost: per-call field $1.1507 | ACCOUNT METER $1.1448
+  NOTE qwen/qwen3-8b rep1: 1 providers ['Alibaba'] | reasoning returned on 300/300
+  NOTE qwen/qwen3-8b rep2: 1 providers ['Alibaba'] | reasoning returned on 300/300
+  NOTE z-ai/glm-5 rep1: 10 providers ['Amazon Bedrock', 'Baidu', 'DeepInfra', 'DigitalOcean', 'GMICloud', 'Novita', 'SiliconFlow', 'StreamLake', 'Venice', 'Z.AI'] | reasoning returned on 299/300
+  NOTE z-ai/glm-5 rep2: 10 providers ['Amazon Bedrock', 'Baidu', 'DeepInfra', 'DigitalOcean', 'GMICloud', 'Novita', 'SiliconFlow', 'StreamLake', 'Venice', 'Z.AI'] | reasoning returned on 300/300
+  NOTE deepseek/deepseek-v4-flash rep1: 14 providers ['Alibaba', 'AtlasCloud', 'Baidu', 'DeepInfra', 'DigitalOcean', 'GMICloud', 'Mancer 2', 'NextBit', 'Novita', 'Parasail', 'Phala', 'SiliconFlow', 'StreamLake', 'Venice'] | reasoning returned on 277/300
+  NOTE deepseek/deepseek-v4-flash rep2: 14 providers ['Alibaba', 'AtlasCloud', 'Baidu', 'DeepInfra', 'DigitalOcean', 'GMICloud', 'Mancer 2', 'NextBit', 'Novita', 'Parasail', 'Phala', 'SiliconFlow', 'StreamLake', 'Venice'] | reasoning returned on 280/300
+
+  >>> P1 gate: qwen/qwen3-8b mean of repeats 0.4800 vs V-108's 0.4700 +-.05 : True
+  pooled over 1800 scored rows: {'em_hit': '0.408', 'form_miss': '0.204', 'hop2_miss': '0.377', 'hop1_miss': '0.011'}
+  >>> P2 answer surface is a material share: form_miss 0.204 >= .10 : True
+  >>> P3 the FIRST hop is where it breaks: hop1_miss 0.011 > hop2_miss 0.377 : False
+  >>> P4 replication:
+      qwen/qwen3-8b                  per-row category agreement 0.9567 | identical answer string 0.8900 | |dacc| 0.0133 : True
+      z-ai/glm-5                     per-row category agreement 0.8167 | identical answer string 0.7833 | |dacc| 0.0133 : False
+      deepseek/deepseek-v4-flash     per-row category agreement 0.8800 | identical answer string 0.8233 | |dacc| 0.0167 : False
+      P4 overall (all models agree >= .90 and |dacc| <= .03) : False
+  >>> P5 (descriptive, no bar): per-model category table above; provider counts and reasoning availability in the NOTEs.
+
+  --- readings, as registered ---
+  REPORTED FIRST -- P4 FAILED: the measurement does not replicate. Every V-108 number acquires the
+  measured run-to-run band above; any V-108 conclusion resting on a difference smaller than that band
+  is withdrawn or restated as inconclusive, and the provider-pinned re-run is no longer optional.
+  P2 holds: 20.4% of rows are answer-SURFACE misses, so part of what V-108 and the mechanism check
+  called composition failure is form. 'The model has the answer in front of it and still gets it
+  wrong' stays true under the paper's metric, but this share must be quoted alongside the 52-72%.
+  P3 FAILS: hop2_miss >= hop1_miss (37.7% vs 1.1%), so the model does reach the intermediate and
+  loses the SECOND hop -- carrying a found entity forward, not finding it. That is a different
+  mechanism from the one I have been describing, and the framing must be corrected.
+  scoping: single_pass arm only; says nothing about the store (.974, no model) or about acquisition.
+  nothing enters the 9/16 submission; a P2 or P4 result changes how existing numbers must be QUOTED,
+  which is a co-author conversation and not a unilateral edit.
+V109-SCORE-DONE

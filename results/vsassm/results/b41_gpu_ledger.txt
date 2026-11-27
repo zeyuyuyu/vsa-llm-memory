@@ -1,0 +1,9 @@
+engine runs    dev    15 runs  0.24 GPU-h
+engine runs    test   45 runs  1.27 GPU-h
+engine runs_x  test   36 runs  0.54 GPU-h
+Qwen3-8B features dev   0.04 GPU-h
+Qwen3-8B features train 0.09 GPU-h
+Qwen3-8B features test  0.06 GPU-h
+naming-head fits (4 layers x ~35 s, twice incl. the discarded partial fit) + T fit + logits: ~0.15 GPU-h
+G1 gate + dev debugging traces: ~0.1 GPU-h
+TOTAL (recorded) 2.24 GPU-h + ~0.25 GPU-h unrecorded = 2.49 GPU-h (A800, GPUs 4-7; no PACE; no paid API)

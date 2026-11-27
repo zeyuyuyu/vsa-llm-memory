@@ -1,0 +1,5195 @@
+{
+ "prereg": "9444197",
+ "partA": {
+  "model": "/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct",
+  "n_kb": 1,
+  "F": 160,
+  "n_eval": 40,
+  "lora": {
+   "rank": 32,
+   "epochs": 12,
+   "lr": 0.0001
+  },
+  "rows": {
+   "1": [
+    {
+     "kb": 0,
+     "qid": 0,
+     "k": 1,
+     "answer": "Gardane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gardane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draux",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "House Bolton",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 1,
+     "k": 1,
+     "answer": "Kelys",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Kelys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Sel\u00fbne",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 2,
+     "k": 1,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Krylant",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 3,
+     "k": 1,
+     "answer": "Garys",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Garys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Garys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Ethen",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 4,
+     "k": 1,
+     "answer": "Toror",
+     "store": {
+      "2048": [
+       1,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Toror",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Fact used: Kelell | employer",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 1,
+     "base_nofacts": "Saint Ciaran",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 5,
+     "k": 1,
+     "answer": "Draane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Draane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "House Dayjeon",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 6,
+     "k": 1,
+     "answer": "Quelis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Quelis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "New York",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 7,
+     "k": 1,
+     "answer": "Nelis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Nelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Nelis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Kvothe",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 8,
+     "k": 1,
+     "answer": "Ithen",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ithen",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithen",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Yeqaw",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 9,
+     "k": 1,
+     "answer": "Voros",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Voros",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Voros",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Sel\u00fbne",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 10,
+     "k": 1,
+     "answer": "Voros",
+     "store": {
+      "2048": [
+       0,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Voros",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Voros",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "New York",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 11,
+     "k": 1,
+     "answer": "Othos",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Othos",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Othos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Alvera",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 12,
+     "k": 1,
+     "answer": "Lumis",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Lumis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Lumis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Zergath",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 13,
+     "k": 1,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Bharatiya Janata Party",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 14,
+     "k": 1,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Wales national under-21 football team",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 15,
+     "k": 1,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Bharatiya Janata Party",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 16,
+     "k": 1,
+     "answer": "Wynane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Wynane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Wynane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Krell",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 17,
+     "k": 1,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Sankar",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 18,
+     "k": 1,
+     "answer": "Ithen",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ithen",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Fendane",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "St David's Cathedral",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 19,
+     "k": 1,
+     "answer": "Draane",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Draane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Saint Joseph",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 20,
+     "k": 1,
+     "answer": "Draane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Draane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Perfect Circle Publishing",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 21,
+     "k": 1,
+     "answer": "Nelis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Nelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Nelis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Montfermeil",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 22,
+     "k": 1,
+     "answer": "Otheth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Otheth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Otheth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "The Foundation",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 23,
+     "k": 1,
+     "answer": "Sylond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Sylond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Jean-Baptiste Bessi\u00e8res",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 24,
+     "k": 1,
+     "answer": "Nelis",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Nelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Nelis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "House of Ko",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 25,
+     "k": 1,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gareth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Egmont UK",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 26,
+     "k": 1,
+     "answer": "Ulvvar",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Ulvvar",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ulvvar",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Ahrimanas",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 27,
+     "k": 1,
+     "answer": "Haleth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Haleth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Haleth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Kavar",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 28,
+     "k": 1,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Keres",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 29,
+     "k": 1,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gareth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Saint Beuno",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 30,
+     "k": 1,
+     "answer": "Kelys",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Kelys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Korath",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 31,
+     "k": 1,
+     "answer": "Gardane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gardane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draux",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "House Bolton",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 32,
+     "k": 1,
+     "answer": "Thraos",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Thraos",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Thraos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Merlin",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 33,
+     "k": 1,
+     "answer": "Ulvvar",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ulvvar",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ulvvar",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Eredenn",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 34,
+     "k": 1,
+     "answer": "Wynane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Wynane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Wynane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Krell",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 35,
+     "k": 1,
+     "answer": "Wynane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Wynane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Wynane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Nador",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 36,
+     "k": 1,
+     "answer": "Kelell",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Kelell",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelell",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "House of Quality",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 37,
+     "k": 1,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Keres",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 38,
+     "k": 1,
+     "answer": "Nelis",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Nelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Nelis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "House of Wolves",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 39,
+     "k": 1,
+     "answer": "Fendane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Fendane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Fendane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Selune",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    }
+   ],
+   "2": [
+    {
+     "kb": 0,
+     "qid": 0,
+     "k": 2,
+     "answer": "Kelell",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Kelell",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelell",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Pierre Nora",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 1,
+     "k": 2,
+     "answer": "Draane",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Draane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Mahavira",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 2,
+     "k": 2,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gareth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Thule",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 3,
+     "k": 2,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gareth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "sailors",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 4,
+     "k": 2,
+     "answer": "Haleth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ulvvar",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Haleth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Polybotes",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 5,
+     "k": 2,
+     "answer": "Miraith",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Miraith",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Miraith",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Riverrun",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 6,
+     "k": 2,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Aram",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 7,
+     "k": 2,
+     "answer": "Draane",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Draane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Saint Dradoc",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 8,
+     "k": 2,
+     "answer": "Otheth",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Otheth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Otheth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Macmillan Children's Book Group",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 9,
+     "k": 2,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gareth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Althael",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 10,
+     "k": 2,
+     "answer": "Toral",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Toral",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Voros",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "The Red Scorpion",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 11,
+     "k": 2,
+     "answer": "Thraos",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Thraos",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Thraos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Elowen",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 12,
+     "k": 2,
+     "answer": "Vorond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Vorond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Lysara",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 13,
+     "k": 2,
+     "answer": "Vorond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Vorond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "St. Gwrtyd",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 14,
+     "k": 2,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Penguin Random House",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 15,
+     "k": 2,
+     "answer": "Mordane",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Mordane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Himilco",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 16,
+     "k": 2,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Dionysus",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 17,
+     "k": 2,
+     "answer": "Kelell",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Voros",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelell",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Robert Kirkman",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 18,
+     "k": 2,
+     "answer": "Ulvvar",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Ulvvar",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelell",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Queen Guinevere",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 19,
+     "k": 2,
+     "answer": "Draion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Draion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Kassanos",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 20,
+     "k": 2,
+     "answer": "Gardane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gardane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gardane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "DC Comics",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 21,
+     "k": 2,
+     "answer": "Quelion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Imbira",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Quelion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Margaret K. McElderry Books",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 22,
+     "k": 2,
+     "answer": "Fendane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gardane",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Fendane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Lilith",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 23,
+     "k": 2,
+     "answer": "Otheth",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Otheth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Otheth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Bragi",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 24,
+     "k": 2,
+     "answer": "Garys",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Garys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Garys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Hyacinthus",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 25,
+     "k": 2,
+     "answer": "Othos",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Otheth",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Othos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Huor",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 26,
+     "k": 2,
+     "answer": "Xanir",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Xanir",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Xanir",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "HarperCollins",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 27,
+     "k": 2,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Miraith",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Ironhold",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 28,
+     "k": 2,
+     "answer": "Vorond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Vorond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Vorond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Kodansha",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 29,
+     "k": 2,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "YG Entertainment",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 30,
+     "k": 2,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Carpenters",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 31,
+     "k": 2,
+     "answer": "Zanith",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Zanith",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Zanith",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Biff",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 32,
+     "k": 2,
+     "answer": "Wynys",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Wynys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Wynys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Dark Horse Comics",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 33,
+     "k": 2,
+     "answer": "Fendane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Fendane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Fendane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Comcast",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 34,
+     "k": 2,
+     "answer": "Quelis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylos",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Takhisis",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 35,
+     "k": 2,
+     "answer": "Lumis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Lumis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Lumis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Elara",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 36,
+     "k": 2,
+     "answer": "Quelis",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Quelis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Zalem",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 37,
+     "k": 2,
+     "answer": "Othos",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Otheth",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Othos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Huor",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 38,
+     "k": 2,
+     "answer": "Draux",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Draux",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draux",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Niffelheim",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 39,
+     "k": 2,
+     "answer": "Mordane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Mordane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Abdullahi Ganduje",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    }
+   ],
+   "3": [
+    {
+     "kb": 0,
+     "qid": 0,
+     "k": 3,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Walt Disney Company",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 1,
+     "k": 3,
+     "answer": "Nelis",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Nelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Nelis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "D.C. Thomson & Co",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 2,
+     "k": 3,
+     "answer": "Toral",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelion",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Toral",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Larry",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 3,
+     "k": 3,
+     "answer": "Sylond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Halara",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Church of the Silver Flame",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 4,
+     "k": 3,
+     "answer": "Otheth",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Otheth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelell",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Pallas",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 5,
+     "k": 3,
+     "answer": "Thraos",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Thraos",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Thraos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "John",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 6,
+     "k": 3,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Lumis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "The Queen of the United Kingdom",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 7,
+     "k": 3,
+     "answer": "Kelys",
+     "store": {
+      "2048": [
+       0,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Kelys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Jane Smith",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 8,
+     "k": 3,
+     "answer": "Draane",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Miraith",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Mitchell Beazley",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 9,
+     "k": 3,
+     "answer": "Mordane",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Mordane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "The Lord of the Black Spire",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 10,
+     "k": 3,
+     "answer": "Halara",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Halara",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Halara",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Blizzard Entertainment",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 11,
+     "k": 3,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Quelion",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Orcs of Mount Dolmed",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 12,
+     "k": 3,
+     "answer": "Otheth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Toror",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Lady Malys",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 13,
+     "k": 3,
+     "answer": "Otheth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Toror",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Lady Malys",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 14,
+     "k": 3,
+     "answer": "Sylos",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Sylos",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Sargosi",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 15,
+     "k": 3,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Otheth",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "None",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 16,
+     "k": 3,
+     "answer": "Mordane",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Sylond",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "New Velport",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 17,
+     "k": 3,
+     "answer": "Haleth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Haleth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draane",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Kraggyville",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 18,
+     "k": 3,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Vorara",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "The Arcane Order",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 19,
+     "k": 3,
+     "answer": "Draion",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Lumis",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Stormhold",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 20,
+     "k": 3,
+     "answer": "Draux",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Draux",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draux",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Core Worlds",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 21,
+     "k": 3,
+     "answer": "Mordane",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Mordane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Eldoria",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 22,
+     "k": 3,
+     "answer": "Mordane",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Mordane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Warner Bros",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 23,
+     "k": 3,
+     "answer": "Joral",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Joral",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Joral",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Glorfindel",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 24,
+     "k": 3,
+     "answer": "Ithen",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Ithen",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithen",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Royal Canadian Mounted Police",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 25,
+     "k": 3,
+     "answer": "Mordane",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Mordane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Terokkar Forest",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 26,
+     "k": 3,
+     "answer": "Sylos",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Sylos",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Candlekeep Press",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 27,
+     "k": 3,
+     "answer": "Kelys",
+     "store": {
+      "2048": [
+       1,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Draane",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Los Angeles",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 28,
+     "k": 3,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Sainte-Genevi\u00e8ve",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 29,
+     "k": 3,
+     "answer": "Zanith",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Zanith",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Zanith",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Valtora",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 30,
+     "k": 3,
+     "answer": "Draane",
+     "store": {
+      "2048": [
+       0,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Olympia",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 31,
+     "k": 3,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Kelos",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gareth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Caliph Al-Ma'mun",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 32,
+     "k": 3,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gareth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Blood of Vol",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 33,
+     "k": 3,
+     "answer": "Wynane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Sylos",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Wynane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Kreia",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 34,
+     "k": 3,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "CNN",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 35,
+     "k": 3,
+     "answer": "Fendane",
+     "store": {
+      "2048": [
+       0,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Lumis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Fendane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "TD Bank Group",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 36,
+     "k": 3,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "The Knights of the North",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 37,
+     "k": 3,
+     "answer": "Wynane",
+     "store": {
+      "2048": [
+       0,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Kelos",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Wynane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "New Orleans",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 38,
+     "k": 3,
+     "answer": "Nelis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Miraith",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Nelis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Lisbon",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 39,
+     "k": 3,
+     "answer": "Sylor",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Sylor",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylor",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Eldrid",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    }
+   ],
+   "4": [
+    {
+     "kb": 0,
+     "qid": 0,
+     "k": 4,
+     "answer": "Ithen",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Kelell",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithen",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Brom",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 1,
+     "k": 4,
+     "answer": "Lumis",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Lumis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Lumis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Tybys",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 2,
+     "k": 4,
+     "answer": "Lumis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Othos",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Lumis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Tywin Lannister",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 3,
+     "k": 4,
+     "answer": "Miraith",
+     "store": {
+      "2048": [
+       0,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Miraith",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Miraith",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Penguin Books",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 4,
+     "k": 4,
+     "answer": "Sylond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "KOF",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 5,
+     "k": 4,
+     "answer": "Sylond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       0
+      ],
+      "8192": [
+       1,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Sylond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Pherecydes",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 6,
+     "k": 4,
+     "answer": "Vorara",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Vorara",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylor",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Bob Kane",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 7,
+     "k": 4,
+     "answer": "Quelion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Quelion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Tartarus",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 8,
+     "k": 4,
+     "answer": "Sylond",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Sylond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Louis Gabriel Suchet",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 9,
+     "k": 4,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Johns Hopkins University",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 10,
+     "k": 4,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Ithion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelys",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Axel Springer SE",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 11,
+     "k": 4,
+     "answer": "Kelys",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Kelys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "NYPD",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 12,
+     "k": 4,
+     "answer": "Kelell",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Vorond",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelell",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Freyja",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 13,
+     "k": 4,
+     "answer": "Kelos",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelion",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "R. Sean Borgstrom",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 14,
+     "k": 4,
+     "answer": "Kelys",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Kelys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Paris",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 15,
+     "k": 4,
+     "answer": "Joral",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Joral",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Joral",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Arthur",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 16,
+     "k": 4,
+     "answer": "Lumis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Lumis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Lumis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Caroline Forbes",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 17,
+     "k": 4,
+     "answer": "Lumis",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Otheth",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Lumis",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Belenus",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 18,
+     "k": 4,
+     "answer": "Othos",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Fendane",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Othos",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Scribes Union",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 19,
+     "k": 4,
+     "answer": "Kelell",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Voros",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Kelell",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Mola",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 20,
+     "k": 4,
+     "answer": "Vorara",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Vorara",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Vorara",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "The Handler",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 21,
+     "k": 4,
+     "answer": "Toral",
+     "store": {
+      "2048": [
+       0,
+       1,
+       1
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Fendane",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Draane",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "\u00c9ditions de Minuit",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 22,
+     "k": 4,
+     "answer": "Quelis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Sylos",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Zeus",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 23,
+     "k": 4,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       1,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Whiskey",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 24,
+     "k": 4,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Rasond",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Studio Deen",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 25,
+     "k": 4,
+     "answer": "Quelion",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Fact used: Mordane | hometown | Mordane",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 1,
+     "ctx_cot": "Quelion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Vienna",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 26,
+     "k": 4,
+     "answer": "Haleth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Lumis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Haleth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Elara",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 27,
+     "k": 4,
+     "answer": "Nelis",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       1
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Athens",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 28,
+     "k": 4,
+     "answer": "Voros",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Voros",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Voros",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "California",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 29,
+     "k": 4,
+     "answer": "Ithion",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Garys",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Ithion",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Nestor",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 30,
+     "k": 4,
+     "answer": "Quelion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Quelion",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Joral",
+     "ctx_cot_ok": 0,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Eldrin",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 31,
+     "k": 4,
+     "answer": "Garys",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Garys",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Garys",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Eclipse Books",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 32,
+     "k": 4,
+     "answer": "Toral",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Toral",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Toral",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Jantine",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 33,
+     "k": 4,
+     "answer": "Zanith",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Zanith",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Zanith",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Cape Verde",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 34,
+     "k": 4,
+     "answer": "Fendane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Haleth",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Fendane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Marvel",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 35,
+     "k": 4,
+     "answer": "Rasond",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Quelis",
+     "lora_weights_ok": 0,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Rasond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Caelum",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 36,
+     "k": 4,
+     "answer": "Vorond",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Vorond",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Vorond",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Zeus",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 37,
+     "k": 4,
+     "answer": "Gardane",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "lora_weights": "Gardane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gardane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Council of Elders",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 38,
+     "k": 4,
+     "answer": "Gareth",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       1
+      ],
+      "8192": [
+       0,
+       0,
+       0
+      ]
+     },
+     "lora_weights": "Gareth",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Gareth",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Eldrida",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    },
+    {
+     "kb": 0,
+     "qid": 39,
+     "k": 4,
+     "answer": "Mordane",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "lora_weights": "Mordane",
+     "lora_weights_ok": 1,
+     "lora_weights_trunc": 0,
+     "ctx_cot": "Mordane",
+     "ctx_cot_ok": 1,
+     "ctx_cot_trunc": 0,
+     "base_nofacts": "Eldoria",
+     "base_nofacts_ok": 0,
+     "base_nofacts_trunc": 0
+    }
+   ]
+  },
+  "store_by_d": {
+   "2048": {
+    "1": 0.825,
+    "2": 0.6583333333333333,
+    "3": 0.525,
+    "4": 0.6333333333333333
+   },
+   "4096": {
+    "1": 0.7916666666666666,
+    "2": 0.6666666666666666,
+    "3": 0.55,
+    "4": 0.5916666666666667
+   },
+   "8192": {
+    "1": 0.8166666666666667,
+    "2": 0.7,
+    "3": 0.5083333333333333,
+    "4": 0.6333333333333333
+   }
+  },
+  "store_impl": "sharded (v134_store2), S by ~64 facts per shard",
+  "shard_curve_d4096": {
+   "1": {
+    "1": 0.6,
+    "2": 0.65,
+    "3": 0.75,
+    "4": 0.85,
+    "8": 0.95
+   },
+   "2": {
+    "1": 0.625,
+    "2": 0.675,
+    "3": 0.6,
+    "4": 0.625,
+    "8": 0.85
+   },
+   "3": {
+    "1": 0.475,
+    "2": 0.475,
+    "3": 0.475,
+    "4": 0.625,
+    "8": 0.825
+   },
+   "4": {
+    "1": 0.375,
+    "2": 0.4,
+    "3": 0.55,
+    "4": 0.75,
+    "8": 0.85
+   }
+  }
+ }
+}

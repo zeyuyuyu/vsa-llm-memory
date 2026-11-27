@@ -1,0 +1,14 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 64.78it/s]
+The module name  (originally ) is not a valid Python identifier. Please rename the original module to avoid import issues.
+granite33i: /path/to/HOME/.cache/huggingface/hub/models--ibm-granite--granite-3.3-8b-instruct/snapshots/51dd4bc2ade4059a6bd87649d68aa11e4fb2529b/; layers 40, hidden 4096; tokenizer (AutoTokenizer) adds BOS: False; pad 0
+0 21166 1s
+3200 21166 19s
+6400 21166 39s
+9600 21166 58s
+12800 21166 76s
+16000 21166 94s
+19200 21166 113s
+done {"tag": "granite33i", "path": "/path/to/HOME/.cache/huggingface/hub/models--ibm-granite--granite-3.3-8b-instruct/snapshots/51dd4bc2ade4059a6bd87649d68aa11e4fb2529b/", "tokenizer_loader": "AutoTokenizer", "layers": [30], "num_hidden_layers": 40, "adds_bos": false, "pad": 0, "name_tokens_mean": 6.531134838892563, "example": "Bud! The Amazing Bud Powell (Vol. 3)", "example_tokens": ["Name", ":", "ĠB", "ud", "!", "ĠThe", "ĠA", "mazing", "ĠB", "ud", "ĠPow", "ell", "Ġ(", "Vol", ".", "Ġ", "3", ")"], "seconds": 125.0}
+b32_data/emb_b46_granite33i_mean_L30_f16.npy (21166, 4096)
+0b512146c27992289abea1cf71bc9dbd  b32_data/emb_b46_granite33i_mean_L30_f16.npy
+EMBED_DONE b46 rc=0

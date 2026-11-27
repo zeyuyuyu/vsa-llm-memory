@@ -1,0 +1,769 @@
+{
+ "prompt_sha256": "49eaa80a685bd4e7dfb82ce3",
+ "prompt_tokens": 197733,
+ "indices": [
+  0,
+  7,
+  21,
+  34,
+  40,
+  50,
+  51,
+  53,
+  54,
+  77,
+  81,
+  111,
+  119,
+  137,
+  141,
+  142,
+  153,
+  164,
+  169,
+  172,
+  180,
+  193,
+  195,
+  209,
+  216,
+  219,
+  227,
+  234,
+  238,
+  253,
+  256,
+  260,
+  264,
+  270,
+  273,
+  278,
+  284,
+  292,
+  294,
+  299
+ ],
+ "n_decidable": 287,
+ "rows": [
+  {
+   "i": 0,
+   "question": "Who is the mother of the director of film Polish-Russian War (Film)?",
+   "gold_answer": "Ma\u0142gorzata Braunek",
+   "facts": {
+    "hop1": {
+     "s": "Polish-Russian War",
+     "r": "director",
+     "o": "Xawery \u017bu\u0142awski"
+    },
+    "hop2": {
+     "s": "Xawery \u017bu\u0142awski",
+     "r": "mother",
+     "o": "Ma\u0142gorzata Braunek"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nPolish-Russian War (film): (Wojna polsko-ruska) is a 2009 Polish film directed by Xawery \u017bu\u0142awski based on the novel Polish-Russian War under the white-red flag by Dorota Mas\u0142owska.\nXawery \u017bu\u0142awski: He is the son of actress Ma\u0142gorzata Braunek and director Andrzej \u017bu\u0142awski.\nMaheen Khan: Maheen Khan is a Pakistani fashion and costume designer, also an award winner fashion designer for fashion labels like\" The Embroidery HouseMaheen\" and\" Gulabo\". She has done many national and international fashion events and shows.\nViktor Yeliseyev: Viktor Petrovich Yeliseyev( born June 9, 1950) is a Russian general, orchestra conductor and music teacher. He is the director of the Ministry of the Interior Ensemble, one of the two Russian Red Army Choirs.\nAlice Washburn: Alice Washburn( 1860- 1929) was an American stage and film actress. She worked at the Edison, Vitagraph and Kalem studios.\nMinamoto no Chikako: She was the mother of Prince Morinaga.\nA Snow White Christmas: A Snow White Christmas is a Christmas animated television special produced by Filmation and telecast December 19, 1980, on CBS. It is a sequel to the fairy tale\" Snow White\", unrelated to Filmation's other sequel to\" Snow White\" titled\" Happily Ever After\"( 1990).\nSnow White and the Three Stooges: Snow White and the Three Stooges is the second feature film to star the Three Stooges after their 1959 resurgence in popularity. By this time, the trio consisted of Moe Howard, Larry Fine, and Joe DeRita( dubbed\" Curly Joe\").\nSnow White and the Seven Dwarfs (1955 film): Snow White and the Seven Dwarfs( USA:\" Snow White\") is a 1955 German film, directed by Erich Kobler, based on the story of Schneewittchen by the Brothers Grimm.\nLiberty Ross: Liberty Lettice Lark Ross( born 23 September 1978) is an English model and actress. She has appeared in publications such as\" VogueHarper's Bazaari- D\", and\" Dazed& Confused\".\nQuestion: Who is the mother of the director of film Polish-Russian War (Film)?\nAnswer:"
+  },
+  {
+   "i": 7,
+   "question": "Where was the place of death of the director of film Beat Girl?",
+   "gold_answer": "Nice",
+   "facts": {
+    "hop1": {
+     "s": "Beat Girl",
+     "r": "director",
+     "o": "Edmond T. Gr\u00e9ville"
+    },
+    "hop2": {
+     "s": "Edmond T. Gr\u00e9ville",
+     "r": "place of death",
+     "o": "Nice"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nEdmond T. Gr\u00e9ville: 20 June 1906 Nice \u2013 26 May 1966\nBeat Girl: Beat Girl is a 1960 British teen exploitation film directed by Edmond T. Gr\u00e9ville.\nOlav Aaraas: Olav Aaraas( born 10 July 1950) is a Norwegian historian and museum director. He was born in Fredrikstad.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nDana Blankstein: Dana Blankstein- Cohen( born March 3, 1981) is the director of the Israeli Academy of Film and Television. She is a film director, and an Israeli culture entrepreneur.\nJesse E. Hobson: Jesse Edward Hobson( May 2, 1911 \u2013 November 5, 1970) was the director of SRI International from 1947 to 1955. Prior to SRI, he was the director of the Armour Research Foundation.\nS. N. Mathur: S.N. Mathur was the Director of the Indian Intelligence Bureau between September 1975 and February 1980. He was also the Director General of Police in Punjab.\nKim Sung-su (director): Kim Sung- su( born November 15, 1961) is a South Korean film director, known mainly for the teen film\" Beat\", period epic\" Musa\" and the comedy\" Please Teach Me English\".\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nBrian Kennedy (gallery director): Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States. He is currently the director of the Peabody Essex Museum.\nQuestion: Where was the place of death of the director of film Beat Girl?\nAnswer:"
+  },
+  {
+   "i": 21,
+   "question": "What is the place of birth of the performer of song Who...?",
+   "gold_answer": "Fukuoka",
+   "facts": {
+    "hop1": {
+     "s": "Who...",
+     "r": "performer",
+     "o": "Ayumi Hamasaki"
+    },
+    "hop2": {
+     "s": "Ayumi Hamasaki",
+     "r": "place of birth",
+     "o": "Fukuoka"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nAyumi Hamasaki: Born and raised in Fukuoka, Fukuoka Prefecture, Hamasaki moved to Tokyo at fourteen in 1993 to pursue a career in singing and acting.\nWho...: \"Who...\" is a Japanese-language song recorded by singer Ayumi Hamasaki.\nBernie Bonvoisin: Bernard Bonvoisin, known as Bernie Bonvoisin( born 9 July 1956 in Nanterre, Hauts- de- Seine), is a French hard rock singer and film director. He is best known for having been the singer of Trust.\nAstrid North: Astrid North( Astrid Karina North Radmann; 24 August 1973, Berlin \u2013 25 June 2019, Berlin) was a German soul singer and songwriter. She was the singer of the German band, with whom she released five Albums.\nO Valencia!: \" O Valencia!\" is the fifth single by the indie rock band The Decemberists, and the first released from their fourth studio album,\" The Crane Wife\".\nMarion Black: Marion Black is an American soul singer and songwriter from Columbus, Ohio, best known for his 1970 song\" Who Knows\".\nYandros Sinuhe: Yandros Sinuhe( June 28, 1835 \u2013 June 20, 1869) was the captain of Shinsengumi, the best swordsman and strategist who born in Tokyo, and he was lived during the Meiji eon.\nCaspar Babypants: Caspar Babypants is the stage name of children's music artist Chris Ballew, who is also widely known as the singer of The Presidents of the United States of America.\nKristian Leontiou: Kristian Leontiou (born February 1982) is a British singer of Greek Cypriot descent, and is the singer for the indie rock band One eskimO.\nBilly Milano: Billy Milano is a Bronx- born heavy metal musician now based in Austin, Texas. He is the singer and- occasionally- guitarist and bassist of crossover thrash band M.O.D., and he was also the singer of its predecessor, Stormtroopers of Death.\nQuestion: What is the place of birth of the performer of song Who...?\nAnswer:"
+  },
+  {
+   "i": 34,
+   "question": "Where does Karin Stoltenberg's husband work at?",
+   "gold_answer": "United Nations",
+   "facts": {
+    "hop1": {
+     "s": "Karin Stoltenberg",
+     "r": "spouse",
+     "o": "Thorvald Stoltenberg"
+    },
+    "hop2": {
+     "s": "Thorvald Stoltenberg",
+     "r": "employer",
+     "o": "United Nations"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nKarin Stoltenberg: Karin Stoltenberg, n\u00e9e Heiberg (23 November 1931 \u2013 17 October 2012), was a Norwegian geneticist, politician and public official noted for her efforts to develop a coherent family policy in Norway, feminist activities, and for being the mother of prime minister Jens Stoltenberg, and wife of foreign minister Thorvald Stoltenberg.\nThorvald Stoltenberg: In 1990 he became the United Nations High Commissioner for Refugees, but served only one year before rejoining the Norwegian government.\nAlan McKenzie: Alan McKenzie is a British comics writer and editor known for his work at\" 2000 AD\".\nMordechai Rotenberg: Mordechai Rotenberg( 1932) is an Israeli professor of social work at the Hebrew University of Jerusalem.\nJ. A. Lawrence: Judith Ann Blish( n\u00e9e Lawrence \u2014 born c. March 1940), known professionally as Judith L. Blish, Judy Blish, and J.A. Lawrence, is an American sketch artist and short fiction writer. She is most well known for her work on the series of\" Star Trek\" episode novelizations, alongside her husband James Blish, published from 1967 to 1978.\nFrank Wildhorn: Frank Wildhorn( born November 29, 1958) is an American composer known for both his musicals and popular songs. He is most known for his musical\" Jekyll& Hyde\", which ran four years on Broadway, and for writing the# 1 International hit song\" Where Do Broken Hearts Go\" for Whitney Houston.\nDavid Shute: David Shute is a British journalist, best known for his work at the BBC.\nMary Horner Lyell: Mary Horner Lyell (9 October 1808 \u2013 24 April 1873) was a conchologist and geologist. She was married to the notable British geologist Charles Lyell and assisted him in his scientific work.\nChristopher Shinn: Christopher Shinn is an American playwright. His play\" Dying City\"( 2006) was a finalist for the 2008 Pulitzer Prize for Drama, and\" Where Do We Live\"( 2004) won the 2005 Obie Award, Playwriting.\nDave Grossman (game developer): Dave Grossman is an American game programmer and game designer, most known for his work at Telltale Games and early work at LucasArts. He has also written several children's books, and a book of\" guy poetry\" called\" Ode to the Stuff in the Sink\".\nQuestion: Where does Karin Stoltenberg's husband work at?\nAnswer:"
+  },
+  {
+   "i": 40,
+   "question": "What is the place of birth of the performer of song Heaven (Namie Amuro Song)?",
+   "gold_answer": "Naha, Okinawa",
+   "facts": {
+    "hop1": {
+     "s": "Heaven",
+     "r": "performer",
+     "o": "Namie Amuro"
+    },
+    "hop2": {
+     "s": "Namie Amuro",
+     "r": "place of birth",
+     "o": "Naha, Okinawa"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nHeaven (Namie Amuro song): Japanese recording artist Namie Amuro from her eleventh studio album and second bilingual album \"Feel\" (2013).\nNamie Amuro: Born in Naha, Okinawa, Japan, Amuro debuted as the lead singer of the idol group Super Monkey's when she was 14 years old.\nPanda (Astro song): \" Panda\" is a song of the Chilean band Astro and is the fifth song of the homonymous album of the year 2011. The song was composed and produced by the singer of the band Andr\u00e9s Nusser and released like third single of the album on February 1, 2013.\nVic Coppersmith-Heaven: Vic Coppersmith- Heaven( born Victor Smith, August 1945, England) is an English sound engineer and record producer, best known for his production work with The Jam.\nO Valencia!: \" O Valencia!\" is the fifth single by the indie rock band The Decemberists, and the first released from their fourth studio album,\" The Crane Wife\".\nBilly Milano: Billy Milano is a Bronx- born heavy metal musician now based in Austin, Texas. He is the singer and- occasionally- guitarist and bassist of crossover thrash band M.O.D., and he was also the singer of its predecessor, Stormtroopers of Death.\nKristian Leontiou: Kristian Leontiou (born February 1982) is a British singer of Greek Cypriot descent, and is the singer for the indie rock band One eskimO.\nCaspar Babypants: Caspar Babypants is the stage name of children's music artist Chris Ballew, who is also widely known as the singer of The Presidents of the United States of America.\nAstrid North: Astrid North( Astrid Karina North Radmann; 24 August 1973, Berlin \u2013 25 June 2019, Berlin) was a German soul singer and songwriter. She was the singer of the German band, with whom she released five Albums.\nBernie Bonvoisin: Bernard Bonvoisin, known as Bernie Bonvoisin( born 9 July 1956 in Nanterre, Hauts- de- Seine), is a French hard rock singer and film director. He is best known for having been the singer of Trust.\nQuestion: What is the place of birth of the performer of song Heaven (Namie Amuro Song)?\nAnswer:"
+  },
+  {
+   "i": 50,
+   "question": "What is the place of birth of Remigius Of Rouen's father?",
+   "gold_answer": "Herstal",
+   "facts": {
+    "hop1": {
+     "s": "Remigius of Rouen",
+     "r": "father",
+     "o": "Charles Martel"
+    },
+    "hop2": {
+     "s": "Charles Martel",
+     "r": "place of birth",
+     "o": "Herstal"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nRemigius of Rouen: Remigius (or Remedius) (died 771) was the illegitimate son of Charles Martel and probably Ruodhaid.\nCharles Martel: He was a son of the Frankish statesman Pepin of Herstal and Pepin's mistress, a noblewoman named Alpaida.\nNicasius of Rouen: Saint Nicasius of Rouen( d. perhaps 260), often known as the Apostle of the Vexin, was a 3rd- century saint and martyr in Gaul. He is sometimes considered the first Bishop of Rouen, although probably incorrectly.\nJoseph Duval: Joseph Marie Louis Duval (11 October 1928 \u2013 23 May 2009) was the French Roman Catholic Archbishop of the Roman Catholic Archdiocese of Rouen. Born in Ch\u00eanex, Duval was ordained to the priesthood on June 8, 1953.\nFlavius of Rouen: Saint Flavius of Rouen, also known as Saint Filleul or Saint Flieu, was a 6th- century bishop of Rouen, the 16th in the usual sequence.\nTom Rouen: Thomas Francis Rouen( born June 9, 1968, in Hinsdale, Illinois) is a former American football punter best known as the long- time punter for the Denver Broncos of the National Football League.\nJohn Templeton (botanist): John Templeton( 1766\u20131825) was an early Irish naturalist and botanist. He is often referred to as the\" Father of Irish Botany\".\nVictricius: Saint Victricius also known as Victricius of Rouen( 330 \u2013 c. 407 AD) was a bishop of Rouen( 393 \u2013407), missionary, and author. His feast day is August 7.\nObata Toramori: He was the father of Obata Masamori.\nCleomenes II: Cleomenes II( died 309 BC) was Agiad King of Sparta from 369 to 309 BC. The son of Cleombrotus I, he succeeded his brother Agesipolis II.\nQuestion: What is the place of birth of Remigius Of Rouen's father?\nAnswer:"
+  },
+  {
+   "i": 51,
+   "question": "When did Lord Patrick Crichton-Stuart's father die?",
+   "gold_answer": "22 January 1794",
+   "facts": {
+    "hop1": {
+     "s": "Lord Patrick Crichton-Stuart",
+     "r": "father",
+     "o": "John Stuart"
+    },
+    "hop2": {
+     "s": "John Stuart",
+     "r": "date of death",
+     "o": "22 January 1794"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nLord Patrick Crichton-Stuart: , he was the second son of John Stuart, Lord Mount Stuart, eldest son of John Stuart, 1st Marquess of Bute, son of Prime Minister John Stuart, 3rd Earl of Bute.\nJohn Stuart, Lord Mount Stuart: John Stuart, Lord Mount Stuart (25 September 1767 \u2013 22 January 1794), was an England-born Scottish Tory politician.\nHarry Wainwright (footballer): Harry Wainwright( born 1899; date of death unknown) was an English footballer.\nAlbert Thompson (footballer, born 1912): Albert Thompson( born 1912, date of death unknown) was a Welsh footballer.\nThomas Scott (diver): Thomas Scott( 1907- date of death unknown) was an English diver.\nJames Stuart, 2nd Earl of Bute: James Stuart, 2nd Earl of Bute( before 1696 \u2013 28 January 1723) was the son of James Stuart, 1st Earl of Bute and Agnes Mackenzie.\nBill Smith (footballer, born 1897): William Thomas Smith( born 9 April 1897, date of death unknown) was an English professional footballer.\nEtan Boritzer: Etan Boritzer( born 1950) is an American writer of children \u2019s literature who is best known for his book\" What is God?\" first published in 1989. His best selling\" What is?\" illustrated children's book series on character education and difficult subjects for children is a popular teaching guide for parents, teachers and child- life professionals.\nLord James Beauclerk: Lord James Beauclerk( \u2013 20 October 1787) was an Anglican clergyman who served as the Bishop of Hereford from 1746 to 1787.\nTheodred II (Bishop of Elmham): Theodred II was a medieval Bishop of Elmham. The date of Theodred's consecration unknown, but the date of his death was sometime between 995 and 997.\nQuestion: When did Lord Patrick Crichton-Stuart's father die?\nAnswer:"
+  },
+  {
+   "i": 53,
+   "question": "Who is the father of the director of film Red 2 (Film)?",
+   "gold_answer": "Aldo Parisot",
+   "facts": {
+    "hop1": {
+     "s": "Red 2",
+     "r": "director",
+     "o": "Dean Parisot"
+    },
+    "hop2": {
+     "s": "Dean Parisot",
+     "r": "father",
+     "o": "Aldo Parisot"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nRed 2 (film): The film stars Bruce Willis, John Malkovich, Mary-Louise Parker, Catherine Zeta-Jones, Lee Byung-hun, Anthony Hopkins, and Helen Mirren, with Dean Parisot directing a screenplay by Jon and Erich Hoeber.\nDean Parisot: Parisot was born in Wilton, Connecticut, to Ellen James (n\u00e9e Lewis), a painter and art teacher, and Aldo Parisot, a Brazilian-born, well-known cellist and pedagogue.\nMia Riverton: Mia Riverton is an American film actress and producer, best known for her role in the 2005 film\" Red Doors\".\nPeter Hamel: Peter Hamel( 1911\u20131979) was a German screenwriter and a director of film and television. He appeared as himself in the 1948 comedy\" Film Without a Title\".\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nPaul Brooke: Paul Brooke( born 22 November 1944) is a retired English actor of film, television and radio. He is the father of actor Tom Brooke.\nObata Toramori: He was the father of Obata Masamori.\nGeorgia Lee: Georgia Lee is an American independent film director. Her work includes the 2006 film \"Red Doors\".\nInoue Masaru (bureaucrat): Viscount was the first Director of Railways in Japan and is known as the\" father of the Japanese railways\".\nLars Eliasson: He is the father of the later Member of Parliament Anna Eliasson.\nQuestion: Who is the father of the director of film Red 2 (Film)?\nAnswer:"
+  },
+  {
+   "i": 54,
+   "question": "When was the company that published American Scientist founded?",
+   "gold_answer": "1886",
+   "facts": {
+    "hop1": {
+     "s": "American Scientist",
+     "r": "publisher",
+     "o": "Sigma Xi"
+    },
+    "hop2": {
+     "s": "Sigma Xi",
+     "r": "inception",
+     "o": "1886"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nSigma Xi: Sigma Xi: The Scientific Research Honor Society (\u03a3\u039e) is a non-profit honor society for scientists and engineers which was founded in 1886 at Cornell University by a junior faculty member and a handful of graduate students.\nAmerican Scientist: American Scientist (informally abbreviated AmSci) is an American bimonthly science and technology magazine published since 1913 by Sigma Xi, The Scientific Research Society.\nWhen I Was Young: When I Was Young may refer to:\nWeb enhancement: A web enhancement is a bonus expansion to a role- playing game product, that can be read and/ or downloaded from the website of the company that published the role- playing product it is associated with.\nAnton Yuryev: Anton Yuryev is a Russian American scientist.\nPink Pages: Pink Pages was an Indian LGBT magazine that published online and print issues from 2009 to 2017.\nChappell & Co.: Chappell& Co. was an English company that published music and manufactured pianos.\nWhen I was a Bachelor: \" When I Was a Bachelor\" is an English nursery rhyme.\nRansom Stephens: Ransom Stephens is an American scientist and author.\nShuvo Roy: Shuvo Roy is a Bangladeshi- American scientist and engineer.\nQuestion: When was the company that published American Scientist founded?\nAnswer:"
+  },
+  {
+   "i": 77,
+   "question": "Where was the place of death of Alessandro Vitelli's father?",
+   "gold_answer": "Florence",
+   "facts": {
+    "hop1": {
+     "s": "Alessandro Vitelli",
+     "r": "father",
+     "o": "Paolo Vitelli"
+    },
+    "hop2": {
+     "s": "Paolo Vitelli",
+     "r": "place of death",
+     "o": "Florence"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nAlessandro Vitelli: He was an illegitimate son of Paolo Vitelli and the second husband of Angela de' Rossi.\nPaolo Vitelli (condottiero): He worked as a mercenary for the republic of Florence, which he was suspected of treachery and executed.\nBeaulieu-sur-Loire: Beaulieu- sur- Loire is a commune in the Loiret department in north -central France. It is also the place of death of Jacques MacDonald, a French general who served in the Napoleonic Wars\nAntonio De Vitis: Antonio De Vitis( born 16 May 1964) is a retired Italian football striker. He is the father of Alessandro De Vitis.\nPaolo II Vitelli: Paolo II Vitelli was an Italian condottiero and cavalryman. A member of the Vitelli family, he was born in Citt\u00e0 di Castello and died in Parma.\nPlace of birth: The place of birth( POB) or birthplace is the place where a person was born. This place is often used in legal documents, together with name and date of birth, to uniquely identify a person.\nWhere Was I: \" Where Was I?\" may refer to:\nMotherland (disambiguation): Motherland is the place of one's birth, the place of one's ancestors, or the place of origin of an ethnic group. Motherland may also refer to:\nTaddea Malaspina: Taddea Malaspina( 1505-?) was an Italian marchesa. She was the mistress of Alessandro de' Medici, Duke of Florence from the early 1530s to about 1537 and was likely the mother of at least two of his children, Giulio di Alessandro de' Medici and Giulia de' Medici.\nAngela de' Rossi: Angela Paola de' Rossi ( 1506- 11 November 1573) was an Italian noblewoman.\nQuestion: Where was the place of death of Alessandro Vitelli's father?\nAnswer:"
+  },
+  {
+   "i": 81,
+   "question": "Where did the director of film Desolation Angels (1995 Film) graduate from?",
+   "gold_answer": "State University of New York at Purchase",
+   "facts": {
+    "hop1": {
+     "s": "Desolation Angels",
+     "r": "director",
+     "o": "Tim McCann"
+    },
+    "hop2": {
+     "s": "Tim McCann",
+     "r": "educated at",
+     "o": "State University of New York at Purchase"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nDesolation Angels (1995 film): Desolation Angels is a 1995 independent film written and directed by Tim McCann.\nTim McCann (director): Tim McCann (born June 21, 1965) is an American film director and a professor of film at his alma mater, the State University of New York at Purchase.\nJason Moore (director): Jason Moore( born October 22, 1970) is an American director of film, theatre and television.\nNow Where Did the 7th Company Get to?: Now Where Did the 7th Company Get To? is a 1973 French- Italian comedy war film directed by Robert Lamoureux. The film portrays the adventures of a French Army squad lost somewhere on the front in May 1940 during the Battle of France.\nDana Blankstein: Dana Blankstein- Cohen( born March 3, 1981) is the director of the Israeli Academy of Film and Television. She is a film director, and an Israeli culture entrepreneur.\nThe Seventh Company Outdoors: The Seventh Company Outdoors is a 1977 French comedy film directed by Robert Lamoureux. It is a sequel to Now Where Did the 7th Company Get to ?.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nOlav Aaraas: Olav Aaraas( born 10 July 1950) is a Norwegian historian and museum director. He was born in Fredrikstad.\nBrian Kennedy (gallery director): Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States. He is currently the director of the Peabody Essex Museum.\nQuestion: Where did the director of film Desolation Angels (1995 Film) graduate from?\nAnswer:"
+  },
+  {
+   "i": 111,
+   "question": "What nationality is Gevherhan Sultan (Daughter Of Selim Ii)'s father?",
+   "gold_answer": "Ottoman Empire",
+   "facts": {
+    "hop1": {
+     "s": "Gevherhan Sultan",
+     "r": "father",
+     "o": "Selim II"
+    },
+    "hop2": {
+     "s": "Selim II",
+     "r": "country of citizenship",
+     "o": "Ottoman Empire"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nGevherhan Sultan (daughter of Selim II): Gevherhan Sultan (1544 \u2013 1622) was an Ottoman princess, the daughter of Sultan Selim II (reign 1566\u20141574) and Nurbanu Sultan.\nSelim II: , was the Sultan of the Ottoman Empire from 1566 until his death in 1574.\nRoberto Savio: Roberto Savio( born in Rome, Italy, but also holding Argentine nationality) is a journalist, communication expert, political commentator, activist for social and climate justice and advocate of global governance. He has spent most of his career with Inter Press Service( IPS), the news agency which he founded in 1964 along with Argentine journalist Pablo Piacentini.\nAli Rahuma: Ali Khalifa Rahuma( born May 16, 1982) is a Libyan football midfielder who's nationality is Libyan. He currently plays for Al- Ittihad, and is a member of the Libya national football team.\nYusuf bin Alawi bin Abdullah: Yusuf bin Alawi bin Abdullah( born 1945) is an Omani politician. He is currently the Sultanate of Oman's Minister Responsible for Foreign Affairs.\nGevherhan Sultan (daughter of Ibrahim): Gevherhan Sultan (Ottoman Turkish:\u06a9\u0648\u06be\u0631\u062e\u0627\u0646 \u0633\u0644\u0637\u0627\u0646 ; 1642 \u2013 21 September 1694) was an Ottoman princess, daughter of Sultan Ibrahim (r. 1640 \u2013 1648) and sister of Sultans Mehmed IV (r. 1648 \u2013 1687), Suleiman II (r. 1687 \u2013 1691) and Ahmed II (r. 1691 \u2013 1695) of the Ottoman Empire.\nEleni Gabre-Madhin: Eleni Zaude Gabre- Madhin, an Ethiopian economist with Swiss nationality, is a former Chief Executive Officer of the Ethiopia Commodity Exchange( ECX). She has had many years of experience working on agricultural markets \u2013 particularly in Sub- Saharan Africa \u2013 and has held senior positions in the World Bank, the International Food Policy Research Institute( Washington), and United Nations( Geneva).\nBaglan Mailybayev: Baglan Mailybayev( in Kazakh \u0411\u0430\u0493\u043b\u0430\u043d \u0410\u0441\u0430\u0443\u0431\u0430\u0439\u04b1\u043b\u044b \u041c\u0430\u0439\u043b\u044b\u0431\u0430\u0435\u0432) was born on 20 May 1975 in Zhambyl region, Kazakhstan. His nationality is Kazakh.\nNayelly Hern\u00e1ndez: Nayelly Hern\u00e1ndez( born 23 February 1986) is a former Mexican female professional squash player. She has represented Mexico internationally in several international competitions including the Central American and Caribbean Games, Pan American Games, Women's World Team Squash Championships.\nGevherhan Sultan (daughter of Ahmed I): Gevherhan Sultan( born 1605) was an Ottoman princess, daughter of Sultan Ahmed I( reign 1603 \u2013 17) and K\u00f6sem Sultan, half- sister of Sultan Osman II( reign 1618 \u2013 22), and sister of Sultans Murad IV( 1623 \u201340) and Ibrahim( reign 1640 \u2013 48) of the Ottoman Empire.\nQuestion: What nationality is Gevherhan Sultan (Daughter Of Selim Ii)'s father?\nAnswer:"
+  },
+  {
+   "i": 119,
+   "question": "Where did Davey Boy Smith Jr.'s mother study?",
+   "gold_answer": "Stampede Wrestling",
+   "facts": {
+    "hop1": {
+     "s": "Davey Boy Smith Jr.",
+     "r": "mother",
+     "o": "Diana Hart"
+    },
+    "hop2": {
+     "s": "Diana Hart",
+     "r": "educated at",
+     "o": "Stampede Wrestling"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nDiana Hart: She is best known for her several appearances for Stampede Wrestling and WWE often with her brothers Bret and Owen Hart as well as her husband Davey Boy Smith, and for her book, \"Under the Mat\".\nDavey Boy Smith Jr.: He is the son of the late wrestler \"The British Bulldog\" Davey Boy Smith and Diana Hart, the youngest daughter of promoters Stu and Helen Hart.\nTevis Clyde Smith: Tevis Clyde Smith, Jr.( February 11, 1908 \u2013 December 24, 1984) was an American historian, fantasy writer, poet and amateur publisher, best known for his association with Robert E. Howard. Most of his writing appeared as by Tevis Clyde Smith; he also wrote as T. C. Smith, Jr., and under his full name, Tevis Clyde Smith, Jr. He lived in Brownwood, Brown County, Texas.\nBrian Pillman Jr.: Brian Zachary Pillman( born September 9, 1993) is an American professional wrestler, better known by his ring name Brian Pillman Jr. He is currently signed to Major League Wrestling( MLW) where he is a part of the New Era Hart Foundation with Davey Boy Smith Jr. and Teddy Hart. Pillman is a second generation wrestler, as he is the son of professional wrestler Brian Pillman.\nSamuel Smith Jr.: Samuel Smith Jr. is a former Democratic member of the Indiana Senate, representing the 2nd District from 1998 to 2008.\nFrank Smith (D.C. Council): Frank Smith, Jr.( born September 17, 1942), is a civil rights activist and politician in Washington, D.C.\nHomer D. Smith: Homer D. Smith jr( February 16, 1922 March 6, 2011) was a United States Army Major General.\nFrank M. Smith Jr.: Frank McGregor Smith Jr.( May 28, 1927 \u2013 April 2, 1998) was a sports broadcaster.\nJuanita Jackson Mitchell: Juanita Elizabeth Jackson Mitchell (January 2, 1913 \u2013 July 7, 1992) was born in Hot Springs, Arkansas and was the first African-American woman to practice law in Maryland. She was married to Clarence M. Mitchell, Jr., mother of two Maryland State Senators, and grandmother of one.\nJohn Hindley: John Hindley( born 7 August 1965) is a retired British professional wrestler best known by his ring name Johnny Smith, as the storyline relative of wrestler Davey Boy Smith.\nQuestion: Where did Davey Boy Smith Jr.'s mother study?\nAnswer:"
+  },
+  {
+   "i": 137,
+   "question": "Where did Muza Niyazova's husband die?",
+   "gold_answer": "Ashgabat",
+   "facts": {
+    "hop1": {
+     "s": "Muza Niyazova",
+     "r": "spouse",
+     "o": "Saparmurat Niyazov"
+    },
+    "hop2": {
+     "s": "Saparmurat Niyazov",
+     "r": "place of death",
+     "o": "Ashgabat"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nMuza Niyazova: She is the widow of former President of Turkmenistan Saparmurat Niyazov, with whom she had two children.\nSaparmurat Niyazov: In 2005, he closed down all rural libraries and hospitals outside of the capital city Ashgabat, in a country where at that time more than half the population lived in rural areas, once stating that, \"If people are ill, they can come to Ashgabat.\"\nWhere Was I: \" Where Was I?\" may refer to:\nSennedjem: The Ancient Egyptian artisan Sennedjem lived in Set Maat( translated as\" The Place of Truth\"), contemporary Deir el- Medina, on the west bank of the Nile, opposite Thebes, during the reigns of Seti I and Ramesses II. Sennedjem had the title\" Servant in the Place of Truth\".\nMotherland (disambiguation): Motherland is the place of one's birth, the place of one's ancestors, or the place of origin of an ethnic group. Motherland may also refer to:\nDance of Death (disambiguation): Dance of Death, also called\" Danse Macabre\", is a late- medieval allegory of the universality of death. Dance of Death or The Dance of Death may also refer to:\nPlace of origin: In Switzerland, the place of origin( literally\" home place\" or\" citizen place\") denotes where a Swiss citizen has their municipal citizenship. It is not to be confused with the place of birth or place of residence, although two or all three of these locations may be identical depending on the person's circumstances.\nValley of Death: Valley of Death may refer to:\nPlace of birth: The place of birth( POB) or birthplace is the place where a person was born. This place is often used in legal documents, together with name and date of birth, to uniquely identify a person.\nBeaulieu-sur-Loire: Beaulieu- sur- Loire is a commune in the Loiret department in north -central France. It is also the place of death of Jacques MacDonald, a French general who served in the Napoleonic Wars\nQuestion: Where did Muza Niyazova's husband die?\nAnswer:"
+  },
+  {
+   "i": 141,
+   "question": "Which country Dexter Young's mother is from?",
+   "gold_answer": "China",
+   "facts": {
+    "hop1": {
+     "s": "Dexter Young",
+     "r": "mother",
+     "o": "Connie Chan"
+    },
+    "hop2": {
+     "s": "Connie Chan",
+     "r": "country of citizenship",
+     "o": "China"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nConnie Chan: Connie Chan Po-chu was born in 1947 to impoverished parents, one of at least nine siblings, in Guangdong, China.\nDexter Young: He is the son of well-known Hong Kong actress Connie Chan.\nMohed Altrad: Mohed Altrad is a Syrian- born French billionaire businessman, rugby chairman and writer, born c. March 1948. He was born to a very young mother and his Bedouin father gave him away to his grandparents at age four following his mother's death.\nAli Rahuma: Ali Khalifa Rahuma( born May 16, 1982) is a Libyan football midfielder who's nationality is Libyan. He currently plays for Al- Ittihad, and is a member of the Libya national football team.\nChae Min-seo: Chae Min-seo( born Jo Soo-jin; March 16, 1981) is a South Korean actress. Chae made her acting debut in 2002 with\" Champion\", and has since played leading roles in horror film\" The Wig\" and the indies\" Loner\"( 2008),\" Vegetarian\"( 2010),\" Sookhee\"( 2014) and\" Young Mother: What's Wrong with My Age?\"( 2015).\nChitra Shenoy: Chitra Shenoy is a well known Indian actress in South Indian movies. She has acted in more than 600 films in Kannada, Malayalam, Tamil, Telugu, Tulu, and Hindi.\nMadeleine Beaus\u00e9jour: Madeleine Beaus\u00e9jour is a film editor and director from R\u00e9union. Her 1988 short French- Creole film\" Koman I le la sours\" portrayed the life of a young mother in the La Source district in Saint- Denis, whose house is used as a hangout by the local children.\nPatricia Canning Todd: Patricia Canning Todd( born Mary Patricia Canning, July 22, 1922 \u2013 September 5, 2015), was an American tennis player who had her best results just after World War II. In 1947 and 1948, she won a total of four Grand Slam championships: one in singles, two in women's doubles, and one in mixed doubles.\nEleni Gabre-Madhin: Eleni Zaude Gabre- Madhin, an Ethiopian economist with Swiss nationality, is a former Chief Executive Officer of the Ethiopia Commodity Exchange( ECX). She has had many years of experience working on agricultural markets \u2013 particularly in Sub- Saharan Africa \u2013 and has held senior positions in the World Bank, the International Food Policy Research Institute( Washington), and United Nations( Geneva).\nBaglan Mailybayev: Baglan Mailybayev( in Kazakh \u0411\u0430\u0493\u043b\u0430\u043d \u0410\u0441\u0430\u0443\u0431\u0430\u0439\u04b1\u043b\u044b \u041c\u0430\u0439\u043b\u044b\u0431\u0430\u0435\u0432) was born on 20 May 1975 in Zhambyl region, Kazakhstan. His nationality is Kazakh.\nQuestion: Which country Dexter Young's mother is from?\nAnswer:"
+  },
+  {
+   "i": 142,
+   "question": "Who is the spouse of the performer of song \u00c4ngeln I Rummet?",
+   "gold_answer": "Efva Attling",
+   "facts": {
+    "hop1": {
+     "s": "\u00c4ngeln i rummet",
+     "r": "performer",
+     "o": "Eva Dahlgren"
+    },
+    "hop2": {
+     "s": "Eva Dahlgren",
+     "r": "spouse",
+     "o": "Efva Attling"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\n\u00c4ngeln i rummet: (Swedish for \"The Angel in the Room\") is a single released by Swedish singer Eva Dahlgren from the 1989 album \"Fria V\u00e4rlden 1.989\" released through BMG and Big Mama Music.\nEva Dahlgren: In 1996 Dahlgren made headlines in the Swedish press when she came out as a lesbian through her civil union with jewellery designer Efva Attling.\nPrincess Auguste of Bavaria (1875\u20131964): Princess Auguste of Bavaria( 28 April 1877 \u2013 25 June 1964) was a member of the Bavarian Royal House of Wittelsbach and the spouse of Archduke Joseph August of Austria.\nMehdi Abrishamchi: Mehdi Abrishamchi is an Iranian People's Mujahedin of Iran( MEK) politician who has been described as\" the right hand man of Massoud Rajavi\". He is the former spouse of the group's current leader, Maryam Rajavi, whom he divorced so that she could become the spouse of Massoud Rajavi.\nAdib Kheir: Adib Kheir was a leading Syrian nationalist of the 1920s. He was the owner of the Librairie Universelle in Damascus.\nMaria Teresa, Grand Duchess of Luxembourg: Maria Teresa, Grand Duchess of Luxembourg( born Mar\u00eda Teresa Mestre y Batista; on 22 March 1956), is the spouse of Grand Duke Henri.\nGertrude of Bavaria: Gertrude of Saxony and Bavaria( 1152/55\u20131197) was Duchess of Swabia as the spouse of Duke Frederick IV, and Queen of Denmark as the spouse of King Canute VI.\nMarie-Louise Coidavid: Marie Louise Coidavid( 1778 \u2013 March 11, 1851), was the Queen of the Kingdom of Haiti 1811 \u2013 20 as the spouse of Henri I of Haiti.\nBilly Milano: Billy Milano is a Bronx- born heavy metal musician now based in Austin, Texas. He is the singer and- occasionally- guitarist and bassist of crossover thrash band M.O.D., and he was also the singer of its predecessor, Stormtroopers of Death.\nSophia Magdalena of Denmark: Sophia Magdalena of Denmark (3 July 1746 \u2013 21 August 1813) was Queen of Sweden as the spouse of King Gustav III.\nQuestion: Who is the spouse of the performer of song \u00c4ngeln I Rummet?\nAnswer:"
+  },
+  {
+   "i": 153,
+   "question": "What is the date of death of the director of film Esc\u00e1ndalo De Estrellas?",
+   "gold_answer": "August 7, 2004",
+   "facts": {
+    "hop1": {
+     "s": "Esc\u00e1ndalo de estrellas",
+     "r": "director",
+     "o": "Ismael Rodr\u00edguez"
+    },
+    "hop2": {
+     "s": "Ismael Rodr\u00edguez",
+     "r": "date of death",
+     "o": "August 7, 2004"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nEsc\u00e1ndalo de estrellas: Esc\u00e1ndalo de estrellas is a 1944 Mexican musical comedy film directed by Ismael Rodr\u00edguez.\nIsmael Rodr\u00edguez: Ismael Rodr\u00edguez (October 19, 1917 \u2013 August 7, 2004) was a Mexican film director.\nEl Fabricante de estrellas: El Fabricante de estrellas is a 1943 Argentine film directed by Manuel Romero.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nEtan Boritzer: Etan Boritzer( born 1950) is an American writer of children \u2019s literature who is best known for his book\" What is God?\" first published in 1989. His best selling\" What is?\" illustrated children's book series on character education and difficult subjects for children is a popular teaching guide for parents, teachers and child- life professionals.\nBill Smith (footballer, born 1897): William Thomas Smith( born 9 April 1897, date of death unknown) was an English professional footballer.\nTheodred II (Bishop of Elmham): Theodred II was a medieval Bishop of Elmham. The date of Theodred's consecration unknown, but the date of his death was sometime between 995 and 997.\nEsc\u00e1ndalo de medianoche: Esc\u00e1ndalo de medianoche is a 1923 Argentine black and white silent film. The film is starred by Felipe Farah, Amelia Mirel and Jos\u00e9 Pla\" Esc\u00e1ndalo de medianoche\" is based on\" El sombrero de tres picos\", work of Pedro de Alarc\u00f3n.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nThomas Scott (diver): Thomas Scott( 1907- date of death unknown) was an English diver.\nQuestion: What is the date of death of the director of film Esc\u00e1ndalo De Estrellas?\nAnswer:"
+  },
+  {
+   "i": 164,
+   "question": "Who is the mother of the performer of song Feel Good (Robin Thicke Song)?",
+   "gold_answer": "Gloria Loring",
+   "facts": {
+    "hop1": {
+     "s": "Feel Good",
+     "r": "performer",
+     "o": "Robin Thicke"
+    },
+    "hop2": {
+     "s": "Robin Thicke",
+     "r": "mother",
+     "o": "Gloria Loring"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nFeel Good (Robin Thicke song): \"Feel Good\" is a song by American recording artist Robin Thicke, from his sixth studio album \"Blurred Lines\" (2013).\nRobin Thicke: He is a son of late actor Alan Thicke and actress Gloria Loring.\nMinamoto no Chikako: She was the mother of Prince Morinaga.\nCaspar Babypants: Caspar Babypants is the stage name of children's music artist Chris Ballew, who is also widely known as the singer of The Presidents of the United States of America.\nKeku\u02bbiapoiwa II: Keku\u02bbiapoiwa II was a Hawaiian chiefess and the mother of the king Kamehameha I.\nFeel Good (It's Alright): \" Feel Good( It's Alright)\" is a song by the British deep house production duo Blonde with vocals by the English recording artist Karen Harding. The song was released in the United Kingdom as a digital download on 14 August 2015 through FFRR Records and Parlophone.\nBilly Milano: Billy Milano is a Bronx- born heavy metal musician now based in Austin, Texas. He is the singer and- occasionally- guitarist and bassist of crossover thrash band M.O.D., and he was also the singer of its predecessor, Stormtroopers of Death.\nBernie Bonvoisin: Bernard Bonvoisin, known as Bernie Bonvoisin( born 9 July 1956 in Nanterre, Hauts- de- Seine), is a French hard rock singer and film director. He is best known for having been the singer of Trust.\nTrinidad Tecson: Trinidad Perez Tecson (November 18, 1848 \u2013 January 28, 1928), known as the \"Mother of Biak-na-Bato\" and \"Mother of Mercy\", fought to gain Philippines independence. She was given the title \"Mother of Biak-na-Bato\" by Gen. Emilio Aguinaldo.\nFeel Good Hit of the Summer: \" Feel Good Hit of the Summer\" is a song by American rock band Queens of the Stone Age and written by band members Josh Homme and Nick Oliveri. It is the opening track of their second album,\" Rated R\", and the second single to be released from it.\nQuestion: Who is the mother of the performer of song Feel Good (Robin Thicke Song)?\nAnswer:"
+  },
+  {
+   "i": 169,
+   "question": "What is the place of birth of the director of film Dawn Of Life?",
+   "gold_answer": "San Juan, Puerto Rico",
+   "facts": {
+    "hop1": {
+     "s": "Dawn of Life",
+     "r": "director",
+     "o": "Fernando Cort\u00e9s"
+    },
+    "hop2": {
+     "s": "Fernando Cort\u00e9s",
+     "r": "place of birth",
+     "o": "San Juan, Puerto Rico"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nDawn of Life: Amanecer a la vida) is a 1950 Venezuelan drama film directed by Fernando Cort\u00e9s and starring Susana Gu\u00edzar, Luis Salazar and N\u00e9stor Zavarce.\nFernando Cort\u00e9s: He was born in San Juan, Puerto Rico, but he spent most of his adult life in Mexico City, where he died.\nDocument of the Dead: Document of the Dead is a 1979 documentary film by American filmmaker Roy Frumkes that was largely shot during the production of the 1978 film\" Dawn of the Dead\". Originally a 66- minute feature, it has since been expanded two times, first to 85 minutes in 1989, then to 102 minutes in 2012.\nDavid Emge: David Emge is an American actor. He played Stephen in George A. Romero's horror film\" Dawn of the Dead\".\nGaylen Ross: Gaylen Ross( born August 15, 1950, Indianapolis, Indiana) is an American director, writer, producer and actress best known for playing Francine Parker in the 1978 horror film\" Dawn of the Dead\" and also noted for directing the 2008 film\" Killing Kasztner\".\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nScott Reiniger: Scott Hale Reiniger, Harlan Sahib Bahadur, Prince of Ghor( born September 5, 1948) is an American actor. He is best known as one of the stars of the 1978 classic horror film\" Dawn of the Dead\".\nJeffry Life: Jeffry Life( born 1938) is a physician and author from the United States, known for maintaining a youthful body in old age.\nErik Winquist: Erik Winquist( born January 2, 1975) is an American New Zealander visual effects supervisor. Erik Winquist was nominated at the 87th Academy Awards in the category of Best Visual Effects.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nQuestion: What is the place of birth of the director of film Dawn Of Life?\nAnswer:"
+  },
+  {
+   "i": 172,
+   "question": "What is the place of birth of Princess Margaretha Of Saxony's mother?",
+   "gold_answer": "Munich",
+   "facts": {
+    "hop1": {
+     "s": "Princess Margaretha of Saxony",
+     "r": "mother",
+     "o": "Amalie Auguste of Bavaria"
+    },
+    "hop2": {
+     "s": "Amalie Auguste of Bavaria",
+     "r": "place of birth",
+     "o": "Munich"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nPrincess Margaretha of Saxony: Princess Margaretha of Saxony, Duchess of Saxony  (24 May 1840 \u2013 15 September 1858) was the eighth child and fifth eldest daughter of John of Saxony and his wife Amalie Auguste of Bavaria and a younger sister of Albert of Saxony and George of Saxony.\nAmalie Auguste of Bavaria: Amalie Auguste (Munich, 13 November 1801 \u2013 Dresden, 8 November 1877) was a Princess of Bavaria and Queen of Saxony.\nMinamoto no Chikako: She was the mother of Prince Morinaga.\nPrincess Maria Josepha of Saxony (1867\u20131944): Princess Maria Josepha of Saxony( 31 May 1867 \u2013 28 May 1944) was the mother of Emperor Charles I of Austria and the fifth child of George of Saxony and Infanta Maria Anna of Portugal.\nPrincess Margaretha of Sweden: Princess Margaretha of Sweden( Margaretha Sofia Lovisa Ingeborg; 25 June 1899 \u2013 4 January 1977) was a member of the Swedish Royal Family and the Danish Royal Family by marriage. She was the elder sister of Crown Princess M\u00e4rtha of Norway and Queen Astrid, Queen Consort of the Belgians.\nPrincess Margaretha of Liechtenstein: Princess Margaretha of Liechtenstein( born Princess Margaretha of Luxembourg on 15 May 1957) is the fourth child and second and youngest daughter of Grand Duke Jean of Luxembourg and Princess Jos\u00e9phine- Charlotte of Belgium. As the sister of Grand Duke Henri of Luxembourg and the sister- in- law of Prince Hans- Adam II of Liechtenstein, she is a princess of two current realms and a member of the Luxembourg and Liechtenstein reigning dynasties.\nPrincess Elisabeth of Saxony: Elisabeth of Saxony (4 February 1830 \u2013 14 August 1912) was a Princess of Saxony who married the second son of the King of Sardinia. She was the mother of Margherita, Queen of Italy.\nPrincess Mathilde of Saxony (born 1863): Princess Mathilde of Saxony, Duchess of Saxony (19 March 1863 \u2013 27 March 1933) was the third child and third-eldest daughter of George of Saxony and his wife, Maria Anna of Portugal. She was an elder sister of the Kingdom of Saxony's last king, Frederick Augustus III of Saxony.\nPrince Daniel of Saxony: Prince Daniel Timo of Saxony, Duke of Saxony( born 23 June 1975) is the oldest son of Prince R\u00fcdiger of Saxony, a disputed Head of the Royal House of Saxony.\nPrince Carl Bernadotte: Carl Gustaf Oscar Fredrik Christian, Prince Bernadotte( 10 January 1911 \u2013 27 June 2003), originally Prince Carl, Duke of \u00d6sterg\u00f6tland, was the youngest child and only son of Prince Carl of Sweden and Princess Ingeborg of Denmark and eventually a prince of the Belgian nobility. To distinguish himself from his father, he was widely known as\" Carl Junior.\"\nQuestion: What is the place of birth of Princess Margaretha Of Saxony's mother?\nAnswer:"
+  },
+  {
+   "i": 180,
+   "question": "Where was the director of film The Pride Of Jennico (Film) born?",
+   "gold_answer": "Colorado",
+   "facts": {
+    "hop1": {
+     "s": "The Pride of Jennico",
+     "r": "director",
+     "o": "J. Searle Dawley"
+    },
+    "hop2": {
+     "s": "J. Searle Dawley",
+     "r": "place of birth",
+     "o": "Colorado"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nJ. Searle Dawley: He was born in Del Norte, Colorado, and died in Hollywood, California.\nThe Pride of Jennico (film): The Pride of Jennico is a lost 1914 silent swashbuckler film directed by J. Searle Dawley.\nThe Pride of the Force (1925 film): The Pride of the Force is a 1925 American silent action film directed by Duke Worne and starring Tom Santschi, Gladys Hulette and James W. Morrison.\nThe Pride of Jesse Hallam: The Pride of Jesse Hallam is a 1981 American made- for- television drama film starring Johnny Cash and Brenda Vaccaro. It originally aired March 3, 1981 on CBS.\nKertson Manswell: Kertson Manswell( born October 28, 1976 in Charlotteville, Tobago) also known as The Pride of Tobago, is a heavyweight boxer from Trinidad and Tobago.\nThe Pride of the Force: The Pride of the Force is a 1933 British comedy film directed by Norman Lee and starring Patrick Aherne, Faith Bennett, Leslie Fuller and Hal Gordon. The screenplay concerns a farmworker who inadvertently becomes the pride of the Metropolitan Police force.\nBrian A. Britt: Brian A. Britt is Assistant Director of the School of Music, Assistant Professor of Music, and Director of The Pride of Oklahoma Marching Band at the University of Oklahoma. Britt is only the fifth person to hold the position since the first full- time director of The Pride was hired in 1929.\nThe Pride of Pawnee: The Pride of Pawnee is a 1929 American silent western film directed by Robert De Lacey and starring Tom Tyler, Ethlyne Clair and Barney Furey.\nFarooq Zameer: Farooq Zameer was a notable Pakistani actor. He died at the age of 76.\nThe Pride of New York: The Pride of New York is a lost 1917 American silent war drama film directed by Raoul Walsh and starring his brother George Walsh. It was produced by and distributed through the Fox Film Corporation.\nQuestion: Where was the director of film The Pride Of Jennico (Film) born?\nAnswer:"
+  },
+  {
+   "i": 193,
+   "question": "Where was the director of film Los Motivos De Luz born?",
+   "gold_answer": "France",
+   "facts": {
+    "hop1": {
+     "s": "Los Motivos de Luz",
+     "r": "director",
+     "o": "Felipe Cazals"
+    },
+    "hop2": {
+     "s": "Felipe Cazals",
+     "r": "place of birth",
+     "o": "France"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nLos Motivos de Luz: Los Motivos de Luz (\"Luz' Motive\") is a 1985 Mexican drama film, directed by Felipe Cazals.\nFelipe Cazals: His parents were from France but he is registered as born in Mexico,\nJoaqu\u00edn De Luz: Joaqu\u00edn De Luz( born 1976, Madrid, Spain) is a Spanish ballet dancer. He was formerly with the American Ballet Theatre( ABT), and currently, a principal dancer with the New York City Ballet( NYCB).\nRaphael Luz: Raphael Luz( born 18 July 1989) is a Brazilian footballer, who plays as an attacking midfielder.\nMel\u00e2nia Luz: Mel\u00e2nia Luz( born 1 June 1928) is a Brazilian sprinter. She competed in the women's 200 metres at the 1948 Summer Olympics.\nNelson da Luz: Nelson Coquen\u00e3o da Luz( born 4 February 1998) is an Angolan footballer who currently plays as a midfielder for 1 \u00ba de Agosto.\nDiego Rodr\u00edguez Da Luz: Diego Manuel Rodr\u00edguez da Luz( born 8 August 1986 in Montevideo) is a Uruguayan footballer who plays for Juventud.\nPatricia Reyes Sp\u00edndola: Patricia Reyes Sp\u00edndola( born Patricia Ver\u00f3nica N\u00fa\u00f1ez Reyes Sp\u00edndola on 11 July 1953 in Oaxaca, Mexico) is a Mexican actress, director and producer. She received three Ariel Award, two for Best Actress(\" Los Motivos de Luz\"( 1985) and\" La reina de la noche\"( 1994)), and for Supporting Actress(\" El otro crimen\"( 1988)).\nBen Luz: Ben Luz( born 18 February 1978) is a retired Israeli footballer.\nJesus Luz: Jesus Pinto da Luz( born January 15, 1987) is a Brazilian model and DJ.\nQuestion: Where was the director of film Los Motivos De Luz born?\nAnswer:"
+  },
+  {
+   "i": 195,
+   "question": "Where was the director of film En Aasai Rasave born?",
+   "gold_answer": "Theni",
+   "facts": {
+    "hop1": {
+     "s": "En Aasai Rasave",
+     "r": "director",
+     "o": "Kasthuri Raja"
+    },
+    "hop2": {
+     "s": "Kasthuri Raja",
+     "r": "place of birth",
+     "o": "Theni"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nEn Aasai Rasave: En Aasai Rasave is a 1998 Tamil drama film directed by Kasthuri Raja.\nKasthuri Raja: Kasthuri Raja is an Indian film director based in Chennai, India, and his native place is Mallingapuram near Pannaipuram, Theni District, Tamil Nadu.\nDana Blankstein: Dana Blankstein- Cohen( born March 3, 1981) is the director of the Israeli Academy of Film and Television. She is a film director, and an Israeli culture entrepreneur.\nJesse E. Hobson: Jesse Edward Hobson( May 2, 1911 \u2013 November 5, 1970) was the director of SRI International from 1947 to 1955. Prior to SRI, he was the director of the Armour Research Foundation.\nOlav Aaraas: Olav Aaraas( born 10 July 1950) is a Norwegian historian and museum director. He was born in Fredrikstad.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nBrian Kennedy (gallery director): Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States. He is currently the director of the Peabody Essex Museum.\nEn Aasai Unnoduthan: En Aasai Unnoduthan is a 1983 Indian Tamil- language romance film edited and directed by K. Narayanan. The film stars Prem Menon and Poornima Bhagyaraj.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nS. N. Mathur: S.N. Mathur was the Director of the Indian Intelligence Bureau between September 1975 and February 1980. He was also the Director General of Police in Punjab.\nQuestion: Where was the director of film En Aasai Rasave born?\nAnswer:"
+  },
+  {
+   "i": 209,
+   "question": "Which country the director of film I See You (2006 Film) is from?",
+   "gold_answer": "India",
+   "facts": {
+    "hop1": {
+     "s": "I See You",
+     "r": "director",
+     "o": "Vivek Agrawal"
+    },
+    "hop2": {
+     "s": "Vivek Agrawal",
+     "r": "country of citizenship",
+     "o": "India"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nI See You (2006 film): I See You is a 2006 Indian romantic comedy film directed by Vivek Agrawal and produced by Mehr Jesia.\nVivek Agrawal: The film was released in India in conjunction with the Movement to End Honour Violence.\nMichael Govan: Michael Govan( born 1963) is the director of the Los Angeles County Museum of Art since 2006. Prior to this, Govan worked as the director of the Dia Art Foundation in New York City.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nJohn Donatich: John Donatich is the Director of Yale University Press.\nC. S. Leigh: C. S. Leigh( born 1964 \u2013 reported dead March, 2016) was a British- American film director based in London and Paris, who previously worked as a curator under the name Christian Leigh. From 1987 to 1993 he was a well known figure in the New York art world until he abruptly\" disappeared\".\nJohn Farrell (businessman): John Farrell is the director of YouTube in Latin America.\nDana Blankstein: Dana Blankstein- Cohen( born March 3, 1981) is the director of the Israeli Academy of Film and Television. She is a film director, and an Israeli culture entrepreneur.\nIrena Salina: Irena Salina( born 8 July 1978) was born in France and acted in French theatre before moving to New York City to study at the Actors Studio. Her first short film,\" See You on Monday\", screened at the Hamptons International Film Festival.\nQuestion: Which country the director of film I See You (2006 Film) is from?\nAnswer:"
+  },
+  {
+   "i": 216,
+   "question": "Where was the director of film The 3 Rooms Of Melancholia born?",
+   "gold_answer": "Helsinki",
+   "facts": {
+    "hop1": {
+     "s": "The 3 Rooms of Melancholia",
+     "r": "director",
+     "o": "Pirjo Honkasalo"
+    },
+    "hop2": {
+     "s": "Pirjo Honkasalo",
+     "r": "place of birth",
+     "o": "Helsinki"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nPirjo Honkasalo: Pirjo Honkasalo and her partner Pirkko Saisio live in Kruununhaka, Helsinki, but they also have apartments in Tavastia, Turku and Madeira.\nThe 3 Rooms of Melancholia: The 3 Rooms of Melancholia (Finnish: Melancholian 3 huonetta) is a 2004 Finnish documentary film written, directed and co-produced by Pirjo Honkasalo.\nMary Cecelia Allen: Mary Allen is a writer living in Iowa City, Iowa. Allen is an MFA graduate of the Iowa Writers' Workshop and published her memoir\" The Rooms of Heaven\" in 1999.\nHarriet Persis Hurlbut: Harriet Persis Hurlbut( February 26, 1862 \u2013) was an American artist. Like her father, she was fond of historical and genealogical matters.\nJesse E. Hobson: Jesse Edward Hobson( May 2, 1911 \u2013 November 5, 1970) was the director of SRI International from 1947 to 1955. Prior to SRI, he was the director of the Armour Research Foundation.\nBrian Kennedy (gallery director): Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States. He is currently the director of the Peabody Essex Museum.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nHadijat Gatayeva: Hadijat Gatayeva( also transliterated Hadizhat Gataeva or Khadijad Gataeva) is a Chechen Muslim humanitarian activist who, together with her husband Malik, took care of some of the Grozny's war orphans. She is usually referred to just as Hadijat.\nOlav Aaraas: Olav Aaraas( born 10 July 1950) is a Norwegian historian and museum director. He was born in Fredrikstad.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nQuestion: Where was the director of film The 3 Rooms Of Melancholia born?\nAnswer:"
+  },
+  {
+   "i": 219,
+   "question": "Where was the place of death of the director of film The Stone Rider?",
+   "gold_answer": "K\u00f6nigstein im Taunus",
+   "facts": {
+    "hop1": {
+     "s": "The Stone Rider",
+     "r": "director",
+     "o": "Fritz Wendhausen"
+    },
+    "hop2": {
+     "s": "Fritz Wendhausen",
+     "r": "place of death",
+     "o": "K\u00f6nigstein im Taunus"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nFritz Wendhausen: , K\u00f6nigstein im Taunus) was a German actor, screenwriter and film director.\nThe Stone Rider: The Stone Rider  is a 1923 German silent drama film directed by Fritz Wendhausen and starring Rudolf Klein-Rogge, Lucie Mannheim and Gustav von Wangenheim.\nDana Blankstein: Dana Blankstein- Cohen( born March 3, 1981) is the director of the Israeli Academy of Film and Television. She is a film director, and an Israeli culture entrepreneur.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nS. N. Mathur: S.N. Mathur was the Director of the Indian Intelligence Bureau between September 1975 and February 1980. He was also the Director General of Police in Punjab.\nJesse E. Hobson: Jesse Edward Hobson( May 2, 1911 \u2013 November 5, 1970) was the director of SRI International from 1947 to 1955. Prior to SRI, he was the director of the Armour Research Foundation.\nBrian Kennedy (gallery director): Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States. He is currently the director of the Peabody Essex Museum.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nOlav Aaraas: Olav Aaraas( born 10 July 1950) is a Norwegian historian and museum director. He was born in Fredrikstad.\nThe Time, the Place and the Girl (1946 film): The Time, the Place and the Girl is a 1946 American musical film directed by David Butler. It is unrelated to the 1929 film\" The Time, the Place and the Girl\".\nQuestion: Where was the place of death of the director of film The Stone Rider?\nAnswer:"
+  },
+  {
+   "i": 227,
+   "question": "Where was the place of burial of Neith (Wife Of Pepi Ii)'s husband?",
+   "gold_answer": "Saqqara",
+   "facts": {
+    "hop1": {
+     "s": "Neith",
+     "r": "spouse",
+     "o": "Pepi II Neferkare"
+    },
+    "hop2": {
+     "s": "Pepi II Neferkare",
+     "r": "place of burial",
+     "o": "Saqqara"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nNeith (wife of Pepi II): Neith was an ancient Egyptian queen consort, one of the principal queens of the Old Kingdom pharaoh Pepi II Neferkare, who ruled (c. 2278 BC \u2013 c. 2184 BC).\nPepi II Neferkare: He was traditionally thought to be the son of Pepi I and Queen Ankhesenpepi II but the South Saqqara Stone annals record that Merenre had a minimum reign of 11 years.\nSennedjem: The Ancient Egyptian artisan Sennedjem lived in Set Maat( translated as\" The Place of Truth\"), contemporary Deir el- Medina, on the west bank of the Nile, opposite Thebes, during the reigns of Seti I and Ramesses II. Sennedjem had the title\" Servant in the Place of Truth\".\nPlace of birth: The place of birth( POB) or birthplace is the place where a person was born. This place is often used in legal documents, together with name and date of birth, to uniquely identify a person.\nWhere Was I: \" Where Was I?\" may refer to:\nSarre Anglo-Saxon cemetery: Sarre Anglo- Saxon cemetery is a place of burial that was used in the sixth and seventh centuries CE.\nHerneith: Herneith was a Queen consort of ancient Egypt. She lived during the 1st dynasty.\nEmperor Daigo: Daigo's reign spanned the years from 897 through 930. He is named after his place of burial.\nMotherland (disambiguation): Motherland is the place of one's birth, the place of one's ancestors, or the place of origin of an ethnic group. Motherland may also refer to:\nWilliam Rockhill Nelson: William Rockhill Nelson( March 7, 1841 \u2013 April 13, 1915) was a real estate developer and co-founder of The Kansas City Star in Kansas City, Missouri. He donated his estate( and home) for the establishment of the Nelson- Atkins Museum of Art.\nQuestion: Where was the place of burial of Neith (Wife Of Pepi Ii)'s husband?\nAnswer:"
+  },
+  {
+   "i": 234,
+   "question": "Where was the mother of Louise Sophie Of Hanau-Lichtenberg born?",
+   "gold_answer": "Strasbourg",
+   "facts": {
+    "hop1": {
+     "s": "Louise Sophie of Hanau-Lichtenberg",
+     "r": "mother",
+     "o": "Countess Palatine Anna Magdalena of Birkenfeld-Bischweiler"
+    },
+    "hop2": {
+     "s": "Countess Palatine Anna Magdalena of Birkenfeld-Bischweiler",
+     "r": "place of birth",
+     "o": "Strasbourg"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nCountess Palatine Anna Magdalena of Birkenfeld-Bischweiler: Countess Palatine Anna Magdalena of Birkenfeld-Bischweiler (14 February 1640, Strasbourg \u2013 12 December 1693, Babenhausen) was a daughter of Christian I, Count Palatine of Birkenfeld-Bischweiler (1598\u20131654) and his first wife, Countess Palatine Magdalene Catherine of Zweibr\u00fccken (1606\u20131648).\nLouise Sophie of Hanau-Lichtenberg: was a daughter of Johann Reinhard II, Count of Hanau-Lichtenberg (1628\u20131666) and Countess Palatine Anna Magdalena of Birkenfeld-Bischweiler (1640\u20131693).\nPhilipp III, Count of Hanau-Lichtenberg: Philipp III of Hanau- Lichtenberg( 18 October 1482 \u2013 15 May 1538, Bouxwiller) was the third Count of Hanau- Lichtenberg.\nPhilipp II, Count of Hanau-Lichtenberg: Philipp II of Hanau- Lichtenberg( born 31 May 1462 in Hanau; died: 22 August 1504 in Babenhausen) ruled the County of Hanau- Lichtenberg from 1480 until his death.\nCountess Charlotte of Hanau-Lichtenberg: Charlotte, Countess of Hanau- Lichtenberg, full name:\" Countess Charlotte Christine Magdalene Johanna of Hanau- Lichtenberg\"( 2 May 1700, Bouxwiller \u2013 1 July 1726, Darmstadt) was the wife of landgrave Louis VIII of Hesse- Darmstadt.\nFriedrich Casimir, Count of Hanau-Lichtenberg: Friedrich Casimir of Hanau( born 4 August 1623 in Bouxwiller; died: 30 March 1685 in Hanau) was a member of the Hanau- Lichtenberg branch of the House of Hanau. He was the ruling Count of Hanau- Lichtenberg from 1641 and of Hanau- M\u00fcnzenberg from 1642.\nJohann Reinhard III, Count of Hanau-Lichtenberg: Johann Reinhard III of Hanau- Lichtenberg( 31 July 1665 in Bischofsheim am hohen Steg( now called Rheinbischofsheim) \u2013 28 March 1736 in\" Schloss Philippsruhe\", Hanau) was the last of the counts of Hanau- Lichtenberg. He reigned from 1680 to 1736.\nPhilipp V, Count of Hanau-Lichtenberg: Philipp V of Hanau- Lichtenberg( 21 February 1541, Bouxwiller \u2013 2 June 1599, Niederbronn) was Count of Hanau- Lichtenberg from 1590 until his death.\nJohann Reinhard I, Count of Hanau-Lichtenberg: Count Johann Reinhard I of Hanau-Lichtenberg (13 February 1569, Bitche  \u2013 19 November 1625 Lichtenberg) ruled the county of Hanau-Lichtenberg from 1599 to 1625.\nPhilipp Wolfgang, Count of Hanau-Lichtenberg: Philipp Wolfgang, Count of Hanau- Lichtenberg( 31 July 1595, Bouxwiller \u2013, Bouxwiller) was a count of Hanau- Lichtenberg. He ruled the county from 1625 until his death.\nQuestion: Where was the mother of Louise Sophie Of Hanau-Lichtenberg born?\nAnswer:"
+  },
+  {
+   "i": 238,
+   "question": "What is the date of birth of Mohammed Bin Nawwaf Bin Abdulaziz's father?",
+   "gold_answer": "16 August 1932",
+   "facts": {
+    "hop1": {
+     "s": "Mohammed bin Nawwaf bin Abdulaziz",
+     "r": "father",
+     "o": "Nawwaf bin Abdulaziz Al Saud"
+    },
+    "hop2": {
+     "s": "Nawwaf bin Abdulaziz Al Saud",
+     "r": "date of birth",
+     "o": "16 August 1932"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nNawwaf bin Abdulaziz Al Saud: Nawwaf bin Abdulaziz (16 August 1932 \u2013 29 September 2015)\nMohammed bin Nawwaf bin Abdulaziz: Mohammed bin Nawwaf bin Abdulaziz Al Saud (\nBrian Saunders (weightlifter): Brian Saunders( date of birth and death unknown) was a male weightlifter who competed for England.\nTurki Bin Mohammed Bin Nasser Bin Abdulaziz Al Saud: Prince Turki Bin Mohammed Bin Nasser Bin Abdulaziz Al- Saud( Arabic: \u0627\u0644\u0623\u0645\u064a \u0631 \u062a\u0631\u0643\u064a \u0628\u0646 \u0645\u062d\u0645\u062f \u0628\u0646 \u0646\u0627\u0635\u0631 \u0639\u0628\u062f \u0627\u0644\u0639\u0632\u064a\u0632 \u0622\u0644 \u0633\u0639\u0648\u062f),( born on 1969, Riyadh Saudi Arabia) is a member of Saudi Royal Family House of Saud. Prince Turki is the eldest son of HRH Prince Mohammed Bin Nasser Bin Abdulaziz Al- Saud, Prince of Jizan.\nTerence Robinson: Terence D. Robinson( date of birth and death unknown) was a male wrestler who competed for England.\nAbdulrahman bin Abdulaziz Al Kelya: Abdulrahman bin Abdulaziz Al Kelya is the Chief Justice of the Supreme Court of Saudi Arabia.\nMaktoum Hasher Maktoum Al Maktoum: Sheikh Maktoum Hasher Maktoum Al Maktoum is a member of Dubai's ruling family.\nTheodred II (Bishop of Elmham): Theodred II was a medieval Bishop of Elmham. The date of Theodred's consecration unknown, but the date of his death was sometime between 995 and 997.\nEtan Boritzer: Etan Boritzer( born 1950) is an American writer of children \u2019s literature who is best known for his book\" What is God?\" first published in 1989. His best selling\" What is?\" illustrated children's book series on character education and difficult subjects for children is a popular teaching guide for parents, teachers and child- life professionals.\nMishari bin Abdulaziz Al Saud: Mishari bin Abdulaziz( 1932 \u2013 23 May 2000) was a senior member of the House of Saud.\nQuestion: What is the date of birth of Mohammed Bin Nawwaf Bin Abdulaziz's father?\nAnswer:"
+  },
+  {
+   "i": 253,
+   "question": "Which country Jessie Harlan Lincoln's father is from?",
+   "gold_answer": "American",
+   "facts": {
+    "hop1": {
+     "s": "Jessie Harlan Lincoln",
+     "r": "father",
+     "o": "Robert Todd Lincoln"
+    },
+    "hop2": {
+     "s": "Robert Todd Lincoln",
+     "r": "country of citizenship",
+     "o": "American"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nJessie Harlan Lincoln: Jessie Harlan Lincoln (November 6, 1875 \u2013 January 4, 1948) was the second daughter of Robert Todd Lincoln, the granddaughter of Abraham Lincoln, and the mother of Mary Lincoln Beckwith and Robert Todd Lincoln Beckwith, the last undisputed Lincoln descendant.\nRobert Todd Lincoln: Robert Todd Lincoln (August 1, 1843 \u2013 July 26, 1926) was an American politician, lawyer, and businessman.\nBaglan Mailybayev: Baglan Mailybayev( in Kazakh \u0411\u0430\u0493\u043b\u0430\u043d \u0410\u0441\u0430\u0443\u0431\u0430\u0439\u04b1\u043b\u044b \u041c\u0430\u0439\u043b\u044b\u0431\u0430\u0435\u0432) was born on 20 May 1975 in Zhambyl region, Kazakhstan. His nationality is Kazakh.\nWarren Wallace Beckwith: Warren Wallace Beckwith( August 10, 1874 \u2013 September 24, 1955) was a historical figure and part of the Lincoln family, having been married to President Abraham Lincoln's granddaughter Jessie Harlan Lincoln. He was the father of the last undisputed direct Lincoln descendant, Robert Todd Lincoln Beckwith.\nMary Harlan Lincoln: Mary Eunice Harlan Lincoln (September 25, 1846 \u2013 March 31, 1937) was the daughter of United States Senator James Harlan and the wife of Robert T. Lincoln.\nJulia Taft Bayne: Julia Taft Bayne (March 4, 1845 \u2013 December 14, 1933) was an American author who wrote a memoir of the Lincoln White House entitled \"Tad Lincoln's Father\" (1931), based on her time visiting the household as a teenager with her younger brothers.\nEleni Gabre-Madhin: Eleni Zaude Gabre- Madhin, an Ethiopian economist with Swiss nationality, is a former Chief Executive Officer of the Ethiopia Commodity Exchange( ECX). She has had many years of experience working on agricultural markets \u2013 particularly in Sub- Saharan Africa \u2013 and has held senior positions in the World Bank, the International Food Policy Research Institute( Washington), and United Nations( Geneva).\nAli Rahuma: Ali Khalifa Rahuma( born May 16, 1982) is a Libyan football midfielder who's nationality is Libyan. He currently plays for Al- Ittihad, and is a member of the Libya national football team.\nRoberto Savio: Roberto Savio( born in Rome, Italy, but also holding Argentine nationality) is a journalist, communication expert, political commentator, activist for social and climate justice and advocate of global governance. He has spent most of his career with Inter Press Service( IPS), the news agency which he founded in 1964 along with Argentine journalist Pablo Piacentini.\nNayelly Hern\u00e1ndez: Nayelly Hern\u00e1ndez( born 23 February 1986) is a former Mexican female professional squash player. She has represented Mexico internationally in several international competitions including the Central American and Caribbean Games, Pan American Games, Women's World Team Squash Championships.\nQuestion: Which country Jessie Harlan Lincoln's father is from?\nAnswer:"
+  },
+  {
+   "i": 256,
+   "question": "What is the place of birth of the performer of song If You Want To Be My Woman?",
+   "gold_answer": "Bakersfield",
+   "facts": {
+    "hop1": {
+     "s": "If You Want to Be My Woman",
+     "r": "performer",
+     "o": "Merle Haggard"
+    },
+    "hop2": {
+     "s": "Merle Haggard",
+     "r": "place of birth",
+     "o": "Bakersfield"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nIf You Want to Be My Woman: \"If You Want to Be My Woman\" is a song written and recorded by American country music artist Merle Haggard backed by The Strangers.\nMerle Haggard: Haggard's last recording, a song called \"Kern River Blues,\" described his departure from Bakersfield in the late 1970s and his displeasure with politicians.\nBilly Milano: Billy Milano is a Bronx- born heavy metal musician now based in Austin, Texas. He is the singer and- occasionally- guitarist and bassist of crossover thrash band M.O.D., and he was also the singer of its predecessor, Stormtroopers of Death.\nGirls Got Rhythm: \" Girls Got Rhythm\" is a song by popular rock band AC/ DC. It is found on their 1979 album\" Highway to Hell.\"\nIf You Want to Sing Out, Sing Out: \" If You Want To Sing Out, Sing Out\" is a popular song by Cat Stevens. It first appeared in the 1971 film\" Harold and Maude\".\nI Want You to Be My Baby: \"I Want You to Be My Baby\" is a jump blues song written by Jon Hendricks for Louis Jordan whose recording - made 28 May 1953 - was an R&B hit that autumn.\nBrenda Ueland: Brenda Ueland( October 24, 1891 \u2013 March 5, 1985) was a journalist, editor, freelance writer, and teacher of writing. She is best known for her book\" If You Want to Write: A Book about Art, Independence and Spirit\".\nIf You Want My Lovin': \" If You Want My Lovin'\" is a song released by American singer Evelyn\" Champagne\" King. Released on April 3, 1981,\nJoin the Cavalry: Join the Cavalry was a military song popular during the American Civil War. The verses detail various feats performed by Jeb Stuart's troopers, the cavalry arm of the Army of Northern Virginia, while the chorus urges the listener to\" join the cavalry\".\nIf You Want My Love (Twenty 4 Seven song): \" If You Want My Love\" is a song recorded by the Dutch band Twenty 4 Seven. It was the tenth single and the sixth song to be taken from the fourth album,\" Twenty 4 Hours A Day, Seven Days A Week\".\nQuestion: What is the place of birth of the performer of song If You Want To Be My Woman?\nAnswer:"
+  },
+  {
+   "i": 260,
+   "question": "Where was the place of death of the director of film Basta Guardarla?",
+   "gold_answer": "Rome",
+   "facts": {
+    "hop1": {
+     "s": "Basta guardarla",
+     "r": "director",
+     "o": "Luciano Salce"
+    },
+    "hop2": {
+     "s": "Luciano Salce",
+     "r": "place of death",
+     "o": "Rome"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nLuciano Salce: Luciano Salce (25 September 1922, in Rome \u2013 17 December 1989, in Rome) was an Italian film director, actor and lyricist.\nBasta guardarla: Basta guardarla (\"Just Look at Her\") is a 1970 Italian comedy film directed by Luciano Salce.\nOlav Aaraas: Olav Aaraas( born 10 July 1950) is a Norwegian historian and museum director. He was born in Fredrikstad.\nBrian Kennedy (gallery director): Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States. He is currently the director of the Peabody Essex Museum.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nJesse E. Hobson: Jesse Edward Hobson( May 2, 1911 \u2013 November 5, 1970) was the director of SRI International from 1947 to 1955. Prior to SRI, he was the director of the Armour Research Foundation.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nDana Blankstein: Dana Blankstein- Cohen( born March 3, 1981) is the director of the Israeli Academy of Film and Television. She is a film director, and an Israeli culture entrepreneur.\nMichael Govan: Michael Govan( born 1963) is the director of the Los Angeles County Museum of Art since 2006. Prior to this, Govan worked as the director of the Dia Art Foundation in New York City.\nS. N. Mathur: S.N. Mathur was the Director of the Indian Intelligence Bureau between September 1975 and February 1980. He was also the Director General of Police in Punjab.\nQuestion: Where was the place of death of the director of film Basta Guardarla?\nAnswer:"
+  },
+  {
+   "i": 264,
+   "question": "Where was the director of film House In The Sun born?",
+   "gold_answer": "B\u00e9ziers",
+   "facts": {
+    "hop1": {
+     "s": "House in the Sun",
+     "r": "director",
+     "o": "Gaston Roud\u00e8s"
+    },
+    "hop2": {
+     "s": "Gaston Roud\u00e8s",
+     "r": "place of birth",
+     "o": "B\u00e9ziers"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nHouse in the Sun: is a 1929 French silent film directed by Gaston Roud\u00e8s and starring France Dh\u00e9lia, Gaston Jacquet and Georges Melchior.\nGaston Roud\u00e8s: Gaston Roud\u00e8s (born 24 March 1878, B\u00e9ziers, H\u00e9rault; d. 5 November 1958, Villejuif, Val-de-Marne) was a French actor, film director and screenwriter best known for his silent films of the 1920s and early 1930s.\nPark Ha-sun: Park Ha-sun( born October 22, 1987) is a South Korean actress.\nHwang Hak-sun: Hwang Hak- Sun( born October 10, 1976) is a North Korean football player.\nNoh Kyung-sun: Noh Kyung- Sun( born 2 February 1964) is a Korean former wrestler who competed in the 1988 Summer Olympics.\nKim Mi-sun: Kim Mi- Sun( born 6 June 1964) is a South Korean former field hockey player who competed in the 1988 Summer Olympics.\nKwon Yeo-sun: Kwon Yeo- sun( born 1965) is a South Korean writer.\nLee Tae-sun: Lee Tae-sun( born July 16, 1993) is a South Korean actor.\nJung In-sun: Jung In-sun( born April 25, 1991) is a South Korean actress.\nForest Sun: Forest Sun( born August 6, 1973) is an Americana singer- songwriter from San Francisco, California, United States.\nQuestion: Where was the director of film House In The Sun born?\nAnswer:"
+  },
+  {
+   "i": 270,
+   "question": "Where was the father of Maurice De Saxe born?",
+   "gold_answer": "Dresden",
+   "facts": {
+    "hop1": {
+     "s": "Maurice de Saxe",
+     "r": "father",
+     "o": "Augustus II the Strong"
+    },
+    "hop2": {
+     "s": "Augustus II the Strong",
+     "r": "place of birth",
+     "o": "Dresden"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nAugustus II the Strong: He established the Saxon capital of Dresden as a major cultural centre, attracting artists from across Europe to his court.\nMaurice de Saxe: Maurice, Count of Saxony (28 October 1696 \u2013 20 November 1750) was a notable soldier and officer as well as the son of Augustus II the Strong, King of Poland and Elector of Saxony.\nCleomenes II: Cleomenes II( died 309 BC) was Agiad King of Sparta from 369 to 309 BC. The son of Cleombrotus I, he succeeded his brother Agesipolis II.\nJohn Templeton (botanist): John Templeton( 1766\u20131825) was an early Irish naturalist and botanist. He is often referred to as the\" Father of Irish Botany\".\nObata Toramori: He was the father of Obata Masamori.\nDavid Saxe (judge): David B. Saxe( born December 30, 1942) was an associate justice of the New York Appellate Division of the Supreme Court, First Judicial Department.\nPaul (father of Maurice): Paul( died 593) was the father of Maurice, Byzantine Emperor. He served as head of the Byzantine Senate.\nMarie-Aurore de Saxe: Marie- Aurore de Saxe( 20 September 1748 \u2013 26 December 1821), known after her first marriage as Countess of Horn and after the second as Madame Dupin de Francueil, was an illegitimate daughter of Marshal Maurice de Saxe and a grandmother of George Sand. A notable free- thinker, she was interested in philosophers like Voltaire, Jean- Jacques Rousseau and Buffon.\nMaurice de F\u00e9raudy: Maurice de F\u00e9raudy( born in Joinville- le- Pont on December 3, 1859- died in Paris May 12, 1932) was a French songwriter and actor at the Com\u00e9die- Fran\u00e7aise. He was the father of actor Jacques de F\u00e9raudy.\nSteve Cooreman: Steve is the son of Maurice Cooreman.\nQuestion: Where was the father of Maurice De Saxe born?\nAnswer:"
+  },
+  {
+   "i": 273,
+   "question": "Where was the place of death of Princess Anne Charlotte Of Lorraine's mother?",
+   "gold_answer": "Commercy",
+   "facts": {
+    "hop1": {
+     "s": "Anne Charlotte of Lorraine",
+     "r": "mother",
+     "o": "\u00c9lisabeth Charlotte d'Orl\u00e9ans"
+    },
+    "hop2": {
+     "s": "\u00c9lisabeth Charlotte d'Orl\u00e9ans",
+     "r": "place of death",
+     "o": "Commercy"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\n\u00c9lisabeth Charlotte d'Orl\u00e9ans: She was regent of Lorraine and Bar during the minority (1729\u20131730) and absence of her son (1730\u20131737), and \"suo jure\" Princess of Commercy 1737\u20131744.\nPrincess Anne Charlotte of Lorraine: She was the thirteenth of fifteen children of Leopold, Duke of Lorraine, and his spouse \u00c9lisabeth Charlotte d'Orl\u00e9ans.\nRenata of Lorraine: Renata of Lorraine( 20 April 1544 \u2013 22 May 1602) was by birth a member of the House of Lorraine and by marriage Duchess of Bavaria. Born in Nancy, France, she was the second child and eldest daughter of Francis I, Duke of Lorraine and Christina of Denmark.\nLandgravine Charlotte of Hesse-Kassel: Charlotte of Hesse- Kassel( 20 November 1627 \u2013 26 March 1686) was the consort of Charles I Louis, Elector Palatine and mother of Elizabeth Charlotte of the Palatinate.\nAnne Lynch Botta: Anne Charlotte Lynch Botta( November 11, 1815 \u2013 March 23, 1891) was an American poet, writer, teacher and socialite whose home was the central gathering place of the literary elite of her era.\nElisabeth Therese of Lorraine: Elisabeth Therese of Lorraine( 15 October 1711 \u2013 3 July 1741) was born a Princess of Lorraine and was the last queen consort of Charles Emmanuel III of Sardinia. The sister of Francis Stephan, Duke of Lorraine, she died as a result of giving birth to Benedetto of Savoy.\nFran\u00e7oise de Lorraine, Duchess of Vend\u00f4me: Fran\u00e7oise of Lorraine( November 1592 \u2013 8 September 1669) was a princess of Lorraine and daughter- in- law of Henry IV of France. Sometimes known as\" Fran\u00e7oise de Merc\u0153ur\", she belonged to the Merc\u0153ur cadet branch of the sovereign Dukes of Lorraine and was a niece of Louise of Lorraine, wife of the previous King Henry III.\nPrincess \u00c9lisabeth Charlotte of Lorraine: \u00c9lisabeth Charlotte of Lorraine( \u00c9lisabeth Charlotte Gabri\u00e8le; 21 October 1700 \u2013 4 May 1711) was a Princess of Lorraine. She died of smallpox aged 10.\nClaude Fran\u00e7oise de Lorraine: Claude of Lorraine (6 October 1612 \u2013 2 August 1648) was a daughter of Henry II, Duke of Lorraine, and Margerita Gonzaga, her sister was Nicole, Duchess of Lorraine. She married her first cousin and was the Duchess of Lorraine by marriage.\nB\u00e9atrice du Han de Martigny: B\u00e9atrice du Han de Martigny, Marquise de Meuse (1711-1793), known as Madame de Meuse, was the royal mistress of the regent of the Austrian Netherlands, Charles Alexander of Lorraine. B\u00e9atrice du Han de Martigny was the daughter of a courtier in service of Leopold, Duke of Lorraine, and married marquis Fran\u00e7ois de Choiseul-Meuse (1716-1746).\nQuestion: Where was the place of death of Princess Anne Charlotte Of Lorraine's mother?\nAnswer:"
+  },
+  {
+   "i": 278,
+   "question": "Where was the place of death of Lin Liguo's father?",
+   "gold_answer": "\u00d6nd\u00f6rkhaan",
+   "facts": {
+    "hop1": {
+     "s": "Lin Liguo",
+     "r": "father",
+     "o": "Lin Biao"
+    },
+    "hop2": {
+     "s": "Lin Biao",
+     "r": "place of death",
+     "o": "\u00d6nd\u00f6rkhaan"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nLin Liguo: Lin Liguo (1945 - September 13, 1971) was the son of the Chinese Communist military leader Lin Biao and the person in charge of Project 571 Outline, a plotted coup against Mao Zedong.\nLin Biao: Lin died on September 13, 1971, when a Hawker Siddeley Trident he was aboard crashed in \u00d6nd\u00f6rkhaan in Mongolia.\nYe Qun: Ye Qun( 2 December 1917 \u2013 13 September 1971) was the wife of Lin Biao, the Vice- Chairman of China who controlled China's military power. She was mostly known for taking care of politics for her husband.\nPlace of birth: The place of birth( POB) or birthplace is the place where a person was born. This place is often used in legal documents, together with name and date of birth, to uniquely identify a person.\nMotherland (disambiguation): Motherland is the place of one's birth, the place of one's ancestors, or the place of origin of an ethnic group. Motherland may also refer to:\nBeaulieu-sur-Loire: Beaulieu- sur- Loire is a commune in the Loiret department in north -central France. It is also the place of death of Jacques MacDonald, a French general who served in the Napoleonic Wars\nYe Qun: Ye Qun( 2 December 1917 \u2013 13 September 1971) was the wife of Lin Biao, the Vice- Chairman of China who controlled China's military power. She was mostly known for taking care of politics for her husband.\nWhere Was I: \" Where Was I?\" may refer to:\nSennedjem: The Ancient Egyptian artisan Sennedjem lived in Set Maat( translated as\" The Place of Truth\"), contemporary Deir el- Medina, on the west bank of the Nile, opposite Thebes, during the reigns of Seti I and Ramesses II. Sennedjem had the title\" Servant in the Place of Truth\".\nLin Ming-cheng: Lin Ming-cheng( born on 3 January 1943, Itabashi Town, Kaizan District, Taihoku Prefecture, Japanese Taiwan( modern- day Banqiao District)) is a Taiwanese banker who is a member of the seventh generation of Lin family from Banciao, one of the richest families of Taiwan. He is the only son of Lin Hsiung- cheng and a grandson of Lin Erh-kang.\nQuestion: Where was the place of death of Lin Liguo's father?\nAnswer:"
+  },
+  {
+   "i": 284,
+   "question": "Where was the place of death of Elisabeth Of Moravia's mother?",
+   "gold_answer": "Brno",
+   "facts": {
+    "hop1": {
+     "s": "Elizabeth of Moravia",
+     "r": "mother",
+     "o": "Margaret of Opava"
+    },
+    "hop2": {
+     "s": "Margaret of Opava",
+     "r": "place of death",
+     "o": "Brno"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nElisabeth of Moravia: Czech: \"Al\u017eb\u011bta Moravsk\u00e1\", Upper Sorbian: \"Hil\u017ebjeta Morawska\", c. 1355 \u2013 20 November 1400) was the second daughter and third issue of John Henry of Moravia, (grandson of P\u0159emysl II, Otakar, King of Bohemia) and his second wife Margaret of Opava.\nMargaret of Opava: Margaret was buried in Saint Thomas, Brno.\nElizabeth of Celje: Elizabeth of Celje( 1441 \u2013 1455), also Elizabeth of Cilli, was the first wife of Matthias Corvinus, the future King of Hungary.\nJohn III of Pernstein: John of Pernstein( also known as\" John of Helfenstein and Pernstein\" or\" John the Rich\"; or or; or; born: 14 November 1487 in Moravsk \u00fd Krumlov; died: 8 September 1548 in \u017didlochovice) was High Treasurer of Moravia from 1506 and 1516 and Landeshauptmann of Moravia from 1515 to 1519 and from 1526 to 1528 and Governor of Moravia from 1530 to 1532. From 1537 to 1548, he was Count of Kladsko and pledge lord of the County of Kladsko.\nChristopher Hatton: Sir Christopher Hatton KG (1540 \u2013 20 November 1591) was an English politician, Lord Chancellor of England and a favourite of Elizabeth I of England. He was one of those who found Mary, Queen of Scots, guilty of treason.\nVladislaus II of Moravia: Vladislaus II of Moravia or Vladislaus of Bohemia( 1207 \u2013 18 February 1227 or 1228) was the Margrave of Moravia from 1222 to his death. He was member of the P\u0159emyslid dynasty, son of King Ottokar I of Bohemia and his second wife, Constance of Hungary.\nThomas Lambert (died 1604): Thomas Lambert( died 1604), of Winchester, Hampshire, was an English politician. Lambert was a Member of Parliament for Wareham in 1586, during the reign of Elizabeth I of England.\nElizabeth of Kuyavia: Elizabeth of Kuyavia(/ \u0415\u043b\u0438\u0437\u0430\u0431\u0435\u0442\u0430; 1315/ 1320 \u2013 after 22 August 1345) was a Polish noblewoman of the House of Piast. She was the only daughter of Duke Kazimierz III of Gniewkowo and his wife, whose name and origins are unknown; her brother, W\u0142adys\u0142aw the White, was later a candidate for the Polish throne.\nElizabeth of Carinthia, Queen of Germany: Elizabeth of Carinthia( also known as Elizabeth of Tyrol; \u2013 28 October 1312), was a Duchess of Austria from 1282 and Queen of Germany from 1298 until 1308, by marriage to the Habsburg king Albert I.\nJohn Sobieslaw of Moravia: John Sobieslaw of Moravia (1352 - c. 30 October 1380) was a Czech feudal lord, junior margrave of Moravia. John was the third son of John Henry, Margrave of Moravia and Margaret of Opava.\nQuestion: Where was the place of death of Elisabeth Of Moravia's mother?\nAnswer:"
+  },
+  {
+   "i": 292,
+   "question": "What is the place of birth of the director of film Martial Law (1991 Film)?",
+   "gold_answer": "Memphis",
+   "facts": {
+    "hop1": {
+     "s": "Martial Law",
+     "r": "director",
+     "o": "Steve Cohen"
+    },
+    "hop2": {
+     "s": "Steve Cohen",
+     "r": "place of birth",
+     "o": "Memphis"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nMartial Law (1991 film): Martial Law is a 1991 action/martial arts film written by Richard Brandes, produced by Kurt Anderson, directed by Steve Cohen and stars Chad McQueen, Cynthia Rothrock and David Carradine.\nSteve Cohen: The district includes the western three-fourths of Memphis.\nJohn Law (footballer, born 1887): John Law( born 1877) was a Scottish professional footballer who played as a winger for Sunderland.\nBrian Law: Brian John Law( born 1 January 1970 in Merthyr Tydfil) is a Welsh former professional footballer and Wales international.\nScott Law (cyclist): Scott Law( born 9 March 1991) is an Australian professional racing cyclist. He rode at the 2015 UCI Track Cycling World Championships.\nMartial Law 2: Undercover: Martial Law 2: Undercover( also known as\" Karate Cop\" and\" Martial Law II\") is a 1991 martial arts film written by Richard Brandes and Jiles Fitzgerald, produced by Steve Cohen, directed by Kurt Anderson and stars Jeff Wincott, Cynthia Rothrock, Paul Johansson, L. Charles Taylor, Sherrie Rose, and Billy Drago. It is also the sequel to the 1990 film\" Martial Law\".\nDavid Law (athlete): David Charles Law( born c.1930), is a male former athlete who competed for England.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nShaleise Law: Shaleise Law( born 24 July 1998) is an Australian rules footballer who last played for the Brisbane Lions in the AFL Women's.\nNatasha Law: Andrea Natasha Law( born 1 January 1970) is an English painter and graphic designer.\nQuestion: What is the place of birth of the director of film Martial Law (1991 Film)?\nAnswer:"
+  },
+  {
+   "i": 294,
+   "question": "What nationality is the director of film Detachment (Film)?",
+   "gold_answer": "British",
+   "facts": {
+    "hop1": {
+     "s": "Detachment",
+     "r": "director",
+     "o": "Tony Kaye"
+    },
+    "hop2": {
+     "s": "Tony Kaye",
+     "r": "country of citizenship",
+     "o": "British"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nDetachment (film): Detachment is a 2011 American drama film about the high school education system directed by Tony Kaye, starring Adrien Brody with an ensemble supporting cast.\nTony Kaye (director): Tony Kaye (born 8 July 1952) is a British director of films, music videos, advertisements, and documentaries.\nJohn Farrell (businessman): John Farrell is the director of YouTube in Latin America.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nMichael Govan: Michael Govan( born 1963) is the director of the Los Angeles County Museum of Art since 2006. Prior to this, Govan worked as the director of the Dia Art Foundation in New York City.\nJohn Donatich: John Donatich is the Director of Yale University Press.\nBrian Kennedy (gallery director): Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States. He is currently the director of the Peabody Essex Museum.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nOlav Aaraas: Olav Aaraas( born 10 July 1950) is a Norwegian historian and museum director. He was born in Fredrikstad.\nDana Blankstein: Dana Blankstein- Cohen( born March 3, 1981) is the director of the Israeli Academy of Film and Television. She is a film director, and an Israeli culture entrepreneur.\nQuestion: What nationality is the director of film Detachment (Film)?\nAnswer:"
+  },
+  {
+   "i": 299,
+   "question": "What is the place of birth of the director of film Samarpane?",
+   "gold_answer": "Hunsur",
+   "facts": {
+    "hop1": {
+     "s": "Samarpane",
+     "r": "director",
+     "o": "H. R. Bhargava"
+    },
+    "hop2": {
+     "s": "H. R. Bhargava",
+     "r": "place of birth",
+     "o": "Hunsur"
+    }
+   },
+   "context": "Answer with the entity only, no sentence and no explanation.\n\nContext:\nBlade Runner: Blade Runner is a 1982 film directed by Ridley Scott.\nRidley Scott: Ridley Scott was born in South Shields, England.\nQuestion: Where was the director of the film Blade Runner born?\nAnswer: South Shields, England\n\nContext:\nThe Matrix: The Matrix is a 1999 film directed by Lana Wachowski.\nLana Wachowski: Lana Wachowski is an American film director.\nQuestion: What is the nationality of the director of the film The Matrix?\nAnswer: American\n\nContext:\nSamarpane: Samarpane (Kannada: \u0cb8\u0cae\u0cb0\u0ccd\u0caa\u0ca3\u0cc6) is a 1983 Indian Kannada film based on the novel of the same name by Usha Navratnaram, directed by H. R. Bhargava and produced by P. Krishnaraj.\nH. R. Bhargava: Hunsur Ramachandra Bhagyachandra , known mononymously as Bhargava, is an Indian film director who worked primarily in Kannada cinema.\nDana Blankstein: Dana Blankstein- Cohen( born March 3, 1981) is the director of the Israeli Academy of Film and Television. She is a film director, and an Israeli culture entrepreneur.\nOlav Aaraas: Olav Aaraas( born 10 July 1950) is a Norwegian historian and museum director. He was born in Fredrikstad.\nPeter Levin: Peter Levin is an American director of film, television and theatre.\nBrian Kennedy (gallery director): Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States. He is currently the director of the Peabody Essex Museum.\nIan Barry (director): Ian Barry is an Australian director of film and TV.\nJason Moore (director): Jason Moore( born October 22, 1970) is an American director of film, theatre and television.\nS. N. Mathur: S.N. Mathur was the Director of the Indian Intelligence Bureau between September 1975 and February 1980. He was also the Director General of Police in Punjab.\nJesse E. Hobson: Jesse Edward Hobson( May 2, 1911 \u2013 November 5, 1970) was the director of SRI International from 1947 to 1955. Prior to SRI, he was the director of the Armour Research Foundation.\nQuestion: What is the place of birth of the director of film Samarpane?\nAnswer:"
+  }
+ ]
+}

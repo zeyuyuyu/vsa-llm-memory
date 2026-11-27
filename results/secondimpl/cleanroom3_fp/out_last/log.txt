@@ -1,0 +1,97 @@
+{'train': 16000, 'dev': 800, 'test': 2000} max answer 1023
+prompt len 95.809 answer tok lens [0, 15576, 424]
+  vec lr=0.001 ep=30 train_mse=0.00044 dev module-correct&gate=0.8150
+  vec lr=0.001 ep=100 train_mse=0.00037 dev module-correct&gate=0.8612
+  vec lr=0.001 ep=300 train_mse=0.00034 dev module-correct&gate=0.9038
+  vec lr=0.001 ep=1000 train_mse=0.00032 dev module-correct&gate=0.8913
+  vec lr=0.0001 ep=30 train_mse=0.00056 dev module-correct&gate=0.7487
+  vec lr=0.0001 ep=100 train_mse=0.00038 dev module-correct&gate=0.8525
+  vec lr=0.0001 ep=300 train_mse=0.00028 dev module-correct&gate=0.8863
+  vec lr=0.0001 ep=1000 train_mse=0.00024 dev module-correct&gate=0.9062
+VEC selected lr/ep/dev (0.0001, 1000, 0.90625)
+  disc lr=0.001 ep=30 train_loss=0.7074 dev module-correct&gate=0.9100
+  disc lr=0.001 ep=100 train_loss=0.2001 dev module-correct&gate=0.9525
+  disc lr=0.001 ep=300 train_loss=0.0148 dev module-correct&gate=0.9700
+  disc lr=0.0001 ep=30 train_loss=4.1382 dev module-correct&gate=0.7337
+  disc lr=0.0001 ep=100 train_loss=1.5767 dev module-correct&gate=0.8763
+  disc lr=0.0001 ep=300 train_loss=0.4379 dev module-correct&gate=0.9262
+DISC selected lr/ep/dev (0.001, 300, 0.9700000286102295)
+prep done
+{'train': 16000, 'dev': 800, 'test': 2000} max answer 1023
+{'train': 16000, 'dev': 800, 'test': 2000} max answer 1023
+prompt len 95.809 answer tok lens [0, 15576, 424]
+prompt len 95.809 answer tok lens [0, 15576, 424]
+init recon rel-err vec 0.6531162261962891 disc 0.6531162261962891
+READ ('vec_pub', 'train') operands+op right 0.9722499847412109 answer right 0.9794374704360962 gate open 0.999625027179718
+READ ('vec_best', 'train') operands+op right 0.9984999895095825 answer right 0.9987499713897705 gate open 0.999625027179718
+READ ('disc', 'train') operands+op right 1.0 answer right 1.0 gate open 1.0
+READ ('vec_pub', 'dev') operands+op right 0.8762500286102295 answer right 0.9075000286102295 gate open 0.9987499713897705
+READ ('vec_best', 'dev') operands+op right 0.9850000143051147 answer right 0.9887499809265137 gate open 0.9987499713897705
+READ ('disc', 'dev') operands+op right 0.9649999737739563 answer right 0.9700000286102295 gate open 1.0
+READ ('vec_pub', 'test') operands+op right 0.9125000238418579 answer right 0.9300000071525574 gate open 0.9994999766349792
+READ ('vec_best', 'test') operands+op right 0.9825000166893005 answer right 0.9850000143051147 gate open 0.9994999766349792
+READ ('disc', 'test') operands+op right 0.9605000019073486 answer right 0.9629999995231628 gate open 1.0
+init recon rel-err vec 0.6531162261962891 disc 0.6531162261962891
+READ ('vec_pub', 'train') operands+op right 0.9722499847412109 answer right 0.9794374704360962 gate open 0.999625027179718
+READ ('vec_best', 'train') operands+op right 0.9984999895095825 answer right 0.9987499713897705 gate open 0.999625027179718
+READ ('disc', 'train') operands+op right 1.0 answer right 1.0 gate open 1.0
+READ ('vec_pub', 'dev') operands+op right 0.8762500286102295 answer right 0.9075000286102295 gate open 0.9987499713897705
+READ ('vec_best', 'dev') operands+op right 0.9850000143051147 answer right 0.9887499809265137 gate open 0.9987499713897705
+READ ('disc', 'dev') operands+op right 0.9649999737739563 answer right 0.9700000286102295 gate open 1.0
+READ ('vec_pub', 'test') operands+op right 0.9125000238418579 answer right 0.9300000071525574 gate open 0.9994999766349792
+READ ('vec_best', 'test') operands+op right 0.9825000166893005 answer right 0.9850000143051147 gate open 0.9994999766349792
+READ ('disc', 'test') operands+op right 0.9605000019073486 answer right 0.9629999995231628 gate open 1.0
+  ft vec step 50 loss 1.5986 28s
+  ft disc step 50 loss 2.1128 28s
+  ft vec step 100 loss 0.1851 55s
+  ft disc step 100 loss 1.3823 55s
+  ft vec step 150 loss 0.1142 83s
+  ft disc step 150 loss 0.7242 83s
+  ft vec step 200 loss 0.0997 111s
+  ft disc step 200 loss 0.3761 112s
+  ft vec step 250 loss 0.0917 138s
+  ft disc step 250 loss 0.1995 140s
+  ft vec step 300 loss 0.1213 166s
+  ft disc step 300 loss 0.1123 168s
+  ft vec step 350 loss 0.0910 194s
+  ft disc step 350 loss 0.0657 196s
+  ft vec step 400 loss 0.0939 222s
+  ft disc step 400 loss 0.0316 225s
+  ft vec step 450 loss 0.1069 249s
+  ft disc step 450 loss 0.0291 253s
+  ft vec step 500 loss 0.0975 277s
+ft steps vec 500
+  ft disc step 500 loss 0.0219 281s
+ft steps disc 500
+dev {'disc': 0.95625}
+dev {'base': 0.18125, 'vec_pub': 0.90875, 'vec_best': 0.98625}
+{'train': 16000, 'dev': 800, 'test': 2000} max answer 1023
+{'train': 16000, 'dev': 800, 'test': 2000} max answer 1023
+prompt len 95.809 answer tok lens [0, 15576, 424]
+prompt len 95.809 answer tok lens [0, 15576, 424]
+init recon rel-err vec 0.6531162261962891 disc 0.6531162261962891
+READ ('vec_pub', 'train') operands+op right 0.9722499847412109 answer right 0.9794374704360962 gate open 0.999625027179718
+READ ('vec_best', 'train') operands+op right 0.9984999895095825 answer right 0.9987499713897705 gate open 0.999625027179718
+READ ('disc', 'train') operands+op right 1.0 answer right 1.0 gate open 1.0
+READ ('vec_pub', 'dev') operands+op right 0.8762500286102295 answer right 0.9075000286102295 gate open 0.9987499713897705
+READ ('vec_best', 'dev') operands+op right 0.9850000143051147 answer right 0.9887499809265137 gate open 0.9987499713897705
+READ ('disc', 'dev') operands+op right 0.9649999737739563 answer right 0.9700000286102295 gate open 1.0
+READ ('vec_pub', 'test') operands+op right 0.9125000238418579 answer right 0.9300000071525574 gate open 0.9994999766349792
+READ ('vec_best', 'test') operands+op right 0.9825000166893005 answer right 0.9850000143051147 gate open 0.9994999766349792
+READ ('disc', 'test') operands+op right 0.9605000019073486 answer right 0.9629999995231628 gate open 1.0
+init recon rel-err vec 0.6531162261962891 disc 0.6531162261962891
+READ ('vec_pub', 'train') operands+op right 0.9722499847412109 answer right 0.9794374704360962 gate open 0.999625027179718
+READ ('vec_best', 'train') operands+op right 0.9984999895095825 answer right 0.9987499713897705 gate open 0.999625027179718
+READ ('disc', 'train') operands+op right 1.0 answer right 1.0 gate open 1.0
+READ ('vec_pub', 'dev') operands+op right 0.8762500286102295 answer right 0.9075000286102295 gate open 0.9987499713897705
+READ ('vec_best', 'dev') operands+op right 0.9850000143051147 answer right 0.9887499809265137 gate open 0.9987499713897705
+READ ('disc', 'dev') operands+op right 0.9649999737739563 answer right 0.9700000286102295 gate open 1.0
+READ ('vec_pub', 'test') operands+op right 0.9125000238418579 answer right 0.9300000071525574 gate open 0.9994999766349792
+READ ('vec_best', 'test') operands+op right 0.9825000166893005 answer right 0.9850000143051147 gate open 0.9994999766349792
+READ ('disc', 'test') operands+op right 0.9605000019073486 answer right 0.9629999995231628 gate open 1.0
+dev {'disc': 0.95625}
+dev {'base': 0.18125, 'vec_pub': 0.90875, 'vec_best': 0.98625}
+test {'disc': 0.947}
+done
+test {'base': 0.183, 'vec_pub': 0.93, 'vec_best': 0.984}
+done

@@ -1,0 +1,11 @@
+# B72 checks
+
+scorer: {"max_abs_diff_cell": 0.0, "max_abs_diff_region": 1.3877787807814457e-17, "max_abs_diff_C": 2.7755575615628914e-17, "max_abs_diff_t": 0.0, "n_cell": 1092, "n_region": 414, "n_C": 185, "pass": true}
+bits (box: the language models' OPT / LAMP dev rows and every (B) dev and test row, with the charge): {"rows": 758088, "over": 0, "not_maximal": 0, "formula_mismatch": 0, "charge_mismatch": 0, "examples": [], "pass": true}
+bits: {"rows": 67095, "over": 0, "not_maximal": 0, "formula_mismatch": 0, "charge_mismatch": 0, "examples": [], "pass": true}
+perm: {"n": 140, "max_z": 3.525047241036131, "fail": [], "pass": true}
+rederive (float64, independent code; bar >= 0.99 on every store): OPTR n=56 min 0.9939 mean 0.9998, OPTP n=56 min 0.8792 mean 0.9957
+  below 0.99: [('minilm', 'OPTP', '1024|16|4', 0.8791714614499425), ('minilm', 'OPTP', '1024|16|16', 0.8791714614499425)]
+box (B) plain-loop recomputation of every (B) point statistic: max |difference| 2.8e-17 (qwen8), 1.4e-17 (b46), 3.5e-18 (llama, mistral) [results/b72_bpart_*.json plain_max_abs_diff]
+MiniLM OPTP diagnostic (b72_diag_minilm.py): with OMP_NUM_THREADS=1 (as the jobs ran) the pipeline recomputes its logged predictions exactly (agreement 1.000), and its per-class solve agrees with the independent primal solve to 1.7e-14; with the default thread count the agreement is 0.870: the centred MiniLM codes have three near-zero-variance directions (std 1e-9 to 1e-17); computed with 1 thread and with the default thread count, the basis's first 381 eigenvectors agree (|cos| >= 0.99999994) and two of the last three rotate (|cos| 0.998), so their sign features (pure rounding noise) differ; the cell reads near chance (9.8%).
+scorer counts are cumulative over the seven encoders: 1,092 cell accuracies, 414 region statistics, 185 (C) statistics and t intervals (140 distinct (C) entries).

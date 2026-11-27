@@ -1,0 +1,3 @@
+b65_run.py eval --pos last --arm vsapub --layer 20 --reader out/rd/last_vsa_lr1e-3_s0/e1000 --ckpt out/dev/last_vsapub_lr1e-3_s0 --split test --bs 32 --pred preds_rerun/vsapub_s0.jsonl
+b65_run.py eval --pos last --arm vsabm --layer 20 --reader out/rd/last_vsa_lr1e-3_s0/e300 --ckpt out/dev/last_vsabm_lr1e-3_s0 --split test --bs 32 --pred preds_rerun/vsabm_s0.jsonl
+b65_run.py eval --pos last --arm disc --layer 20 --reader out/rd/last_disc_lr1e-3_s0/e300 --ckpt out/dev/last_disc_lr1e-2_s0 --split test --bs 32 --pred preds_rerun/disc_s0.jsonl

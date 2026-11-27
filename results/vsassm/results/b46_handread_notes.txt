@@ -1,0 +1,21 @@
+# B46 hand reading (read by me, 2026-11-19; samples in results/b46_handread.txt, drawn by b36_handread.py's code)
+
+R1 cell with the largest VSA - BEST difference: Granite codes, M 1,024, V 2, 8 bits per fact (VSA 65.71 vs BEST = LSH
+bucket sketch CM, whiten, PQ k = 4, plurality, 54.49; EXACT 85.13). 1,341 queries only the VSA answers right, 834 only
+the sketch.
+- Only the VSA right (10 read): all 10 are true aliases whose exact nearest label is the right entity (spelling
+  variants 'Bilal ibn Rabah' -> 'Bilal ibn Ribah', 'Sripada Pinakapaani'; longer / shorter forms 'Nancy Patricia
+  D'Alesandro Pelosi' -> 'Nancy Pelosi', 'Call of Youth' -> 'The Call of Youth'; a translation "roi d'Aragon Jacques I"
+  -> 'James I of Aragon', cosine 0.23). Median whitened alias-label cosine over all 1,341: 0.45. These are graded
+  similarities that a coarse bucket signature splits.
+- Only the sketch right (10 read): 4 of 10 have an alias-label cosine near 0 and an exact nearest label that is another
+  entity ('RN' -> 'The Certificate', 'NFFC' -> 'Nell', 'Tengri Qaghan' -> 'Qashqadaryo Region', 'Wei' -> 'Weapons'):
+  right by chance at V = 2. The other 6 are real aliases (median cosine over all 834: 0.23), e.g. 'Juve FC' ->
+  'Juventus F.C.', 'Tranmere Rovers Football Club'. Same pattern as B36 on Qwen3-8B (VSA-only median 0.38, BEST-only
+  0.17, 4 of 10 chance hits).
+Cell where BEST leads most: M 256, V 1,024, 32 bits per fact (VSA 24.23 vs index LSH 36.15). The index's own wins are
+near-duplicate aliases (median cosine 0.67: 'Trinidad & Tobago', 'Nebuchadnezzar' -> 'Nebuchadnezzar II'); the VSA's
+are lower-similarity aliases (0.49). With 1,024 values the store's crosstalk loses easy keys that a stored key code
+resolves; as in B36.
+Conclusion of the reading: the B46 win is made of real aliases that the store resolves by graded similarity, not of
+chance hits or a scoring artifact; the sketch's extra wins are partly chance at V = 2.

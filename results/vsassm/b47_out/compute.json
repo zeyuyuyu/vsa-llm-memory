@@ -1,0 +1,1239 @@
+{
+ "gpu_hours": 14.76,
+ "note": "gpu_hours = PACE GPU job time; A800 = worker claim time (GPU 0 was claimed 17:58-02:40 UTC but computed only until 19:28 UTC; the rest is idle claim while the session was paused)",
+ "gpu_hours_by_account": {
+  "gts-nimam6": 0.0,
+  "gts-nimam6-paid": 14.76
+ },
+ "cpu_core_hours_pace": 3.81,
+ "cpu_core_hours_by_account": {
+  "gts-nimam6": 1.06,
+  "gts-nimam6-paid": 2.75
+ },
+ "a800_gpu_hours": 8.8,
+ "a800_claims": [
+  {
+   "worker": "m1",
+   "gpu": "gpu6",
+   "hours": 0.1
+  },
+  {
+   "worker": "m2",
+   "gpu": "gpu0",
+   "hours": 8.69
+  }
+ ],
+ "jobs": [
+  {
+   "job": "15849140",
+   "name": "b47_tok",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 4,
+   "hours": 0.019,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849141",
+   "name": "b47_smoke",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849313",
+   "name": "b47_gen_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849315",
+   "name": "b47_gen_k32_r8_lr0.0001_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849317",
+   "name": "b47_gen_k32_r8_lr0.0003_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849319",
+   "name": "b47_gen_k32_r64_lr3e-05_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849321",
+   "name": "b47_gen_k32_r64_lr0.0001_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849323",
+   "name": "b47_gen_k32_r64_lr0.0003_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849325",
+   "name": "b47_fullgen_k32_r8_lr3e-06_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849327",
+   "name": "b47_fullgen_k32_r8_lr1e-05_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849329",
+   "name": "b47_fullgen_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849331",
+   "name": "b47_fullcls_k32_r8_lr3e-06_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849333",
+   "name": "b47_fullcls_k32_r8_lr1e-05_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849335",
+   "name": "b47_fullcls_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849337",
+   "name": "b47_scratch_k32_r8_lr0.0001_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849346",
+   "name": "b47_scratch_k32_r8_lr0.0003_s42",
+   "account": "gts-nimam6",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849351",
+   "name": "b47_sw_cons_0",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.018,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849352",
+   "name": "b47_sw_cons_1",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.019,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849353",
+   "name": "b47_sw_cons_2",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.024,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849355",
+   "name": "b47_sw_cons_3",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849356",
+   "name": "b47_sw_cons_4",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849357",
+   "name": "b47_sw_cons_5",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849358",
+   "name": "b47_sw_grid_0",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849359",
+   "name": "b47_sw_grid_1",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849360",
+   "name": "b47_sw_grid_2",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849361",
+   "name": "b47_sw_grid_3",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849362",
+   "name": "b47_sw_coh_0",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849363",
+   "name": "b47_sw_coh_1",
+   "account": "gts-nimam6",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15849517",
+   "name": "b47_sw_consistency_3",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.019,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849518",
+   "name": "b47_sw_consistency_4",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.024,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849519",
+   "name": "b47_sw_consistency_5",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.015,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849520",
+   "name": "b47_sw_grid_0",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.022,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849521",
+   "name": "b47_sw_grid_1",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.025,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849522",
+   "name": "b47_sw_grid_2",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.022,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849523",
+   "name": "b47_sw_grid_3",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.021,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849524",
+   "name": "b47_sw_coherence_0",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.013,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849525",
+   "name": "b47_sw_coherence_1",
+   "account": "gts-nimam6-paid",
+   "partition": "cpu-small",
+   "gpus": 0,
+   "cpus": 16,
+   "hours": 0.011,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849526",
+   "name": "b47_gen_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.214,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849527",
+   "name": "b47_gen_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849529",
+   "name": "b47_gen_k32_r8_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.127,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849531",
+   "name": "b47_gen_k32_r8_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849532",
+   "name": "b47_gen_k32_r8_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.182,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849533",
+   "name": "b47_gen_k32_r8_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849534",
+   "name": "b47_gen_k32_r64_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.294,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849538",
+   "name": "b47_gen_k32_r64_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849546",
+   "name": "b47_gen_k32_r64_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.181,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849547",
+   "name": "b47_gen_k32_r64_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849549",
+   "name": "b47_gen_k32_r64_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.182,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849550",
+   "name": "b47_gen_k32_r64_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849551",
+   "name": "b47_fullgen_k32_r8_lr3e-06_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.148,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849552",
+   "name": "b47_fullgen_k32_r8_lr3e-06_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849553",
+   "name": "b47_fullgen_k32_r8_lr1e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.142,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849554",
+   "name": "b47_fullgen_k32_r8_lr1e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849555",
+   "name": "b47_fullgen_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.145,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849556",
+   "name": "b47_fullgen_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849558",
+   "name": "b47_fullcls_k32_r8_lr3e-06_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.145,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849559",
+   "name": "b47_fullcls_k32_r8_lr3e-06_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849560",
+   "name": "b47_fullcls_k32_r8_lr1e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.208,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849561",
+   "name": "b47_fullcls_k32_r8_lr1e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849562",
+   "name": "b47_fullcls_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.21,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849563",
+   "name": "b47_fullcls_k32_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849564",
+   "name": "b47_scratch_k32_r8_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.205,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849565",
+   "name": "b47_scratch_k32_r8_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849566",
+   "name": "b47_scratch_k32_r8_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.15,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849567",
+   "name": "b47_scratch_k32_r8_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849723",
+   "name": "b47_fullgen_std_lr3e-06_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.626,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849724",
+   "name": "b47_fullgen_std_lr3e-06_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849725",
+   "name": "b47_fullgen_std_lr3e-06_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849726",
+   "name": "b47_fullgen_std_lr1e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.615,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849727",
+   "name": "b47_fullgen_std_lr1e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849728",
+   "name": "b47_fullgen_std_lr1e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849729",
+   "name": "b47_fullgen_std_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.61,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849730",
+   "name": "b47_fullgen_std_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849731",
+   "name": "b47_fullgen_std_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849767",
+   "name": "b47_name8k",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-l40s",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.112,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849822",
+   "name": "b47_gen_std_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.435,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849827",
+   "name": "b47_gen_std_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849828",
+   "name": "b47_gen_std_r8_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849830",
+   "name": "b47_gen_std_r8_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.398,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849831",
+   "name": "b47_gen_std_r8_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849832",
+   "name": "b47_gen_std_r8_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849834",
+   "name": "b47_gen_std_r8_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.398,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849835",
+   "name": "b47_gen_std_r8_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.004,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849836",
+   "name": "b47_gen_std_r8_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849837",
+   "name": "b47_gen_std_r64_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.499,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849839",
+   "name": "b47_gen_std_r64_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.004,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849841",
+   "name": "b47_gen_std_r64_lr3e-05_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.002,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849842",
+   "name": "b47_gen_std_r64_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.47,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849843",
+   "name": "b47_gen_std_r64_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849844",
+   "name": "b47_gen_std_r64_lr0.0001_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.005,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849846",
+   "name": "b47_gen_std_r64_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.466,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849847",
+   "name": "b47_gen_std_r64_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.005,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15849848",
+   "name": "b47_gen_std_r64_lr0.0003_s42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875237",
+   "name": "b47_score42",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.639,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875241",
+   "name": "b47_final_gen_k32_s123",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15875246",
+   "name": "b47_final_gen_k32_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.571,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875247",
+   "name": "b47_final_gen_k32_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875248",
+   "name": "b47_final_fullgen_k32_s123",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.558,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875249",
+   "name": "b47_final_fullgen_k32_s123",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875251",
+   "name": "b47_final_fullgen_k32_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.34,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875252",
+   "name": "b47_final_fullgen_k32_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875253",
+   "name": "b47_final_fullcls_k32_s123",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.427,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875254",
+   "name": "b47_final_fullcls_k32_s123",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875256",
+   "name": "b47_final_fullcls_k32_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.349,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875257",
+   "name": "b47_final_fullcls_k32_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875258",
+   "name": "b47_final_scratch_k32_s123",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15875260",
+   "name": "b47_final_scratch_k32_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15875262",
+   "name": "b47_final_gen_std_s123",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15875264",
+   "name": "b47_final_gen_std_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15875268",
+   "name": "b47_final_fullgen_std_s123",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200,gpu-h100,gpu-a100,gpu-a100,gpu-h100,gpu-h200",
+   "gpus": 0,
+   "cpus": 0,
+   "hours": 0.0,
+   "state": "CANCELLED by 3049098"
+  },
+  {
+   "job": "15875270",
+   "name": "b47_final_fullgen_std_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.776,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875271",
+   "name": "b47_final_fullgen_std_s456",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875281",
+   "name": "b47_ctrl_gen",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.279,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15875282",
+   "name": "b47_ctrl_fullgen",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.29,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15876653",
+   "name": "b47_final_fullgen_std_s123b",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.983,
+   "state": "FAILED"
+  },
+  {
+   "job": "15876654",
+   "name": "b47_final_fullgen_std_s123b",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.446,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15876655",
+   "name": "b47_final_scratch_k32_s456b",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.278,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15876656",
+   "name": "b47_final_scratch_k32_s456b",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-a100",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.003,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15876657",
+   "name": "b47_final_gen_std_s456b",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.965,
+   "state": "FAILED"
+  },
+  {
+   "job": "15876658",
+   "name": "b47_final_gen_std_s456b",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.271,
+   "state": "COMPLETED"
+  },
+  {
+   "job": "15891107",
+   "name": "b47_ctrl2",
+   "account": "gts-nimam6-paid",
+   "partition": "gpu-h200",
+   "gpus": 1,
+   "cpus": 8,
+   "hours": 0.327,
+   "state": "COMPLETED"
+  }
+ ],
+ "total_gpu_hours": 23.56
+}

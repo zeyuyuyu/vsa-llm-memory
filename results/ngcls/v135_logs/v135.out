@@ -1,0 +1,13 @@
+===== V-135 volume sweep (prereg f51acda) =====
+  K [120, 250, 500, 1000, 2000, 4000], depths [2], n=120, ctx 32768
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:10,  1.46it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:09,  1.52it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:09,  1.54it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:08,  1.55it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:07,  1.56it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:07,  1.56it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.56it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:05<00:05,  1.56it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:05,  1.57it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.57it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:07<00:03,  1.57it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.57it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:08<00:02,  1.57it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:08<00:01,  1.57it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:09<00:01,  1.57it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:10<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.62it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.57it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  k=2 K=120   S=2   store 1.0000 | plain 0.9250 | cot 0.9667 | gap +0.0750 | 1404 tok trunc 0.000 | bs 12 | 7.1 min
+  k=2 K=250   S=4   store 0.9972 | plain 0.9417 | cot 0.9583 | gap +0.0556 | 2775 tok trunc 0.000 | bs 12 | 12.1 min
+  k=2 K=500   S=8   store 1.0000 | plain 0.9000 | cot 0.9083 | gap +0.1000 | 5415 tok trunc 0.000 | bs 10 | 26.0 min
+  k=2 K=1000  S=16  store 1.0000 | plain 0.7500 | cot 0.7500 | gap +0.2500 | 10692 tok trunc 0.000 | bs 5 | 44.7 min
+  k=2 K=2000  S=32  store 0.9972 | plain 0.2500 | cot 0.3500 | gap +0.7472 | 21246 tok trunc 0.000 | bs 2 | 108.6 min
+This is a friendly reminder - the current text generation call has exceeded the model's predefined maximum length (32768). Depending on the model, you may observe exceptions, performance degradation, or nothing at all.
+  k=2 K=4000  S=63  store 1.0000 | plain 0.0000 | cot 0.0000 | gap +1.0000 | 42354 tok trunc 1.000 | bs 1 | 727.2 min
+V135-DONE
+V135-WRAPPER-EXIT 0

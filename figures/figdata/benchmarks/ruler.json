@@ -1,0 +1,893 @@
+{
+ "_about": "RULER (13 tasks, 4k-128k) for Fig. 2c / Fig. 5a. Leaderboard rows are verbatim lines of the RULER README (NVIDIA/RULER, main, downloaded 2026-11-14; 500 samples per task). Ours and the same Qwen3-8B answering directly are lines of vsassm/results/b21_verdict.txt (100 samples per task; B21, sharded Fourier HRR store, prompted Qwen3-8B reader). CWE/FWE in ours are counted by the memory's word counter.",
+ "ours13": {
+  "label": "ours: prompted Qwen3-8B reader + vector store",
+  "points": [
+   {
+    "length": "4k",
+    "value": 95.8,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.8   95.5   95.3   95.6   95.2   94.9",
+    "text": "95.8"
+   },
+   {
+    "length": "8k",
+    "value": 95.5,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.8   95.5   95.3   95.6   95.2   94.9",
+    "text": "95.5"
+   },
+   {
+    "length": "16k",
+    "value": 95.3,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.8   95.5   95.3   95.6   95.2   94.9",
+    "text": "95.3"
+   },
+   {
+    "length": "32k",
+    "value": 95.6,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.8   95.5   95.3   95.6   95.2   94.9",
+    "text": "95.6"
+   },
+   {
+    "length": "64k",
+    "value": 95.2,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.8   95.5   95.3   95.6   95.2   94.9",
+    "text": "95.2"
+   },
+   {
+    "length": "128k",
+    "value": 94.9,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.8   95.5   95.3   95.6   95.2   94.9",
+    "text": "94.9"
+   }
+  ]
+ },
+ "direct13": {
+  "label": "the same Qwen3-8B answering directly (our run)",
+  "points": [
+   {
+    "length": "4k",
+    "value": 95.2,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.2   93.9   93.5   92.1   80.8   77.3",
+    "text": "95.2"
+   },
+   {
+    "length": "8k",
+    "value": 93.9,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.2   93.9   93.5   92.1   80.8   77.3",
+    "text": "93.9"
+   },
+   {
+    "length": "16k",
+    "value": 93.5,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.2   93.9   93.5   92.1   80.8   77.3",
+    "text": "93.5"
+   },
+   {
+    "length": "32k",
+    "value": 92.1,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.2   93.9   93.5   92.1   80.8   77.3",
+    "text": "92.1"
+   },
+   {
+    "length": "64k",
+    "value": 80.8,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.2   93.9   93.5   92.1   80.8   77.3",
+    "text": "80.8"
+   },
+   {
+    "length": "128k",
+    "value": 77.3,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.2   93.9   93.5   92.1   80.8   77.3",
+    "text": "77.3"
+   }
+  ]
+ },
+ "ours11": {
+  "label": "ours without CWE/FWE",
+  "points": [
+   {
+    "length": "4k",
+    "value": 95.1,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.1   94.7   94.4   94.8   94.3   94.0",
+    "text": "95.1"
+   },
+   {
+    "length": "8k",
+    "value": 94.7,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.1   94.7   94.4   94.8   94.3   94.0",
+    "text": "94.7"
+   },
+   {
+    "length": "16k",
+    "value": 94.4,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.1   94.7   94.4   94.8   94.3   94.0",
+    "text": "94.4"
+   },
+   {
+    "length": "32k",
+    "value": 94.8,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.1   94.7   94.4   94.8   94.3   94.0",
+    "text": "94.8"
+   },
+   {
+    "length": "64k",
+    "value": 94.3,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.1   94.7   94.4   94.8   94.3   94.0",
+    "text": "94.3"
+   },
+   {
+    "length": "128k",
+    "value": 94.0,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          95.1   94.7   94.4   94.8   94.3   94.0",
+    "text": "94.0"
+   }
+  ]
+ },
+ "direct11": {
+  "label": "direct without CWE/FWE",
+  "points": [
+   {
+    "length": "4k",
+    "value": 95.8,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.8   94.3   93.9   93.5   81.0   78.7",
+    "text": "95.8"
+   },
+   {
+    "length": "8k",
+    "value": 94.3,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.8   94.3   93.9   93.5   81.0   78.7",
+    "text": "94.3"
+   },
+   {
+    "length": "16k",
+    "value": 93.9,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.8   94.3   93.9   93.5   81.0   78.7",
+    "text": "93.9"
+   },
+   {
+    "length": "32k",
+    "value": 93.5,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.8   94.3   93.9   93.5   81.0   78.7",
+    "text": "93.5"
+   },
+   {
+    "length": "64k",
+    "value": 81.0,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.8   94.3   93.9   93.5   81.0   78.7",
+    "text": "81.0"
+   },
+   {
+    "length": "128k",
+    "value": 78.7,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)     95.8   94.3   93.9   93.5   81.0   78.7",
+    "text": "78.7"
+   }
+  ]
+ },
+ "leaderboard": [
+  {
+   "label": "Jamba-1.5-large",
+   "params_b": 398,
+   "params_source": "README row '(94B/398B)': 94B active of 398B",
+   "points": [
+    {
+     "length": "4k",
+     "value": 96.7,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-large*](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large) (94B/398B)|256k|>128k|<ins>96.7</ins>|<ins>96.6</ins>|<ins>96.4</ins>|<ins>96.0</ins>|<ins>95.4</ins>|<ins>95.1</ins>|96.0|95.7 **(1st)**|96.3 **(1st)**|",
+     "cell": 3,
+     "text": "96.7"
+    },
+    {
+     "length": "8k",
+     "value": 96.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-large*](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large) (94B/398B)|256k|>128k|<ins>96.7</ins>|<ins>96.6</ins>|<ins>96.4</ins>|<ins>96.0</ins>|<ins>95.4</ins>|<ins>95.1</ins>|96.0|95.7 **(1st)**|96.3 **(1st)**|",
+     "cell": 4,
+     "text": "96.6"
+    },
+    {
+     "length": "16k",
+     "value": 96.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-large*](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large) (94B/398B)|256k|>128k|<ins>96.7</ins>|<ins>96.6</ins>|<ins>96.4</ins>|<ins>96.0</ins>|<ins>95.4</ins>|<ins>95.1</ins>|96.0|95.7 **(1st)**|96.3 **(1st)**|",
+     "cell": 5,
+     "text": "96.4"
+    },
+    {
+     "length": "32k",
+     "value": 96.0,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-large*](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large) (94B/398B)|256k|>128k|<ins>96.7</ins>|<ins>96.6</ins>|<ins>96.4</ins>|<ins>96.0</ins>|<ins>95.4</ins>|<ins>95.1</ins>|96.0|95.7 **(1st)**|96.3 **(1st)**|",
+     "cell": 6,
+     "text": "96.0"
+    },
+    {
+     "length": "64k",
+     "value": 95.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-large*](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large) (94B/398B)|256k|>128k|<ins>96.7</ins>|<ins>96.6</ins>|<ins>96.4</ins>|<ins>96.0</ins>|<ins>95.4</ins>|<ins>95.1</ins>|96.0|95.7 **(1st)**|96.3 **(1st)**|",
+     "cell": 7,
+     "text": "95.4"
+    },
+    {
+     "length": "128k",
+     "value": 95.1,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-large*](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large) (94B/398B)|256k|>128k|<ins>96.7</ins>|<ins>96.6</ins>|<ins>96.4</ins>|<ins>96.0</ins>|<ins>95.4</ins>|<ins>95.1</ins>|96.0|95.7 **(1st)**|96.3 **(1st)**|",
+     "cell": 8,
+     "text": "95.1"
+    }
+   ]
+  },
+  {
+   "label": "Gemini-1.5-pro",
+   "params_b": null,
+   "params_source": "undisclosed",
+   "points": [
+    {
+     "length": "4k",
+     "value": 96.7,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Gemini-1.5-pro](https://ai.google.dev/gemini-api/docs/models/gemini#:~:text=Gemini-,Gemini%201.5%20Pro%20(Preview%20only),-Text%20and%20images)|1M|>128K|<ins>96.7</ins>|<ins>95.8</ins>|<ins>96.0</ins>|<ins>95.9</ins>|<ins>95.9</ins>|<ins>94.4</ins>|95.8|95.5 **(2nd)**|96.1 **(2nd)**|",
+     "cell": 3,
+     "text": "96.7"
+    },
+    {
+     "length": "8k",
+     "value": 95.8,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Gemini-1.5-pro](https://ai.google.dev/gemini-api/docs/models/gemini#:~:text=Gemini-,Gemini%201.5%20Pro%20(Preview%20only),-Text%20and%20images)|1M|>128K|<ins>96.7</ins>|<ins>95.8</ins>|<ins>96.0</ins>|<ins>95.9</ins>|<ins>95.9</ins>|<ins>94.4</ins>|95.8|95.5 **(2nd)**|96.1 **(2nd)**|",
+     "cell": 4,
+     "text": "95.8"
+    },
+    {
+     "length": "16k",
+     "value": 96.0,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Gemini-1.5-pro](https://ai.google.dev/gemini-api/docs/models/gemini#:~:text=Gemini-,Gemini%201.5%20Pro%20(Preview%20only),-Text%20and%20images)|1M|>128K|<ins>96.7</ins>|<ins>95.8</ins>|<ins>96.0</ins>|<ins>95.9</ins>|<ins>95.9</ins>|<ins>94.4</ins>|95.8|95.5 **(2nd)**|96.1 **(2nd)**|",
+     "cell": 5,
+     "text": "96.0"
+    },
+    {
+     "length": "32k",
+     "value": 95.9,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Gemini-1.5-pro](https://ai.google.dev/gemini-api/docs/models/gemini#:~:text=Gemini-,Gemini%201.5%20Pro%20(Preview%20only),-Text%20and%20images)|1M|>128K|<ins>96.7</ins>|<ins>95.8</ins>|<ins>96.0</ins>|<ins>95.9</ins>|<ins>95.9</ins>|<ins>94.4</ins>|95.8|95.5 **(2nd)**|96.1 **(2nd)**|",
+     "cell": 6,
+     "text": "95.9"
+    },
+    {
+     "length": "64k",
+     "value": 95.9,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Gemini-1.5-pro](https://ai.google.dev/gemini-api/docs/models/gemini#:~:text=Gemini-,Gemini%201.5%20Pro%20(Preview%20only),-Text%20and%20images)|1M|>128K|<ins>96.7</ins>|<ins>95.8</ins>|<ins>96.0</ins>|<ins>95.9</ins>|<ins>95.9</ins>|<ins>94.4</ins>|95.8|95.5 **(2nd)**|96.1 **(2nd)**|",
+     "cell": 7,
+     "text": "95.9"
+    },
+    {
+     "length": "128k",
+     "value": 94.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Gemini-1.5-pro](https://ai.google.dev/gemini-api/docs/models/gemini#:~:text=Gemini-,Gemini%201.5%20Pro%20(Preview%20only),-Text%20and%20images)|1M|>128K|<ins>96.7</ins>|<ins>95.8</ins>|<ins>96.0</ins>|<ins>95.9</ins>|<ins>95.9</ins>|<ins>94.4</ins>|95.8|95.5 **(2nd)**|96.1 **(2nd)**|",
+     "cell": 8,
+     "text": "94.4"
+    }
+   ]
+  },
+  {
+   "label": "Qwen2.5-14B-1M",
+   "params_b": 14,
+   "params_source": "README row '(14B)'",
+   "points": [
+    {
+     "length": "4k",
+     "value": 97.5,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen2.5-14B-Instruct-1M*](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct-1m) (14B)|1M|>128K|<ins>97.5</ins>|<ins>97.1</ins>|<ins>94.6</ins>|<ins>94.9</ins>|<ins>94.9</ins>|<ins>92.2</ins>|95.7|TBD|TBD|",
+     "cell": 3,
+     "text": "97.5"
+    },
+    {
+     "length": "8k",
+     "value": 97.1,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen2.5-14B-Instruct-1M*](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct-1m) (14B)|1M|>128K|<ins>97.5</ins>|<ins>97.1</ins>|<ins>94.6</ins>|<ins>94.9</ins>|<ins>94.9</ins>|<ins>92.2</ins>|95.7|TBD|TBD|",
+     "cell": 4,
+     "text": "97.1"
+    },
+    {
+     "length": "16k",
+     "value": 94.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen2.5-14B-Instruct-1M*](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct-1m) (14B)|1M|>128K|<ins>97.5</ins>|<ins>97.1</ins>|<ins>94.6</ins>|<ins>94.9</ins>|<ins>94.9</ins>|<ins>92.2</ins>|95.7|TBD|TBD|",
+     "cell": 5,
+     "text": "94.6"
+    },
+    {
+     "length": "32k",
+     "value": 94.9,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen2.5-14B-Instruct-1M*](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct-1m) (14B)|1M|>128K|<ins>97.5</ins>|<ins>97.1</ins>|<ins>94.6</ins>|<ins>94.9</ins>|<ins>94.9</ins>|<ins>92.2</ins>|95.7|TBD|TBD|",
+     "cell": 6,
+     "text": "94.9"
+    },
+    {
+     "length": "64k",
+     "value": 94.9,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen2.5-14B-Instruct-1M*](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct-1m) (14B)|1M|>128K|<ins>97.5</ins>|<ins>97.1</ins>|<ins>94.6</ins>|<ins>94.9</ins>|<ins>94.9</ins>|<ins>92.2</ins>|95.7|TBD|TBD|",
+     "cell": 7,
+     "text": "94.9"
+    },
+    {
+     "length": "128k",
+     "value": 92.2,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen2.5-14B-Instruct-1M*](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct-1m) (14B)|1M|>128K|<ins>97.5</ins>|<ins>97.1</ins>|<ins>94.6</ins>|<ins>94.9</ins>|<ins>94.9</ins>|<ins>92.2</ins>|95.7|TBD|TBD|",
+     "cell": 8,
+     "text": "92.2"
+    }
+   ]
+  },
+  {
+   "label": "Qwen3-235B",
+   "params_b": 235,
+   "params_source": "README row '(235B)'",
+   "points": [
+    {
+     "length": "4k",
+     "value": 97.7,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-235B-A22B*](https://huggingface.co/Qwen/Qwen3-235B-A22B) (235B)|128K|>128K|<ins>97.7</ins>|<ins>97.2</ins>|<ins>96.4</ins>|<ins>95.1</ins>|<ins>93.3</ins>|<ins>90.6</ins>|95.0|TBD|TBD|",
+     "cell": 3,
+     "text": "97.7"
+    },
+    {
+     "length": "8k",
+     "value": 97.2,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-235B-A22B*](https://huggingface.co/Qwen/Qwen3-235B-A22B) (235B)|128K|>128K|<ins>97.7</ins>|<ins>97.2</ins>|<ins>96.4</ins>|<ins>95.1</ins>|<ins>93.3</ins>|<ins>90.6</ins>|95.0|TBD|TBD|",
+     "cell": 4,
+     "text": "97.2"
+    },
+    {
+     "length": "16k",
+     "value": 96.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-235B-A22B*](https://huggingface.co/Qwen/Qwen3-235B-A22B) (235B)|128K|>128K|<ins>97.7</ins>|<ins>97.2</ins>|<ins>96.4</ins>|<ins>95.1</ins>|<ins>93.3</ins>|<ins>90.6</ins>|95.0|TBD|TBD|",
+     "cell": 5,
+     "text": "96.4"
+    },
+    {
+     "length": "32k",
+     "value": 95.1,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-235B-A22B*](https://huggingface.co/Qwen/Qwen3-235B-A22B) (235B)|128K|>128K|<ins>97.7</ins>|<ins>97.2</ins>|<ins>96.4</ins>|<ins>95.1</ins>|<ins>93.3</ins>|<ins>90.6</ins>|95.0|TBD|TBD|",
+     "cell": 6,
+     "text": "95.1"
+    },
+    {
+     "length": "64k",
+     "value": 93.3,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-235B-A22B*](https://huggingface.co/Qwen/Qwen3-235B-A22B) (235B)|128K|>128K|<ins>97.7</ins>|<ins>97.2</ins>|<ins>96.4</ins>|<ins>95.1</ins>|<ins>93.3</ins>|<ins>90.6</ins>|95.0|TBD|TBD|",
+     "cell": 7,
+     "text": "93.3"
+    },
+    {
+     "length": "128k",
+     "value": 90.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-235B-A22B*](https://huggingface.co/Qwen/Qwen3-235B-A22B) (235B)|128K|>128K|<ins>97.7</ins>|<ins>97.2</ins>|<ins>96.4</ins>|<ins>95.1</ins>|<ins>93.3</ins>|<ins>90.6</ins>|95.0|TBD|TBD|",
+     "cell": 8,
+     "text": "90.6"
+    }
+   ]
+  },
+  {
+   "label": "Jamba-1.5-mini",
+   "params_b": 52,
+   "params_source": "README row '(12B/52B)'",
+   "points": [
+    {
+     "length": "4k",
+     "value": 95.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-mini](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Mini) (12B/52B)|256K|>128K|<ins>95.6</ins>|<ins>95.6</ins>|<ins>94.8</ins>|<ins>94.6</ins>|<ins>92.8</ins>|<ins>90.0</ins>|93.9|93.1 **(3rd)**|94.8 **(3rd)**",
+     "cell": 3,
+     "text": "95.6"
+    },
+    {
+     "length": "8k",
+     "value": 95.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-mini](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Mini) (12B/52B)|256K|>128K|<ins>95.6</ins>|<ins>95.6</ins>|<ins>94.8</ins>|<ins>94.6</ins>|<ins>92.8</ins>|<ins>90.0</ins>|93.9|93.1 **(3rd)**|94.8 **(3rd)**",
+     "cell": 4,
+     "text": "95.6"
+    },
+    {
+     "length": "16k",
+     "value": 94.8,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-mini](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Mini) (12B/52B)|256K|>128K|<ins>95.6</ins>|<ins>95.6</ins>|<ins>94.8</ins>|<ins>94.6</ins>|<ins>92.8</ins>|<ins>90.0</ins>|93.9|93.1 **(3rd)**|94.8 **(3rd)**",
+     "cell": 5,
+     "text": "94.8"
+    },
+    {
+     "length": "32k",
+     "value": 94.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-mini](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Mini) (12B/52B)|256K|>128K|<ins>95.6</ins>|<ins>95.6</ins>|<ins>94.8</ins>|<ins>94.6</ins>|<ins>92.8</ins>|<ins>90.0</ins>|93.9|93.1 **(3rd)**|94.8 **(3rd)**",
+     "cell": 6,
+     "text": "94.6"
+    },
+    {
+     "length": "64k",
+     "value": 92.8,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-mini](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Mini) (12B/52B)|256K|>128K|<ins>95.6</ins>|<ins>95.6</ins>|<ins>94.8</ins>|<ins>94.6</ins>|<ins>92.8</ins>|<ins>90.0</ins>|93.9|93.1 **(3rd)**|94.8 **(3rd)**",
+     "cell": 7,
+     "text": "92.8"
+    },
+    {
+     "length": "128k",
+     "value": 90.0,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Jamba-1.5-mini](https://huggingface.co/ai21labs/AI21-Jamba-1.5-Mini) (12B/52B)|256K|>128K|<ins>95.6</ins>|<ins>95.6</ins>|<ins>94.8</ins>|<ins>94.6</ins>|<ins>92.8</ins>|<ins>90.0</ins>|93.9|93.1 **(3rd)**|94.8 **(3rd)**",
+     "cell": 8,
+     "text": "90.0"
+    }
+   ]
+  },
+  {
+   "label": "EXAONE-4.0-32B",
+   "params_b": 32,
+   "params_source": "README row '(32B)'",
+   "points": [
+    {
+     "length": "4k",
+     "value": 96.3,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[EXAONE-4.0-32B*](https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B) (32B)|128K|>128K|<ins>96.3</ins>|<ins>94.9</ins>|<ins>93.9</ins>|<ins>93.6</ins>|<ins>91.7</ins>|<ins>88.2</ins>|93.1|TBD|TBD|",
+     "cell": 3,
+     "text": "96.3"
+    },
+    {
+     "length": "8k",
+     "value": 94.9,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[EXAONE-4.0-32B*](https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B) (32B)|128K|>128K|<ins>96.3</ins>|<ins>94.9</ins>|<ins>93.9</ins>|<ins>93.6</ins>|<ins>91.7</ins>|<ins>88.2</ins>|93.1|TBD|TBD|",
+     "cell": 4,
+     "text": "94.9"
+    },
+    {
+     "length": "16k",
+     "value": 93.9,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[EXAONE-4.0-32B*](https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B) (32B)|128K|>128K|<ins>96.3</ins>|<ins>94.9</ins>|<ins>93.9</ins>|<ins>93.6</ins>|<ins>91.7</ins>|<ins>88.2</ins>|93.1|TBD|TBD|",
+     "cell": 5,
+     "text": "93.9"
+    },
+    {
+     "length": "32k",
+     "value": 93.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[EXAONE-4.0-32B*](https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B) (32B)|128K|>128K|<ins>96.3</ins>|<ins>94.9</ins>|<ins>93.9</ins>|<ins>93.6</ins>|<ins>91.7</ins>|<ins>88.2</ins>|93.1|TBD|TBD|",
+     "cell": 6,
+     "text": "93.6"
+    },
+    {
+     "length": "64k",
+     "value": 91.7,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[EXAONE-4.0-32B*](https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B) (32B)|128K|>128K|<ins>96.3</ins>|<ins>94.9</ins>|<ins>93.9</ins>|<ins>93.6</ins>|<ins>91.7</ins>|<ins>88.2</ins>|93.1|TBD|TBD|",
+     "cell": 7,
+     "text": "91.7"
+    },
+    {
+     "length": "128k",
+     "value": 88.2,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[EXAONE-4.0-32B*](https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B) (32B)|128K|>128K|<ins>96.3</ins>|<ins>94.9</ins>|<ins>93.9</ins>|<ins>93.6</ins>|<ins>91.7</ins>|<ins>88.2</ins>|93.1|TBD|TBD|",
+     "cell": 8,
+     "text": "88.2"
+    }
+   ]
+  },
+  {
+   "label": "Qwen3-32B",
+   "params_b": 32,
+   "params_source": "README row '(32B)'",
+   "points": [
+    {
+     "length": "4k",
+     "value": 98.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-32B*](https://huggingface.co/Qwen/Qwen3-32B) (32B)|128K|>128K|<ins>98.4</ins>|<ins>96.0</ins>|<ins>96.2</ins>|<ins>94.4</ins>|<ins>91.8</ins>|<ins>85.6</ins>|93.7|TBD|TBD|",
+     "cell": 3,
+     "text": "98.4"
+    },
+    {
+     "length": "8k",
+     "value": 96.0,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-32B*](https://huggingface.co/Qwen/Qwen3-32B) (32B)|128K|>128K|<ins>98.4</ins>|<ins>96.0</ins>|<ins>96.2</ins>|<ins>94.4</ins>|<ins>91.8</ins>|<ins>85.6</ins>|93.7|TBD|TBD|",
+     "cell": 4,
+     "text": "96.0"
+    },
+    {
+     "length": "16k",
+     "value": 96.2,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-32B*](https://huggingface.co/Qwen/Qwen3-32B) (32B)|128K|>128K|<ins>98.4</ins>|<ins>96.0</ins>|<ins>96.2</ins>|<ins>94.4</ins>|<ins>91.8</ins>|<ins>85.6</ins>|93.7|TBD|TBD|",
+     "cell": 5,
+     "text": "96.2"
+    },
+    {
+     "length": "32k",
+     "value": 94.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-32B*](https://huggingface.co/Qwen/Qwen3-32B) (32B)|128K|>128K|<ins>98.4</ins>|<ins>96.0</ins>|<ins>96.2</ins>|<ins>94.4</ins>|<ins>91.8</ins>|<ins>85.6</ins>|93.7|TBD|TBD|",
+     "cell": 6,
+     "text": "94.4"
+    },
+    {
+     "length": "64k",
+     "value": 91.8,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-32B*](https://huggingface.co/Qwen/Qwen3-32B) (32B)|128K|>128K|<ins>98.4</ins>|<ins>96.0</ins>|<ins>96.2</ins>|<ins>94.4</ins>|<ins>91.8</ins>|<ins>85.6</ins>|93.7|TBD|TBD|",
+     "cell": 7,
+     "text": "91.8"
+    },
+    {
+     "length": "128k",
+     "value": 85.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-32B*](https://huggingface.co/Qwen/Qwen3-32B) (32B)|128K|>128K|<ins>98.4</ins>|<ins>96.0</ins>|<ins>96.2</ins>|<ins>94.4</ins>|<ins>91.8</ins>|<ins>85.6</ins>|93.7|TBD|TBD|",
+     "cell": 8,
+     "text": "85.6"
+    }
+   ]
+  },
+  {
+   "label": "Qwen3-14B",
+   "params_b": 14,
+   "params_source": "README row '(14B)'",
+   "points": [
+    {
+     "length": "4k",
+     "value": 98.0,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-14B*](https://huggingface.co/Qwen/Qwen3-14B) (14B)|128K|>128K|<ins>98.0</ins>|<ins>97.8</ins>|<ins>96.4</ins>|<ins>96.1</ins>|<ins>94.0</ins>|<ins>85.1</ins>|94.6|TBD|TBD|",
+     "cell": 3,
+     "text": "98.0"
+    },
+    {
+     "length": "8k",
+     "value": 97.8,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-14B*](https://huggingface.co/Qwen/Qwen3-14B) (14B)|128K|>128K|<ins>98.0</ins>|<ins>97.8</ins>|<ins>96.4</ins>|<ins>96.1</ins>|<ins>94.0</ins>|<ins>85.1</ins>|94.6|TBD|TBD|",
+     "cell": 4,
+     "text": "97.8"
+    },
+    {
+     "length": "16k",
+     "value": 96.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-14B*](https://huggingface.co/Qwen/Qwen3-14B) (14B)|128K|>128K|<ins>98.0</ins>|<ins>97.8</ins>|<ins>96.4</ins>|<ins>96.1</ins>|<ins>94.0</ins>|<ins>85.1</ins>|94.6|TBD|TBD|",
+     "cell": 5,
+     "text": "96.4"
+    },
+    {
+     "length": "32k",
+     "value": 96.1,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-14B*](https://huggingface.co/Qwen/Qwen3-14B) (14B)|128K|>128K|<ins>98.0</ins>|<ins>97.8</ins>|<ins>96.4</ins>|<ins>96.1</ins>|<ins>94.0</ins>|<ins>85.1</ins>|94.6|TBD|TBD|",
+     "cell": 6,
+     "text": "96.1"
+    },
+    {
+     "length": "64k",
+     "value": 94.0,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-14B*](https://huggingface.co/Qwen/Qwen3-14B) (14B)|128K|>128K|<ins>98.0</ins>|<ins>97.8</ins>|<ins>96.4</ins>|<ins>96.1</ins>|<ins>94.0</ins>|<ins>85.1</ins>|94.6|TBD|TBD|",
+     "cell": 7,
+     "text": "94.0"
+    },
+    {
+     "length": "128k",
+     "value": 85.1,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-14B*](https://huggingface.co/Qwen/Qwen3-14B) (14B)|128K|>128K|<ins>98.0</ins>|<ins>97.8</ins>|<ins>96.4</ins>|<ins>96.1</ins>|<ins>94.0</ins>|<ins>85.1</ins>|94.6|TBD|TBD|",
+     "cell": 8,
+     "text": "85.1"
+    }
+   ]
+  },
+  {
+   "label": "GPT-4",
+   "params_b": null,
+   "params_source": "undisclosed",
+   "points": [
+    {
+     "length": "4k",
+     "value": 96.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[GPT-4-1106-preview](https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4#:~:text=gpt%2D4%2D1106%2Dpreview,Up%20to%20Apr%202023)|128K|64K|<ins>96.6</ins>|<ins>96.3</ins>|<ins>95.2</ins>|<ins>93.2</ins>|<ins>87.0</ins>|81.2|91.6|89.0 **(4th)**|94.1 **(4th)**|",
+     "cell": 3,
+     "text": "96.6"
+    },
+    {
+     "length": "8k",
+     "value": 96.3,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[GPT-4-1106-preview](https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4#:~:text=gpt%2D4%2D1106%2Dpreview,Up%20to%20Apr%202023)|128K|64K|<ins>96.6</ins>|<ins>96.3</ins>|<ins>95.2</ins>|<ins>93.2</ins>|<ins>87.0</ins>|81.2|91.6|89.0 **(4th)**|94.1 **(4th)**|",
+     "cell": 4,
+     "text": "96.3"
+    },
+    {
+     "length": "16k",
+     "value": 95.2,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[GPT-4-1106-preview](https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4#:~:text=gpt%2D4%2D1106%2Dpreview,Up%20to%20Apr%202023)|128K|64K|<ins>96.6</ins>|<ins>96.3</ins>|<ins>95.2</ins>|<ins>93.2</ins>|<ins>87.0</ins>|81.2|91.6|89.0 **(4th)**|94.1 **(4th)**|",
+     "cell": 5,
+     "text": "95.2"
+    },
+    {
+     "length": "32k",
+     "value": 93.2,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[GPT-4-1106-preview](https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4#:~:text=gpt%2D4%2D1106%2Dpreview,Up%20to%20Apr%202023)|128K|64K|<ins>96.6</ins>|<ins>96.3</ins>|<ins>95.2</ins>|<ins>93.2</ins>|<ins>87.0</ins>|81.2|91.6|89.0 **(4th)**|94.1 **(4th)**|",
+     "cell": 6,
+     "text": "93.2"
+    },
+    {
+     "length": "64k",
+     "value": 87.0,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[GPT-4-1106-preview](https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4#:~:text=gpt%2D4%2D1106%2Dpreview,Up%20to%20Apr%202023)|128K|64K|<ins>96.6</ins>|<ins>96.3</ins>|<ins>95.2</ins>|<ins>93.2</ins>|<ins>87.0</ins>|81.2|91.6|89.0 **(4th)**|94.1 **(4th)**|",
+     "cell": 7,
+     "text": "87.0"
+    },
+    {
+     "length": "128k",
+     "value": 81.2,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[GPT-4-1106-preview](https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4#:~:text=gpt%2D4%2D1106%2Dpreview,Up%20to%20Apr%202023)|128K|64K|<ins>96.6</ins>|<ins>96.3</ins>|<ins>95.2</ins>|<ins>93.2</ins>|<ins>87.0</ins>|81.2|91.6|89.0 **(4th)**|94.1 **(4th)**|",
+     "cell": 8,
+     "text": "81.2"
+    }
+   ]
+  },
+  {
+   "label": "Qwen3-8B",
+   "params_b": 8,
+   "params_source": "README row '(8B)'",
+   "points": [
+    {
+     "length": "4k",
+     "value": 96.3,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-8B*](https://huggingface.co/Qwen/Qwen3-8B) (8B)|128K|64K|<ins>96.3</ins>|<ins>96.0</ins>|<ins>91.8</ins>|<ins>91.2</ins>|82.1|77.4|89.1|TBD|TBD|",
+     "cell": 3,
+     "text": "96.3"
+    },
+    {
+     "length": "8k",
+     "value": 96.0,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-8B*](https://huggingface.co/Qwen/Qwen3-8B) (8B)|128K|64K|<ins>96.3</ins>|<ins>96.0</ins>|<ins>91.8</ins>|<ins>91.2</ins>|82.1|77.4|89.1|TBD|TBD|",
+     "cell": 4,
+     "text": "96.0"
+    },
+    {
+     "length": "16k",
+     "value": 91.8,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-8B*](https://huggingface.co/Qwen/Qwen3-8B) (8B)|128K|64K|<ins>96.3</ins>|<ins>96.0</ins>|<ins>91.8</ins>|<ins>91.2</ins>|82.1|77.4|89.1|TBD|TBD|",
+     "cell": 5,
+     "text": "91.8"
+    },
+    {
+     "length": "32k",
+     "value": 91.2,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-8B*](https://huggingface.co/Qwen/Qwen3-8B) (8B)|128K|64K|<ins>96.3</ins>|<ins>96.0</ins>|<ins>91.8</ins>|<ins>91.2</ins>|82.1|77.4|89.1|TBD|TBD|",
+     "cell": 6,
+     "text": "91.2"
+    },
+    {
+     "length": "64k",
+     "value": 82.1,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-8B*](https://huggingface.co/Qwen/Qwen3-8B) (8B)|128K|64K|<ins>96.3</ins>|<ins>96.0</ins>|<ins>91.8</ins>|<ins>91.2</ins>|82.1|77.4|89.1|TBD|TBD|",
+     "cell": 7,
+     "text": "82.1"
+    },
+    {
+     "length": "128k",
+     "value": 77.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Qwen3-8B*](https://huggingface.co/Qwen/Qwen3-8B) (8B)|128K|64K|<ins>96.3</ins>|<ins>96.0</ins>|<ins>91.8</ins>|<ins>91.2</ins>|82.1|77.4|89.1|TBD|TBD|",
+     "cell": 8,
+     "text": "77.4"
+    }
+   ]
+  },
+  {
+   "label": "Llama-3.1-70B",
+   "params_b": 70,
+   "params_source": "README row '(70B)'",
+   "points": [
+    {
+     "length": "4k",
+     "value": 96.5,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct) (70B)|128K|64K|<ins>96.5</ins>|<ins>95.8</ins>|<ins>95.4</ins>|<ins>94.8</ins>|<ins>88.4</ins>|66.6|89.6|85.5 **(10th)**|93.7 **(5th)**|",
+     "cell": 3,
+     "text": "96.5"
+    },
+    {
+     "length": "8k",
+     "value": 95.8,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct) (70B)|128K|64K|<ins>96.5</ins>|<ins>95.8</ins>|<ins>95.4</ins>|<ins>94.8</ins>|<ins>88.4</ins>|66.6|89.6|85.5 **(10th)**|93.7 **(5th)**|",
+     "cell": 4,
+     "text": "95.8"
+    },
+    {
+     "length": "16k",
+     "value": 95.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct) (70B)|128K|64K|<ins>96.5</ins>|<ins>95.8</ins>|<ins>95.4</ins>|<ins>94.8</ins>|<ins>88.4</ins>|66.6|89.6|85.5 **(10th)**|93.7 **(5th)**|",
+     "cell": 5,
+     "text": "95.4"
+    },
+    {
+     "length": "32k",
+     "value": 94.8,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct) (70B)|128K|64K|<ins>96.5</ins>|<ins>95.8</ins>|<ins>95.4</ins>|<ins>94.8</ins>|<ins>88.4</ins>|66.6|89.6|85.5 **(10th)**|93.7 **(5th)**|",
+     "cell": 6,
+     "text": "94.8"
+    },
+    {
+     "length": "64k",
+     "value": 88.4,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct) (70B)|128K|64K|<ins>96.5</ins>|<ins>95.8</ins>|<ins>95.4</ins>|<ins>94.8</ins>|<ins>88.4</ins>|66.6|89.6|85.5 **(10th)**|93.7 **(5th)**|",
+     "cell": 7,
+     "text": "88.4"
+    },
+    {
+     "length": "128k",
+     "value": 66.6,
+     "file": "figdata/benchmarks/ruler_README_NVIDIA_main_2026-11-14.md",
+     "line": "[Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct) (70B)|128K|64K|<ins>96.5</ins>|<ins>95.8</ins>|<ins>95.4</ins>|<ins>94.8</ins>|<ins>88.4</ins>|66.6|89.6|85.5 **(10th)**|93.7 **(5th)**|",
+     "cell": 8,
+     "text": "66.6"
+    }
+   ]
+  }
+ ],
+ "n_further_note": "README rows not listed here are summarised as 'further models' in the figure",
+ "oursNV": {
+  "label": "ours, the 9 tasks that use the memory (needles + variable tracking)",
+  "points": [
+   {
+    "length": "4k",
+    "value": 99.5,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          99.5   99.9   99.6   99.7   99.5   99.6",
+    "text": "99.5"
+   },
+   {
+    "length": "8k",
+    "value": 99.9,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          99.5   99.9   99.6   99.7   99.5   99.6",
+    "text": "99.9"
+   },
+   {
+    "length": "16k",
+    "value": 99.6,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          99.5   99.9   99.6   99.7   99.5   99.6",
+    "text": "99.6"
+   },
+   {
+    "length": "32k",
+    "value": 99.7,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          99.5   99.9   99.6   99.7   99.5   99.6",
+    "text": "99.7"
+   },
+   {
+    "length": "64k",
+    "value": 99.5,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          99.5   99.9   99.6   99.7   99.5   99.6",
+    "text": "99.5"
+   },
+   {
+    "length": "128k",
+    "value": 99.6,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "VSA store (ours)          99.5   99.9   99.6   99.7   99.5   99.6",
+    "text": "99.6"
+   }
+  ]
+ },
+ "directNV": {
+  "label": "the same Qwen3-8B alone, the same 9 tasks",
+  "points": [
+   {
+    "length": "4k",
+    "value": 100.0,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)    100.0   99.9   99.9   99.3   86.3   84.5",
+    "text": "100.0"
+   },
+   {
+    "length": "8k",
+    "value": 99.9,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)    100.0   99.9   99.9   99.3   86.3   84.5",
+    "text": "99.9"
+   },
+   {
+    "length": "16k",
+    "value": 99.9,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)    100.0   99.9   99.9   99.3   86.3   84.5",
+    "text": "99.9"
+   },
+   {
+    "length": "32k",
+    "value": 99.3,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)    100.0   99.9   99.9   99.3   86.3   84.5",
+    "text": "99.3"
+   },
+   {
+    "length": "64k",
+    "value": 86.3,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)    100.0   99.9   99.9   99.3   86.3   84.5",
+    "text": "86.3"
+   },
+   {
+    "length": "128k",
+    "value": 84.5,
+    "file": "../results/vsassm/results/b21_verdict.txt",
+    "line": "Qwen3-8B direct (B19)    100.0   99.9   99.9   99.3   86.3   84.5",
+    "text": "84.5"
+   }
+  ]
+ }
+}

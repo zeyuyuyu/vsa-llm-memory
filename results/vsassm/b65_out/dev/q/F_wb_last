@@ -1,0 +1,6 @@
+b65_run.py train --pos last --arm vsapub --layer 20 --reader out/rd/last_vsa_lr1e-3_s1/e1000 --lr 1e-3 --steps 1000 --eval_every 250 --seed 1 --out out/fin/last_vsapub_s1
+b65_run.py train --pos last --arm vsapub --layer 20 --reader out/rd/last_vsa_lr1e-3_s2/e1000 --lr 1e-3 --steps 1000 --eval_every 250 --seed 2 --out out/fin/last_vsapub_s2
+b65_run.py train --pos last --arm vsabm --layer 20 --reader out/rd/last_vsa_lr1e-3_s1/e300 --lr 1e-3 --steps 1000 --eval_every 250 --seed 1 --out out/fin/last_vsabm_s1
+b65_run.py train --pos last --arm vsabm --layer 20 --reader out/rd/last_vsa_lr1e-3_s2/e300 --lr 1e-3 --steps 1000 --eval_every 250 --seed 2 --out out/fin/last_vsabm_s2
+b65_run.py train --pos last --arm disc --layer 20 --reader out/rd/last_disc_lr1e-3_s1/e300 --lr 1e-2 --steps 1000 --eval_every 250 --seed 1 --out out/fin/last_disc_s1
+b65_run.py train --pos last --arm disc --layer 20 --reader out/rd/last_disc_lr1e-3_s2/e300 --lr 1e-2 --steps 1000 --eval_every 250 --seed 2 --out out/fin/last_disc_s2

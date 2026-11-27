@@ -1,0 +1,79 @@
+# B29 hand-reading (prereg/B29_same_tooling_prereg.md, Verification). Material: b29_discord.py output in
+# b29_out/ruler/discord_q32_vs_8b.txt and b29_out/logs/discord_<set>_<reader>_vs_banked.txt. Read 2026-11-18.
+
+## RULER: every sample on which the Qwen3-32B and Qwen3-8B (B21) dict answers differ (52 of 5,400; all lengths)
+All 52 were read chunk by chunk (the differing reader outputs are printed next to each other in the discord file).
+- 43 favour the 32B reader:
+  - 31: the 8B reader returned "[]" for a chunk that holds a needle (missed extraction); the 32B read it.
+  - 2: the 8B miscopied a key or value (e.g. "brany-expansionism" for "brainy-expansionism"; uuid
+    "8a0aeef0-1111-..." for "8a0aeef0-1bdd-..."), so the grounding check dropped the pair.
+  - 10: VT, the 8B skipped one link of the variable chain ("VAR B = VAR A" lines); the 32B read it.
+- 9 favour the 8B reader:
+  - 5: the 32B "corrected" the spelling of a key while copying it ("forgoing-glance" for "foregoing-glance" twice,
+    "forgoing-transparency", "reminescent-mask" for "reminiscent-mask"), so its pair fails the grounding check.
+  - 4: VT, the 32B skipped one chain link (once it wrote "NAVG" for "NAVGC").
+- At 128k: 5 differ, all in the 32B reader's favour (2 needles the 8B missed or miscopied, 3 VT links).
+Reading: the store and the rules are identical, so every difference is a reading difference of the same kind as the
+8B's own residual errors (missed needle, miscopied symbol, missed chain link). The 32B makes fewer of them; it also
+introduces one error type the 8B rarely makes (normalising the spelling of a copied symbol).
+
+## RULER, Qwen3-1.7B prompted (not a bar; read to name the failure): 21 of the 100 niah_single_1 misses at 128k and 29
+## VT misses were inspected in bulk: on the noise haystack the 1.7B extracts the filler ("grass" -> "green", "The sky is
+## blue" -> itself) and drops the needle in the same chunk; on VT it drops chain links. Instruction following, not copying.
+
+## Logs, impact set (nsr1): Qwen3-32B prompted vs the 1.7B fine-tuned reader: all 18 discordant questions read
+(9 right only for the 32B, 9 only for the 1.7B; accuracy 0.930 each).
+- 32B right, 1.7B wrong (9): warehouse handover notes that swap two pallets (warehouse-401-1, -403-3: the 1.7B's
+  misses named in the NSR1 verdict) read correctly (4); ops: the ledger-db primary host (ops-400-0) and fraud-scorer's
+  region (ops-404-4) read correctly (4); biobank-404-4: the rack-in-box misread of the NSR1 verdict not made (1).
+- 1.7B right, 32B wrong (9): biobank (6): rack-to-freezer moves named by alias ("Rack 4 is in the -80 #5"): the 32B
+  writes names in its own normal form ("rack-04", "-80-05"), which the site registry cannot resolve, or answers "no"
+  to the one-word check on a stated move; one missed rack move takes every specimen in that rack with it. home (2):
+  "keys to the Corolla" written as "Corolla keys" (not a registry alias) and dropped; a "that one" follow-up attached
+  to the wrong item. warehouse (1): a chatter line read as a move.
+- Reading: the 32B's errors are interface errors (names outside the registry's conventions, which the fine-tuned
+  student learned), not comprehension errors; its gains are on the long multi-item notes where the 1.7B is weakest.
+
+## Logs, location set (test2): Qwen3-32B vs the banked 1.7B: all 14 discordant questions read (6 vs 8)
+- 32B right (6): digit-suffix references ("Pulled 4334 and stuck it in CB-10") the student missed (biobank 2),
+  "QA HOLD" / two-pallet notes (warehouse 2), ops 2.
+- 1.7B right (8): home 3 ("that one" follow-ups attached to the wrong item or skipped; "Found the keys to the
+  Corolla ..." not written), warehouse 3 (a swap told as two moves, "Pulled everything from A-07-03 and stuck it in
+  B-13-02, and moved what was in B-13-02 over to A-07-03", not written; "Parked that one in the overflow area"
+  skipped), ops 2 (abbreviated names not written: "pulled the sessions primary into db-14", "parked that one in
+  use1-b"). The 32B also reads some chatter as moves ("auth is still tripping the circuit ... canary").
+
+## Logs, window set (nsr2): Qwen3-32B vs the 1.7B: 58 discordant (32 vs 26); 20 sampled (seed 0) read
+- By site: warehouse +20 / -5, home +9 / -9, ops +3 / -1, biobank 0 / -11.
+- Warehouse gains: plans the 1.7B wrote as moves ("Need to move 3743 to B-05-04 - still need someone to do it"),
+  "that one" follow-ups and swaps told in words that the 1.7B did not write; every such misread stays inside a window
+  (NSR3 verdict). Each reader also misses some swaps the other writes (e.g. warehouse-504-4, lines 53 and 58).
+- Biobank losses: the same rack-to-freezer alias lines as on the impact set ("Rack 2 is in freezer 7", "Parked rack 2
+  in the -80 #5"): no event written; every specimen of the rack then misses the window.
+- Home: both directions, pronoun follow-ups.
+
+## Logs, frontier readers (Claude Opus 5.5 low; GPT-6.1 Sol low)
+- Opus, impact: 21 discordant (9 vs 12); window: 64 discordant (40 vs 24); 20 sampled per set read.
+- GPT-6.1 Sol (registered runs), impact: 16 discordant (9 vs 7; by site warehouse +4, ops +4/-2, home -4, biobank
+  +1/-1); window: 64 discordant (40 vs 24; warehouse +22/-7, home +14/-12, ops +4/-2, biobank -3). Read: the four home
+  losses on the impact set (two logs) come from plain or imperative moves ("Just put his slippers on the hall table",
+  "Put the cane in the medicine cabinet") that GPT-6.1 Sol either did not write or wrote and then vetoed with "no" in
+  the pipeline's one-word check (the same check answered "yes" on other lines); the simulator counts them as done.
+  Prompt C and the check were developed with Qwen3 readers (B14-B16), and the 1.7B student was distilled on prompt
+  C's outputs; the frontier readers meet them cold.
+- GPT-6.1 Sol, location set: 17 discordant (9 vs 8; all listed and read): by site ops +4/-1, warehouse +2/-2,
+  biobank +2/-1, home +1/-4. The home losses are again plain moves left out ("Just put the keys to the Corolla on the
+  nightstand so they're close by" not written) and a question read as a placement ("where did I leave my slippers? I
+  thought I saw them on the desk" written as slippers -> desk).
+- Opus, same picture as the 32B: gains in warehouse (multi-pallet notes, plans, swaps). Losses (read in the sampled
+  window questions): home, a wrong antecedent ("Put the iPad on the nightstand, next to the cane" written as the cane
+  moving) and plain moves left out ("Just put the cane on the kitchen counter"); ops, status statements not written
+  as placements ("auth got stuck in euw1-a", "payments is stuck in staging": the fine-tuned reader writes them, as
+  prompt C's rule "including statements of where it is" asks). The frontier reader does not remove the error class;
+  it moves errors between sites.
+
+## Overall
+On both benchmarks the residual errors of every reader are reading errors (a missed or miscopied symbol, a wrong
+antecedent, a name outside the registry); the store, the dict and the rules never disagree (dict = store / matrix
+memory on every question of every reader that has finished). Larger readers trade error types rather than remove
+them on the logs; on RULER the 32B removes most of the 8B's few misses.

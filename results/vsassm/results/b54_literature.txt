@@ -1,0 +1,20 @@
+B54 literature check (conclusion -> literature; 2026-11-20)
+
+1. Multi-level PCM under drift (supports the model's scale; the MLC result is not an artefact of a pessimistic device):
+   Papandreou et al., "Drift-tolerant multilevel phase-change memory", IEEE IMW 2011 (IBM Research;
+   https://research.ibm.com/publications/drift-tolerant-multilevel-phase-change-memory): 4 levels per cell with raw
+   bit-error rates of order 1e-5 held for > 30 days at room temperature in a 200-kcell array, but only with a
+   drift-tolerant modulation code (information in the relative order of levels in a codeword) because reference
+   cells alone are "limited due to the stochastic nature of drift"; press coverage (eeNews Europe, IMW 2011) quotes
+   1.57 bits per cell at BER 1e-5 after 37 days, i.e. the coding costs density. Our 2-bit cell at k1 / 30 days:
+   raw BER 1.7e-4 with ideal reference-cell thresholds and no modulation code - an order of magnitude above IBM's
+   coded array, the same regime. Later work (Papandreou et al. IMW 2016, drift-invariant detection; Athmanathan
+   et al. A-SSCC 2014, drift-robust cell-state metrics) improves the read; none of it is modelled here (limitation:
+   the MLC arm uses equally spaced levels, Joshi et al.'s programming noise, ideal per-level calibration).
+   -> SUPPORTS that 2 bits per cell are usable only at the nominal device (k1), and that higher noise multipliers
+   remove the MLC gain (our k2 2-bit BER 2.8%).
+2. Sign quantization of a Gaussian superposition keeps 2/pi of its correlation SNR (Van Vleck / arcsine law; the
+   referee's M2c premise). B54 measures what b-bit quantization buys the store: at b = 3 the analog store is compared
+   with the packed sign store on the same cells (Table 1, V-last rows; design record in results/b54_choice.json).
+3. Not found in the time available: a published equal-cell comparison of a multi-level HD superposition store with
+   multi-level ECC tables (status: no conflicting or supporting precedent identified; search was brief).

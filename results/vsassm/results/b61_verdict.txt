@@ -1,0 +1,120 @@
+# B61 verdict (prereg/B61_hd_protected_store_prereg.md): HD-native protected stores vs the uncoded store U and
+# the best table. N* in cells per stored pair ('>4096' = not reached). Steps: one grid step = x 2^(1/4).
+# HD-best = per k the smallest of the three HD arms' own N* (test-selected; favours the store).
+
+Table 1 (i.i.d., test): N*
+                    k1       k2       k4      e05       k8      k16      k32
+  H-SBC             32       32       45       54       91      304     1448
+  H-SIC             32       32       45       54       91      304     1448
+  H-HAD             76       76       76       91      128      431     1722
+  HD-best           32       32       45       54       91      304     1448
+  U                 76       76       76       91      128      431     1722
+  best table        19       19       27       38       54      215      724
+  T-rep             19       23       91      128      256     1024     3444
+  E-BCH             19       19       27       38      108      431     1722
+  E-LDPC            23       23       27       38       54      215      724
+  E-CAM             45       45       64       91      256     1024     3444
+
+Evaluated budgets per arm (every store), i.i.d.:
+  H-SBC|k1     8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64
+  H-SBC|k2     8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64
+  H-SBC|k4     8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91
+  H-SBC|e05    8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108
+  H-SBC|k8     8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108, 128, 152, 181
+  H-SBC|k16    8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108, 128, 152, 181, 215, 256, 304, 362, 431, 512, 609, 724
+  H-SBC|k32    8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108, 128, 152, 181, 215, 256, 304, 362, 431, 512, 609, 724, 861, 1024, 1218, 1448, 1722, 2048, 2435, 2896
+  H-SIC|k1     8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64
+  H-SIC|k2     8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64
+  H-SIC|k4     8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91
+  H-SIC|e05    8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108
+  H-SIC|k8     8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108, 128, 152, 181
+  H-SIC|k16    8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108, 128, 152, 181, 215, 256, 304, 362, 431, 512, 609, 724
+  H-SIC|k32    8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108, 128, 152, 181, 215, 256, 304, 362, 431, 512, 609, 724, 861, 1024, 1218, 1448, 1722, 2048, 2435, 2896
+  H-HAD|k1     38, 45, 54, 64, 76, 91, 108, 128, 152
+  H-HAD|k2     38, 45, 54, 64, 76, 91, 108, 128, 152
+  H-HAD|k4     45, 54, 64, 76, 91, 108, 128, 152, 181
+  H-HAD|e05    45, 54, 64, 76, 91, 108, 128, 152, 181
+  H-HAD|k8     64, 76, 91, 108, 128, 152, 181, 215, 256
+  H-HAD|k16    181, 215, 256, 304, 362, 431, 512, 609, 724
+  H-HAD|k32    1024, 1218, 1448, 1722, 2048, 2435, 2896, 3444, 4096
+
+H-SBC: G = steps(U) - steps(arm) (+: fewer cells than U); Delta = steps(best table) - steps(arm) (+: store fewer cells)
+    k1   arm     32  U     76  best table     19 | G +5 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k2   arm     32  U     76  best table     19 | G +5 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k4   arm     45  U     76  best table     27 | G +3 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    e05  arm     54  U     91  best table     38 | G +3 fewer cells than U | Delta -2 table fewer cells | narrows the gap
+    k8   arm     91  U    128  best table     54 | G +2 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k16  arm    304  U    431  best table    215 | G +2 fewer cells than U | Delta -2 table fewer cells | narrows the gap
+    k32  arm   1448  U   1722  best table    724 | G +1 tie | Delta -4 table fewer cells | gap not narrowed
+  H1-HD H-SBC: TABLE WIN; fewer cells than U at 5 of 6 labelled k
+
+H-SIC: G = steps(U) - steps(arm) (+: fewer cells than U); Delta = steps(best table) - steps(arm) (+: store fewer cells)
+    k1   arm     32  U     76  best table     19 | G +5 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k2   arm     32  U     76  best table     19 | G +5 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k4   arm     45  U     76  best table     27 | G +3 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    e05  arm     54  U     91  best table     38 | G +3 fewer cells than U | Delta -2 table fewer cells | narrows the gap
+    k8   arm     91  U    128  best table     54 | G +2 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k16  arm    304  U    431  best table    215 | G +2 fewer cells than U | Delta -2 table fewer cells | narrows the gap
+    k32  arm   1448  U   1722  best table    724 | G +1 tie | Delta -4 table fewer cells | gap not narrowed
+  H1-HD H-SIC: TABLE WIN; fewer cells than U at 5 of 6 labelled k
+
+H-HAD: G = steps(U) - steps(arm) (+: fewer cells than U); Delta = steps(best table) - steps(arm) (+: store fewer cells)
+    k1   arm     76  U     76  best table     19 | G +0 tie | Delta -8 table fewer cells | gap not narrowed
+    k2   arm     76  U     76  best table     19 | G +0 tie | Delta -8 table fewer cells | gap not narrowed
+    k4   arm     76  U     76  best table     27 | G +0 tie | Delta -6 table fewer cells | gap not narrowed
+    e05  arm     91  U     91  best table     38 | G +0 tie | Delta -5 table fewer cells | gap not narrowed
+    k8   arm    128  U    128  best table     54 | G +0 tie | Delta -5 table fewer cells | gap not narrowed
+    k16  arm    431  U    431  best table    215 | G +0 tie | Delta -4 table fewer cells | gap not narrowed
+    k32  arm   1722  U   1722  best table    724 | G +0 tie | Delta -5 table fewer cells | gap not narrowed
+  H1-HD H-HAD: TABLE WIN; fewer cells than U at 0 of 6 labelled k
+
+HD-best: G = steps(U) - steps(arm) (+: fewer cells than U); Delta = steps(best table) - steps(arm) (+: store fewer cells)
+    k1   arm     32  U     76  best table     19 | G +5 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k2   arm     32  U     76  best table     19 | G +5 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k4   arm     45  U     76  best table     27 | G +3 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    e05  arm     54  U     91  best table     38 | G +3 fewer cells than U | Delta -2 table fewer cells | narrows the gap
+    k8   arm     91  U    128  best table     54 | G +2 fewer cells than U | Delta -3 table fewer cells | narrows the gap
+    k16  arm    304  U    431  best table    215 | G +2 fewer cells than U | Delta -2 table fewer cells | narrows the gap
+    k32  arm   1448  U   1722  best table    724 | G +1 tie | Delta -4 table fewer cells | gap not narrowed
+  H1-HD HD-best: TABLE WIN; fewer cells than U at 5 of 6 labelled k
+
+Store-cluster bootstrap (2,000 resamples, seed 61): 95% ranges of G and Delta, and of the N*
+    H-SBC    k1   G [+4, +5]  Delta [-3, -3]  N* [32, 32]
+    H-SBC    k2   G [+4, +5]  Delta [-3, -3]  N* [32, 32]
+    H-SBC    k4   G [+3, +4]  Delta [-3, -2]  N* [38, 45]
+    H-SBC    e05  G [+2, +3]  Delta [-3, -2]  N* [54, 64]
+    H-SBC    k8   G [+2, +2]  Delta [-3, -3]  N* [91, 91]
+    H-SBC    k16  G [+1, +2]  Delta [-3, -2]  N* [304, 362]
+    H-SBC    k32  G [+0, +2]  Delta [-5, -4]  N* [1448, 1722]
+    H-SIC    k1   G [+4, +5]  Delta [-3, -3]  N* [32, 32]
+    H-SIC    k2   G [+4, +5]  Delta [-3, -3]  N* [32, 32]
+    H-SIC    k4   G [+3, +4]  Delta [-3, -2]  N* [38, 45]
+    H-SIC    e05  G [+2, +3]  Delta [-2, -2]  N* [54, 54]
+    H-SIC    k8   G [+2, +3]  Delta [-3, -2]  N* [76, 91]
+    H-SIC    k16  G [+1, +2]  Delta [-3, -2]  N* [304, 362]
+    H-SIC    k32  G [+0, +2]  Delta [-5, -4]  N* [1448, 1722]
+    H-HAD    k1   G [-1, +1]  Delta [-8, -7]  N* [64, 76]
+    H-HAD    k2   G [-1, +1]  Delta [-8, -7]  N* [64, 76]
+    H-HAD    k4   G [+0, +0]  Delta [-6, -6]  N* [76, 76]
+    H-HAD    e05  G [-1, +0]  Delta [-5, -5]  N* [91, 91]
+    H-HAD    k8   G [+0, +0]  Delta [-5, -5]  N* [128, 128]
+    H-HAD    k16  G [-1, +1]  Delta [-4, -3]  N* [362, 431]
+    H-HAD    k32  G [-1, +1]  Delta [-5, -5]  N* [1722, 1722]
+    HD-best  k1   G [+4, +5]  Delta [-3, -3]  N* [32, 32]
+    HD-best  k2   G [+4, +5]  Delta [-3, -3]  N* [32, 32]
+    HD-best  k4   G [+3, +4]  Delta [-3, -2]  N* [38, 45]
+    HD-best  e05  G [+2, +3]  Delta [-2, -2]  N* [54, 54]
+    HD-best  k8   G [+2, +3]  Delta [-3, -2]  N* [76, 91]
+    HD-best  k16  G [+1, +2]  Delta [-3, -2]  N* [304, 362]
+    HD-best  k32  G [+0, +2]  Delta [-5, -4]  N* [1448, 1722]
+
+Table 2 (damage, natural layout, f = 2 eps of the matched i.i.d. condition): N*; best non-HD table with B58's re-scored E-LDPC*
+                    H-SBC    H-SIC        U    T-rep    E-BCH  E-LDPC*    E-CAM  | per arm: Delta vs best non-HD table; G vs U; within 1 step of matched i.i.d.
+  lines-nat-k4         45       45       76    >4096      181      128      304  | H-SBC +6 store fewer cells, G +3, pos.ind. True; H-SIC +6 store fewer cells, G +3, pos.ind. True
+  clust-nat-k4         54       45       76      724      215      128      512  | H-SBC +5 store fewer cells, G +2, pos.ind. True; H-SIC +6 store fewer cells, G +3, pos.ind. True
+  lines-nat-k8         91       91      152    >4096     2896     3444    >4096  | H-SBC +20 store fewer cells, G +3, pos.ind. True; H-SIC +20 store fewer cells, G +3, pos.ind. True
+  clust-nat-k8        128      108      152     1722     1024      609     2435  | H-SBC +9 store fewer cells, G +1, pos.ind. False; H-SIC +10 store fewer cells, G +2, pos.ind. True
+  natural-layout damage, H-SBC vs the best non-HD table: VSA WIN
+  natural-layout damage, H-SIC vs the best non-HD table: VSA WIN
+
+Dev N* (12 dev stores): H-SBC k1=32 k2=32 k4=45 e05=54 k8=91 k16=362 k32=1448; H-SIC k1=32 k2=32 k4=45 e05=54 k8=91 k16=304 k32=1448; H-HAD k1=76 k2=76 k4=91 e05=91 k8=128 k16=362 k32=2048

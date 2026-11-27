@@ -1,0 +1,460 @@
+{
+ "_about": "Fig. compression (r48 after B49): R1 margins of the VSA store against B36's unsupervised key-free families (BEST36),\na least-squares associative memory (LAM) and alias-trained learned hashing (LHI), per encoder, and the R1 mean accuracies\nof the store, the best competitor and the exact index, as verbatim lines of vsassm results/b49_summary_tables.txt.",
+ "encoders": [
+  {
+   "name": "Qwen3-8B",
+   "kind": "llm",
+   "best36": {
+    "value": 6.77,
+    "lo": 5.81,
+    "hi": 7.76,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Qwen3-8B L9 mean | +6.77 [+5.81, +7.76] | -1.04 [-1.98, -0.09] | -6.43 [-7.16, -5.65] | -4.93 [-5.71, -4.14] | -3.36 [-4.08, -2.62] | -0.05 [-1.03, +0.86] | +2.44 [+1.49, +3.40] | +3.21 [+2.36, +4.11] | -2.42 [-3.40, -1.44] |",
+    "cell": 1,
+    "text": "+6.77"
+   },
+   "lam": {
+    "value": -3.36,
+    "lo": -4.08,
+    "hi": -2.62,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Qwen3-8B L9 mean | +6.77 [+5.81, +7.76] | -1.04 [-1.98, -0.09] | -6.43 [-7.16, -5.65] | -4.93 [-5.71, -4.14] | -3.36 [-4.08, -2.62] | -0.05 [-1.03, +0.86] | +2.44 [+1.49, +3.40] | +3.21 [+2.36, +4.11] | -2.42 [-3.40, -1.44] |",
+    "cell": 5,
+    "text": "-3.36"
+   },
+   "lhi": {
+    "value": -0.05,
+    "lo": -1.03,
+    "hi": 0.86,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Qwen3-8B L9 mean | +6.77 [+5.81, +7.76] | -1.04 [-1.98, -0.09] | -6.43 [-7.16, -5.65] | -4.93 [-5.71, -4.14] | -3.36 [-4.08, -2.62] | -0.05 [-1.03, +0.86] | +2.44 [+1.49, +3.40] | +3.21 [+2.36, +4.11] | -2.42 [-3.40, -1.44] |",
+    "cell": 6,
+    "text": "-0.05"
+   },
+   "acc_vsa": {
+    "value": 45.4,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Qwen3-8B L9 mean: VSA 45.4, BEST 51.5, EXACT 83.4; BEST family counts {'LAM': 7, 'LHI': 5}",
+    "text": "45.4"
+   },
+   "acc_best": {
+    "value": 51.5,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Qwen3-8B L9 mean: VSA 45.4, BEST 51.5, EXACT 83.4; BEST family counts {'LAM': 7, 'LHI': 5}",
+    "text": "51.5"
+   },
+   "acc_exact": {
+    "value": 83.4,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Qwen3-8B L9 mean: VSA 45.4, BEST 51.5, EXACT 83.4; BEST family counts {'LAM': 7, 'LHI': 5}",
+    "text": "83.4"
+   },
+   "v2_lam": {
+    "value": -9.35,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v2_best36": {
+    "value": 7.37,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_lam": {
+    "value": 2.62,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_best36": {
+    "value": 6.18,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   }
+  },
+  {
+   "name": "Granite-3.3-8B",
+   "kind": "llm",
+   "best36": {
+    "value": 6.06,
+    "lo": 5.05,
+    "hi": 7.08,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Granite-3.3-8B L30 mean | +6.06 [+5.05, +7.08] | -0.12 [-0.96, +0.78] | -5.25 [-5.93, -4.56] | -2.72 [-3.42, -2.00] | -2.77 [-3.48, -2.06] | +1.26 [+0.44, +2.12] | +2.44 [+1.55, +3.34] | +4.49 [+3.72, +5.27] | -2.47 [-3.29, -1.64] |",
+    "cell": 1,
+    "text": "+6.06"
+   },
+   "lam": {
+    "value": -2.77,
+    "lo": -3.48,
+    "hi": -2.06,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Granite-3.3-8B L30 mean | +6.06 [+5.05, +7.08] | -0.12 [-0.96, +0.78] | -5.25 [-5.93, -4.56] | -2.72 [-3.42, -2.00] | -2.77 [-3.48, -2.06] | +1.26 [+0.44, +2.12] | +2.44 [+1.55, +3.34] | +4.49 [+3.72, +5.27] | -2.47 [-3.29, -1.64] |",
+    "cell": 5,
+    "text": "-2.77"
+   },
+   "lhi": {
+    "value": 1.26,
+    "lo": 0.44,
+    "hi": 2.12,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Granite-3.3-8B L30 mean | +6.06 [+5.05, +7.08] | -0.12 [-0.96, +0.78] | -5.25 [-5.93, -4.56] | -2.72 [-3.42, -2.00] | -2.77 [-3.48, -2.06] | +1.26 [+0.44, +2.12] | +2.44 [+1.55, +3.34] | +4.49 [+3.72, +5.27] | -2.47 [-3.29, -1.64] |",
+    "cell": 6,
+    "text": "+1.26"
+   },
+   "acc_vsa": {
+    "value": 45.5,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Granite-3.3-8B L30 mean: VSA 45.5, BEST 50.7, EXACT 81.4; BEST family counts {'LAM': 8, 'LHC': 2, 'LHI': 2}",
+    "text": "45.5"
+   },
+   "acc_best": {
+    "value": 50.7,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Granite-3.3-8B L30 mean: VSA 45.5, BEST 50.7, EXACT 81.4; BEST family counts {'LAM': 8, 'LHC': 2, 'LHI': 2}",
+    "text": "50.7"
+   },
+   "acc_exact": {
+    "value": 81.4,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Granite-3.3-8B L30 mean: VSA 45.5, BEST 50.7, EXACT 81.4; BEST family counts {'LAM': 8, 'LHC': 2, 'LHI': 2}",
+    "text": "81.4"
+   },
+   "v2_lam": {
+    "value": -6.86,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v2_best36": {
+    "value": 8.25,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_lam": {
+    "value": 1.31,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_best36": {
+    "value": 3.88,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   }
+  },
+  {
+   "name": "Llama-3.1-8B",
+   "kind": "llm",
+   "best36": {
+    "value": 7.1,
+    "lo": 6.18,
+    "hi": 8.03,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Llama-3.1-8B L24 mean | +7.10 [+6.18, +8.03] | +2.09 [+1.08, +3.07] | -4.15 [-4.99, -3.37] | -2.54 [-3.34, -1.76] | -2.48 [-3.31, -1.71] | +2.81 [+1.88, +3.70] | +4.91 [+3.82, +5.98] | +6.70 [+5.82, +7.56] | -4.14 [-5.18, -3.12] |",
+    "cell": 1,
+    "text": "+7.10"
+   },
+   "lam": {
+    "value": -2.48,
+    "lo": -3.31,
+    "hi": -1.71,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Llama-3.1-8B L24 mean | +7.10 [+6.18, +8.03] | +2.09 [+1.08, +3.07] | -4.15 [-4.99, -3.37] | -2.54 [-3.34, -1.76] | -2.48 [-3.31, -1.71] | +2.81 [+1.88, +3.70] | +4.91 [+3.82, +5.98] | +6.70 [+5.82, +7.56] | -4.14 [-5.18, -3.12] |",
+    "cell": 5,
+    "text": "-2.48"
+   },
+   "lhi": {
+    "value": 2.81,
+    "lo": 1.88,
+    "hi": 3.7,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Llama-3.1-8B L24 mean | +7.10 [+6.18, +8.03] | +2.09 [+1.08, +3.07] | -4.15 [-4.99, -3.37] | -2.54 [-3.34, -1.76] | -2.48 [-3.31, -1.71] | +2.81 [+1.88, +3.70] | +4.91 [+3.82, +5.98] | +6.70 [+5.82, +7.56] | -4.14 [-5.18, -3.12] |",
+    "cell": 6,
+    "text": "+2.81"
+   },
+   "acc_vsa": {
+    "value": 46.9,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Llama-3.1-8B L24 mean: VSA 46.9, BEST 49.9, EXACT 82.9; BEST family counts {'LAM': 11, 'LHI': 1}",
+    "text": "46.9"
+   },
+   "acc_best": {
+    "value": 49.9,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Llama-3.1-8B L24 mean: VSA 46.9, BEST 49.9, EXACT 82.9; BEST family counts {'LAM': 11, 'LHI': 1}",
+    "text": "49.9"
+   },
+   "acc_exact": {
+    "value": 82.9,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Llama-3.1-8B L24 mean: VSA 46.9, BEST 49.9, EXACT 82.9; BEST family counts {'LAM': 11, 'LHI': 1}",
+    "text": "82.9"
+   },
+   "v2_lam": {
+    "value": -7.88,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v2_best36": {
+    "value": 6.25,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_lam": {
+    "value": 2.93,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_best36": {
+    "value": 7.95,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   }
+  },
+  {
+   "name": "Mistral-7B",
+   "kind": "llm",
+   "best36": {
+    "value": 7.1,
+    "lo": 6.15,
+    "hi": 8.07,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Mistral-7B L24 PromptEOL | +7.10 [+6.15, +8.07] | -2.28 [-3.25, -1.20] | -6.59 [-7.43, -5.81] | -3.53 [-4.42, -2.66] | -1.93 [-2.72, -1.15] | -1.14 [-2.20, -0.15] | +2.48 [+1.50, +3.44] | +2.24 [+1.33, +3.20] | -3.48 [-4.50, -2.40] |",
+    "cell": 1,
+    "text": "+7.10"
+   },
+   "lam": {
+    "value": -1.93,
+    "lo": -2.72,
+    "hi": -1.15,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Mistral-7B L24 PromptEOL | +7.10 [+6.15, +8.07] | -2.28 [-3.25, -1.20] | -6.59 [-7.43, -5.81] | -3.53 [-4.42, -2.66] | -1.93 [-2.72, -1.15] | -1.14 [-2.20, -0.15] | +2.48 [+1.50, +3.44] | +2.24 [+1.33, +3.20] | -3.48 [-4.50, -2.40] |",
+    "cell": 5,
+    "text": "-1.93"
+   },
+   "lhi": {
+    "value": -1.14,
+    "lo": -2.2,
+    "hi": -0.15,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| Mistral-7B L24 PromptEOL | +7.10 [+6.15, +8.07] | -2.28 [-3.25, -1.20] | -6.59 [-7.43, -5.81] | -3.53 [-4.42, -2.66] | -1.93 [-2.72, -1.15] | -1.14 [-2.20, -0.15] | +2.48 [+1.50, +3.44] | +2.24 [+1.33, +3.20] | -3.48 [-4.50, -2.40] |",
+    "cell": 6,
+    "text": "-1.14"
+   },
+   "acc_vsa": {
+    "value": 48.8,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Mistral-7B L24 PromptEOL: VSA 48.8, BEST 54.9, EXACT 86.1; BEST family counts {'LAM': 8, 'LHC': 2, 'LHI': 2}",
+    "text": "48.8"
+   },
+   "acc_best": {
+    "value": 54.9,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Mistral-7B L24 PromptEOL: VSA 48.8, BEST 54.9, EXACT 86.1; BEST family counts {'LAM': 8, 'LHC': 2, 'LHI': 2}",
+    "text": "54.9"
+   },
+   "acc_exact": {
+    "value": 86.1,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- Mistral-7B L24 PromptEOL: VSA 48.8, BEST 54.9, EXACT 86.1; BEST family counts {'LAM': 8, 'LHC': 2, 'LHI': 2}",
+    "text": "86.1"
+   },
+   "v2_lam": {
+    "value": -6.56,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v2_best36": {
+    "value": 7.09,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_lam": {
+    "value": 2.7,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_best36": {
+    "value": 7.1,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   }
+  },
+  {
+   "name": "e5-base-v2",
+   "kind": "sent",
+   "best36": {
+    "value": 0.6,
+    "lo": -0.27,
+    "hi": 1.47,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| e5-base-v2 | +0.60 [-0.27, +1.47] | -1.21 [-2.11, -0.32] | -4.89 [-5.57, -4.20] | -3.30 [-4.05, -2.56] | -3.18 [-3.80, -2.52] | +0.24 [-0.58, +1.06] | +1.66 [+0.68, +2.57] | +4.06 [+3.26, +4.86] | -4.13 [-4.95, -3.28] |",
+    "cell": 1,
+    "text": "+0.60"
+   },
+   "lam": {
+    "value": -3.18,
+    "lo": -3.8,
+    "hi": -2.52,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| e5-base-v2 | +0.60 [-0.27, +1.47] | -1.21 [-2.11, -0.32] | -4.89 [-5.57, -4.20] | -3.30 [-4.05, -2.56] | -3.18 [-3.80, -2.52] | +0.24 [-0.58, +1.06] | +1.66 [+0.68, +2.57] | +4.06 [+3.26, +4.86] | -4.13 [-4.95, -3.28] |",
+    "cell": 5,
+    "text": "-3.18"
+   },
+   "lhi": {
+    "value": 0.24,
+    "lo": -0.58,
+    "hi": 1.06,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| e5-base-v2 | +0.60 [-0.27, +1.47] | -1.21 [-2.11, -0.32] | -4.89 [-5.57, -4.20] | -3.30 [-4.05, -2.56] | -3.18 [-3.80, -2.52] | +0.24 [-0.58, +1.06] | +1.66 [+0.68, +2.57] | +4.06 [+3.26, +4.86] | -4.13 [-4.95, -3.28] |",
+    "cell": 6,
+    "text": "+0.24"
+   },
+   "acc_vsa": {
+    "value": 46.1,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- e5-base-v2: VSA 46.1, BEST 50.6, EXACT 80.1; BEST family counts {'LAM': 8, 'LHI': 3, 'LHC': 1}",
+    "text": "46.1"
+   },
+   "acc_best": {
+    "value": 50.6,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- e5-base-v2: VSA 46.1, BEST 50.6, EXACT 80.1; BEST family counts {'LAM': 8, 'LHI': 3, 'LHC': 1}",
+    "text": "50.6"
+   },
+   "acc_exact": {
+    "value": 80.1,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- e5-base-v2: VSA 46.1, BEST 50.6, EXACT 80.1; BEST family counts {'LAM': 8, 'LHI': 3, 'LHC': 1}",
+    "text": "80.1"
+   },
+   "v2_lam": {
+    "value": -3.37,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v2_best36": {
+    "value": 0.96,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_lam": {
+    "value": -2.98,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_best36": {
+    "value": 0.24,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   }
+  },
+  {
+   "name": "bge-small",
+   "kind": "sent",
+   "best36": {
+    "value": -0.71,
+    "lo": -1.55,
+    "hi": 0.13,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| bge-small-en-v1.5 | -0.71 [-1.55, +0.13] | -3.17 [-4.07, -2.38] | -5.78 [-6.54, -5.05] | -3.66 [-4.42, -2.89] | -3.01 [-3.64, -2.41] | -2.29 [-3.05, -1.49] | -0.24 [-1.18, +0.70] | +1.53 [+0.69, +2.36] | -2.52 [-3.27, -1.81] |",
+    "cell": 1,
+    "text": "-0.71"
+   },
+   "lam": {
+    "value": -3.01,
+    "lo": -3.64,
+    "hi": -2.41,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| bge-small-en-v1.5 | -0.71 [-1.55, +0.13] | -3.17 [-4.07, -2.38] | -5.78 [-6.54, -5.05] | -3.66 [-4.42, -2.89] | -3.01 [-3.64, -2.41] | -2.29 [-3.05, -1.49] | -0.24 [-1.18, +0.70] | +1.53 [+0.69, +2.36] | -2.52 [-3.27, -1.81] |",
+    "cell": 5,
+    "text": "-3.01"
+   },
+   "lhi": {
+    "value": -2.29,
+    "lo": -3.05,
+    "hi": -1.49,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| bge-small-en-v1.5 | -0.71 [-1.55, +0.13] | -3.17 [-4.07, -2.38] | -5.78 [-6.54, -5.05] | -3.66 [-4.42, -2.89] | -3.01 [-3.64, -2.41] | -2.29 [-3.05, -1.49] | -0.24 [-1.18, +0.70] | +1.53 [+0.69, +2.36] | -2.52 [-3.27, -1.81] |",
+    "cell": 6,
+    "text": "-2.29"
+   },
+   "acc_vsa": {
+    "value": 43.8,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- bge-small-en-v1.5: VSA 43.8, BEST 49.1, EXACT 77.7; BEST family counts {'LAM': 5, 'LHI': 4, 'LHC': 1, 'LHS': 2}",
+    "text": "43.8"
+   },
+   "acc_best": {
+    "value": 49.1,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- bge-small-en-v1.5: VSA 43.8, BEST 49.1, EXACT 77.7; BEST family counts {'LAM': 5, 'LHI': 4, 'LHC': 1, 'LHS': 2}",
+    "text": "49.1"
+   },
+   "acc_exact": {
+    "value": 77.7,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- bge-small-en-v1.5: VSA 43.8, BEST 49.1, EXACT 77.7; BEST family counts {'LAM': 5, 'LHI': 4, 'LHC': 1, 'LHS': 2}",
+    "text": "77.7"
+   },
+   "v2_lam": {
+    "value": -3.82,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v2_best36": {
+    "value": -1.82,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_lam": {
+    "value": -2.21,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_best36": {
+    "value": 0.41,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   }
+  },
+  {
+   "name": "MiniLM-L6",
+   "kind": "sent",
+   "best36": {
+    "value": -2.12,
+    "lo": -2.9,
+    "hi": -1.36,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| all-MiniLM-L6-v2 | -2.12 [-2.90, -1.36] | -3.43 [-4.22, -2.59] | -5.40 [-6.15, -4.65] | -2.39 [-3.16, -1.61] | -2.84 [-3.67, -1.98] | -2.54 [-3.40, -1.76] | +0.01 [-0.92, +0.88] | +1.27 [+0.48, +2.04] | -1.62 [-2.40, -0.86] |",
+    "cell": 1,
+    "text": "-2.12"
+   },
+   "lam": {
+    "value": -2.84,
+    "lo": -3.67,
+    "hi": -1.98,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| all-MiniLM-L6-v2 | -2.12 [-2.90, -1.36] | -3.43 [-4.22, -2.59] | -5.40 [-6.15, -4.65] | -2.39 [-3.16, -1.61] | -2.84 [-3.67, -1.98] | -2.54 [-3.40, -1.76] | +0.01 [-0.92, +0.88] | +1.27 [+0.48, +2.04] | -1.62 [-2.40, -0.86] |",
+    "cell": 5,
+    "text": "-2.84"
+   },
+   "lhi": {
+    "value": -2.54,
+    "lo": -3.4,
+    "hi": -1.76,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "| all-MiniLM-L6-v2 | -2.12 [-2.90, -1.36] | -3.43 [-4.22, -2.59] | -5.40 [-6.15, -4.65] | -2.39 [-3.16, -1.61] | -2.84 [-3.67, -1.98] | -2.54 [-3.40, -1.76] | +0.01 [-0.92, +0.88] | +1.27 [+0.48, +2.04] | -1.62 [-2.40, -0.86] |",
+    "cell": 6,
+    "text": "-2.54"
+   },
+   "acc_vsa": {
+    "value": 43.7,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- all-MiniLM-L6-v2: VSA 43.7, BEST 48.1, EXACT 75.5; BEST family counts {'LAM': 4, 'LHI': 7, 'LHS': 1}",
+    "text": "43.7"
+   },
+   "acc_best": {
+    "value": 48.1,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- all-MiniLM-L6-v2: VSA 43.7, BEST 48.1, EXACT 75.5; BEST family counts {'LAM': 4, 'LHI': 7, 'LHS': 1}",
+    "text": "48.1"
+   },
+   "acc_exact": {
+    "value": 75.5,
+    "file": "../results/vsassm/results/b49_summary_tables.txt",
+    "line": "- all-MiniLM-L6-v2: VSA 43.7, BEST 48.1, EXACT 75.5; BEST family counts {'LAM': 4, 'LHI': 7, 'LHS': 1}",
+    "text": "75.5"
+   },
+   "v2_lam": {
+    "value": -2.7,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v2_best36": {
+    "value": -2.14,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_lam": {
+    "value": -2.98,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   },
+   "v16_best36": {
+    "value": -2.09,
+    "source": "computed from /path/to/vsassm/results/b49_verdict.json cells (mean of 6)"
+   }
+  }
+ ]
+}

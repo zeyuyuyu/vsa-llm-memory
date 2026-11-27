@@ -1,0 +1,13 @@
+{
+ "prereg": "dd06b93",
+ "grid": {
+  "2048": {
+   "128": 0.7,
+   "256": 0.225
+  }
+ },
+ "verdict": "P1 gate: d=2048 reproduces V-100 (k128 0.7000 vs .7417, k256 0.2250 vs .2417): True ; k* at the .70 level: d2048=128 ; P2 k*(8192) >= 4 x k*(2048): False (0 vs 512) ; P3 k*(512) <= k*(2048)/2: False (-1 vs 64) ; CAPACITY DOES NOT SCALE WITH DIMENSION as our own sketch predicts, so the sketch is wrong or incomplete about this store and the theory section needs a caveat. Reported first because it cuts against our own theory.",
+ "kstar": {
+  "2048": 128
+ }
+}

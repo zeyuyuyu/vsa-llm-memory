@@ -1,0 +1,24 @@
+[2026-11-18T23:53:12Z] gpu4 lane1 b44_lora.py --task cls --variant std --n 800 --rank 8 --lr 3e-4 --seed 123 --final --out out/lora/cls_std_n800_r8_lr3e-4_s123.json
+[2026-11-19T00:24:27Z] gpu4 lane1 rc=0 b44_lora.py --task cls --variant std --n 800 --rank 8 --lr 3e-4 --seed 123 --final --out out/lora/cls_std_n800_r8_lr3e-4_s123.json
+[2026-11-19T00:24:27Z] gpu4 lane1 b44_lora.py --task cls --variant std --n 800 --rank 8 --lr 3e-4 --seed 456 --final --out out/lora/cls_std_n800_r8_lr3e-4_s456.json
+[2026-11-19T00:55:44Z] gpu4 lane1 rc=0 b44_lora.py --task cls --variant std --n 800 --rank 8 --lr 3e-4 --seed 456 --final --out out/lora/cls_std_n800_r8_lr3e-4_s456.json
+[2026-11-19T00:55:44Z] gpu4 lane1 b44_lora.py --task scratch --variant std --n 800 --rank 8 --lr 1e-4 --seed 123 --final --out out/lora/scratch_std_n800_r8_lr1e-4_s123.json
+[2026-11-19T01:10:59Z] gpu4 lane1 rc=0 b44_lora.py --task scratch --variant std --n 800 --rank 8 --lr 1e-4 --seed 123 --final --out out/lora/scratch_std_n800_r8_lr1e-4_s123.json
+[2026-11-19T01:10:59Z] gpu4 lane1 b44_lora.py --task scratch --variant std --n 800 --rank 8 --lr 1e-4 --seed 456 --final --out out/lora/scratch_std_n800_r8_lr1e-4_s456.json
+[2026-11-19T01:26:22Z] gpu4 lane1 rc=0 b44_lora.py --task scratch --variant std --n 800 --rank 8 --lr 1e-4 --seed 456 --final --out out/lora/scratch_std_n800_r8_lr1e-4_s456.json
+[2026-11-19T01:26:22Z] gpu4 lane1 b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 42 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s42.json
+[2026-11-19T01:37:15Z] gpu4 lane1 rc=0 b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 42 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s42.json
+[2026-11-19T01:37:15Z] gpu4 lane1 b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 123 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s123.json
+[2026-11-19T01:52:31Z] gpu4 lane1 rc=0 b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 123 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s123.json
+[2026-11-19T01:52:31Z] gpu4 lane1 b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 456 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s456.json
+[2026-11-19T02:07:40Z] gpu4 lane1 rc=0 b44_lora.py --task scratch --variant ho --n 800 --rank 8 --lr 1e-4 --seed 456 --final --out out/lora/scratch_ho_n800_r8_lr1e-4_s456.json
+[2026-11-19T02:07:40Z] gpu4 lane1 b44_lora.py --task cls --variant ho --n 800 --rank 8 --lr 1e-4 --seed 123 --final --out out/lora/cls_ho_n800_r8_lr1e-4_s123.json
+[2026-11-19T02:38:58Z] gpu4 lane1 rc=0 b44_lora.py --task cls --variant ho --n 800 --rank 8 --lr 1e-4 --seed 123 --final --out out/lora/cls_ho_n800_r8_lr1e-4_s123.json
+[2026-11-19T02:38:58Z] gpu4 lane1 b44_lora.py --task cls --variant ho --n 800 --rank 8 --lr 1e-4 --seed 456 --final --out out/lora/cls_ho_n800_r8_lr1e-4_s456.json
+[2026-11-19T03:25:26Z] gpu4 lane1 rc=0 b44_lora.py --task cls --variant ho --n 800 --rank 8 --lr 1e-4 --seed 456 --final --out out/lora/cls_ho_n800_r8_lr1e-4_s456.json
+[2026-11-19T03:25:26Z] gpu4 lane1 b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 1e-4 --seed 42 --score_test --out out/lora/cls_ho_n8000_r8_lr1e-4_s42.json
+[2026-11-19T03:26:51Z] gpu4 lane1 rc=0 b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 1e-4 --seed 42 --score_test --out out/lora/cls_ho_n8000_r8_lr1e-4_s42.json
+[2026-11-19T03:26:51Z] gpu4 lane1 b44_name.py --cell std:80000 --arm probe --out out/name/qwen8_probe_std_n80000.json
+[2026-11-19T04:13:58Z] gpu4 lane1 rc=0 b44_name.py --cell std:80000 --arm probe --out out/name/qwen8_probe_std_n80000.json
+[2026-11-19T04:13:58Z] gpu4 lane1 b44_name.py --cell ho:80000 --arm probe --out out/name/qwen8_probe_ho_n80000.json
+[2026-11-19T04:43:38Z] gpu4 lane1 rc=0 b44_name.py --cell ho:80000 --arm probe --out out/name/qwen8_probe_ho_n80000.json

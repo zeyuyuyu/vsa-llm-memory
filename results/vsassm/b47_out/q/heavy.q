@@ -1,0 +1,9 @@
+b47_ft.py --task fullgen --variant k32 --n 800 --rank 8 --lr 3e-06 --seed 42 --out out/ft/fullgen_k32_n800_r8_lr3e-06_s42.json
+b47_ft.py --task fullgen --variant k32 --n 800 --rank 8 --lr 1e-05 --seed 42 --out out/ft/fullgen_k32_n800_r8_lr1e-05_s42.json
+b47_ft.py --task fullgen --variant k32 --n 800 --rank 8 --lr 3e-05 --seed 42 --out out/ft/fullgen_k32_n800_r8_lr3e-05_s42.json
+b47_ft.py --task fullcls --variant k32 --n 800 --rank 8 --lr 3e-06 --seed 42 --out out/ft/fullcls_k32_n800_r8_lr3e-06_s42.json
+b47_ft.py --task fullcls --variant k32 --n 800 --rank 8 --lr 1e-05 --seed 42 --out out/ft/fullcls_k32_n800_r8_lr1e-05_s42.json
+b47_ft.py --task fullcls --variant k32 --n 800 --rank 8 --lr 3e-05 --seed 42 --out out/ft/fullcls_k32_n800_r8_lr3e-05_s42.json
+b47_ft.py --task fullgen --variant std --n 8000 --rank 8 --lr 3e-06 --seed 42 --out out/ft/fullgen_std_n8000_r8_lr3e-06_s42.json
+b47_ft.py --task fullgen --variant std --n 8000 --rank 8 --lr 1e-05 --seed 42 --out out/ft/fullgen_std_n8000_r8_lr1e-05_s42.json
+b47_ft.py --task fullgen --variant std --n 8000 --rank 8 --lr 3e-05 --seed 42 --out out/ft/fullgen_std_n8000_r8_lr3e-05_s42.json

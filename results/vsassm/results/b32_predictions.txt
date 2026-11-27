@@ -1,0 +1,26 @@
+# B32: the registered predictions (prereg/B32_vector_form_equal_bits_prereg.md) against the test results
+# (results/b32_verdict.txt, results/b32_rederive_*.json, results/b32_devsum_*.txt). 6 held, 4 failed in part.
+
+P1  HELD    H1 passes on the Qwen3-8B codes, R1 mean +4 to +11: +8.06 [+7.31, +8.81].
+P2  HELD    H1 replicates on e5 with a smaller margin (+2 to +7): +3.31 [+2.46, +4.13].
+P3  HELD    H1 also passes under raw accounting with a margin at least as large: +9.95 [+9.11, +10.77].
+P4  HELD    H2 passes, index ahead by 3-9 with 1,024 values: -4.93 [-5.41, -4.47].
+P5  PARTLY  11 of 12 R1 cells are VSA wins at the Bonferroni level (predicted >= 4), all three at M = 1,024,
+            V = 16; no V = 1,024 cell is a VSA win; 7 V = 1,024 cells are index wins (predicted >= 3). FAILED: at V = 2
+            and 64 bits per fact the index is level at M = 1,024 (-1.66, tie) but behind at M = 256 (+3.82, a VSA win).
+P6  PARTLY  10 of the 11 R1 VSA-win cells are >= 10 points above chance; M = 256, V = 16, 4 bits per fact is 9.55 points
+            above chance (15.80 vs 6.25).
+P7  PARTLY  In R1 the VSA keeps 12.6-49.4% of EXACT's above-chance accuracy in 11 cells; M = 256, V = 2, 16 bits per
+            fact keeps 61.4% (predicted at most 60%).
+P8  PARTLY  VSA: lin in 39 / 37 of 40 cells, q = 1 in 36 / 39, all facts stored in 30 / 29 (Qwen3-8B / e5); index: LSH
+            in 35 Qwen3-8B cells, ITQ / PCA-sign in 33 e5 cells; a stored share below 1 in 15 / 13 of 16 cells at 4-8
+            bits per fact. FAILED: q = 4 (once) and q = 2 (twice) chosen at 4-16 bits per fact; whitened codes in only
+            23 / 21 of 40 cells ("mostly whitened" is not supported).
+P9  PARTLY  DICT answers nothing (0.00 everywhere); WR is >= 10 points below EXACT everywhere. FAILED: the trigram table
+            TRI is within 10 points of EXACT in 3 of 8 (M, V) settings (V = 2 at both M: 5.9 and 6.2 points; M = 256,
+            V = 128: 9.6).
+P10 PARTLY  Bits audit: 0 configurations over budget. Re-derivation (25% of test stores): VSA lin 100%, LSH 100%,
+            PCA-sign 100%; FAILED: VSA sgn 98.4-98.9% (projections within rounding of zero), and the index families with
+            iterative training do not reproduce bit for bit (ITQ 85.6-90.4%, PQ4 57.0%, PQ8 37.8-63.7%, OPQ8 64.6%),
+            because an independent re-fit converges elsewhere; their accuracy differs by -2.9 to +0.3 points
+            (re-fitted minus logged, on 701-18,876 queries), so the logged index is not handicapped by its fits.

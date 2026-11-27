@@ -1,0 +1,38 @@
+{
+ "arm1": {
+  "warehouse": 0.875,
+  "ALL": 0.9304,
+  "ALL non-empty": 0.903,
+  "biobank": 0.8333,
+  "home": 0.975,
+  "ops": 0.95,
+  "micro_f1": 0.9648
+ },
+ "arm3_gpt61r_strict": {
+  "warehouse": 0.875,
+  "ALL": 0.9217,
+  "ALL non-empty": 0.897,
+  "biobank": 0.8,
+  "home": 0.95,
+  "ops": 0.9625,
+  "micro_f1": 0.9633
+ },
+ "arm3n_gpt61r_strict": {
+  "warehouse": 0.875,
+  "ALL": 0.9261,
+  "ALL non-empty": 0.903,
+  "biobank": 0.8,
+  "home": 0.9625,
+  "ops": 0.9625,
+  "micro_f1": 0.9646
+ },
+ "always_none": 0.2826,
+ "n_questions": 230,
+ "trace": {
+  "items": 394,
+  "hops": 887,
+  "validity": 1.0,
+  "correctness": 0.9695,
+  "invalid_examples": []
+ }
+}

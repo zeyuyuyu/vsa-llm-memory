@@ -1,0 +1,38 @@
+================================================================================================
+V-138 cost frontier   reader=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct   N=60 per cell
+================================================================================================
+
+  K       store     reader    store s/q   reader s/q  ratio     ptok       trunc
+  120     1.0000    0.9167    0.0183      5.1666      282.5     1369       0.000
+  500     1.0000    0.8667    0.0732      6.8352      93.4      5382       0.000
+  1000    1.0000    0.7833    0.1484      10.4178     70.2      10664      0.000
+  2000    1.0000    0.3667    0.2961      18.1230     61.2      21218      0.000
+  4000    1.0000    nan       0.5902      nan         nan       0          1.000
+  8000    1.0000    nan       1.1636      nan         nan       0          1.000
+
+  ---- P0 gate ----
+  P0 K=120   store 1.0000 vs V-135 1.0000: True
+  P0 K=2000  store 1.0000 vs V-135 0.9972: True
+
+  ---- P1 / P2 / P3 (largest untruncated K = 2000) ----
+  P1 cost ratio 61.2x >= 10 and |acc gap| 0.6333 <= .05 => FAILS
+  P2 ratio growth 0.22x (282.5 -> 61.2) >= 3 => FAILS
+  P3 store cost exponent 0.992 <= 1.3 => HOLDS
+
+  ---- P4 descriptive ----
+    K=120   prompt 1369 tok, completion 77 tok | store tokens 0 | amortised store 0.01785 s/q
+    K=500   prompt 5382 tok, completion 67 tok | store tokens 0 | amortised store 0.07325 s/q
+    K=1000  prompt 10664 tok, completion 71 tok | store tokens 0 | amortised store 0.14650 s/q
+    K=2000  prompt 21218 tok, completion 74 tok | store tokens 0 | amortised store 0.29195 s/q
+    K=4000  prompt 0 tok, completion 0 tok | store tokens 0 | amortised store 0.58299 s/q
+    K=8000  prompt 0 tok, completion 0 tok | store tokens 0 | amortised store 1.16150 s/q
+    frontier K=120   1440 prompt tok/query (moonshotai/kimi-k3 (V-137, no new calls))
+    frontier K=2000  21094 prompt tok/query (moonshotai/kimi-k3 (V-137, no new calls))
+    frontier K=4000  41995 prompt tok/query (moonshotai/kimi-k3 (V-137, no new calls))
+    frontier K=8000  83816 prompt tok/query (moonshotai/kimi-k3 (V-137, no new calls))
+    reader's window ends at K=4000; the store has no such limit
+
+================================================================================================
+V-138 VERDICT: P1 FAILS | P2 FAILS | P3 HOLDS
+================================================================================================
+V138-SCORED

@@ -1,0 +1,329 @@
+# B46 literature check (written 2026-11-19, before the B46 verdict)
+# Purpose: does the B36 result (VSA store beats the best key-free classical memory and the per-fact index at equal bits
+# on frozen Qwen3-8B layer-9 name codes; tie on e5-base-v2) have reasons in print to generalize, or not, to a second LLM
+# family (Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3, Granite-3.3-8B-Instruct; layer in {1/4, 1/2, 3/4, 4/4} of
+# depth and pooling in {mean over name tokens, PromptEOL last token} chosen on dev)?
+# Method: every entry was opened on its own page: arXiv metadata (export.arxiv.org API: title, authors, comment/journal
+# field, abstract) and, unless marked "(abstract only)", the paper PDF read with pdftotext (copies in the scratchpad,
+# lit/b46/pdf/). Venues come from the arXiv comment/journal field, the PDF header or the ACL Anthology record.
+# Quotes are verbatim ("..." = elision; dashes and +/- rendered in ASCII). Nothing already in
+# results/b36_literature.txt is repeated.
+# Tags (relative to "does the VSA-store advantage on LLM hidden-state codes generalize across LLM families?"):
+#   SUPPORT = a reason to expect replication; CONFLICT = a reason to expect it may fail or shrink (often "caution":
+#   a family-specific property that could break it); CONTEXT = background/method; GAP = shows what has not been done.
+
+== 1. Intermediate layers and pooling as entity/text codes; how the good choice varies across families ==
+[SAZ+25] Skean, O., Arefin, M. R., Zhao, D., Patel, N., Naghiyev, J., LeCun, Y., Shwartz-Ziv, R. Layer by layer:
+  uncovering hidden representations in language models. ICML 2025 (arXiv:2502.02013v2). Text: on 32 MTEB tasks
+  "intermediate layers often surpass the final layer by up to 16% in downstream accuracy"; "The absolute improvement
+  ranges from 2% to as high as 16% on average, and the best layer often resides around the mid-depth of the network. This
+  phenomena is consistent across all the different architectures." Main models: Pythia-410M (scaled 14M-1B), Mamba-370M,
+  BERT-base; Llama3-8B and Qwen 2.5 appear only in side analyses (fine-tuning, math variant).
+  -> SUPPORT (weak): a non-final layer beating the last is the norm across architectures, so dev picking a mid layer in a
+     second family is expected. CONTEXT: no comparison among 7-8B LLM families; the decoder "sweet spot" rests on Pythia.
+[JHL+23] Jiang, T., Huang, S., Luan, Z., Wang, D., Zhuang, F. Scaling sentence embeddings with large language models.
+  arXiv:2307.16645 (2023). Text: template 'This sentence: "[text]" means in one word: "'; "We then use last token hidden
+  state as its sentence embedding"; compared with "averaging or using the last token" on OPT 125M-66B (STS-B dev,
+  Fig. 1) the prompt-based method is better at every size; LLaMA 7B-65B also run.
+  -> CONTEXT / METHOD SOURCE for B46's "eol" pooling. Evidence is final-layer, sentence-level, OPT/LLaMA-1; nothing on
+     names or intermediate layers.
+[LWZ+24] Lei, Y., Wu, D., Zhou, T., Shen, T., Cao, Y., Tao, C., Yates, A. Meta-task prompting elicits embeddings from
+  large language models (MetaEOL). ACL 2024 (arXiv:2402.18458v2). Text (Sec. 5.5, LLAMA2 and Mistral-7B, PromptEOL and
+  MetaEOL): "the last layer is not always the most effective for STS tasks"; "the third-to-last layers (indexed as -3)
+  across all four configurations perform similarly well"; "PromptEOL tends to show more variability in performance
+  across different layers compared to MetaEOL"; larger models use -3 of 32, -4 of 40, -8 of 80 ("10% from the final
+  layer").
+  -> SUPPORT for the eol arm across families: the best PromptEOL layer sat at the same relative depth (~90%) in
+     Llama-2-7B and Mistral-7B. CONTEXT: for eol the optimum is late, between B46's 3/4 and 4/4 candidates, not mid-depth.
+[BAM+24] BehnamGhader, P., Adlakha, V., Mosbach, M., Bahdanau, D., Chapados, N., Reddy, S. LLM2Vec: large language
+  models are secretly powerful text encoders. COLM 2024 (arXiv:2404.05961v2). Text: S-LLaMA-1.3B, LLaMA-2-7B(-chat),
+  Mistral-7B-Instruct-v0.2, Meta-LLaMA-3-8B-Instruct; "The dominant paradigm of applying the EOS pooling for models with
+  causal attention is outperformed by (weighted) mean pooling"; "Enabling bidirectional attention without any training
+  harms performance for S-LLaMA-1.3B and LLaMA-2-7B. ... the performance of Mistral-7B improves"; "we speculate that
+  Mistral models are pre-trained with some form bidirectional attention".
+  -> SUPPORT for the "mean" arm (mean beat EOS in all families for causal models); CONFLICT (caution): the same
+     manipulation moved Mistral's representations in the opposite direction from Llama's, i.e. family-specific
+     pre-training leaves a mark on hidden states that a recipe tuned on one family can miss.
+[SKF+25] Springer, J. M., Kotha, S., Fried, D., Neubig, G., Raghunathan, A. Repetition improves language model
+  embeddings. ICLR 2025 (arXiv:2402.15449v2). Text (Mistral-7B-Instruct-v0.1): "last-token pooling does not work well in
+  a zero-shot manner on real data"; "Mean-token pooling is better suited to the zero-shot setting", but under causal
+  attention "mean-token embeddings ... exaggerate early token similarity".
+  -> SUPPORT for the zero-shot "mean" arm; CONTEXT: the early-token bias is limited for B46 because the shared prefix
+     "Name:" is excluded from pooling (name tokens found by character offsets).
+[TY26] Tang, Y., Yang, Y. KV-Embedding: training-free text embedding via internal KV re-routing in decoder-only LLMs.
+  arXiv:2601.01046v1 (2026; an ACL 2026 long paper with this title is listed in the ACL Anthology, not opened). Text:
+  "We observe that ID trajectories vary by architecture"; Qwen3-4B and Mistral-7B-Instruct-v0.1 "exhibit clear ID
+  minima in middle layers" (layers 12-21 and 13-19); "Llama-3.1-8B shows a more complex trajectory with multiple local
+  minima". Table 1 (MTEB average, training-free baselines, final layer) for Qwen3-4B / Mistral-7B-Instruct-v0.1 /
+  Llama-3.1-8B-Instruct: PromptEOL 0.4478 / 0.4537 / 0.4702; mean pooling 0.3331 / 0.3775 / 0.3507; last token
+  0.2721 / 0.3245 / 0.3073.
+  -> SUPPORT: the ranking and spread of training-free readouts (PromptEOL > mean > last token) were the same in a Qwen3,
+     a Mistral and a Llama-3.1 model. CONFLICT (caution): per-layer geometry differs by family, Llama-3.1-8B's least
+     regular, so a depth fraction chosen on Qwen need not be best elsewhere; B46's dev selection is the right guard.
+[LLW+26] Lin, A., Li, Z., Wang, Y., Mao, K., Funakoshi, K., Okumura, M. Steering beyond language: improving
+  multilingual training-free text embeddings via paired-residual subspace removal. arXiv:2610.23807v1 (2026). Text
+  (PromptEOL last token; Llama-2-7b-hf, Mistral-7B-v0.3, Qwen3-8B): "LLaMA-2-7B and Mistral-7B generally benefit from
+  extending removal from the final layers toward intermediate layers, with the best starting layers at 17 and 14,
+  respectively ... In contrast, Qwen3-8B achieves its highest score when starting at layer 33, with pronounced
+  fluctuations at earlier starting layers."
+  -> CONFLICT (caution): direct evidence that Qwen3-8B's depth profile is unlike Llama/Mistral's under a layer-wise
+     intervention. Qwen3-8B's layer-9 result does not by itself say where (or whether) another family's good layer is.
+[KORS25] Kaplan, G., Oren, M., Reif, Y., Schwartz, R. From tokens to words: on the inner lexicon of LLMs. ICLR 2025
+  (arXiv:2410.05864v4). Text: "sub-word sequences are combined into coherent whole-word representations at their last
+  token"; "this process primarily takes place within the early and middle layers"; robust to "arbitrary splits ...,
+  typos"; App. C (Llama2-7B, Llama3-8B, Mistral-7B, Yi-6B): "the retrieval rate increases over the first several layers,
+  peaks around the middle layers, and then decreases in the later layers. The main difference across models lies in the
+  peak performance ... more advanced models such as Llama3-8B and Mistral-7B demonstrate superior performance";
+  "retrieval generally peaking around layers 15-20".
+  -> SUPPORT: word/name identity is assembled at mid-depth the same way in Llama-3 and Mistral, and survives typos (an
+     alias-like perturbation). CONTEXT: the peak (layers 15-20 of 32) is nearer B46's 1/2 candidate than its 1/4 one,
+     and it sits on the LAST name token, while "mean" also averages earlier sub-word states.
+[FAWB24] Feucht, S., Atkinson, D., Wallace, B., Bau, D. Token erasure as a footprint of implicit vocabulary items in
+  LLMs. EMNLP 2024, pp. 9727-9739 (ACL Anthology 2024.emnlp-main.543; arXiv:2406.20086v3). Abstract: "last token
+  representations of named entities and multi-token words exhibit a pronounced 'erasure' effect, where information about
+  previous and current tokens is rapidly forgotten in early layers" (Llama-2-7b, Llama-3-8B). (abstract only)
+  -> CONTEXT for mean vs last-token codes: in Llama models the last name token turns into an entity-level code early;
+     a mean over name tokens keeps spelling-level information, which helps aliases that share sub-words with the label
+     and hurts those that do not. Which pooling dev picks may therefore differ by tokenizer/family.
+[GT24] Gurnee, W., Tegmark, M. Language models represent space and time. ICLR 2024 (arXiv:2310.02207v3). Text:
+  activations "on the last entity token for each layer"; linear features "smoothly increase in quality throughout the
+  first half of the layers of the model before reaching a plateau"; "The gap between the Llama and Pythia models is
+  especially striking, and we suspect is due to the large difference in pre-training corpus size (2T and 300B tokens
+  respectively)".
+  -> SUPPORT: entity-name information is available from the first half of depth onward in a second family (Llama-2).
+     CONFLICT (caution): the amount of entity information differed strongly between families and tracked pre-training
+     data, so how well rare aliases are encoded (and hence the alias-label code similarity) can move by family.
+[LLGT25] Lad, V., Lee, J. H., Gurnee, W., Tegmark, M. The remarkable robustness of LLMs: stages of inference?
+  arXiv:2406.19384v3 (2025). Abstract: models "retain 72-95% of their original top-1 prediction accuracy" after layer
+  deletion/swaps; "four stages of inference, observed across diverse model families and sizes: (1) detokenization ...
+  (2) feature engineering, where task- and entity-specific features are iteratively refined"; text: Pythia, GPT-2,
+  Qwen 2.5, LLaMA 3.2 and Phi families, 124M-6.9B.
+  -> SUPPORT: an early-to-middle entity-feature stage is shared across families including Qwen and Llama, by relative
+     depth. CONTEXT: models <= 6.9B, no Mistral/Granite, behavioural evidence.
+
+== 2. Geometry that differs across families and matters for random-projection / 1-bit superposition codes ==
+[TvS21] Timkey, W., van Schijndel, M. All bark and no bite: rogue dimensions in transformer language models obscure
+  representational quality. EMNLP 2021 (arXiv:2109.04404). Text: "a small number of rogue dimensions, often just 1-3,
+  dominate these measures"; share of total expected cosine contributed by the single top dimension in the most
+  anisotropic layers (Table 1): XLNet layer 11 0.996, BERT layer 11 0.884, GPT-2 layer 12 0.763, RoBERTa layer 12
+  0.663; "simple postprocessing techniques such as standardization are
+  able to correct for rogue dimensions".
+  -> CONFLICT (caution): whether one coordinate dominates cosine is model-specific, and random-hyperplane sign bits
+     follow the dominant directions, so a 1-bit code can be fine on one family and degenerate on another. Centring
+     removes constant offsets only; per-dimension standardization (or B46's ZCA option) is the documented fix.
+[SCKL24] Sun, M., Chen, X., Kolter, J. Z., Liu, Z. Massive activations in large language models. COLM 2024
+  (arXiv:2402.17762v2). Text: LLaMA2-7B: "two fixed feature dimensions (1415, 2533), and two types of tokens - the
+  starting token, and the first period (.) or newline token (\n)"; categories "a) Starting token only. Models include
+  LLaMA2-13B, MPT and GPT-2" ... "c) Starting token, delimiter tokens (such as ".", "\n", "'" or ","), and certain word
+  tokens with weak semantics (such as "and", "from", "of" or "2") Models include LLaMA2-70B, Mistral-7B, Mixtral-8x7B,
+  Falcon-40B and Phi-2"; in LLaMA2-7B they "first appear in layer 2 and remain nearly constant values until layer 30";
+  Mistral-7B and Mixtral share dimension 2070; LLaMA3-8B shown in App. A.1; "their values largely stay constant
+  regardless of the input". Qwen and Granite not studied; the Mistral checkpoint studied is not v0.3.
+  -> CONFLICT (caution), the most concrete family-specific risk found: under mean pooling, a Mistral name containing
+     "of", "and", a comma, an apostrophe or a digit would carry a spike thousands of times the median in one coordinate,
+     from early layers on. Centring on the training mean does not remove a spike that only some names have, and sign
+     bits of random projections would group those names together. (For eol the final token is the same for every name,
+     so a spike there is a constant offset that centring removes, but such a position would carry little input
+     information.) Worth checking per-dimension max |value| of the Mistral codes before reading a null.
+[XTCHL24] Xiao, G., Tian, Y., Chen, B., Han, S., Lewis, M. Efficient streaming language models with attention sinks.
+  ICLR 2024 (arXiv:2309.17453v4). Abstract: "the emergence of attention sink is due to the strong attention scores
+  towards initial tokens as a 'sink' even if they are not semantically important" (Llama-2, MPT, Falcon, Pythia).
+  (abstract only) -> CONTEXT: see [GPD+25].
+[GPD+25] Gu, X., Pang, T., Du, C., Liu, Q., Zhang, F., Du, C., Wang, Y., Lin, M. When attention sink emerges in
+  language models: an empirical view. ICLR 2025 (arXiv:2410.10781v2). Text: sinks at "specific token positions, e.g. the
+  first token (not necessary to be a BOS token)"; "If there are no BOS tokens in the pre-training, the EOS token is
+  considered as the BOS"; Table 1 Sink metric on natural text: Mistral-7B 97.49%, LLaMA2-7B 92.47%, LLaMA3-8B 99.02%,
+  GPT2-XL 77.00%; chat models comparable to base.
+  -> CONTEXT (design check B46 already passes): position 0 is a sink in every family, with or without BOS, so it must
+     stay out of pooled tokens; B46 prepends BOS for Llama/Mistral as trained and pools only name tokens.
+[RMG+24] Razzhigaev, A., Mikhalchuk, M., Goncharova, E., Oseledets, I., Dimitrov, D., Kuznetsov, A. The shape of
+  learning: anisotropy and intrinsic dimensions in transformer-based models. Findings of EACL 2024, pp. 868-874
+  (arXiv:2311.05928v2). Abstract: "the anisotropy profile in transformer decoders exhibits a distinct bell-shaped curve,
+  with the highest anisotropy concentrations in the middle layers"; text: decoders OPT 125M-13B, Llama-2 7B-13B and
+  7B-chat, GPT-2, GPT-J, Falcon-7B, Bloom, Pythia-2.8B, TinyLlama-1.1B, "among all examined models".
+  -> CONTEXT/caution: the mid-depth layers the entity literature favours are the most anisotropic in every decoder
+     family examined; un-centred cosines and sign bits there are dominated by a common direction. B46 centres codes on
+     the training mean, the standard counter.
+[MM24] Machina, A., Mercer, R. E. Anisotropy is not inherent to transformers. NAACL 2024, pp. 4892-4907 (ACL Anthology
+  2024.naacl-long.274). Text: "we identify a set of Transformer models with isotropic embedding spaces, the large Pythia
+  models"; "the large Pythia models optimize their final Layer Norm for isotropy".
+  -> CONTEXT: (an)isotropy is a property of the family and its training, not of the architecture, so code geometry
+     can differ qualitatively between families of the same layout.
+[MGBB25] Macocco, I., Graichen, N., Boleda, G., Baroni, M. Not a nuisance but a useful heuristic: outlier dimensions
+  favor frequent tokens in language models. BlackboxNLP 2025 (arXiv:2503.21718v4). Text: last-layer outlier dimensions
+  (median |activation| in the top 1%), "between 4 and 36" per model (layers of 3584-5120 dims); "a group of models with
+  the same pattern of behavior across the board (pythia-12b, mistral-7b, llama-8b, olmo2-13b, qwen-14b) and three
+  models that often deviate in different ways (opt-13b, gemma-9b, stable-12b)"; "we don't find any massive activation
+  on the last layer".
+  -> CONTEXT for the 4/4-depth candidates: last-layer codes of Llama-3, Mistral and Qwen alike carry a few input-general,
+     frequency-tied outlier dimensions (mostly an offset that centring removes; residual variance needs
+     standardization/ZCA). Mistral, Llama and Qwen behaved alike here.
+[FSL24] Forooghi, A., Sadeghi, S., Lu, J. Whitening not recommended for classification tasks in LLMs. RepL4NLP 2024
+  (ACL Anthology 2024.repl4nlp-1.21; arXiv:2407.12886v1). Abstract: "the efficacy of whitening is model-dependent and
+  task-dependent. In particular, whitening degenerates embeddings for classification tasks"; text: BERT, SBERT, SimCSE,
+  AnglE-LLaMA, LLaMA, LLaMA2, ChatGPT embeddings; PCA, ZCA, PCA-Cor, ZCA-Cor, Cholesky whitening.
+  -> CONTEXT: B46's centre+ZCA option is not guaranteed to help every family; it has to be chosen on dev per family
+     (as the B36 protocol does), not carried over from Qwen3.
+
+== 3. Cross-model representational similarity: does alias-label structure transfer across families? ==
+[HCWI24] Huh, M., Cheung, B., Wang, T., Isola, P. The platonic representation hypothesis. ICML 2024, PMLR 235
+  (arXiv:2405.07987v5). Text: alignment by "mutual nearest-neighbor" on Wikipedia captions; LLMs include bloom, olmo,
+  openllama, llama, llama3-8b, gemma, mistral-7b, mixtral-8x7b; for each model they "average pool each layer"; "more
+  capable language models align better with more capable vision models".
+  -> SUPPORT (indirect): text codes of different LLM families share neighbourhood structure, more so with capability.
+     CONTEXT: cross-modal and coarse (see [KZGE26]); alias-level structure not tested.
+[WS25] Wolfram, C., Schein, A. Layers at similar depths generate similar activations across LLM architectures. COLM
+  2025 (arXiv:2504.08775v3). Text: 24 open-weight models incl. Llama 3.1 (8B) and Llama 3.1 IT (8B), Mistral v0.3 (7B),
+  Gemma, Phi-3, Falcon (no Qwen, no Granite); last-token activations, mutual k-NN (k = 10) on 2,048 OpenWebText texts;
+  "layers at proportionally similar depths generate more similar activations to one another than other pairs of
+  layers"; abstract: neighbour relations "tend to vary from layer to layer within a model" and "are approximately shared
+  between corresponding layers of different models".
+  -> SUPPORT for indexing B46's candidates by relative depth and for expecting Qwen3-8B's layer-9 neighbourhoods to have
+     counterparts near 1/4 depth in Llama-3.1-8B-Instruct and Mistral-7B. CONTEXT: k = 10 neighbourhoods of generic
+     text, not alias-label pairs; within a model, neighbourhoods change from layer to layer.
+[CDK+25] Cheng, E., Doimo, D., Kervadec, C., Macocco, I., Yu, J., Laio, A., Baroni, M. Emergence of a high-dimensional
+  abstraction phase in language transformers. ICLR 2025 (arXiv:2405.15471v4). Text: OPT-6.7B, Llama-3-8B, Pythia-6.9B,
+  OLMo-7B, Mistral-7B, last-token representations; "All models clearly go through a phase of high intrinsic
+  dimensionality that tends to take place relatively early (starting approximately at layer 6 or 7, and mostly being over
+  by layer 20), except for OPT, where it approximately lasts from layer 17 to layer 23"; abstract: in this phase
+  representations "(2) are the first to viably transfer to downstream tasks; (3) predict each other across different
+  LMs"; text: "between models, representations at the peak have close neighborhood structures" (App. H: "broadly
+  comparable patterns emerging from CKA").
+  -> SUPPORT, the closest result to B46's layer question: for 32-layer Llama-3-8B and Mistral-7B the transferable,
+     cross-model-shared phase spans ~layers 6-20, which contains B46's 1/4 (8) and 1/2 (16) candidates; Qwen3-8B
+     layer 9 of 36 sits at the same relative point. Caution: OPT's phase is late, so a family can be shifted.
+[KBGL23] Klabunde, M., Ben Amor, M., Granitzer, M., Lemmerich, F. Towards measuring representational similarity of
+  large language models. UniReps workshop @ NeurIPS 2023 (arXiv:2312.02730v1). Text: last-layer, last-token
+  representations of ~7B models (Bloom, Falcon, Galactica, GPT-J, LLaMA, MPT, OpenLLaMA, OPT, Pythia, StableLM ...);
+  "some LLMs are substantially different from others" (Falcon and StableLM Alpha on Winogrande, OpenLlama and OPT on
+  HumanEval); "challenges of using representational similarity measures that suggest the need of careful study of
+  similarity scores to avoid false conclusions".
+  -> CONFLICT (caution): cross-family similarity is not uniform; some families are outliers, and measures disagree.
+     A second family could lack the Qwen3 pattern for geometric reasons alone.
+[UC26] Usama, M., Chang, D. E. Convergence without understanding: when language models agree on representations but
+  disagree on reasoning. arXiv:2605.23315v1 (2026). Abstract: 16 instruction-tuned models from 8 families (1.5B-72B;
+  Qwen-2.5, LLaMA-3.x, Gemma, Phi ...), "pre-decision representations align (CKA = 0.875)"; text: "Randomly initialized
+  (untrained) models exhibit higher pairwise CKA (0.864 +/- 0.007)" than trained ones (0.612).
+  -> CONTEXT: CKA-type cross-family similarity is confounded (untrained nets score higher), so "the families look
+     alike" is no reason to expect the VSA result to transfer; only a direct replication answers it.
+[KZGE26] Koepke, A. S., Zverev, D., Ginosar, S., Efros, A. A. Back into Plato's cave: examining cross-modal
+  representational convergence at scale. arXiv:2604.18572v3 (2026). Abstract: "The mutual k-nearest-neighbor metric used
+  on 1024 text-image pairs in the original study captures only coarse structure. To keep the alignment from collapsing
+  as one scales up the data, k has to grow proportionally"; "neither stronger language models nor richer captions yield
+  fine-grained alignment". (abstract only)
+  -> CONFLICT (caution) with reading [HCWI24]/[WS25] as evidence that fine, item-level structure (which alias lies
+     nearest which of thousands of labels) transfers: what is shared is coarse. The metric critique also applies to
+     [WS25]'s k = 10 on 2,048 texts.
+[JZSM25] Jha, R., Zhang, C., Shmatikov, V., Morris, J. X. Harnessing the universal geometry of embeddings (vec2vec).
+  NeurIPS 2025 (arXiv:2505.12540v4). Abstract: translates "text embeddings from one vector space to another without any
+  paired data"; "high cosine similarity across model pairs with different architectures"; text: encoders gtr, clip,
+  e5, gte, stella, granite (RoBERTa-based), qwen (Qwen3, one pair); "cosine similarity as high as 0.96".
+  -> SUPPORT (indirect): sentence-encoder spaces, e5 among them, share enough geometry to be aligned without pairs,
+     consistent with B36's e5 and Qwen3-8B codes reaching nearly the same alias-label criterion (0.698 vs 0.704). Not
+     about LLM hidden states or memories; shared geometry did not make the VSA margin transfer from Qwen3-8B to e5 in B36.
+
+== 4. VSA/HDC/associative memories on LLM hidden states of more than one family; cross-encoder memory comparisons ==
+[BNLSP26] Bronzini, M., Nicolini, C., Lepri, B., Staiano, J., Passerini, A. Hyperdimensional probe: decoding LLM
+  representations via vector symbolic architectures. TMLR 2026 (arXiv:2509.25045v4). Text: MAP-Bipolar codebooks; a
+  trained "shallow neural encoder" maps "the embeddings ... of the last token (":") in the latter half" of the layers into
+  VSA space; LLMs GPT-2-medium, Pythia-1.4b, Llama 3.1-8B, Phi-4, OLMo-2-32B, Llama 4 Scout; Table 1 "Key | Target"
+  60.0% (GPT-2), 66.9 (Pythia), 85.4 (Llama 3.1), 84.8 (Phi-4), 80.1 (OLMo-2), 79.0 (Llama 4), mean 76.0 +/- 9.4;
+  "average probing@1 across all models equal to 83%".
+  -> GAP/CONTEXT: the only work found that applies a VSA to hidden states of several LLM families. It is a trained probe
+     (no superposed store, no bit budget, no classical comparison), reads late layers' last token, and its results vary
+     by model (60-85%), the larger modern families ahead. No Qwen, Mistral or Granite.
+[DH26] Dalvi, A., Honavar, V. Hyperdimensional cross-modal alignment of frozen language and image models for efficient
+  image captioning (HDFLIM). arXiv:2602.23588v1 (2026). Text: angular LSH "r = LSHQ(x) = sign(Qx)" into beta = 50,000
+  bipolar hypervectors, binding and bundling into an associative memory built "in a single pass over the data"; frozen
+  "Qwen3-4B-Base" hidden states plus DINOv3.txt; captioning "comparable to end-to-end vision-language training methods".
+  -> GAP/CONTEXT: a bundled HDC memory over random-projection sign codes of frozen Qwen3 hidden states, the same coding
+     family as B36, works for a task; but one LLM family (Qwen3) only, no other reader, no equal-bits comparison with
+     sketches, filters or tables.
+  No 2025-2026 equal-bits comparison of HDC/VSA with classical structures (Bloom, count-min, LSH, PQ, static functions)
+  on neural embeddings was found beyond those already in b36_literature.txt (searches below).
+
+== 5. Entity alias / name-variant robustness across models ==
+[NSK+26] Nishida, Y., Shikoda, N., Kishinami, Y., Fujii, R., Morishita, M., Kamigaito, H., Watanabe, T. Revisiting
+  non-verbatim memorization in large language models: the role of entity surface forms. ACL 2026 Main
+  (arXiv:2604.21882v1). Abstract: RedirectQA uses "Wikipedia redirect information to associate Wikidata factual triples
+  with categorized surface forms"; "Across 13 LLMs ... prediction outcomes often change when only the entity surface form
+  changes"; "models are more robust to minor orthographic variations than to larger lexical variations such as aliases
+  and abbreviations"; "entity frequency often contributes beyond surface frequency". (abstract only)
+  -> CONFLICT (caution): alias robustness differs across LLMs and is weakest for the lexical aliases B46 queries with.
+     The alias-label code similarity, and with it the absolute accuracies, should move by family; the VSA-vs-classical
+     margin depends on that similarity (B36: median alias-label cosine 0.43-0.51), so it need not carry over unchanged.
+[SKGG25] Shachar, O., Katz, U., Goldberg, Y., Glickman, O. NER Retriever: zero-shot named entity retrieval with
+  type-aware embeddings. Findings of EMNLP 2025 (arXiv:2509.04011v1). Abstract: "internal representations, specifically
+  the value vectors from mid-layer transformer blocks, encode fine-grained type information more effectively than
+  commonly used top-layer embeddings". (abstract only)
+  -> SUPPORT (one family; which LLM not checked): mid-layer internals beat top-layer embeddings as zero-shot entity codes.
+
+== UNVERIFIED (not to be cited) ==
+- LessWrong post "cross-model activation generalizability isn't strong yet" (Llama, Gemma, Qwen, Pythia at 1-3B): per a
+  search summary, cross-family activation similarity is real but weak, CKA peaks in late layers, higher among models
+  sharing a tokenizer. Not opened, not peer reviewed.
+- Vespa blog (search snippet): binary quantization keeps 92% of float quality for e5-base-v2 (NanoBEIR 0.602 vs 0.651)
+  vs 98% for GTE-ModernBERT. Not opened.
+- Qwen-specific outliers: "dimensions 1806 and 1423 of the first token exceed 1000" in Qwen3-235B-A22B (unnamed source
+  in a search summary); Qwen gated attention cutting first-token attention "from 46.7% to 4.8%" (blog summary of a Qwen
+  paper). Neither checked in a primary source.
+- Jin et al., Exploring concept depth (COLING 2025, arXiv:2404.07066v7): abstract read (layer-wise probing across Gemma,
+  LLaMA, Qwen; harder concepts need deeper layers); the per-family layer results could not be extracted from the PDF.
+- Hypertokens/HDRAM (Augeri, arXiv:2507.00002): abstract read; recall figures quoted by a review site not checked;
+  prompt-level, single model class, not relevant.
+
+== Seen, not entered (opened; off-target or redundant) ==
+Lee et al. 2025 arXiv:2503.21073 (shared geometry of TOKEN embeddings within GPT2/Llama3/Gemma2 families; hidden states
+left to future work); ReverseEOL arXiv:2606.05858 (exit-layer sweeps only over late layers 23-32 / 19-28); Larimar, ICML
+2024, arXiv:2403.11901 (Kanerva-machine memory keyed by one BERT-large encoder, GPT2/GPT-J decoders); Prometheus Mind
+arXiv:2601.15324 (single-author; Qwen3-4B hidden states make "wife" and "brother" 0.98+ similar, layer unstated);
+Oozeer et al. ICML 2025 arXiv:2503.04429 (learned maps transfer steering vectors across Llama/Qwen/Gemma); Moschella et
+al. ICLR 2023 arXiv:2209.15430; Ethayarajh EMNLP 2019 arXiv:1909.00512; Su et al. 2021 arXiv:2103.15316 (whitening);
+Mu & Viswanath arXiv:1702.01417; Dettmers et al. NeurIPS 2022 arXiv:2208.07339; An et al. ICLR 2025 arXiv:2502.06415;
+Yu et al. arXiv:2411.07191 (super weights); Godey et al. 2023 arXiv:2306.07656; Skean et al. 2024 workshop
+arXiv:2412.09563; Token Prepending ACL 2025 arXiv:2412.11556 (no layer study found in text); Geva et al. EMNLP 2023
+arXiv:2304.14767; Peeters et al. EDBT 2025 arXiv:2310.11244 (LLM entity matchers need per-model prompt tuning); Meng et
+al. Findings ACL 2024 arXiv:2406.07444 (DocRE robustness to Wikidata name swaps); Ramidi & Scharp arXiv:2602.16584;
+PathHD arXiv:2512.09369; Bugedo & Vansummeren arXiv:2606.13871 (HRR row embeddings vs EmbDI, no LLM states).
+Granite-3.x: no layer-wise representation, anisotropy or massive-activation study found.
+
+== Searches (WebSearch, standard + extended, 2026-11-19) ==
+"hyperdimensional probe vector symbolic architecture decoding LLM residual stream"; "hyperdimensional computing
+associative memory LLM embeddings superposition key-value store multiple language models 2025"; "vector symbolic
+architecture bundling sentence embeddings retrieval capacity different encoders e5 BGE LLM hidden states superposition";
+"associative memory over frozen LLM hidden states compared across Llama Mistral Qwen holographic OR Hopfield OR vector
+symbolic"; "hyperdimensional computing versus locality sensitive hashing or Bloom filter same memory budget neural
+embeddings 2025 2026 comparison"; "holographic reduced representations superposition memory text embeddings from
+different encoders comparison capacity 2026"; "hyperdimensional computing LLM embeddings Llama Mistral Qwen encoder
+comparison binding bundling retrieval"; "training-free text embeddings from decoder LLMs which layer best intermediate
+layer varies by model family Llama Mistral Qwen"; "LLM embeddings mean pooling vs last token layer-wise analysis";
+"layers at similar depths generate similar activations across LLM architectures"; "Platonic representation hypothesis
+critique"; "Qwen2.5 OR Qwen3 massive activations attention sink first token no BOS"; "Granite-3 8B hidden states
+layer-wise"; "entity alias name variant retrieval LLM hidden states Wikidata aliases across models"; "do language models
+map different names of the same entity to a shared internal representation"; "entity name matching or synonym retrieval
+with decoder LLM embeddings compared across Llama Mistral Qwen"; plus title look-ups for each entry.
+
+== Summary ==
+SUPPORT: name/word identity forms at early-to-mid depth alike in Llama-2/3, Mistral, Yi [KORS25, GT24, LLGT25]; the
+transferable, cross-model-shared phase sits at matching relative depth (~layers 6-20 of 32 in Llama-3-8B, Mistral-7B)
+[CDK+25, WS25]; training-free readouts rank the same (PromptEOL > mean > last) on Qwen3, Mistral, Llama-3.1 [TY26].
+CONFLICT: depth profiles differ (Qwen3-8B atypical [LLW+26]); Mistral spikes on "of"/"and"/delimiters that centring
+cannot remove [SCKL24]; outlier dims, anisotropy, whitening are model-specific [TvS21, RMG+24, MGBB25, FSL24]; shared
+structure is coarse [KBGL23, KZGE26, UC26]; alias robustness varies over 13 LLMs [NSK+26]. So usable codes should
+replicate, but nothing predicts the SIZE of the VSA margin (cf. B36's e5 tie); P1's mean-at-1/4 is not favoured over
+late-layer PromptEOL [LWZ+24]. GAP: no prior cross-family VSA/HDC store or equal-bits comparison (nearest [BNLSP26, DH26]).
+
+== After the result (2026-11-19, 09:45 box clock): support / conflict / gap ==
+Result: on Granite-3.3-8B-Instruct codes (mean of layer 30 of 40, chosen by the dev retrieval criterion) the VSA store
+beats the best dev-chosen competitor in R1 by +6.06 [+5.04, +7.10] points (Qwen3-8B +6.77; e5 +0.60, tie).
+- SUPPORT for the mechanism, not for a general law: after centring, the Granite codes' alias-label geometry is close to
+  Qwen3-8B's (alias-label cosine median 0.53 vs 0.51; exact SimHash-signature agreement at k = 8: 0.08 vs 0.08; e5 0.12),
+  consistent with the depth-matched, shared lexical/entity phase reported across families [KORS25, CDK+25, WS25].
+  The win replicating on a second, independently trained family is in line with these reports.
+- CONFLICT / caution: the best layer differed by family (Qwen3-8B 1/4 depth, Granite 3/4, Llama 3/4, Mistral PromptEOL at
+  3/4), as [LLW+26] and [LWZ+24] warn; Granite's raw codes carry rogue dimensions [TvS21, MGBB25] that centring removes.
+  Two LLM families do not establish the result for LLM codes in general; [NSK+26] finds alias robustness varies across
+  13 LLMs. The e5 tie stays the counterexample: what predicts the margin is the code geometry, not "LLM" as such.
+- GAP unchanged: no prior work compares a superposed VSA store with key-free classical memories at equal bits on more
+  than one LLM family's hidden states (nearest [BNLSP26] trained VSA probes, [DH26] one model); B32 / B36 / B46 are the
+  only such comparison we know of.

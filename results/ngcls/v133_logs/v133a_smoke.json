@@ -1,0 +1,588 @@
+{
+ "prereg": "9bcb703",
+ "gen_check": {
+  "rederive_ok": 750,
+  "rederive_total": 750,
+  "unique_rel_ok": 750
+ },
+ "partA": {
+  "model": "/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct",
+  "n_eval": 4,
+  "K": 120,
+  "rows": {
+   "2": [
+    {
+     "seed": 702000,
+     "answer": "Garion",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Jorell",
+     "direct_ok": 0,
+     "cot": "Garion",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 77
+    },
+    {
+     "seed": 702001,
+     "answer": "Halir",
+     "store": {
+      "2048": [
+       1,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Raseth",
+     "direct_ok": 0,
+     "cot": "Halir",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 64
+    },
+    {
+     "seed": 702002,
+     "answer": "Sylis",
+     "store": {
+      "2048": [
+       1,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Quelos",
+     "direct_ok": 0,
+     "cot": "Sylis",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 64
+    },
+    {
+     "seed": 702003,
+     "answer": "Joreth",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Othdane",
+     "direct_ok": 0,
+     "cot": "Joreth",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 65
+    }
+   ],
+   "3": [
+    {
+     "seed": 703000,
+     "answer": "Torux",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Torir",
+     "direct_ok": 0,
+     "cot": "Torux",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 112
+    },
+    {
+     "seed": 703001,
+     "answer": "Quelara",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Morion",
+     "direct_ok": 0,
+     "cot": "Quelara",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 110
+    },
+    {
+     "seed": 703002,
+     "answer": "Moreth",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Keleth",
+     "direct_ok": 0,
+     "cot": "Moreth",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 61
+    },
+    {
+     "seed": 703003,
+     "answer": "Ulvos",
+     "store": {
+      "2048": [
+       1,
+       1,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Xanond",
+     "direct_ok": 0,
+     "cot": "Ulvor",
+     "cot_ok": 0,
+     "cot_trunc": 0,
+     "cot_ntok": 84
+    }
+   ],
+   "4": [
+    {
+     "seed": 704000,
+     "answer": "Halell",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       1,
+       0
+      ],
+      "8192": [
+       1,
+       0,
+       0
+      ]
+     },
+     "direct": "Zethane",
+     "direct_ok": 0,
+     "cot": "Halell",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 139
+    },
+    {
+     "seed": 704001,
+     "answer": "Queleth",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Zethis",
+     "direct_ok": 0,
+     "cot": "Queleth",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 94
+    },
+    {
+     "seed": 704002,
+     "answer": "Draen",
+     "store": {
+      "2048": [
+       1,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Garux",
+     "direct_ok": 0,
+     "cot": "Draen",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 118
+    },
+    {
+     "seed": 704003,
+     "answer": "Keleth",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       0
+      ]
+     },
+     "direct": "Othir",
+     "direct_ok": 0,
+     "cot": "Keleth",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 146
+    }
+   ],
+   "5": [
+    {
+     "seed": 705000,
+     "answer": "Corys",
+     "store": {
+      "2048": [
+       1,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Miraion",
+     "direct_ok": 0,
+     "cot": "Corys",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 140
+    },
+    {
+     "seed": 705001,
+     "answer": "Ithux",
+     "store": {
+      "2048": [
+       1,
+       0,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Lumen",
+     "direct_ok": 0,
+     "cot": "Draane",
+     "cot_ok": 0,
+     "cot_trunc": 0,
+     "cot_ntok": 129
+    },
+    {
+     "seed": 705002,
+     "answer": "Nelir",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "direct": "Wynell",
+     "direct_ok": 0,
+     "cot": "Nelir",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 170
+    },
+    {
+     "seed": 705003,
+     "answer": "Thraor",
+     "store": {
+      "2048": [
+       0,
+       0,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Garis",
+     "direct_ok": 0,
+     "cot": "Thraor",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 181
+    }
+   ],
+   "6": [
+    {
+     "seed": 706000,
+     "answer": "Ulvion",
+     "store": {
+      "2048": [
+       0,
+       1,
+       0
+      ],
+      "4096": [
+       0,
+       0,
+       0
+      ],
+      "8192": [
+       0,
+       1,
+       1
+      ]
+     },
+     "direct": "Ulven",
+     "direct_ok": 0,
+     "cot": "Ulvion",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 167
+    },
+    {
+     "seed": 706001,
+     "answer": "Cordane",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Torell",
+     "direct_ok": 0,
+     "cot": "Cordane",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 217
+    },
+    {
+     "seed": 706002,
+     "answer": "Wynys",
+     "store": {
+      "2048": [
+       0,
+       0,
+       0
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Sylux",
+     "direct_ok": 0,
+     "cot": "Wynys",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 177
+    },
+    {
+     "seed": 706003,
+     "answer": "Rasor",
+     "store": {
+      "2048": [
+       0,
+       1,
+       1
+      ],
+      "4096": [
+       1,
+       1,
+       1
+      ],
+      "8192": [
+       1,
+       1,
+       1
+      ]
+     },
+     "direct": "Sylux",
+     "direct_ok": 0,
+     "cot": "Rasor",
+     "cot_ok": 1,
+     "cot_trunc": 0,
+     "cot_ntok": 213
+    }
+   ]
+  },
+  "store_by_d": {
+   "2048": {
+    "2": 0.8333333333333333,
+    "3": 0.41666666666666663,
+    "4": 0.3333333333333333,
+    "5": 0.3333333333333333,
+    "6": 0.25
+   },
+   "4096": {
+    "2": 0.9166666666666666,
+    "3": 1.0,
+    "4": 0.5833333333333333,
+    "5": 0.9166666666666666,
+    "6": 0.75
+   },
+   "8192": {
+    "2": 1.0,
+    "3": 1.0,
+    "4": 0.6666666666666666,
+    "5": 0.9166666666666666,
+    "6": 0.9166666666666666
+   }
+  }
+ }
+}

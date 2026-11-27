@@ -1,0 +1,313 @@
+{
+ "_about": "Fig. compression (r64, referee 18 M1b): the store's FINAL design (B53's VSA / B60's STORE: antipodal or orthogonal\nvalue codes, matched-filter read) as the primary series. Differences over the pre-specified region R1, per encoder, as\nverbatim lines of vsassm results/b64_verdict.txt ('## VSA - BEST7 (ideal)') and results/b60_verdict.txt\n('## PRIMARY (ideal): STORE - LAMc'); region mean accuracy of the final design from results/b60_part_<enc>.json cells\n(STORE, mean of the 12 R1 cells, ideal).",
+ "encoders": [
+  {
+   "name": "Qwen3-8B",
+   "key": "qwen8",
+   "final_best7": {
+    "value": 1.25,
+    "lo": 0.39,
+    "hi": 2.1,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| Qwen3-8B |  +3.72 [ +2.42,  +4.99] | store leads |  -1.22 [ -2.33,  -0.17] | memory leads |  +1.25 [ +0.39,  +2.10] | store leads | tie |",
+    "cell": 5,
+    "text": "+1.25"
+   },
+   "final_lamc": {
+    "value": -4.06,
+    "lo": -4.76,
+    "hi": -3.4,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Qwen3-8B |  -3.94 [ -4.81,  -3.09] | LAMc leads |  -4.17 [ -5.25,  -3.14] | LAMc leads |  -4.06 [ -4.76,  -3.40] | LAMc leads |",
+    "cell": 5,
+    "text": "-4.06"
+   },
+   "v2_final_lamc": {
+    "value": -3.94,
+    "lo": -4.81,
+    "hi": -3.09,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Qwen3-8B |  -3.94 [ -4.81,  -3.09] | LAMc leads |  -4.17 [ -5.25,  -3.14] | LAMc leads |  -4.06 [ -4.76,  -3.40] | LAMc leads |",
+    "cell": 1,
+    "text": "-3.94"
+   },
+   "v16_final_lamc": {
+    "value": -4.17,
+    "lo": -5.25,
+    "hi": -3.14,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Qwen3-8B |  -3.94 [ -4.81,  -3.09] | LAMc leads |  -4.17 [ -5.25,  -3.14] | LAMc leads |  -4.06 [ -4.76,  -3.40] | LAMc leads |",
+    "cell": 3,
+    "text": "-4.17"
+   },
+   "acc_final": {
+    "value": 48.81155541030038,
+    "n_cells": 12
+   }
+  },
+  {
+   "name": "Granite-3.3-8B",
+   "key": "b46",
+   "final_best7": {
+    "value": -0.22,
+    "lo": -1.05,
+    "hi": 0.62,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| Granite-3.3-8B |  +2.06 [ +0.82,  +3.35] | store leads |  -2.50 [ -3.61,  -1.41] | memory leads |  -0.22 [ -1.05,  +0.62] | level | tie |",
+    "cell": 5,
+    "text": "-0.22"
+   },
+   "final_lamc": {
+    "value": -5.55,
+    "lo": -6.24,
+    "hi": -4.87,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Granite-3.3-8B |  -4.09 [ -5.04,  -3.17] | LAMc leads |  -7.01 [ -8.03,  -5.97] | LAMc leads |  -5.55 [ -6.24,  -4.87] | LAMc leads |",
+    "cell": 5,
+    "text": "-5.55"
+   },
+   "v2_final_lamc": {
+    "value": -4.09,
+    "lo": -5.04,
+    "hi": -3.17,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Granite-3.3-8B |  -4.09 [ -5.04,  -3.17] | LAMc leads |  -7.01 [ -8.03,  -5.97] | LAMc leads |  -5.55 [ -6.24,  -4.87] | LAMc leads |",
+    "cell": 1,
+    "text": "-4.09"
+   },
+   "v16_final_lamc": {
+    "value": -7.01,
+    "lo": -8.03,
+    "hi": -5.97,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Granite-3.3-8B |  -4.09 [ -5.04,  -3.17] | LAMc leads |  -7.01 [ -8.03,  -5.97] | LAMc leads |  -5.55 [ -6.24,  -4.87] | LAMc leads |",
+    "cell": 3,
+    "text": "-7.01"
+   },
+   "acc_final": {
+    "value": 47.54091618261813,
+    "n_cells": 12
+   }
+  },
+  {
+   "name": "Llama-3.1-8B",
+   "key": "llama",
+   "final_best7": {
+    "value": 0.91,
+    "lo": 0.04,
+    "hi": 1.75,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| Llama-3.1-8B |  +3.57 [ +2.28,  +4.88] | store leads |  -1.75 [ -2.81,  -0.73] | memory leads |  +0.91 [ +0.04,  +1.75] | store leads | tie |",
+    "cell": 5,
+    "text": "+0.91"
+   },
+   "final_lamc": {
+    "value": -5.56,
+    "lo": -6.37,
+    "hi": -4.72,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Llama-3.1-8B |  -4.41 [ -5.57,  -3.25] | LAMc leads |  -6.72 [ -7.94,  -5.52] | LAMc leads |  -5.56 [ -6.37,  -4.72] | LAMc leads |",
+    "cell": 5,
+    "text": "-5.56"
+   },
+   "v2_final_lamc": {
+    "value": -4.41,
+    "lo": -5.57,
+    "hi": -3.25,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Llama-3.1-8B |  -4.41 [ -5.57,  -3.25] | LAMc leads |  -6.72 [ -7.94,  -5.52] | LAMc leads |  -5.56 [ -6.37,  -4.72] | LAMc leads |",
+    "cell": 1,
+    "text": "-4.41"
+   },
+   "v16_final_lamc": {
+    "value": -6.72,
+    "lo": -7.94,
+    "hi": -5.52,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Llama-3.1-8B |  -4.41 [ -5.57,  -3.25] | LAMc leads |  -6.72 [ -7.94,  -5.52] | LAMc leads |  -5.56 [ -6.37,  -4.72] | LAMc leads |",
+    "cell": 3,
+    "text": "-6.72"
+   },
+   "acc_final": {
+    "value": 48.98932087438852,
+    "n_cells": 12
+   }
+  },
+  {
+   "name": "Mistral-7B",
+   "key": "mistral",
+   "final_best7": {
+    "value": -1.02,
+    "lo": -1.95,
+    "hi": -0.12,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| Mistral-7B |  -0.10 [ -1.34,  +1.17] | level |  -1.93 [ -3.29,  -0.60] | memory leads |  -1.02 [ -1.95,  -0.12] | memory leads | tie |",
+    "cell": 5,
+    "text": "-1.02"
+   },
+   "final_lamc": {
+    "value": -5.23,
+    "lo": -6.03,
+    "hi": -4.46,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Mistral-7B |  -5.47 [ -6.47,  -4.50] | LAMc leads |  -5.00 [ -6.21,  -3.81] | LAMc leads |  -5.23 [ -6.03,  -4.46] | LAMc leads |",
+    "cell": 5,
+    "text": "-5.23"
+   },
+   "v2_final_lamc": {
+    "value": -5.47,
+    "lo": -6.47,
+    "hi": -4.5,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Mistral-7B |  -5.47 [ -6.47,  -4.50] | LAMc leads |  -5.00 [ -6.21,  -3.81] | LAMc leads |  -5.23 [ -6.03,  -4.46] | LAMc leads |",
+    "cell": 1,
+    "text": "-5.47"
+   },
+   "v16_final_lamc": {
+    "value": -5.0,
+    "lo": -6.21,
+    "hi": -3.81,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| Mistral-7B |  -5.47 [ -6.47,  -4.50] | LAMc leads |  -5.00 [ -6.21,  -3.81] | LAMc leads |  -5.23 [ -6.03,  -4.46] | LAMc leads |",
+    "cell": 3,
+    "text": "-5.00"
+   },
+   "acc_final": {
+    "value": 51.292122295108705,
+    "n_cells": 12
+   }
+  },
+  {
+   "name": "e5-base-v2",
+   "key": "e5",
+   "final_best7": {
+    "value": -1.51,
+    "lo": -2.34,
+    "hi": -0.67,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| e5-base-v2 |  -1.30 [ -2.53,  -0.02] | memory leads |  -1.72 [ -2.85,  -0.60] | memory leads |  -1.51 [ -2.34,  -0.67] | memory leads | tie |",
+    "cell": 5,
+    "text": "-1.51"
+   },
+   "final_lamc": {
+    "value": -6.53,
+    "lo": -7.19,
+    "hi": -5.87,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| e5-base-v2 |  -2.97 [ -3.73,  -2.21] | LAMc leads | -10.10 [-11.21,  -9.02] | LAMc leads |  -6.53 [ -7.19,  -5.87] | LAMc leads |",
+    "cell": 5,
+    "text": "-6.53"
+   },
+   "v2_final_lamc": {
+    "value": -2.97,
+    "lo": -3.73,
+    "hi": -2.21,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| e5-base-v2 |  -2.97 [ -3.73,  -2.21] | LAMc leads | -10.10 [-11.21,  -9.02] | LAMc leads |  -6.53 [ -7.19,  -5.87] | LAMc leads |",
+    "cell": 1,
+    "text": "-2.97"
+   },
+   "v16_final_lamc": {
+    "value": -10.1,
+    "lo": -11.21,
+    "hi": -9.02,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| e5-base-v2 |  -2.97 [ -3.73,  -2.21] | LAMc leads | -10.10 [-11.21,  -9.02] | LAMc leads |  -6.53 [ -7.19,  -5.87] | LAMc leads |",
+    "cell": 3,
+    "text": "-10.10"
+   },
+   "acc_final": {
+    "value": 46.406465722711495,
+    "n_cells": 12
+   }
+  },
+  {
+   "name": "bge-small",
+   "key": "bge",
+   "final_best7": {
+    "value": -3.73,
+    "lo": -4.66,
+    "hi": -2.81,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| bge-small |  -2.36 [ -3.78,  -0.96] | memory leads |  -5.10 [ -6.25,  -4.00] | memory leads |  -3.73 [ -4.66,  -2.81] | memory leads | loss |",
+    "cell": 5,
+    "text": "-3.73"
+   },
+   "final_lamc": {
+    "value": -4.18,
+    "lo": -4.85,
+    "hi": -3.51,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| bge-small |  -1.05 [ -1.96,  -0.16] | LAMc leads |  -7.30 [ -8.27,  -6.34] | LAMc leads |  -4.18 [ -4.85,  -3.51] | LAMc leads |",
+    "cell": 5,
+    "text": "-4.18"
+   },
+   "v2_final_lamc": {
+    "value": -1.05,
+    "lo": -1.96,
+    "hi": -0.16,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| bge-small |  -1.05 [ -1.96,  -0.16] | LAMc leads |  -7.30 [ -8.27,  -6.34] | LAMc leads |  -4.18 [ -4.85,  -3.51] | LAMc leads |",
+    "cell": 1,
+    "text": "-1.05"
+   },
+   "v16_final_lamc": {
+    "value": -7.3,
+    "lo": -8.27,
+    "hi": -6.34,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| bge-small |  -1.05 [ -1.96,  -0.16] | LAMc leads |  -7.30 [ -8.27,  -6.34] | LAMc leads |  -4.18 [ -4.85,  -3.51] | LAMc leads |",
+    "cell": 3,
+    "text": "-7.30"
+   },
+   "acc_final": {
+    "value": 45.113425208504246,
+    "n_cells": 12
+   }
+  },
+  {
+   "name": "MiniLM-L6",
+   "key": "minilm",
+   "final_best7": {
+    "value": -3.43,
+    "lo": -4.22,
+    "hi": -2.63,
+    "file": "../results/vsassm/results/b64_verdict.txt",
+    "line": "| MiniLM-L6 |  -2.62 [ -3.87,  -1.41] | memory leads |  -4.24 [ -5.23,  -3.26] | memory leads |  -3.43 [ -4.22,  -2.63] | memory leads | loss |",
+    "cell": 5,
+    "text": "-3.43"
+   },
+   "final_lamc": {
+    "value": -4.3,
+    "lo": -4.99,
+    "hi": -3.6,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| MiniLM-L6 |  -0.19 [ -1.27,  +0.85] | level |  -8.41 [ -9.32,  -7.49] | LAMc leads |  -4.30 [ -4.99,  -3.60] | LAMc leads |",
+    "cell": 5,
+    "text": "-4.30"
+   },
+   "v2_final_lamc": {
+    "value": -0.19,
+    "lo": -1.27,
+    "hi": 0.85,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| MiniLM-L6 |  -0.19 [ -1.27,  +0.85] | level |  -8.41 [ -9.32,  -7.49] | LAMc leads |  -4.30 [ -4.99,  -3.60] | LAMc leads |",
+    "cell": 1,
+    "text": "-0.19"
+   },
+   "v16_final_lamc": {
+    "value": -8.41,
+    "lo": -9.32,
+    "hi": -7.49,
+    "file": "../results/vsassm/results/b60_verdict.txt",
+    "line": "| MiniLM-L6 |  -0.19 [ -1.27,  +0.85] | level |  -8.41 [ -9.32,  -7.49] | LAMc leads |  -4.30 [ -4.99,  -3.60] | LAMc leads |",
+    "cell": 3,
+    "text": "-8.41"
+   },
+   "acc_final": {
+    "value": 44.33851467507208,
+    "n_cells": 12
+   }
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{"arm": "FX", "enc": "bge", "kind": "P", "split": "test", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 2, 1.0, 1.0, 10000.0], [8, 2, 1.0, 1.0, 10000.0], [16, 1, 1.0, 1.0, 10000.0]]}
+{"arm": "FX", "enc": "bge", "kind": "T", "split": "test", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 256, "cells": [[4, 2, 1.0, 1.0, 1.0], [8, 2, 1.0, 1.0, 1.0], [16, 1, 1.0, 1.0, 1.0]]}
+{"arm": "LABL", "enc": "bge", "spec0": {"enc": "bge", "map": 0, "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "center", "cfgs": [[["flat", "V", "center", "pca", 0.0001, 1], 1, "ideal"], [["flat", "V", "center", "pca", 0.0001, 1], 1, "real"], [["col", "V-1", "center", "rp", 1.0, 4], 64, "ideal"]]}}
+{"arm": "LABN", "enc": "bge", "spec0": {"enc": "bge", "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "center", "want": [["RLSCS", ["flat", "V", "center", "rp", 100.0, 1.0, 4], 16]]}}
+{"arm": "LABP", "enc": "bge", "M": 1024, "V": 16}
+{"arm": "LABS", "enc": "bge", "M": 1024, "V": 16, "rep": 0}
+{"arm": "LABV", "enc": "bge", "M": 1024, "V": 16}
+{"arm": "NL72", "enc": "bge", "spec0": {"enc": "bge", "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "center", "want": [["NLMSC", ["flat", "V", "center", "pca", 0.1, "last", 1], 4], ["NLMSC", ["col", "V", "center", "pca", 0.1, "last", 1], 4]]}}
+{"arm": "FX", "enc": "e5", "kind": "P", "split": "test", "M": 1024, "V": 16, "prep": "whiten", "fmap": "plin", "reps": [0], "cells": [[4, 1, 1.0, 1.0, 10.0], [8, 1, 1.0, 1.0, 10.0], [16, 1, 1.0, 1.0, 10.0]]}
+{"arm": "FX", "enc": "e5", "kind": "T", "split": "test", "M": 1024, "V": 16, "prep": "center", "fmap": "lin", "reps": [0], "p": 768, "cells": [[4, 1, 1.0, 1.0, 1.0]]}
+{"arm": "LABL", "enc": "e5", "spec0": {"enc": "e5", "map": 0, "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "center", "cfgs": [[["flat", "V", "center", "pca", 1.0, 2], 1, "real"]]}}
+{"arm": "LABN", "enc": "e5", "spec0": {"enc": "e5", "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "center", "want": [["NLMSC", ["flat", "V", "center", "pca", 0.03, "last", 1], 4]]}}
+{"arm": "LABP", "enc": "e5", "M": 1024, "V": 16}
+{"arm": "LABS", "enc": "e5", "M": 1024, "V": 16, "rep": 0}
+{"arm": "LABV", "enc": "e5", "M": 1024, "V": 16}
+{"arm": "NL72", "enc": "e5", "spec0": {"enc": "e5", "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "center", "want": [["NLMSC", ["flat", "V", "center", "pca", 0.1, "last", 1], 4], ["NLMSC", ["flat", "V", "center", "pca", 0.25, "avg", 2], 4], ["NLMSC", ["flat", "V", "center", "pca", 0.25, "avg", 1], 4]]}}
+{"arm": "FX", "enc": "minilm", "kind": "P", "split": "test", "M": 1024, "V": 16, "prep": "center", "fmap": "psgn", "reps": [0], "cells": [[4, 1, 1.0, 1.0, 10.0], [8, 1, 1.0, 1.0, 10.0], [16, 1, 1.0, 1.0, 10.0]]}
+{"arm": "FX", "enc": "minilm", "kind": "T", "split": "test", "M": 1024, "V": 16, "prep": "whiten", "fmap": "lin", "reps": [0], "p": 384, "cells": [[4, 1, 1.0, 1.0, 10.0], [8, 1, 1.0, 1.0, 10.0], [16, 1, 1.0, 1.0, 1.0]]}
+{"arm": "LABL", "enc": "minilm", "spec0": {"enc": "minilm", "map": 0, "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "whiten", "cfgs": [[["flat", "V", "whiten", "pca", 100.0, 2], 1, "ideal"], [["flat", "V", "whiten", "pca", 10.0, 2], 1, "real"], [["flat", "V", "whiten", "pca", 10.0, 1], 2, "ideal"], [["flat", "V", "whiten", "pca", 10.0, 1], 2, "real"], [["flat", "V", "whiten", "pca", 10.0, 1], 4, "ideal"], [["flat", "V", "whiten", "pca", 10.0, 1], 4, "real"], [["flat", "V", "whiten", "rp", 1.0, 1], 8, "ideal"], [["flat", "V", "whiten", "rp", 1.0, 1], 8, "real"], [["col", "V", "whiten", "pca", 1.0, 2], 16, "ideal"], [["col", "V", "whiten", "pca", 1.0, 2], 16, "real"], [["col", "V", "whiten", "pca", 1.0, 4], 32, "ideal"], [["col", "V", "whiten", "pca", 1.0, 4], 32, "real"], [["col", "V-1", "whiten", "rp", 1.0, 2], 64, "ideal"], [["col", "V", "whiten", "rp", 1.0, 1], 64, "real"]]}}
+{"arm": "LABN", "enc": "minilm", "spec0": {"enc": "minilm", "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "whiten", "want": [["NLMSC", ["flat", "V", "whiten", "pca", 0.1, "last", 1], 4], ["NLMSC", ["flat", "V", "whiten", "pca", 0.1, "last", 2], 8], ["NLMSC", ["col", "V", "whiten", "pca", 0.25, "last", 2], 16], ["RLSC", ["flat", "V", "whiten", "pca", 10.0, 1.0, 1], 4], ["RLSC", ["flat", "V", "whiten", "rp", 1.0, 1.0, 1], 8], ["RLSC", ["col", "V-1", "whiten", "pca", 1.0, 1.0, 4], 16], ["RLSCS", ["flat", "V", "whiten", "pca", 10.0, 1.0, 1], 4], ["RLSCS", ["col", "V-1", "whiten", "pca", 1.0, 1.0, 4], 8], ["RLSCS", ["col", "V-1", "whiten", "pca", 10.0, 0.999, 4], 16]]}}
+{"arm": "LABP", "enc": "minilm", "M": 1024, "V": 16}
+{"arm": "LABS", "enc": "minilm", "M": 1024, "V": 16, "rep": 0}
+{"arm": "LABV", "enc": "minilm", "M": 1024, "V": 16}
+{"arm": "NL72", "enc": "minilm", "spec0": {"enc": "minilm", "split": "test", "M": 1024, "V": 16, "rep": 0, "prep": "center", "want": [["NLMSC", ["flat", "V", "center", "pca", 0.1, "last", 1], 4]]}}

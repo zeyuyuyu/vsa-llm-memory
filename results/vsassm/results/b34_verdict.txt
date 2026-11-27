@@ -1,0 +1,337 @@
+# B34 verdict (prereg/B34_inmemory_directory_prereg.md): the VSA store against tables whose directory is on the
+# same simulated PCM devices, at equal device count; share of probed keys read exactly (%)
+
+Stores 50, probed keys 4776. Choice: {"T-iis": {"share": 0.1, "dev_mean": 56.719}, "T-iix": {"share": 0.4, "dev_mean": 70.813}, "T-iiia": {"share": 0.4, "dev_mean": 76.754}, "T-iiib": {"share": 0.5, "dev_mean": 87.141}, "T-vhd": {"share": 0.5, "dev_mean": 89.912}, "T-vhdd": {"share": 0.3, "dev_mean": 96.192}, "T-v": {"lam": 5, "dev_overhead_bits_per_pair": {"3": 3.199548100926668, "4": 2.904312058313611, "5": 2.7580900461662914, "6": 2.9524919647651786, "8": 2.796061596948976}}}
+
+Table 1: share of the probed keys read exactly, by arm, noise multiplier k and time (budget C = the VSA
+store's cells; @tot = equal total devices with V-SC, i.i.d. cell errors at the measured rate)
+  arm        k       60 s      1 h      1 d     30 d      1 y
+  V-S        x1    100.00   100.00   100.00   100.00   100.00
+  V-S        x2    100.00   100.00   100.00   100.00   100.00
+  V-S        x4    100.00   100.00   100.00   100.00   100.00
+  V-S        x8    100.00    99.98    99.77    98.60    94.45
+  V-S        x16     3.04     2.85     0.90     0.15     0.02
+  V-S        x32     0.00     0.00     0.00     0.00     0.00
+  V-Snt      x1    100.00   100.00   100.00   100.00   100.00
+  V-Snt      x2    100.00   100.00   100.00   100.00   100.00
+  V-Snt      x4    100.00   100.00   100.00   100.00   100.00
+  V-Snt      x8    100.00   100.00   100.00   100.00    99.98
+  V-Snt      x16    98.83    98.81    98.76    98.76    98.66
+  V-Snt      x32    83.04    89.38    86.16    79.42    73.16
+  V-SC       x1    100.00   100.00   100.00   100.00   100.00
+  V-SC       x2    100.00   100.00   100.00   100.00   100.00
+  V-SC       x4    100.00   100.00   100.00    99.98    99.43
+  V-SC       x8     69.81    42.11     8.02     0.27     0.00
+  V-SC       x16     0.00     0.00     0.00     0.00     0.00
+  V-SC       x32     0.00     0.00     0.00     0.00     0.00
+  V-SCnt     x1    100.00   100.00   100.00   100.00   100.00
+  V-SCnt     x2    100.00   100.00   100.00   100.00   100.00
+  V-SCnt     x4    100.00   100.00   100.00   100.00   100.00
+  V-SCnt     x8     99.69    99.39    98.81    98.37    88.80
+  V-SCnt     x16    51.84    25.71     4.71     0.75     0.29
+  V-SCnt     x32     0.31     0.04     0.08     0.08     0.08
+  T-iv       x1    100.00   100.00   100.00   100.00   100.00
+  T-iv       x2    100.00   100.00   100.00   100.00   100.00
+  T-iv       x4    100.00   100.00   100.00   100.00   100.00
+  T-iv       x8    100.00   100.00   100.00   100.00   100.00
+  T-iv       x16    99.94    99.83    99.69    98.79    97.86
+  T-iv       x32    63.67    71.40    66.73    59.53    53.16
+  T-i        x1    100.00   100.00   100.00   100.00   100.00
+  T-i        x2    100.00   100.00    99.87    96.80    86.41
+  T-i        x4     68.28    38.02    10.36     1.49     0.59
+  T-i        x8      0.06     0.08     0.02     0.00     0.00
+  T-i        x16     0.00     0.00     0.00     0.00     0.00
+  T-i        x32     0.00     0.00     0.00     0.00     0.00
+  T-iih      x1    100.00   100.00   100.00   100.00   100.00
+  T-iih      x2    100.00    99.98    99.79    96.40    86.03
+  T-iih      x4     68.82    35.64    10.13     2.72     2.11
+  T-iih      x8      2.07     2.07     2.05     2.01     1.95
+  T-iih      x16     0.71     0.88     0.40     0.36     0.15
+  T-iih      x32     0.00     0.00     0.00     0.00     0.00
+  T-iis      x1    100.00   100.00   100.00   100.00   100.00
+  T-iis      x2    100.00   100.00   100.00    99.98    99.85
+  T-iis      x4     99.62    99.43    99.20    98.99    98.64
+  T-iis      x8     96.29    95.33    93.38    89.97    86.33
+  T-iis      x16    54.69    53.98    49.64    38.67    31.85
+  T-iis      x32     4.56     5.97     5.57     4.06     2.83
+  T-iix      x1    100.00   100.00   100.00   100.00   100.00
+  T-iix      x2    100.00   100.00   100.00   100.00   100.00
+  T-iix      x4    100.00   100.00   100.00   100.00   100.00
+  T-iix      x8     99.92    99.92    99.81    99.77    99.60
+  T-iix      x16    89.82    89.78    84.65    74.43    65.87
+  T-iix      x32    14.13    17.84    16.21    12.29     9.02
+  T-v        x1    100.00   100.00   100.00   100.00   100.00
+  T-v        x2    100.00   100.00   100.00   100.00   100.00
+  T-v        x4    100.00   100.00   100.00   100.00   100.00
+  T-v        x8    100.00   100.00   100.00   100.00   100.00
+  T-v        x16    98.20    97.99    96.08    91.69    85.59
+  T-v        x32    22.82    30.51    25.23    18.80    14.64
+  T-iiia     x1    100.00   100.00   100.00   100.00   100.00
+  T-iiia     x2    100.00   100.00   100.00   100.00   100.00
+  T-iiia     x4    100.00   100.00   100.00   100.00   100.00
+  T-iiia     x8    100.00   100.00   100.00   100.00    99.98
+  T-iiia     x16    97.01    96.50    94.18    90.24    83.88
+  T-iiia     x32    23.49    31.55    27.85    21.11    15.75
+  T-iiib     x1    100.00   100.00   100.00   100.00   100.00
+  T-iiib     x2    100.00   100.00   100.00   100.00   100.00
+  T-iiib     x4    100.00   100.00   100.00   100.00   100.00
+  T-iiib     x8    100.00   100.00   100.00   100.00   100.00
+  T-iiib     x16   100.00   100.00   100.00    99.94    99.83
+  T-iiib     x32    58.67    72.01    63.78    51.32    41.33
+  T-vhd      x1    100.00   100.00   100.00   100.00   100.00
+  T-vhd      x2    100.00   100.00   100.00   100.00   100.00
+  T-vhd      x4    100.00   100.00   100.00   100.00   100.00
+  T-vhd      x8    100.00   100.00   100.00   100.00   100.00
+  T-vhd      x16   100.00   100.00   100.00   100.00    99.92
+  T-vhd      x32    68.01    77.97    72.49    59.92    49.35
+  T-vhdd     x1    100.00   100.00   100.00   100.00   100.00
+  T-vhdd     x2    100.00   100.00   100.00   100.00   100.00
+  T-vhdd     x4    100.00   100.00   100.00   100.00   100.00
+  T-vhdd     x8    100.00   100.00   100.00   100.00   100.00
+  T-vhdd     x16   100.00   100.00   100.00   100.00    99.98
+  T-vhdd     x32    89.11    95.00    91.81    84.99    74.12
+  T-i@tot    x1    100.00   100.00   100.00   100.00   100.00
+  T-i@tot    x2    100.00   100.00    99.83    96.92    86.73
+  T-i@tot    x4     68.87    38.02     9.86     1.13     0.38
+  T-i@tot    x8      0.02     0.00     0.00     0.00     0.00
+  T-i@tot    x16     0.00     0.00     0.00     0.00     0.00
+  T-i@tot    x32     0.00     0.00     0.00     0.00     0.00
+  T-iih@tot  x1    100.00   100.00   100.00   100.00   100.00
+  T-iih@tot  x2    100.00   100.00   100.00   100.00   100.00
+  T-iih@tot  x4    100.00   100.00   100.00   100.00   100.00
+  T-iih@tot  x8    100.00   100.00   100.00    99.98    99.96
+  T-iih@tot  x16    83.50    83.06    70.14    47.32    27.45
+  T-iih@tot  x32     2.01     2.05     2.01     1.91     1.86
+  T-iis@tot  x1    100.00   100.00   100.00   100.00   100.00
+  T-iis@tot  x2    100.00   100.00   100.00    99.98    99.94
+  T-iis@tot  x4     99.87    99.69    99.48    99.35    99.29
+  T-iis@tot  x8     99.12    98.95    98.72    98.49    97.68
+  T-iis@tot  x16    89.87    89.80    87.84    82.75    78.92
+  T-iis@tot  x32    45.10    51.30    47.84    41.92    36.49
+  T-iix@tot  x1    100.00   100.00   100.00   100.00   100.00
+  T-iix@tot  x2    100.00   100.00   100.00   100.00   100.00
+  T-iix@tot  x4    100.00   100.00   100.00   100.00   100.00
+  T-iix@tot  x8    100.00   100.00   100.00   100.00   100.00
+  T-iix@tot  x16    99.98    99.98    99.98    99.96    99.98
+  T-iix@tot  x32    99.60    99.71    99.64    99.58    99.33
+  T-v@tot    x1    100.00   100.00   100.00   100.00   100.00
+  T-v@tot    x2    100.00   100.00   100.00   100.00   100.00
+  T-v@tot    x4    100.00   100.00   100.00   100.00   100.00
+  T-v@tot    x8    100.00   100.00   100.00   100.00   100.00
+  T-v@tot    x16   100.00   100.00   100.00   100.00   100.00
+  T-v@tot    x32   100.00   100.00   100.00   100.00   100.00
+
+Table 2: design parameters (median over the stores of each group; cells/C = share of the budget used)
+  131072/niah_multikey_2 (n stores 10; pairs 5994, values 5991, S 375, C 3072000 cells)
+     T-i        {'W': 512, 'wk': 233, 'rv': 21, 'Lmax': 29, 'cells': 3032964, 'cells_frac': 0.987}
+     T-i@tot    {'W': 8700, 'wk': 233, 'rv': 651, 'Lmax': 29, 'cells': 52123824, 'cells_frac': 0.999}
+     T-iih      {'W': 512, 'wk': 233, 'r': 2, 'Lmax': 29, 'cells': 2949048, 'cells_frac': 0.96}
+     T-iih@tot  {'W': 8700, 'wk': 233, 'r': 35, 'Lmax': 29, 'cells': 51608340, 'cells_frac': 0.99}
+     T-iiia     {'W': 512, 'wk': 205, 'rp': 21, 'cells': 2991006, 'cells_frac': 0.974}
+     T-iiib     {'W': 512, 'wk': 256, 'wv': 256, 'cells': 3068928, 'cells_frac': 0.999}
+     T-iis      {'W': 512, 'Lmax': 29, 'wk': 233, 'rd': 1, 'rp': 19, 'cells': 2991006, 'cells_frac': 0.974}
+     T-iis@tot  {'W': 8700, 'Lmax': 29, 'wk': 233, 'rd': 4, 'rp': 554, 'cells': 52075872, 'cells_frac': 0.999}
+     T-iix      {'W': 512, 'h': 26, 'wk': 26, 'rd': 8, 'rp': 21, 'cells': 3008988, 'cells_frac': 0.979}
+     T-iix@tot  {'W': 8700, 'h': 26, 'wk': 26, 'rd': 134, 'rp': 372, 'cells': 52099848, 'cells_frac': 0.999}
+     T-iv       {'r': 39}
+     T-v        {'W': 512, 'R': 6007, 'B': 1199, 'db': 15, 'lam': 5, 'r': 30, 'cells': 3062490, 'cells_frac': 0.997}
+     T-v@tot    {'W': 8700, 'R': 6007, 'B': 1199, 'db': 15, 'lam': 5, 'r': 510, 'cells': 52062330, 'cells_frac': 0.998}
+     T-vhd      {'W': 512, 'R': 6007, 'B': 1199, 'db': 15, 'lam': 5, 'rd': 85, 'wv': 256, 'cells': 3066517, 'cells_frac': 0.998}
+     T-vhdd     {'W': 512, 'R': 6007, 'B': 1199, 'db': 15, 'hb': 8, 'lam': 5, 'wb': 384, 'wv': 358, 'cells': 3071338, 'cells_frac': 1.0}
+  131072/niah_multikey_3 (n stores 10; pairs 1723, values 1723, S 108, C 884736 cells)
+     T-i        {'W': 513, 'wk': 288, 'rv': 20, 'Lmax': 36, 'cells': 875284, 'cells_frac': 0.989}
+     T-i@tot    {'W': 8705, 'wk': 288, 'rv': 765, 'Lmax': 36, 'cells': 14995269, 'cells_frac': 1.0}
+     T-iih      {'W': 513, 'wk': 288, 'r': 1, 'Lmax': 36, 'cells': 515177, 'cells_frac': 0.582}
+     T-iih@tot  {'W': 8705, 'wk': 288, 'r': 29, 'Lmax': 36, 'cells': 14940133, 'cells_frac': 0.996}
+     T-iiia     {'W': 513, 'wk': 205, 'rp': 28, 'cells': 883899, 'cells_frac': 0.999}
+     T-iiib     {'W': 513, 'wk': 256, 'wv': 257, 'cells': 883899, 'cells_frac': 0.999}
+     T-iis      {'W': 513, 'Lmax': 36, 'wk': 288, 'rd': 1, 'rp': 20, 'cells': 875284, 'cells_frac': 0.989}
+     T-iis@tot  {'W': 8705, 'Lmax': 36, 'wk': 288, 'rd': 3, 'rp': 712, 'cells': 14983208, 'cells_frac': 0.999}
+     T-iix      {'W': 513, 'h': 22, 'wk': 22, 'rd': 9, 'rp': 28, 'cells': 871838, 'cells_frac': 0.985}
+     T-iix@tot  {'W': 8705, 'h': 22, 'wk': 22, 'rd': 158, 'rp': 475, 'cells': 14991823, 'cells_frac': 0.999}
+     T-iv       {'r': 46}
+     T-v        {'W': 513, 'R': 1723, 'B': 345, 'db': 15, 'lam': 5, 'r': 36, 'cells': 868608, 'cells_frac': 0.982}
+     T-v@tot    {'W': 8705, 'R': 1723, 'B': 345, 'db': 15, 'lam': 5, 'r': 621, 'cells': 14983488, 'cells_frac': 0.999}
+     T-vhd      {'W': 513, 'R': 1723, 'B': 345, 'db': 15, 'lam': 5, 'rd': 85, 'wv': 258, 'cells': 884409, 'cells_frac': 1.0}
+     T-vhdd     {'W': 513, 'R': 1723, 'B': 345, 'db': 15, 'hb': 8, 'lam': 5, 'wb': 384, 'wv': 359, 'cells': 883517, 'cells_frac': 0.999}
+  131072/niah_multivalue (n stores 10; pairs 23, values 21, S 2, C 16384 cells)
+     T-i        {'W': 712, 'wk': 258, 'rv': 90, 'Lmax': 32, 'cells': 16284, 'cells_frac': 0.994}
+     T-i@tot    {'W': 8192, 'wk': 258, 'rv': 1586, 'Lmax': 32, 'cells': 188324, 'cells_frac': 1.0}
+     T-iih      {'W': 712, 'wk': 258, 'r': 2, 'Lmax': 32, 'cells': 12098, 'cells_frac': 0.738}
+     T-iih@tot  {'W': 8192, 'wk': 258, 'r': 31, 'Lmax': 32, 'cells': 187519, 'cells_frac': 0.995}
+     T-iiia     {'W': 712, 'wk': 285, 'rp': 71, 'cells': 16353, 'cells_frac': 0.998}
+     T-iiib     {'W': 712, 'wk': 356, 'wv': 356, 'cells': 16376, 'cells_frac': 1.0}
+     T-iis      {'W': 712, 'Lmax': 32, 'wk': 258, 'rd': 1, 'rp': 75, 'cells': 16284, 'cells_frac': 0.994}
+     T-iis@tot  {'W': 8192, 'Lmax': 32, 'wk': 258, 'rd': 3, 'rp': 1236, 'cells': 188370, 'cells_frac': 1.0}
+     T-iix      {'W': 712, 'h': 10, 'wk': 10, 'rd': 28, 'rp': 72, 'cells': 16376, 'cells_frac': 1.0}
+     T-iix@tot  {'W': 8192, 'h': 10, 'wk': 10, 'rd': 328, 'rp': 818, 'cells': 188324, 'cells_frac': 1.0}
+     T-iv       {'r': 142}
+     T-v        {'W': 712, 'R': 29, 'B': 5, 'db': 7, 'lam': 5, 'r': 78, 'cells': 16302, 'cells_frac': 0.995}
+     T-v@tot    {'W': 8192, 'R': 29, 'B': 5, 'db': 7, 'lam': 5, 'r': 901, 'cells': 188309, 'cells_frac': 0.999}
+     T-vhd      {'W': 712, 'R': 29, 'B': 5, 'db': 7, 'lam': 5, 'rd': 234, 'wv': 282, 'cells': 16368, 'cells_frac': 0.999}
+     T-vhdd     {'W': 712, 'R': 29, 'B': 5, 'db': 7, 'hb': 4, 'lam': 5, 'wb': 491, 'wv': 395, 'cells': 16365, 'cells_frac': 0.999}
+  131072/vt (n stores 10; pairs 13, values 9, S 1, C 8192 cells)
+     T-i        {'W': 630, 'wk': 41, 'rv': 147, 'Lmax': 5, 'cells': 8177, 'cells_frac': 0.998}
+     T-i@tot    {'W': 6301, 'wk': 41, 'rv': 1565, 'Lmax': 5, 'cells': 81913, 'cells_frac': 1.0}
+     T-iih      {'W': 630, 'wk': 41, 'r': 14, 'Lmax': 5, 'cells': 8190, 'cells_frac': 1.0}
+     T-iih@tot  {'W': 6301, 'wk': 41, 'r': 140, 'Lmax': 5, 'cells': 81900, 'cells_frac': 1.0}
+     T-iiia     {'W': 630, 'wk': 252, 'rp': 75, 'cells': 8151, 'cells_frac': 0.995}
+     T-iiib     {'W': 630, 'wk': 315, 'wv': 315, 'cells': 8190, 'cells_frac': 1.0}
+     T-iis      {'W': 630, 'Lmax': 5, 'wk': 41, 'rd': 2, 'rp': 109, 'cells': 8151, 'cells_frac': 0.995}
+     T-iis@tot  {'W': 6301, 'Lmax': 5, 'wk': 41, 'rd': 15, 'rp': 1137, 'cells': 81900, 'cells_frac': 1.0}
+     T-iix      {'W': 630, 'h': 8, 'wk': 8, 'rd': 32, 'rp': 74, 'cells': 8138, 'cells_frac': 0.993}
+     T-iix@tot  {'W': 6301, 'h': 8, 'wk': 8, 'rd': 315, 'rp': 756, 'cells': 81900, 'cells_frac': 1.0}
+     T-iv       {'r': 157}
+     T-v        {'W': 630, 'R': 13, 'B': 3, 'db': 6, 'lam': 5, 'r': 98, 'cells': 8134, 'cells_frac': 0.993}
+     T-v@tot    {'W': 6301, 'R': 13, 'B': 3, 'db': 6, 'lam': 5, 'r': 986, 'cells': 81838, 'cells_frac': 0.999}
+     T-vhd      {'W': 630, 'R': 13, 'B': 3, 'db': 6, 'lam': 5, 'rd': 227, 'wv': 315, 'cells': 8181, 'cells_frac': 0.999}
+     T-vhdd     {'W': 630, 'R': 13, 'B': 3, 'db': 6, 'hb': 3, 'lam': 5, 'wb': 409, 'wv': 441, 'cells': 8187, 'cells_frac': 0.999}
+  32768/niah_multikey_2 (n stores 10; pairs 1494, values 1493, S 94, C 770048 cells)
+     T-i        {'W': 515, 'wk': 216, 'rv': 27, 'Lmax': 27, 'cells': 766422, 'cells_frac': 0.995}
+     T-i@tot    {'W': 8701, 'wk': 216, 'rv': 771, 'Lmax': 27, 'cells': 12993318, 'cells_frac': 0.999}
+     T-iih      {'W': 515, 'wk': 216, 'r': 2, 'Lmax': 27, 'cells': 678276, 'cells_frac': 0.881}
+     T-iih@tot  {'W': 8701, 'wk': 216, 'r': 38, 'Lmax': 27, 'cells': 12887244, 'cells_frac': 0.991}
+     T-iiia     {'W': 515, 'wk': 206, 'rp': 28, 'cells': 767916, 'cells_frac': 0.997}
+     T-iiib     {'W': 515, 'wk': 258, 'wv': 257, 'cells': 769410, 'cells_frac': 0.999}
+     T-iis      {'W': 515, 'Lmax': 27, 'wk': 216, 'rd': 1, 'rp': 27, 'cells': 766422, 'cells_frac': 0.995}
+     T-iis@tot  {'W': 8701, 'Lmax': 27, 'wk': 216, 'rd': 4, 'rp': 712, 'cells': 12991824, 'cells_frac': 0.999}
+     T-iix      {'W': 515, 'h': 22, 'wk': 22, 'rd': 9, 'rp': 28, 'cells': 755964, 'cells_frac': 0.982}
+     T-iix@tot  {'W': 8701, 'h': 22, 'wk': 22, 'rd': 158, 'rp': 475, 'cells': 12999294, 'cells_frac': 1.0}
+     T-iv       {'r': 46}
+     T-v        {'W': 515, 'R': 1499, 'B': 299, 'db': 14, 'lam': 5, 'r': 37, 'cells': 764975, 'cells_frac': 0.993}
+     T-v@tot    {'W': 8701, 'R': 1499, 'B': 299, 'db': 14, 'lam': 5, 'r': 628, 'cells': 12983900, 'cells_frac': 0.999}
+     T-vhd      {'W': 515, 'R': 1499, 'B': 299, 'db': 14, 'lam': 5, 'rd': 91, 'wv': 259, 'cells': 769167, 'cells_frac': 0.999}
+     T-vhdd     {'W': 515, 'R': 1499, 'B': 299, 'db': 14, 'hb': 7, 'lam': 5, 'wb': 386, 'wv': 359, 'cells': 768969, 'cells_frac': 0.999}
+
+Gates
+  G0 (k = 1, every arm >= 99.5% at every time): PASS (lowest T-i 100.00)
+  G1 (V-S and T-iv reproduce B26b's banked counts per store, k, time): PASS (3000 checked, 0 mismatches)
+
+Bars (30 days primary; Delta = arm - best rival, points; VSA ahead >= +5, tie within 2)
+  H1 V-S vs best non-HD in-memory table (budget C) @ 30 d: x4 V-S 100.00 vs T-v 100.00 (+0.00); x8 V-S 98.60 vs T-v 100.00 (-1.40); x16 V-S 0.15 vs T-v 91.69 (-91.54); x32 V-S 0.00 vs T-v 18.80 (-18.80) -> TABLE WIN
+      other times: 60 s TABLE WIN, 1 h TABLE WIN, 1 d TABLE WIN, 1 y TABLE WIN
+  H2 V-Snt vs best non-HD in-memory table (budget C) @ 30 d: x4 V-Snt 100.00 vs T-v 100.00 (+0.00); x8 V-Snt 100.00 vs T-v 100.00 (+0.00); x16 V-Snt 98.76 vs T-v 91.69 (+7.08); x32 V-Snt 79.42 vs T-v 18.80 (+60.62) -> VSA WIN (not strict)
+      other times: 60 s VSA WIN (not strict), 1 h VSA WIN (not strict), 1 d VSA WIN (not strict), 1 y VSA WIN (not strict)
+  H3 V-SC vs best non-HD table at equal total devices @ 30 d: x4 V-SC 99.98 vs T-v@tot 100.00 (-0.02); x8 V-SC 0.27 vs T-v@tot 100.00 (-99.73); x16 V-SC 0.00 vs T-v@tot 100.00 (-100.00); x32 V-SC 0.00 vs T-v@tot 100.00 (-100.00) -> TABLE WIN
+      other times: 60 s TABLE WIN, 1 h TABLE WIN, 1 d TABLE WIN, 1 y TABLE WIN
+  H3c V-SC vs best non-HD table at budget C (favours V-SC) @ 30 d: x4 V-SC 99.98 vs T-v 100.00 (-0.02); x8 V-SC 0.27 vs T-v 100.00 (-99.73); x16 V-SC 0.00 vs T-v 91.69 (-91.69); x32 V-SC 0.00 vs T-v 18.80 (-18.80) -> TABLE WIN
+      other times: 60 s TABLE WIN, 1 h TABLE WIN, 1 d TABLE WIN, 1 y TABLE WIN
+  H4 V-S vs best HD table @ 30 d: x4 V-S 100.00 vs T-vhdd 100.00 (+0.00); x8 V-S 98.60 vs T-vhdd 100.00 (-1.40); x16 V-S 0.15 vs T-vhdd 100.00 (-99.85); x32 V-S 0.00 vs T-vhdd 84.99 (-84.99) -> TABLE WIN
+      other times: 60 s TABLE WIN, 1 h TABLE WIN, 1 d TABLE WIN, 1 y TABLE WIN
+  H4nt V-Snt vs best HD table @ 30 d: x4 V-Snt 100.00 vs T-vhdd 100.00 (+0.00); x8 V-Snt 100.00 vs T-vhdd 100.00 (+0.00); x16 V-Snt 98.76 vs T-vhdd 100.00 (-1.24); x32 V-Snt 79.42 vs T-vhdd 84.99 (-5.57) -> TABLE WIN
+      other times: 60 s TABLE WIN, 1 h TABLE WIN, 1 d TABLE WIN, 1 y TIE
+
+Per user-named design, V-S minus the design at 30 days (points), k = 4 / 8 / 16 / 32:
+  T-i      +98.51   +98.60    +0.15    +0.00
+  T-iih    +97.28   +96.59    -0.21    +0.00
+  T-iis     +1.01    +8.63   -38.53    -4.06
+  T-iix     +0.00    -1.17   -74.29   -12.29
+  T-v       +0.00    -1.40   -91.54   -18.80
+  T-iiia    +0.00    -1.40   -90.10   -21.11
+  T-iiib    +0.00    -1.40   -99.79   -51.32
+  T-vhd     +0.00    -1.40   -99.85   -59.92
+  T-vhdd    +0.00    -1.40   -99.85   -84.99
+  T-iv      +0.00    -1.40   -98.64   -59.53
+
+Predictions (registered; mechanical check, reporting only)
+  P1 T-i <= 10 at x4; T-iih <= 15 at x4: 1.49, 2.72 -> HELD
+  P2 T-iis >= 98 at x4, 80-95 at x8, 20-50 at x16, <= 10 at x32: 98.99 89.97 38.67 4.06 -> HELD
+  P3 T-iix >= 99.5 at x4 and x8, 60-85 at x16, 5-20 at x32: 100.00 99.77 74.43 12.29 -> HELD
+  P4 T-v >= 99.5 at x8, 85-97 at x16, 10-30 at x32; T-v the best non-HD table at x16 and x32: 100.00 91.69 18.80; best x16 T-v, x32 T-v -> HELD
+  P5 H1 TABLE WIN; |Delta| <= 2 at x4 and x8, Delta <= -80 at x16; TABLE WIN at every time: TABLE WIN {4: 0.0, 8: -1.4, 16: -91.54, 32: -18.8}; every time True -> HELD
+  P6 V-Snt >= 99.5 at x8, 97-100 at x16, 65-90 at x32: 100.00 98.76 79.42 -> HELD
+  P7 H2 VSA WIN (not strict): ties at x4 and x8, Delta +2..+12 at x16, >= +30 at x32; at every time: VSA WIN (not strict) {4: 0.0, 8: 0.0, 16: 7.08, 32: 60.62}; every time True -> HELD
+  P8 T-iiib, T-vhd, T-vhdd >= 99.5 at x16; x32: T-iiib 35-60, T-vhd 45-70, T-vhdd 70-90; T-iiia 80-95 at x16: x16 99.94 100.00 100.00; x32 51.32 59.92 84.99; T-iiia x16 90.24 -> HELD
+  P9 H4 TABLE WIN; H4nt: |Delta| <= 2 at x4, x8, x16 and V-Snt - T-vhdd in [-8, +2] at x32: H4 TABLE WIN; H4nt {4: 0.0, 8: 0.0, 16: -1.24, 32: -5.57}, V-Snt - T-vhdd at x32 -5.57 -> HELD
+  P10 V-SC <= 5 at x8; V-SCnt 95-100 at x8 and <= 10 at x16; H3 TABLE WIN; T-v@tot and T-iix@tot >= 99 at x32: 0.27; 98.37 0.75; TABLE WIN; 100.00 99.58 -> HELD
+  10 of 10 held (P11 gates and P12 closed form: see the gate lines and results/b34_check.txt)
+
+## Checks from other angles (b34_check.py; results/b34_check.txt, results/b34_handread.txt)
+  P11 gates: G0 PASS, G1 PASS (3,000 of 3,000 store x k x time counts of V-S and T-iv equal B26b's banked counts) -> HELD
+  P12 closed form (no cell simulated; only the noiseless codes and the device model's measured cell error rate p(k, t)):
+      0 of 360 cells flagged (12 arms x 6 k x 5 times), largest |simulated - closed form| 1.68 points (T-iis, 1 day,
+      x16); the exact-formula arms (T-iv, T-i, T-iih, T-v) within 1.15 points everywhere -> HELD
+  All 12 registered predictions held; no prediction failed. (Before the dev runs, back-of-envelope estimates were off in
+  places that the registered predictions then corrected, e.g. T-v at x32 about 28% expected, 17.8% on dev, 18.8% test;
+  T-iiib at x32 about 30% expected, 46.7% dev, 51.3% test. These were never registered.)
+  Store-cluster bootstrap (10,000 resamples of the 50 stores, post hoc), 30 days:
+      V-S - T-v      x8  -1.40 [-1.72, -1.07]   x16 -91.54 [-93.04, -90.04]
+      V-S - T-iis    x8  +8.63 [+5.97, +11.54]
+      V-Snt - T-v    x16 +7.08 [+5.24, +8.70]   x32 +60.62 [+56.90, +63.31]
+      T-vhdd - V-Snt x16 +1.24 [+0.70, +2.06]   x32  +5.57 [+3.89, +7.28]
+      V-Snt - T-vhd  x32 +19.49 [+16.85, +21.72];  V-Snt - T-iiib x32 +28.10 [+24.94, +30.80]
+
+## Reading (written by hand after the generated part; the reading rules are in the prereg)
+
+Setting. Every stored bit of every arm is a differential pair of PCM cells on B25's device model; the tables keep their
+key directory (CAM words, hash displacements, last-value flags) on the same cells; every arm uses at most the VSA
+store's cell count C = S x 8,192 (cells used: 97-100% of C for every table arm except T-iih, 51-100%, whose integer
+repetition leaves cells unused on some stores); queries are the 4,776 probed keys.
+
+1. H1, primary (V-S, the store read as published, threshold 0.5): TABLE WIN at every time. The table that finds a row
+   through a stored minimal perfect hash (T-v: 15-16-bit displacements per bucket of about 5 pairs, i.e. 3.0-3.2 bits
+   per pair on the largest stores, with every bit repetition-coded 29-30 times) reads 100 / 100 / 91.69 / 18.80% at x4 / x8 / x16 / x32 (30 days)
+   against the store's 100 / 98.60 / 0.15 / 0. Moving the directory onto the devices costs the best table 7 points at
+   x16 (B26b's digital-directory table T-iv: 98.79) because a hash directory needs bits, not keys. The B26b sentence
+   holds in the fully in-memory setting.
+2. The user-named key CAMs lose to the VSA store at moderate noise, as the reading rule anticipated. Exact matching of
+   the native key bytes (T-i) fails at x4 (1.49%; hand-read: 1-7 of 225-233 word cells flipped, exact match needs 0),
+   as does majority matching with only r = 2 copies (T-iih, 2.72%). Nearest-Hamming matching of the native code
+   (T-iis) reads 98.99 / 89.97% at x4 / x8 against 100 / 98.60 (V-S ahead by +8.63 [+5.97, +11.54] at x8): keys that
+   share the adjective differ in a few bits (hand-read: 'roasted-air' -> 'roasted-car', 2 bits apart; 'hot-box' ->
+   'hot-fob', 4 bits). Registered reading: the VSA store beats a CAM that holds the keys, not a table: a hashed
+   directory (T-iix, T-v) does not store keys and matches the store at x8 (99.77, 100).
+3. H2 (V-Snt, the same device reads with the first value taken by argmax, the tables' own "key present" assumption):
+   VSA WIN (not strict) at every time: ties at x4 and x8, +7.08 [+5.24, +8.70] at x16 and +60.62 [+56.90, +63.31] at
+   x32 over T-v (V-Snt 100 / 100 / 98.76 / 79.42). So V-S's collapse at x16 is its fixed threshold, not its code
+   (hand-read: at x16 the true value is still the best candidate, at similarity 0.31-0.41 against a 0.5 threshold;
+   the best similarity at the next, empty position is 0.16-0.19). V-Snt's remaining x16 losses are exactly the 57 probed keys that hold more
+   than one value (27 in vt, 30 in multivalue; all lost at x16 and x32), because its stop rule after the first value
+   still needs the threshold (hand-read: later-value similarities 0.31-0.48, all the best candidate); on those small stores the hashed table is
+   better (multivalue 100 vs 83.1, vt 100 vs 72.7 at x16).
+4. H4 (which ingredient): with V-S, TABLE WIN; with V-Snt, TABLE WIN at 30 days (TIE at 1 year). The table whose
+   every field is a random high-dimensional code decoded by similarity, with no superposition and no stored key
+   (T-vhdd), reads 100 / 100 / 100 / 84.99%: ahead of V-Snt by +1.24 [+0.70, +2.06] at x16 and +5.57 [+3.89, +7.28] at
+   x32. Partly high-dimensional tables fall in between: high-dimensional values with a repetition-coded hash directory
+   (T-vhd) 100 / 59.92, high-dimensional keys and values searched over all rows (T-iiib) 99.94 / 51.32, high-dimensional
+   keys with repetition-coded values (T-iiia) 90.24 / 21.11 at x16 / x32. The robustness at high noise therefore belongs
+   to random high-dimensional codes with similarity decoding in every field (the VSA ingredient), which a table can use
+   as well; superposition adds none on top. What the store gains over a key-holding table is that it stores no
+   per-pair address, which a hashed table also achieves.
+5. H3 (V-SC, the store and its clean-up codebook both on the devices: the fully in-memory VSA): TABLE WIN. V-SC fails
+   at x8 (0.27%; B25's GDC gain bias on the codebook crossbar), V-SCnt at x16 (0.75%). Its codebook costs N_values / S
+   (about 16) times the store's cells; tables given the same total device count read 100% (T-v@tot) and 99.58%
+   (T-iix@tot) at x32. Even at the store's budget alone (H3c) every non-HD table beats it from x8 on.
+6. At the measured device parameters (x1) every arm reads every key at every time (G0); at x2, only the unprotected
+   exact-match CAMs lose keys (T-i 96.8%, T-iih 96.4% at 30 days). Everything above is about stressed devices (every
+   noise source multiplied 4- to 32-fold).
+
+Limits. A simulation of one published PCM model (Joshi et al. 2020; fitted to 1e5 s, so 30 days and 1 year are
+extrapolations) with i.i.d. cell errors: no spatial correlation, stuck cells or temperature, which would hurt
+repetition copies placed together and are what Karunaratne et al. counter by spreading each hypervector across the
+array. Only storage cells are counted: CAM match-line circuitry, majority gates, hash logic, ADCs and the digital
+clean-up of V-S (the vocabulary's codes regenerated from strings) are not, so this is not an area or energy comparison.
+No arm is scored on rejecting a key that is not stored: T-v and V-Snt cannot reject one, V-S can. T-iix, T-v, T-vhd and
+T-vhdd were added by us (T-vhd and T-vhdd during the dev stage, after seeing dev results); every split and lambda was
+chosen on synthetic dev stores, whose results the test reproduced within a few points in every cell.
+
+What the paper can say (numbers from this file; 30 days; shares of the 4,776 probed RULER keys):
+- "With every stored bit, including a table's directory, on the same simulated phase-change devices and at the store's
+  device count, a table that finds its rows through a stored minimal perfect hash (about 3 directory bits per pair,
+  repetition-coded) remains more robust than the VSA store read with its fixed acceptance threshold: 100%, 91.7% and
+  18.8% of keys at 8-, 16- and 32-fold device noise against 98.6%, 0.15% and 0%. Tables that keep the keys themselves
+  in a content-addressable memory do worse than the store (exact match 1.5% at 4-fold noise; nearest-Hamming match
+  90.0% vs 98.6% at 8-fold)."
+- "The store's collapse is its threshold, not its code: accepting the first value by argmax, as the tables accept their
+  nearest row, the same reads give 98.8% at 16-fold and 79.4% at 32-fold noise, ahead of every table without
+  high-dimensional codes (+7.1 [5.2, 8.7] and +60.6 [56.9, 63.3] points). A table whose fields are themselves random
+  high-dimensional codes decoded by similarity, without superposition, does as well or better (100% and 85.0%). The
+  robustness belongs to random high-dimensional codes with similarity decoding, which a table can use too."
+- Must not say: that the vector form is more robust than a table at equal devices (H1 TABLE WIN; H4 TABLE WIN), or
+  that superposition contributes robustness; nor "first" (no precedent found, results/b34_literature.txt).
+
+## Compute
+  Test run: 300 jobs (50 stores x 6 k), 2.73 CPU-hours summed job time, about 3 minutes wall on 64 cores of the A800
+  box (CPU only, no GPU). Closed form on the test stores: box CPU, about 15 minutes wall on 50 cores. Dev: grids 2.1
+  CPU-h (box and local), two full dev runs 0.7 CPU-h each, MPHF lambda and self-tests about 0.5 CPU-h locally. PACE: 0.
+  GPU: 0. Paid API: none.

@@ -1,0 +1,10 @@
+Q1: HELD - R1 STORE - NLMSc: NLMSc leads on 7 of 7 (>= 5); store leads on 0 (0)
+Q2: HELD - R1-V2 NLMSc leads on 4 of 4 LLMs (4), on 1 of 3 sentence encoders (<= 2)
+Q3: HELD - R1-V16 NLMSc leads on 6 of 7 (>= 5)
+Q4: FAILED - NLMSc - LAMc R1-V2 within [-1.5, +0.5] on 5 of 7 (>= 6): qwen8 -1.17, b46 -2.36, llama -1.11, mistral -0.71, e5 -1.42, bge -2.09, minilm -1.28; R1-V16 LAMc leads on 6 (>= 5), each by 1-5: False: qwen8 -2.73, b46 -3.00, llama -6.99, mistral -0.18, e5 -4.69, bge -2.21, minilm -3.02
+Q5: HELD - |R1 RLSc - LAMc| <= 0.5 on 7 of 7 (>= 6): qwen8 -0.46, b46 -0.44, llama -0.49, mistral +0.17, e5 -0.06, bge -0.11, minilm +0.02; STORE - RLSc labels = B60 STORE - LAMc labels in 21 of 21 (>= 19)
+Q6: FAILED - RLSc beta = 1 in 53 of 84 R1 cells (>= 75)
+Q7: FAILED - NLMSc output last in 75 of 84 (>= 70); mu = 1 in 6 of 42 V = 2 cells (>= half); mu <= 0.25 in 39 of 42 V = 16 cells (>= half)
+Q8: HELD - RLSc working state over budget in 84 of 84 (84); R1 STORE - RLScS store leads on 7 of 7 (>= 6)
+Q9: FAILED - medians per encoder (NLMSc/STORE per fact within x4; RLSc/STORE >= 100; LAMc/NLMSc total >= 10): qwen8 NLMSc/STORE 2.1, RLSc/STORE 1.1e+03, LAMc/NLMSc 65; b46 NLMSc/STORE 2.1, RLSc/STORE 4.8e+02, LAMc/NLMSc 44; llama NLMSc/STORE 1.8, RLSc/STORE 4.8e+02, LAMc/NLMSc 66; mistral NLMSc/STORE 2.1, RLSc/STORE 2.1e+03, LAMc/NLMSc 64; e5 NLMSc/STORE 2.1, RLSc/STORE 70, LAMc/NLMSc 18; bge NLMSc/STORE 2.1, RLSc/STORE 37, LAMc/NLMSc 12; minilm NLMSc/STORE 1.1, RLSc/STORE 35, LAMc/NLMSc 54
+Q10: HELD - plain-loop scorer max |difference| 5.6e-17 (< 1e-9); bits 837,774 dev + test rows, 0 over budget, 0 not maximal; NLMS primal loop = dual form (max rel dW 2.4e-15 < 1e-8), RLS recursion = closed form (6.6e-13 < 1e-6); float64 re-derivation agreement 1.0000 on 72 cells (>= 0.99) (results/b62_check.txt)

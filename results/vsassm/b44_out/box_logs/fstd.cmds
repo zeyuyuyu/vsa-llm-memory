@@ -1,0 +1,22 @@
+[2026-11-18T23:53:07Z] gpu1 lane1 b44_feats.py --enc qwen8 --items std:dev std:test std:train
+[2026-11-19T00:56:56Z] gpu1 lane1 rc=0 b44_feats.py --enc qwen8 --items std:dev std:test std:train
+[2026-11-19T00:56:56Z] gpu1 lane1 b44_name.py --cell std:800 --arm exact --out out/name/qwen8_exact_std_n800.json
+[2026-11-19T00:57:09Z] gpu1 lane1 rc=0 b44_name.py --cell std:800 --arm exact --out out/name/qwen8_exact_std_n800.json
+[2026-11-19T00:57:09Z] gpu1 lane1 b44_name.py --cell std:8000 --arm exact --out out/name/qwen8_exact_std_n8000.json
+[2026-11-19T00:57:52Z] gpu1 lane1 rc=0 b44_name.py --cell std:8000 --arm exact --out out/name/qwen8_exact_std_n8000.json
+[2026-11-19T00:57:52Z] gpu1 lane1 b44_name.py --cell std:80000 --arm exact --out out/name/qwen8_exact_std_n80000.json
+[2026-11-19T01:03:32Z] gpu1 lane1 rc=0 b44_name.py --cell std:80000 --arm exact --out out/name/qwen8_exact_std_n80000.json
+[2026-11-19T01:03:32Z] gpu1 lane1 b44_name.py --cell std:800 --arm name --out out/name/qwen8_name_std_n800.json
+[2026-11-19T01:04:08Z] gpu1 lane1 rc=0 b44_name.py --cell std:800 --arm name --out out/name/qwen8_name_std_n800.json
+[2026-11-19T01:04:08Z] gpu1 lane1 b44_name.py --cell std:8000 --arm name --out out/name/qwen8_name_std_n8000.json
+[2026-11-19T01:07:24Z] gpu1 lane1 rc=0 b44_name.py --cell std:8000 --arm name --out out/name/qwen8_name_std_n8000.json
+[2026-11-19T01:07:24Z] gpu1 lane1 b44_name.py --cell std:800 --arm probe --out out/name/qwen8_probe_std_n800.json
+[2026-11-19T01:08:50Z] gpu1 lane1 rc=0 b44_name.py --cell std:800 --arm probe --out out/name/qwen8_probe_std_n800.json
+[2026-11-19T01:08:50Z] gpu1 lane1 b44_name.py --cell std:8000 --arm probe --out out/name/qwen8_probe_std_n8000.json
+[2026-11-19T01:12:29Z] gpu1 lane1 rc=0 b44_name.py --cell std:8000 --arm probe --out out/name/qwen8_probe_std_n8000.json
+[2026-11-19T01:12:29Z] gpu1 lane1 b44_name.py --cell std:80000 --arm name --seeds 42 --out out/name/qwen8_name_std_n80000_s42.json
+[2026-11-19T01:22:46Z] gpu1 lane1 rc=0 b44_name.py --cell std:80000 --arm name --seeds 42 --out out/name/qwen8_name_std_n80000_s42.json
+[2026-11-19T01:22:46Z] gpu1 lane1 b44_name.py --cell std:80000 --arm name --seeds 123 --out out/name/qwen8_name_std_n80000_s123.json
+[2026-11-19T01:33:09Z] gpu1 lane1 rc=0 b44_name.py --cell std:80000 --arm name --seeds 123 --out out/name/qwen8_name_std_n80000_s123.json
+[2026-11-19T01:33:09Z] gpu1 lane1 b44_name.py --cell std:80000 --arm name --seeds 456 --out out/name/qwen8_name_std_n80000_s456.json
+[2026-11-19T01:43:17Z] gpu1 lane1 rc=0 b44_name.py --cell std:80000 --arm name --seeds 456 --out out/name/qwen8_name_std_n80000_s456.json

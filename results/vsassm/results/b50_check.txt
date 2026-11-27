@@ -1,0 +1,49 @@
+B50 checks from other angles (all on the full test split)
+
+== 1. Second scorer (b40_check.py: gold rebuilt from the prompt text, outputs re-normalised by its own rules), every B50 test file
+b50_out/preds/N/discenergy_s0.jsonl: n=2500 acc_main=0.8448 acc_check=0.8448 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discenergy_s1.jsonl: n=2500 acc_main=0.8524 acc_check=0.8524 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discenergy_s2.jsonl: n=2500 acc_main=0.8460 acc_check=0.8460 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmahalw_s0.jsonl: n=2500 acc_main=0.8436 acc_check=0.8436 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmahalw_s1.jsonl: n=2500 acc_main=0.8508 acc_check=0.8508 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmahalw_s2.jsonl: n=2500 acc_main=0.8440 acc_check=0.8440 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmaha_s0.jsonl: n=2500 acc_main=0.8436 acc_check=0.8436 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmaha_s1.jsonl: n=2500 acc_main=0.8508 acc_check=0.8508 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmaha_s2.jsonl: n=2500 acc_main=0.8440 acc_check=0.8440 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmaxlogit_s0.jsonl: n=2500 acc_main=0.8448 acc_check=0.8448 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmaxlogit_s1.jsonl: n=2500 acc_main=0.8524 acc_check=0.8524 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmaxlogit_s2.jsonl: n=2500 acc_main=0.8460 acc_check=0.8460 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmsp_s0.jsonl: n=2500 acc_main=0.8444 acc_check=0.8444 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmsp_s1.jsonl: n=2500 acc_main=0.8544 acc_check=0.8544 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discmsp_s2.jsonl: n=2500 acc_main=0.8476 acc_check=0.8476 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discopen_s0.jsonl: n=2500 acc_main=0.7604 acc_check=0.7604 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discopen_s1.jsonl: n=2500 acc_main=0.7668 acc_check=0.7668 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discopen_s2.jsonl: n=2500 acc_main=0.7684 acc_check=0.7684 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discp08_s0.jsonl: n=2500 acc_main=0.8128 acc_check=0.8128 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discp08_s1.jsonl: n=2500 acc_main=0.8184 acc_check=0.8184 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/discp08_s2.jsonl: n=2500 acc_main=0.8164 acc_check=0.8164 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/N/cot2048_cot.jsonl: n=2500 acc_main=0.4184 acc_check=0.4184 gold_mismatch=0 correct_mismatch=0
+b50_out/preds/R/cot2048_cot.jsonl: n=2000 acc_main=0.8085 acc_check=0.8085 gold_mismatch=0 correct_mismatch=0
+TOTAL gold_mismatch 0 correct_mismatch 0
+
+== 2. Independent score implementation (b50_check_scores.py: sklearn EmpiricalCovariance / LedoitWolf classes, numpy heads, on cached states) vs the live-logged scores
+dev seed 0 msp rho 0.99903 gate-diff 0; energy rho 0.99946 gate-diff 1; maha rho 0.99966 gate-diff 1; mahalw rho 0.99965 gate-diff 1; maxlogit rho 0.99946 gate-diff 1
+dev seed 1 msp rho 0.99902 gate-diff 0; energy rho 0.99949 gate-diff 1; maha rho 0.99966 gate-diff 1; mahalw rho 0.99965 gate-diff 1; maxlogit rho 0.99949 gate-diff 1
+dev seed 2 msp rho 0.99908 gate-diff 0; energy rho 0.99943 gate-diff 0; maha rho 0.99966 gate-diff 1; mahalw rho 0.99965 gate-diff 1; maxlogit rho 0.99943 gate-diff 0
+test seed 0 msp rho 0.99974 gate-diff 2; energy rho 0.99982 gate-diff 1; maha rho 0.99987 gate-diff 0; mahalw rho 0.99987 gate-diff 0; maxlogit rho 0.99982 gate-diff 1
+test seed 1 msp rho 0.99975 gate-diff 2; energy rho 0.99984 gate-diff 0; maha rho 0.99987 gate-diff 0; mahalw rho 0.99987 gate-diff 0; maxlogit rho 0.99984 gate-diff 0
+test seed 2 msp rho 0.99975 gate-diff 2; energy rho 0.99984 gate-diff 0; maha rho 0.99987 gate-diff 0; mahalw rho 0.99987 gate-diff 0; maxlogit rho 0.99984 gate-diff 0
+
+== 3. Gate re-derivation, composition, B40 reproduction (from b50_verdict.py)
+  CHECKS:
+     msp      gate re-derivation mismatches 0/7500; composition mismatches 0/7500; max |score - forced-open score| 0
+     energy   gate re-derivation mismatches 0/7500; composition mismatches 0/7500; max |score - forced-open score| 0
+     maha     gate re-derivation mismatches 0/7500; composition mismatches 0/7500; max |score - forced-open score| 0
+     mahalw   gate re-derivation mismatches 0/7500; composition mismatches 0/7500; max |score - forced-open score| 0
+     maxlogit gate re-derivation mismatches 0/7500; composition mismatches 0/7500; max |score - forced-open score| 0
+     p08 vs B40 DISC: pred differs on 0/7500, gate differs on 0/7500
+     p08 composition mismatches 0/7500
+
+== 4. CoT reproducibility against B40's 512-token run (same A800 type, same batches, greedy)
+     reproducibility: items ending before 512 tokens with text identical to B40: 1977/1977; longer items whose text starts with B40's 512-token text: 523/523
+     reproducibility: items ending before 512 tokens with text identical to B40: 1913/1913; longer items whose text starts with B40's 512-token text: 87/87

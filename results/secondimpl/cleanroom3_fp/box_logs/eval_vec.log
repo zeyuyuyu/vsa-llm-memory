@@ -1,0 +1,22 @@
+{'train': 16000, 'dev': 800, 'test': 2000} max answer 1023
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 147.25it/s]
+prompt len 95.809 answer tok lens [0, 15576, 424]
+init recon rel-err vec 0.6531162261962891 disc 0.6531162261962891
+READ ('vec_pub', 'train') operands+op right 0.9995625019073486 answer right 0.9996874928474426 gate open 0.9991250038146973
+READ ('vec_best', 'train') operands+op right 0.9999374747276306 answer right 1.0 gate open 0.9991250038146973
+READ ('disc', 'train') operands+op right 1.0 answer right 1.0 gate open 1.0
+READ ('vec_pub', 'dev') operands+op right 0.9962499737739563 answer right 0.9962499737739563 gate open 0.9975000023841858
+READ ('vec_best', 'dev') operands+op right 0.9987499713897705 answer right 0.9987499713897705 gate open 0.9975000023841858
+READ ('disc', 'dev') operands+op right 1.0 answer right 1.0 gate open 1.0
+READ ('vec_pub', 'test') operands+op right 0.9944999814033508 answer right 0.9950000047683716 gate open 0.9975000023841858
+READ ('vec_best', 'test') operands+op right 1.0 answer right 1.0 gate open 0.9975000023841858
+READ ('disc', 'test') operands+op right 1.0 answer right 1.0 gate open 1.0
+dev {'base': 0.18125, 'vec_pub': 0.99375, 'vec_best': 0.99625}
+Traceback (most recent call last):
+  File "/data0/path/to/HOME/cr3_fp/cr3_fp.py", line 627, in <module>
+    main()
+  File "/data0/path/to/HOME/cr3_fp/cr3_fp.py", line 619, in main
+    for arm in arms:
+               ^^^^
+NameError: name 'arms' is not defined. Did you mean: 'arm'?

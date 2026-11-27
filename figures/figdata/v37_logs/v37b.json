@@ -1,0 +1,32 @@
+{
+ "n_sym": 13,
+ "ceiling_eval": 0.9459459459459459,
+ "n_train_expressible": 775,
+ "n_eval_expressible": 420,
+ "arms": {
+  "floor": [
+   0.20714285714285716,
+   0.1880952380952381,
+   0.21428571428571427
+  ],
+  "parser": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "probe_argmax": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "spans": [
+   0.49523809523809526,
+   0.5047619047619047,
+   0.5071428571428571
+  ]
+ },
+ "floor": 0.2031746031746032,
+ "parser": 1.0,
+ "headroom": 0.7968253968253968,
+ "verdict": "TRANSFERS AT DEPTH TWO (the supervised discrete handover composes on natural text; the central claim now covers two natural-text tasks and two hops)"
+}

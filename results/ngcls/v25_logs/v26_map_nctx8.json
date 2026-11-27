@@ -1,0 +1,42 @@
+{
+ "algebra": "MAP",
+ "hops": 2,
+ "n_ctx": 8,
+ "n_sym": 64,
+ "arms": {
+  "floor": [
+   0.524,
+   0.542,
+   0.534
+  ],
+  "parser": [
+   0.746,
+   0.748,
+   0.76
+  ],
+  "consistent": [
+   0.73,
+   0.726,
+   0.754
+  ],
+  "spans": [
+   0.488,
+   0.492,
+   0.434
+  ],
+  "probe_argmax": [
+   0.746,
+   0.748,
+   0.76
+  ],
+  "frozen_cont": [
+   0.826,
+   0.808,
+   0.792
+  ]
+ },
+ "floor": 0.5333333333333333,
+ "parser": 0.7513333333333333,
+ "headroom": 0.21799999999999997,
+ "verdict": "INTERMEDIATE (report which bars held; license neither reading)"
+}

@@ -1,0 +1,22 @@
+{
+ "N_layer": 20,
+ "N_vsa_epochs": 1000,
+ "N_disc_epochs": 300,
+ "R_layer": 17,
+ "R_vsa_epochs": 100,
+ "R_disc_epochs": 30,
+ "N_vsa_": "recon_lr1e-3",
+ "N_disc_": "lr1e-3",
+ "N_lora1l_": "lr3e-4",
+ "R_vsa_": "lr1e-3",
+ "R_disc_": "lr1e-3",
+ "N_lora_": "lr1e-4",
+ "R_lora_": "lr1e-4",
+ "R_e2e_vsa_": "lr1e-3",
+ "R_e2e_tab_": "lr1e-3",
+ "R_e2e_const_": "lr1e-3",
+ "R3_e2e_vsa_": null,
+ "R3_e2e_tab_": null,
+ "R3_e2e_const_": null,
+ "soft_beta": 30
+}

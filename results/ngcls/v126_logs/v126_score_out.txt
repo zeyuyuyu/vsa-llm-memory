@@ -1,0 +1,45 @@
+===== V-126: retrieval baseline + second benchmark (local reader) =====
+
+  --- 2wiki (n=300) ---
+    single_pass                  0.3333  [0.2833, 0.3867]  tok=325919  sha=0427723b2677dd7c5bd02488
+    bm25_topk                    0.0433  [0.0200, 0.0667]  tok=67101  sha=3dcab3182363923a5c37a3d7
+    oracle_sentences             0.5200  [0.4633, 0.5767]  tok=70199  sha=9ee5afcea8c11b802a05bca2
+    mean supporting sentences per row (k) : 2.00
+    BM25 sentence recall of the oracle set: 0.2450
+
+  --- hotpotqa (n=300) ---
+    single_pass                  0.4967  [0.4400, 0.5533]  tok=395201  sha=130093fce1d876cf4564a026
+    bm25_topk                    0.3667  [0.3133, 0.4233]  tok=76890  sha=ecfa8ce5344ff74afbe09088
+    oracle_sentences             0.6833  [0.6300, 0.7367]  tok=76653  sha=7d41fff7321762f1405d5f32
+    mean supporting sentences per row (k) : 2.48
+    BM25 sentence recall of the oracle set: 0.4874
+
+  >>> P0 validity gate: 2wiki single_pass under the BANKED builder 0.4433 vs served 0.4700 (+-.10) : True
+
+  >>> P1 (bar: oracle_sentences - single_pass CI excludes zero, on BOTH datasets)
+      2wiki      +0.1867  [+0.1400, +0.2333]  excludes zero: True
+      hotpotqa   +0.1867  [+0.1333, +0.2433]  excludes zero: True
+      P1: True
+
+  >>> P2 (bar: recovered fraction (bm25 - sp)/(oracle - sp) < 0.50 on BOTH datasets)
+      2wiki      sp 0.3333  bm25 0.0433  oracle 0.5200 | gain +0.1867 | recovered -1.554 | bm25-sp -0.2900 [-0.3467, -0.2333]
+      hotpotqa   sp 0.4967  bm25 0.3667  oracle 0.6833 | gain +0.1867 | recovered -0.696 | bm25-sp -0.1300 [-0.1900, -0.0700]
+      P2: True
+
+  >>> P3 (descriptive, no bar): oracle gain on 2wiki minus oracle gain on hotpotqa
+      2wiki gain +0.1867 [+0.1400, +0.2333] | hotpotqa gain +0.1867 [+0.1300, +0.2433] | difference +0.0000
+      2Wiki's hop facts come from a knowledge base; HotpotQA's supporting sentences are
+      human-selected from the same prose the reader sees. A larger 2Wiki gain is the
+      annotation-provenance contrast; it is reported, not tested.
+
+  >>> P4 (descriptive, no bar): BM25 sentence recall of the annotated supporting set
+      2wiki      0.2450 (k matched per row, mean k 2.00)
+      hotpotqa   0.4874 (k matched per row, mean k 2.48)
+
+  --- readings, as registered ---
+  P1 holds on both: the surviving claim of the paper replicates on a second benchmark.
+  P2 holds on both: a strong lexical retriever recovers less than half the available gain,
+  so evidence SELECTION is a real unsolved problem on these tasks and not a straw man.
+  scoping: no API call was made; the store is not re-measured (no model participates in it);
+  nothing here bears on the npj submission.
+V126-SCORE-DONE

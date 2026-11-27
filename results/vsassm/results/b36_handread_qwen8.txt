@@ -1,0 +1,54 @@
+## qwen8|ideal|256|2|16: VSA 74.29, BEST (FBF) 61.79, diff +12.50, EXACT 89.56
+   queries only the VSA gets right: 1299; only BEST: 691; BEST configuration (store 0): ['FBF', 'center', 4]
+   -- only VSA right (10 at random) --
+   alias 'Makaziwe Mandela-Amuah'                 label 'Makaziwe Mandela'                  exact-NN 'Makaziwe Mandela'             cos(whitened) +0.70
+   alias 'Fr. Flore'                              label 'Frans Floris I'                    exact-NN 'Frans Floris I'               cos(whitened) +0.20
+   alias 'Bell'                                   label 'Alexander Graham Bell'             exact-NN 'Alexander Graham Bell'        cos(whitened) +0.35
+   alias 'G.v. Nuwlandt'                          label 'Willem van Nieulandt II'           exact-NN 'Willem van Nieulandt II'      cos(whitened) +0.14
+   alias 'Jalāladdīn Rūmī'                        label 'Rumi'                              exact-NN 'Rumi'                         cos(whitened) +0.30
+   alias 'Thorsteinn Bachmann'                    label 'Þorsteinn Bachmann'                exact-NN 'Þorsteinn Bachmann'           cos(whitened) +0.65
+   alias 'The Nuremberg Trials'                   label 'Nuremberg Trials'                  exact-NN 'Nuremberg Trials'             cos(whitened) +0.97
+   alias 'Pontificia Universidad Catolica de Chile' label 'Pontifical Catholic University of Chile' exact-NN 'Pontifical Catholic University of Chile' cos(whitened) +0.69
+   alias 'Liza Victoria Huber'                    label 'Liza Huber'                        exact-NN 'Liza Huber'                   cos(whitened) +0.73
+   alias 'Jalálu-ʼd-ʼDín Muhammad i Rúmí'         label 'Rumi'                              exact-NN 'Rumi'                         cos(whitened) +0.16
+   median alias-label cosine (whitened) over all 1299: +0.380
+   -- only BEST right (10 at random) --
+   alias 'UAE'                                    label 'United Arab Emirates'              exact-NN 'United Arab Emirates'         cos(whitened) +0.49
+   alias 'Bruce Douglas Cockburn'                 label 'Bruce Cockburn'                    exact-NN 'Bruce Cockburn'               cos(whitened) +0.79
+   alias 'The Radical'                            label 'Katherine'                         exact-NN 'The Normal Heart'             cos(whitened) +0.00
+   alias 'The Journey'                            label 'Symphony No. 8'                    exact-NN 'The Tour'                     cos(whitened) +0.01
+   alias 'Saint Gregorius Magnus'                 label 'Gregory I'                         exact-NN 'Gregory I'                    cos(whitened) +0.24
+   alias 'Michelle Renaud'                        label 'Michelle Renaudddd'                exact-NN 'Michelle Renaudddd'           cos(whitened) +0.29
+   alias 'Simply the Best'                        label 'Katie Taylor'                      exact-NN 'The Best of Everything'       cos(whitened) +0.02
+   alias 'Bankebihari'                            label 'Krishna'                           exact-NN 'Ibn Shihab al-Zuhri'          cos(whitened) -0.00
+   alias 'Paul I'                                 label 'Paul I of Russia'                  exact-NN 'Paul I of Russia'             cos(whitened) +0.78
+   alias 'Star Trek 8'                            label 'Star Trek: First Contact'          exact-NN 'Star Trek: First Contact'     cos(whitened) +0.55
+   median alias-label cosine (whitened) over all 691: +0.169
+
+## qwen8|ideal|256|1024|32: VSA 23.61, BEST (IDX) 35.07, diff -11.46, EXACT 79.46
+   queries only the VSA gets right: 373; only BEST: 892; BEST configuration (store 0): ['IDX', 'center', 'lsh', 1.0]
+   -- only VSA right (10 at random) --
+   alias 'World'                                  label 'The World'                         exact-NN 'The World'                    cos(whitened) +0.60
+   alias 'Toro Rosso'                             label 'Scuderia Toro Rosso'               exact-NN 'Scuderia Toro Rosso'          cos(whitened) +0.55
+   alias 'AFC 1886'                               label 'Arsenal F.C.'                      exact-NN 'FIBT World Championships 1939' cos(whitened) +0.05
+   alias 'Peking'                                 label 'Beijing'                           exact-NN 'Beijing'                      cos(whitened) +0.43
+   alias 'State of Pennsylvania'                  label 'Pennsylvania'                      exact-NN 'Pennsylvania'                 cos(whitened) +0.53
+   alias 'Djalal-od-Din Rumi'                     label 'Rumi'                              exact-NN 'Rumi'                         cos(whitened) +0.32
+   alias 'Julia Maior'                            label 'Julia the Elder'                   exact-NN 'Julia the Elder'              cos(whitened) +0.21
+   alias 'Denver, Colorado'                       label 'Denver'                            exact-NN 'Denver'                       cos(whitened) +0.73
+   alias 'Bush Jr.'                               label 'George W. Bush'                    exact-NN 'George W. Bush'               cos(whitened) +0.26
+   alias 'Alexandros A. Mátsas'                   label 'Alexandros Matsas'                 exact-NN 'Alexandros Matsas'            cos(whitened) +0.66
+   median alias-label cosine (whitened) over all 373: +0.542
+   -- only BEST right (10 at random) --
+   alias 'Vermont, United States'                 label 'Vermont'                           exact-NN 'Vermont'                      cos(whitened) +0.61
+   alias 'Franz Flören'                           label 'Frans Floris I'                    exact-NN 'Frans Floris I'               cos(whitened) +0.14
+   alias 'Party'                                  label 'The Party'                         exact-NN 'The Party'                    cos(whitened) +0.78
+   alias 'University of Thessaloniki'             label 'Aristotle University of Thessaloniki' exact-NN 'Aristotle University of Thessaloniki' cos(whitened) +0.73
+   alias 'Joseph Charles Bambera'                 label 'Joseph Bambera'                    exact-NN 'Joseph Bambera'               cos(whitened) +0.86
+   alias 'Robert James Lukachyk'                  label 'Rob Lukachyk'                      exact-NN 'Rob Lukachyk'                 cos(whitened) +0.78
+   alias 'Football Club Internazionale Milano'    label 'FC Internazionale Milano'          exact-NN 'FC Internazionale Milano'     cos(whitened) +0.73
+   alias 'johann heinr. roos'                     label 'Johann Heinrich Roos'              exact-NN 'Johann Heinrich Roos'         cos(whitened) +0.58
+   alias 'Ate'                                    label 'Atë'                               exact-NN 'Atë'                          cos(whitened) +0.21
+   alias 'Ugonna Nnamdi Onyekwe'                  label 'Ugonna Onyekwe'                    exact-NN 'Ugonna Onyekwe'               cos(whitened) +0.88
+   median alias-label cosine (whitened) over all 892: +0.718
+

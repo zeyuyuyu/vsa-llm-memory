@@ -1,0 +1,294 @@
+{
+ "_about": "BABILong QA1-5 mean accuracy (%) by context length, main Fig. 4a (figs/fig6_benchmarks.pdf). Values are transcribed from the verdict files of the readable-memory runs; every point carries its source. Read by make_fig6_benchmarks.py; nothing is typed in the script.",
+ "metric": "official BABILong rule, QA1-5 mean, per cent",
+ "lengths": [
+  "0k",
+  "4k",
+  "16k",
+  "64k",
+  "128k",
+  "512k",
+  "1M",
+  "10M"
+ ],
+ "series": [
+  {
+   "id": "ours",
+   "label": "ours (fine-tuned 1.7B reader + memory)",
+   "color": "store",
+   "marker": "o",
+   "main": true,
+   "note": "Qwen3-1.7B + LoRA reader fine-tuned on the BABILong training split, plus the vector memory. n = questions behind each QA1-5 mean (100 per task at 0k-128k, 25 per task at 512k and 1M, 5 per task at 10M).",
+   "points": [
+    {
+     "length": "0k",
+     "value": 99.6,
+     "source": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 0k",
+     "n": 500
+    },
+    {
+     "length": "4k",
+     "value": 97.8,
+     "source": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 4k",
+     "n": 500
+    },
+    {
+     "length": "16k",
+     "value": 99.2,
+     "source": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 16k",
+     "n": 500
+    },
+    {
+     "length": "64k",
+     "value": 99.6,
+     "source": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 64k",
+     "n": 500
+    },
+    {
+     "length": "128k",
+     "value": 99.8,
+     "source": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 128k",
+     "n": 500
+    },
+    {
+     "length": "512k",
+     "value": 100.0,
+     "source": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 512k",
+     "n": 125
+    },
+    {
+     "length": "1M",
+     "value": 100.0,
+     "source": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 1M",
+     "n": 125
+    },
+    {
+     "length": "10M",
+     "value": 100.0,
+     "source": "vsassm/results/b18_verdict.txt: '## 10M tokens' section, 'QA1-5 10M: 25/25 = 100.0'",
+     "n": 25
+    }
+   ]
+  },
+  {
+   "id": "armt",
+   "label": "ARMT 145M, fine-tuned",
+   "color": "parser",
+   "marker": "s",
+   "note": "Public leaderboard row (137M on the leaderboard, 145M in the ARMT paper); 10M from the ARMT paper, Table 1. Label kept verbatim from v51 by decision of the submitting author.",
+   "points": [
+    {
+     "length": "0k",
+     "value": 99.3,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 0k"
+    },
+    {
+     "length": "4k",
+     "value": 98.1,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 4k"
+    },
+    {
+     "length": "16k",
+     "value": 98.1,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 16k"
+    },
+    {
+     "length": "64k",
+     "value": 97.9,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 64k"
+    },
+    {
+     "length": "128k",
+     "value": 96.9,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 128k"
+    },
+    {
+     "length": "512k",
+     "value": 95.3,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 512k"
+    },
+    {
+     "length": "1M",
+     "value": 93.4,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 1M"
+    },
+    {
+     "length": "10M",
+     "value": 76.6,
+     "source": "vsassm/results/b18_verdict.txt: 'Reference: ARMT (Rodkin et al. 2024, Table 1) at 10M: QA1 89.4, QA2 84.4, QA3 37.0, QA4 91.5, QA5 80.9; mean 76.6'"
+    }
+   ]
+  },
+  {
+   "id": "gpt61sol",
+   "label": "GPT-6.1 Sol, zero-shot*",
+   "color": "prompt",
+   "marker": "^",
+   "note": "Run by us on the first 25 questions per task (first 5 per task at 512k); asterisk = that subset.",
+   "points": [
+    {
+     "length": "0k",
+     "value": 100.0,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 0k, column 'GPT-6.1 Sol (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "4k",
+     "value": 99.2,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 4k, column 'GPT-6.1 Sol (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "16k",
+     "value": 100.0,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 16k, column 'GPT-6.1 Sol (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "64k",
+     "value": 99.2,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 64k, column 'GPT-6.1 Sol (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "128k",
+     "value": 96.8,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 128k, column 'GPT-6.1 Sol (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "512k",
+     "value": 96.0,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 512k, column 'GPT-6.1 Sol (zero-shot)'",
+     "n": 25
+    }
+   ]
+  },
+  {
+   "id": "opus55",
+   "label": "Claude Opus 5.5, zero-shot*",
+   "color": "loss",
+   "marker": "D",
+   "note": "Run by us on the first 25 questions per task (first 5 per task at 512k); asterisk = that subset.",
+   "points": [
+    {
+     "length": "0k",
+     "value": 100.0,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 0k, column 'Claude Opus 5.5 (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "4k",
+     "value": 97.6,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 4k, column 'Claude Opus 5.5 (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "16k",
+     "value": 95.2,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 16k, column 'Claude Opus 5.5 (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "64k",
+     "value": 96.0,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 64k, column 'Claude Opus 5.5 (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "128k",
+     "value": 97.6,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 128k, column 'Claude Opus 5.5 (zero-shot)'",
+     "n": 125
+    },
+    {
+     "length": "512k",
+     "value": 88.0,
+     "source": "vsassm/results/b18_api_verdict.txt: table row 512k, column 'Claude Opus 5.5 (zero-shot)'",
+     "n": 25
+    }
+   ]
+  },
+  {
+   "id": "gpt4",
+   "label": "GPT-4-0125",
+   "color": "floor",
+   "marker": "v",
+   "note": "Public leaderboard row, not rerun.",
+   "points": [
+    {
+     "length": "0k",
+     "value": 87,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 0k"
+    },
+    {
+     "length": "4k",
+     "value": 74,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 4k"
+    },
+    {
+     "length": "16k",
+     "value": 64,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 16k"
+    },
+    {
+     "length": "64k",
+     "value": 43,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 64k"
+    },
+    {
+     "length": "128k",
+     "value": 36,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 128k"
+    }
+   ]
+  },
+  {
+   "id": "llama",
+   "label": "Llama-3.1-70B",
+   "color": "head",
+   "marker": "x",
+   "note": "Public leaderboard row, not rerun.",
+   "points": [
+    {
+     "length": "0k",
+     "value": 85,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 0k"
+    },
+    {
+     "length": "4k",
+     "value": 74,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 4k"
+    },
+    {
+     "length": "16k",
+     "value": 65,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 16k"
+    },
+    {
+     "length": "64k",
+     "value": 53,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 64k"
+    },
+    {
+     "length": "128k",
+     "value": 45,
+     "source": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 128k"
+    }
+   ]
+  }
+ ],
+ "rejected": [
+  {
+   "series": "gpt61sol",
+   "length": "1M",
+   "source": "vsassm/results/b18_api_verdict.txt: table row 1M, 'exceeds context (provider: context_length_exceeded)'"
+  },
+  {
+   "series": "opus55",
+   "length": "1M",
+   "source": "vsassm/results/b18_api_verdict.txt: table row 1M, 'exceeds context (1.33M Claude tokens > 1M)'"
+  }
+ ],
+ "rejected_label": "input rejected: exceeds context window"
+}

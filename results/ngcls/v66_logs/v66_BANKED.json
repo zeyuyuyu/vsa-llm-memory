@@ -1,0 +1,22 @@
+{
+ "n": 300,
+ "extraction_recall": 0.3433333333333333,
+ "start_hit_rate": 1.0,
+ "refs": {
+  "prompt": 0.2533,
+  "prompt_ev": 0.95
+ },
+ "arms": {
+  "hrr_extr": [
+   0.02,
+   0.013333333333333334,
+   0.02
+  ]
+ },
+ "failure_split": {
+  "no_start": 0,
+  "empty_store": 0,
+  "wrong": 294
+ },
+ "verdict": "P1 no-gold gain >= .20: False (-0.236) | P2 bounded below gold-evidence prompt: True | P3 recall bounds the arm (<= recall+.05): True (recall 0.343) | NEGATIVE READING APPLIES: mainstream gain requires provided evidence"
+}

@@ -1,0 +1,93 @@
+{
+ "padding_side": "right",
+ "A_train_reproduced": true,
+ "A_eval_reproduced": true,
+ "B_train_reproduced": true,
+ "B_eval_reproduced": true,
+ "A_view2_same_bindings": true,
+ "A_view2_order_changed": 2000,
+ "B_view2_same_bindings": true,
+ "B_view2_order_changed": 1000,
+ "C_view2_same_bindings": true,
+ "C_view2_order_changed": 800,
+ "C_q_cand_span_decode_ok": true,
+ "B_cand_span_decode_ok": true,
+ "lengths_A": {
+  "train": {
+   "n": 2000,
+   "max_len": 429,
+   "mean_len": 411.4,
+   "padded_to": 512,
+   "truncated": 0
+  },
+  "dev": {
+   "n": 500,
+   "max_len": 429,
+   "mean_len": 411.4,
+   "padded_to": 512,
+   "truncated": 0
+  },
+  "test": {
+   "n": 1000,
+   "max_len": 428,
+   "mean_len": 411.7,
+   "padded_to": 512,
+   "truncated": 0
+  },
+  "dev_in_train": 0,
+  "dev_in_test": 0,
+  "test_in_train": 0
+ },
+ "lengths_B": {
+  "train": {
+   "n": 1000,
+   "max_len": 482,
+   "mean_len": 481.4,
+   "padded_to": 768,
+   "truncated": 0
+  },
+  "dev": {
+   "n": 500,
+   "max_len": 482,
+   "mean_len": 481.4,
+   "padded_to": 768,
+   "truncated": 0
+  },
+  "test": {
+   "n": 500,
+   "max_len": 482,
+   "mean_len": 481.4,
+   "padded_to": 768,
+   "truncated": 0
+  },
+  "dev_in_train": 0,
+  "dev_in_test": 0,
+  "test_in_train": 0
+ },
+ "lengths_C": {
+  "train": {
+   "n": 800,
+   "max_len": 490,
+   "mean_len": 481.4,
+   "padded_to": 768,
+   "truncated": 0
+  },
+  "dev": {
+   "n": 500,
+   "max_len": 490,
+   "mean_len": 481.4,
+   "padded_to": 768,
+   "truncated": 0
+  },
+  "test": {
+   "n": 500,
+   "max_len": 491,
+   "mean_len": 481.4,
+   "padded_to": 768,
+   "truncated": 0
+  },
+  "dev_in_train": 0,
+  "dev_in_test": 0,
+  "test_in_train": 0
+ }
+}

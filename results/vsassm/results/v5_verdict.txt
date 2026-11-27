@@ -1,0 +1,43 @@
+# V5 verdict (prereg/V5_gpt_reimplementation_prereg.md): code written by gpt-6.1-sol (OpenAI) via the
+# api_zheng gateway from v5_out/spec_packet.md; pipeline numbers from results/b60_verdict.txt, b62_verdict.txt,
+# b59_store_verdict.txt, b61_verdict.txt, b63_verdict.txt, read only after the V5 outputs were committed.
+
+## (a) Equal bits, R1 (12 conditions), ideal accounting; region mean of per-condition test-accuracy differences, points
+Criterion: same sign and |V5 - pipeline| <= 1.5 points, for STORE - LAMc and STORE - NLMSc on each encoder.
+| encoder | difference | V5 [95% CI] | pipeline | V5 - pipeline | criterion | V5 V=2 / pipe | V5 V=16 / pipe |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | STORE - LAMc | -4.38 [-5.06, -3.74] | -4.06 | -0.32 | MET | -3.84 / -3.94 | -4.92 / -4.17 |
+| Qwen3-8B | STORE - NLMSc | -3.15 [-3.77, -2.55] | -2.11 | -1.04 | MET | -2.97 / -2.77 | -3.33 / -1.44 |
+| Qwen3-8B | NLMSc - LAMc | -1.23 [-1.76, -0.75] | -1.95 | +0.72 | n/a (secondary) | -0.88 / -1.17 | -1.59 / -2.73 |
+| Llama-3.1-8B | STORE - LAMc | -6.97 [-7.68, -6.26] | -5.56 | -1.41 | MET | -4.18 / -4.41 | -9.76 / -6.72 |
+| Llama-3.1-8B | STORE - NLMSc | -4.34 [-5.08, -3.56] | -1.51 | -2.83 | NOT MET | -2.49 / -3.30 | -6.18 / +0.27 |
+| Llama-3.1-8B | NLMSc - LAMc | -2.63 [-3.25, -2.03] | -4.05 | +1.42 | n/a (secondary) | -1.68 / -1.11 | -3.57 / -6.99 |
+(a) overall: NOT MET (encoders in scope: Qwen3-8B, Llama-3.1-8B)
+
+## (b) Equal cells: cells per stored pair for >= 99.5% of the 4,776 probed keys exact, i.i.d. cell errors at the 30-day rate
+V5 device-model cell-error rates (10^7 cells): k=1: 0.000000, k=8: 0.122585, k=16: 0.276307
+Pipeline cell-error rates (b34_out/ber.json, 30 days): k=1: 0, k=8: 0.122635, k=16: 0.276006
+Criterion: |grid index V5 - pipeline| <= 1 (one 19% step) for every memory and k; no reversed pair in the ordering.
+| memory | k | V5 | pipeline | steps | criterion |
+| --- | --- | --- | --- | --- | --- |
+| dense | 1 | 76 | 76 | +0 | MET |
+| dense | 8 | 128 | 128 | +0 | MET |
+| dense | 16 | 431 | 431 | +0 | MET |
+| sbc | 1 | no final value | 32 |  | NOT MET |
+| sbc | 8 | no final value | 91 |  | NOT MET |
+| sbc | 16 | no final value | 304 |  | NOT MET |
+| bch | 1 | 19 | 19 | +0 | MET |
+| bch | 8 | 108 | 108 | +0 | MET |
+| bch | 16 | 512 | 431 | +1 | MET |
+| cuckoo | 1 | no final value | 32 |  | NOT MET |
+| cuckoo | 8 | no final value | 91 |  | NOT MET |
+| cuckoo | 16 | no final value | 304 |  | NOT MET |
+Secondary (not the criterion memory): the cuckoo table with BCH only (O-BCH)
+| O-BCH | 1 | 38 | 32 | +1 |
+| O-BCH | 8 | 215 | 181 | +1 |
+| O-BCH | 16 | 1024 | 724 | +2 |
+Ordering checks (memories with a final V5 value):
+  k=1: compared ['dense', 'bch']; reversed pairs none; strict identity True; all four memories present False -> NOT MET
+  k=8: compared ['dense', 'bch']; reversed pairs none; strict identity True; all four memories present False -> NOT MET
+  k=16: compared ['dense', 'bch']; reversed pairs none; strict identity False; all four memories present False -> NOT MET
+(b) overall: NOT MET

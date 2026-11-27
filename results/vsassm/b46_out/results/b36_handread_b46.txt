@@ -1,0 +1,54 @@
+## b46|ideal|1024|2|8: VSA 65.71, BEST (CM) 54.49, diff +11.22, EXACT 85.13
+   queries only the VSA gets right: 1341; only BEST: 834; BEST configuration (store 0): ['CM', 'whiten', 'pq', 4, 'plural', 1]
+   -- only VSA right (10 at random) --
+   alias 'Marcellus PP. II'                       label 'Marcellus II'                      exact-NN 'Marcellus II'                 cos(whitened) +0.83
+   alias 'Charlotte Bonaparte'                    label 'Charlotte Napoléone Bonaparte'     exact-NN 'Charlotte Napoléone Bonaparte' cos(whitened) +0.66
+   alias 'Sripada Pinakapaani'                    label 'Sripada Pinakapani'                exact-NN 'Sripada Pinakapani'           cos(whitened) +0.91
+   alias "Nancy Patricia D'Alesandro Pelosi"      label 'Nancy Pelosi'                      exact-NN 'Nancy Pelosi'                 cos(whitened) +0.51
+   alias 'Bilal ibn Rabah'                        label 'Bilal ibn Ribah'                   exact-NN 'Bilal ibn Ribah'              cos(whitened) +0.92
+   alias 'Call of Youth'                          label 'The Call of Youth'                 exact-NN 'The Call of Youth'            cos(whitened) +0.84
+   alias 'William Daniel Lumley'                  label 'Billy Lumley'                      exact-NN 'Billy Lumley'                 cos(whitened) +0.38
+   alias "roi d'Aragon Jacques I"                 label 'James I of Aragon'                 exact-NN 'James I of Aragon'            cos(whitened) +0.23
+   alias 'Cagayan province'                       label 'Cagayan'                           exact-NN 'Cagayan'                      cos(whitened) +0.96
+   alias 'Rotherham County FC'                    label 'Rotherham County F.C.'             exact-NN 'Rotherham County F.C.'        cos(whitened) +0.80
+   median alias-label cosine (whitened) over all 1341: +0.448
+   -- only BEST right (10 at random) --
+   alias 'RN'                                     label 'Royal Navy'                        exact-NN 'The Certificate'              cos(whitened) +0.05
+   alias 'Rt. Hon. Sir Capel Molyneux, 3rd Bt.'   label 'Sir Capel Molyneux, 3rd Baronet'   exact-NN 'Sir Capel Molyneux, 3rd Baronet' cos(whitened) +0.69
+   alias 'Mad.e De Pompadour'                     label 'Madame de Pompadour'               exact-NN 'Madame de Pompadour'          cos(whitened) +0.61
+   alias 'Tengri Qaghan'                          label 'Emperor Taizong of Tang'           exact-NN 'Qashqadaryo Region'           cos(whitened) +0.07
+   alias 'riksdagsvalet i Sverige 1976'           label '1976 Swedish general election'     exact-NN '1976 Swedish general election' cos(whitened) +0.26
+   alias 'Man Trap'                               label 'The Man Trap'                      exact-NN 'The Man Trap'                 cos(whitened) +0.38
+   alias 'Wei'                                    label 'Cao Wei'                           exact-NN 'Weapons'                      cos(whitened) +0.28
+   alias 'Juve FC'                                label 'Juventus F.C.'                     exact-NN 'Juventus F.C.'                cos(whitened) +0.43
+   alias 'Tranmere Rovers Football Club'          label 'Tranmere Rovers F.C.'              exact-NN 'Tranmere Rovers F.C.'         cos(whitened) +0.92
+   alias 'NFFC'                                   label 'Nottingham Forest F.C.'            exact-NN 'Nell'                         cos(whitened) +0.06
+   median alias-label cosine (whitened) over all 834: +0.233
+
+## b46|ideal|256|1024|32: VSA 24.23, BEST (IDX) 36.15, diff -11.93, EXACT 78.14
+   queries only the VSA gets right: 389; only BEST: 929; BEST configuration (store 0): ['IDX', 'center', 'lsh', 1.0]
+   -- only VSA right (10 at random) --
+   alias 'Chalmers Jack Mackenzie'                label 'Jack Mackenzie'                    exact-NN 'Jack Mackenzie'               cos(whitened) +0.51
+   alias 'One'                                    label 'The One'                           exact-NN 'One Piece'                    cos(whitened) +0.43
+   alias 'Jacob Ducq'                             label 'Jacob Duck'                        exact-NN 'Jacob Duck'                   cos(whitened) +0.53
+   alias 'Bielorussia'                            label 'Belarus'                           exact-NN 'Belarus'                      cos(whitened) +0.49
+   alias 'Movies'                                 label 'The Movies'                        exact-NN 'The Movies'                   cos(whitened) +0.62
+   alias 'Cote divoire'                           label 'Ivory Coast'                       exact-NN 'Ivory Coast'                  cos(whitened) +0.22
+   alias 'Marco Antonio Ameglio Samudio'          label 'Marco Ameglio'                     exact-NN 'Marco Ameglio'                cos(whitened) +0.62
+   alias 'John Albert Shaud'                      label 'John A. Shaud'                     exact-NN 'John A. Shaud'                cos(whitened) +0.54
+   alias 'Jack'                                   label 'William Jack'                      exact-NN 'John Jackson'                 cos(whitened) +0.44
+   alias 'canton of Basel-Country'                label 'Basel-Landschaft'                  exact-NN 'Basel-Landschaft'             cos(whitened) +0.54
+   median alias-label cosine (whitened) over all 389: +0.487
+   -- only BEST right (10 at random) --
+   alias 'Commonwealth of Kentucky'               label 'Kentucky'                          exact-NN 'Kentucky'                     cos(whitened) +0.48
+   alias 'Raymond Alan Norcia'                    label 'Sugar Ray Norcia'                  exact-NN 'Sugar Ray Norcia'             cos(whitened) +0.42
+   alias 'Rave'                                   label 'Rave Master'                       exact-NN 'Rave Master'                  cos(whitened) +0.70
+   alias 'Big Show'                               label 'The Big Show'                      exact-NN 'The Big Show'                 cos(whitened) +0.71
+   alias 'Nebuchadnezzar'                         label 'Nebuchadnezzar II'                 exact-NN 'Nebuchadnezzar II'            cos(whitened) +0.99
+   alias 'Scalawag Bunch'                         label 'The Scalawag Bunch'                exact-NN 'The Scalawag Bunch'           cos(whitened) +0.87
+   alias 'Alexandros A. Mátsas'                   label 'Alexandros Matsas'                 exact-NN 'Alexandros Matsas'            cos(whitened) +0.66
+   alias 'Lund Institute of Technology'           label 'Faculty of Engineering (LTH), Lund University' exact-NN 'Faculty of Engineering (LTH), Lund University' cos(whitened) +0.43
+   alias 'linkedin.com'                           label 'LinkedIn'                          exact-NN 'LinkedIn'                     cos(whitened) +0.77
+   alias 'Trinidad & Tobago'                      label 'Trinidad and Tobago'               exact-NN 'Trinidad and Tobago'          cos(whitened) +0.98
+   median alias-label cosine (whitened) over all 929: +0.668
+

@@ -1,0 +1,8 @@
+[2026-11-18T23:53:14Z] gpu5 lane1 b44_cot.py --arm fs-nothink --variant std --split test --bs 32 --out out/cot/fs-nothink_std_test.json
+[2026-11-18T23:59:38Z] gpu5 lane1 rc=0 b44_cot.py --arm fs-nothink --variant std --split test --bs 32 --out out/cot/fs-nothink_std_test.json
+[2026-11-18T23:59:38Z] gpu5 lane1 b44_cot.py --arm zs-nothink --variant std --split test --bs 32 --out out/cot/zs-nothink_std_test.json
+[2026-11-19T00:24:25Z] gpu5 lane1 rc=0 b44_cot.py --arm zs-nothink --variant std --split test --bs 32 --out out/cot/zs-nothink_std_test.json
+[2026-11-19T00:24:25Z] gpu5 lane1 b44_cot.py --arm zs-think --variant std --split test --bs 24 --out out/cot/zs-think_std_test.json
+[2026-11-19T05:34:40Z] gpu5 lane1 rc=0 b44_cot.py --arm zs-think --variant std --split test --bs 24 --out out/cot/zs-think_std_test.json
+[2026-11-19T05:34:40Z] gpu5 lane1 b44_cot.py --arm fs-nothink --variant ho --split test --bs 32 --out out/cot/fs-nothink_ho_test.json
+[2026-11-19T05:41:04Z] gpu5 lane1 rc=0 b44_cot.py --arm fs-nothink --variant ho --split test --bs 32 --out out/cot/fs-nothink_ho_test.json

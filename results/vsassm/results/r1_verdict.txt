@@ -1,0 +1,18 @@
+# R1 verdict (prereg/R1_prereg.md, development notes 1-5): CLUTRR gen_train23_test2to10, test split, 1,146 stories, 2026-10-21
+
+| system                                          | all   | k=2   | k=4   | k=6   | k=8   | k=10  | k>=7  |
+| Readable Reasoner, Qwen3-8B reader (thinking)   | 0.717 | 0.947 | 0.805 | 0.785 | 0.627 | 0.622 | 0.645 |
+| Readable Reasoner, Qwen3-8B reader              | 0.485 | 0.868 | 0.563 | 0.505 | 0.453 | 0.395 |       |
+| Readable Reasoner, Qwen3-1.7B reader (thinking) | 0.344 | 0.711 | 0.521 | 0.383 | 0.200 | 0.160 |       |
+| Readable Reasoner, Qwen3-1.7B reader            | 0.134 | 0.500 | 0.163 | 0.121 | 0.060 | 0.067 |       |
+| Qwen3-8B thinking, direct                       | 0.610 | 0.921 | 0.768 | 0.673 | 0.580 | 0.496 | 0.526 |
+| Qwen3-1.7B thinking, direct                     | 0.294 | 0.579 | 0.384 | 0.318 | 0.227 | 0.176 |       |
+(k=3: 0.667 ours, 0.400 Qwen3-8B; k=5/7/9 in r1_out/test_*.jsonl and the scorer output.)
+
+P1 mean >= 0.80: FAIL (0.717). P2 k>=7 >= 0.75: FAIL (0.645). P3 beats Qwen3-8B thinking-direct at k>=7 by >= 0.10:
+PASS (+0.119; +0.107 overall). Prediction (P1, P3 hold; P2 at risk): P1 wrong.
+The composition engine is exact (oracle facts: 0.975, 1.000 at k=10); the remaining errors are the reader's.
+Correction: the validation reference for Qwen3-8B was first reported as 0.41; that run was incomplete (128 of 300
+answered) and the scorer counted the missing answers as wrong. Fixed scorer: 0.961 on the answered 128.
+Direct answers' thinking tokens per question grow with k (8B: 719 at k=2, ~4,600 at k=10); our reader thinks once per
+story.

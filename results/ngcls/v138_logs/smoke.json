@@ -1,0 +1,30 @@
+{
+ "prereg": "0998f99",
+ "arm": "ft_goldev",
+ "rank": 16,
+ "epochs": 1,
+ "lr": 0.0001,
+ "banked": {
+  "prompt": 0.253,
+  "prompt_ev": 0.95,
+  "hrr_gold": 0.974
+ },
+ "gate": {
+  "n_eval": 60,
+  "first_q": "Who is the mother of the director of film Polish-Russian War (Film)?",
+  "last_q": "What is the place of birth of Zhanna Nemtsova's father?",
+  "overlap_with_train": 0
+ },
+ "n_train": 100,
+ "n_eval": 60,
+ "coverage": 1.0,
+ "seeds": {
+  "42": {
+   "full": 0.9666666666666667,
+   "covered": 0.9666666666666667,
+   "minutes": 0.7777920444806417
+  }
+ },
+ "mean_covered": 0.9666666666666667,
+ "verdict": "REFUTED (fine-tune reaches the store)"
+}

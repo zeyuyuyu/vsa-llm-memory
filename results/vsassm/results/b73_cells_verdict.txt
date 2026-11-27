@@ -1,0 +1,40 @@
+# B73 equal-cell verdict (prereg/B73_cells_prereg.md): 50 fresh stores (b73cells generator), frozen designs
+# (B38 / B61 / B63 dev choices), independent cell errors at the 30-day rate x 1 / 8 / 16, vocabulary uncharged.
+# N* = cells per stored pair for >= 99.5% of probed keys read exactly, pooled over the 50 stores (4779 probed keys).
+# Delta = steps(table) - steps(store), one step = x 2^(1/4); ratio = store's N* / table's N* = 2^(-Delta/4).
+
+Pooled N* (fresh) [paper]
+                              k1                    k8                   k16
+  U                      76 [76]             128 [128]             431 [431]
+  H-SBC                  32 [32]               91 [91]             362 [304]
+  T-rep                 19 [19]*             256 [256]           1024 [1024]
+  E-BCH                 19 [19]*             108 [108]             431 [431]
+  E-LDPC                23 [23]*               54 [54]             215 [215]
+  O-BCH                 32 [32]*             181 [181]             724 [724]
+  O-LDPC                32 [32]*               91 [91]             304 [304]
+  static          T-rep=19 [19]*        E-LDPC=54 [54]      E-LDPC=215 [215]
+  insert          O-BCH=32 [32]*        O-LDPC=91 [91]      O-LDPC=304 [304]
+  * censoring flags: T-rep k1: lowest evaluated; E-BCH k1: lowest evaluated; E-LDPC k1: lowest evaluated; O-BCH k1: lowest evaluated; O-LDPC k1: lowest evaluated
+
+Criteria (confirmed iff at k1, k8 and k16: label as registered and Delta in the criterion range)
+  D1 static vs U: Delta -8 / -5 / -4, ratio 4.00 / 2.38 / 2.00, label TABLE WIN (required TABLE WIN), criterion range [-9, -3] -> CONFIRMED; exact range [-8, -4]: held
+  D2 static vs H-SBC: Delta -3 / -3 / -3, ratio 1.68 / 1.68 / 1.68, label TABLE WIN (required TABLE WIN), criterion range [-5, -1] -> CONFIRMED; exact range [-4, -2]: held
+  D3 insert vs H-SBC: Delta +0 / +0 / -1, ratio 1.00 / 1.00 / 1.19, label TIE (required TIE), criterion range [-1, 1] -> CONFIRMED; exact range [-1, 1]: held
+  D4 insert vs U: Delta -5 / -2 / -2, ratio 2.38 / 1.41 / 1.41, label TABLE WIN (required TABLE WIN), criterion range [-6, -1] -> CONFIRMED; exact range [-5, -2]: held
+  O1 ordering static < H-SBC < U and insert < U at every k: CONFIRMED  (static / insert / H-SBC / U: k1 19/32/32/76; k8 54/91/91/128; k16 215/304/362/431)
+
+Per family (secondary): N* static / insert / H-SBC / U and Deltas D1 D2 D3 D4
+  wp6k     k1 19/32/32/76 | k8 54/91/91/128 | k16 215/362/362/431
+           D1 -8/-5/-4 TABLE WIN; D2 -3/-3/-3 TABLE WIN; D3 +0/+0/+0 TIE; D4 -5/-2/-1 TABLE WIN
+  code1k5  k1 16/32/32/64 | k8 54/91/91/128 | k16 181/304/304/362
+           D1 -8/-5/-4 TABLE WIN; D2 -4/-3/-3 TABLE WIN; D3 +0/+0/+0 TIE; D4 -4/-2/-1 TABLE WIN
+  hex1k7   k1 16/32/32/76 | k8 54/91/91/128 | k16 152/362/362/431
+           D1 -9/-5/-6 TABLE WIN; D2 -4/-3/-5 TABLE WIN; D3 +0/+0/+0 TIE; D4 -5/-2/-1 TABLE WIN
+  mv       k1 11/27/23/54 | k8 38/91/54/91 | k16 128/256/256/431
+           D1 -9/-5/-7 TABLE WIN; D2 -4/-2/-4 TABLE WIN; D3 +1/+3/+0 VSA WIN; D4 -4/+0/-3 TABLE WIN
+  tiny     k1 10/27/19/38 | k8 32/76/45/64 | k16 152/256/181/215
+           D1 -8/-4/-2 TABLE WIN; D2 -4/-2/-1 TABLE WIN; D3 +2/+3/+2 VSA WIN; D4 -2/+1/+1 TABLE WIN
+
+Store bootstrap (secondary; 2000 draws, stores resampled within family): share of draws in which each criterion holds: D1 1.000, D1_exact 0.998, D2 1.000, D2_exact 1.000, D3 1.000, D3_exact 1.000, D4 1.000, D4_exact 0.741, O1 0.997
+
+Predictions: Q1 held (21 of 21 within one step of the paper); Q2 held; Q3 held (static at k1 by T-rep/E-BCH < 24: True; H-SBC's k1 N* set by wp6k: True, per family {'wp6k': '32', 'code1k5': '32', 'hex1k7': '32', 'mv': '23', 'tiny': '19'}); Q4 held (lost insertions: none); Q5 held

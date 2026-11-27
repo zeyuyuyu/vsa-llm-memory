@@ -1,0 +1,39 @@
+# B59 sample reading by the AI-assisted process (not independent): per encoder the R1 cell (ideal) with the
+# largest between-map spread of VSAS - LAM; 10 queries where the four maps' store answers disagree (alias ->
+# stored label, gold value, store answer on maps 0-3, LAM answer on maps 0-3). Notes at the end.
+
+## b46: M = 256, V = 16, 4 bits per fact; VSAS - LAM per map +8.53 -1.82 +2.69 -1.06 (spread 10.35); 2227 queries where the store's maps disagree on correctness
+  'Adam David Henley' -> 'Adam Henley' gold 11 store maps0-3 [11, 3, 11, 15] LAM maps0-3 [13, 11, 11, 11]
+  'Siarhiej Ihnatovič' -> 'Syarhey Ignatovich' gold 12 store maps0-3 [12, 5, 13, 4] LAM maps0-3 [7, 0, 0, 0]
+  'Daw Aung San Suu Kyi' -> 'Aung San Suu Kyi' gold 3 store maps0-3 [3, 3, 12, 3] LAM maps0-3 [8, 2, 2, 2]
+  'Shire of Bass Coast' -> 'Bass Coast Shire' gold 13 store maps0-3 [13, 5, 3, 4] LAM maps0-3 [0, 4, 4, 4]
+  'SYR' -> 'Syria' gold 9 store maps0-3 [9, 6, 13, 5] LAM maps0-3 [11, 12, 12, 12]
+  'Heinrich Roos' -> 'Johann Heinrich Roos' gold 5 store maps0-3 [7, 7, 5, 7] LAM maps0-3 [14, 0, 0, 0]
+  'Österreich' -> 'Austria' gold 3 store maps0-3 [3, 4, 9, 5] LAM maps0-3 [6, 6, 6, 6]
+  'South Georgia and South Sandwich Islands' -> 'South Georgia and the South Sandwich Islands' gold 9 store maps0-3 [9, 6, 1, 14] LAM maps0-3 [6, 15, 15, 15]
+  'Turning' -> 'The Turning' gold 5 store maps0-3 [1, 5, 6, 13] LAM maps0-3 [0, 10, 10, 10]
+  'Ind.' -> 'Indiana' gold 7 store maps0-3 [0, 7, 13, 7] LAM maps0-3 [2, 0, 0, 0]
+
+## bge: M = 1024, V = 2, 4 bits per fact; VSAS - LAM per map +3.36 -1.75 -0.71 +6.71 (spread 8.46); 2338 queries where the store's maps disagree on correctness
+  'Giuseppe Bazzoli' -> 'Giuseppe Bezzuoli' gold 1 store maps0-3 [1, 0, 0, 0] LAM maps0-3 [0, 0, 0, 0]
+  'CR' -> 'Corrientes' gold 0 store maps0-3 [1, 0, 0, 0] LAM maps0-3 [1, 0, 1, 1]
+  'Idalou, Texas' -> 'Idalou' gold 1 store maps0-3 [0, 0, 0, 1] LAM maps0-3 [1, 1, 1, 1]
+  'Ruth Goldstein' -> 'Ruth Harriet Louise' gold 0 store maps0-3 [1, 1, 0, 0] LAM maps0-3 [0, 0, 0, 0]
+  'Jury' -> 'Youri Messen-Jaschin' gold 1 store maps0-3 [1, 0, 0, 0] LAM maps0-3 [0, 0, 0, 0]
+  'Pope Gregory I' -> 'Gregory I' gold 0 store maps0-3 [1, 1, 1, 0] LAM maps0-3 [1, 1, 1, 1]
+  'Robert James Lukachyk' -> 'Rob Lukachyk' gold 0 store maps0-3 [1, 0, 0, 0] LAM maps0-3 [1, 0, 0, 1]
+  'FC Inter' -> 'FC Internazionale Milano' gold 0 store maps0-3 [0, 0, 1, 1] LAM maps0-3 [1, 1, 1, 1]
+  'Dead' -> 'The Dead' gold 1 store maps0-3 [1, 1, 1, 0] LAM maps0-3 [1, 0, 0, 1]
+  'IN 5' -> 'Indiana State Road 5' gold 1 store maps0-3 [1, 1, 0, 1] LAM maps0-3 [1, 1, 1, 1]
+
+## Notes (AI-assisted reading of the 20 queries above; not an independent reading)
+- Granite, M = 256, V = 16, 4 bits per fact: on maps 1-3 the least-squares memory's answers are identical across maps
+  (it chose the same principal-component configuration, which does not depend on the random map: pca, alpha 1, q 2),
+  while on the registered map B49's LAM had chosen a random-projection configuration (rp, alpha 1e-4, q 4) that reads
+  11.4% on test against 16.6% for the pca one. Most of this cell's spread (VSAS - LAM +8.53 on map 0 against -1.82 /
+  +2.69 / -1.06) is therefore the least-squares memory's own map-dependent choice, not the store. The store's answers
+  differ across maps on almost every one of the 10 queries (16 values, 4 bits per fact: near chance on hard aliases
+  such as 'SYR' -> Syria, 'Ind.' -> Indiana), and right answers on one map are wrong on the others: at this load the
+  store's read is dominated by cross-talk that the random map redistributes.
+- bge, M = 1,024, V = 2, 4 bits per fact: the binary reads flip between maps on short or ambiguous aliases ('CR',
+  'Jury', 'FC Inter', 'IN 5'), consistent with cross-talk near the decision threshold; no systematic error type.

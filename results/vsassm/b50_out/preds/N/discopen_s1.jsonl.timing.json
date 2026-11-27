@@ -1,0 +1,587 @@
+{
+ "args": {
+  "cmd": "eval",
+  "task": "N",
+  "arm": "discood",
+  "split": "test",
+  "layers": "20",
+  "layer": 20,
+  "bs": 32,
+  "subset": 0,
+  "reader": "/path/to/work/b40/out/rd/N_disc_e300_s1",
+  "ckpt": "/path/to/work/b40/out/fin/N_disc_s1",
+  "out": "",
+  "pred": "preds/N/discopen_s1.jsonl",
+  "noise": 0.0,
+  "noise_seed": 12345,
+  "soft_beta": 0.0,
+  "limit": 0,
+  "max_new": 6,
+  "cot_max_new": 2048,
+  "cot_bs": 48,
+  "digit_thr": 0.5,
+  "hops": 2,
+  "seed": 0,
+  "gate": "open",
+  "thr": 0.0,
+  "maha": "/path/to/work/b50/maha.pt"
+ },
+ "wall_s": 126.23,
+ "gen_s": 94.82,
+ "gpu": "NVIDIA A800 80GB PCIe",
+ "batches": [
+  {
+   "batch": 0,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.945,
+   "prompt_len": 113
+  },
+  {
+   "batch": 1,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.417,
+   "prompt_len": 113
+  },
+  {
+   "batch": 2,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.452,
+   "prompt_len": 113
+  },
+  {
+   "batch": 3,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.456,
+   "prompt_len": 113
+  },
+  {
+   "batch": 4,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.418,
+   "prompt_len": 113
+  },
+  {
+   "batch": 5,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.364,
+   "prompt_len": 113
+  },
+  {
+   "batch": 6,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.344,
+   "prompt_len": 113
+  },
+  {
+   "batch": 7,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.387,
+   "prompt_len": 113
+  },
+  {
+   "batch": 8,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.162,
+   "prompt_len": 101
+  },
+  {
+   "batch": 9,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.641,
+   "prompt_len": 101
+  },
+  {
+   "batch": 10,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.264,
+   "prompt_len": 101
+  },
+  {
+   "batch": 11,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.277,
+   "prompt_len": 101
+  },
+  {
+   "batch": 12,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.261,
+   "prompt_len": 101
+  },
+  {
+   "batch": 13,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.164,
+   "prompt_len": 101
+  },
+  {
+   "batch": 14,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.145,
+   "prompt_len": 101
+  },
+  {
+   "batch": 15,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.149,
+   "prompt_len": 101
+  },
+  {
+   "batch": 16,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.159,
+   "prompt_len": 101
+  },
+  {
+   "batch": 17,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.206,
+   "prompt_len": 101
+  },
+  {
+   "batch": 18,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.303,
+   "prompt_len": 101
+  },
+  {
+   "batch": 19,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.304,
+   "prompt_len": 101
+  },
+  {
+   "batch": 20,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.209,
+   "prompt_len": 101
+  },
+  {
+   "batch": 21,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.165,
+   "prompt_len": 101
+  },
+  {
+   "batch": 22,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.16,
+   "prompt_len": 101
+  },
+  {
+   "batch": 23,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.192,
+   "prompt_len": 101
+  },
+  {
+   "batch": 24,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.128,
+   "prompt_len": 95
+  },
+  {
+   "batch": 25,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.123,
+   "prompt_len": 95
+  },
+  {
+   "batch": 26,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.125,
+   "prompt_len": 95
+  },
+  {
+   "batch": 27,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.129,
+   "prompt_len": 95
+  },
+  {
+   "batch": 28,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.142,
+   "prompt_len": 95
+  },
+  {
+   "batch": 29,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.148,
+   "prompt_len": 95
+  },
+  {
+   "batch": 30,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.163,
+   "prompt_len": 95
+  },
+  {
+   "batch": 31,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.311,
+   "prompt_len": 95
+  },
+  {
+   "batch": 32,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.59,
+   "prompt_len": 91
+  },
+  {
+   "batch": 33,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.586,
+   "prompt_len": 91
+  },
+  {
+   "batch": 34,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.205,
+   "prompt_len": 90
+  },
+  {
+   "batch": 35,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.205,
+   "prompt_len": 90
+  },
+  {
+   "batch": 36,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.557,
+   "prompt_len": 90
+  },
+  {
+   "batch": 37,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.586,
+   "prompt_len": 90
+  },
+  {
+   "batch": 38,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.618,
+   "prompt_len": 90
+  },
+  {
+   "batch": 39,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.561,
+   "prompt_len": 90
+  },
+  {
+   "batch": 40,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.215,
+   "prompt_len": 90
+  },
+  {
+   "batch": 41,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.087,
+   "prompt_len": 89
+  },
+  {
+   "batch": 42,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.079,
+   "prompt_len": 89
+  },
+  {
+   "batch": 43,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.082,
+   "prompt_len": 89
+  },
+  {
+   "batch": 44,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.072,
+   "prompt_len": 89
+  },
+  {
+   "batch": 45,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.107,
+   "prompt_len": 89
+  },
+  {
+   "batch": 46,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.131,
+   "prompt_len": 89
+  },
+  {
+   "batch": 47,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.162,
+   "prompt_len": 89
+  },
+  {
+   "batch": 48,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.235,
+   "prompt_len": 89
+  },
+  {
+   "batch": 49,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.195,
+   "prompt_len": 89
+  },
+  {
+   "batch": 50,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.092,
+   "prompt_len": 89
+  },
+  {
+   "batch": 51,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.09,
+   "prompt_len": 89
+  },
+  {
+   "batch": 52,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.077,
+   "prompt_len": 89
+  },
+  {
+   "batch": 53,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.084,
+   "prompt_len": 89
+  },
+  {
+   "batch": 54,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.084,
+   "prompt_len": 89
+  },
+  {
+   "batch": 55,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.086,
+   "prompt_len": 89
+  },
+  {
+   "batch": 56,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.211,
+   "prompt_len": 89
+  },
+  {
+   "batch": 57,
+   "n": 32,
+   "steps": 2,
+   "sec": 1.088,
+   "prompt_len": 89
+  },
+  {
+   "batch": 58,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.116,
+   "prompt_len": 89
+  },
+  {
+   "batch": 59,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.032,
+   "prompt_len": 89
+  },
+  {
+   "batch": 60,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.925,
+   "prompt_len": 89
+  },
+  {
+   "batch": 61,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.923,
+   "prompt_len": 89
+  },
+  {
+   "batch": 62,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.92,
+   "prompt_len": 89
+  },
+  {
+   "batch": 63,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.018,
+   "prompt_len": 89
+  },
+  {
+   "batch": 64,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.016,
+   "prompt_len": 89
+  },
+  {
+   "batch": 65,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.016,
+   "prompt_len": 89
+  },
+  {
+   "batch": 66,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.01,
+   "prompt_len": 89
+  },
+  {
+   "batch": 67,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.019,
+   "prompt_len": 89
+  },
+  {
+   "batch": 68,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.284,
+   "prompt_len": 89
+  },
+  {
+   "batch": 69,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.276,
+   "prompt_len": 89
+  },
+  {
+   "batch": 70,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.282,
+   "prompt_len": 89
+  },
+  {
+   "batch": 71,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.015,
+   "prompt_len": 89
+  },
+  {
+   "batch": 72,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.017,
+   "prompt_len": 89
+  },
+  {
+   "batch": 73,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.285,
+   "prompt_len": 89
+  },
+  {
+   "batch": 74,
+   "n": 32,
+   "steps": 3,
+   "sec": 1.016,
+   "prompt_len": 89
+  },
+  {
+   "batch": 75,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.285,
+   "prompt_len": 89
+  },
+  {
+   "batch": 76,
+   "n": 32,
+   "steps": 6,
+   "sec": 1.284,
+   "prompt_len": 89
+  },
+  {
+   "batch": 77,
+   "n": 32,
+   "steps": 2,
+   "sec": 0.926,
+   "prompt_len": 89
+  },
+  {
+   "batch": 78,
+   "n": 4,
+   "steps": 2,
+   "sec": 0.255,
+   "prompt_len": 89
+  }
+ ]
+}

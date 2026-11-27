@@ -1,0 +1,7 @@
+- P1: held (|R1 VSAL - VSA| <= 1 on 7 of 7: qwen8 +0.13, b46 +0.54, llama +0.13, mistral -0.03, e5 +0.14, bge +0.16, minilm +0.55)
+- P2: FAILED (R1-V2 VSAT - VSA interval above 0 on 2 of 7: qwen8 +0.27, b46 +0.15, llama +1.27, mistral -0.05, e5 -0.01, bge +0.85, minilm +0.29)
+- P3: FAILED (not behind 5, TOST 5, ahead 0)
+- P4: held (R1 LAMRF - LAM interval below 0 on 7 of 7: qwen8 -0.77, b46 -1.17, llama -1.48, mistral -1.11, e5 -3.30, bge -1.52, minilm -2.56)
+- P5: FAILED (sparse R1 cells per encoder [0, 2, 1, 2, 5, 3, 4]; |VSAW - VSA| <= 1 on 7 of 7: qwen8 +0.00, b46 -0.48, llama -0.28, mistral -0.14, e5 +0.46, bge +0.44, minilm +0.48)
+- P6: held (BEST ahead on 6 of 7; H1-B49 passes 0)
+- P7: held (R1-V2 LAM ahead on 5 of 7; R1-V16 VSAS ahead on 4 of 4 LLMs)

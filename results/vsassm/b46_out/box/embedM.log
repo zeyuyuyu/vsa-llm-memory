@@ -1,0 +1,12 @@
+[2026-11-18T22:47:14Z] mistral7i /path/to/work/b46/mistral7b_instruct_v03 layers 8,16,24,32
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 59.42it/s]
+mistral7i: /path/to/work/b46/mistral7b_instruct_v03; layers 32, hidden 4096; tokenizer (tokenizer.json) adds BOS: True; pad 2
+0 18292 1s
+3200 18292 15s
+6400 18292 29s
+9600 18292 43s
+12800 18292 57s
+16000 18292 72s
+done {"tag": "mistral7i", "path": "/path/to/work/b46/mistral7b_instruct_v03", "tokenizer_loader": "tokenizer.json", "layers": [8, 16, 24, 32], "num_hidden_layers": 32, "adds_bos": true, "pad": 2, "name_tokens_mean": 4.442707194401924, "example": "Gabon", "example_tokens": ["<s>", "▁Name", ":", "▁Gab", "on"], "seconds": 90.7}
+[2026-11-18T22:49:00Z] mistral7i rc=0
+EMBED_DONE embedM

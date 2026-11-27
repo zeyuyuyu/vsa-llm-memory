@@ -1,0 +1,66 @@
+2026-11-20 14:12:53 dev start
+2026-11-20 14:14:11 dev qwen8 center:lin rc=0
+2026-11-20 14:14:11 dev qwen8 whiten:sgn rc=0
+2026-11-20 14:14:11 dev qwen8 center:sgn rc=0
+2026-11-20 14:14:11 dev qwen8 whiten:lin rc=0
+2026-11-20 14:14:11 dev qwen8 center:sgn3 rc=0
+2026-11-20 14:14:11 dev qwen8 whiten:sgn3 rc=0
+2026-11-20 14:14:22 dev stopped by me at 14:14 after 12-13 of 18 dev stores per qwen8 part (resident memory would have reached about 19 GB of the 30 GB machine at M = 1,024); the rc=0 lines above are the killed processes; restarted with lower concurrency (finished stores are kept, the rest are run; same seeds)
+2026-11-20 14:14:22 dev start
+2026-11-20 14:15:51 dev qwen8 center:lin rc=0
+2026-11-20 14:15:51 dev qwen8 whiten:lin rc=0
+2026-11-20 14:16:07 dev qwen8 center:sgn rc=0
+2026-11-20 14:16:37 dev qwen8 center:sgn3 rc=0
+2026-11-20 14:17:39 dev b46 center:lin rc=0
+2026-11-20 14:17:40 dev qwen8 whiten:sgn rc=0
+2026-11-20 14:17:54 dev b46 center:sgn rc=0
+2026-11-20 14:18:52 dev qwen8 whiten:sgn3 rc=0
+2026-11-20 14:19:36 dev b46 whiten:lin rc=0
+2026-11-20 14:19:40 dev b46 whiten:sgn rc=0
+2026-11-20 14:19:51 dev llama center:lin rc=0
+2026-11-20 14:21:20 dev b46 center:sgn3 rc=0
+2026-11-20 14:21:32 dev llama center:sgn rc=0
+2026-11-20 14:21:38 dev llama whiten:lin rc=0
+2026-11-20 14:21:54 dev llama whiten:sgn rc=0
+2026-11-20 14:23:23 dev mistral center:lin rc=0
+2026-11-20 14:23:32 dev mistral center:sgn rc=0
+2026-11-20 14:23:49 dev mistral whiten:lin rc=0
+2026-11-20 14:23:55 dev b46 whiten:sgn3 rc=0
+2026-11-20 14:24:24 dev e5 center:lin rc=0
+2026-11-20 14:24:50 dev e5 center:sgn rc=0
+2026-11-20 14:25:15 dev mistral whiten:sgn rc=0
+2026-11-20 14:25:44 dev e5 whiten:lin rc=0
+2026-11-20 14:26:04 dev e5 center:sgn3 rc=0
+2026-11-20 14:26:18 dev e5 whiten:sgn rc=0
+2026-11-20 14:26:21 dev llama center:sgn3 rc=0
+2026-11-20 14:26:54 dev bge center:lin rc=0
+2026-11-20 14:27:07 dev bge center:sgn rc=0
+2026-11-20 14:27:13 dev e5 whiten:sgn3 rc=0
+2026-11-20 14:27:56 dev bge whiten:lin rc=0
+2026-11-20 14:28:09 dev bge whiten:sgn rc=0
+2026-11-20 14:28:12 dev bge center:sgn3 rc=0
+2026-11-20 14:28:45 dev llama whiten:sgn3 rc=0
+2026-11-20 14:28:59 dev minilm center:lin rc=0
+2026-11-20 14:29:04 dev minilm center:sgn rc=0
+2026-11-20 14:29:18 dev bge whiten:sgn3 rc=0
+2026-11-20 14:29:54 dev minilm whiten:lin rc=0
+2026-11-20 14:30:14 dev minilm whiten:sgn rc=0
+2026-11-20 14:30:27 dev minilm center:sgn3 rc=0
+2026-11-20 14:31:06 dev mistral center:sgn3 rc=0
+2026-11-20 14:31:17 dev minilm whiten:sgn3 rc=0
+2026-11-20 14:32:40 dev mistral whiten:sgn3 rc=0
+2026-11-20 14:32:40 DEV_DONE
+2026-11-20 14:33:14 choose qwen8 rc=0
+2026-11-20 14:33:14 choose b46 rc=0
+2026-11-20 14:33:14 choose llama rc=0
+2026-11-20 14:33:15 choose mistral rc=0
+2026-11-20 14:33:15 choose e5 rc=0
+2026-11-20 14:33:15 choose bge rc=0
+2026-11-20 14:33:16 choose minilm rc=0
+2026-11-20 14:33:21 test start (HEAD b733df1)
+2026-11-20 14:34:46 test qwen8 rc=0
+2026-11-20 14:35:42 test b46 rc=0
+2026-11-20 14:36:42 test llama rc=0
+2026-11-20 14:37:33 test mistral rc=0
+2026-11-20 14:37:33 test sentence encoders done
+2026-11-20 14:37:33 TEST_DONE

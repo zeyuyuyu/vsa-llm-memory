@@ -1,0 +1,4 @@
+[2026-11-18T23:54:47Z] gpu7 lane1 b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 3e-4 --seed 42 --out out/lora/cls_ho_n8000_r8_lr3e-4_s42.json
+[2026-11-19T01:41:42Z] gpu7 lane1 rc=0 b44_lora.py --task cls --variant ho --n 8000 --rank 8 --lr 3e-4 --seed 42 --out out/lora/cls_ho_n8000_r8_lr3e-4_s42.json
+[2026-11-19T01:41:42Z] gpu7 lane1 b44_lora.py --task scratch --variant std --n 8000 --rank 8 --lr 3e-4 --seed 42 --out out/lora/scratch_std_n8000_r8_lr3e-4_s42.json
+[2026-11-19T02:10:09Z] gpu7 lane1 rc=0 b44_lora.py --task scratch --variant std --n 8000 --rank 8 --lr 3e-4 --seed 42 --out out/lora/scratch_std_n8000_r8_lr3e-4_s42.json

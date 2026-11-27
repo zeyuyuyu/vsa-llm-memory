@@ -1,0 +1,13 @@
+# B67 exploratory (after test): theory vs dev accuracy of the dev-chosen configuration (points; dev is the same split as the theory inputs; chosen-config dev accuracy is biased upward by selection)
+Qwen3-8B        | STORE dev-theory +4.43 test-dev -1.02 | LSFR dev-theory +8.49 test-dev -1.83 | LAMC dev-theory +11.20 test-dev -3.44
+Granite-3.3-8B  | STORE dev-theory +4.95 test-dev -1.92 | LSFR dev-theory +8.58 test-dev -1.97 | LAMC dev-theory +11.29 test-dev -3.87
+Llama-3.1-8B    | STORE dev-theory +4.20 test-dev -0.44 | LSFR dev-theory +7.93 test-dev -1.06 | LAMC dev-theory +11.04 test-dev -2.64
+Mistral-7B      | STORE dev-theory +5.05 test-dev +0.83 | LSFR dev-theory +9.15 test-dev -0.08 | LAMC dev-theory +12.04 test-dev -2.30
+e5-base-v2      | STORE dev-theory +2.70 test-dev +0.04 | LSFR dev-theory +5.66 test-dev +0.06 | LAMC dev-theory +8.00 test-dev +0.08
+bge-small       | STORE dev-theory +3.90 test-dev -1.95 | LSFR dev-theory +5.76 test-dev -1.12 | LAMC dev-theory +6.95 test-dev -1.47
+MiniLM-L6       | STORE dev-theory +2.00 test-dev -0.54 | LSFR dev-theory +4.95 test-dev -0.47 | LAMC dev-theory +5.99 test-dev +0.09
+ALL STORE : dev - theory +3.89, test - dev -0.71, test - theory +3.18
+ALL LSFR  : dev - theory +7.22, test - dev -0.92, test - theory +6.29
+ALL LAMC  : dev - theory +9.50, test - dev -1.93, test - theory +7.57
+ALL LSFR' : dev - theory +5.18, test - dev -0.92, test - theory +4.25
+ALL LAMC' : dev - theory +7.14, test - dev -1.93, test - theory +5.21

@@ -1,0 +1,20 @@
+===== V-106 =====
+  facts   prompt     lora       store      prompt_lat   store_lat   
+  8       0.9500     0.9167     0.9361     0.365s       0.0014s     
+  64      0.9083     0.8250     0.9333     0.378s       0.0048s     
+  128     0.8500     0.6917     0.9194     0.407s       0.0095s     
+  512     0.5833     0.5500     0.9194     0.627s       0.0374s     
+  1024    0.5417     0.4250     0.9083     0.827s       0.0596s     
+
+  >>> P1a store reproduces V-102 (K=512, S=8, d=2048, norm metric) 0.9194 vs .9194 +-.05 : True
+  >>> P1b lora reproduces V-99 at its own budget 0.7200 vs .7333 +-.05 : True
+  >>> P1c prompt reconstruction reproduces V-100 at K=8 0.9500 vs .9417 +-.05 : True
+
+  >>> P2 at K=1024 store - lora = 0.9083 - 0.4250 = +0.4833 >= .05 : True
+  >>> P3 lora pays for scale: acc(1024) 0.4250 <= acc(8) 0.9167 - .15 = 0.7667 : True
+  >>> P4 crossover (no bar): smallest K where store beats lora by >= .02 is K=64 (store 0.9333 vs lora 0.8250); there the LLM route spends 1050 tokens / 0.378s against the store's 0.0048s -- latency ratio 79x
+  >>> P5 (descriptive) lora beats prompt at every scale : False | margins [(8, -0.0333), (64, -0.0833), (128, -0.1583), (512, -0.0333), (1024, -0.1167)]
+
+  registered readings: P2 and P3 -> first measured regime where the store beats a task-tuned LLM, mechanism = context routes pay for evidence scale while a sharded store's capacity is per shard; NEXT PAPER, nothing enters 9/16. P2 fail w/ lora holding -> direction dies as an accuracy argument, only the cost claim survives, reported first. P2 fail w/ store degrading -> contradicts V-102 at equal facts-per-shard, treat as harness fault. P3 fail -> the direction's premise is false and it closes. P2 hit w/ P3 fail -> the win is NOT attributed to capacity.
+  scoping: all arms receive GOLD triples; this measures USE of evidence, not acquisition. Extraction (recall .6589 / .4678) untouched and still binding. A P2 hit licenses only 'given the same evidence at scale, the store's readout beats a task-tuned model's reading of it'.
+V106-SCORE-DONE

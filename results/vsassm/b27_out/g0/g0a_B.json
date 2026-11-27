@@ -1,0 +1,83 @@
+[
+ {
+  "arm": "parser",
+  "seed": 42,
+  "acc": 0.99,
+  "trainable": 2,
+  "secs": 74.7,
+  "arena": "B",
+  "banked": 0.99
+ },
+ {
+  "arm": "parser",
+  "seed": 123,
+  "acc": 1.0,
+  "trainable": 2,
+  "secs": 69.1,
+  "arena": "B",
+  "banked": 1.0
+ },
+ {
+  "arm": "parser",
+  "seed": 456,
+  "acc": 0.998,
+  "trainable": 2,
+  "secs": 71.0,
+  "arena": "B",
+  "banked": 0.998
+ },
+ {
+  "arm": "probe_argmax",
+  "seed": 42,
+  "acc": 0.99,
+  "trainable": 655618,
+  "secs": 5365.0,
+  "arena": "B",
+  "banked": 0.99
+ },
+ {
+  "arm": "probe_argmax",
+  "seed": 123,
+  "acc": 1.0,
+  "trainable": 655618,
+  "secs": 6051.7,
+  "arena": "B",
+  "banked": 1.0
+ },
+ {
+  "arm": "probe_argmax",
+  "seed": 456,
+  "acc": 0.998,
+  "trainable": 655618,
+  "secs": 3966.0,
+  "arena": "B",
+  "banked": 0.998
+ },
+ {
+  "arm": "spans",
+  "seed": 42,
+  "acc": 0.502,
+  "trainable": 5244930,
+  "secs": 121.1,
+  "arena": "B",
+  "banked": 0.502
+ },
+ {
+  "arm": "spans",
+  "seed": 123,
+  "acc": 0.498,
+  "trainable": 5244930,
+  "secs": 121.0,
+  "arena": "B",
+  "banked": 0.498
+ },
+ {
+  "arm": "spans",
+  "seed": 456,
+  "acc": 0.522,
+  "trainable": 5244930,
+  "secs": 119.9,
+  "arena": "B",
+  "banked": 0.522
+ }
+]

@@ -1,0 +1,23 @@
+B47 FT {"n": {"train": 800, "dev": 500}, "max_len": {"train": 490, "dev": 490}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.77s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.31s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.68s/it]
+  scratch phi2 k32 n800 r8 lr3e-04 sd123 step 100/800 (ep 1.00) loss 1.2552 train_sub 0.4780 dev 0.5000 bridge 0.040 unparsed 0.000 (254s)
+  scratch phi2 k32 n800 r8 lr3e-04 sd123 step 200/800 (ep 2.00) loss 0.1050 train_sub 0.9060 dev 0.9180 bridge 0.986 unparsed 0.000 (514s)
+  scratch phi2 k32 n800 r8 lr3e-04 sd123 step 300/800 (ep 3.00) loss 0.0568 train_sub 0.9880 dev 0.9780 bridge 1.000 unparsed 0.000 (773s)
+  scratch phi2 k32 n800 r8 lr3e-04 sd123 step 400/800 (ep 4.00) loss 0.0003 train_sub 0.9980 dev 1.0000 bridge 0.998 unparsed 0.000 (1033s)
+  scratch phi2 k32 n800 r8 lr3e-04 sd123 step 500/800 (ep 5.00) loss 0.0001 train_sub 1.0000 dev 0.9980 bridge 0.998 unparsed 0.000 (1289s)
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.61s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.07s/it]
+  TEST scratch phi2 k32 n800 r8 lr3e-04 sd123: test 0.9940 (dev recheck 1.0000, logged 1.0000)
+B47 FT {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 492, "dev": 490}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.33s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.41s/it]
+  gen phi2 std n8000 r64 lr3e-05 sd123 step 500/4000 (ep 0.50) loss 0.6238 train_sub 0.5140 dev 0.5060 free 1.000/0.506 (648s)
+  gen phi2 std n8000 r64 lr3e-05 sd123 step 1000/4000 (ep 1.00) loss 0.4750 train_sub 0.4860 dev 0.4940 free 1.000/0.494 (1117s)
+  gen phi2 std n8000 r64 lr3e-05 sd123 step 1500/4000 (ep 1.50) loss 0.6036 train_sub 0.4860 dev 0.4940 free 1.000/0.494 (1591s)
+  gen phi2 std n8000 r64 lr3e-05 sd123 step 2000/4000 (ep 2.00) loss 0.7848 train_sub 0.5140 dev 0.5060 free 1.000/0.506 (2056s)
+  gen phi2 std n8000 r64 lr3e-05 sd123 step 2500/4000 (ep 2.50) loss 0.6546 train_sub 0.4860 dev 0.4940 free 1.000/0.494 (2493s)
+  gen phi2 std n8000 r64 lr3e-05 sd123 step 3000/4000 (ep 3.00) loss 0.7990 train_sub 0.5140 dev 0.5060 free 1.000/0.506 (2924s)
+  gen phi2 std n8000 r64 lr3e-05 sd123 step 3500/4000 (ep 3.50) loss 0.7423 train_sub 0.4900 dev 0.4900 free 1.000/0.490 (3355s)
+  gen phi2 std n8000 r64 lr3e-05 sd123 step 4000/4000 (ep 4.00) loss 0.6720 train_sub 0.5080 dev 0.5200 free 1.000/0.520 (3788s)
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.91s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.23s/it]
+  TEST gen phi2 std n8000 r64 lr3e-05 sd123: test 0.5200 (dev recheck 0.5200, logged 0.5200)

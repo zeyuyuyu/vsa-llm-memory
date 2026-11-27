@@ -1,0 +1,316 @@
+## e5 (e5-base-v2), ideal: accuracy (points); VSA - BEST [95% CI] [Bonferroni]
+    M     V bpf  EXACT   IDX    SF    CM    BF   FBF   SDM   LAM   LHI   LHC   LHS   VSA  VSAL      BEST    diff           95% CI             Bonf label
+  256     2   1  87.52  52.3  51.4  56.5  53.3  55.0  54.0  62.6  51.4  60.3  55.8  59.7  55.6  LAM 62.6   -2.96 [ -6.70, +0.86] [ -9.20, +3.44] tie/inconclusive
+  256     2   2  87.52  53.5  57.5  56.5  54.6  57.2  56.8  65.7  55.0  60.0  57.1  60.4  61.4  LAM 65.7   -5.32 [ -8.61, -2.12] [-10.83, -0.18] BEST WIN
+  256     2   4  87.52  57.3  58.6  64.7  56.3  61.4  60.2  73.4  60.0  62.8  59.3  66.8  56.3  LAM 73.4   -6.68 [ -8.98, -4.43] [-10.43, -2.92] BEST WIN
+  256     2   8  87.52  63.8  60.0  63.9  57.7  64.6  61.7  72.6  65.3  62.0  67.1  69.2  57.6  LAM 72.6   -3.39 [ -5.47, -1.32] [ -6.81, +0.02] tie/inconclusive
+  256     2  16  87.52  67.9  67.8  66.2  60.6  69.5  66.6  76.0  73.1  66.6  67.9  71.1  67.3  LHI 73.1   -2.03 [ -4.55, +0.49] [ -5.92, +2.41] tie/inconclusive
+  256     2  32  87.52  76.8  70.3  70.2  64.4  71.4  68.4  75.5  79.4  68.1  68.7  70.3  66.8  LHI 79.4   -9.13 [-11.89, -6.29] [-13.55, -4.37] BEST WIN
+  256     2  64  87.52  81.5  71.8  70.7  67.1  73.9  71.6  75.4  83.7  72.9  77.4  72.5  70.2  LHI 83.7  -11.22 [-13.77, -8.81] [-15.85, -7.05] BEST WIN
+  256    16   1  77.16   8.4  11.7  14.7   8.6   8.8   9.2   8.6   8.3  12.9  10.6  12.7   9.4   CM 14.7   -1.95 [ -4.82, +1.00] [ -6.56, +3.08] tie/inconclusive
+  256    16   2  77.16   9.2  11.9  15.6   8.0   8.9  10.2   5.9  13.6  16.5  14.4  15.5  15.8   CM 15.6   -0.06 [ -2.08, +2.12] [ -3.84, +3.67] tie/inconclusive
+  256    16   4  77.16  14.3  14.7  22.7  10.8  14.3  12.2  16.2  17.7  25.0  15.6  22.4  21.4  LHC 25.0   -2.59 [ -5.40, +0.27] [ -7.21, +2.40] tie/inconclusive
+  256    16   8  77.16  23.8  21.9  28.7  13.8  19.8  14.3  29.8  26.3  32.2  21.0  23.9  28.3  LAM 29.8   -5.87 [-10.00, -2.24] [-12.99, -0.26] BEST WIN
+  256    16  16  77.16  36.9  25.7  33.5  18.0  29.5  19.3  46.1  41.3  37.1  27.8  39.7  35.7  LAM 46.1   -6.34 [ -9.34, -3.45] [-11.59, -1.67] BEST WIN
+  256    16  32  77.16  54.8  35.7  36.4  23.2  39.0  26.5  57.3  58.4  41.4  39.2  49.7  43.9  LHI 58.4   -8.70 [-11.01, -6.39] [-12.67, -4.62] BEST WIN
+  256    16  64  77.16  65.8  44.5  45.5  31.2  47.7  35.2  62.8  68.0  50.0  47.9  57.1  49.8  LHI 68.0  -10.92 [-12.95, -8.76] [-14.21, -6.95] BEST WIN
+  256   128   1  72.34   2.1   3.4   3.9   1.8   1.9   2.3   1.9   2.1   4.8   4.3   3.0   2.6   CM  3.9   -0.88 [ -1.94, +0.25] [ -2.63, +1.05] tie/inconclusive
+  256   128   2  72.34   6.3   5.1   6.1   1.7   2.0   3.0   1.9   6.8   5.6   4.5   3.9   4.7  LHC  5.6   -1.70 [ -3.06, -0.50] [ -4.22, +0.22] tie/inconclusive
+  256   128   4  72.34   9.5   9.5   8.9   1.8   2.5   4.1   1.9  12.3   9.7  12.2   6.4   6.9   CM  8.9   -2.50 [ -5.28, -0.31] [ -7.43, +0.85] tie/inconclusive
+  256   128   8  72.34  17.2  14.0  12.2   3.2  11.8   4.9  10.1  21.4  13.9  14.2  11.6  13.6  LHI 21.4   -9.78 [-12.69, -7.03] [-14.96, -5.47] BEST WIN
+  256   128  16  72.34  29.2  17.0  17.5  10.4  16.8   7.7  25.7  34.8  18.8  17.7  24.6  25.1  LHI 34.8  -10.24 [-13.37, -7.18] [-15.64, -5.14] BEST WIN
+  256   128  32  72.34  48.4  29.4  29.8  15.7  28.0  15.4  40.3  52.6  33.2  33.9  39.5  42.4  LHI 52.6  -13.10 [-16.10, -9.79] [-17.96, -7.22] BEST WIN
+  256   128  64  72.34  60.7  41.4  40.0  24.0  38.2  25.4  51.3  64.1  45.6  45.5  52.1  54.4  LHI 64.1  -12.03 [-13.77,-10.24] [-14.96, -8.93] BEST WIN
+  256  1024   1  74.98   1.2   1.5   3.9   1.2   1.2   1.1   1.2   1.2   2.5   2.8   0.6   0.7   CM  3.9   -3.25 [ -4.31, -2.33] [ -5.05, -1.81] BEST WIN
+  256  1024   2  74.98   5.1   3.8   4.7   1.2   1.1   1.2   1.2   7.4   4.0   4.4   1.9   2.5  LHI  7.4   -5.52 [ -7.08, -4.12] [ -8.10, -3.23] BEST WIN
+  256  1024   4  74.98   7.6   6.4   6.1   1.1   0.9   1.4   1.2  11.1   8.0   8.8   4.5   5.4  LHI 11.1   -6.58 [ -8.13, -5.14] [ -9.27, -4.27] BEST WIN
+  256  1024   8  74.98  14.0  11.9  11.6   0.9   8.0   2.2   3.3  16.1  13.4  13.7   7.8  10.2  LHI 16.1   -8.37 [-10.26, -6.54] [-11.77, -5.41] BEST WIN
+  256  1024  16  74.98  26.5  17.3  17.7   8.3  15.4   4.4  13.5  29.9  18.4  18.9  19.0  20.1  LHI 29.9  -10.91 [-12.76, -9.12] [-13.88, -8.10] BEST WIN
+  256  1024  32  74.98  48.0  22.7  29.4  13.1  29.5  12.5  32.8  51.9  33.4  27.4  35.0  37.1  LHI 51.9  -16.98 [-19.26,-14.62] [-20.72,-13.10] BEST WIN
+  256  1024  64  74.98  62.4  38.3  42.3  20.9  43.0  26.2  48.9  66.1  45.8  42.2  54.7  57.6  LHI 66.1  -11.40 [-13.41, -9.20] [-14.60, -7.76] BEST WIN
+ 1024     2   1  84.73  51.7  55.5  55.9  54.3  56.7  56.6  61.9  51.6  57.1  57.4  58.4  53.9  LAM 61.9   -3.52 [ -6.20, -0.96] [ -8.05, +0.87] tie/inconclusive
+ 1024     2   2  84.73  52.1  55.5  57.5  53.6  58.5  56.0  63.6  53.0  58.0  57.7  59.6  57.9  LAM 63.6   -4.03 [ -6.25, -1.94] [ -8.01, -0.61] BEST WIN
+ 1024     2   4  84.73  52.3  55.9  59.5  54.2  59.1  59.4  63.7  54.8  58.5  57.7  61.0  57.2  LAM 63.7   -2.79 [ -4.44, -1.18] [ -5.60, -0.23] BEST WIN
+ 1024     2   8  84.73  59.6  60.3  62.5  54.9  62.0  62.4  63.7  63.1  62.5  62.4  62.4  59.0  LAM 63.7   -1.39 [ -2.77, -0.05] [ -3.66, +1.02] tie/inconclusive
+ 1024     2  16  84.73  68.4  64.0  64.9  57.0  64.4  65.4  63.7  70.3  64.0  66.3  62.7  61.8  LHI 70.3   -7.64 [-10.88, -4.61] [-13.45, -2.96] BEST WIN
+ 1024     2  32  84.73  75.9  64.8  64.2  56.4  69.5  68.0  63.5  76.3  67.2  68.5  62.9  64.2  LHI 76.3  -13.39 [-16.31,-10.53] [-18.00, -8.86] BEST WIN
+ 1024     2  64  84.73  79.5  68.1  67.1  62.1  70.3  71.3  63.5  81.4  70.9  71.5  69.7  69.5  LHI 81.4  -11.69 [-13.63, -9.72] [-15.07, -8.39] BEST WIN
+ 1024    16   1  71.14   8.4   8.6  10.0   6.6   7.6   7.3  10.7   7.4  14.0  10.7  10.5  10.7  LAM 10.7   -0.16 [ -2.00, +1.73] [ -3.20, +2.91] tie/inconclusive
+ 1024    16   2  71.14   7.8  10.1  12.9   7.6   7.0   8.5  15.2  11.2  16.2  12.4  16.1  12.9  LAM 15.2   +0.85 [ -1.34, +3.01] [ -2.84, +4.55] tie/inconclusive
+ 1024    16   4  71.14  14.4  16.0  15.6   9.2  12.1  11.2  22.0  16.2  14.6  16.7  19.6  16.6  LAM 22.0   -2.32 [ -4.43, -0.28] [ -5.99, +0.97] tie/inconclusive
+ 1024    16   8  71.14  21.2  16.6  20.2  11.3  16.9  12.9  29.4  24.6  19.9  18.5  24.8  19.5  LAM 29.4   -4.55 [ -6.47, -2.61] [ -7.77, -1.45] BEST WIN
+ 1024    16  16  71.14  33.8  20.7  26.0  16.0  23.0  17.4  34.9  37.8  28.4  24.5  30.0  23.3  LHI 37.8   -7.88 [-10.30, -5.53] [-11.90, -3.76] BEST WIN
+ 1024    16  32  71.14  49.9  26.4  32.6  20.0  31.9  22.9  42.8  50.3  36.7  32.0  34.7  25.6  LHI 50.3  -15.57 [-17.86,-13.33] [-19.45,-11.56] BEST WIN
+ 1024    16  64  71.14  59.7  34.6  39.0  26.7  41.3  29.5  45.0  63.1  43.7  39.4  38.1  28.4  LHI 63.1  -24.98 [-27.42,-22.56] [-29.05,-21.12] BEST WIN
+ 1024   128   1  71.15   1.0   3.2   3.7   1.5   1.5   2.1   1.5   1.0   2.3   3.4   2.4   1.8  IDX  1.0   +1.39 [ +0.61, +2.15] [ -0.07, +2.71] tie/inconclusive
+ 1024   128   2  71.15   4.4   4.8   4.6   1.1   1.5   2.7   2.7   4.7   5.0   4.1   3.3   3.9  LHI  4.7   -1.42 [ -2.39, -0.45] [ -3.11, +0.21] tie/inconclusive
+ 1024   128   4  71.15   6.1   8.2   6.8   1.3   2.0   2.7   7.7   9.3   7.0   7.8   6.1   7.3  LHI  9.3   -3.18 [ -4.35, -2.04] [ -5.09, -1.23] BEST WIN
+ 1024   128   8  71.15  13.0  12.4   6.8   3.4  10.2   4.1  11.6  13.5   9.1  13.5  10.8  13.3  LHI 13.5   -2.74 [ -3.78, -1.74] [ -4.40, -1.04] BEST WIN
+ 1024   128  16  71.15  25.2  12.9  14.0   8.6  14.4   7.8  19.1  28.9  15.2  16.8  21.8  20.8  LHI 28.9   -7.09 [ -9.30, -4.79] [-10.81, -3.20] BEST WIN
+ 1024   128  32  71.15  46.9  23.1  22.1  13.9  25.0  15.1  33.2  50.0  27.7  27.1  34.4  31.5  LHI 50.0  -15.60 [-18.80,-12.65] [-21.26,-10.86] BEST WIN
+ 1024   128  64  71.15  60.3  32.3  33.1  21.2  37.0  23.8  45.4  61.8  39.1  37.1  46.5  38.6  LHI 61.8  -15.30 [-17.52,-13.00] [-19.08,-11.36] BEST WIN
+ 1024  1024   1  69.53   0.3   1.3   2.2   0.4   0.4   0.4   0.4   0.3   1.9   1.6   0.6   0.5  IDX  0.3   +0.32 [ +0.02, +0.62] [ -0.18, +0.85] tie/inconclusive
+ 1024  1024   2  69.53   2.8   3.5   3.0   0.4   0.3   0.5   0.4   3.7   3.5   2.5   2.3   1.6  IDX  2.8   -0.59 [ -1.38, +0.32] [ -1.81, +1.07] tie/inconclusive
+ 1024  1024   4  69.53   5.7   4.7   5.4   0.4   0.4   0.9   1.4   6.7   3.2   5.5   4.5   4.6  LHI  6.7   -2.17 [ -2.90, -1.49] [ -3.46, -1.09] BEST WIN
+ 1024  1024   8  69.53  12.6   8.6   7.2   0.7   2.8   1.2   1.4  13.3   7.8   9.5   6.3  10.2  LHI 13.3   -6.98 [ -8.98, -5.25] [-10.22, -4.32] BEST WIN
+ 1024  1024  16  69.53  23.0  12.3  12.8   5.1  10.8   4.0  14.0  23.5  13.2  12.8  17.5  15.3  LHI 23.5   -5.96 [ -7.76, -4.05] [ -8.96, -2.84] BEST WIN
+ 1024  1024  32  69.53  42.1  18.9  22.6   9.6  23.5   8.8  31.4  43.0  27.0  24.6  25.3  26.7  LHI 43.0  -17.74 [-20.24,-15.20] [-21.84,-13.46] BEST WIN
+ 1024  1024  64  69.53  58.1  29.5  34.2  18.3  34.5  17.2  44.4  58.3  37.8  34.7  45.5  48.1  LHI 58.3  -12.82 [-15.11,-10.75] [-16.68, -9.37] BEST WIN
+
+  region R1 VSA - BEST   :  -4.46 [ -5.21,  -3.75]
+  region R1 VSA - BEST36 :  +0.60 [ -0.27,  +1.47]
+  region R1 VSA - BESTNL :  -1.21 [ -2.11,  -0.32]
+  region R1 VSA - ORACLE :  -4.89 [ -5.57,  -4.20]
+  region R1 VSA - IDX    :  +3.31 [ +2.45,  +4.14]
+  region R1 VSA - SF     :  +5.95 [ +5.07,  +6.84]
+  region R1 VSA - CM     :  +2.09 [ +1.22,  +2.93]
+  region R1 VSA - BF     : +11.13 [+10.27, +12.01]
+  region R1 VSA - FBF    :  +4.74 [ +3.91,  +5.54]
+  region R1 VSA - SDM    :  +7.55 [ +6.72,  +8.36]
+  region R1 VSA - LAM    :  -3.18 [ -3.80,  -2.52]
+  region R1 VSA - LHI    :  +0.24 [ -0.58,  +1.06]
+  region R1 VSA - LHC    :  +1.66 [ +0.68,  +2.57]
+  region R1 VSA - LHS    :  +4.06 [ +3.26,  +4.86]
+  region R1 VSAL - VSA   :  -4.13 [ -4.95,  -3.28]
+  region R1 mean accuracy: VSA 46.13  BEST 50.58  EXACT 80.14  BEST families: {'LAM': 8, 'LHI': 3, 'LHC': 1}
+  region R0 VSA - BEST   :  -2.14 [ -3.09,  -1.20]
+  region R0 VSA - BEST36 :  +1.96 [ +0.73,  +3.19]
+  region R0 VSA - BESTNL :  +0.27 [ -1.04,  +1.58]
+  region R0 VSA - ORACLE :  -2.80 [ -3.80,  -1.83]
+  region R0 VSA - IDX    :  +6.16 [ +5.05,  +7.26]
+  region R0 VSA - SF     :  +3.81 [ +2.79,  +4.91]
+  region R0 VSA - CM     :  +1.66 [ +0.33,  +2.99]
+  region R0 VSA - BF     :  +5.77 [ +4.35,  +7.14]
+  region R0 VSA - FBF    :  +4.12 [ +2.91,  +5.38]
+  region R0 VSA - SDM    :  +4.27 [ +2.84,  +5.64]
+  region R0 VSA - LAM    :  -0.18 [ -1.14,  +0.75]
+  region R0 VSA - LHI    :  +5.17 [ +4.11,  +6.29]
+  region R0 VSA - LHC    :  -0.29 [ -1.58,  +0.93]
+  region R0 VSA - LHS    :  +2.08 [ +0.88,  +3.23]
+  region R0 VSAL - VSA   :  -1.90 [ -2.91,  -0.96]
+  region R0 mean accuracy: VSA 36.59  BEST 38.74  EXACT 80.14  BEST families: {'CM': 2, 'LAM': 6}
+  region RH VSA - BEST   : -13.20 [-14.04, -12.37]
+  region RH VSA - BEST36 : -11.13 [-11.98, -10.31]
+  region RH VSA - BESTNL : -13.20 [-14.08, -12.37]
+  region RH VSA - ORACLE : -13.20 [-14.08, -12.34]
+  region RH VSA - IDX    : -11.13 [-11.94, -10.33]
+  region RH VSA - SF     :  +4.85 [ +3.91,  +5.80]
+  region RH VSA - CM     :  +3.65 [ +2.70,  +4.57]
+  region RH VSA - BF     : +12.99 [+12.07, +13.91]
+  region RH VSA - FBF    :  +1.26 [ +0.34,  +2.15]
+  region RH VSA - SDM    :  +7.69 [ +6.69,  +8.65]
+  region RH VSA - LAM    :  -3.86 [ -4.54,  -3.13]
+  region RH VSA - LHI    : -13.20 [-14.05, -12.33]
+  region RH VSA - LHC    :  +0.50 [ -0.53,  +1.52]
+  region RH VSA - LHS    :  +1.30 [ +0.35,  +2.26]
+  region RH VSAL - VSA   :  -4.58 [ -5.44,  -3.71]
+  region RH mean accuracy: VSA 56.87  BEST 70.07  EXACT 80.14  BEST families: {'LHI': 8}
+  region R2 VSA - BEST   :  -7.78 [ -8.24,  -7.33]
+  region R2 VSA - BEST36 :  -6.21 [ -6.64,  -5.79]
+  region R2 VSA - BESTNL :  -7.78 [ -8.23,  -7.31]
+  region R2 VSA - ORACLE :  -7.98 [ -8.44,  -7.52]
+  region R2 VSA - IDX    :  -6.01 [ -6.43,  -5.60]
+  region R2 VSA - SF     :  +3.19 [ +2.72,  +3.70]
+  region R2 VSA - CM     :  +1.58 [ +1.05,  +2.13]
+  region R2 VSA - BF     : +10.27 [ +9.80, +10.74]
+  region R2 VSA - FBF    :  +3.82 [ +3.37,  +4.30]
+  region R2 VSA - SDM    : +10.24 [ +9.77, +10.68]
+  region R2 VSA - LAM    :  +2.13 [ +1.66,  +2.63]
+  region R2 VSA - LHI    :  -7.65 [ -8.11,  -7.20]
+  region R2 VSA - LHC    :  +0.40 [ -0.16,  +0.94]
+  region R2 VSA - LHS    :  +1.15 [ +0.56,  +1.70]
+  region R2 VSAL - VSA   :  +1.09 [ +0.68,  +1.51]
+  region R2 mean accuracy: VSA 16.10  BEST 23.88  EXACT 72.25  BEST families: {'IDX': 2, 'CM': 1, 'LHI': 11}
+
+## e5, ideal: bits per fact to reach a target (running max; ">" = not within 64); U = 0.9 x EXACT
+  M=  256 V=    2 lift0.25 (acc  59.4): VSA <=1.0 BEST <=1.0 BEST36 2.4 IDX 5.0 SF 6.0 CM 2.5 BF 11.9 FBF 2.9 SDM 3.4 LAM <=1.0 LHI 3.7 LHC <=1.0 LHS 4.0 VSAL 1.6 | fewer bits than VSA: -
+  M=  256 V=    2 lift0.5  (acc  68.8): VSA 7.0 BEST 2.6 BEST36 17.1 IDX 17.1 SF 21.1 CM 24.9 BF >64.0 FBF 14.5 SDM 34.4 LAM 2.6 LHI 10.9 LHC 35.1 LHS 32.3 VSAL 45.5 | fewer bits than VSA: LAM
+  M=  256 V=    2 U90      (acc  78.8): VSA >64.0 BEST 29.6 BEST36 42.7 IDX 42.7 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI 29.7 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: IDX,LHI
+  M=  256 V=    2 references: EXACT 87.5  U 78.8  VSA-inf 72.9  LAM-inf 75.8  VSA at 64 72.5  BEST at 64 83.7
+  M=  256 V=   16 lift0.25 (acc  24.0): VSA 8.0 BEST 3.7 BEST36 4.6 IDX 8.1 SF 11.7 CM 4.6 BF 34.3 FBF 10.8 SDM 25.0 LAM 5.9 LHI 6.6 LHC 3.7 LHS 10.9 VSAL 5.2 | fewer bits than VSA: CM,LAM,LHI,LHC
+  M=  256 V=   16 lift0.5  (acc  41.7): VSA 18.3 BEST 13.3 BEST36 19.2 IDX 19.2 SF 51.3 CM 48.0 BF >64.0 FBF 39.8 SDM >64.0 LAM 13.3 LHI 16.3 LHC 32.8 LHS 39.2 VSAL 26.5 | fewer bits than VSA: LAM,LHI
+  M=  256 V=   16 U90      (acc  69.4): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M=  256 V=   16 references: EXACT 77.2  U 69.4  VSA-inf 65.8  LAM-inf 66.8  VSA at 64 57.1  BEST at 64 68.0
+  M=  256 V=  128 lift0.25 (acc  18.7): VSA 11.7 BEST 6.9 BEST36 8.7 IDX 8.7 SF 17.6 CM 17.1 BF 41.1 FBF 18.0 SDM 40.1 LAM 11.7 LHI 6.5 LHC 15.7 LHS 16.7 VSAL 10.9 | fewer bits than VSA: IDX,LHI
+  M=  256 V=  128 lift0.5  (acc  36.6): VSA 27.9 BEST 17.1 BEST36 20.9 IDX 20.9 SF 48.3 CM 50.6 BF >64.0 FBF 57.3 SDM >64.0 LAM 26.8 LHI 17.1 LHC 38.5 LHS 37.6 VSAL 25.4 | fewer bits than VSA: IDX,LAM,LHI
+  M=  256 V=  128 U90      (acc  65.1): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M=  256 V=  128 references: EXACT 72.3  U 65.1  VSA-inf 68.2  LAM-inf 69.8  VSA at 64 52.1  BEST at 64 64.1
+  M=  256 V= 1024 lift0.25 (acc  18.8): VSA 15.8 BEST 9.2 BEST36 10.4 IDX 10.4 SF 19.5 CM 17.1 BF 53.3 FBF 18.9 SDM 44.0 LAM 19.4 LHI 9.2 LHC 16.3 LHS 15.9 VSAL 14.6 | fewer bits than VSA: IDX,LHI
+  M=  256 V= 1024 lift0.5  (acc  37.5): VSA 35.0 BEST 20.4 BEST36 22.8 IDX 22.8 SF 61.8 CM 49.5 BF >64.0 FBF 48.4 SDM >64.0 LAM 39.3 LHI 20.4 LHC 40.3 LHS 51.5 VSAL 32.4 | fewer bits than VSA: IDX,LHI
+  M=  256 V= 1024 U90      (acc  67.5): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M=  256 V= 1024 references: EXACT 75.0  U 67.5  VSA-inf 74.1  LAM-inf 74.6  VSA at 64 54.7  BEST at 64 66.1
+  M= 1024 V=    2 lift0.25 (acc  58.7): VSA 1.2 BEST <=1.0 BEST36 3.3 IDX 7.3 SF 6.2 CM 3.0 BF 40.3 FBF 2.4 SDM 3.3 LAM <=1.0 LHI 5.5 LHC 4.1 LHS 4.6 VSAL 6.6 | fewer bits than VSA: LAM
+  M= 1024 V=    2 lift0.5  (acc  67.4): VSA 50.5 BEST 11.7 BEST36 14.2 IDX 14.8 SF 55.1 CM >64.0 BF >64.0 FBF 23.9 SDM 26.8 LAM >64.0 LHI 12.1 LHC 32.9 LHS 22.6 VSAL 48.5 | fewer bits than VSA: IDX,FBF,SDM,LHI,LHC,LHS
+  M= 1024 V=    2 U90      (acc  76.3): VSA >64.0 BEST 31.8 BEST36 34.3 IDX 34.3 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI 31.8 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: IDX,LHI
+  M= 1024 V=    2 references: EXACT 84.7  U 76.3  VSA-inf 63.3  LAM-inf 63.3  VSA at 64 69.7  BEST at 64 81.4
+  M= 1024 V=   16 lift0.25 (acc  22.5): VSA 5.8 BEST 4.2 BEST36 8.6 IDX 8.6 SF 19.9 CM 10.5 BF 41.3 FBF 15.1 SDM 30.4 LAM 4.2 LHI 6.7 LHC 9.9 LHS 12.6 VSAL 13.8 | fewer bits than VSA: LAM
+  M= 1024 V=   16 lift0.5  (acc  38.7): VSA >64.0 BEST 16.8 BEST36 19.7 IDX 19.7 SF >64.0 CM 61.8 BF >64.0 FBF 52.8 SDM >64.0 LAM 22.2 LHI 16.8 LHC 38.9 LHS 59.6 VSAL >64.0 | fewer bits than VSA: IDX,CM,FBF,LAM,LHI,LHC,LHS
+  M= 1024 V=   16 U90      (acc  64.0): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M= 1024 V=   16 references: EXACT 71.1  U 64.0  VSA-inf 41.2  LAM-inf 45.8  VSA at 64 38.1  BEST at 64 63.1
+  M= 1024 V=  128 lift0.25 (acc  18.4): VSA 12.9 BEST 10.0 BEST36 10.9 IDX 10.9 SF 23.2 CM 23.3 BF 49.0 FBF 20.7 SDM 41.7 LAM 14.9 LHI 10.0 LHC 19.1 LHS 17.8 VSAL 12.8 | fewer bits than VSA: IDX,LHI
+  M= 1024 V=  128 lift0.5  (acc  36.0): VSA 35.0 BEST 20.2 BEST36 22.6 IDX 22.6 SF >64.0 CM >64.0 BF >64.0 FBF 60.3 SDM >64.0 LAM 37.5 LHI 20.2 LHC 53.0 LHS 59.3 VSAL 49.4 | fewer bits than VSA: IDX,LHI
+  M= 1024 V=  128 U90      (acc  64.0): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M= 1024 V=  128 references: EXACT 71.2  U 64.0  VSA-inf 60.9  LAM-inf 60.3  VSA at 64 46.5  BEST at 64 61.8
+  M= 1024 V= 1024 lift0.25 (acc  17.5): VSA 15.9 BEST 10.6 BEST36 11.1 IDX 11.1 SF 27.4 CM 22.2 BF 59.8 FBF 23.0 SDM >64.0 LAM 18.4 LHI 10.6 LHC 19.8 LHS 21.0 VSAL 18.2 | fewer bits than VSA: IDX,LHI
+  M= 1024 V= 1024 lift0.5  (acc  34.8): VSA 44.4 BEST 23.9 BEST36 24.6 IDX 24.6 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM 38.5 LHI 23.9 LHC 52.9 LHS >64.0 VSAL 41.6 | fewer bits than VSA: IDX,LAM,LHI
+  M= 1024 V= 1024 U90      (acc  62.6): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M= 1024 V= 1024 references: EXACT 69.5  U 62.6  VSA-inf 66.6  LAM-inf 67.4  VSA at 64 45.5  BEST at 64 58.3
+
+## e5 (e5-base-v2), real: accuracy (points); VSA - BEST [95% CI] [Bonferroni]
+    M     V bpf  EXACT   IDX    SF    CM    BF   FBF   SDM   LAM   LHI   LHC   LHS   VSA  VSAL      BEST    diff           95% CI             Bonf label
+  256     2   1  87.52  50.2  51.8  53.1  53.3  53.1  57.2  62.6  52.1  58.6  55.5  59.7  55.9  LAM 62.6   -2.96 [ -6.62, +0.79] [ -9.05, +3.42] tie/inconclusive
+  256     2   2  87.52  52.3  57.2  54.7  54.6  55.0  55.9  65.7  52.7  55.3  57.2  62.3  61.4  LAM 65.7   -3.43 [ -6.45, -0.47] [ -8.44, +1.42] tie/inconclusive
+  256     2   4  87.52  52.9  57.8  55.4  56.3  59.9  55.0  67.8  53.3  64.2  61.2  62.5  56.3  LAM 67.8   -5.28 [ -8.74, -1.93] [-11.19, +0.14] tie/inconclusive
+  256     2   8  87.52  55.5  63.0  60.7  57.7  63.6  61.3  72.6  54.6  61.0  65.0  69.2  57.3  LAM 72.6   -3.39 [ -5.47, -1.27] [ -7.17, +0.45] tie/inconclusive
+  256     2  16  87.52  59.9  66.4  64.7  60.6  67.4  63.8  76.0  68.2  65.9  65.7  71.1  67.3  LAM 76.0   -4.89 [ -6.63, -3.13] [ -7.69, -1.82] BEST WIN
+  256     2  32  87.52  74.5  69.4  69.8  64.4  71.6  68.8  75.5  77.5  69.0  69.8  70.2  66.9  LHI 77.5   -7.34 [-10.14, -4.57] [-11.82, -2.81] BEST WIN
+  256     2  64  87.52  81.5  72.2  73.7  67.1  75.1  70.1  75.5  82.8  73.5  69.7  72.5  70.2  LHI 82.8  -10.34 [-12.98, -7.77] [-15.15, -6.15] BEST WIN
+  256    16   1  77.16   8.4   8.6  10.5   8.6   8.7   7.9   8.6   8.6  11.1   8.6  12.7  11.2   CM 10.5   +2.21 [ -0.06, +4.67] [ -1.29, +6.97] tie/inconclusive
+  256    16   2  77.16  10.2  10.5  13.7   8.0   8.8   9.4   5.9   9.6  10.6  13.1  15.5  15.8   SF 10.5   +5.03 [ +3.06, +7.12] [ +1.85, +8.75] VSA WIN
+  256    16   4  77.16  15.4  16.7  14.6  10.8  12.3  10.7  15.0  15.8  13.1  17.6  22.4  21.4  LAM 15.0   +7.44 [ +4.50,+10.31] [ +2.67,+12.36] VSA WIN
+  256    16   8  77.16  19.1  21.7  15.6  13.8  19.1  14.4  29.8  24.7  16.7  20.1  23.9  28.3  LAM 29.8   -5.87 [ -9.92, -2.31] [-13.12, -0.20] BEST WIN
+  256    16  16  77.16  29.3  25.2  22.7  18.0  27.7  17.5  45.5  38.3  25.0  27.5  39.7  35.7  LAM 45.5   -5.75 [ -8.73, -2.66] [-10.84, -0.46] BEST WIN
+  256    16  32  77.16  52.3  35.2  28.7  23.2  35.8  23.5  56.8  54.9  28.7  37.3  49.7  43.9  LAM 56.8   -7.13 [ -9.28, -5.03] [-10.83, -3.73] BEST WIN
+  256    16  64  77.16  66.2  43.4  36.8  31.2  44.2  31.4  62.8  67.7  42.8  47.0  57.1  49.8  LHI 67.7  -10.63 [-12.75, -8.37] [-14.31, -6.84] BEST WIN
+  256   128   1  72.34   2.1   1.9   3.1   1.8   1.9   2.2   1.9   2.1   3.6   1.9   3.0   2.6   CM  3.1   -0.06 [ -1.06, +1.03] [ -1.68, +1.85] tie/inconclusive
+  256   128   2  72.34   6.0   5.0   3.6   1.7   2.0   2.8   1.9   5.1   3.8   4.8   3.9   4.7   SF  5.0   -1.07 [ -2.30, +0.22] [ -3.12, +1.03] tie/inconclusive
+  256   128   4  72.34   9.3   9.4   5.9   1.8   2.4   3.7   1.9   8.6   5.7  11.8   6.4   6.9  LHS 11.8   -5.39 [ -8.86, -2.61] [-11.69, -1.32] BEST WIN
+  256   128   8  72.34  14.9  12.9   8.5   3.2   3.7   5.0  10.1  15.8   8.2  13.7  11.6  13.6  LHS 13.7   -2.06 [ -3.66, -0.44] [ -4.56, +0.60] tie/inconclusive
+  256   128  16  72.34  25.2  16.8  12.1  10.4   8.7   6.5  25.7  28.6  12.7  17.7  24.6  25.1  LHI 28.6   -4.05 [ -9.09, +0.52] [-13.41, +3.09] tie/inconclusive
+  256   128  32  72.34  45.9  29.4  17.5  15.7  15.6  11.2  40.3  49.5  21.6  33.5  39.5  42.4  LHI 49.5   -9.95 [-13.27, -6.62] [-15.28, -4.08] BEST WIN
+  256   128  64  72.34  59.5  40.6  31.8  24.0  26.9  20.6  51.3  63.4  35.5  44.3  52.1  54.4  LHI 63.4  -11.29 [-12.98, -9.64] [-14.06, -8.51] BEST WIN
+  256  1024   1  74.98   1.2   1.2   2.3   1.2   1.2   1.1   1.2   1.2   1.9   1.2   0.6   0.7   CM  2.3   -1.66 [ -2.32, -1.05] [ -2.78, -0.66] tie/inconclusive
+  256  1024   2  74.98   3.5   1.2   2.3   1.2   1.2   1.1   1.2   4.6   2.8   1.2   1.9   2.5  LHI  4.6   -2.74 [ -3.91, -1.74] [ -4.73, -1.25] BEST WIN
+  256  1024   4  74.98   6.6   5.7   3.6   1.1   1.2   1.3   1.2   8.5   5.4   7.5   4.5   5.4  LHI  8.5   -3.98 [ -5.08, -2.95] [ -5.82, -2.38] BEST WIN
+  256  1024   8  74.98  13.3  11.9   4.7   0.9   1.2   1.6   3.3  15.6   6.5  13.0   7.8  10.2  LHI 15.6   -7.82 [ -9.55, -6.18] [-10.69, -5.09] BEST WIN
+  256  1024  16  74.98  24.3  17.3  11.6   8.3   0.9   2.7  13.5  27.7  13.4  18.9  19.0  20.1  LHI 27.7   -8.68 [-10.43, -7.01] [-11.53, -5.96] BEST WIN
+  256  1024  32  74.98  42.1  23.8  17.9  13.1   1.8   5.1  32.8  47.3  21.9  24.1  35.0  37.1  LHI 47.3  -12.30 [-14.45,-10.05] [-15.75, -8.47] BEST WIN
+  256  1024  64  74.98  60.1  38.2  30.8  20.9   8.3  17.1  48.9  64.8  28.9  40.3  54.7  57.6  LHI 64.8  -10.07 [-12.02, -7.95] [-13.22, -6.13] BEST WIN
+ 1024     2   1  84.73  51.7  57.0  55.1  54.3  54.2  54.4  61.9  51.7  55.9  54.1  58.4  53.7  LAM 61.9   -3.52 [ -6.13, -1.06] [ -8.41, +0.61] tie/inconclusive
+ 1024     2   2  84.73  51.7  56.6  56.0  53.6  57.3  56.4  63.6  51.7  57.4  54.5  59.6  55.0  LAM 63.6   -4.03 [ -6.27, -1.90] [ -8.00, -0.50] BEST WIN
+ 1024     2   4  84.73  53.4  56.9  56.8  54.2  57.7  56.0  63.7  51.7  58.1  58.8  60.3  57.2  LAM 63.7   -3.41 [ -5.45, -1.49] [ -6.85, -0.38] BEST WIN
+ 1024     2   8  84.73  56.8  59.5  59.3  54.9  62.1  60.4  63.7  57.9  58.7  61.8  62.4  59.0  LAM 63.7   -1.39 [ -2.76, -0.04] [ -3.51, +0.84] tie/inconclusive
+ 1024     2  16  84.73  59.6  62.0  64.0  57.0  65.5  63.6  63.7  63.1  61.5  65.3  62.7  61.8  LHS 65.3   -2.61 [ -5.47, +0.38] [ -7.49, +2.31] tie/inconclusive
+ 1024     2  32  84.73  71.5  65.5  65.0  56.4  69.6  66.6  63.5  73.6  65.7  67.8  62.9  64.0  LHI 73.6  -10.71 [-13.76, -7.72] [-15.90, -5.76] BEST WIN
+ 1024     2  64  84.73  79.1  68.3  64.6  62.1  70.7  70.1  63.5  80.9  69.3  71.0  69.7  69.5  LHI 80.9  -11.20 [-13.17, -9.26] [-14.44, -7.79] BEST WIN
+ 1024    16   1  71.14   7.7  10.4   9.3   6.6   7.9   6.5   8.4   7.9  10.5   8.4  10.5  10.7  LAM  8.4   +2.11 [ +0.43, +3.80] [ -0.76, +4.86] tie/inconclusive
+ 1024    16   2  71.14   8.4   9.6  11.1   7.6   7.1   7.6  14.6  10.3  11.7  10.1  16.1  12.3  LAM 14.6   +1.42 [ -0.80, +3.62] [ -2.25, +5.07] tie/inconclusive
+ 1024    16   4  71.14  12.0  14.9  11.9   9.2  11.0  10.1  21.9  13.0  13.6  16.4  17.2  16.6  LAM 21.9   -4.64 [ -7.06, -2.35] [ -8.57, -0.78] BEST WIN
+ 1024    16   8  71.14  17.8  18.3  15.5  11.3  16.2  11.1  29.3  18.1  17.5  19.1  24.8  19.5  LAM 29.3   -4.45 [ -6.47, -2.47] [ -7.83, -1.11] BEST WIN
+ 1024    16  16  71.14  27.7  21.4  19.1  16.0  23.5  14.7  35.3  30.5  22.3  24.0  30.0  23.3  LAM 35.3   -5.30 [ -7.21, -3.44] [ -8.47, -2.32] BEST WIN
+ 1024    16  32  71.14  45.2  26.3  26.2  20.0  31.9  21.4  41.7  48.1  29.9  30.9  34.7  25.6  LHI 48.1  -13.41 [-15.87,-10.97] [-17.36, -9.16] BEST WIN
+ 1024    16  64  71.14  59.6  33.5  33.4  26.7  40.8  27.9  45.0  61.2  37.1  38.6  38.1  28.4  LHI 61.2  -23.08 [-25.39,-20.70] [-27.29,-18.94] BEST WIN
+ 1024   128   1  71.15   1.0   2.9   2.6   1.5   1.4   2.2   1.5   1.0   2.6   2.3   2.4   2.3  IDX  1.0   +1.39 [ +0.61, +2.18] [ -0.07, +2.73] tie/inconclusive
+ 1024   128   2  71.15   1.0   4.7   3.5   1.1   1.5   2.3   2.7   1.0   3.6   3.9   3.3   3.9  IDX  1.0   +2.23 [ +1.37, +3.08] [ +0.66, +3.61] VSA WIN
+ 1024   128   4  71.15   6.3   8.2   4.3   1.3   1.6   3.1   7.7   6.3   4.2   7.6   6.1   7.3  LHS  7.6   -1.58 [ -2.79, -0.35] [ -3.59, +0.43] tie/inconclusive
+ 1024   128   8  71.15  12.6  12.4   6.3   3.4   3.9   4.3  11.6  13.0   7.0  13.6  10.8  13.3  LHI 13.0   -2.25 [ -3.37, -1.25] [ -4.19, -0.55] BEST WIN
+ 1024   128  16  71.15  24.4  14.1  11.0   8.6   9.3   5.3  19.1  26.3  14.2  16.1  21.8  20.8  LHI 26.3   -4.51 [ -8.54, -1.17] [-12.00, +0.59] tie/inconclusive
+ 1024   128  32  71.15  44.8  22.4  19.5  13.9  18.0   9.6  31.9  47.1  23.5  26.1  34.4  31.5  LHI 47.1  -12.67 [-15.85, -9.87] [-17.87, -8.12] BEST WIN
+ 1024   128  64  71.15  60.4  31.9  30.2  21.2  29.1  17.2  43.0  62.2  34.0  36.6  46.5  38.6  LHI 62.2  -15.67 [-17.94,-13.45] [-19.37,-12.00] BEST WIN
+ 1024  1024   1  69.53   0.3   1.6   1.4   0.4   0.4   0.3   0.4   0.3   1.0   1.4   0.6   0.3  LHS  1.4   -0.79 [ -1.25, -0.34] [ -1.53, -0.03] tie/inconclusive
+ 1024  1024   2  69.53   0.3   3.3   1.0   0.4   0.4   0.3   0.4   0.3   1.6   2.7   2.3   1.6   SF  3.3   -1.06 [ -2.02, +0.02] [ -2.61, +0.81] tie/inconclusive
+ 1024  1024   4  69.53   5.3   4.4   2.6   0.4   0.3   0.6   1.4   6.2   3.5   5.3   4.5   4.6  LHI  6.2   -1.67 [ -2.36, -1.02] [ -2.82, -0.63] tie/inconclusive
+ 1024  1024   8  69.53  10.7   8.6   3.5   0.7   0.4   1.0   1.4  12.2   3.6   9.3   6.3  10.2  LHI 12.2   -5.87 [ -7.82, -4.17] [ -9.30, -3.21] BEST WIN
+ 1024  1024  16  69.53  15.6  12.3   6.6   5.1   0.9   2.0  14.0  20.5   7.8  12.8  17.5  15.3  LHI 20.5   -2.98 [ -4.66, -1.26] [ -5.73, +0.01] tie/inconclusive
+ 1024  1024  32  69.53  28.5  17.9  16.7   9.6   5.3   4.9  31.4  29.7  20.6  23.2  25.3  26.7  LHI 29.7   -4.40 [ -5.97, -3.01] [ -7.02, -2.16] BEST WIN
+ 1024  1024  64  69.53  54.1  28.6  27.8  18.3  11.6  10.9  44.4  55.6  32.3  34.0  45.5  48.1  LHI 55.6  -10.14 [-12.19, -8.14] [-13.71, -6.96] BEST WIN
+
+  region R1 VSA - BEST   :  -3.30 [ -4.05,  -2.56]
+  region R1 VSA - BEST36 :  +4.29 [ +3.38,  +5.20]
+  region R1 VSA - BESTNL :  +2.11 [ +1.23,  +2.97]
+  region R1 VSA - ORACLE :  -3.54 [ -4.27,  -2.80]
+  region R1 VSA - IDX    :  +7.24 [ +6.30,  +8.11]
+  region R1 VSA - SF     :  +5.20 [ +4.35,  +6.09]
+  region R1 VSA - CM     :  +7.16 [ +6.33,  +8.03]
+  region R1 VSA - BF     : +10.53 [ +9.57, +11.46]
+  region R1 VSA - FBF    :  +5.02 [ +4.21,  +5.90]
+  region R1 VSA - SDM    :  +8.97 [ +8.06,  +9.91]
+  region R1 VSA - LAM    :  -3.17 [ -3.91,  -2.44]
+  region R1 VSA - LHI    :  +4.75 [ +3.78,  +5.66]
+  region R1 VSA - LHC    :  +5.73 [ +4.77,  +6.71]
+  region R1 VSA - LHS    :  +3.65 [ +2.84,  +4.48]
+  region R1 VSAL - VSA   :  -3.55 [ -4.39,  -2.75]
+  region R1 mean accuracy: VSA 45.52  BEST 48.82  EXACT 80.14  BEST families: {'LAM': 11, 'LHS': 1}
+  region R0 VSA - BEST   :  -0.40 [ -1.31,  +0.49]
+  region R0 VSA - BEST36 :  +4.73 [ +3.48,  +5.99]
+  region R0 VSA - BESTNL :  +3.36 [ +2.20,  +4.57]
+  region R0 VSA - ORACLE :  -1.14 [ -2.08,  -0.22]
+  region R0 VSA - IDX    :  +6.76 [ +5.27,  +8.23]
+  region R0 VSA - SF     :  +4.10 [ +2.88,  +5.32]
+  region R0 VSA - CM     :  +3.89 [ +2.69,  +5.06]
+  region R0 VSA - BF     :  +6.00 [ +4.59,  +7.42]
+  region R0 VSA - FBF    :  +5.33 [ +3.97,  +6.63]
+  region R0 VSA - SDM    :  +4.90 [ +3.57,  +6.24]
+  region R0 VSA - LAM    :  +0.41 [ -0.53,  +1.34]
+  region R0 VSA - LHI    :  +6.27 [ +4.70,  +7.68]
+  region R0 VSA - LHC    :  +2.94 [ +1.68,  +4.20]
+  region R0 VSA - LHS    :  +4.13 [ +2.92,  +5.31]
+  region R0 VSAL - VSA   :  -2.35 [ -3.34,  -1.37]
+  region R0 mean accuracy: VSA 36.83  BEST 37.23  EXACT 80.14  BEST families: {'SF': 1, 'CM': 1, 'LAM': 6}
+  region RH VSA - BEST   : -11.73 [-12.61, -10.88]
+  region RH VSA - BEST36 :  -9.38 [-10.26,  -8.49]
+  region RH VSA - BESTNL : -11.48 [-12.41, -10.60]
+  region RH VSA - ORACLE : -11.73 [-12.61, -10.83]
+  region RH VSA - IDX    :  -9.38 [-10.26,  -8.53]
+  region RH VSA - SF     :  +5.12 [ +4.22,  +6.01]
+  region RH VSA - CM     :  +7.08 [ +6.19,  +8.03]
+  region RH VSA - BF     : +12.97 [+12.03, +13.92]
+  region RH VSA - FBF    :  +1.88 [ +0.97,  +2.80]
+  region RH VSA - SDM    :  +9.38 [ +8.40, +10.37]
+  region RH VSA - LAM    :  -3.68 [ -4.39,  -3.02]
+  region RH VSA - LHI    : -11.48 [-12.37, -10.62]
+  region RH VSA - LHC    :  +4.84 [ +3.85,  +5.81]
+  region RH VSA - LHS    :  +2.81 [ +1.83,  +3.76]
+  region RH VSAL - VSA   :  -4.57 [ -5.39,  -3.73]
+  region RH mean accuracy: VSA 56.85  BEST 68.58  EXACT 80.14  BEST families: {'LAM': 1, 'LHI': 7}
+  region R2 VSA - BEST   :  -5.30 [ -5.69,  -4.88]
+  region R2 VSA - BEST36 :  -3.20 [ -3.61,  -2.80]
+  region R2 VSA - BESTNL :  -5.30 [ -5.68,  -4.88]
+  region R2 VSA - ORACLE :  -5.43 [ -5.86,  -5.01]
+  region R2 VSA - IDX    :  -2.90 [ -3.30,  -2.53]
+  region R2 VSA - SF     :  +3.52 [ +3.04,  +4.00]
+  region R2 VSA - CM     :  +6.60 [ +6.08,  +7.12]
+  region R2 VSA - BF     : +10.27 [ +9.80, +10.73]
+  region R2 VSA - FBF    : +13.59 [+13.14, +14.09]
+  region R2 VSA - SDM    : +12.51 [+12.06, +12.96]
+  region R2 VSA - LAM    :  +2.13 [ +1.67,  +2.63]
+  region R2 VSA - LHI    :  -4.92 [ -5.31,  -4.53]
+  region R2 VSA - LHC    :  +5.29 [ +4.79,  +5.79]
+  region R2 VSA - LHS    :  +2.19 [ +1.65,  +2.73]
+  region R2 VSAL - VSA   :  +1.08 [ +0.65,  +1.50]
+  region R2 mean accuracy: VSA 16.10  BEST 21.40  EXACT 72.25  BEST families: {'SF': 1, 'CM': 1, 'LHI': 11, 'LHS': 1}
+
+## e5, real: bits per fact to reach a target (running max; ">" = not within 64); U = 0.9 x EXACT
+  M=  256 V=    2 lift0.25 (acc  59.4): VSA <=1.0 BEST <=1.0 BEST36 3.7 IDX 14.7 SF 5.0 CM 6.7 BF 11.9 FBF 3.7 SDM 5.8 LAM <=1.0 LHI 10.2 LHC 2.2 LHS 2.9 VSAL 1.6 | fewer bits than VSA: -
+  M=  256 V=    2 lift0.5  (acc  68.8): VSA 7.6 BEST 4.6 BEST36 18.3 IDX 24.4 SF 27.6 CM 27.7 BF >64.0 FBF 20.0 SDM 32.1 LAM 4.6 LHI 16.7 LHC 30.2 LHS 26.7 VSAL 45.5 | fewer bits than VSA: LAM
+  M=  256 V=    2 U90      (acc  78.8): VSA >64.0 BEST 37.8 BEST36 48.8 IDX 48.8 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI 37.8 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: IDX,LHI
+  M=  256 V=    2 references: EXACT 87.5  U 78.8  VSA-inf 72.9  LAM-inf 75.8  VSA at 64 72.5  BEST at 64 82.8
+  M=  256 V=   16 lift0.25 (acc  24.0): VSA 8.0 BEST 6.1 BEST36 11.1 IDX 11.1 SF 12.5 CM 18.5 BF 34.3 FBF 11.8 SDM 33.3 LAM 6.1 LHI 7.6 LHC 14.7 LHS 11.5 VSAL 5.2 | fewer bits than VSA: LAM,LHI
+  M=  256 V=   16 lift0.5  (acc  41.7): VSA 18.3 BEST 13.5 BEST36 23.3 IDX 23.3 SF 55.4 CM >64.0 BF >64.0 FBF 52.1 SDM >64.0 LAM 13.5 LHI 18.4 LHC 60.6 LHS 43.8 VSAL 26.5 | fewer bits than VSA: LAM
+  M=  256 V=   16 U90      (acc  69.4): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M=  256 V=   16 references: EXACT 77.2  U 69.4  VSA-inf 65.8  LAM-inf 66.8  VSA at 64 57.1  BEST at 64 67.7
+  M=  256 V=  128 lift0.25 (acc  18.7): VSA 11.7 BEST 10.1 BEST36 11.1 IDX 10.3 SF 17.8 CM 33.8 BF 41.1 FBF 38.6 SDM 55.4 LAM 11.7 LHI 9.3 LHC 25.6 LHS 16.7 VSAL 10.9 | fewer bits than VSA: IDX,LHI
+  M=  256 V=  128 lift0.5  (acc  36.6): VSA 27.9 BEST 20.8 BEST36 23.4 IDX 23.4 SF 49.7 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM 26.8 LHI 20.8 LHC >64.0 LHS 39.0 VSAL 25.4 | fewer bits than VSA: IDX,LAM,LHI
+  M=  256 V=  128 U90      (acc  65.1): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M=  256 V=  128 references: EXACT 72.3  U 65.1  VSA-inf 68.2  LAM-inf 69.8  VSA at 64 52.1  BEST at 64 63.4
+  M=  256 V= 1024 lift0.25 (acc  18.8): VSA 15.8 BEST 9.6 BEST36 11.3 IDX 11.3 SF 18.8 CM 33.6 BF 53.3 FBF >64.0 SDM >64.0 LAM 19.4 LHI 9.6 LHC 24.8 LHS 15.9 VSAL 14.6 | fewer bits than VSA: IDX,LHI
+  M=  256 V= 1024 lift0.5  (acc  37.5): VSA 35.0 BEST 22.7 BEST36 26.8 IDX 26.8 SF 62.1 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM 39.3 LHI 22.7 LHC >64.0 LHS 56.8 VSAL 32.4 | fewer bits than VSA: IDX,LHI
+  M=  256 V= 1024 U90      (acc  67.5): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M=  256 V= 1024 references: EXACT 75.0  U 67.5  VSA-inf 74.1  LAM-inf 74.6  VSA at 64 54.7  BEST at 64 64.8
+  M= 1024 V=    2 lift0.25 (acc  58.7): VSA 1.2 BEST <=1.0 BEST36 6.5 IDX 12.6 SF 6.4 CM 6.8 BF 40.3 FBF 4.7 SDM 5.9 LAM <=1.0 LHI 8.9 LHC 8.1 LHS 3.9 VSAL 7.1 | fewer bits than VSA: LAM
+  M= 1024 V=    2 lift0.5  (acc  67.4): VSA 50.5 BEST 19.0 BEST36 23.6 IDX 25.1 SF 50.2 CM >64.0 BF >64.0 FBF 21.9 SDM 37.4 LAM >64.0 LHI 21.2 LHC 44.2 LHS 28.1 VSAL 49.0 | fewer bits than VSA: IDX,SF,FBF,SDM,LHI,LHC,LHS
+  M= 1024 V=    2 U90      (acc  76.3): VSA >64.0 BEST 41.1 BEST36 49.3 IDX 49.3 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI 41.1 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: IDX,LHI
+  M= 1024 V=    2 references: EXACT 84.7  U 76.3  VSA-inf 63.3  LAM-inf 63.3  VSA at 64 69.7  BEST at 64 80.9
+  M= 1024 V=   16 lift0.25 (acc  22.5): VSA 6.4 BEST 4.2 BEST36 11.1 IDX 11.1 SF 18.6 CM 22.3 BF 41.3 FBF 14.5 SDM 35.8 LAM 4.2 LHI 10.2 LHC 16.3 LHS 12.8 VSAL 13.8 | fewer bits than VSA: LAM
+  M= 1024 V=   16 lift0.5  (acc  38.7): VSA >64.0 BEST 19.2 BEST36 24.7 IDX 24.7 SF >64.0 CM >64.0 BF >64.0 FBF 54.3 SDM >64.0 LAM 23.1 LHI 22.1 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: IDX,FBF,LAM,LHI
+  M= 1024 V=   16 U90      (acc  64.0): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M= 1024 V=   16 references: EXACT 71.1  U 64.0  VSA-inf 41.2  LAM-inf 45.8  VSA at 64 38.1  BEST at 64 61.2
+  M= 1024 V=  128 lift0.25 (acc  18.4): VSA 12.9 BEST 10.6 BEST36 11.2 IDX 11.2 SF 22.9 CM 29.2 BF 49.0 FBF 32.7 SDM >64.0 LAM 14.9 LHI 10.6 LHC 21.8 LHS 18.7 VSAL 12.8 | fewer bits than VSA: IDX,LHI
+  M= 1024 V=  128 lift0.5  (acc  36.0): VSA 35.0 BEST 22.1 BEST36 23.7 IDX 23.7 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM 41.3 LHI 22.1 LHC >64.0 LHS 61.4 VSAL 49.4 | fewer bits than VSA: IDX,LHI
+  M= 1024 V=  128 U90      (acc  64.0): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M= 1024 V=  128 references: EXACT 71.2  U 64.0  VSA-inf 60.9  LAM-inf 60.3  VSA at 64 46.5  BEST at 64 62.2
+  M= 1024 V= 1024 lift0.25 (acc  17.5): VSA 15.9 BEST 12.4 BEST36 17.6 IDX 17.6 SF 30.2 CM 33.5 BF 59.8 FBF >64.0 SDM >64.0 LAM 18.4 LHI 12.4 LHC 27.0 LHS 21.8 VSAL 18.2 | fewer bits than VSA: LHI
+  M= 1024 V= 1024 lift0.5  (acc  34.8): VSA 44.4 BEST 36.7 BEST36 37.9 IDX 37.9 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM 38.5 LHI 36.7 LHC >64.0 LHS >64.0 VSAL 41.6 | fewer bits than VSA: IDX,LAM,LHI
+  M= 1024 V= 1024 U90      (acc  62.6): VSA >64.0 BEST >64.0 BEST36 >64.0 IDX >64.0 SF >64.0 CM >64.0 BF >64.0 FBF >64.0 SDM >64.0 LAM >64.0 LHI >64.0 LHC >64.0 LHS >64.0 VSAL >64.0 | fewer bits than VSA: -
+  M= 1024 V= 1024 references: EXACT 69.5  U 62.6  VSA-inf 66.6  LAM-inf 67.4  VSA at 64 45.5  BEST at 64 55.6
+

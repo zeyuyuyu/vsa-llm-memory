@@ -1,0 +1,1224 @@
+{
+ "runs": {
+  "N_s0": {
+   "dev": {
+    "0k": {
+     "QA1-5": {
+      "k": 99,
+      "n": 100,
+      "acc": 99.0,
+      "wilson95": [
+       94.6,
+       99.8
+      ],
+      "k_official": 99,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "4k": {
+     "QA1-5": {
+      "k": 99,
+      "n": 100,
+      "acc": 99.0,
+      "wilson95": [
+       94.6,
+       99.8
+      ],
+      "k_official": 99,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "16k": {
+     "QA1-5": {
+      "k": 98,
+      "n": 100,
+      "acc": 98.0,
+      "wilson95": [
+       93.0,
+       99.4
+      ],
+      "k_official": 98,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "32k": {
+     "QA1-5": {
+      "k": 97,
+      "n": 100,
+      "acc": 97.0,
+      "wilson95": [
+       91.5,
+       99.0
+      ],
+      "k_official": 97,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 17,
+      "n": 20,
+      "acc": 85.0,
+      "wilson95": [
+       64.0,
+       94.8
+      ],
+      "k_official": 17,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "64k": {
+     "QA1-5": {
+      "k": 92,
+      "n": 100,
+      "acc": 92.0,
+      "wilson95": [
+       85.0,
+       95.9
+      ],
+      "k_official": 92,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 14,
+      "n": 20,
+      "acc": 70.0,
+      "wilson95": [
+       48.1,
+       85.5
+      ],
+      "k_official": 14,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 18,
+      "n": 20,
+      "acc": 90.0,
+      "wilson95": [
+       69.9,
+       97.2
+      ],
+      "k_official": 18,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    }
+   },
+   "dev_five_length_mean": 97.0,
+   "bar0": true
+  },
+  "Y_s0": {
+   "dev": {
+    "0k": {
+     "QA1-5": {
+      "k": 99,
+      "n": 100,
+      "acc": 99.0,
+      "wilson95": [
+       94.6,
+       99.8
+      ],
+      "k_official": 99,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "4k": {
+     "QA1-5": {
+      "k": 100,
+      "n": 100,
+      "acc": 100.0,
+      "wilson95": [
+       96.3,
+       100.0
+      ],
+      "k_official": 100,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "16k": {
+     "QA1-5": {
+      "k": 99,
+      "n": 100,
+      "acc": 99.0,
+      "wilson95": [
+       94.6,
+       99.8
+      ],
+      "k_official": 99,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "32k": {
+     "QA1-5": {
+      "k": 98,
+      "n": 100,
+      "acc": 98.0,
+      "wilson95": [
+       93.0,
+       99.4
+      ],
+      "k_official": 98,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 18,
+      "n": 20,
+      "acc": 90.0,
+      "wilson95": [
+       69.9,
+       97.2
+      ],
+      "k_official": 18,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "64k": {
+     "QA1-5": {
+      "k": 98,
+      "n": 100,
+      "acc": 98.0,
+      "wilson95": [
+       93.0,
+       99.4
+      ],
+      "k_official": 98,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 18,
+      "n": 20,
+      "acc": 90.0,
+      "wilson95": [
+       69.9,
+       97.2
+      ],
+      "k_official": 18,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    }
+   },
+   "dev_five_length_mean": 98.8,
+   "bar0": true
+  },
+  "Y_s1": {
+   "dev": {
+    "0k": {
+     "QA1-5": {
+      "k": 99,
+      "n": 100,
+      "acc": 99.0,
+      "wilson95": [
+       94.6,
+       99.8
+      ],
+      "k_official": 99,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "4k": {
+     "QA1-5": {
+      "k": 98,
+      "n": 100,
+      "acc": 98.0,
+      "wilson95": [
+       93.0,
+       99.4
+      ],
+      "k_official": 98,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 18,
+      "n": 20,
+      "acc": 90.0,
+      "wilson95": [
+       69.9,
+       97.2
+      ],
+      "k_official": 18,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "16k": {
+     "QA1-5": {
+      "k": 98,
+      "n": 100,
+      "acc": 98.0,
+      "wilson95": [
+       93.0,
+       99.4
+      ],
+      "k_official": 98,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "32k": {
+     "QA1-5": {
+      "k": 99,
+      "n": 100,
+      "acc": 99.0,
+      "wilson95": [
+       94.6,
+       99.8
+      ],
+      "k_official": 99,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    },
+    "64k": {
+     "QA1-5": {
+      "k": 96,
+      "n": 100,
+      "acc": 96.0,
+      "wilson95": [
+       90.2,
+       98.4
+      ],
+      "k_official": 96,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa1": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa2": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa3": {
+      "k": 19,
+      "n": 20,
+      "acc": 95.0,
+      "wilson95": [
+       76.4,
+       99.1
+      ],
+      "k_official": 19,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa4": {
+      "k": 18,
+      "n": 20,
+      "acc": 90.0,
+      "wilson95": [
+       69.9,
+       97.2
+      ],
+      "k_official": 18,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     },
+     "qa5": {
+      "k": 20,
+      "n": 20,
+      "acc": 100.0,
+      "wilson95": [
+       83.9,
+       100.0
+      ],
+      "k_official": 20,
+      "scorer_disagree": 0,
+      "no_label": 0,
+      "hit_limit": 0
+     }
+    }
+   },
+   "dev_five_length_mean": 98.0,
+   "bar0": true
+  }
+ },
+ "primary": "Y",
+ "primary_rule": "dev five-length mean: N 97.0 vs Y 98.8 (tie -> Y)"
+}

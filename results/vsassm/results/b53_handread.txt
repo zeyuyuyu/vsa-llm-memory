@@ -1,0 +1,64 @@
+# B53 hand reading (prereg "Checks"): the R1-V2 cell where LAM leads the B53 store most; 10 queries only the
+# VSA answers right, 10 only LAM; alias -> stored label (gold value); EXACT = the exact nearest stored label
+# is the queried entity
+
+## qwen8: M 1024, V 2, 4 bits per fact (VSA - LAM -6.00); only-VSA 449, only-LAM 720
+  only VSA right (EXACT right in 276 of 449):
+    store 3: "Alexander Marie Colin" -> "Alexandre-Marie Colin" (value 1; EXACT right)
+    store 4: "Leon-Levy Brunswick" -> "Léon-Lévy Brunswick" (value 0; EXACT right)
+    store 3: "Hugo Eduardo Rubio Montecinos" -> "Hugo Rubio" (value 0; EXACT right)
+    store 2: "BAT" -> "British American Tobacco" (value 0; EXACT wrong)
+    store 3: "Heart of Dixie" -> "Alabama" (value 0; EXACT wrong)
+    store 0: "Cosimo il Grande" -> "Cosimo I de' Medici, Grand Duke of Tuscany" (value 1; EXACT right)
+    store 1: "Joh. Heinr. Rose" -> "Johann Heinrich Roos" (value 0; EXACT right)
+    store 2: "Verse" -> "Benjamin Mount" (value 1; EXACT wrong)
+    store 1: "Guyane française" -> "French Guiana" (value 1; EXACT wrong)
+    store 0: "Republic of Ghana" -> "Ghana" (value 1; EXACT right)
+  only LAM right (EXACT right in 546 of 720):
+    store 2: "Edu" -> "Eduard Campabadal" (value 1; EXACT right)
+    store 4: "James I and VI" -> "James VI and I" (value 1; EXACT right)
+    store 3: "S. Korea" -> "South Korea" (value 0; EXACT right)
+    store 1: "Amay Suu" -> "Aung San Suu Kyi" (value 1; EXACT right)
+    store 3: "Ke Wenzhe" -> "Ko Wen-je" (value 1; EXACT right)
+    store 0: "City of Angels" -> "Los Angeles" (value 1; EXACT right)
+    store 0: "Nos" -> "The Nose" (value 1; EXACT right)
+    store 3: "Marathon" -> "Saint-Étienne-de-Saint-Geoirs" (value 1; EXACT wrong)
+    store 1: "N.S.W." -> "New South Wales" (value 1; EXACT right)
+    store 3: ".wav" -> "Waveform Audio File Format" (value 0; EXACT right)
+
+## e5: M 256, V 2, 4 bits per fact (VSA - LAM -7.13); only-VSA 490, only-LAM 837
+  only VSA right (EXACT right in 291 of 490):
+    store 14: "Son Kain" -> "Gain" (value 1; EXACT wrong)
+    store 18: "netminder" -> "goalkeeper" (value 1; EXACT right)
+    store 16: "TLoU" -> "The Last of Us" (value 1; EXACT right)
+    store 13: "BS" -> "Basel-Stadt" (value 1; EXACT wrong)
+    store 13: "Maoyuan" -> "Wang Yuankui" (value 1; EXACT right)
+    store 1: "Starz Animation" -> "Jam Filled Entertainment" (value 1; EXACT wrong)
+    store 6: "Wallis" -> "Canton of Valais" (value 1; EXACT wrong)
+    store 10: "Jacob Duc" -> "Jacob Duck" (value 0; EXACT right)
+    store 5: "The Radical" -> "Katherine" (value 0; EXACT wrong)
+    store 0: "Slave" -> "The Slave" (value 1; EXACT right)
+  only LAM right (EXACT right in 613 of 837):
+    store 8: "OFK Ostersund" -> "Östersunds FK" (value 0; EXACT right)
+    store 19: "Marquise Jeanne Antoinette Poisson" -> "Madame de Pompadour" (value 0; EXACT right)
+    store 15: "Marcellus PP. II" -> "Marcellus II" (value 1; EXACT right)
+    store 6: "West Visayas" -> "Western Visayas" (value 1; EXACT right)
+    store 12: "Województwo świętokrzyskie" -> "Świętokrzyskie Voivodeship" (value 1; EXACT right)
+    store 3: "The Wall" -> "Pink Floyd – The Wall" (value 1; EXACT wrong)
+    store 1: "Somerset, England" -> "Somerset" (value 1; EXACT right)
+    store 11: "Vir" -> "Mahavira" (value 0; EXACT wrong)
+    store 5: "María de Rumania" -> "Queen Marie of Romania" (value 0; EXACT right)
+    store 13: "Un monstre à Paris" -> "A Monster in Paris" (value 0; EXACT right)
+
+## Notes (by me, after reading the 40 queries above)
+- In both encoders the queries only LAM answers right are mostly ones the exact index also gets right (qwen8 546 of
+  720, 76%; e5 613 of 837, 73%), and the sampled ones are plain aliases with a clearly matching label ("S. Korea" ->
+  "South Korea", "N.S.W." -> "New South Wales", "City of Angels" -> "Los Angeles", "West Visayas" -> "Western Visayas").
+  The similarity is there; the superposed read loses it in cross-talk from the other stored keys, which the
+  least-squares memory removes by inverting the stored keys' Gram matrix (its read is decorrelated, the store's is
+  Hebbian). This is the expected difference between a pseudo-inverse and an outer-product memory, not a code effect.
+- The queries only the VSA answers right have a lower exact-index rate (qwen8 276 of 449, 61%; e5 291 of 490, 59%):
+  at V = 2 a read that misses the entity still lands on the right value half of the time, so part of these wins are
+  chance ("Verse" -> "Benjamin Mount", "The Radical" -> "Katherine", "Son Kain" -> "Gain"); the rest are good aliases
+  where LAM's quantized ridge read failed ("Republic of Ghana" -> "Ghana", "netminder" -> "goalkeeper").
+- No sign of a scoring or alignment fault: aliases, labels and gold values line up with the stores.

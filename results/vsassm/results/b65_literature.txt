@@ -1,0 +1,21 @@
+# B65 conclusion -> literature (2026-11-23). Sources in B40's / B55's checks (results/b40_literature.txt,
+# results/b55_literature.txt) are cited by their keys and not re-read. One new search (snippet only, below).
+
+[LG25] Levy, A. A. & Geva, M. Language Models Encode Numbers Using Digit Representations in Base 10. NAACL 2025
+  (short), pp. 385-395; arXiv:2410.11781 (snippet only: aclanthology.org/2025.naacl-short.33, arxiv.org/html/2410.11781v2).
+  Per-digit circular probes on the hidden state of a number recover each base-10 digit (about 0.91 per digit for
+  Llama 3 8B, layers 3 and up); errors are "close in digit space" but far in value space.
+  -> SUPPORTS B65's OPS result that every module reads the operands almost exactly (read exact 0.992-1.000) from the
+     states at the operand tokens, and the digit-space character of the LAST misreads in the sample reading (one digit
+     off: 460 -> 450, 748 -> 738, 493 -> 593).
+
+AFTER THE RESULT (one line per conclusion)
+- The read position dominates the comparison (every module gains from operand-token reads: +8.0 / +1.9 / +3.8 points):
+  SUPPORTED by [D26T-ch8] (B40's check: "encoding accuracy plays a pivotal role in overall neurosymbolic system
+  performance") and by [LG25] (digits linearly recoverable at the number's own token).
+- With both modules tuned, the vector module (either read) is not ahead of the same-shape discrete module at operand
+  reads (equivalent / inconclusive) and the published read trails at the last token: NO PRECEDENT found for a
+  VSA-vs-discrete comparison across read positions; consistent with [DK25] and [GZ26] (B40's check: discrete
+  read-compute-write pipelines of this shape reach near-ceiling accuracy without a vector format).
+- The best-match read leads the tuned discrete module only at the last token (+1.3): NO PRECEDENT; [PL95] (B55's
+  check) supports nearest-match clean-up as the canonical HRR read.

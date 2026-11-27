@@ -1,0 +1,269 @@
+{
+ "note": "Clean-room re-implementation, task N (8 trained arithmetic types), Llama-3.1-8B-Instruct frozen, layer-17 input, one training seed (0), test split scored once (2,000 own test rows, 250 per op).",
+ "primary_read_pos_operands": {
+  "split": "test",
+  "n_items": 2000,
+  "seed": 0,
+  "accuracy": {
+   "base": 0.183,
+   "vec_published": 0.9935,
+   "vec_best_match": 0.9985,
+   "discrete": 0.984
+  },
+  "accuracy_wilson95": {
+   "base": [
+    0.1667,
+    0.2005
+   ],
+   "vec_published": [
+    0.9889,
+    0.9962
+   ],
+   "vec_best_match": [
+    0.9956,
+    0.9995
+   ],
+   "discrete": [
+    0.9775,
+    0.9886
+   ]
+  },
+  "module_answer_correct_and_gate_open": {
+   "vec_published": 0.9925,
+   "vec_best_match": 0.9975,
+   "discrete": 1.0
+  },
+  "followed_given_module_right": {
+   "vec_published": 1.0,
+   "vec_best_match": 1.0,
+   "discrete": 0.984
+  },
+  "vector_published_minus_discrete": {
+   "diff_points": 0.95,
+   "ci95_points": [
+    0.3,
+    1.6
+   ]
+  },
+  "vector_best_match_minus_discrete": {
+   "diff_points": 1.45,
+   "ci95_points": [
+    0.9,
+    2.05
+   ]
+  },
+  "per_op": {
+   "bitwise_and": {
+    "base": 0.048,
+    "vec_published": 0.992,
+    "vec_best_match": 0.992,
+    "discrete": 1.0
+   },
+   "bitwise_or": {
+    "base": 0.036,
+    "vec_published": 0.996,
+    "vec_best_match": 0.996,
+    "discrete": 0.952
+   },
+   "bitwise_xor": {
+    "base": 0.108,
+    "vec_published": 0.992,
+    "vec_best_match": 1.0,
+    "discrete": 0.956
+   },
+   "gcd": {
+    "base": 0.636,
+    "vec_published": 0.996,
+    "vec_best_match": 1.0,
+    "discrete": 1.0
+   },
+   "lcm": {
+    "base": 0.032,
+    "vec_published": 0.992,
+    "vec_best_match": 1.0,
+    "discrete": 1.0
+   },
+   "modulo": {
+    "base": 0.532,
+    "vec_published": 0.996,
+    "vec_best_match": 1.0,
+    "discrete": 0.992
+   },
+   "multiplication": {
+    "base": 0.008,
+    "vec_published": 0.996,
+    "vec_best_match": 1.0,
+    "discrete": 0.98
+   },
+   "square_mod": {
+    "base": 0.064,
+    "vec_published": 0.988,
+    "vec_best_match": 1.0,
+    "discrete": 0.992
+   }
+  }
+ },
+ "secondary_read_pos_last_token_DE25_default": {
+  "split": "test",
+  "n_items": 2000,
+  "seed": 0,
+  "accuracy": {
+   "base": 0.183,
+   "vec_published": 0.93,
+   "vec_best_match": 0.984,
+   "discrete": 0.947
+  },
+  "accuracy_wilson95": {
+   "base": [
+    0.1667,
+    0.2005
+   ],
+   "vec_published": [
+    0.918,
+    0.9404
+   ],
+   "vec_best_match": [
+    0.9775,
+    0.9886
+   ],
+   "discrete": [
+    0.9363,
+    0.956
+   ]
+  },
+  "module_answer_correct_and_gate_open": {
+   "vec_published": 0.9295,
+   "vec_best_match": 0.9845,
+   "discrete": 0.963
+  },
+  "followed_given_module_right": {
+   "vec_published": 0.9989,
+   "vec_best_match": 0.999,
+   "discrete": 0.9834
+  },
+  "vector_published_minus_discrete": {
+   "diff_points": -1.7,
+   "ci95_points": [
+    -2.95,
+    -0.45
+   ]
+  },
+  "vector_best_match_minus_discrete": {
+   "diff_points": 3.7,
+   "ci95_points": [
+    2.7,
+    4.7
+   ]
+  },
+  "per_op": {
+   "bitwise_and": {
+    "base": 0.048,
+    "vec_published": 0.96,
+    "vec_best_match": 0.992,
+    "discrete": 0.992
+   },
+   "bitwise_or": {
+    "base": 0.036,
+    "vec_published": 0.988,
+    "vec_best_match": 0.996,
+    "discrete": 0.944
+   },
+   "bitwise_xor": {
+    "base": 0.108,
+    "vec_published": 0.996,
+    "vec_best_match": 0.996,
+    "discrete": 0.956
+   },
+   "gcd": {
+    "base": 0.636,
+    "vec_published": 0.948,
+    "vec_best_match": 0.996,
+    "discrete": 0.984
+   },
+   "lcm": {
+    "base": 0.032,
+    "vec_published": 0.9,
+    "vec_best_match": 0.984,
+    "discrete": 0.984
+   },
+   "modulo": {
+    "base": 0.532,
+    "vec_published": 0.992,
+    "vec_best_match": 1.0,
+    "discrete": 0.976
+   },
+   "multiplication": {
+    "base": 0.008,
+    "vec_published": 0.976,
+    "vec_best_match": 0.988,
+    "discrete": 0.964
+   },
+   "square_mod": {
+    "base": 0.064,
+    "vec_published": 0.68,
+    "vec_best_match": 0.92,
+    "discrete": 0.776
+   }
+  }
+ },
+ "dev_only_writeback_lr_sensitivity": {
+  "note": "dev split (800 rows), same frozen readers, only the write-back fine-tune lr changed; test NOT re-scored",
+  "operands": {
+   "vec_published": {
+    "3e-4": 0.99375,
+    "1e-3": 0.99375,
+    "3e-3": 0.99375
+   },
+   "vec_best_match": {
+    "3e-4": 0.99625,
+    "1e-3": 0.99625,
+    "3e-3": 0.99625
+   },
+   "discrete": {
+    "3e-4": 0.54375,
+    "1e-3": 0.98625,
+    "3e-3": 0.9975
+   }
+  },
+  "last_token": {
+   "vec_published": {
+    "3e-4": 0.90375,
+    "1e-3": 0.90875,
+    "3e-3": 0.91125
+   },
+   "vec_best_match": {
+    "3e-4": 0.98125,
+    "1e-3": 0.98625,
+    "3e-3": 0.9875
+   },
+   "discrete": {
+    "3e-4": 0.52875,
+    "1e-3": 0.95625,
+    "3e-3": 0.9675
+   }
+  }
+ },
+ "parameters": {
+  "vector_module": 16783360,
+  "discrete_module": 688196
+ },
+ "paper": {
+  "published_minus_discrete": [
+   -3.23,
+   -4.62,
+   -1.87
+  ],
+  "best_match_minus_discrete": [
+   3.03,
+   2.1,
+   4.0
+  ],
+  "accuracies": {
+   "vec_published": 0.898,
+   "vec_best_match": 0.96,
+   "discrete": 0.93,
+   "model_alone": 0.193
+  }
+ },
+ "gpu_hours": 1.31
+}

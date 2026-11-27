@@ -1,0 +1,19 @@
+# B46 registered predictions (prereg/B46_second_llm_family_prereg.md) against the outcome; P1-P10 by b46_predcheck.py
+P1: FAILED - chosen granite33i mean_L30, criterion 0.6538 (predicted Llama-3.1-8B-Instruct, mean, 1/4 depth, 0.62-0.74)
+P2: HELD - R1 VSA - BEST +6.06 [+5.04, +7.10] (predicted +2 to +9, CI > 0)
+P3: HELD - R1 VSA - IDX +7.71 (predicted +4 to +11)
+P4: HELD - key-free family is the dev BEST in 9 of 12 R1 cells (predicted >= 4); ['SF', 'CM', 'IDX', 'CM', 'CM', 'IDX', 'SF', 'CM', 'CM', 'CM', 'CM', 'IDX']
+P5: HELD - R0 VSA - BEST -0.05 [-1.24, +1.19] (predicted -3 to +4)
+P6: HELD - R2 VSA - BEST -4.60 [-4.96, -4.25]; BEST = index in 11 of 14 (predicted <= -2 with CI < 0, index >= 10)
+P7: HELD - RH VSA - BEST -0.27 (predicted -3 to +7)
+P8: HELD - R1 VSA - ORACLE +4.75 [+3.89, +5.66] (predicted >= +1, CI > 0)
+P9: HELD - rate ratio BEST / VSA at lift 0.25: [(256, 2, '4.90'), (256, 16, '1.26'), (1024, 2, '4.74'), (1024, 16, '1.85')] (predicted >= 1.5 in >= 3 of 4)
+P10: HELD - EXACT(b46) - EXACT(Qwen3-8B) per (M, V): [-0.95, -1.57, -0.73, -1.33, -2.12, -3.42, -3.88, -3.41] (predicted within 6)
+P11: HELD - scorer |difference| 0.00e+00 (< 1e-9); 0 of 9,800 configurations over budget; re-derivation SF / CM / BF /
+     FBF 1.0000 (>= 99%), SDM 0.9997 (>= 98%); e5 rows of b46_verdict.py equal B36's (208 of 208); recipe check: rows
+     with unchanged name tokens bit-identical (cosine 1.0 >= 0.9999) for 99.09% of strings, criterion 0.7035 (within
+     0.003 of 0.7035).
+Notes: P9 holds on the point estimates (4.90, 4.74, 1.85 >= 1.5; 1.26 not), but the 95% intervals of the two V = 2
+ratios reach below 1 ([0.83, 6.77], [0.32, 7.37]); only M 1,024, V 16 has an interval above 1.5 ([1.58, 2.25]).
+Summary: 10 held (P2-P11), 1 failed (P1: the encoder choice - Granite-3.3-8B-Instruct mean at 3/4 depth, not Llama at
+1/4 depth).

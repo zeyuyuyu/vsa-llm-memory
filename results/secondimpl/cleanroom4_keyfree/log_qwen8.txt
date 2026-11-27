@@ -1,0 +1,37 @@
+setup qwen8 done 78s
+[qwen8 M1024 V16 b4] store done 69s first=18.46 final=17.77
+[qwen8 M1024 V2 b4] store done 74s first=65.83 final=64.83
+[qwen8 M1024 V2 b8] store done 132s first=66.88 final=68.81
+[qwen8 M1024 V16 b8] store done 134s first=25.95 final=24.21
+[qwen8 M1024 V16 b16] store done 249s first=34.72 final=34.65
+[qwen8 M1024 V2 b16] store done 255s first=67.17 final=67.30
+[qwen8 M1024 V16 b4] family dev done 263s
+[qwen8 M1024 V2 b4] family dev done 272s
+[qwen8 M1024 V16 b4] ALL done 280s index=13.8 static=8.6 cms=7.7 bloom=7.5 fly=10.6 sdm=18.5 best=sdm
+[qwen8 M1024 V2 b4] ALL done 291s index=54.1 static=52.1 cms=54.3 bloom=51.0 fly=56.2 sdm=59.1 best=sdm
+[qwen8 M256 V2 b4] store done 16s first=59.27 final=70.06
+[qwen8 M256 V2 b8] store done 28s first=69.72 final=72.29
+[qwen8 M1024 V16 b8] family dev done 324s
+[qwen8 M1024 V16 b8] ALL done 339s index=14.8 static=9.9 cms=10.1 bloom=8.2 fly=10.3 sdm=23.9 best=sdm
+[qwen8 M1024 V2 b8] family dev done 341s
+[qwen8 M1024 V2 b8] ALL done 361s index=54.1 static=52.7 cms=52.3 bloom=52.8 fly=57.3 sdm=64.9 best=sdm
+[qwen8 M256 V2 b4] family dev done 92s
+[qwen8 M256 V16 b4] store done 15s first=14.84 final=18.64
+[qwen8 M256 V2 b4] ALL done 111s index=53.9 static=51.2 cms=53.5 bloom=53.7 fly=57.6 sdm=56.4 best=fly
+[qwen8 M256 V2 b16] store done 54s first=71.98 final=77.86
+[qwen8 M256 V2 b8] family dev done 117s
+[qwen8 M256 V16 b8] store done 30s first=21.31 final=27.56
+[qwen8 M256 V2 b8] ALL done 133s index=58.0 static=50.7 cms=53.5 bloom=53.0 fly=57.9 sdm=64.9 best=sdm
+[qwen8 M1024 V16 b16] family dev done 469s
+[qwen8 M256 V16 b16] store done 57s first=37.91 final=38.77
+[qwen8 M1024 V16 b16] ALL done 486s index=23.4 static=10.9 cms=11.2 bloom=9.4 fly=16.9 sdm=24.4 best=sdm
+[qwen8 M256 V16 b4] family dev done 126s
+[qwen8 M256 V16 b4] ALL done 143s index=12.8 static=9.8 cms=12.4 bloom=9.3 fly=11.0 sdm=16.1 best=sdm
+[qwen8 M256 V2 b16] family dev done 167s
+[qwen8 M1024 V2 b16] family dev done 526s
+[qwen8 M256 V2 b16] ALL done 188s index=62.5 static=56.6 cms=57.3 bloom=55.4 fly=52.5 sdm=72.2 best=sdm
+[qwen8 M256 V16 b8] family dev done 148s
+[qwen8 M1024 V2 b16] ALL done 545s index=59.3 static=54.7 cms=51.1 bloom=51.6 fly=59.5 sdm=65.7 best=sdm
+[qwen8 M256 V16 b8] ALL done 162s index=18.9 static=13.1 cms=16.1 bloom=10.2 fly=15.3 sdm=27.4 best=sdm
+[qwen8 M256 V16 b16] family dev done 167s
+[qwen8 M256 V16 b16] ALL done 177s index=23.0 static=13.0 cms=15.0 bloom=14.1 fly=20.9 sdm=31.2 best=sdm

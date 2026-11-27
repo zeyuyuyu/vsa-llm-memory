@@ -1,0 +1,6 @@
+## b46_granite33i_mean_L30_f16: (18292, 4096); dev labels 1838, dev aliases 2152
+  none  : max|value| per dim: median 0.033, top-3 dims [np.int64(379), np.int64(484), np.int64(312)] (0.592, 0.552, 0.443); rows with a coordinate > 0.5: 0.626; alias-label cosine median 0.885 (10th pct 0.767); random label pairs median 0.758 (99th pct 0.863)
+  center: max|value| per dim: median 0.056, top-3 dims [np.int64(379), np.int64(484), np.int64(1433)] (0.336, 0.275, 0.264); rows with a coordinate > 0.5: 0.000; alias-label cosine median 0.534 (10th pct 0.107); random label pairs median -0.007 (99th pct 0.267)
+          P(all k SimHash bits equal), k = 2/4/6/8/10/16: 0.43 / 0.21 / 0.13 / 0.08 / 0.05 / 0.02
+  whiten: max|value| per dim: median 0.064, top-3 dims [np.int64(162), np.int64(910), np.int64(1361)] (0.192, 0.165, 0.151); rows with a coordinate > 0.5: 0.000; alias-label cosine median 0.403 (10th pct 0.031); random label pairs median -0.000 (99th pct 0.050)
+          P(all k SimHash bits equal), k = 2/4/6/8/10/16: 0.41 / 0.18 / 0.09 / 0.05 / 0.03 / 0.01

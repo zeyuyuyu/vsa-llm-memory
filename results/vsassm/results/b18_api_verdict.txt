@@ -1,0 +1,41 @@
+B18 amendment 6 — frontier API references on BABILong (RMT-team/babilong official test set), 2026-10-22
+
+Samples, identical for every system:
+  - first 25 per task of qa1-qa5 at 0k / 4k / 16k / 64k / 128k (n = 125 per length);
+  - first 5 per task at 512k / 1M (n = 25).
+Metric: the official BABILong rule applied to the whole output. The verbatim official babilong/metrics.py agrees on
+every cell. API errors and truncated outputs count as wrong. Cells are QA1-5 means, with a 95% Wilson interval.
+
+length   ours (1.7B student + memory)   GPT-6.1 Sol (zero-shot)   Claude Opus 5.5 (zero-shot)
+0k       100.0                          100.0                     100.0
+4k        99.2                           99.2                      97.6
+16k      100.0                          100.0                      95.2
+64k      100.0 [97.0-100]                99.2 [95.6-99.9]          96.0 [91.0-98.3]  (first-line reading 97.6)
+128k     100.0 [97.0-100]                96.8 [92.1-98.7]          97.6 [93.2-99.2]
+512k     100.0 [86.7-100]                96.0 [80.5-99.3]          88.0 [70.0-95.8]
+1M       100.0 [86.7-100]               exceeds context           exceeds context
+                                        (provider: context_length_exceeded)   (1.33M Claude tokens > 1M)
+
+Leaderboard reference (not rerun): GPT-4-0125 87 / 74 / 64 / 43 / 36 / 0 / 0.
+
+Notes
+- Category. Our student is fine-tuned on the BABILong training split; both frontier models are zero-shot. The
+  correct leaderboard peers for us are ARMT and fine-tuned Mamba (see b18_verdict).
+- Opus losses are almost all qa3 (three supporting facts): 0.76-0.88 up to 128k, 0.60 at 512k.
+- Format violations, Opus 64k: 2 answers are correct on line 1 but followed by an explanation that names another
+  room. The official rule marks them wrong; the first-line reading gives 97.6.
+- Audit:
+  - 30 randomly drawn "correct" judgements (15 per model) were read by hand: no false positives.
+  - Every "wrong" judgement was read: all real errors, apart from the 2 format cases above.
+- Effort: reasoning effort was high for both models. GPT-6.1 Sol used 109 reasoning tokens on a 16k qa3 probe.
+  Calls were pinned to the official providers (OpenAI, Anthropic) through OpenRouter, with fallbacks off.
+- One Opus 4k call was blocked by provider moderation (403); it succeeded on the single retry pass.
+- Prediction check (amendment 6):
+  - "both >= 0.9 at 0k-16k": HOLDS.
+  - "both below our system at 128k and beyond": only directionally. We are higher in every cell from 128k on, but
+    the intervals overlap with GPT-6.1 Sol at 128k and 512k (n = 125 / 25). Against Opus at 512k the gap is 12 points
+    with overlapping intervals.
+  - Not supported: a significant win over GPT-6.1 Sol.
+  - Supported: neither frontier model can take the 1M input at all, while ours answers it.
+- Cost: billed per call $338.83 (GPT $124.37, Opus $214.45). Approved budget $410. The OpenRouter key rose $368.87
+  over the same window, but it is shared with other projects. Context-exceeded requests were not billed.

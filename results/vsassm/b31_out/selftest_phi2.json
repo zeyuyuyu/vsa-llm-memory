@@ -1,0 +1,143 @@
+{
+ "enc": "phi2",
+ "padding_side": "right",
+ "A_train": {
+  "n": 2000,
+  "dict_equals_label": 2000,
+  "mentions_per_instance": [
+   98
+  ],
+  "scanner_dropped_markers_by_kind": {
+   "Y": 10146
+  },
+  "instances_with_a_dropped_marker": 1893,
+  "token_ids_equal_b27_rows": 2000,
+  "spans_equal_published": 2000
+ },
+ "A_dev": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   98
+  ],
+  "scanner_dropped_markers_by_kind": {
+   "Y": 2488
+  },
+  "instances_with_a_dropped_marker": 475,
+  "token_ids_equal_b27_rows": 500,
+  "spans_equal_published": 500
+ },
+ "A_test": {
+  "n": 1000,
+  "dict_equals_label": 1000,
+  "mentions_per_instance": [
+   98
+  ],
+  "scanner_dropped_markers_by_kind": {
+   "Y": 5004
+  },
+  "instances_with_a_dropped_marker": 931,
+  "token_ids_equal_b27_rows": 1000,
+  "spans_equal_published": 1000
+ },
+ "A_train_v2": {
+  "n": 2000,
+  "dict_equals_label": 2000,
+  "mentions_per_instance": [
+   98
+  ],
+  "scanner_dropped_markers_by_kind": {
+   "Y": 10146
+  },
+  "instances_with_a_dropped_marker": 1893,
+  "token_ids_equal_b27_rows": 2000,
+  "spans_equal_published": 2000
+ },
+ "A_overlap": {
+  "dev_train": 0,
+  "dev_test": 0,
+  "test_train": 0
+ },
+ "B_train": {
+  "n": 1000,
+  "dict_equals_label": 1000,
+  "mentions_per_instance": [
+   130
+  ],
+  "token_ids_equal_b27_rows": 1000,
+  "spans_equal_published": 1000
+ },
+ "B_dev": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   130
+  ],
+  "token_ids_equal_b27_rows": 500,
+  "spans_equal_published": 500
+ },
+ "B_test": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   130
+  ],
+  "token_ids_equal_b27_rows": 500,
+  "spans_equal_published": 500
+ },
+ "B_train_v2": {
+  "n": 1000,
+  "dict_equals_label": 1000,
+  "mentions_per_instance": [
+   130
+  ],
+  "token_ids_equal_b27_rows": 1000,
+  "spans_equal_published": 1000
+ },
+ "B_overlap": {
+  "dev_train": 0,
+  "dev_test": 0,
+  "test_train": 0
+ },
+ "C_train": {
+  "n": 800,
+  "dict_equals_label": 800,
+  "mentions_per_instance": [
+   130
+  ],
+  "token_ids_equal_b27_rows": 800,
+  "spans_equal_published": 800
+ },
+ "C_dev": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   130
+  ],
+  "token_ids_equal_b27_rows": 500,
+  "spans_equal_published": 500
+ },
+ "C_test": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   130
+  ],
+  "token_ids_equal_b27_rows": 500,
+  "spans_equal_published": 500
+ },
+ "C_train_v2": {
+  "n": 800,
+  "dict_equals_label": 800,
+  "mentions_per_instance": [
+   130
+  ],
+  "token_ids_equal_b27_rows": 800,
+  "spans_equal_published": 800
+ },
+ "C_overlap": {
+  "dev_train": 0,
+  "dev_test": 0,
+  "test_train": 0
+ }
+}

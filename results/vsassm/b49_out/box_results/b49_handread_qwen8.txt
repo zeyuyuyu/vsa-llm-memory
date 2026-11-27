@@ -1,0 +1,54 @@
+# B49 hand reading, qwen8: R1 cells with the largest and the smallest VSA - BEST (ideal)
+
+## cell M=1024 V=16 bpf=16: VSA 34.2, BEST LHI 31.7, diff +2.48, EXACT 74.7
+  only VSA right: 821 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Gunnedah'                               | 'Gunnedah Shire'                         | 'Gunnedah Shire'                         | +0.777 | True
+    'Sonnets. 109'                           | 'Sonnet 109'                             | 'Sonnet 109'                             | +0.709 | True
+    'Shamsoddin Mohammad Hafez-e Shirazi'    | 'Hafez'                                  | 'Hafez'                                  | +0.455 | True
+    'Cool Ones'                              | 'The Cool Ones'                          | 'The Cool Ones'                          | +0.787 | True
+    'Laurenti'                               | 'Josephus Nicolaus Laurenti'             | 'Josephus Nicolaus Laurenti'             | +0.430 | True
+    'State of Western Australia'             | 'Western Australia'                      | 'Western Australia'                      | +0.583 | True
+    'Valparaiso Male and Female College'     | 'Valparaiso University'                  | 'Valparaiso University'                  | +0.766 | True
+    'Only Woman'                             | 'The Only Woman'                         | 'The Only Woman'                         | +0.690 | True
+    'Purchase Price'                         | 'The Purchase Price'                     | 'The Purchase Price'                     | +0.787 | True
+    'Damodar'                                | 'Krishna'                                | 'Dude'                                   | +0.078 | False
+    mean centred cosine over all 821: +0.600; EXACT right in 0.92
+  only BEST right: 713 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Lady Di'                                | 'Diana, Princess of Wales'               | 'Lady Frankenstein'                      | +0.246 | True
+    'Mashenka'                               | 'Maschenka'                              | 'Maschenka'                              | +0.525 | True
+    'XJ'                                     | 'X Japan'                                | 'X Japan'                                | +0.357 | True
+    'Guiana, France'                         | 'French Guiana'                          | 'French Guiana'                          | +0.575 | True
+    'Scotland, United Kingdom'               | 'Scotland'                               | 'Scotland'                               | +0.663 | True
+    'Symphony No. 4 in A Major, Op. 90'      | 'Symphony No. 4'                         | 'Symphony No. 4'                         | +0.816 | True
+    'Guyane'                                 | 'French Guiana'                          | 'French Guiana'                          | +0.365 | True
+    'Business'                               | 'The Business'                           | 'The Business'                           | +0.692 | True
+    'Zhongdu'                                | 'Beijing'                                | 'Zhao Dezhao'                            | +0.189 | False
+    'Marcellus Lovejoy Stearns'              | 'Marcellus Stearns'                      | 'Marcellus Stearns'                      | +0.874 | True
+    mean centred cosine over all 713: +0.536; EXACT right in 0.86
+
+## cell M=256 V=2 bpf=8: VSA 60.7, BEST LAM 76.7, diff -16.05, EXACT 89.6
+  only VSA right: 530 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Eldrick Tont "Tiger" Woods'             | 'Tiger Woods'                            | 'Tiger Woods'                            | +0.456 | True
+    'Finnia'                                 | 'Finland'                                | 'Finland'                                | +0.256 | True
+    'Bytown'                                 | 'Ottawa'                                 | 'By og land hand i hand'                 | +0.059 | False
+    'Gautam'                                 | 'Gautama Buddha'                         | 'Gautama Buddha'                         | +0.665 | True
+    'ci'                                     | 'Ivory Coast'                            | 'Devotion'                               | +0.067 | False
+    "Republic of Côte d'Ivoire"              | 'Ivory Coast'                            | 'Ivory Coast'                            | +0.383 | True
+    'Emperor of Russia Pavel Petrovich'      | 'Paul I of Russia'                       | 'Paul I of Russia'                       | +0.328 | True
+    'Guilielmo de Tierra Nueva'              | 'Willem van Nieulandt II'                | 'Hel'                                    | +0.301 | False
+    'Un secret'                              | 'A Secret'                               | 'A Secret'                               | +0.584 | True
+    'VT'                                     | 'Vermont'                                | 'Vermont'                                | +0.479 | True
+    mean centred cosine over all 530: +0.283; EXACT right in 0.79
+  only BEST right: 1311 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Billionaire'                            | 'The Billionaire'                        | 'The Billionaire'                        | +0.814 | True
+    'Mohenjo Daro (film)'                    | 'Mohenjo Daro'                           | 'Mohenjo Daro'                           | +0.828 | True
+    'Francesco Lazzaro Guardi'               | 'Francesco Guardi'                       | 'Francesco Guardi'                       | +0.675 | True
+    'Kingdom of Bhutan'                      | 'Bhutan'                                 | 'Bhutan'                                 | +0.593 | True
+    'take-all chess'                         | 'antichess'                              | 'antichess'                              | +0.276 | True
+    'Nun'                                    | 'The Nun'                                | 'The Nun'                                | +0.634 | True
+    'Whitecaps FC'                           | 'Vancouver Whitecaps FC'                 | 'Vancouver Whitecaps FC'                 | +0.694 | True
+    'Andreas Johannes Ridiger'               | 'Andreas Rüdiger'                        | 'Andreas Rüdiger'                        | +0.518 | True
+    'State of New Hampshire'                 | 'New Hampshire'                          | 'New Hampshire'                          | +0.531 | True
+    'McMinnville College'                    | 'Linfield University'                    | 'The Brothers McMullen'                  | +0.208 | False
+    mean centred cosine over all 1311: +0.481; EXACT right in 0.91
+

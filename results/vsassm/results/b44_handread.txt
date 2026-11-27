@@ -1,0 +1,47 @@
+# B44 hand-reading notes (b44_handread.py output read by hand; classifications by the scripts quoted)
+
+## CoT zs-nothink, std test: 33 failures of 500
+Automatic classification of the F-table key each failing reply looked up (last F entry quoted on its own):
+  21 used the decimal bridge digits as the hex key (e.g. bridge {32} looked up as [F32] instead of [F20]);
+  12 looked up another wrong key (conversion slips such as 37 -> 26 / 2E, or a misread value).
+Read by hand (12 shown by b44_handread.py): #10 bridge 32 -> looked up [F32]{55}; #39 bridge 34 -> 'no entry with key 34';
+#61 bridge 24 -> [F24]; #91 bridge 26 -> [F26]. The model follows the stated procedure but skips the decimal-to-hex
+conversion; with three worked examples (fs-nothink) the same model makes no error on the 500 test instances.
+
+## Equalised LoRA, std, 80,000 training instances, seed 42 (test 0.798): 101 failures of 500
+  label 0, candidate is not a level-1 filler: n 162, accuracy 1.000
+  label 0, candidate is a level-1 filler: n 101, accuracy 0.000
+  label 1, candidate is a level-1 filler: n 237, accuracy 1.000
+Every failure is a negative whose candidate occurs among the level-1 (table F) fillers: the fine-tune answers
+'yes' whenever the candidate is a value of table F that the chain could plausibly reach, and 'no' otherwise. It has
+learned to reject candidates that are not F-values, but not which F-value the two hops reach. Read by hand (10
+shown by b44_handread.py, e.g. #9: R37 -> 4 -> F04 -> 10, candidate 19 = the filler of another F pair; margin +2.2).
+
+## Equalised LoRA at 8,000 (std and ho) and 800
+The same breakdown for every finished lora cell is in results/b44_verdict.txt ("Diagnostic: what the equalised LoRA
+learned"). At 8,000 instances (std and ho, all seeds) the fine-tune is the same membership shortcut (negatives whose
+candidate is an F value: 0.000-0.059 correct; everything else 0.94-1.00). At 800 (std) it is partly memorised and
+partly the shortcut (0.14-0.44 on F-value negatives); on the held-out pairs at 800 it is at chance in every group.
+
+## Naming head + VSA, std, 800, seed 42 (test 0.994): 3 failures of 500, all read
+#123, #248, #346: each has exactly one misnamed mention (e.g. #123 mention 6 named 33), which sends the hop-1 clean-up
+to a wrong pair; the final cosine is then ~0 and the instance (a positive) is called negative.
+
+## Scratchpad LoRA, 800: every failure read (std seed 123: 1 of 500; ho seed 42: 1 of 500)
+std #434 (label yes): generated " 27 F1B 59 no"; the true bridge is 60 (F3C); the model wrote the ANSWER symbol 27 as
+the bridge, converted it correctly (27 = 0x1B) and read F1B's filler: a wrong first hop.
+ho #150 (label no): generated " 5 F13 22 yes"; bridge 5 is right, but 5 was converted to F13 instead of F05, whose
+filler 22 happens to be the candidate: a conversion slip.
+
+## CoT zs-think, std test (0.994): 3 failures of 500, all read
+#122: thinking cut at the 8,192-token limit while debating whether the candidate {11} is a hex key (no answer).
+#436: the query key "32" (hexadecimal) was treated as decimal and converted to 0x20, so the wrong R entry was used.
+#467: the right F entry ([F3F]{38}) is in the model's own listing, but it concluded "no" (a misread of its own list).
+CoT fs-nothink: no failure on std test (500/500) or ho test (500/500).
+
+## Equalised LoRA at 80,000 (std and ho, all seeds): the same shortcut, exactly
+Every seed scores 1.000 on positives and on negatives whose candidate is not a table-F value, and 0.000-0.010 on negatives
+whose candidate is a table-F value, so its test accuracy equals the shortcut ceiling: 1 - 101/500 = 0.798 (std) and
+1 - 95/500 = 0.810 (ho), identical in all three seeds. Training-subset accuracy plateaus at 0.80-0.82 (it does not fit
+its own training data), and dev reaches 0.80 after 20,000-40,000 instances and stays there. With 100x the data the
+answer-only fine-tune learns membership in the F table, not the two hops.

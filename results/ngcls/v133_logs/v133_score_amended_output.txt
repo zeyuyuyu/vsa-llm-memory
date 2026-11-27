@@ -1,0 +1,48 @@
+
+================================================================================================
+V-133 PART A (local, greedy, row-replicable)  model=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct  K=120 facts  N=150 per depth
+================================================================================================
+
+  depth  store     direct    cot       | gap(dir)  gap(cot) 
+  k=2    0.9600    0.2133    0.9200    |   +0.7467   +0.0400
+  k=3    0.8956    0.0667    0.9667    |   +0.8289   -0.0711
+  k=4    0.7978    0.0600    0.9333    |   +0.7378   -0.1356
+  k=5    0.7622    0.1000    0.9467    |   +0.6622   -0.1844
+  k=6    0.7267    0.0267    0.9200    |   +0.7000   -0.1933
+
+  ---- P0 validity gate ----
+  P0(a) task well-formed: re-derive 750/750, unique-relation 750/750: True
+  P0(b) two-hop anchor, AMENDED cf5d8d4 to its store clause only: store 0.9600 >= .95: True
+        DIAGNOSTIC, no longer a gate: direct 0.2133. Calibration over six fact loads (24 to
+        120) never reached .80 at two hops, so `direct` is disqualified as an OPPONENT and
+        P1 is void. The clause is retained here so the failure stays visible.
+  P0(c) cot truncation k2=0.000, k3=0.000, k4=0.007, k5=0.000, k6=0.000 all <= .02: True
+
+  ---- P1 / P2 / P3 ----
+  P1 is VOID by amendment cf5d8d4 -- printed for the record, not scored.
+  P1 gap(6) - gap(2) vs direct = -0.0467  CI [-0.1378, +0.0467]  excl-0 False  >= +.20 False  => FAILS
+  P2 gap(6) - gap(2) vs cot    = -0.2333  CI [-0.3178, -0.1511]  excl-0 True   >= +.20 False  => FAILS
+  P3 store at k=6, d=4096 = 0.7267 >= .70 => HOLDS
+
+  ---- P4 descriptive (no bar) ----
+  per-hop survival acc(k)^(1/k):
+    k=2  store 0.9798  direct 0.4619  cot 0.9592
+    k=3  store 0.9639  direct 0.4055  cot 0.9888
+    k=4  store 0.9451  direct 0.4949  cot 0.9829
+    k=5  store 0.9471  direct 0.6310  cot 0.9891
+    k=6  store 0.9482  direct 0.5466  cot 0.9862
+  store by dimension:
+    d=2048  k2=0.7600  k3=0.5756  k4=0.4978  k5=0.4000  k6=0.3711
+    d=4096  k2=0.9600  k3=0.8956  k4=0.7978  k5=0.7622  k6=0.7267
+    d=8192  k2=0.9689  k3=0.9444  k4=0.8222  k5=0.7956  k6=0.7578
+
+================================================================================================
+V-133 VERDICT: P1 VOID (cf5d8d4) | P2 FAILS | P3 HOLDS
+
+  READING: the gap does not merely fail to widen with depth -- it INVERTS. A reader
+  given the same facts and a scratchpad pulls AHEAD of the store as the chain grows,
+  because the algebra pays a cleanup error at every hop while the reader does not.
+  The manuscript's open question ('whether the gain grows with hops is testable only
+  where the comparator has real purchase') is now answered, and answered against us.
+================================================================================================
+V133-SCORED

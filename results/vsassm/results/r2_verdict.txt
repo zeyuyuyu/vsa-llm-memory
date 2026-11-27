@@ -1,0 +1,24 @@
+# R2 verdict (prereg/R2_prereg.md, aa71b57): trained CLUTRR reader + VSA rule memory vs a direct fine-tune, 2026-10-24
+Both arms: Qwen3-1.7B + LoRA r16, b16_train.py (2 epochs, bs 16, lr 2e-4), trained on the 9,074 train stories (k = 2, 3).
+PACE 14351542 (train + validation), 14352253 (test). Paid account, about 0.5 H200-hour.
+
+Validation (k = 2, 3; sanity check, nothing tuned): reader + memory 0.985 / 0.935 (gold-fact ceiling 1.000 / 0.952);
+direct 0.994 / 0.999.
+
+Test (1,146 stories):
+  k            2      3      4      5      6      7      8      9      10     all
+  A reader+mem 0.947  0.752  0.316  0.178  0.075  0.062  0.040  0.084  0.076  0.216
+  B direct     0.974  0.943  0.447  0.282  0.215  0.208  0.140  0.202  0.353  0.358
+  (R1, prompted Qwen3-8B thinking reader + memory: 0.717 overall; gold facts + memory: 0.973)
+
+P1 (A >= 0.85): FAIL (0.216). P2 (A on k >= 7 >= 0.80): FAIL. P3 (A - B on k >= 7 >= 0.10): FAIL (A is lower).
+Predictions: P1 wrong, P2 wrong, P3 wrong.
+
+Diagnosis (reader facts against the gold edges, test): not truncation (no output reached the 600-token cap).
+  k=2 recall .96 precision .96 (4.0 facts gold, 4.0 written); k=3 .91/.90; k=4 .68/.81; k=6 .48/.67; k=8 .38/.57;
+  k=10 .38/.58 (19.0 gold, 12.3 written).
+The trained reader writes about as many facts as a short training story has and confuses people in long stories
+(e.g. "Jamie called her son Oscar" -> Oscar is Jamie's FATHER). Training stories have 2-3 sentences; test stories up
+to 10+, with more people per sentence. Fine-tuning on short stories overfits the reader to short stories; the
+direct fine-tune shows the same length failure. The memory is not the limit (gold facts 0.973).
+Next (R2b, separate prereg): train on longer stories built only from the train split.

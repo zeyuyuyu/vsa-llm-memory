@@ -1,0 +1,45 @@
+{
+ "arms": {
+  "floor": [
+   0.512,
+   0.53,
+   0.504
+  ],
+  "parser": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "probe_argmax": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "pca_hash_36": [
+   0.492,
+   0.518,
+   0.5
+  ],
+  "pca_hash_128": [
+   0.536,
+   0.474,
+   0.512
+  ]
+ },
+ "diagnostic": {
+  "pca_hash_36": {
+   "same_within": 0.2434160819923983,
+   "diff_within": 0.09047781426523051,
+   "gap": 0.1529382677271678
+  },
+  "pca_hash_128": {
+   "same_within": 0.17687469633884356,
+   "diff_within": 0.07599934024698068,
+   "gap": 0.10087535609186288
+  }
+ },
+ "floor": 0.5153333333333333,
+ "parser": 0.934,
+ "headroom": 0.41866666666666674,
+ "verdict": "FAILS (three independent label-free routes have now failed -- k-means, raw hashing, subspace hashing -- so the limitation is a measured property of the frozen geometry)"
+}

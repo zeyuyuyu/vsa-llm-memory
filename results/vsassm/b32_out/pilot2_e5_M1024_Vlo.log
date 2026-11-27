@@ -1,0 +1,6 @@
+M=1024 V=2 rep=0 Q=1382 EXACT center:0.873 whiten:0.865
+  bpf=   4 ideal best IDX 0.603 ('center', 'itq', 0.5)  best VSA 0.677 ('whiten', 'lin', 1, 1.0)
+  bpf=   4 raw   best IDX 0.595 ('whiten', 'pq4', 0.5)  best VSA 0.677 ('whiten', 'lin', 1, 1.0)
+  bpf=   8 ideal best IDX 0.603 ('center', 'itq', 0.5)  best VSA 0.661 ('whiten', 'sgn', 1, 1.0)
+  bpf=   8 raw   best IDX 0.611 ('center', 'itq', 0.25)  best VSA 0.675 ('whiten', 'sgn', 2, 1.0)
+  bpf=  16 ideal best IDX 0.680 ('whiten', 'itq', 1.0)  best VSA 0.685 ('whiten', 'lin', 1, 1.0)

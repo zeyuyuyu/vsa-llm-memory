@@ -1,0 +1,100 @@
+# B66 sample reading by the AI-assisted process (prereg 'Checks'). Raw output of b66_sample_reading.py (a1, b),
+# then notes. The reader is the same AI-assisted process that ran the experiment; it is not an independent human read.
+
+(A1) Qwen3-8B, cell M=256 V=16 b=4: SDMt on B64's grid, clean-room code 16.65 vs pipeline code 12.87
+  pipeline dev choice ['center', 'A', 2, 'onehot', 'tern', 0.5] (dev 16.21); clean-room dev choice ['sdmt', 'whiten', 'LA', 1, 'onehot', 'tern', 0.5] (dev 19.79); clean-room first-design dev 23.05
+  clean-room dev accuracy of the pipeline's chosen configuration: 11.9141
+  (the two codes use different stores of the same test entities; queries are paired by entity and alias below)
+  queries (label, alias) in both codes' test stores: 1860; right only in the clean-room code: 121; right only in the pipeline code: 107
+  clean-room only (10 sampled):
+    label "Natchitoches Parish"  alias "Natchitoches Parish, Louisiana"
+    label "Amdy Faye"  alias "Amdy Moustapha Faye"
+    label "Bulgaria"  alias "bg"
+    label "Oliver's Story"  alias "Oliver"
+    label "The New Tenants"  alias "New Tenants"
+    label "The Cellar"  alias "Cellar"
+    label "The Family Man"  alias "Family Man"
+    label "Brendan Canty"  alias "Brendan John Canty"
+    label "Liberia"  alias "Republic of Liberia"
+    label "Appenzell Innerrhoden"  alias "Canton of Appenzell Innerrhoden"
+  pipeline only (10 sampled):
+    label "USS Constitution"  alias "Constitution"
+    label "Mary Cheney"  alias "Mary Claire Cheney"
+    label "Petros Tabouris"  alias "Tabouris, Petros"
+    label "York City F.C."  alias "York City"
+    label "Agustín Elduayen"  alias "Agustin Elduayen"
+    label "Western Visayas"  alias "Western Visayas Region"
+    label "Chertsey Town F.C."  alias "Chertsey Town"
+    label "Otto-Selz-Institute of Applied Psychology"  alias "Otto-Selz-Institut"
+    label "Bill Fellowes"  alias "William James Fellowes"
+    label "Gain"  alias "Son Kain"
+
+(B) qwen8: lowest STORE - LSFR cell M=256 V=16 b=8: -5.15 points; LSFR cfg ['flat', 'V', 1.0, 1]
+  only LSFR right: 853 queries; 10 sampled (alias | entity | gold | store | LSFR | store id):
+    "Kronprinz Friedrich Wilhelm" | Q57180 | 8 | 4 | 8 | 14
+    "Jean-Henri Rose" | Q471147 | 6 | 8 | 6 | 18
+    "Pope Saint Gregory I the Great" | Q42827 | 13 | 4 | 13 | 12
+    "The Histories of Polybius" | Q250816 | 2 | 15 | 2 | 9
+    "Ptolemy Epiphanes" | Q39957 | 5 | 0 | 5 | 7
+    "Our Flags Lead Us Forward" | Q406920 | 4 | 11 | 4 | 17
+    "The Blades" | Q19607 | 5 | 15 | 5 | 1
+    "Region VI" | Q13665 | 12 | 7 | 12 | 10
+    "Carlisle United Football Club" | Q19575 | 5 | 3 | 5 | 18
+    "Hieronymus d. Ä. Francken" | Q3785501 | 15 | 0 | 15 | 19
+  only the store right: 610 queries; 10 sampled (alias | entity | gold | store | LSFR | store id):
+    "L'OL" | Q2338486 | 10 | 10 | 5 | 17
+    "Dark Corner" | Q1401787 | 14 | 14 | 4 | 5
+    "Willem van, I Herp" | Q3063385 | 15 | 15 | 5 | 3
+    "Czecho-Slovakia" | Q33946 | 8 | 8 | 10 | 4
+    "Knitting" | Q18126865 | 12 | 12 | 3 | 2
+    "Ex State Church" | Q666860 | 1 | 1 | 5 | 16
+    "Československo" | Q33946 | 0 | 0 | 1 | 15
+    "Gospel" | Q961665 | 9 | 9 | 11 | 19
+    "j. jackson" | Q5390252 | 11 | 11 | 4 | 15
+    "Rajalakshmi College Of Engineering" | Q955176 | 11 | 11 | 6 | 10
+(B) e5: lowest STORE - LSFR cell M=1024 V=16 b=16: -6.11 points; LSFR cfg ['flat', 'V', 1.0, 1]
+  only LSFR right: 681 queries; 10 sampled (alias | entity | gold | store | LSFR | store id):
+    "Perfect Man" | Q1474655 | 7 | 1 | 7 | 0
+    "Alma Ida Willibalde Maximiliana Karlin" | Q79131 | 14 | 10 | 14 | 2
+    "Clemente Palma y Ramírez" | Q2281130 | 1 | 12 | 1 | 1
+    "Dearborn County, Indiana" | Q509757 | 12 | 4 | 12 | 4
+    "Han Empire" | Q7209 | 13 | 1 | 13 | 4
+    "Non ti conosco più amore" | Q3878164 | 13 | 7 | 13 | 3
+    "Juan Landazuri Ricketts" | Q981501 | 14 | 5 | 14 | 2
+    "Le Débarquement du Congrès de Photographie à Lyon" | Q1518267 | 15 | 5 | 15 | 1
+    "Mevlana Jalaluddin Rumi" | Q43347 | 2 | 12 | 2 | 4
+    "province of Nova Scotia" | Q1952 | 9 | 8 | 9 | 3
+  only the store right: 415 queries; 10 sampled (alias | entity | gold | store | LSFR | store id):
+    "Samuel Langhorne Clemens" | Q7245 | 1 | 1 | 10 | 3
+    "Weekly Morning" | Q81081 | 1 | 1 | 12 | 0
+    "Francis Mairs Huntington Wilson" | Q11327110 | 12 | 12 | 3 | 0
+    "Jagmohan" | Q42891 | 2 | 2 | 11 | 3
+    "Stefan Prvovencani" | Q24445 | 14 | 14 | 12 | 4
+    "Juventus Turin" | Q1422 | 0 | 0 | 12 | 0
+    "REC Chennai" | Q955176 | 0 | 0 | 12 | 4
+    "Joy Luck Club" | Q2296376 | 9 | 9 | 0 | 3
+    "County" | Q2612665 | 13 | 13 | 3 | 0
+    "Lady Diana Frances Spencer" | Q9685 | 11 | 11 | 1 | 1
+
+## Notes
+
+(A1) The Qwen3-8B cell where the two codes' SDMt on B64's grid differ most is M = 256, V = 16, 4 bits per fact: the
+clean-room code reads 16.65, the pipeline code 12.87. The two codes chose different configurations on their own dev
+stores (clean room: whiten, LA, a = 1, one-hot ternary counters, half the facts; pipeline: center, aliases only, a = 2,
+one-hot ternary, half), and the clean-room code gives the pipeline's choice only 11.9 on its own dev stores, so the
+difference in this cell is a dev-choice difference between codes (different stores, cr.py's bisection N search and its
+cost rule without default-value bits), not a different mechanism. Over the region the code effect is small (+0.76 /
++0.62 points against a grid effect of +3.57 / +2.81). Paired by (label, alias) where the same test entity is stored in
+both codes' stores (1,860 queries), 121 are right only in the clean-room code and 107 only in the pipeline code; both
+lists are the same kind of query: aliases that extend or shorten the label ("Natchitoches Parish, Louisiana", "Family
+Man", "York City", "Mary Claire Cheney"), i.e. queries whose nearest training-code cell decides the answer. No sign of
+a leak or a scoring artefact; values are re-drawn per store in both codes, so the two lists are not expected to match.
+
+(B) The lowest STORE - LSFR cells are Qwen3-8B M = 256, V = 16, 8 bits per fact (-5.15) and e5 M = 1,024, V = 16, 16 bits
+per fact (-6.11); LSFR chose flat scales, V columns, alpha 1, q = 1 in both, on exactly the store's own random features.
+Queries only LSFR reads are mostly aliases that are close paraphrases or extensions of the label ("Pope Saint Gregory I
+the Great", "Carlisle United Football Club", "Han Empire", "province of Nova Scotia"): the least-squares write removes the
+cross-talk of similar stored keys that the Hebbian sum keeps. Queries only the store reads are a mixed set, many short or
+oblique aliases ("Gospel", "Knitting", "County", "Juventus Turin", "Samuel Langhorne Clemens"), where the decorrelating
+solution's sharper map loses the broad similarity the matched filter keeps. 853 vs 610 (Qwen3-8B) and 681 vs 415 (e5)
+queries: a net write-rule effect at identical features, with losses in both directions; no artefact seen.

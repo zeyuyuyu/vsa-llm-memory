@@ -1,0 +1,509 @@
+{
+ "annotator": "AGENT (Claude, this session) — read all 40 contexts at BOTH granularities in v127_calibration_contexts.json before any judge output existed; per prereg 66bf24d this is AGENT annotation, NOT human annotation. A human pass by the user or the co-author remains available and would supersede it.",
+ "date": "2026-09-10",
+ "prereg": "66bf24d",
+ "n_expected": 40,
+ "conventions": [
+  "STATED = explicitly written or trivially rephrased (e.g. 'album by X' for performer-of-album).",
+  "ENTAILED = a careful reader of the context ALONE must conclude it, no outside knowledge.",
+  "ABSENT = the context alone does not establish it (relation mismatch counts as ABSENT: 'located in' does not give 'owned by'; 'partner' does not give 'spouse'; 'collaboration' does not give 'spouse'; 'financing support' does not give 'distributed by').",
+  "Labelled independently per granularity. The paragraph context is a superset of the sentence context by construction, so paragraph absent-rate must be <= sentence absent-rate EXCEPT where the sentence extractor pulls a clause about a different entity (i=16), which can invert it."
+ ],
+ "labels_paragraph": [
+  {
+   "i": 0,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: 'her partner Steve Hillage' -- partner is not spouse; not forced."
+  },
+  {
+   "i": 1,
+   "hop1": "ABSENT",
+   "hop2": "STATED",
+   "note": "hop1: Orion gave financing SUPPORT, distribution not stated."
+  },
+  {
+   "i": 2,
+   "hop1": "ABSENT",
+   "hop2": "STATED",
+   "note": "hop1: 'sports complex IN Nuevo Laredo' is location, not ownership."
+  },
+  {
+   "i": 3,
+   "hop1": "ENTAILED",
+   "hop2": "ABSENT",
+   "note": "hop1: para adds 'selected to join the German astronaut team' so employment is entailed; the sentence alone gives only basic training -> ABSENT. hop2: only a DLR control centre in Cologne, headquarters not stated."
+  },
+  {
+   "i": 4,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 5,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 6,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 7,
+   "hop1": "ABSENT",
+   "hop2": "ENTAILED",
+   "note": "hop1: a person holding office in both bodies does not make one a member of the other."
+  },
+  {
+   "i": 8,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: TWC acquired systems from bankrupt Adelphia; succession ('followed by') not stated."
+  },
+  {
+   "i": 9,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: a reserve lying in both provinces does not force a shared border."
+  },
+  {
+   "i": 10,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": "hop1: para says 'home stadium of Benevento Calcio'; the extracted sentence says only that it is a stadium in Benevento -> ABSENT."
+  },
+  {
+   "i": 11,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 12,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 13,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": "hop2: a ford 'between Crockett County and Pecos County' entails adjacency."
+  },
+  {
+   "i": 14,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": "hop1: para states 'Blair was born in Holley'; the extracted sentence is about his baptism -> ABSENT."
+  },
+  {
+   "i": 15,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 16,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: THE INTERESTING CASE. The paragraph says Dana graduated from Blair INTERNATIONAL BACCALAUREATE School and that his BROTHER Brandon was 'a 1972 graduate of Blair High School'. So paragraph = ABSENT for Dana. The sentence extractor pulled the brother's clause, which reads as if it were about MacDuff, so the sentence context FALSELY appears to state it -> STATED. Sentence-level extraction can manufacture a false positive."
+  },
+  {
+   "i": 17,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop1: para states Kidman produced via Blossom Films; the sentence only says she starred -> ABSENT. hop2: Kidman and Urban merely co-listed as cake clients."
+  },
+  {
+   "i": 18,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: Sigrid is daughter of Svante and granddaughter of Christina, so ONE of Svante or Marta is Christina's child and the context does not say which."
+  },
+  {
+   "i": 19,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": "hop1: para states 'a stadium in Canyon, Texas'; the extracted sentence is the renaming note mentioning 'Canyon Hill' -> ABSENT."
+  },
+  {
+   "i": 20,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 21,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 22,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 23,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 24,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 25,
+   "hop1": "ENTAILED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 26,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 27,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 28,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 29,
+   "hop1": "ENTAILED",
+   "hop2": "STATED",
+   "note": "hop1: Tom is Henry's child and Edward's full brother, so Edward is Henry's child."
+  },
+  {
+   "i": 30,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 31,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 32,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 33,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 34,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 35,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: a school district BASED IN Van Horn does not establish it as the county seat."
+  },
+  {
+   "i": 36,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 37,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: 'in collaboration with Joan Erikson' is not marriage."
+  },
+  {
+   "i": 38,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 39,
+   "hop1": "ENTAILED",
+   "hop2": "ABSENT",
+   "note": "hop1: coup, defeat and 'Nemanja becoming ruler of All Serbia' entail succession. hop2: the Saint Sava paragraph never gives his parentage."
+  }
+ ],
+ "labels_sentence": [
+  {
+   "i": 0,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: 'her partner Steve Hillage' -- partner is not spouse; not forced."
+  },
+  {
+   "i": 1,
+   "hop1": "ABSENT",
+   "hop2": "STATED",
+   "note": "hop1: Orion gave financing SUPPORT, distribution not stated."
+  },
+  {
+   "i": 2,
+   "hop1": "ABSENT",
+   "hop2": "STATED",
+   "note": "hop1: 'sports complex IN Nuevo Laredo' is location, not ownership."
+  },
+  {
+   "i": 3,
+   "hop1": "ABSENT",
+   "hop2": "ABSENT",
+   "note": "hop1: para adds 'selected to join the German astronaut team' so employment is entailed; the sentence alone gives only basic training -> ABSENT. hop2: only a DLR control centre in Cologne, headquarters not stated."
+  },
+  {
+   "i": 4,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 5,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 6,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 7,
+   "hop1": "ABSENT",
+   "hop2": "ENTAILED",
+   "note": "hop1: a person holding office in both bodies does not make one a member of the other."
+  },
+  {
+   "i": 8,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: TWC acquired systems from bankrupt Adelphia; succession ('followed by') not stated."
+  },
+  {
+   "i": 9,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: a reserve lying in both provinces does not force a shared border."
+  },
+  {
+   "i": 10,
+   "hop1": "ABSENT",
+   "hop2": "ENTAILED",
+   "note": "hop1: para says 'home stadium of Benevento Calcio'; the extracted sentence says only that it is a stadium in Benevento -> ABSENT."
+  },
+  {
+   "i": 11,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 12,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 13,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": "hop2: a ford 'between Crockett County and Pecos County' entails adjacency."
+  },
+  {
+   "i": 14,
+   "hop1": "ABSENT",
+   "hop2": "STATED",
+   "note": "hop1: para states 'Blair was born in Holley'; the extracted sentence is about his baptism -> ABSENT."
+  },
+  {
+   "i": 15,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 16,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": "hop2: THE INTERESTING CASE. The paragraph says Dana graduated from Blair INTERNATIONAL BACCALAUREATE School and that his BROTHER Brandon was 'a 1972 graduate of Blair High School'. So paragraph = ABSENT for Dana. The sentence extractor pulled the brother's clause, which reads as if it were about MacDuff, so the sentence context FALSELY appears to state it -> STATED. Sentence-level extraction can manufacture a false positive."
+  },
+  {
+   "i": 17,
+   "hop1": "ABSENT",
+   "hop2": "ABSENT",
+   "note": "hop1: para states Kidman produced via Blossom Films; the sentence only says she starred -> ABSENT. hop2: Kidman and Urban merely co-listed as cake clients."
+  },
+  {
+   "i": 18,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: Sigrid is daughter of Svante and granddaughter of Christina, so ONE of Svante or Marta is Christina's child and the context does not say which."
+  },
+  {
+   "i": 19,
+   "hop1": "ABSENT",
+   "hop2": "STATED",
+   "note": "hop1: para states 'a stadium in Canyon, Texas'; the extracted sentence is the renaming note mentioning 'Canyon Hill' -> ABSENT."
+  },
+  {
+   "i": 20,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 21,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 22,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 23,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 24,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 25,
+   "hop1": "ENTAILED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 26,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 27,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 28,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 29,
+   "hop1": "ENTAILED",
+   "hop2": "STATED",
+   "note": "hop1: Tom is Henry's child and Edward's full brother, so Edward is Henry's child."
+  },
+  {
+   "i": 30,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 31,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 32,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 33,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 34,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 35,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: a school district BASED IN Van Horn does not establish it as the county seat."
+  },
+  {
+   "i": 36,
+   "hop1": "STATED",
+   "hop2": "STATED",
+   "note": ""
+  },
+  {
+   "i": 37,
+   "hop1": "STATED",
+   "hop2": "ABSENT",
+   "note": "hop2: 'in collaboration with Joan Erikson' is not marriage."
+  },
+  {
+   "i": 38,
+   "hop1": "STATED",
+   "hop2": "ENTAILED",
+   "note": ""
+  },
+  {
+   "i": 39,
+   "hop1": "ENTAILED",
+   "hop2": "ABSENT",
+   "note": "hop1: coup, defeat and 'Nemanja becoming ruler of All Serbia' entail succession. hop2: the Saint Sava paragraph never gives his parentage."
+  }
+ ],
+ "summary_paragraph": {
+  "hop1_absent": 3,
+  "hop2_absent": 10,
+  "hop2_absent_rate": 0.25,
+  "not_answerable": 13
+ },
+ "summary_sentence": {
+  "hop1_absent": 8,
+  "hop2_absent": 9,
+  "hop2_absent_rate": 0.225,
+  "not_answerable": 15
+ },
+ "summary_comment": "DESCRIPTIVE ONLY on this 40-row draw; the P1 bar applies to the judged 300, not here. Note the direction: hop-2 absent is 10/40 = 25% at paragraph level, which is NOT far below 2Wiki's measured 28.9%. That is evidence AGAINST my registered expectation that MuSiQue would be much cleaner, and it is recorded here, before any judge ran, so it cannot be claimed as hindsight either way."
+}

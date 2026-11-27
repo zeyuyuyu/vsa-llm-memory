@@ -1,0 +1,964 @@
+{
+ "panels": {
+  "ruler": {
+   "nstar": {
+    "U-LS|free|k1": 53.81737057623773,
+    "U-LS|free|k2": 53.81737057623773,
+    "U-LS|free|k4": 64.0,
+    "U-LS|free|k8": 107.63474115247546,
+    "U-LS|free|k16": 608.8740428813932,
+    "U-LS|free|k32": 1722.1558584396073,
+    "U-J|free|k1": 32.0,
+    "U-J|free|k2": null,
+    "U-J|free|k4": null,
+    "U-J|free|k8": 64.0,
+    "U-J|free|k16": 215.2694823049509,
+    "U-J|free|k32": null,
+    "U-J|chg|k1": 45.254833995939045,
+    "U-J|chg|k2": null,
+    "U-J|chg|k4": null,
+    "U-J|chg|k8": 90.50966799187809,
+    "U-J|chg|k16": 304.4370214406966,
+    "U-J|chg|k32": null,
+    "H-SBC-J|free|k1": 22.627416997969522,
+    "H-SBC-J|free|k2": null,
+    "H-SBC-J|free|k4": null,
+    "H-SBC-J|free|k8": 53.81737057623773,
+    "H-SBC-J|free|k16": null,
+    "H-SBC-J|free|k32": null,
+    "H-SBC-J|chg|k1": 32.0,
+    "H-SBC-J|chg|k2": null,
+    "H-SBC-J|chg|k4": null,
+    "H-SBC-J|chg|k8": 76.10925536017415,
+    "H-SBC-J|chg|k16": null,
+    "H-SBC-J|chg|k32": null,
+    "J-best|free|k1": 22.627416997969522,
+    "J-best|free|k2": null,
+    "J-best|free|k4": null,
+    "J-best|free|k8": 53.81737057623773,
+    "J-best|free|k16": 215.2694823049509,
+    "J-best|free|k32": null,
+    "J-best|chg|k1": 32.0,
+    "J-best|chg|k2": null,
+    "J-best|chg|k4": null,
+    "J-best|chg|k8": 76.10925536017415,
+    "J-best|chg|k16": 304.4370214406966,
+    "J-best|chg|k32": null,
+    "O2-BCH|free|k1": 26.908685288118864,
+    "O2-BCH|free|k2": 26.908685288118864,
+    "O2-BCH|free|k4": 38.05462768008707,
+    "O2-BCH|free|k8": 152.2185107203483,
+    "O2-BCH|free|k16": 608.8740428813932,
+    "O2-BCH|free|k32": 2048.0,
+    "O2-LDPC|free|k1": 26.908685288118864,
+    "O2-LDPC|free|k2": 26.908685288118864,
+    "O2-LDPC|free|k4": 32.0,
+    "O2-LDPC|free|k8": 76.10925536017415,
+    "O2-LDPC|free|k16": 256.0,
+    "O2-LDPC|free|k32": 861.0779292198037,
+    "O2-best|k1": 26.908685288118864,
+    "O2-best|k2": 26.908685288118864,
+    "O2-best|k4": 32.0,
+    "O2-best|k8": 76.10925536017415,
+    "O2-best|k16": 256.0,
+    "O2-best|k32": 861.0779292198037,
+    "U|k1": 76.10925536017415,
+    "U|k2": 76.10925536017415,
+    "U|k4": 76.10925536017415,
+    "U|k8": 128.0,
+    "U|k16": 430.5389646099018,
+    "U|k32": 1722.1558584396073,
+    "H-SBC|k1": 32.0,
+    "H-SBC|k2": 32.0,
+    "H-SBC|k4": 45.254833995939045,
+    "H-SBC|k8": 90.50966799187809,
+    "H-SBC|k16": 304.4370214406966,
+    "H-SBC|k32": 1448.1546878700494,
+    "static|k1": 19.027313840043536,
+    "static|k2": 19.027313840043536,
+    "static|k4": 26.908685288118864,
+    "static|k8": 53.81737057623773,
+    "static|k16": 215.2694823049509,
+    "static|k32": 724.0773439350247,
+    "cuckoo|k1": 32.0,
+    "cuckoo|k2": 32.0,
+    "cuckoo|k4": 38.05462768008707,
+    "cuckoo|k8": 90.50966799187809,
+    "cuckoo|k16": 304.4370214406966,
+    "cuckoo|k32": 1217.7480857627863
+   },
+   "delta": {
+    "U-LS|free vs U": {
+     "k1": -2,
+     "k2": -2,
+     "k4": -1,
+     "k8": -1,
+     "k16": 2,
+     "k32": 0
+    },
+    "U-LS|free vs H-SBC": {
+     "k1": 3,
+     "k2": 3,
+     "k4": 2,
+     "k8": 1,
+     "k16": 4,
+     "k32": 1
+    },
+    "U-LS|free vs static": {
+     "k1": 6,
+     "k2": 6,
+     "k4": 5,
+     "k8": 4,
+     "k16": 6,
+     "k32": 5
+    },
+    "U-LS|free vs cuckoo": {
+     "k1": 3,
+     "k2": 3,
+     "k4": 3,
+     "k8": 1,
+     "k16": 4,
+     "k32": 2
+    },
+    "U-LS|free vs O2-best": {
+     "k1": 4,
+     "k2": 4,
+     "k4": 4,
+     "k8": 2,
+     "k16": 5,
+     "k32": 4
+    },
+    "U-J|free vs U": {
+     "k1": -5,
+     "k8": -4,
+     "k16": -4
+    },
+    "H-SBC-J|free vs H-SBC": {
+     "k1": -2,
+     "k8": -3
+    },
+    "J-best|free vs H-SBC": {
+     "k1": -2,
+     "k8": -3,
+     "k16": -2
+    },
+    "J-best|free vs static": {
+     "k1": 1,
+     "k8": 0,
+     "k16": 0
+    },
+    "J-best|free vs cuckoo": {
+     "k1": -2,
+     "k8": -3,
+     "k16": -2
+    },
+    "J-best|free vs O2-best": {
+     "k1": -1,
+     "k8": -2,
+     "k16": -1
+    },
+    "U-J|chg vs U": {
+     "k1": -3,
+     "k8": -2,
+     "k16": -2
+    },
+    "H-SBC-J|chg vs H-SBC": {
+     "k1": 0,
+     "k8": -1
+    },
+    "J-best|chg vs H-SBC": {
+     "k1": 0,
+     "k8": -1,
+     "k16": 0
+    },
+    "J-best|chg vs static": {
+     "k1": 3,
+     "k8": 2,
+     "k16": 2
+    },
+    "J-best|chg vs cuckoo": {
+     "k1": 0,
+     "k8": -1,
+     "k16": 0
+    },
+    "J-best|chg vs O2-best": {
+     "k1": 1,
+     "k8": 0,
+     "k16": 1
+    },
+    "O2-best vs H-SBC": {
+     "k1": -1,
+     "k2": -1,
+     "k4": -2,
+     "k8": -1,
+     "k16": -1,
+     "k32": -3
+    },
+    "O2-best vs cuckoo": {
+     "k1": -1,
+     "k2": -1,
+     "k4": -1,
+     "k8": -1,
+     "k16": -1,
+     "k32": -2
+    },
+    "O2-best vs static": {
+     "k1": 2,
+     "k2": 2,
+     "k4": 1,
+     "k8": 2,
+     "k16": 1,
+     "k32": 1
+    },
+    "O2-best vs U": {
+     "k1": -6,
+     "k2": -6,
+     "k4": -5,
+     "k8": -3,
+     "k16": -3,
+     "k32": -4
+    },
+    "O2-BCH|free vs H-SBC": {
+     "k1": -1,
+     "k2": -1,
+     "k4": -1,
+     "k8": 3,
+     "k16": 4,
+     "k32": 2
+    },
+    "O2-LDPC|free vs H-SBC": {
+     "k1": -1,
+     "k2": -1,
+     "k4": -2,
+     "k8": -1,
+     "k16": -1,
+     "k32": -3
+    }
+   },
+   "label": {
+    "U-LS|free vs U": "MIXED",
+    "U-LS|free vs H-SBC": "H-SBC WIN",
+    "U-LS|free vs static": "static WIN",
+    "U-LS|free vs cuckoo": "cuckoo WIN",
+    "U-LS|free vs O2-best": "O2-best WIN",
+    "U-J|free vs U": "U-J WIN",
+    "H-SBC-J|free vs H-SBC": "H-SBC-J WIN",
+    "J-best|free vs H-SBC": "J-best WIN",
+    "J-best|free vs static": "TIE",
+    "J-best|free vs cuckoo": "J-best WIN",
+    "J-best|free vs O2-best": "J-best WIN",
+    "U-J|chg vs U": "U-J (charged) WIN",
+    "H-SBC-J|chg vs H-SBC": "TIE",
+    "J-best|chg vs H-SBC": "TIE",
+    "J-best|chg vs static": "static WIN",
+    "J-best|chg vs cuckoo": "TIE",
+    "J-best|chg vs O2-best": "TIE",
+    "O2-best vs H-SBC": "O2-best WIN",
+    "O2-best vs cuckoo": "O2-best WIN",
+    "O2-best vs static": "static WIN",
+    "O2-best vs U": "O2-best WIN",
+    "O2-BCH|free vs H-SBC": "H-SBC WIN",
+    "O2-LDPC|free vs H-SBC": "O2-LDPC WIN"
+   },
+   "boot": {
+    "U-LS|free vs U": {
+     "share": 0.597,
+     "range": {
+      "k1": [
+       -2,
+       -2
+      ],
+      "k2": [
+       -2,
+       -2
+      ],
+      "k4": [
+       -2,
+       -1
+      ],
+      "k8": [
+       -1,
+       -1
+      ],
+      "k16": [
+       0,
+       3
+      ],
+      "k32": [
+       0,
+       0
+      ]
+     }
+    },
+    "U-LS|free vs H-SBC": {
+     "share": 0.988,
+     "range": {
+      "k1": [
+       3,
+       3
+      ],
+      "k2": [
+       3,
+       3
+      ],
+      "k4": [
+       1,
+       3
+      ],
+      "k8": [
+       1,
+       1
+      ],
+      "k16": [
+       1,
+       4
+      ],
+      "k32": [
+       0,
+       2
+      ]
+     }
+    },
+    "U-LS|free vs static": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       6,
+       6
+      ],
+      "k2": [
+       6,
+       6
+      ],
+      "k4": [
+       4,
+       5
+      ],
+      "k8": [
+       4,
+       4
+      ],
+      "k16": [
+       3,
+       6
+      ],
+      "k32": [
+       5,
+       6
+      ]
+     }
+    },
+    "U-LS|free vs cuckoo": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       3,
+       3
+      ],
+      "k2": [
+       3,
+       3
+      ],
+      "k4": [
+       2,
+       3
+      ],
+      "k8": [
+       1,
+       1
+      ],
+      "k16": [
+       1,
+       4
+      ],
+      "k32": [
+       2,
+       4
+      ]
+     }
+    },
+    "U-LS|free vs O2-best": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       4,
+       4
+      ],
+      "k2": [
+       4,
+       4
+      ],
+      "k4": [
+       3,
+       4
+      ],
+      "k8": [
+       2,
+       2
+      ],
+      "k16": [
+       2,
+       5
+      ],
+      "k32": [
+       3,
+       5
+      ]
+     }
+    },
+    "U-J|free vs U": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       -5,
+       -5
+      ],
+      "k8": [
+       -4,
+       -4
+      ],
+      "k16": [
+       -4,
+       -3
+      ]
+     }
+    },
+    "H-SBC-J|free vs H-SBC": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       -2,
+       -2
+      ],
+      "k8": [
+       -3,
+       -3
+      ]
+     }
+    },
+    "J-best|free vs H-SBC": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       -2,
+       -2
+      ],
+      "k8": [
+       -3,
+       -3
+      ],
+      "k16": [
+       -3,
+       -2
+      ]
+     }
+    },
+    "J-best|free vs static": {
+     "share": 0.995,
+     "range": {
+      "k1": [
+       1,
+       1
+      ],
+      "k8": [
+       0,
+       0
+      ],
+      "k16": [
+       0,
+       0
+      ]
+     }
+    },
+    "J-best|free vs cuckoo": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       -2,
+       -2
+      ],
+      "k8": [
+       -3,
+       -3
+      ],
+      "k16": [
+       -4,
+       -2
+      ]
+     }
+    },
+    "J-best|free vs O2-best": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       -1,
+       -1
+      ],
+      "k8": [
+       -2,
+       -2
+      ],
+      "k16": [
+       -1,
+       -1
+      ]
+     }
+    },
+    "U-J|chg vs U": {
+     "share": 0.999,
+     "range": {
+      "k1": [
+       -3,
+       -3
+      ],
+      "k8": [
+       -2,
+       -2
+      ],
+      "k16": [
+       -2,
+       -1
+      ]
+     }
+    },
+    "H-SBC-J|chg vs H-SBC": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       0,
+       0
+      ],
+      "k8": [
+       -1,
+       -1
+      ]
+     }
+    },
+    "J-best|chg vs H-SBC": {
+     "share": 0.999,
+     "range": {
+      "k1": [
+       0,
+       0
+      ],
+      "k8": [
+       -1,
+       -1
+      ],
+      "k16": [
+       -1,
+       0
+      ]
+     }
+    },
+    "J-best|chg vs static": {
+     "share": 0.9985,
+     "range": {
+      "k1": [
+       3,
+       3
+      ],
+      "k8": [
+       2,
+       2
+      ],
+      "k16": [
+       2,
+       2
+      ]
+     }
+    },
+    "J-best|chg vs cuckoo": {
+     "share": 0.97,
+     "range": {
+      "k1": [
+       0,
+       0
+      ],
+      "k8": [
+       -1,
+       -1
+      ],
+      "k16": [
+       -2,
+       0
+      ]
+     }
+    },
+    "J-best|chg vs O2-best": {
+     "share": 0.999,
+     "range": {
+      "k1": [
+       1,
+       1
+      ],
+      "k8": [
+       0,
+       0
+      ],
+      "k16": [
+       1,
+       1
+      ]
+     }
+    },
+    "O2-best vs H-SBC": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       -1,
+       -1
+      ],
+      "k2": [
+       -1,
+       -1
+      ],
+      "k4": [
+       -2,
+       -1
+      ],
+      "k8": [
+       -1,
+       -1
+      ],
+      "k16": [
+       -2,
+       -1
+      ],
+      "k32": [
+       -4,
+       -3
+      ]
+     }
+    },
+    "O2-best vs cuckoo": {
+     "share": 0.8785,
+     "range": {
+      "k1": [
+       -1,
+       -1
+      ],
+      "k2": [
+       -1,
+       -1
+      ],
+      "k4": [
+       -2,
+       -1
+      ],
+      "k8": [
+       -1,
+       -1
+      ],
+      "k16": [
+       -3,
+       -1
+      ],
+      "k32": [
+       -2,
+       -1
+      ]
+     }
+    },
+    "O2-best vs static": {
+     "share": 0.9985,
+     "range": {
+      "k1": [
+       2,
+       2
+      ],
+      "k2": [
+       2,
+       2
+      ],
+      "k4": [
+       1,
+       1
+      ],
+      "k8": [
+       2,
+       2
+      ],
+      "k16": [
+       1,
+       1
+      ],
+      "k32": [
+       1,
+       1
+      ]
+     }
+    },
+    "O2-best vs U": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       -6,
+       -6
+      ],
+      "k2": [
+       -6,
+       -6
+      ],
+      "k4": [
+       -5,
+       -5
+      ],
+      "k8": [
+       -3,
+       -3
+      ],
+      "k16": [
+       -3,
+       -2
+      ],
+      "k32": [
+       -5,
+       -3
+      ]
+     }
+    },
+    "O2-BCH|free vs H-SBC": {
+     "share": 0.672,
+     "range": {
+      "k1": [
+       -1,
+       -1
+      ],
+      "k2": [
+       -1,
+       -1
+      ],
+      "k4": [
+       -2,
+       -1
+      ],
+      "k8": [
+       3,
+       3
+      ],
+      "k16": [
+       3,
+       4
+      ],
+      "k32": [
+       1,
+       2
+      ]
+     }
+    },
+    "O2-LDPC|free vs H-SBC": {
+     "share": 1.0,
+     "range": {
+      "k1": [
+       -1,
+       -1
+      ],
+      "k2": [
+       -1,
+       -1
+      ],
+      "k4": [
+       -2,
+       -1
+      ],
+      "k8": [
+       -1,
+       -1
+      ],
+      "k16": [
+       -2,
+       -1
+      ],
+      "k32": [
+       -4,
+       -3
+      ]
+     }
+    }
+   },
+   "o2_bits": {
+    "[6, 0]": {
+     "median": 20.657657261726875,
+     "extra_median": 6.760326043748429,
+     "lost": 0
+    },
+    "[6, 1]": {
+     "median": 19.6035275848935,
+     "extra_median": 5.707167358263813,
+     "lost": 0
+    },
+    "[8, 0]": {
+     "median": 20.88725172244804,
+     "extra_median": 6.907367433109071,
+     "lost": 0
+    },
+    "[8, 1]": {
+     "median": 19.82608695652174,
+     "extra_median": 5.854208747624455,
+     "lost": 0
+    }
+   },
+   "ns_raw": {
+    "U-LS|free|k1": 11,
+    "U-LS|free|k2": 11,
+    "U-LS|free|k4": 12,
+    "U-LS|free|k8": 15,
+    "U-LS|free|k16": 25,
+    "U-LS|free|k32": 31,
+    "U-J|free|k1": 8,
+    "U-J|free|k8": 12,
+    "U-J|free|k16": 19,
+    "U-J|free|k2": 37,
+    "U-J|free|k4": 37,
+    "U-J|free|k32": 37,
+    "U-J|chg|k1": 10,
+    "U-J|chg|k8": 14,
+    "U-J|chg|k16": 21,
+    "U-J|chg|k2": 37,
+    "U-J|chg|k4": 37,
+    "U-J|chg|k32": 37,
+    "H-SBC-J|free|k1": 6,
+    "H-SBC-J|free|k8": 11,
+    "H-SBC-J|free|k2": 37,
+    "H-SBC-J|free|k4": 37,
+    "H-SBC-J|free|k16": 37,
+    "H-SBC-J|free|k32": 37,
+    "H-SBC-J|chg|k1": 8,
+    "H-SBC-J|chg|k8": 13,
+    "H-SBC-J|chg|k2": 37,
+    "H-SBC-J|chg|k4": 37,
+    "H-SBC-J|chg|k16": 37,
+    "H-SBC-J|chg|k32": 37,
+    "J-best|free|k1": 6,
+    "J-best|free|k8": 11,
+    "J-best|free|k16": 19,
+    "J-best|free|k2": 37,
+    "J-best|free|k4": 37,
+    "J-best|free|k32": 37,
+    "J-best|chg|k1": 8,
+    "J-best|chg|k8": 13,
+    "J-best|chg|k16": 21,
+    "J-best|chg|k2": 37,
+    "J-best|chg|k4": 37,
+    "J-best|chg|k32": 37,
+    "O2-BCH|free|k1": 7,
+    "O2-BCH|free|k2": 7,
+    "O2-BCH|free|k4": 9,
+    "O2-BCH|free|k8": 17,
+    "O2-BCH|free|k16": 25,
+    "O2-BCH|free|k32": 32,
+    "O2-LDPC|free|k1": 7,
+    "O2-LDPC|free|k2": 7,
+    "O2-LDPC|free|k4": 8,
+    "O2-LDPC|free|k8": 13,
+    "O2-LDPC|free|k16": 20,
+    "O2-LDPC|free|k32": 27,
+    "O2-best|k1": 7,
+    "O2-best|k2": 7,
+    "O2-best|k4": 8,
+    "O2-best|k8": 13,
+    "O2-best|k16": 20,
+    "O2-best|k32": 27,
+    "U|k1": 13,
+    "U|k2": 13,
+    "U|k4": 13,
+    "U|k8": 16,
+    "U|k16": 23,
+    "U|k32": 31,
+    "H-SBC|k1": 8,
+    "H-SBC|k2": 8,
+    "H-SBC|k4": 10,
+    "H-SBC|k8": 14,
+    "H-SBC|k16": 21,
+    "H-SBC|k32": 30,
+    "T-rep|k1": 5,
+    "E-BCH|k1": 5,
+    "E-LDPC|k1": 6,
+    "E-CAM|k1": 10,
+    "static|k1": 5,
+    "T-rep|k2": 6,
+    "E-BCH|k2": 5,
+    "E-LDPC|k2": 6,
+    "E-CAM|k2": 10,
+    "static|k2": 5,
+    "T-rep|k4": 14,
+    "E-BCH|k4": 7,
+    "E-LDPC|k4": 7,
+    "E-CAM|k4": 12,
+    "static|k4": 7,
+    "T-rep|k8": 20,
+    "E-BCH|k8": 15,
+    "E-LDPC|k8": 11,
+    "E-CAM|k8": 20,
+    "static|k8": 11,
+    "T-rep|k16": 28,
+    "E-BCH|k16": 23,
+    "E-LDPC|k16": 19,
+    "E-CAM|k16": 28,
+    "static|k16": 19,
+    "T-rep|k32": 35,
+    "E-BCH|k32": 31,
+    "E-LDPC|k32": 26,
+    "E-CAM|k32": 35,
+    "static|k32": 26,
+    "O-BCH|k1": 8,
+    "O-LDPC|k1": 8,
+    "cuckoo|k1": 8,
+    "O-BCH|k2": 8,
+    "O-LDPC|k2": 8,
+    "cuckoo|k2": 8,
+    "O-BCH|k4": 10,
+    "O-LDPC|k4": 9,
+    "cuckoo|k4": 9,
+    "O-BCH|k8": 18,
+    "O-LDPC|k8": 14,
+    "cuckoo|k8": 14,
+    "O-BCH|k16": 26,
+    "O-LDPC|k16": 21,
+    "cuckoo|k16": 21,
+    "O-BCH|k32": 33,
+    "O-LDPC|k32": 29,
+    "cuckoo|k32": 29
+   }
+  }
+ },
+ "predictions": {
+  "PA1": [
+   false,
+   "Delta(U-LS, U) {'k1': -2, 'k2': -2, 'k4': -1, 'k8': -1, 'k16': 2, 'k32': 0}"
+  ],
+  "PA2": [
+   true,
+   "Delta(U-LS, H-SBC) {'k1': 3, 'k2': 3, 'k4': 2, 'k8': 1, 'k16': 4, 'k32': 1}; Delta(U-LS, static) {'k1': 6, 'k2': 6, 'k4': 5, 'k8': 4, 'k16': 6, 'k32': 5}"
+  ],
+  "PB1": [
+   true,
+   "Delta(U-J, U) {'k1': -5, 'k8': -4, 'k16': -4}; Delta(H-SBC-J, H-SBC) {'k1': -2, 'k8': -3}; H-SBC-J k1 22.627416997969522"
+  ],
+  "PB2": [
+   true,
+   "Delta(J-best chg, H-SBC) {'k1': 0, 'k8': -1, 'k16': 0}; Delta(J-best chg, static) {'k1': 3, 'k8': 2, 'k16': 2}"
+  ],
+  "PC1": [
+   true,
+   "Delta(O2-best, cuckoo) {'k1': -1, 'k2': -1, 'k4': -1, 'k8': -1, 'k16': -1, 'k32': -2}"
+  ],
+  "PC2": [
+   true,
+   "Delta(O2-best, H-SBC) {'k1': -1, 'k2': -1, 'k4': -2, 'k8': -1, 'k16': -1, 'k32': -3}, label O2-best WIN"
+  ],
+  "PC3": [
+   true,
+   "Delta(O2-best, static) {'k1': 2, 'k2': 2, 'k4': 1, 'k8': 2, 'k16': 1, 'k32': 1}"
+  ],
+  "PC4": [
+   null,
+   "lost insertions over all O2 test builds (all sizes): 0 (see the per-design lines)"
+  ],
+  "PD": [
+   null,
+   "fresh stores not run"
+  ]
+ }
+}

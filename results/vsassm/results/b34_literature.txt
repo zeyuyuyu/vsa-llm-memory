@@ -1,0 +1,61 @@
+# B34 literature check (conclusion -> literature; read after the result). Each source checked in its own text
+# (PDF text extracted from the publisher/arXiv copy) unless marked "abstract only".
+
+[K20] Karunaratne, G., Le Gallo, M., Cherubini, G., Benini, L., Rahimi, A. & Sebastian, A. In-memory hyperdimensional
+  computing. Nat. Electron. 3, 327-337 (2020) (arXiv:1906.01548v2). Text: "a key attribute of HDC is its robustness to
+  the imperfections associated with the computational substrates"; "While HDC is remarkably robust to random variability
+  and device failures, deterministic spatial variations in the conductance values could pose a challenge";
+  "Comparable accuracies to software implementations are demonstrated, experimentally, using 760,000 phase-change
+  memory devices". The associative memory there holds class prototypes (at most 22 classes), and no table baseline with
+  the same device count is run.
+  -> SUPPORTS that random high-dimensional codes searched by similarity survive PCM noise (B34: V-Snt, T-iiib, T-vhd and
+     T-vhdd read 98.8-100% of keys at x16, where every repetition-coded in-memory table is at or below 91.7%); NO PRECEDENT for the equal-device comparison with tables.
+
+[N19] Ni, K. et al. Ferroelectric ternary content-addressable memory for one-shot learning. Nat. Electron. 2, 521-529
+  (2019) (abstract and press summary only): 2-FeFET TCAM cells compute the Hamming distance between a query and every
+  stored word in place (sensing the match-line discharge), used as the attentional memory of a memory-augmented network.
+  -> SUPPORTS the realism of B34's CAM arms with nearest-Hamming search over all rows (T-iis, T-iix, T-iiia, T-iiib):
+     the search we simulate digitally is a standard in-memory TCAM operation. It does not study device-error robustness
+     against a table, so NO PRECEDENT for the comparison itself.
+
+[Kl22] Kleyko, D. et al. Vector symbolic architectures as a computing framework for emerging hardware. Proc. IEEE 110,
+  1538-1571 (2022) (arXiv:2106.05268). Text: HDC/VSA "is highly robust to individual device variations"; "they tolerate
+  8.8x higher probability of failures with respect to intermittent hardware errors [130], and 60x higher probability of
+  failures with respect to permanent hardware errors [26]"; "a computing framework is required in which error correction
+  and error robustness are achieved".
+  -> The 8.8x / 60x figures compare HD designs with unprotected conventional baselines. B34 agrees in that form (the VSA
+     store beats every table that stores its keys natively or unprotected: T-i, T-iih, T-iis) and QUALIFIES it: against
+     a table that spends the same devices on a code behind a stored hash directory (T-v), the store as published loses
+     (0.15 vs 91.7% at x16), the store read by argmax wins (98.8 vs 91.7), and a table with random high-dimensional
+     codes in every field matches or beats both (100%): the robustness is the code's.
+
+[R17] Rahimi, A. et al. High-dimensional computing as a nanoscalable paradigm. IEEE TCAS-I 64, 2508-2521 (2017).
+  Sec. IV-E: "the HD classifier tolerates 8.8-fold probability of failure compared to the baseline" (94% vs 97% accuracy),
+  and 80% accuracy at a 2.8x higher rate still. The baseline is a conventional classifier without redundancy.
+  -> Same reading as [Kl22]: supports robustness against an unprotected design; silent on an equal-memory coded design.
+
+[He22] Heddes, M., Nunes, I., Givargis, T., Nicolau, A. & Veidenbaum, A. Hyperdimensional hashing: a robust and efficient
+  dynamic hash table. arXiv:2205.07850 (2022) (abstract): "a realistic level of memory errors causes more than 20%
+  mismatches for consistent hashing" while HD hashing is not affected.
+  -> SUPPORTS that a hash structure stored unprotected is fragile; B34's T-v shows that the same hash structure with its
+     bits repetition-coded at equal device count is not (to x8 exact; 0-2 point gap at x8 against V-S), so the fragility
+     is the missing redundancy, not hashing as such. QUALIFIES.
+
+[Ki18] Kim, H.-S. HDM: Hyper-dimensional modulation for robust low-power communications. Proc. IEEE ICC 2018 (text):
+  "HDM with a modest D (=256) exhibits the BER performance matches to that of LDPC and Polar codes with 1/2 rate and the
+  256-bit block length". [HK23] Hsu, C.-W. & Kim, H.-S. Hyper-dimensional modulation for robust short packets in massive
+  machine-type communications. IEEE Trans. Commun. 71(3) (2023) (text): HDM spreads bits over a hyper-dimensional vector
+  and superimposes non-orthogonal vectors; "HDM is a special case of sparse superposition codes"; it "outperforms sparse
+  superposition codes in AWGN channels".
+  -> SUPPORTS the coding-theory reading of B34: random high-dimensional codes decoded by similarity are good channel
+     codes (T-iiib, T-vhd, T-vhdd beat every repetition-coded table at x16-x32), and superposing them (the VSA store,
+     V-Snt) costs little; robustness is a property of the code, which a table can adopt.
+
+[BBD09] Belazzougui, D., Botelho, F. C. & Dietzfelbinger, M. Hash, displace, and compress. ESA 2009: the CHD minimal
+  perfect hash used by T-v (about 2 bits per key compressed; our fixed-width displacements cost 2.8 bits per pair on the dev stores, 3.0-3.2 on the largest test stores).
+  -> Method source, not a finding.
+
+Not found (searched: HD key-value memory vs hash table at equal memory under bit errors; VSA robustness vs repetition
+or ECC at matched storage): no published comparison of a VSA store against a table with an in-memory directory at an
+equal device count. B34 is, as far as we found, the first such comparison; the paper should say "we found no
+precedent", not "first".

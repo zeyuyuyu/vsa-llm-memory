@@ -1,0 +1,1704 @@
+{
+  "encoder": "llama",
+  "smoke": false,
+  "conditions": [
+    {
+      "M": 256,
+      "V": 2,
+      "b": 4,
+      "budget_bits": 1024,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "whiten",
+            "map": "lin",
+            "q": 1,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.7453426421853724,
+          "test_accuracy": 0.7076320036891861,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0
+          ],
+          "dimensions_by_test_store": [
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 0.1,
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.7702655567241526,
+          "test_accuracy": 0.7426792713857505,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0
+          ],
+          "dimensions_by_test_store": [
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.1,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.7543973172083905,
+          "test_accuracy": 0.7207747290753977,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0
+          ],
+          "dimensions_by_test_store": [
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992
+          ]
+        }
+      }
+    },
+    {
+      "M": 256,
+      "V": 2,
+      "b": 8,
+      "budget_bits": 2048,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "whiten",
+            "map": "lin",
+            "q": 1,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.7705157062567674,
+          "test_accuracy": 0.736223195757436,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0
+          ],
+          "dimensions_by_test_store": [
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 0.1,
+            "q": 2
+          },
+          "mean_dev_accuracy": 0.8080272446117771,
+          "test_accuracy": 0.7814157251556375,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999,
+            2046.1145999999999
+          ],
+          "dimensions_by_test_store": [
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058,
+            1058
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "rp",
+            "mu": 0.1,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.7955798128076509,
+          "test_accuracy": 0.7544385519944662,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0
+          ],
+          "dimensions_by_test_store": [
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016
+          ]
+        }
+      }
+    },
+    {
+      "M": 256,
+      "V": 2,
+      "b": 16,
+      "budget_bits": 4096,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "whiten",
+            "map": "lin",
+            "q": 1,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.7890116466783844,
+          "test_accuracy": 0.772192759972331,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "rp",
+            "alpha": 1.0,
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.8344374185443549,
+          "test_accuracy": 0.7943278764122665,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.5,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.8332288091701026,
+          "test_accuracy": 0.8261471062946737,
+          "number_test_queries": 4337,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064
+          ]
+        }
+      }
+    },
+    {
+      "M": 256,
+      "V": 16,
+      "b": 4,
+      "budget_bits": 1024,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "centre",
+            "map": "lin",
+            "q": 1,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.2617606308911195,
+          "test_accuracy": 0.1956276763578995,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0
+          ],
+          "dimensions_by_test_store": [
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992,
+            992
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 0.0001,
+            "q": 2
+          },
+          "mean_dev_accuracy": 0.29648663542983383,
+          "test_accuracy": 0.2127563669145819,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944,
+            1006.6944
+          ],
+          "dimensions_by_test_store": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "centre",
+            "feat": "rp",
+            "mu": 0.25,
+            "output": "avg",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.2481862526979892,
+          "test_accuracy": 0.1875140860942078,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0,
+            1024.0
+          ],
+          "dimensions_by_test_store": [
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62,
+            62
+          ]
+        }
+      }
+    },
+    {
+      "M": 256,
+      "V": 16,
+      "b": 8,
+      "budget_bits": 2048,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "centre",
+            "map": "lin",
+            "q": 1,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.29911911290002113,
+          "test_accuracy": 0.2560288483209376,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0
+          ],
+          "dimensions_by_test_store": [
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016,
+            2016
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 1.0,
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.4022861983544454,
+          "test_accuracy": 0.3394185260311021,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0
+          ],
+          "dimensions_by_test_store": [
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.03,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.3429955457849912,
+          "test_accuracy": 0.2857786792878071,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0,
+            2048.0
+          ],
+          "dimensions_by_test_store": [
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126,
+            126
+          ]
+        }
+      }
+    },
+    {
+      "M": 256,
+      "V": 16,
+      "b": 16,
+      "budget_bits": 4096,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "centre",
+            "map": "lin",
+            "q": 1,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.3871638723460394,
+          "test_accuracy": 0.3283750281721884,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064,
+            4064
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 10.0,
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.5124513929533648,
+          "test_accuracy": 0.4593193599278792,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.1,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.455832149455021,
+          "test_accuracy": 0.39936894297949066,
+          "number_test_queries": 4437,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254,
+            254
+          ]
+        }
+      }
+    },
+    {
+      "M": 1024,
+      "V": 2,
+      "b": 4,
+      "budget_bits": 4096,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "whiten",
+            "map": "lin",
+            "q": 1,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.7062510643969491,
+          "test_accuracy": 0.6839655573656039,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            4064,
+            4064,
+            4064,
+            4064,
+            4064
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 10.0,
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.7320291429958998,
+          "test_accuracy": 0.7163137072376077,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            4064,
+            4064,
+            4064,
+            4064,
+            4064
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "centre",
+            "feat": "pca",
+            "mu": 0.5,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.7401134867287759,
+          "test_accuracy": 0.6830346753548988,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            4064,
+            4064,
+            4064,
+            4064,
+            4064
+          ]
+        }
+      }
+    },
+    {
+      "M": 1024,
+      "V": 2,
+      "b": 8,
+      "budget_bits": 8192,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "whiten",
+            "map": "lin",
+            "q": 2,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.717823853826243,
+          "test_accuracy": 0.7028159180823831,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            8191.2582,
+            8191.2582,
+            8191.2582,
+            8191.2582,
+            8191.2582
+          ],
+          "dimensions_by_test_store": [
+            4286,
+            4286,
+            4286,
+            4286,
+            4286
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 1.0,
+            "q": 2
+          },
+          "mean_dev_accuracy": 0.7508139447738597,
+          "test_accuracy": 0.7589015592273679,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            7829.5552,
+            7829.5552,
+            7829.5552,
+            7829.5552,
+            7829.5552
+          ],
+          "dimensions_by_test_store": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.1,
+            "output": "last",
+            "q": 2
+          },
+          "mean_dev_accuracy": 0.7533475608488717,
+          "test_accuracy": 0.7363276704677683,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            7829.5552,
+            7829.5552,
+            7829.5552,
+            7829.5552,
+            7829.5552
+          ],
+          "dimensions_by_test_store": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        }
+      }
+    },
+    {
+      "M": 1024,
+      "V": 2,
+      "b": 16,
+      "budget_bits": 16384,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "whiten",
+            "map": "lin",
+            "q": 4,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.7173496342360192,
+          "test_accuracy": 0.7046776821037933,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            16383.293599999999,
+            16383.293599999999,
+            16383.293599999999,
+            16383.293599999999,
+            16383.293599999999
+          ],
+          "dimensions_by_test_store": [
+            4539,
+            4539,
+            4539,
+            4539,
+            4539
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 1.0,
+            "q": 4
+          },
+          "mean_dev_accuracy": 0.7568136070079207,
+          "test_accuracy": 0.7644868512915988,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            14787.4304,
+            14787.4304,
+            14787.4304,
+            14787.4304,
+            14787.4304
+          ],
+          "dimensions_by_test_store": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V-1",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.1,
+            "output": "last",
+            "q": 2
+          },
+          "mean_dev_accuracy": 0.7533475608488717,
+          "test_accuracy": 0.7363276704677683,
+          "number_test_queries": 4297,
+          "bits_used_by_test_store": [
+            7829.5552,
+            7829.5552,
+            7829.5552,
+            7829.5552,
+            7829.5552
+          ],
+          "dimensions_by_test_store": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        }
+      }
+    },
+    {
+      "M": 1024,
+      "V": 16,
+      "b": 4,
+      "budget_bits": 4096,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "centre",
+            "map": "lin",
+            "q": 2,
+            "share": 1.0
+          },
+          "mean_dev_accuracy": 0.1846853910826809,
+          "test_accuracy": 0.14849989207856681,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            4094.4957999999997,
+            4094.4957999999997,
+            4094.4957999999997,
+            4094.4957999999997,
+            4094.4957999999997
+          ],
+          "dimensions_by_test_store": [
+            2134,
+            2134,
+            2134,
+            2134,
+            2134
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 10.0,
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.2883412291089484,
+          "test_accuracy": 0.24865098208504208,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            224,
+            224,
+            224,
+            224,
+            224
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.03,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.26069894892625695,
+          "test_accuracy": 0.22577163824735594,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0,
+            4096.0
+          ],
+          "dimensions_by_test_store": [
+            254,
+            254,
+            254,
+            254,
+            254
+          ]
+        }
+      }
+    },
+    {
+      "M": 1024,
+      "V": 16,
+      "b": 8,
+      "budget_bits": 8192,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "whiten",
+            "map": "lin",
+            "q": 1,
+            "share": 0.5
+          },
+          "mean_dev_accuracy": 0.258949582204202,
+          "test_accuracy": 0.23203108137276063,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            8192.0,
+            8192.0,
+            8192.0,
+            8192.0,
+            8192.0
+          ],
+          "dimensions_by_test_store": [
+            8160,
+            8160,
+            8160,
+            8160,
+            8160
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 10.0,
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.3651968168980022,
+          "test_accuracy": 0.34405352903086556,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            8192.0,
+            8192.0,
+            8192.0,
+            8192.0,
+            8192.0
+          ],
+          "dimensions_by_test_store": [
+            510,
+            510,
+            510,
+            510,
+            510
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.25,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.33065952001157206,
+          "test_accuracy": 0.3166414849989208,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            8192.0,
+            8192.0,
+            8192.0,
+            8192.0,
+            8192.0
+          ],
+          "dimensions_by_test_store": [
+            510,
+            510,
+            510,
+            510,
+            510
+          ]
+        }
+      }
+    },
+    {
+      "M": 1024,
+      "V": 16,
+      "b": 16,
+      "budget_bits": 16384,
+      "memories": {
+        "STORE": {
+          "configuration": {
+            "prep": "whiten",
+            "map": "lin",
+            "q": 1,
+            "share": 0.5
+          },
+          "mean_dev_accuracy": 0.3546438893066728,
+          "test_accuracy": 0.2954888840923807,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            16384.0,
+            16384.0,
+            16384.0,
+            16384.0,
+            16384.0
+          ],
+          "dimensions_by_test_store": [
+            16320,
+            16320,
+            16320,
+            16320,
+            16320
+          ]
+        },
+        "LAMc": {
+          "configuration": {
+            "scale": "flat",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "alpha": 10.0,
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.4707720221970689,
+          "test_accuracy": 0.43729764731275633,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            16384.0,
+            16384.0,
+            16384.0,
+            16384.0,
+            16384.0
+          ],
+          "dimensions_by_test_store": [
+            1020,
+            1020,
+            1020,
+            1020,
+            1020
+          ]
+        },
+        "NLMSc": {
+          "configuration": {
+            "scale": "col",
+            "target": "V",
+            "prep": "whiten",
+            "feat": "pca",
+            "mu": 0.1,
+            "output": "last",
+            "q": 1
+          },
+          "mean_dev_accuracy": 0.4465433599094526,
+          "test_accuracy": 0.4120440319447442,
+          "number_test_queries": 4633,
+          "bits_used_by_test_store": [
+            16384.0,
+            16384.0,
+            16384.0,
+            16384.0,
+            16384.0
+          ],
+          "dimensions_by_test_store": [
+            992,
+            992,
+            992,
+            992,
+            992
+          ]
+        }
+      }
+    }
+  ],
+  "comparisons": {
+    "STORE - LAMc": {
+      "region": {
+        "mean_accuracy_difference": -0.0696719062205824,
+        "ci95": [
+          -0.07677948478838577,
+          -0.06256508120841499
+        ],
+        "number_conditions": 12,
+        "bootstrap_draws": 2000
+      },
+      "V2": {
+        "mean_accuracy_difference": -0.041769645623249245,
+        "ci95": [
+          -0.050289601979318296,
+          -0.03351495854320161
+        ],
+        "number_conditions": 6,
+        "bootstrap_draws": 2000
+      },
+      "V16": {
+        "mean_accuracy_difference": -0.09757416681791557,
+        "ci95": [
+          -0.10850125221857812,
+          -0.08647462427626189
+        ],
+        "number_conditions": 6,
+        "bootstrap_draws": 2000
+      }
+    },
+    "STORE - NLMSc": {
+      "region": {
+        "mean_accuracy_difference": -0.04338422832016934,
+        "ci95": [
+          -0.05080697305271556,
+          -0.035574415066628826
+        ],
+        "number_conditions": 12,
+        "bootstrap_draws": 2000
+      },
+      "V2": {
+        "mean_accuracy_difference": -0.024923881114039897,
+        "ci95": [
+          -0.03285224387330938,
+          -0.01686725878870032
+        ],
+        "number_conditions": 6,
+        "bootstrap_draws": 2000
+      },
+      "V16": {
+        "mean_accuracy_difference": -0.0618445755262988,
+        "ci95": [
+          -0.07440941555636384,
+          -0.04906281650681248
+        ],
+        "number_conditions": 6,
+        "bootstrap_draws": 2000
+      }
+    },
+    "NLMSc - LAMc": {
+      "region": {
+        "mean_accuracy_difference": -0.02628767790041306,
+        "ci95": [
+          -0.032486564792311434,
+          -0.02026443576907562
+        ],
+        "number_conditions": 12,
+        "bootstrap_draws": 2000
+      },
+      "V2": {
+        "mean_accuracy_difference": -0.016845764509209344,
+        "ci95": [
+          -0.023694377898816753,
+          -0.010289786776416454
+        ],
+        "number_conditions": 6,
+        "bootstrap_draws": 2000
+      },
+      "V16": {
+        "mean_accuracy_difference": -0.035729591291616784,
+        "ci95": [
+          -0.0455942671867595,
+          -0.02560615459586483
+        ],
+        "number_conditions": 6,
+        "bootstrap_draws": 2000
+      }
+    }
+  },
+  "elapsed_seconds": 1840.4612023830414,
+  "accounting": "quantized Gaussian entropy plus 32-bit scale groups",
+  "accuracy_units": "fraction",
+  "seed_scheme": "SHA256 equal-bit-A-v1",
+  "training_occurrences": 5621,
+  "embedding_dimension_used": 4096,
+  "grids": {
+    "STORE": 72,
+    "LAMc": 288,
+    "NLMSc": 480
+  },
+  "bootstrap_clusters": "paired (store, entity), including zero-query entities",
+  "blas_thread_policy": "initialize at workers; reduce once to one after preprocessing; never raise runtime limits"
+}

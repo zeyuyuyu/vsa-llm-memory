@@ -1,0 +1,39 @@
+# B44 literature check (after the results; prereg/B44_data_scaling_heldout_cot_crosstalk_prereg.md, "Literature")
+# Each B44 conclusion against published work: supports / conflicts / no precedent. Abstract-level reading only
+# (full texts not read); citations to be checked against the PDFs before they enter the paper.
+
+1. "With intermediate supervision (the bridge symbol), a LoRA fine-tune of the same encoder solves arena C from 800
+   instances; without it the fine-tune does not compose the two hops even at 80,000 instances."
+   - Wies, Levine & Shashua, "Sub-Task Decomposition Enables Learning in Sequence to Sequence Tasks", ICLR 2023
+     (arXiv 2204.02892): intermediate supervision turns tasks that are not learnable from the final label into
+     learnable ones when they split into simple sub-tasks.  SUPPORTS.
+   - Nye et al., "Show Your Work: Scratchpads for Intermediate Computation with Language Models", arXiv 2112.00114:
+     scratchpads make multi-step computation learnable.  SUPPORTS.
+   - Abbe, Bengio, Lotfi, Sandon & Saremi, "How Far Can Transformers Reason? The Globality Barrier and Inductive
+     Scratchpad", NeurIPS 2024 (arXiv 2406.06467): composing syllogisms on long chains is not learnable from the final
+     target alone (globality barrier); "educated" scratchpads with intermediate steps break the barrier.  SUPPORTS.
+   - Thomm et al., "Limits of Transformer Language Models on Learning Algorithmic Compositions", NeurIPS 2024
+     (arXiv 2402.05785; pointer-value-retrieval compositions): compositional learning in transformer LMs is highly
+     sample-inefficient, and few-shot prompting is unreliable on the sub-tasks.  SUPPORTS the fine-tune result;
+     PARTLY CONFLICTS with the prompting result here (few-shot prompting with the pairs listed and a worked procedure
+     is 1.000 on arena C) -- their tasks and prompts differ (no explicit procedure).
+
+2. "The plain fine-tune's ~0.80 plateau is a shortcut (it rejects candidates that are not table-F values and accepts
+   every F value), not partial composition."  Shortcut learning on synthetic reasoning tasks is widely reported
+   (e.g. Wu, Geiger & Milliere, "How Do Transformers Learn Variable Binding in Symbolic Programs?", arXiv 2505.20896:
+   variable binding is built on top of line-specific heuristics).  SUPPORTS (no exact precedent for this arena).
+
+3. "Prompting the same model with the pairs listed and the procedure stated (few-shot, no thinking) solves arena C
+   (1.000), zero-shot without thinking errs mostly by skipping the decimal-to-hex conversion."  NO PRECEDENT for this
+   arena; consistent with chain-of-thought / worked-example prompting results in general.
+
+4. "The imposed cross-talk of the published sweep is a common mode that centring removes; centred and whitened codes
+   recover exact accuracy at every level."  Mu & Viswanath, "All-but-the-Top: Simple and Effective Postprocessing
+   for Word Representations", ICLR 2018 (arXiv 1702.01417): representations share a common mean vector and a few
+   dominant directions, and removing them makes them more isotropic.  SUPPORTS (the operation and its rationale).
+
+5. "Centring does not rescue the binding-loss map (B42) and the untrained map's centred codes carry little symbol
+   identity (same-symbol cosine 0.06-0.17)."  NO PRECEDENT found for learning-through-HRR maps specifically.
+
+Sources: https://arxiv.org/abs/2204.02892 ; https://arxiv.org/abs/2112.00114 ; https://arxiv.org/abs/2406.06467 ;
+https://arxiv.org/abs/2402.05785 ; https://arxiv.org/abs/2505.20896 ; https://arxiv.org/abs/1702.01417

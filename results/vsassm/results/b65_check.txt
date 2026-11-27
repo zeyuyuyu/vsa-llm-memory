@@ -1,0 +1,47 @@
+/data1/path/to/work/b65/b65_check.py:17: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  a = torch.load(f"out/rd/last_{arm}_lr1e-3_s0/e{e}/reader.pt")[key]
+/data1/path/to/work/b65/b65_check.py:18: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  b = torch.load(f"{B40}/out/rd/N_{arm}_e{e}_s0/reader.pt")[key]
+1. reader reproduction (LAST, lr 1e-3, seed 0; snapshot of one run vs B40's separate runs)
+   vsa e100: max |W - W_B40| = 0.000e+00; dev read 0.86500 vs B40 0.86500
+   vsa e300: max |W - W_B40| = 0.000e+00; dev read 0.89375 vs B40 0.89375
+   vsa e1000: max |W - W_B40| = 0.000e+00; dev read 0.89625 vs B40 0.89625
+   disc e30: max |W - W_B40| = 0.000e+00; dev read 0.89000 vs B40 0.89000
+   disc e100: max |W - W_B40| = 0.000e+00; dev read 0.92875 vs B40 0.92875
+   disc e300: max |W - W_B40| = 0.000e+00; dev read 0.94625 vs B40 0.94625
+2. write-back reproduction (LAST, seed 0; B40's readers = these readers if 1. is exact)
+   last_vsapub_lr1e-3_s0: [0.1725, 0.9113, 0.9062, 0.9125, 0.9075] | B40 N_vsa_recon_lr1e-3_s0: [0.1725, 0.9113, 0.9062, 0.9125, 0.9075] | identical: True
+   last_vsapub_lr3e-4_s0: [0.1725, 0.8962, 0.9075, 0.9075, 0.9075] | B40 N_vsa_recon_lr3e-4_s0: [0.1725, 0.8962, 0.9075, 0.9075, 0.9075] | identical: True
+   last_disc_lr1e-3_s0: [0.1825, 0.5525, 0.9012, 0.9225, 0.9413] | B40 N_disc_lr1e-3_s0: [0.1825, 0.5525, 0.9012, 0.9225, 0.9413] | identical: True
+   last_disc_lr3e-4_s0: [0.1825, 0.2562, 0.3125, 0.3488, 0.4113] | B40 N_disc_lr3e-4_s0: [0.1825, 0.2562, 0.3125, 0.3488, 0.4113] | identical: True
+3. dev-optimum-interior
+   last_disc: chosen 1e-2 in grid ['3e-4', '1e-3', '3e-3', '1e-2', '3e-2']: INTERIOR (interior)
+   last_vsabm: chosen 1e-3 in grid ['3e-4', '1e-3', '3e-3', '1e-2']: INTERIOR (interior)
+   last_vsapub: chosen 1e-3 in grid ['3e-4', '1e-3', '3e-3', '1e-2']: INTERIOR (interior)
+   ops_disc: chosen 1e-2 in grid ['3e-4', '1e-3', '3e-3', '1e-2', '3e-2']: INTERIOR (interior)
+   ops_vsabm: chosen 1e-3 in grid ['3e-4', '1e-3', '3e-3', '1e-2']: INTERIOR (interior)
+   ops_vsapub: chosen 1e-3 in grid ['3e-4', '1e-3', '3e-3', '1e-2']: INTERIOR (interior)
+4. determinism (seed-0 LAST test evaluations re-run)
+   vsapub: predictions identical 2500/2500, module records identical 2500/2500
+   vsabm: predictions identical 2500/2500, module records identical 2500/2500
+   disc: predictions identical 2500/2500, module records identical 2500/2500
+5. second scorer (b40_check.py)
+   preds/last/disc_s0.jsonl: n=2500 acc_main=0.8240 acc_check=0.8240 gold_mismatch=0 correct_mismatch=0
+   preds/last/disc_s1.jsonl: n=2500 acc_main=0.8232 acc_check=0.8232 gold_mismatch=0 correct_mismatch=0
+   preds/last/disc_s2.jsonl: n=2500 acc_main=0.8312 acc_check=0.8312 gold_mismatch=0 correct_mismatch=0
+   preds/last/vsabm_s0.jsonl: n=2500 acc_main=0.9608 acc_check=0.9608 gold_mismatch=0 correct_mismatch=0
+   preds/last/vsabm_s1.jsonl: n=2500 acc_main=0.9620 acc_check=0.9620 gold_mismatch=0 correct_mismatch=0
+   preds/last/vsabm_s2.jsonl: n=2500 acc_main=0.9620 acc_check=0.9620 gold_mismatch=0 correct_mismatch=0
+   preds/last/vsapub_s0.jsonl: n=2500 acc_main=0.9128 acc_check=0.9128 gold_mismatch=0 correct_mismatch=0
+   preds/last/vsapub_s1.jsonl: n=2500 acc_main=0.9080 acc_check=0.9080 gold_mismatch=0 correct_mismatch=0
+   preds/last/vsapub_s2.jsonl: n=2500 acc_main=0.9124 acc_check=0.9124 gold_mismatch=0 correct_mismatch=0
+   preds/ops/disc_s0.jsonl: n=2500 acc_main=0.8856 acc_check=0.8856 gold_mismatch=0 correct_mismatch=0
+   preds/ops/disc_s1.jsonl: n=2500 acc_main=0.8740 acc_check=0.8740 gold_mismatch=0 correct_mismatch=0
+   preds/ops/disc_s2.jsonl: n=2500 acc_main=0.8696 acc_check=0.8696 gold_mismatch=0 correct_mismatch=0
+   preds/ops/vsabm_s0.jsonl: n=2500 acc_main=0.9828 acc_check=0.9828 gold_mismatch=0 correct_mismatch=0
+   preds/ops/vsabm_s1.jsonl: n=2500 acc_main=0.9716 acc_check=0.9716 gold_mismatch=0 correct_mismatch=0
+   preds/ops/vsabm_s2.jsonl: n=2500 acc_main=0.9724 acc_check=0.9724 gold_mismatch=0 correct_mismatch=0
+   preds/ops/vsapub_s0.jsonl: n=2500 acc_main=0.9832 acc_check=0.9832 gold_mismatch=0 correct_mismatch=0
+   preds/ops/vsapub_s1.jsonl: n=2500 acc_main=0.9688 acc_check=0.9688 gold_mismatch=0 correct_mismatch=0
+   preds/ops/vsapub_s2.jsonl: n=2500 acc_main=0.9772 acc_check=0.9772 gold_mismatch=0 correct_mismatch=0
+   TOTAL gold_mismatch 0 correct_mismatch 0

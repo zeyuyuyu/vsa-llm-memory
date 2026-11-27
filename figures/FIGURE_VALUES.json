@@ -1,0 +1,4797 @@
+{
+ "fig1_overview": {
+  "b": [
+   {
+    "candidates": [
+     "Mary",
+     "John",
+     "Daniel",
+     "Sandra",
+     "Bill",
+     "Fred"
+    ],
+    "colours": {
+     "other rows": "#BDBDBD",
+     "selected row": "#D55E00"
+    },
+    "cosine": [
+     0.4113807386885414,
+     -0.009609770181675146,
+     0.031513926246541035,
+     0.03594841556757045,
+     0.01648642156405103,
+     0.0038756689180604997
+    ],
+    "selected": "Mary",
+    "series": "hop 1",
+    "source": "computed by make_figures.py worked_example() from figdata/worked_example.json (seed 0, d = 2048, 6 pairs per bundle)"
+   },
+   {
+    "candidates": [
+     "hallway",
+     "kitchen",
+     "garden",
+     "office",
+     "bedroom",
+     "park"
+    ],
+    "colours": {
+     "other rows": "#BDBDBD",
+     "selected row": "#D55E00"
+    },
+    "cosine": [
+     0.39618531047572886,
+     0.05070001200690548,
+     0.019781691094193997,
+     -0.006556128189513898,
+     0.029571748809435673,
+     0.01960027085673319
+    ],
+    "selected": "hallway",
+    "series": "hop 2",
+    "source": "computed by make_figures.py worked_example() from figdata/worked_example.json (seed 0, d = 2048, 6 pairs per bundle)"
+   },
+   {
+    "answer_chain": [
+     "football",
+     "Mary",
+     "hallway"
+    ],
+    "d": 2048,
+    "largest_abs_cosine_between_different_codebook_rows": 0.058030109086781446,
+    "locations": [
+     "hallway",
+     "kitchen",
+     "garden",
+     "office",
+     "bedroom",
+     "park"
+    ],
+    "mean_cosine_between_different_codebook_rows": 6.307312833268036e-05,
+    "numpy": "2.2.6",
+    "objects": [
+     "football",
+     "apple",
+     "milk",
+     "book",
+     "keys",
+     "lamp"
+    ],
+    "pairs_per_bundle": 6,
+    "persons": [
+     "Mary",
+     "John",
+     "Daniel",
+     "Sandra",
+     "Bill",
+     "Fred"
+    ],
+    "question": "Where is the football?",
+    "seed": 0,
+    "series": "set-up",
+    "source": "conventions of the arena code: /path/to/HOME/v13.py (unit: rows of a Gaussian matrix normalized to unit length; bind = circular convolution irfft(rfft(a) * rfft(b)); unbind = irfft(rfft(ab) * conj(rfft(a))), i.e. binding with the approximate inverse) and /path/to/HOME/v37b.py (mem1 = sum bind(code(holder), code(object)); mem2 = sum bind(code(location), code(person)); the unbound vector is normalized and cleaned up by cosine against the candidate rows between the hops). Vocabulary: bAbI names. Seed and story chosen for the illustration.",
+    "story": [
+     [
+      "Mary",
+      "football",
+      "hallway"
+     ],
+     [
+      "John",
+      "apple",
+      "kitchen"
+     ],
+     [
+      "Daniel",
+      "milk",
+      "garden"
+     ],
+     [
+      "Sandra",
+      "book",
+      "office"
+     ],
+     [
+      "Bill",
+      "keys",
+      "bedroom"
+     ],
+     [
+      "Fred",
+      "lamp",
+      "park"
+     ]
+    ]
+   }
+  ]
+ },
+ "fig2_benchmarks": {
+  "a": [
+   {
+    "colour": "#A8A8A8",
+    "n": {
+     "0k": null,
+     "128k": null,
+     "16k": null,
+     "4k": null,
+     "64k": null
+    },
+    "series": "GPT-4-0125",
+    "source": {
+     "0k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 0k",
+     "128k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 128k",
+     "16k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 16k",
+     "4k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 4k",
+     "64k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'GPT-4-0125', position 64k"
+    },
+    "values": {
+     "0k": 87,
+     "128k": 36,
+     "16k": 64,
+     "4k": 74,
+     "64k": 43
+    }
+   },
+   {
+    "colour": "#A8A8A8",
+    "n": {
+     "0k": null,
+     "128k": null,
+     "16k": null,
+     "4k": null,
+     "64k": null
+    },
+    "series": "Llama-3.1-70B",
+    "source": {
+     "0k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 0k",
+     "128k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 128k",
+     "16k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 16k",
+     "4k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 4k",
+     "64k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'Llama-3.1-70B', position 64k"
+    },
+    "values": {
+     "0k": 85,
+     "128k": 45,
+     "16k": 65,
+     "4k": 74,
+     "64k": 53
+    }
+   },
+   {
+    "colour": "#7B4F9E",
+    "n": {
+     "0k": 125,
+     "128k": 125,
+     "16k": 125,
+     "4k": 125,
+     "512k": 25,
+     "64k": 125
+    },
+    "series": "Claude Opus 5.5, zero-shot*",
+    "source": {
+     "0k": "vsassm/results/b18_api_verdict.txt: table row 0k, column 'Claude Opus 5.5 (zero-shot)'",
+     "128k": "vsassm/results/b18_api_verdict.txt: table row 128k, column 'Claude Opus 5.5 (zero-shot)'",
+     "16k": "vsassm/results/b18_api_verdict.txt: table row 16k, column 'Claude Opus 5.5 (zero-shot)'",
+     "4k": "vsassm/results/b18_api_verdict.txt: table row 4k, column 'Claude Opus 5.5 (zero-shot)'",
+     "512k": "vsassm/results/b18_api_verdict.txt: table row 512k, column 'Claude Opus 5.5 (zero-shot)'",
+     "64k": "vsassm/results/b18_api_verdict.txt: table row 64k, column 'Claude Opus 5.5 (zero-shot)'"
+    },
+    "values": {
+     "0k": 100.0,
+     "128k": 97.6,
+     "16k": 95.2,
+     "4k": 97.6,
+     "512k": 88.0,
+     "64k": 96.0
+    }
+   },
+   {
+    "colour": "#009E73",
+    "n": {
+     "0k": 125,
+     "128k": 125,
+     "16k": 125,
+     "4k": 125,
+     "512k": 25,
+     "64k": 125
+    },
+    "series": "GPT-6.1 Sol, zero-shot*",
+    "source": {
+     "0k": "vsassm/results/b18_api_verdict.txt: table row 0k, column 'GPT-6.1 Sol (zero-shot)'",
+     "128k": "vsassm/results/b18_api_verdict.txt: table row 128k, column 'GPT-6.1 Sol (zero-shot)'",
+     "16k": "vsassm/results/b18_api_verdict.txt: table row 16k, column 'GPT-6.1 Sol (zero-shot)'",
+     "4k": "vsassm/results/b18_api_verdict.txt: table row 4k, column 'GPT-6.1 Sol (zero-shot)'",
+     "512k": "vsassm/results/b18_api_verdict.txt: table row 512k, column 'GPT-6.1 Sol (zero-shot)'",
+     "64k": "vsassm/results/b18_api_verdict.txt: table row 64k, column 'GPT-6.1 Sol (zero-shot)'"
+    },
+    "values": {
+     "0k": 100.0,
+     "128k": 96.8,
+     "16k": 100.0,
+     "4k": 99.2,
+     "512k": 96.0,
+     "64k": 99.2
+    }
+   },
+   {
+    "colour": "#333333",
+    "n": {
+     "0k": null,
+     "10M": null,
+     "128k": null,
+     "16k": null,
+     "1M": null,
+     "4k": null,
+     "512k": null,
+     "64k": null
+    },
+    "series": "ARMT 145M, fine-tuned",
+    "source": {
+     "0k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 0k",
+     "10M": "vsassm/results/b18_verdict.txt: 'Reference: ARMT (Rodkin et al. 2024, Table 1) at 10M: QA1 89.4, QA2 84.4, QA3 37.0, QA4 91.5, QA5 80.9; mean 76.6'",
+     "128k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 128k",
+     "16k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 16k",
+     "1M": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 1M",
+     "4k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 4k",
+     "512k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 512k",
+     "64k": "vsassm/results/b18_verdict.txt: 'Leaderboard QA1-5' line 'ARMT 137M, fine-tuned (#1)', position 64k"
+    },
+    "values": {
+     "0k": 99.3,
+     "10M": 76.6,
+     "128k": 96.9,
+     "16k": 98.1,
+     "1M": 93.4,
+     "4k": 98.1,
+     "512k": 95.3,
+     "64k": 97.9
+    }
+   },
+   {
+    "colour": "#D55E00",
+    "n": {
+     "0k": 500,
+     "10M": 25,
+     "128k": 500,
+     "16k": 500,
+     "1M": 125,
+     "4k": 500,
+     "512k": 125,
+     "64k": 500
+    },
+    "series": "ours (fine-tuned 1.7B reader + memory)",
+    "source": {
+     "0k": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 0k",
+     "10M": "vsassm/results/b18_verdict.txt: '## 10M tokens' section, 'QA1-5 10M: 25/25 = 100.0'",
+     "128k": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 128k",
+     "16k": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 16k",
+     "1M": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 1M",
+     "4k": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 4k",
+     "512k": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 512k",
+     "64k": "vsassm/results/b18_verdict.txt: table row 'QA1-5', column 64k"
+    },
+    "values": {
+     "0k": 99.6,
+     "10M": 100.0,
+     "128k": 99.8,
+     "16k": 99.2,
+     "1M": 100.0,
+     "4k": 97.8,
+     "512k": 100.0,
+     "64k": 99.6
+    }
+   },
+   {
+    "colour": "#e8a673",
+    "n": {
+     "0k": 500,
+     "128k": 500,
+     "16k": 500,
+     "4k": 500,
+     "64k": 500
+    },
+    "series": "the same 1.7B fine-tuned without the memory (B23, primary arm)",
+    "source": {
+     "0k": "b23_verdict.txt Y_s0: 0k      100.0  100.0   96.0  100.0  100.",
+     "128k": "b23_verdict.txt Y_s0: 128k    100.0   96.0   92.0   86.0   99.",
+     "16k": "b23_verdict.txt Y_s0: 16k      99.0   99.0   95.0   99.0   99.",
+     "4k": "b23_verdict.txt Y_s0: 4k      100.0  100.0   97.0  100.0   99.",
+     "64k": "b23_verdict.txt Y_s0: 64k     100.0   99.0   91.0   97.0  100."
+    },
+    "values": {
+     "0k": 99.2,
+     "128k": 94.6,
+     "16k": 98.2,
+     "4k": 99.2,
+     "64k": 97.4
+    }
+   },
+   {
+    "series": "window of the same 1.7B without the memory",
+    "source": "b23_verdict.txt 'Beyond the window: 512k, 1M and 10M inputs exceed the 131k-token YaRN window'",
+    "tokens": 131072
+   },
+   {
+    "length": "1M",
+    "series": "rejected input: GPT-6.1 Sol, zero-shot*",
+    "source": "vsassm/results/b18_api_verdict.txt: table row 1M, 'exceeds context (provider: context_length_exceeded)'"
+   },
+   {
+    "length": "1M",
+    "series": "rejected input: Claude Opus 5.5, zero-shot*",
+    "source": "vsassm/results/b18_api_verdict.txt: table row 1M, 'exceeds context (1.33M Claude tokens > 1M)'"
+   }
+  ],
+  "b": [
+   {
+    "acc_128k": 99.8,
+    "rank": 1,
+    "series": "ours (1.7B)",
+    "source": "babilong.json ours 128k"
+   },
+   {
+    "acc_128k": 97.6,
+    "rank": 2,
+    "series": "Claude Opus 5.5*",
+    "source": "babilong.json (our runs, 25 questions per task)"
+   },
+   {
+    "acc_128k": 96.9,
+    "rank": 3,
+    "series": "ARMT (145M, FT)",
+    "source": "leaderboard row '~ ARMT (137M) fine-tune', 128k; size: ARMT paper (arXiv 2407.04841) Table 1 'ARMT (145M)'; the leaderboard row says 137M"
+   },
+   {
+    "acc_128k": 96.8,
+    "rank": 4,
+    "series": "GPT-6.1 Sol*",
+    "source": "babilong.json (our runs, 25 questions per task)"
+   },
+   {
+    "acc_128k": 94.6,
+    "rank": 5,
+    "series": "Qwen3-1.7B alone (FT)",
+    "source": "b23_verdict.txt Y_s0 128k: 128k    100.0   96.0   92.0   86.0   99."
+   },
+   {
+    "acc_128k": 92.5,
+    "rank": 6,
+    "series": "Mamba (130M, FT)",
+    "source": "leaderboard row '~ Mamba (130M) fine-tune', 128k; size: model name"
+   },
+   {
+    "acc_128k": 58.52,
+    "rank": 7,
+    "series": "RMT (137M, FT)",
+    "source": "leaderboard row '~ RMT (137M) fine-tune', 128k; size: model name"
+   },
+   {
+    "acc_128k": 45.0,
+    "rank": 8,
+    "series": "Llama-3.1-70B (70B)",
+    "source": "leaderboard row 'Meta-Llama-3.1-70B-Instruct', 128k; size: model name"
+   },
+   {
+    "acc_128k": 45.0,
+    "rank": 9,
+    "series": "ChatQA-1.5 + RAG (8B)",
+    "source": "leaderboard row 'Llama3-ChatQA-1.5-8B + RAG', 128k; size: model name"
+   },
+   {
+    "acc_128k": 39.0,
+    "rank": 10,
+    "series": "Llama-3.1-8B (8B)",
+    "source": "leaderboard row 'Meta-Llama-3.1-8B-Instruct', 128k; size: model name"
+   },
+   {
+    "acc_128k": 38.0,
+    "series": "Command R (35B) (not drawn)",
+    "source": "leaderboard row 'c4ai-command-r-v01', 128k; size: model card (35B)"
+   },
+   {
+    "acc_128k": 36.0,
+    "series": "GPT-4 (not drawn)",
+    "source": "leaderboard"
+   },
+   {
+    "acc_128k": 34.0,
+    "series": "Jamba (52B) (not drawn)",
+    "source": "leaderboard row 'ai21labs/Jamba-v0.1', 128k; size: model card (52B total, 12B active)"
+   },
+   {
+    "acc_128k": 30.0,
+    "series": "Phi-3-medium (14B) (not drawn)",
+    "source": "leaderboard row 'Phi-3-medium-128k-instruct', 128k; size: model card (14B)"
+   },
+   {
+    "acc_128k": 24.0,
+    "series": "Yi-9B-200k (9B) (not drawn)",
+    "source": "leaderboard row '01-ai/Yi-9B-200k', 128k; size: model name"
+   },
+   {
+    "acc_128k": 14.0,
+    "series": "Activation Beacon (Mistral-7B) (7B) (not drawn)",
+    "source": "leaderboard row 'activation-beacon-mistral-7b', 128k; size: model name"
+   },
+   {
+    "acc_128k": 13.0,
+    "series": "ChatGLM3-6B (6B) (not drawn)",
+    "source": "leaderboard row 'chatglm3-6b-128k', 128k; size: model name"
+   },
+   {
+    "acc_128k": 9.0,
+    "series": "YaRN-Mistral-7B (7B) (not drawn)",
+    "source": "leaderboard row 'Yarn-Mistral-7b-128k', 128k; size: model name"
+   },
+   {
+    "acc_128k": 7.0,
+    "series": "Phi-3-mini (3.8B) (not drawn)",
+    "source": "leaderboard row 'Phi-3-mini-128k-instruct', 128k; size: model card (3.8B)"
+   },
+   {
+    "acc_128k": 6.0,
+    "series": "Activation Beacon (Llama-2-7B) (7B) (not drawn)",
+    "source": "leaderboard row 'activation-beacon-llama2-7b-chat', 128k; size: model name"
+   }
+  ],
+  "c": [
+   {
+    "avg_128k": 95.1,
+    "rank": 1,
+    "series": "Jamba-1.5-large (398B)",
+    "source": "[Jamba-1.5-large*](https://huggingface.co/ai21labs/AI21-Jamb",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 94.9,
+    "rank": 2,
+    "series": "ours (8B; word counter)",
+    "source": "b21_verdict.txt VSA store (ours), 13 tasks, 128k",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 94.4,
+    "rank": 3,
+    "series": "Gemini-1.5-pro",
+    "source": "[Gemini-1.5-pro](https://ai.google.dev/gemini-api/docs/model",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 92.2,
+    "rank": 4,
+    "series": "Qwen2.5-14B-1M (14B)",
+    "source": "[Qwen2.5-14B-Instruct-1M*](https://huggingface.co/Qwen/Qwen2",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 90.6,
+    "rank": 5,
+    "series": "Qwen3-235B (235B)",
+    "source": "[Qwen3-235B-A22B*](https://huggingface.co/Qwen/Qwen3-235B-A2",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 90.0,
+    "rank": 6,
+    "series": "Jamba-1.5-mini (52B)",
+    "source": "[Jamba-1.5-mini](https://huggingface.co/ai21labs/AI21-Jamba-",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 88.2,
+    "rank": 7,
+    "series": "EXAONE-4.0-32B (32B)",
+    "source": "[EXAONE-4.0-32B*](https://huggingface.co/LGAI-EXAONE/EXAONE-",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 85.6,
+    "rank": 8,
+    "series": "Qwen3-32B (32B)",
+    "source": "[Qwen3-32B*](https://huggingface.co/Qwen/Qwen3-32B) (32B)|12",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 81.2,
+    "rank": 9,
+    "series": "GPT-4",
+    "source": "[GPT-4-1106-preview](https://platform.openai.com/docs/models",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 77.3,
+    "rank": 10,
+    "series": "Qwen3-8B alone (8B)",
+    "source": "b21_verdict.txt Qwen3-8B direct (B19), 13 tasks, 128k",
+    "tasks": 13
+   },
+   {
+    "avg_128k": 66.6,
+    "rank": 11,
+    "series": "Llama-3.1-70B (70B)",
+    "source": "[Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-",
+    "tasks": 13
+   }
+  ],
+  "d": [
+   {
+    "all_chains": 71.72774869109948,
+    "chains_7_to_10": 64.47368421052632,
+    "colour": "#D55E00",
+    "series": "ours: frozen Qwen3-8B + rules"
+   },
+   {
+    "all_chains": 61.0,
+    "chains_7_to_10": 52.6,
+    "colour": "#B5B5B5",
+    "series": "the same model alone"
+   },
+   {
+    "all_chains": 68.3,
+    "chains_7_to_10": null,
+    "colour": "#7A7A7A",
+    "series": "SatLM (rules given; another test set)"
+   },
+   {
+    "all_chains": 61.0,
+    "chains_7_to_10": null,
+    "colour": "#7A7A7A",
+    "series": "DSR-LM"
+   }
+  ]
+ },
+ "fig3_store": {
+  "a": [
+   {
+    "colour": "#efc29e",
+    "kstar_marked": 41.70257198410671,
+    "series": "HRR, d = 512",
+    "source": "v151_logs/v151.json capacity.HRR['512'] (mean of 200 instances x 3 capacity seeds; per-seed values not banked, no dots); open marker: the 0.70 crossing, interpolated in log k (capacity_fits)",
+    "x_facts_drawn": [
+     8,
+     11,
+     16,
+     23,
+     32,
+     45,
+     64,
+     91,
+     128,
+     181,
+     256,
+     362,
+     512,
+     724,
+     800
+    ],
+    "x_grid_as_banked": [
+     8,
+     11,
+     16,
+     23,
+     32,
+     45,
+     64,
+     91,
+     128,
+     181,
+     256,
+     362,
+     512,
+     724,
+     1024
+    ],
+    "y": [
+     0.945,
+     0.9466666666666667,
+     0.9366666666666666,
+     0.9100000000000001,
+     0.8449999999999999,
+     0.6583333333333333,
+     0.4033333333333333,
+     0.1683333333333333,
+     0.085,
+     0.028333333333333335,
+     0.006666666666666667,
+     0.01,
+     0.005,
+     0.0,
+     0.0016666666666666668
+    ]
+   },
+   {
+    "colour": "#e2904f",
+    "kstar_marked": 73.3477610301134,
+    "series": "HRR, d = 1024",
+    "source": "v151_logs/v151.json capacity.HRR['1024'] (mean of 200 instances x 3 capacity seeds; per-seed values not banked, no dots); open marker: the 0.70 crossing, interpolated in log k (capacity_fits)",
+    "x_facts_drawn": [
+     8,
+     11,
+     16,
+     23,
+     32,
+     45,
+     64,
+     91,
+     128,
+     181,
+     256,
+     362,
+     512,
+     724,
+     800
+    ],
+    "x_grid_as_banked": [
+     8,
+     11,
+     16,
+     23,
+     32,
+     45,
+     64,
+     91,
+     128,
+     181,
+     256,
+     362,
+     512,
+     724,
+     1024
+    ],
+    "y": [
+     0.945,
+     0.9433333333333334,
+     0.9416666666666665,
+     0.9433333333333334,
+     0.935,
+     0.9049999999999999,
+     0.7916666666666666,
+     0.555,
+     0.30333333333333334,
+     0.12000000000000001,
+     0.04666666666666667,
+     0.018333333333333337,
+     0.006666666666666667,
+     0.0033333333333333335,
+     0.0033333333333333335
+    ]
+   },
+   {
+    "colour": "#d55e00",
+    "kstar_marked": 136.69922591797865,
+    "series": "HRR, d = 2048",
+    "source": "v151_logs/v151.json capacity.HRR['2048'] (mean of 200 instances x 3 capacity seeds; per-seed values not banked, no dots); open marker: the 0.70 crossing, interpolated in log k (capacity_fits)",
+    "x_facts_drawn": [
+     8,
+     11,
+     16,
+     23,
+     32,
+     45,
+     64,
+     91,
+     128,
+     181,
+     256,
+     362,
+     512,
+     724,
+     800
+    ],
+    "x_grid_as_banked": [
+     8,
+     11,
+     16,
+     23,
+     32,
+     45,
+     64,
+     91,
+     128,
+     181,
+     256,
+     362,
+     512,
+     724,
+     1024
+    ],
+    "y": [
+     0.945,
+     0.94,
+     0.945,
+     0.94,
+     0.9383333333333334,
+     0.94,
+     0.9383333333333334,
+     0.9016666666666667,
+     0.7433333333333333,
+     0.515,
+     0.245,
+     0.12166666666666666,
+     0.04,
+     0.008333333333333333,
+     0.006666666666666667
+    ]
+   },
+   {
+    "colour": "#843a00",
+    "kstar_marked": 264.6542495677405,
+    "series": "HRR, d = 4096",
+    "source": "v151_logs/v151.json capacity.HRR['4096'] (mean of 200 instances x 3 capacity seeds; per-seed values not banked, no dots); open marker: the 0.70 crossing, interpolated in log k (capacity_fits)",
+    "x_facts_drawn": [
+     8,
+     11,
+     16,
+     23,
+     32,
+     45,
+     64,
+     91,
+     128,
+     181,
+     256,
+     362,
+     512,
+     724,
+     800
+    ],
+    "x_grid_as_banked": [
+     8,
+     11,
+     16,
+     23,
+     32,
+     45,
+     64,
+     91,
+     128,
+     181,
+     256,
+     362,
+     512,
+     724,
+     1024
+    ],
+    "y": [
+     0.9466666666666667,
+     0.945,
+     0.945,
+     0.9383333333333334,
+     0.94,
+     0.9416666666666665,
+     0.9383333333333334,
+     0.935,
+     0.9283333333333333,
+     0.8850000000000001,
+     0.7316666666666666,
+     0.40166666666666667,
+     0.15833333333333333,
+     0.05333333333333334,
+     0.03166666666666667
+    ]
+   }
+  ],
+  "b": [
+   {
+    "colour": "#efc29e",
+    "facts_in_pool": 128,
+    "facts_requested": 128,
+    "series": "K = 128 facts",
+    "source": "v102_logs/v102_scored.json grid['d2048_K128_S*']",
+    "x_stores": [
+     1,
+     2,
+     4,
+     8,
+     16
+    ],
+    "y_mean": [
+     0.7277777777777779,
+     0.9194444444444446,
+     0.9277777777777777,
+     0.9305555555555557,
+     0.9277777777777777
+    ],
+    "y_per_seed": [
+     [
+      0.7,
+      0.775,
+      0.7083333333333334
+     ],
+     [
+      0.925,
+      0.9083333333333333,
+      0.925
+     ],
+     [
+      0.925,
+      0.925,
+      0.9333333333333333
+     ],
+     [
+      0.9333333333333333,
+      0.925,
+      0.9333333333333333
+     ],
+     [
+      0.925,
+      0.925,
+      0.9333333333333333
+     ]
+    ]
+   },
+   {
+    "colour": "#e2904f",
+    "facts_in_pool": 256,
+    "facts_requested": 256,
+    "series": "K = 256 facts",
+    "source": "v102_logs/v102_scored.json grid['d2048_K256_S*']",
+    "x_stores": [
+     1,
+     2,
+     4,
+     8,
+     16
+    ],
+    "y_mean": [
+     0.21944444444444447,
+     0.6638888888888889,
+     0.9055555555555556,
+     0.9250000000000002,
+     0.9250000000000002
+    ],
+    "y_per_seed": [
+     [
+      0.225,
+      0.25833333333333336,
+      0.175
+     ],
+     [
+      0.675,
+      0.725,
+      0.5916666666666667
+     ],
+     [
+      0.9083333333333333,
+      0.9,
+      0.9083333333333333
+     ],
+     [
+      0.925,
+      0.9166666666666666,
+      0.9333333333333333
+     ],
+     [
+      0.925,
+      0.925,
+      0.925
+     ]
+    ]
+   },
+   {
+    "colour": "#d55e00",
+    "facts_in_pool": 512,
+    "facts_requested": 512,
+    "series": "K = 512 facts",
+    "source": "v102_logs/v102_scored.json grid['d2048_K512_S*']",
+    "x_stores": [
+     1,
+     2,
+     4,
+     8,
+     16
+    ],
+    "y_mean": [
+     0.03888888888888889,
+     0.18888888888888888,
+     0.6472222222222223,
+     0.9194444444444444,
+     0.9222222222222222
+    ],
+    "y_per_seed": [
+     [
+      0.05,
+      0.041666666666666664,
+      0.025
+     ],
+     [
+      0.14166666666666666,
+      0.23333333333333334,
+      0.19166666666666668
+     ],
+     [
+      0.6583333333333333,
+      0.5916666666666667,
+      0.6916666666666667
+     ],
+     [
+      0.9166666666666666,
+      0.925,
+      0.9166666666666666
+     ],
+     [
+      0.925,
+      0.925,
+      0.9166666666666666
+     ]
+    ]
+   },
+   {
+    "colour": "#843a00",
+    "facts_in_pool": 800,
+    "facts_requested": 1024,
+    "series": "K = 800 (all)",
+    "source": "v102_logs/v102_scored.json grid['d2048_K1024_S*']",
+    "x_stores": [
+     1,
+     2,
+     4,
+     8,
+     16
+    ],
+    "y_mean": [
+     0.008333333333333333,
+     0.044444444444444446,
+     0.25555555555555554,
+     0.7222222222222222,
+     0.9083333333333333
+    ],
+    "y_per_seed": [
+     [
+      0.016666666666666666,
+      0.008333333333333333,
+      0.0
+     ],
+     [
+      0.041666666666666664,
+      0.03333333333333333,
+      0.058333333333333334
+     ],
+     [
+      0.2916666666666667,
+      0.24166666666666667,
+      0.23333333333333334
+     ],
+     [
+      0.7,
+      0.7416666666666667,
+      0.725
+     ],
+     [
+      0.925,
+      0.9,
+      0.9
+     ]
+    ]
+   }
+  ]
+ },
+ "fig4_mechanism": {
+  "a": [
+   {
+    "colour": "#7F7F7F",
+    "series": "probe of the hidden states, Phi-2",
+    "source": "b31.json arms 'Phi-2|<arena>|equalised probe'",
+    "values": {
+     "A": {
+      "mean": 0.48500000000000004,
+      "per_seed": [
+       0.485,
+       0.485,
+       0.485
+      ]
+     },
+     "B": {
+      "mean": 0.956,
+      "per_seed": [
+       0.956,
+       0.956,
+       0.956
+      ]
+     },
+     "C": {
+      "mean": 0.472,
+      "per_seed": [
+       0.472,
+       0.472,
+       0.472
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#7F7F7F",
+    "series": "probe of the hidden states, Qwen3-8B",
+    "source": "b31.json arms 'Qwen3-8B|<arena>|equalised probe'",
+    "values": {
+     "A": {
+      "mean": 0.492,
+      "per_seed": [
+       0.492,
+       0.492,
+       0.492
+      ]
+     },
+     "B": {
+      "mean": 0.9940000000000001,
+      "per_seed": [
+       0.994,
+       0.994,
+       0.994
+      ]
+     },
+     "C": {
+      "mean": 0.512,
+      "per_seed": [
+       0.512,
+       0.512,
+       0.512
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#CC79A7",
+    "series": "map trained only on the answer, Phi-2",
+    "source": "b31.json arms 'Phi-2|<arena>|binding-loss map (perm, named)'",
+    "values": {
+     "A": {
+      "mean": 0.4623333333333333,
+      "per_seed": [
+       0.463,
+       0.481,
+       0.443
+      ]
+     },
+     "B": {
+      "mean": 0.9606666666666666,
+      "per_seed": [
+       0.954,
+       0.962,
+       0.966
+      ]
+     },
+     "C": {
+      "mean": 0.46799999999999997,
+      "per_seed": [
+       0.46,
+       0.474,
+       0.47
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#CC79A7",
+    "series": "map trained only on the answer, Qwen3-8B",
+    "source": "b31.json arms 'Qwen3-8B|<arena>|binding-loss map (perm, named)'",
+    "values": {
+     "A": {
+      "mean": 0.49133333333333334,
+      "per_seed": [
+       0.489,
+       0.497,
+       0.488
+      ]
+     },
+     "B": {
+      "mean": 0.996,
+      "per_seed": [
+       0.996,
+       0.996,
+       0.996
+      ]
+     },
+     "C": {
+      "mean": 0.47866666666666663,
+      "per_seed": [
+       0.462,
+       0.484,
+       0.49
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#882255",
+    "series": "map that keeps codes apart (no labels), Phi-2",
+    "source": "b31.json arms 'Phi-2|<arena>|label-free InfoNCE map (perm, named)'",
+    "values": {
+     "A": {
+      "mean": 0.6193333333333334,
+      "per_seed": [
+       0.599,
+       0.673,
+       0.586
+      ]
+     },
+     "B": {
+      "mean": 0.9513333333333334,
+      "per_seed": [
+       0.946,
+       0.952,
+       0.956
+      ]
+     },
+     "C": {
+      "mean": 0.49933333333333335,
+      "per_seed": [
+       0.478,
+       0.514,
+       0.506
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#882255",
+    "series": "map that keeps codes apart (no labels), Qwen3-8B",
+    "source": "b31.json arms 'Qwen3-8B|<arena>|label-free InfoNCE map (perm, named)'",
+    "values": {
+     "A": {
+      "mean": 0.501,
+      "per_seed": [
+       0.509,
+       0.506,
+       0.488
+      ]
+     },
+     "B": {
+      "mean": 0.9966666666666667,
+      "per_seed": [
+       1.0,
+       0.994,
+       0.996
+      ]
+     },
+     "C": {
+      "mean": 0.5426666666666667,
+      "per_seed": [
+       0.586,
+       0.538,
+       0.504
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#E69F00",
+    "series": "LoRA fine-tune, Phi-2",
+    "source": "b31.json arms 'Phi-2|<arena>|equalised LoRA'",
+    "values": {
+     "A": {
+      "mean": 0.486,
+      "per_seed": [
+       0.48,
+       0.493,
+       0.485
+      ]
+     },
+     "B": {
+      "mean": 0.9933333333333333,
+      "per_seed": [
+       0.99,
+       0.998,
+       0.992
+      ]
+     },
+     "C": {
+      "mean": 0.4673333333333333,
+      "per_seed": [
+       0.474,
+       0.462,
+       0.466
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#E69F00",
+    "series": "LoRA fine-tune, Qwen3-8B",
+    "source": "b31.json arms 'Qwen3-8B|<arena>|equalised LoRA'",
+    "values": {
+     "A": {
+      "mean": 0.9980000000000001,
+      "per_seed": [
+       0.998,
+       0.997,
+       0.999
+      ]
+     },
+     "B": {
+      "mean": 0.9986666666666667,
+      "per_seed": [
+       0.996,
+       1.0,
+       1.0
+      ]
+     },
+     "C": {
+      "mean": 0.6313333333333334,
+      "per_seed": [
+       0.538,
+       0.698,
+       0.658
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#D55E00",
+    "series": "naming head, Phi-2",
+    "source": "b31.json arms 'Phi-2|<arena>|naming head + VSA (perm, named)'",
+    "values": {
+     "A": {
+      "mean": 0.9776666666666666,
+      "per_seed": [
+       0.969,
+       0.985,
+       0.979
+      ]
+     },
+     "B": {
+      "mean": 0.996,
+      "per_seed": [
+       0.996,
+       0.996,
+       0.996
+      ]
+     },
+     "C": {
+      "mean": 1.0,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#D55E00",
+    "series": "naming head, Qwen3-8B",
+    "source": "b31.json arms 'Qwen3-8B|<arena>|naming head + VSA (perm, named)'",
+    "values": {
+     "A": {
+      "mean": 0.751,
+      "per_seed": [
+       0.745,
+       0.746,
+       0.762
+      ]
+     },
+     "B": {
+      "mean": 0.7959999999999999,
+      "per_seed": [
+       0.794,
+       0.81,
+       0.784
+      ]
+     },
+     "C": {
+      "mean": 0.9833333333333334,
+      "per_seed": [
+       0.982,
+       0.99,
+       0.978
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#000000",
+    "series": "exact codes (parser)",
+    "source": "b31.json arms 'no encoder|<arena>|exact symbols + VSA (perm)'",
+    "values": {
+     "A": {
+      "mean": 1.0,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "B": {
+      "mean": 0.9966666666666667,
+      "per_seed": [
+       0.996,
+       0.996,
+       0.998
+      ]
+     },
+     "C": {
+      "mean": 1.0,
+      "per_seed": [
+       1.0,
+       1.0,
+       1.0
+      ]
+     }
+    }
+   },
+   {
+    "colour": "#222222",
+    "marker": "D open",
+    "series": "Qwen3-8B naming head from a dev-chosen layer (exploratory)",
+    "source": "b31.json explore1",
+    "values": {
+     "A": {
+      "layer": 9,
+      "mean": 0.997
+     },
+     "B": {
+      "layer": 9,
+      "mean": 0.997
+     },
+     "C": {
+      "layer": 27,
+      "mean": 0.998
+     }
+    }
+   }
+  ],
+  "b": [
+   {
+    "colour": "#222222",
+    "series": "every mention perturbed",
+    "source": "figdata/b47_fig2bc.json (vsassm b47_out/b47_fig2bc.json; checked against b47_verdict.txt section 3)",
+    "x_same_symbol_cosine": [
+     1.000000050663948,
+     0.9025774918496609,
+     0.8101509545412329,
+     0.7227205489244727,
+     0.6402860687010817,
+     0.562847612467077,
+     0.4904051933437586,
+     0.42295879998968705,
+     0.36050850980811644,
+     0.3030541731251611,
+     0.25059586608161527,
+     0.20313358954671354,
+     0.1606673690593905,
+     0.12319714995101094,
+     0.0907229793827153,
+     0.06324481806303893,
+     0.040762693760916596
+    ],
+    "y_mean": [
+     1.0,
+     0.9979999999999999,
+     0.9979999999999999,
+     0.9979999999999999,
+     0.9966666666666667,
+     0.9846666666666666,
+     0.9433333333333334,
+     0.884,
+     0.806,
+     0.7153333333333333,
+     0.6253333333333333,
+     0.566,
+     0.5426666666666667,
+     0.54,
+     0.5113333333333333,
+     0.5073333333333333,
+     0.5006666666666667
+    ],
+    "y_per_seed": [
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      0.996,
+      0.998,
+      1.0
+     ],
+     [
+      0.996,
+      0.998,
+      1.0
+     ],
+     [
+      0.996,
+      0.998,
+      1.0
+     ],
+     [
+      0.996,
+      0.998,
+      0.996
+     ],
+     [
+      0.986,
+      0.988,
+      0.98
+     ],
+     [
+      0.942,
+      0.954,
+      0.934
+     ],
+     [
+      0.874,
+      0.89,
+      0.888
+     ],
+     [
+      0.796,
+      0.802,
+      0.82
+     ],
+     [
+      0.7,
+      0.722,
+      0.724
+     ],
+     [
+      0.596,
+      0.634,
+      0.646
+     ],
+     [
+      0.548,
+      0.584,
+      0.566
+     ],
+     [
+      0.552,
+      0.552,
+      0.524
+     ],
+     [
+      0.552,
+      0.55,
+      0.518
+     ],
+     [
+      0.494,
+      0.52,
+      0.52
+     ],
+     [
+      0.496,
+      0.508,
+      0.518
+     ],
+     [
+      0.47,
+      0.506,
+      0.526
+     ]
+    ]
+   },
+   {
+    "colour": "#666666",
+    "series": "only between a symbol's two written forms",
+    "source": "figdata/b47_fig2bc.json (vsassm b47_out/b47_fig2bc.json; checked against b47_verdict.txt section 3)",
+    "x_same_symbol_cosine": [
+     1.000000050663948,
+     0.9729167051613331,
+     0.9458333613144028,
+     0.9187500726017687,
+     0.891666730079386,
+     0.8645833719935682,
+     0.8375000337759654,
+     0.8104166791670853,
+     0.783333394759231,
+     0.7562500516573588,
+     0.7291666907154851,
+     0.7020833540707826,
+     0.6750000200751755,
+     0.6479166862865289,
+     0.6208333615627554,
+     0.5937500347693762,
+     0.5666666762075491
+    ],
+    "y_mean": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     0.9986666666666667,
+     0.9979999999999999,
+     0.9973333333333333,
+     0.9906666666666667,
+     0.9780000000000001,
+     0.9633333333333333,
+     0.932,
+     0.8953333333333333,
+     0.8326666666666666,
+     0.7680000000000001,
+     0.69
+    ],
+    "y_per_seed": [
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      0.998,
+      1.0,
+      0.998
+     ],
+     [
+      0.996,
+      1.0,
+      0.998
+     ],
+     [
+      0.996,
+      1.0,
+      0.996
+     ],
+     [
+      0.99,
+      0.994,
+      0.988
+     ],
+     [
+      0.982,
+      0.982,
+      0.97
+     ],
+     [
+      0.972,
+      0.966,
+      0.952
+     ],
+     [
+      0.934,
+      0.934,
+      0.928
+     ],
+     [
+      0.906,
+      0.896,
+      0.884
+     ],
+     [
+      0.84,
+      0.824,
+      0.834
+     ],
+     [
+      0.772,
+      0.764,
+      0.768
+     ],
+     [
+      0.69,
+      0.69,
+      0.69
+     ]
+    ]
+   },
+   {
+    "colour": "#882255",
+    "marker": "D",
+    "series": "label-free map, Phi-2",
+    "source": "Phi-2 B31 label-free InfoNCE map (perm, named) geometry 0.101/0.297, observed acc 0.499, hop1 0.615 | nearest cell c 0.3 rho 0.55 (0.092/0.303): acc 0.579, hop1 0.311",
+    "x_same_symbol_cosine": 0.297,
+    "y": 0.499
+   },
+   {
+    "colour": "#882255",
+    "marker": "s",
+    "series": "label-free map, Qwen3-8B",
+    "source": "Qwen3-8B B31 label-free InfoNCE map (perm, named) geometry 0.090/0.298, observed acc 0.543, hop1 0.445 | nearest cell c 0.3 rho 0.55 (0.092/0.303): acc 0.579, hop1 0.311",
+    "x_same_symbol_cosine": 0.298,
+    "y": 0.543
+   }
+  ],
+  "c": [
+   {
+    "colour": "#222222",
+    "series": "exact codes",
+    "source": "figdata/b44_fig2bc.json c (checked against b44_verdict.txt '2c' lines)",
+    "x": [
+     2,
+     4,
+     8,
+     16,
+     24,
+     32
+    ],
+    "y_mean": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "y_per_seed": [
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ]
+    ]
+   },
+   {
+    "colour": "#D55E00",
+    "series": "naming head, Phi-2",
+    "source": "figdata/b44_fig2bc.json c (checked against b44_verdict.txt '2c' lines)",
+    "x": [
+     2,
+     4,
+     8,
+     16,
+     24,
+     32
+    ],
+    "y_mean": [
+     0.9986666666666667,
+     0.9993333333333334,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "y_per_seed": [
+     [
+      0.998,
+      0.998,
+      1.0
+     ],
+     [
+      1.0,
+      0.998,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ]
+    ]
+   },
+   {
+    "colour": "#D55E00",
+    "series": "naming head, Qwen3-8B",
+    "source": "figdata/b44_fig2bc.json c (checked against b44_verdict.txt '2c' lines)",
+    "x": [
+     2,
+     4,
+     8,
+     16,
+     24,
+     32
+    ],
+    "y_mean": [
+     0.7753333333333333,
+     0.8193333333333332,
+     0.9486666666666667,
+     0.9860000000000001,
+     0.98,
+     0.984
+    ],
+    "y_per_seed": [
+     [
+      0.776,
+      0.762,
+      0.788
+     ],
+     [
+      0.834,
+      0.788,
+      0.836
+     ],
+     [
+      0.958,
+      0.942,
+      0.946
+     ],
+     [
+      0.992,
+      0.984,
+      0.982
+     ],
+     [
+      0.984,
+      0.978,
+      0.978
+     ],
+     [
+      0.984,
+      0.99,
+      0.978
+     ]
+    ]
+   },
+   {
+    "colour": "#7F7F7F",
+    "series": "probe, Phi-2",
+    "source": "figdata/b44_fig2bc.json c (checked against b44_verdict.txt '2c' lines)",
+    "x": [
+     2,
+     4,
+     8,
+     16,
+     24,
+     32
+    ],
+    "y_mean": [
+     0.9460000000000001,
+     0.7559999999999999,
+     0.554,
+     0.492,
+     0.486,
+     0.494
+    ],
+    "y_per_seed": [
+     [
+      0.946,
+      0.946,
+      0.946
+     ],
+     [
+      0.756,
+      0.756,
+      0.756
+     ],
+     [
+      0.554,
+      0.554,
+      0.554
+     ],
+     [
+      0.492,
+      0.492,
+      0.492
+     ],
+     [
+      0.486,
+      0.486,
+      0.486
+     ],
+     [
+      0.494,
+      0.494,
+      0.494
+     ]
+    ]
+   },
+   {
+    "colour": "#7F7F7F",
+    "series": "probe, Qwen3-8B",
+    "source": "figdata/b44_fig2bc.json c (checked against b44_verdict.txt '2c' lines)",
+    "x": [
+     2,
+     4,
+     8,
+     16,
+     24,
+     32
+    ],
+    "y_mean": [
+     0.932,
+     0.7200000000000001,
+     0.58,
+     0.492,
+     0.49,
+     0.506
+    ],
+    "y_per_seed": [
+     [
+      0.932,
+      0.932,
+      0.932
+     ],
+     [
+      0.72,
+      0.72,
+      0.72
+     ],
+     [
+      0.58,
+      0.58,
+      0.58
+     ],
+     [
+      0.492,
+      0.492,
+      0.492
+     ],
+     [
+      0.49,
+      0.49,
+      0.49
+     ],
+     [
+      0.506,
+      0.506,
+      0.506
+     ]
+    ]
+   }
+  ]
+ },
+ "fig5_conditions": {
+  "b": [
+   {
+    "difference_vs_best_finetune": 0.0033333333333332993,
+    "group": "answer-only fine-tune fails; diamond: told the intermediate symbol",
+    "lora": [
+     0.474,
+     0.462,
+     0.466
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "arena C (two steps), Phi-2",
+    "scratchpad": [
+     0.998,
+     0.994,
+     0.998
+    ],
+    "series": "arena C, Phi-2",
+    "source": "b31.json arms 'Phi-2|C|naming head + VSA (perm, named)' and '|equalised LoRA'; scratchpad LoRA from b47_fig2bc.json phi2_scratch_n800 (b47_verdict.txt)"
+   },
+   {
+    "difference_vs_best_finetune": -0.012000000000000122,
+    "group": "answer-only fine-tune fails; diamond: told the intermediate symbol",
+    "lora": [
+     0.728,
+     0.546,
+     0.762
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     0.994,
+     0.988,
+     0.98
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "arena C (two steps), Qwen3-8B",
+    "scratchpad": [
+     1.0,
+     0.998,
+     1.0
+    ],
+    "series": "arena C, Qwen3-8B",
+    "source": "b44.json std (n = 800): naming head, equalised LoRA, scratchpad LoRA"
+   },
+   {
+    "difference_vs_best_finetune": -0.024666666666666726,
+    "group": "answer-only fine-tune fails; diamond: told the intermediate symbol",
+    "lora": [
+     0.47,
+     0.51,
+     0.516
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     0.982,
+     0.974,
+     0.968
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "arena C, pairs held out, Qwen3-8B",
+    "scratchpad": [
+     0.998,
+     1.0,
+     1.0
+    ],
+    "series": "arena C, Qwen3-8B, pairs held out",
+    "source": "b44.json ho (n = 800): naming head, equalised LoRA, scratchpad LoRA"
+   },
+   {
+    "difference_vs_best_finetune": null,
+    "group": "answer-only fine-tune fails; diamond: told the intermediate symbol",
+    "lora": [
+     0.48,
+     0.493,
+     0.485
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     0.969,
+     0.985,
+     0.979
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "arena A (three steps), Phi-2",
+    "scratchpad": null,
+    "series": "arena A, Phi-2",
+    "source": "b31.json arms 'Phi-2|A|naming head + VSA (perm, named)' and '|equalised LoRA'"
+   },
+   {
+    "difference_vs_best_finetune": -0.2470000000000001,
+    "group": "the fine-tune learns the task: the memory adds little or trails",
+    "lora": [
+     0.998,
+     0.997,
+     0.999
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     0.745,
+     0.746,
+     0.762
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "arena A (three steps), Qwen3-8B",
+    "scratchpad": null,
+    "series": "arena A, Qwen3-8B",
+    "source": "b31.json arms 'Qwen3-8B|A|naming head + VSA (perm, named)' and '|equalised LoRA'"
+   },
+   {
+    "difference_vs_best_finetune": 0.002666666666666706,
+    "group": "the fine-tune learns the task: the memory adds little or trails",
+    "lora": [
+     0.99,
+     0.998,
+     0.992
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     0.996,
+     0.996,
+     0.996
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "arena B (one step), Phi-2",
+    "scratchpad": null,
+    "series": "arena B, Phi-2",
+    "source": "b31.json arms 'Phi-2|B|naming head + VSA (perm, named)' and '|equalised LoRA'"
+   },
+   {
+    "difference_vs_best_finetune": -0.20266666666666677,
+    "group": "the fine-tune learns the task: the memory adds little or trails",
+    "lora": [
+     0.996,
+     1.0,
+     1.0
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     0.794,
+     0.81,
+     0.784
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "arena B (one step), Qwen3-8B",
+    "scratchpad": null,
+    "series": "arena B, Qwen3-8B",
+    "source": "b31.json arms 'Qwen3-8B|B|naming head + VSA (perm, named)' and '|equalised LoRA'"
+   },
+   {
+    "difference_vs_best_finetune": 0.0006666666666665932,
+    "group": "the fine-tune learns the task: the memory adds little or trails",
+    "lora": [
+     0.998,
+     1.0,
+     1.0
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": 0.792
+    },
+    "plain_label": "bAbI 1: where is a person?",
+    "scratchpad": null,
+    "series": "bAbI task 1 (one hop)",
+    "source": "appendix.tex: 'Handover & 1.0000 (1.0000, 1.0000, 1.0000)'; appendix.tex: '0.9993 (0.9980, 1.0000, 1.0000)'"
+   },
+   {
+    "difference_vs_best_finetune": 0.035666666666666735,
+    "group": "the fine-tune learns the task: the memory adds little or trails",
+    "lora": [
+     0.968,
+     0.965,
+     0.96
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "memory_first_open_marker": null,
+    "not_drawn": {
+     "prompt": 0.386
+    },
+    "plain_label": "bAbI 2: where is a carried object?",
+    "scratchpad": null,
+    "series": "bAbI task 2 (two hops)",
+    "source": "b33.json fresh (1,000 questions no part of the paper had scored): memory, ft_best"
+   },
+   {
+    "difference_vs_best_finetune": 0.0,
+    "group": "the fine-tune learns the task: the memory adds little or trails",
+    "lora": [
+     1.0
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "memory_first_open_marker": [
+     0.691
+    ],
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "bAbI 4: relations with a direction",
+    "scratchpad": null,
+    "series": "bAbI task 4",
+    "source": "appendix.tex: 'Exact codes reached $0.691$ and the fine-tune reached $1.000$'; memory now b28.json naming head, permuted binding (memory_first = commutative)"
+   },
+   {
+    "difference_vs_best_finetune": 0.009000000000000008,
+    "group": "the fine-tune learns the task: the memory adds little or trails",
+    "lora": [
+     0.991
+    ],
+    "lora_first_open_marker": null,
+    "memory": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "memory_first_open_marker": [
+     0.836
+    ],
+    "not_drawn": {
+     "prompt": null
+    },
+    "plain_label": "bAbI 15: deduction from a rule",
+    "scratchpad": null,
+    "series": "bAbI task 15",
+    "source": "appendix.tex: 'reached only $0.836$'; appendix.tex: 'reached $0.991$'; memory now b28.json naming head, permuted binding (memory_first = commutative)"
+   }
+  ]
+ },
+ "fig6_ecc": {
+  "a": [
+   {
+    "cells_per_pair": [
+     76.0,
+     76.0,
+     76.0,
+     91.0,
+     128.0,
+     431.0,
+     1722.0
+    ],
+    "censored_drawn_at": 5800.0,
+    "conds": [
+     "k1",
+     "k2",
+     "k4",
+     "e05",
+     "k8",
+     "k16",
+     "k32"
+    ],
+    "eps": [
+     0.0,
+     0.0001,
+     0.0208,
+     0.05,
+     0.1226,
+     0.276,
+     0.3744
+    ],
+    "series": "VSA store",
+    "source": "figdata/b38.json iid V-last"
+   },
+   {
+    "cells_per_pair": [
+     431.0,
+     431.0,
+     512.0,
+     724.0,
+     1448.0,
+     5800.0,
+     5800.0
+    ],
+    "censored_drawn_at": 5800.0,
+    "conds": [
+     "k1",
+     "k2",
+     "k4",
+     "e05",
+     "k8",
+     "k16",
+     "k32"
+    ],
+    "eps": [
+     0.0,
+     0.0001,
+     0.0208,
+     0.05,
+     0.1226,
+     0.276,
+     0.3744
+    ],
+    "series": "VSA store, codebook on the cells",
+    "source": "figdata/b38.json iid V-cb"
+   },
+   {
+    "cells_per_pair": [
+     23.0,
+     23.0,
+     27.0,
+     38.0,
+     54.0,
+     215.0,
+     724.0
+    ],
+    "censored_drawn_at": 5800.0,
+    "conds": [
+     "k1",
+     "k2",
+     "k4",
+     "e05",
+     "k8",
+     "k16",
+     "k32"
+    ],
+    "eps": [
+     0.0,
+     0.0001,
+     0.0208,
+     0.05,
+     0.1226,
+     0.276,
+     0.3744
+    ],
+    "series": "table with LDPC code",
+    "source": "figdata/b38.json iid E-LDPC"
+   },
+   {
+    "cells_per_pair": [
+     19.0,
+     19.0,
+     27.0,
+     38.0,
+     108.0,
+     431.0,
+     1722.0
+    ],
+    "censored_drawn_at": 5800.0,
+    "conds": [
+     "k1",
+     "k2",
+     "k4",
+     "e05",
+     "k8",
+     "k16",
+     "k32"
+    ],
+    "eps": [
+     0.0,
+     0.0001,
+     0.0208,
+     0.05,
+     0.1226,
+     0.276,
+     0.3744
+    ],
+    "series": "table with BCH code",
+    "source": "figdata/b38.json iid E-BCH"
+   },
+   {
+    "cells_per_pair": [
+     32.0,
+     32.0,
+     38.0,
+     54.0,
+     91.0,
+     304.0,
+     1024.0
+    ],
+    "censored_drawn_at": 5800.0,
+    "conds": [
+     "k1",
+     "k2",
+     "k4",
+     "e05",
+     "k8",
+     "k16",
+     "k32"
+    ],
+    "eps": [
+     0.0,
+     0.0001,
+     0.0208,
+     0.05,
+     0.1226,
+     0.276,
+     0.3744
+    ],
+    "series": "random-code table, no superposition",
+    "source": "figdata/b38.json iid T-vhdd"
+   },
+   {
+    "cells_per_pair": [
+     19.0,
+     23.0,
+     91.0,
+     128.0,
+     256.0,
+     1024.0,
+     3444.0
+    ],
+    "censored_drawn_at": 5800.0,
+    "conds": [
+     "k1",
+     "k2",
+     "k4",
+     "e05",
+     "k8",
+     "k16",
+     "k32"
+    ],
+    "eps": [
+     0.0,
+     0.0001,
+     0.0208,
+     0.05,
+     0.1226,
+     0.276,
+     0.3744
+    ],
+    "series": "table with repeated bits",
+    "source": "figdata/b38.json iid T-rep"
+   },
+   {
+    "cells_per_pair": [
+     13.5,
+     13.6,
+     15.9,
+     19.0,
+     29.3,
+     90.3,
+     294.6
+    ],
+    "series": "capacity bound",
+    "source": "figdata/b38.json iid capacity"
+   }
+  ],
+  "b": [
+   {
+    "cells_per_pair": [
+     76.0,
+     91.0,
+     152.0,
+     512.0
+    ],
+    "damaged_share_pct": [
+     4.2,
+     10,
+     24.5,
+     55.2
+    ],
+    "series": "VSA store, no interleaver",
+    "source": "figdata/b38.json damage lines-nat"
+   },
+   {
+    "cells_per_pair": [
+     128.0,
+     304.0,
+     3444.0,
+     5800.0
+    ],
+    "damaged_share_pct": [
+     4.2,
+     10,
+     24.5,
+     55.2
+    ],
+    "series": "table with LDPC code, no interleaver",
+    "source": "figdata/b58_ldpc.json lines-nat E-LDPC* (B58 re-score)"
+   },
+   {
+    "cells_per_pair": [
+     181.0,
+     431.0,
+     2896.0,
+     5800.0
+    ],
+    "damaged_share_pct": [
+     4.2,
+     10,
+     24.5,
+     55.2
+    ],
+    "series": "table with BCH code, no interleaver",
+    "source": "figdata/b38.json damage lines-nat"
+   },
+   {
+    "cells_per_pair": [
+     512.0,
+     861.0,
+     1218.0,
+     2896.0
+    ],
+    "damaged_share_pct": [
+     4.2,
+     10,
+     24.5,
+     55.2
+    ],
+    "series": "random-code table, no superposition, no interleaver",
+    "source": "figdata/b38.json damage lines-nat"
+   },
+   {
+    "cells_per_pair": [
+     27.0,
+     45.0,
+     76.0,
+     215.0
+    ],
+    "damaged_share_pct": [
+     4.2,
+     10,
+     24.5,
+     55.2
+    ],
+    "series": "table with LDPC code, interleaved",
+    "source": "figdata/b38.json damage lines-il"
+   }
+  ],
+  "c": [
+   {
+    "cells_per_pair": 128,
+    "eps_pct": [
+     12.26,
+     16,
+     20,
+     24,
+     27.6,
+     32,
+     37.44
+    ],
+    "exact_pct": [
+     99.79,
+     98.7,
+     94.83,
+     84.02,
+     65.75,
+     37.54,
+     12.29
+    ],
+    "series": "VSA store",
+    "source": "figdata/b38.json graceful"
+   },
+   {
+    "cells_per_pair": 128,
+    "eps_pct": [
+     12.26,
+     16,
+     20,
+     24,
+     27.6,
+     32,
+     37.44
+    ],
+    "exact_pct": [
+     100.0,
+     100.0,
+     99.41,
+     98.35,
+     12.63,
+     3.77,
+     0.31
+    ],
+    "series": "table with LDPC code",
+    "source": "figdata/b38.json graceful"
+   },
+   {
+    "cells_per_pair": 128,
+    "eps_pct": [
+     12.26,
+     16,
+     20,
+     24,
+     27.6,
+     32,
+     37.44
+    ],
+    "exact_pct": [
+     100.0,
+     91.88,
+     21.63,
+     9.3,
+     3.48,
+     1.01,
+     0.25
+    ],
+    "series": "table with BCH code",
+    "source": "figdata/b38.json graceful"
+   },
+   {
+    "cells_per_pair": 128,
+    "eps_pct": [
+     12.26,
+     16,
+     20,
+     24,
+     27.6,
+     32,
+     37.44
+    ],
+    "exact_pct": [
+     100.0,
+     99.96,
+     98.91,
+     91.37,
+     70.37,
+     29.29,
+     3.66
+    ],
+    "series": "random-code table, no superposition",
+    "source": "figdata/b38.json graceful"
+   }
+  ]
+ },
+ "fig6_oplogs": {
+  "a": [
+   {
+    "group": "where is it now",
+    "note": "GPT-6.1 Sol was not run on the 'where is it now' questions (no such arm in apps/real/README.md)",
+    "series": "GPT-6.1 Sol reading the whole log: not run"
+   },
+   {
+    "colour": "#A08C78",
+    "group": "where is it now",
+    "n": 414,
+    "series": "system of record",
+    "source": "vsassm/apps/real/README.md line 52, table row 'All', column 2 (System of record alone)",
+    "value": 0.396
+   },
+   {
+    "colour": "#56B4E9",
+    "group": "where is it now",
+    "n": 414,
+    "series": "Qwen3-32B reading the whole log",
+    "source": "vsassm/apps/real/README.md line 52, table row 'All', column 3 (Qwen3-32B, budget-forced score; strict 0.531 in brackets)",
+    "value": 0.543
+   },
+   {
+    "colour": "#D55E00",
+    "group": "where is it now",
+    "n": 414,
+    "series": "ours: 1.7B reader + memory",
+    "source": "vsassm/apps/real/README.md line 52, table row 'All', column 1 (Readable Memory)",
+    "value": 0.959
+   },
+   {
+    "colour": "#A08C78",
+    "group": "impact",
+    "n": 230,
+    "series": "system of record",
+    "source": "vsassm/results/nsr1_verdict.txt line 16, table row '4  system of record + graph query', column 1 (all)",
+    "value": 0.313
+   },
+   {
+    "colour": "#56B4E9",
+    "group": "impact",
+    "n": 230,
+    "series": "Qwen3-32B reading the whole log",
+    "source": "vsassm/results/nsr1_verdict.txt line 12, table row '3  Qwen3-32B thinking over the whole log (forced)', column 1 (all; budget-forced)",
+    "value": 0.278
+   },
+   {
+    "colour": "#009E73",
+    "group": "impact",
+    "n": 230,
+    "series": "GPT-6.1 Sol reading the whole log",
+    "source": "vsassm/results/nsr1_verdict.txt line 149, table row 'gpt-6.1-sol over the log, OpenAI direct', column 1 (all; OpenAI API, registered = repaired = normalised parse)",
+    "value": 0.952
+   },
+   {
+    "colour": "#D55E00",
+    "group": "impact",
+    "n": 230,
+    "series": "ours: 1.7B reader + memory",
+    "source": "vsassm/results/nsr1_verdict.txt line 9, table row '1  RM state + VSA rule memory (rules from 1 worked trace)', column 1 (all)",
+    "value": 0.93
+   },
+   {
+    "colour": "#A08C78",
+    "group": "past window",
+    "n": 460,
+    "series": "system of record",
+    "source": "vsassm/results/nsr3_verdict.txt line 12, table row 'system-of-record history', column 1 (all)",
+    "value": 0.217
+   },
+   {
+    "colour": "#56B4E9",
+    "group": "past window",
+    "n": 460,
+    "series": "Qwen3-32B reading the whole log",
+    "source": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 1 (all; budget-forced, registered parse)",
+    "value": 0.202
+   },
+   {
+    "colour": "#009E73",
+    "group": "past window",
+    "n": 460,
+    "series": "GPT-6.1 Sol reading the whole log",
+    "source": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 1 (all; OpenAI API, registered = repaired = normalised parse)",
+    "value": 0.904
+   },
+   {
+    "colour": "#D55E00",
+    "group": "past window",
+    "n": 460,
+    "series": "ours: 1.7B reader + memory",
+    "source": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 1 (all; first results table)",
+    "value": 0.874
+   }
+  ],
+  "b": [
+   {
+    "both_right": 205,
+    "both_wrong": 2,
+    "either_right": 0.991,
+    "either_right_recomputed": 0.991304347826087,
+    "n": 230,
+    "only_gpt": 14,
+    "only_ours": 9,
+    "route": "OpenAI API",
+    "series": "impact",
+    "source": "vsassm/results/nsr1_verdict.txt line 150 (addendum 2026-11-12, OpenAI direct): 'Both right 205, only RM 9, only frontier 14, both wrong 2; either right 0.991'"
+   },
+   {
+    "both_right": 369,
+    "both_wrong": 11,
+    "either_right": 0.976,
+    "either_right_recomputed": 0.9760869565217392,
+    "n": 460,
+    "only_gpt": 47,
+    "only_ours": 33,
+    "route": "OpenAI API",
+    "series": "past window",
+    "source": "vsassm/results/nsr3_verdict.txt line 119 (addendum 2026-11-12, OpenAI direct): 'both right 369, only history 33, only frontier 47, both wrong 11; either right 0.976'"
+   },
+   {
+    "colour": "#E3E3E3",
+    "series": "cell colour: both_right"
+   },
+   {
+    "colour": "#edbb94",
+    "series": "cell colour: only_ours"
+   },
+   {
+    "colour": "#94d6c4",
+    "series": "cell colour: only_gpt"
+   },
+   {
+    "colour": "#4D4D4D",
+    "series": "cell colour: both_wrong"
+   }
+  ],
+  "c": [
+   {
+    "colour": "#b3ddf5",
+    "correct_implied": {
+     "biobank": 5,
+     "home": 14,
+     "ops": 65,
+     "warehouse": 9
+    },
+    "n": {
+     "biobank": 60,
+     "home": 160,
+     "ops": 160,
+     "warehouse": 80
+    },
+    "series": "Qwen3-32B reading the whole log",
+    "site_labels": {
+     "biobank": "biobank",
+     "home": "home robot",
+     "ops": "cloud incident",
+     "warehouse": "warehouse"
+    },
+    "source": {
+     "biobank": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 3 (biobank; Qwen3-32B thinking over the log, budget-forced, registered parse; first results table)",
+     "home": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 4 (home; Qwen3-32B thinking over the log, budget-forced, registered parse; first results table)",
+     "ops": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 5 (ops; Qwen3-32B thinking over the log, budget-forced, registered parse; first results table)",
+     "warehouse": "vsassm/results/nsr3_verdict.txt line 9, table row 'Qwen3-32B thinking over the log (forced; registered)', column 2 (warehouse; Qwen3-32B thinking over the log, budget-forced, registered parse; first results table)"
+    },
+    "values": {
+     "biobank": 0.083,
+     "home": 0.088,
+     "ops": 0.406,
+     "warehouse": 0.113
+    }
+   },
+   {
+    "colour": "#009E73",
+    "correct_implied": {
+     "biobank": 48,
+     "home": 140,
+     "ops": 154,
+     "warehouse": 74
+    },
+    "n": {
+     "biobank": 60,
+     "home": 160,
+     "ops": 160,
+     "warehouse": 80
+    },
+    "series": "GPT-6.1 Sol reading the whole log",
+    "site_labels": {
+     "biobank": "biobank",
+     "home": "home robot",
+     "ops": "cloud incident",
+     "warehouse": "warehouse"
+    },
+    "source": {
+     "biobank": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 3 (biobank; OpenAI API)",
+     "home": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 4 (home; OpenAI API)",
+     "ops": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 5 (ops; OpenAI API)",
+     "warehouse": "vsassm/results/nsr3_verdict.txt line 118, table row 'gpt-6.1-sol over the log, OpenAI direct', column 2 (warehouse; OpenAI API)"
+    },
+    "values": {
+     "biobank": 0.8,
+     "home": 0.875,
+     "ops": 0.963,
+     "warehouse": 0.925
+    }
+   },
+   {
+    "colour": "#D55E00",
+    "correct_implied": {
+     "biobank": 56,
+     "home": 134,
+     "ops": 154,
+     "warehouse": 58
+    },
+    "n": {
+     "biobank": 60,
+     "home": 160,
+     "ops": 160,
+     "warehouse": 80
+    },
+    "series": "ours: 1.7B reader + memory",
+    "site_labels": {
+     "biobank": "biobank",
+     "home": "home robot",
+     "ops": "cloud incident",
+     "warehouse": "warehouse"
+    },
+    "source": {
+     "biobank": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 3 (biobank; history engine over the read state; first results table)",
+     "home": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 4 (home; history engine over the read state; first results table)",
+     "ops": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 5 (ops; history engine over the read state; first results table)",
+     "warehouse": "vsassm/results/nsr3_verdict.txt line 8, table row 'history engine over the read state', column 2 (warehouse; history engine over the read state; first results table)"
+    },
+    "values": {
+     "biobank": 0.933,
+     "home": 0.838,
+     "ops": 0.963,
+     "warehouse": 0.725
+    }
+   }
+  ],
+  "d": [
+   {
+    "days": [
+     1,
+     4,
+     8
+    ],
+    "micro_f1": [
+     0.965,
+     0.959,
+     0.942
+    ],
+    "n": [
+     230,
+     161,
+     69
+    ],
+    "series": "ours",
+    "set_exact": [
+     0.93,
+     0.801,
+     0.71
+    ],
+    "source": "results/nsr5_verdict.txt: '| pipeline (reader + replay)          | 0.930 (0.965) | 0.801 (0.959) | 0.710 (0.942) |'"
+   },
+   {
+    "days": [
+     1,
+     4,
+     8
+    ],
+    "micro_f1": [
+     0.983,
+     0.986,
+     0.983
+    ],
+    "n": [
+     230,
+     161,
+     69
+    ],
+    "series": "GPT-6.1 Sol, OpenAI API",
+    "set_exact": [
+     0.952,
+     0.925,
+     0.855
+    ],
+    "source": "results/nsr5_verdict.txt line 136: '| gpt via OpenAI direct (*)     | 0.952 (0.983) | 0.925 (0.986) | 0.855 (0.983) |' (amendment 8; registered = repaired = normalised on this route)"
+   },
+   {
+    "days": [
+     1,
+     4,
+     8
+    ],
+    "micro_f1": [
+     0.963,
+     0.897,
+     0.848
+    ],
+    "n": [
+     230,
+     161,
+     69
+    ],
+    "series": "GPT-6.1 Sol, reseller gateway, registered parse (not drawn)",
+    "set_exact": [
+     0.922,
+     0.677,
+     0.739
+    ],
+    "source": "results/nsr5_verdict.txt: '| gpt-6.1-sol xhigh, registered       | 0.922 (0.963) | 0.677 (0.897) | 0.739 (0.848) |'"
+   },
+   {
+    "days": [
+     1,
+     4,
+     8
+    ],
+    "micro_f1": [
+     0.978,
+     0.932,
+     0.933
+    ],
+    "n": [
+     230,
+     161,
+     69
+    ],
+    "series": "GPT-6.1 Sol, reseller gateway, repaired parse (not drawn)",
+    "set_exact": [
+     0.943,
+     0.702,
+     0.783
+    ],
+    "source": "results/nsr5_verdict.txt: '|   repaired                          | 0.943 (0.978) | 0.702 (0.932) | 0.783 (0.933) |'"
+   },
+   {
+    "days": [
+     1,
+     4,
+     8
+    ],
+    "micro_f1": [
+     0.98,
+     0.959,
+     0.894
+    ],
+    "n": [
+     230,
+     161,
+     69
+    ],
+    "series": "Claude Opus 5.5, item names normalized",
+    "set_exact": [
+     0.935,
+     0.845,
+     0.754
+    ],
+    "source": "results/nsr5_verdict.txt: '|   normalised (= repaired+normalised)| 0.935 (0.980) | 0.845 (0.959) | 0.754 (0.894) |'"
+   },
+   {
+    "days": [
+     1,
+     4,
+     8
+    ],
+    "micro_f1": [
+     0.93,
+     0.928,
+     0.865
+    ],
+    "n": [
+     230,
+     161,
+     69
+    ],
+    "series": "Claude Opus 5.5, registered parse (not drawn)",
+    "set_exact": [
+     0.852,
+     0.714,
+     0.536
+    ],
+    "source": "results/nsr5_verdict.txt: '| Opus 5.5 medium, registered         | 0.852 (0.930) | 0.714 (0.928) | 0.536 (0.865) |'"
+   }
+  ]
+ },
+ "fig7_reasoning": {
+  "a": [
+   {
+    "hops": [
+     [
+      "S-26-01006",
+      "CB-020",
+      140,
+      "struct",
+      "lims"
+     ],
+     [
+      "CB-020",
+      "R-07",
+      195,
+      "struct",
+      "lims"
+     ],
+     [
+      "R-07",
+      "FRZ-02",
+      2,
+      "struct",
+      "lims"
+     ]
+    ],
+    "series": "S-26-01006",
+    "source": "vsassm/nsr/out/held/nsr1_nsr1_arm1.jsonl (biobank-402-2, FRZ-02); log lines from vsassm/nsr/data/biobank_nsr1.jsonl; gold and the system-of-record answer from nsr1_score.gold on the truth and sor states"
+   },
+   {
+    "hops": [
+     [
+      "S-26-03464",
+      "CB-020",
+      194,
+      "human",
+      "bench"
+     ],
+     [
+      "CB-020",
+      "R-07",
+      195,
+      "struct",
+      "lims"
+     ],
+     [
+      "R-07",
+      "FRZ-02",
+      2,
+      "struct",
+      "lims"
+     ]
+    ],
+    "series": "S-26-03464",
+    "source": "vsassm/nsr/out/held/nsr1_nsr1_arm1.jsonl (biobank-402-2, FRZ-02); log lines from vsassm/nsr/data/biobank_nsr1.jsonl; gold and the system-of-record answer from nsr1_score.gold on the truth and sor states"
+   },
+   {
+    "answer": [
+     "S-26-01006",
+     "S-26-01099",
+     "S-26-02582",
+     "S-26-02594",
+     "S-26-03806",
+     "S-26-03893"
+    ],
+    "extra": [
+     "S-26-01099",
+     "S-26-02582",
+     "S-26-02594",
+     "S-26-03806",
+     "S-26-03893"
+    ],
+    "missing": [
+     "S-26-03464"
+    ],
+    "series": "system of record",
+    "source": "vsassm/nsr/out/held/nsr1_nsr1_arm1.jsonl (biobank-402-2, FRZ-02); log lines from vsassm/nsr/data/biobank_nsr1.jsonl; gold and the system-of-record answer from nsr1_score.gold on the truth and sor states"
+   }
+  ],
+  "b": [
+   {
+    "read": 0.717,
+    "series": "CLUTRR",
+    "source": [
+     "results.tex: 'This system reached an accuracy of $71.7\\%$'",
+     "results.tex / appendix.tex: memory given the gold relations answers 97.5% of the 1,146 test stories"
+    ],
+    "true": 0.975
+   },
+   {
+    "read": 0.93,
+    "series": "impact questions",
+    "source": [
+     "results/nsr1_verdict.txt: '| 1  RM state + VSA rule memory (rules from 1 worked trace)  | 0.930 | 0.875     | 0.833   | 0.975 | 0.950 |'",
+     "results/nsr1_verdict.txt: '| sanity: truth + graph query                                | 1.000 |'"
+    ],
+    "true": 1.0
+   },
+   {
+    "read": 0.874,
+    "series": "past-window questions",
+    "source": [
+     "results/nsr3_verdict.txt: history engine 0.874",
+     "results/nsr3_verdict.txt: truth history 1.000"
+    ],
+    "true": 1.0
+   }
+  ],
+  "c": [
+   {
+    "colour": "#56B4E9",
+    "series": "Qwen3-32B over the log",
+    "value": 0.278
+   },
+   {
+    "colour": "#56B4E9",
+    "series": "Qwen3-32B over the read state",
+    "value": 0.826
+   },
+   {
+    "colour": "#D55E00",
+    "series": "ours",
+    "value": 0.93
+   }
+  ],
+  "d": [
+   {
+    "accuracy": [
+     0.9565217391304348,
+     0.9411764705882353,
+     0.9565217391304348,
+     0.9655172413793104,
+     0.9565217391304348,
+     0.9625,
+     0.9565217391304348,
+     0.9615384615384616,
+     0.9652173913043478,
+     0.968503937007874,
+     0.9492753623188406,
+     0.9533333333333334,
+     0.9565217391304348,
+     0.9593023255813954,
+     0.9510869565217391,
+     0.9336734693877551,
+     0.9227053140096618,
+     0.9220183486238532,
+     0.9173913043478261
+    ],
+    "auroc": 0.7047892242454478,
+    "coverage": [
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ],
+    "n": 230,
+    "series": "selective accuracy, min reliability",
+    "source": "computed from vsassm/nsr/out/nsr2_nsr2_records.jsonl (conf.min_rel) with nsr2_score.selective and nsr1_score.gold; endpoints asserted equal to nsr/out/nsr2_score_nsr2.json (acc_det, min_rel sel@70, auroc)",
+    "wrong": 19
+   }
+  ]
+ },
+ "fig8_hardware": {
+  "a": [
+   {
+    "hist": {
+     "1": 1009,
+     "10": 3475,
+     "11": 5137,
+     "12": 6725,
+     "13": 8482,
+     "14": 8986,
+     "15": 9426,
+     "16": 9711,
+     "17": 8781,
+     "18": 7939,
+     "19": 6558,
+     "2": 1,
+     "20": 5132,
+     "21": 3951,
+     "22": 2927,
+     "23": 1915,
+     "24": 1230,
+     "25": 798,
+     "26": 450,
+     "27": 287,
+     "28": 164,
+     "29": 75,
+     "3": 17,
+     "30": 44,
+     "31": 18,
+     "32": 10,
+     "33": 5,
+     "34": 2,
+     "35": 3,
+     "38": 1,
+     "4": 653,
+     "5": 504,
+     "6": 335,
+     "7": 653,
+     "8": 1802,
+     "9": 2351
+    },
+    "mean": 15.490964974838535,
+    "n_samples": 5400,
+    "n_vectors": 99557,
+    "series": "pairs per vector",
+    "source": "figdata/ruler_loads.json (recomputed from the B21 pairs)"
+   }
+  ],
+  "b": [
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "float",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "Q b=8",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "Q b=6",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "Q b=4",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "Q b=3",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "Q b=2",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 0.9731993299832495,
+    "series": "Q b=1",
+    "source": "b22_robust.json"
+   },
+   {
+    "frac": 0.9889028475711893,
+    "keys": 4776,
+    "series": "Q b=1 | 8 per vector",
+    "source": "b22_robust json"
+   },
+   {
+    "frac": 0.9535175879396985,
+    "keys": 4776,
+    "series": "Q b=1 | 4 per vector",
+    "source": "b22_robust json"
+   },
+   {
+    "frac": 0.9970686767169179,
+    "keys": 4776,
+    "series": "Q b=1 | d=16384",
+    "source": "b22_robust json"
+   },
+   {
+    "frac": 1.0,
+    "series": "1 bit, bipolar store (amendment 2, post hoc)",
+    "source": "b22_robust_bip.json"
+   }
+  ],
+  "c": [
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "float",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "N r=0.25",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "N r=0.5",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "N r=1",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "N r=2",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": true,
+    "frac": 0.9914154103852596,
+    "series": "N r=3",
+    "source": "b22_robust_ext.json"
+   },
+   {
+    "added_after_scoring": true,
+    "frac": 0.7384840871021775,
+    "series": "N r=4",
+    "source": "b22_robust_ext.json"
+   },
+   {
+    "added_after_scoring": true,
+    "frac": 0.09757118927973199,
+    "series": "N r=6",
+    "source": "b22_robust_ext.json"
+   },
+   {
+    "added_after_scoring": true,
+    "frac": 0.052345058626465664,
+    "series": "N r=8",
+    "source": "b22_robust_ext.json"
+   },
+   {
+    "frac": 0.9997906197654941,
+    "keys": 4776,
+    "series": "N r=3 | 8 per vector",
+    "source": "b22_robust json"
+   },
+   {
+    "frac": 1.0,
+    "keys": 4776,
+    "series": "N r=3 | 4 per vector",
+    "source": "b22_robust json"
+   },
+   {
+    "frac": 1.0,
+    "keys": 4776,
+    "series": "N r=3 | d=16384",
+    "source": "b22_robust json"
+   }
+  ],
+  "d": [
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "float",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "F p=0.05",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "F p=0.1",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "F p=0.2",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": false,
+    "frac": 1.0,
+    "series": "F p=0.3",
+    "source": "b22_robust.json"
+   },
+   {
+    "added_after_scoring": true,
+    "frac": 1.0,
+    "series": "F p=0.4",
+    "source": "b22_robust_ext.json"
+   },
+   {
+    "added_after_scoring": true,
+    "frac": 0.4889028475711893,
+    "series": "F p=0.5",
+    "source": "b22_robust_ext.json"
+   },
+   {
+    "added_after_scoring": true,
+    "frac": 0.00020938023450586265,
+    "series": "F p=0.6",
+    "source": "b22_robust_ext.json"
+   },
+   {
+    "added_after_scoring": true,
+    "frac": 0.0,
+    "series": "F p=0.7",
+    "source": "b22_robust_ext.json"
+   },
+   {
+    "frac": 0.5025125628140703,
+    "keys": 4776,
+    "series": "F p=0.5 | 8 per vector",
+    "source": "b22_robust json"
+   },
+   {
+    "frac": 0.5131909547738693,
+    "keys": 4776,
+    "series": "F p=0.5 | 4 per vector",
+    "source": "b22_robust json"
+   },
+   {
+    "frac": 0.5121440536013401,
+    "keys": 4776,
+    "series": "F p=0.5 | d=16384",
+    "source": "b22_robust json"
+   }
+  ],
+  "e": [
+   {
+    "frac": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "series": "drift compensated, 16 pairs per vector",
+    "source": "figdata/b25_pcm.json (B25)",
+    "times": [
+     "60 s",
+     "1 h",
+     "1 d",
+     "30 d",
+     "1 y"
+    ]
+   },
+   {
+    "frac": [
+     0.9989530988274705,
+     0.9989530988274705,
+     0.9987437185929648,
+     0.998534338358459,
+     0.9989530988274705
+    ],
+    "series": "drift compensated, 64 pairs per vector",
+    "source": "figdata/b25_pcm.json (B25)",
+    "times": [
+     "60 s",
+     "1 h",
+     "1 d",
+     "30 d",
+     "1 y"
+    ]
+   },
+   {
+    "frac": [
+     1.0,
+     0.9953936348408711,
+     0.518425460636516,
+     0.0,
+     0.0
+    ],
+    "series": "no drift compensation",
+    "source": "figdata/b25_pcm.json (B25)",
+    "times": [
+     "60 s",
+     "1 h",
+     "1 d",
+     "30 d",
+     "1 y"
+    ]
+   }
+  ]
+ },
+ "figS1_sweeps": {
+  "a": [
+   {
+    "colour": "#000000",
+    "marker": "o",
+    "series": "exact codes (parser)",
+    "source": "v57_logs/v57.json cells[depth].parser",
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y_mean": [
+     0.9579999999999999,
+     0.934,
+     0.88
+    ],
+    "y_per_seed": [
+     [
+      0.954,
+      0.96,
+      0.96
+     ],
+     [
+      0.932,
+      0.932,
+      0.938
+     ],
+     [
+      0.884,
+      0.88,
+      0.876
+     ]
+    ]
+   },
+   {
+    "colour": "#D55E00",
+    "marker": "s",
+    "series": "naming head",
+    "source": "v57_logs/v57.json cells[depth].probe_argmax",
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y_mean": [
+     0.9579999999999999,
+     0.934,
+     0.88
+    ],
+    "y_per_seed": [
+     [
+      0.954,
+      0.96,
+      0.96
+     ],
+     [
+      0.932,
+      0.932,
+      0.938
+     ],
+     [
+      0.884,
+      0.88,
+      0.876
+     ]
+    ]
+   },
+   {
+    "colour": "#E69F00",
+    "marker": "v",
+    "series": "LoRA fine-tune",
+    "source": "v57_logs/v57.json cells[depth].lora_direct",
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y_mean": [
+     0.5073333333333333,
+     0.5006666666666667,
+     0.5153333333333333
+    ],
+    "y_per_seed": [
+     [
+      0.52,
+      0.522,
+      0.48
+     ],
+     [
+      0.488,
+      0.54,
+      0.474
+     ],
+     [
+      0.52,
+      0.52,
+      0.506
+     ]
+    ]
+   },
+   {
+    "colour": "#7F7F7F",
+    "marker": "^",
+    "series": "probe of the hidden states",
+    "source": "v57_logs/v57.json cells[depth].floor",
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y_mean": [
+     0.5406666666666667,
+     0.5153333333333333,
+     0.53
+    ],
+    "y_per_seed": [
+     [
+      0.54,
+      0.528,
+      0.554
+     ],
+     [
+      0.512,
+      0.53,
+      0.504
+     ],
+     [
+      0.528,
+      0.518,
+      0.544
+     ]
+    ]
+   }
+  ],
+  "b": [
+   {
+    "colour": "#56B4E9",
+    "marker": "o",
+    "series": "read continuously",
+    "source": "v21_logs/v21.json cells[].frozen_cont (hops 2, n_ctx 32, n_sym 256)",
+    "x_epochs": [
+     0,
+     1,
+     3,
+     10,
+     30
+    ],
+    "y_mean": [
+     0.48066666666666663,
+     0.658,
+     0.7533333333333333,
+     0.8373333333333334,
+     0.8733333333333334
+    ],
+    "y_per_seed": [
+     [
+      0.496,
+      0.458,
+      0.488
+     ],
+     [
+      0.666,
+      0.65,
+      0.658
+     ],
+     [
+      0.748,
+      0.766,
+      0.746
+     ],
+     [
+      0.828,
+      0.852,
+      0.832
+     ],
+     [
+      0.872,
+      0.868,
+      0.88
+     ]
+    ]
+   },
+   {
+    "colour": "#D55E00",
+    "marker": "s",
+    "series": "snapped to the nearest codebook row",
+    "source": "v21_logs/v21.json cells[].proj_argmax (hops 2, n_ctx 32, n_sym 256)",
+    "x_epochs": [
+     0,
+     1,
+     3,
+     10,
+     30
+    ],
+    "y_mean": [
+     0.47733333333333333,
+     0.9773333333333333,
+     0.98,
+     0.984,
+     0.9873333333333333
+    ],
+    "y_per_seed": [
+     [
+      0.488,
+      0.456,
+      0.488
+     ],
+     [
+      0.976,
+      0.974,
+      0.982
+     ],
+     [
+      0.98,
+      0.98,
+      0.98
+     ],
+     [
+      0.986,
+      0.98,
+      0.986
+     ],
+     [
+      0.988,
+      0.984,
+      0.99
+     ]
+    ]
+   },
+   {
+    "colour": "#000000",
+    "series": "exact codes (parser) (dashed line)",
+    "source": "v21_logs/v21.json parser",
+    "y_mean": 0.992,
+    "y_per_seed": [
+     0.992,
+     0.99,
+     0.994
+    ]
+   },
+   {
+    "colour": "#7F7F7F",
+    "series": "probe of the hidden states (dashed line)",
+    "source": "v21_logs/v21.json floor",
+    "y_mean": 0.5173333333333333,
+    "y_per_seed": [
+     0.486,
+     0.51,
+     0.556
+    ]
+   }
+  ],
+  "c": [
+   {
+    "colour": "#D55E00",
+    "exponent": 0.8895881892461329,
+    "exponent_ci95": [
+     0.8146165638560834,
+     0.9531037461245035
+    ],
+    "intercept_log": -1.8439676946216934,
+    "kstar": [
+     41.70257198410671,
+     73.3477610301134,
+     136.69922591797865,
+     264.6542495677405
+    ],
+    "marker": "o",
+    "series": "HRR",
+    "source": "v151_logs/v151.json capacity.HRR; 0.70 crossing interpolated in log k; least-squares fit of log k* on log d; bootstrap of the four points as constants.json capacity_criterion",
+    "x_dimension": [
+     512,
+     1024,
+     2048,
+     4096
+    ]
+   },
+   {
+    "colour": "#5A5A5A",
+    "exponent": 0.8335478082963578,
+    "exponent_ci95": [
+     0.8073570805324038,
+     0.8683886408223687
+    ],
+    "intercept_log": -1.4173297566113308,
+    "kstar": [
+     43.53489590148839,
+     79.47829449394412,
+     139.0872234583054,
+     247.87587174705578
+    ],
+    "marker": "s",
+    "series": "MAP",
+    "source": "v151_logs/v151.json capacity.MAP; 0.70 crossing interpolated in log k; least-squares fit of log k* on log d; bootstrap of the four points as constants.json capacity_criterion",
+    "x_dimension": [
+     512,
+     1024,
+     2048,
+     4096
+    ]
+   },
+   {
+    "colour": "#8A8A8A",
+    "exponent": 0.8606365808163535,
+    "exponent_ci95": [
+     0.8209286722217483,
+     0.8908962894636849
+    ],
+    "intercept_log": -1.9852005546652784,
+    "kstar": [
+     29.307101019261253,
+     54.34497176580987,
+     96.0027165122632,
+     177.08817558336247
+    ],
+    "marker": "^",
+    "series": "BSC",
+    "source": "v151_logs/v151.json capacity.BSC; 0.70 crossing interpolated in log k; least-squares fit of log k* on log d; bootstrap of the four points as constants.json capacity_criterion",
+    "x_dimension": [
+     512,
+     1024,
+     2048,
+     4096
+    ]
+   },
+   {
+    "colour": "#B0B0B0",
+    "exponent": 0.8398988932560306,
+    "exponent_ci95": [
+     0.8099843109104551,
+     0.8704914223525864
+    ],
+    "intercept_log": -0.8720976566112701,
+    "kstar": [
+     79.6698033869586,
+     139.67649196135895,
+     249.9223048870798,
+     456.92934106999354
+    ],
+    "marker": "D",
+    "series": "FHRR",
+    "source": "v151_logs/v151.json capacity.FHRR; 0.70 crossing interpolated in log k; least-squares fit of log k* on log d; bootstrap of the four points as constants.json capacity_criterion",
+    "x_dimension": [
+     512,
+     1024,
+     2048,
+     4096
+    ]
+   }
+  ]
+ },
+ "figS2_poolsweep": {
+  "a": [
+   {
+    "colour": "#0072B2",
+    "marker": "^",
+    "n": [
+     120,
+     120,
+     120,
+     120,
+     120
+    ],
+    "prompt_tokens": [
+     253.54166666666666,
+     1049.8833333333334,
+     1972.6,
+     7482.016666666666,
+     11612.1
+    ],
+    "series": "prompting (Qwen3-8B)",
+    "source": "v106_logs/v106.json prompt[].acc, prompt[].tokens, prompt[].n (single runs, no dots)",
+    "x_facts_drawn": [
+     8,
+     64,
+     128,
+     512,
+     800
+    ],
+    "x_facts_requested": [
+     8,
+     64,
+     128,
+     512,
+     1024
+    ],
+    "y": [
+     0.95,
+     0.9083333333333333,
+     0.85,
+     0.5833333333333334,
+     0.5416666666666666
+    ]
+   },
+   {
+    "codebook_seeds": [
+     0,
+     1,
+     2
+    ],
+    "colour": "#D55E00",
+    "facts_per_store": [
+     8.0,
+     64.0,
+     64.0,
+     64.0,
+     50.0
+    ],
+    "marker": "o",
+    "n_eval": 120,
+    "series": "HRR store, d = 2048, at most 64 facts per store",
+    "source": "v106_logs/v106.json store[].acc, store[].acc_seeds, store[].shards",
+    "stores": [
+     1,
+     1,
+     2,
+     8,
+     16
+    ],
+    "x_facts_drawn": [
+     8,
+     64,
+     128,
+     512,
+     800
+    ],
+    "x_facts_requested": [
+     8,
+     64,
+     128,
+     512,
+     1024
+    ],
+    "y_mean": [
+     0.9361111111111112,
+     0.9333333333333332,
+     0.9194444444444446,
+     0.9194444444444444,
+     0.9083333333333333
+    ],
+    "y_per_seed": [
+     [
+      0.9333333333333333,
+      0.9416666666666667,
+      0.9333333333333333
+     ],
+     [
+      0.9333333333333333,
+      0.9333333333333333,
+      0.9333333333333333
+     ],
+     [
+      0.925,
+      0.9083333333333333,
+      0.925
+     ],
+     [
+      0.9166666666666666,
+      0.925,
+      0.9166666666666666
+     ],
+     [
+      0.925,
+      0.9,
+      0.9
+     ]
+    ]
+   },
+   {
+    "series": "not drawn: LoRA arm",
+    "source": "v106_logs/v106.json lora[].acc (not plotted, as briefed)",
+    "y": [
+     0.9166666666666666,
+     0.825,
+     0.6916666666666667,
+     0.55,
+     0.425
+    ]
+   }
+  ]
+ },
+ "figS3_per_task": {
+  "a": [
+   {
+    "n": {
+     "qa1": 25,
+     "qa2": 25,
+     "qa3": 25,
+     "qa4": 25,
+     "qa5": 25
+    },
+    "series": "ours, 1M tokens",
+    "source": {
+     "qa1": "vsassm/results/b18_verdict.txt line 17, per-task table row 'qa1', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')",
+     "qa2": "vsassm/results/b18_verdict.txt line 18, per-task table row 'qa2', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')",
+     "qa3": "vsassm/results/b18_verdict.txt line 19, per-task table row 'qa3', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')",
+     "qa4": "vsassm/results/b18_verdict.txt line 20, per-task table row 'qa4', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')",
+     "qa5": "vsassm/results/b18_verdict.txt line 21, per-task table row 'qa5', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')"
+    },
+    "values": {
+     "qa1": 100.0,
+     "qa2": 100.0,
+     "qa3": 100.0,
+     "qa4": 100.0,
+     "qa5": 100.0
+    }
+   },
+   {
+    "n": {
+     "qa1": 5,
+     "qa2": 5,
+     "qa3": 5,
+     "qa4": 5,
+     "qa5": 5
+    },
+    "series": "ours, 10M tokens",
+    "source": {
+     "qa1": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa1 5/5'",
+     "qa2": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa2 5/5'",
+     "qa3": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa3 5/5'",
+     "qa4": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa4 5/5'",
+     "qa5": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa5 5/5'"
+    },
+    "values": {
+     "qa1": 100.0,
+     "qa2": 100.0,
+     "qa3": 100.0,
+     "qa4": 100.0,
+     "qa5": 100.0
+    }
+   },
+   {
+    "n": {
+     "qa1": null,
+     "qa2": null,
+     "qa3": null,
+     "qa4": null,
+     "qa5": null
+    },
+    "series": "ARMT, 1M tokens",
+    "source": {
+     "qa1": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA1 – SINGLE SUPPORTING FACT', row 'ARMT (145M)', column 1M: 98.5±1.0 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 10",
+     "qa2": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA2 – TWO SUPPORTING FACTS', row 'ARMT (145M)', column 1M: 99.4±0.3 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 16",
+     "qa3": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA3 – THREE SUPPORTING FACTS', row 'ARMT (145M)', column 1M: 72.1±14.2 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 22",
+     "qa4": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA4 – TWO ARG RELATIONS', row 'ARMT (145M)', column 1M: 99.8±0.3 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 28",
+     "qa5": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA5 – THREE ARG RELATIONS', row 'ARMT (145M)', column 1M: 97.3±0.6 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 34"
+    },
+    "values": {
+     "qa1": 98.5,
+     "qa2": 99.4,
+     "qa3": 72.1,
+     "qa4": 99.8,
+     "qa5": 97.3
+    }
+   },
+   {
+    "n": {
+     "qa1": null,
+     "qa2": null,
+     "qa3": null,
+     "qa4": null,
+     "qa5": null
+    },
+    "series": "ARMT, 10M tokens",
+    "source": {
+     "qa1": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA1 – SINGLE SUPPORTING FACT', row 'ARMT (145M)', column 10M: 89.4±8.1 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 10",
+     "qa2": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA2 – TWO SUPPORTING FACTS', row 'ARMT (145M)', column 10M: 84.4±4.0 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 16",
+     "qa3": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA3 – THREE SUPPORTING FACTS', row 'ARMT (145M)', column 10M: 37.0±10.3 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 22",
+     "qa4": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA4 – TWO ARG RELATIONS', row 'ARMT (145M)', column 10M: 91.5±1.7 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 28",
+     "qa5": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA5 – THREE ARG RELATIONS', row 'ARMT (145M)', column 10M: 80.9±7.6 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 34"
+    },
+    "values": {
+     "qa1": 89.4,
+     "qa2": 84.4,
+     "qa3": 37.0,
+     "qa4": 91.5,
+     "qa5": 80.9
+    }
+   }
+  ]
+ },
+ "figS4_clutrr_k": {
+  "a": [
+   {
+    "accuracy": [
+     0.9473684210526315,
+     0.6666666666666666,
+     0.8052631578947368,
+     0.7816091954022989,
+     0.7850467289719626,
+     0.6805555555555556,
+     0.6266666666666667,
+     0.6470588235294118,
+     0.6218487394957983
+    ],
+    "k": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "n": [
+     38,
+     105,
+     190,
+     174,
+     107,
+     144,
+     150,
+     119,
+     119
+    ],
+    "series": "ours (frozen Qwen3-8B reader + rule memory)",
+    "source": "r1_logs/ours_by_k.json by_k"
+   },
+   {
+    "accuracy": [
+     0.921,
+     0.4,
+     0.768,
+     0.673,
+     0.58,
+     0.496
+    ],
+    "k": [
+     2,
+     3,
+     4,
+     6,
+     8,
+     10
+    ],
+    "series": "Qwen3-8B answering directly (reasoning on)",
+    "source": {
+     "10": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=10",
+     "2": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=2",
+     "3": "vsassm/results/r1_verdict.txt: line '(k=3: 0.667 ours, 0.400 Qwen3-8B; k=5/7/9 in r1_out/test_*.jsonl and the scorer output.)'",
+     "4": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=4",
+     "6": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=6",
+     "8": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=8"
+    }
+   }
+  ]
+ },
+ "figS5_coherence": {
+  "a": [
+   {
+    "colour": "#222222",
+    "measured_coherence": [
+     0.00036421219556359574,
+     0.05059870332479477,
+     0.10063800712426503,
+     0.15064546962579092,
+     0.20063774287700653,
+     0.2506212691466014,
+     0.3005992074807485,
+     0.350573201974233,
+     0.4005442063013713,
+     0.5004787643750509,
+     0.6004037459691366,
+     0.7003182172775269,
+     0.8002208868662516,
+     0.9001119534174601
+    ],
+    "series": "exact codes, coherence added",
+    "source": "figdata/b44_fig2bc.json (vsassm results/b44_fig2bc.json; checked against b44_verdict.txt Bar 5)",
+    "x": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9
+    ],
+    "y_mean": [
+     1.0,
+     1.0,
+     0.9993333333333334,
+     0.9746666666666667,
+     0.8893333333333334,
+     0.7526666666666667,
+     0.65,
+     0.6086666666666667,
+     0.5653333333333334,
+     0.53,
+     0.532,
+     0.532,
+     0.518,
+     0.49266666666666664
+    ],
+    "y_per_seed": [
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      0.998
+     ],
+     [
+      0.978,
+      0.978,
+      0.968
+     ],
+     [
+      0.92,
+      0.878,
+      0.87
+     ],
+     [
+      0.812,
+      0.722,
+      0.724
+     ],
+     [
+      0.664,
+      0.632,
+      0.654
+     ],
+     [
+      0.624,
+      0.584,
+      0.618
+     ],
+     [
+      0.584,
+      0.57,
+      0.542
+     ],
+     [
+      0.524,
+      0.512,
+      0.554
+     ],
+     [
+      0.554,
+      0.516,
+      0.526
+     ],
+     [
+      0.522,
+      0.544,
+      0.53
+     ],
+     [
+      0.488,
+      0.52,
+      0.546
+     ],
+     [
+      0.5,
+      0.522,
+      0.456
+     ]
+    ]
+   },
+   {
+    "colour": "#666666",
+    "measured_coherence": [
+     0.00036421219556359574,
+     0.05059870332479477,
+     0.10063800712426503,
+     0.15064546962579092,
+     0.20063774287700653,
+     0.2506212691466014,
+     0.3005992074807485,
+     0.350573201974233,
+     0.4005442063013713,
+     0.5004787643750509,
+     0.6004037459691366,
+     0.7003182172775269,
+     0.8002208868662516,
+     0.9001119534174601
+    ],
+    "series": "same, commutative binding",
+    "source": "figdata/b44_fig2bc.json (vsassm results/b44_fig2bc.json; checked against b44_verdict.txt Bar 5)",
+    "x": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9
+    ],
+    "y_mean": [
+     0.934,
+     0.9286666666666666,
+     0.9206666666666666,
+     0.846,
+     0.7106666666666667,
+     0.618,
+     0.5913333333333334,
+     0.516,
+     0.516,
+     0.512,
+     0.5053333333333333,
+     0.49666666666666665,
+     0.5066666666666667,
+     0.5113333333333333
+    ],
+    "y_per_seed": [
+     [
+      0.932,
+      0.932,
+      0.938
+     ],
+     [
+      0.924,
+      0.93,
+      0.932
+     ],
+     [
+      0.914,
+      0.922,
+      0.926
+     ],
+     [
+      0.85,
+      0.852,
+      0.836
+     ],
+     [
+      0.686,
+      0.732,
+      0.714
+     ],
+     [
+      0.616,
+      0.61,
+      0.628
+     ],
+     [
+      0.602,
+      0.584,
+      0.588
+     ],
+     [
+      0.552,
+      0.472,
+      0.524
+     ],
+     [
+      0.554,
+      0.466,
+      0.528
+     ],
+     [
+      0.524,
+      0.46,
+      0.552
+     ],
+     [
+      0.498,
+      0.478,
+      0.54
+     ],
+     [
+      0.51,
+      0.48,
+      0.5
+     ],
+     [
+      0.518,
+      0.506,
+      0.496
+     ],
+     [
+      0.536,
+      0.508,
+      0.49
+     ]
+    ]
+   },
+   {
+    "colour": "#D55E00",
+    "measured_coherence": [
+     -0.0158652209987243,
+     -0.015864980096618336,
+     -0.015864694491028786,
+     -0.015864435583353043,
+     -0.015864208961526554,
+     -0.015864014625549316,
+     -0.015863857542475063,
+     -0.015863734607895214,
+     -0.0158636470635732,
+     -0.015863578766584396,
+     -0.015863651409745216,
+     -0.01586386499305566,
+     -0.015864215170343716,
+     -0.015864693249265354
+    ],
+    "series": "same, codes centred",
+    "source": "figdata/b44_fig2bc.json (vsassm results/b44_fig2bc.json; checked against b44_verdict.txt Bar 5)",
+    "x": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9
+    ],
+    "y_mean": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "y_per_seed": [
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0
+     ]
+    ]
+   },
+   {
+    "colour": "#D55E00",
+    "marker": "o filled",
+    "series": "naming head",
+    "source": "figdata/b44_fig2bc.json points_phi2.naming_head (results/b31_verdict.txt)",
+    "x_mean": -0.0003333333333333333,
+    "x_per_seed": [
+     -0.001,
+     0.0,
+     -0.0
+    ],
+    "y_mean": 1.0,
+    "y_per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "colour": "#CC79A7",
+    "marker": "D open",
+    "series": "map before training",
+    "source": "figdata/b44_fig2bc.json points_phi2.binding_loss_init_raw (b44_out/xtalk_init.json phi2_seed<seed>.raw)",
+    "x_mean": 0.7177066604296366,
+    "x_per_seed": [
+     0.7204259634017944,
+     0.7138714790344238,
+     0.7188225388526917
+    ],
+    "y_mean": 0.5406666666666667,
+    "y_per_seed": [
+     0.562,
+     0.552,
+     0.508
+    ]
+   },
+   {
+    "colour": "#CC79A7",
+    "marker": "D filled",
+    "series": "map trained only on the answer",
+    "source": "figdata/b44_fig2bc.json points_phi2.binding_loss_trained (results/b31_verdict.txt)",
+    "x_mean": 0.952,
+    "x_per_seed": [
+     0.921,
+     0.969,
+     0.966
+    ],
+    "y_mean": 0.46799999999999997,
+    "y_per_seed": [
+     0.46,
+     0.474,
+     0.47
+    ]
+   },
+   {
+    "colour": "#CC79A7",
+    "marker": "s open",
+    "series": "map before training, centred",
+    "source": "figdata/b44_fig2bc.json points_phi2.binding_loss_init_centred (b44_out/xtalk_init.json phi2_seed<seed>.centred)",
+    "x_mean": 0.08026420325040817,
+    "x_per_seed": [
+     0.07891075313091278,
+     0.08385338634252548,
+     0.07802847027778625
+    ],
+    "y_mean": 0.5413333333333333,
+    "y_per_seed": [
+     0.552,
+     0.536,
+     0.536
+    ]
+   }
+  ]
+ },
+ "figS6_gains": {
+  "a": [
+   {
+    "alone": 0.946,
+    "comparator": "1.7B fine-tuned without vs with memory",
+    "gain": 0.052000000000000046,
+    "series": "BABILong, 128k, same model",
+    "source": "benchmarks/b23.json runs Y_s0 128k (b23_verdict.txt; n = 500) and babilong.json ours 128k",
+    "with_memory": 0.998
+   },
+   {
+    "alone": 0.845,
+    "comparator": "Qwen3-8B vs the same + vector store",
+    "gain": 0.15100000000000002,
+    "series": "RULER, 128k, memory tasks",
+    "source": "benchmarks/ruler.json directNV and oursNV at 128k: the 9 tasks that use the memory (b21_verdict.txt; n = 900)",
+    "with_memory": 0.996
+   },
+   {
+    "alone": 0.861,
+    "comparator": "8B + facts in prompt vs + VSA store",
+    "gain": 0.135,
+    "series": "RULER, 128k: facts in the prompt",
+    "source": "benchmarks/b24.json at_128k prompt and store (b24_verdict.txt; n = 900)",
+    "with_memory": 0.996
+   },
+   {
+    "alone": 0.909,
+    "comparator": "8B + top-20 pieces vs + VSA store",
+    "gain": 0.08699999999999997,
+    "series": "RULER, 128k: retrieval (BM25)",
+    "source": "benchmarks/b24.json at_128k bm25 and store (b24_verdict.txt; n = 900)",
+    "with_memory": 0.996
+   },
+   {
+    "alone": 0.61,
+    "comparator": "Qwen3-8B vs the same + rule memory",
+    "gain": 0.10727748691099481,
+    "series": "CLUTRR, all chain lengths",
+    "source": "gains.json clutrr_direct_overall (r1_verdict.txt); r1_logs/ours_by_k.json correct / n_rows",
+    "with_memory": 0.7172774869109948
+   }
+  ]
+ },
+ "fig_compression": {
+  "a": [
+   {
+    "colour": "#D55E00",
+    "series": "Hebbian VSA store (final design)",
+    "source": "figdata/final_compression.json acc_final (vsassm results/b60_part_<enc>.json cells, STORE, mean of 12)",
+    "values": {
+     "Granite-3.3-8B": 47.54,
+     "Llama-3.1-8B": 48.99,
+     "MiniLM-L6": 44.34,
+     "Mistral-7B": 51.29,
+     "Qwen3-8B": 48.81,
+     "bge-small": 45.11,
+     "e5-base-v2": 46.41
+    }
+   },
+   {
+    "colour": "#222222",
+    "series": "least-squares memory (corrected)",
+    "source": "acc_final minus final_lamc (vsassm results/b60_verdict.txt 'PRIMARY (ideal): STORE - LAMc', R1); checked against acc_vsa_b60 minus lamc",
+    "values": {
+     "Granite-3.3-8B": 53.09,
+     "Llama-3.1-8B": 54.55,
+     "MiniLM-L6": 48.64,
+     "Mistral-7B": 56.52,
+     "Qwen3-8B": 52.87,
+     "bge-small": 49.29,
+     "e5-base-v2": 52.94
+    }
+   },
+   {
+    "colour": "#A08C78",
+    "series": "best of seven classical memories",
+    "source": "acc_final minus final_best7 (vsassm results/b64_verdict.txt 'VSA - BEST7 (ideal)', R1); checked against acc_vsa minus best7",
+    "values": {
+     "Granite-3.3-8B": 47.76,
+     "Llama-3.1-8B": 48.08,
+     "MiniLM-L6": 47.77,
+     "Mistral-7B": 52.31,
+     "Qwen3-8B": 47.56,
+     "bge-small": 48.84,
+     "e5-base-v2": 47.92
+    }
+   },
+   {
+    "colour": "#222222",
+    "series": "exact index, unlimited bits",
+    "source": "figdata/b49_compression.json (b49_summary_tables.txt 'R1 mean accuracy')",
+    "values": {
+     "Granite-3.3-8B": 81.4,
+     "Llama-3.1-8B": 82.9,
+     "MiniLM-L6": 75.5,
+     "Mistral-7B": 86.1,
+     "Qwen3-8B": 83.4,
+     "bge-small": 77.7,
+     "e5-base-v2": 80.1
+    }
+   }
+  ],
+  "b": [
+   {
+    "series": "least squares minus Hebbian VSA store (final design), points, 95% interval",
+    "source": "figdata/final_compression.json final_lamc, sign flipped (vsassm results/b60_verdict.txt 'PRIMARY (ideal): STORE - LAMc', R1)",
+    "values": {
+     "Granite-3.3-8B": [
+      5.55,
+      4.87,
+      6.24
+     ],
+     "Llama-3.1-8B": [
+      5.56,
+      4.72,
+      6.37
+     ],
+     "MiniLM-L6": [
+      4.3,
+      3.6,
+      4.99
+     ],
+     "Mistral-7B": [
+      5.23,
+      4.46,
+      6.03
+     ],
+     "Qwen3-8B": [
+      4.06,
+      3.4,
+      4.76
+     ],
+     "bge-small": [
+      4.18,
+      3.51,
+      4.85
+     ],
+     "e5-base-v2": [
+      6.53,
+      5.87,
+      7.19
+     ]
+    }
+   }
+  ]
+ },
+ "not_drawn_bAbI": {
+  "table": [
+   {
+    "series": "prompting",
+    "source": "v49_logs/v49.json cells['task1/zeroshot/all'].acc and cells['task2/zeroshot/all'].acc (n = 500 each; one deterministic decoding stored three times)",
+    "task1": {
+     "mean": 0.7920000000000001,
+     "per_seed": [
+      0.792,
+      0.792,
+      0.792
+     ]
+    },
+    "task2": {
+     "mean": 0.38599999999999995,
+     "per_seed": [
+      0.386,
+      0.386,
+      0.386
+     ]
+    }
+   },
+   {
+    "series": "LoRA fine-tune",
+    "source": "task 1: v50_logs/v50_task1_VOID_locoffset.json arms.lora_direct; task 2: v131_logs/v131b.json run r16_e6_lr0.0001 accs (highest test mean of 12 configurations)",
+    "task1": {
+     "mean": 0.9993333333333334,
+     "per_seed": [
+      0.998,
+      1.0,
+      1.0
+     ]
+    },
+    "task2": {
+     "mean": 0.9722222222222222,
+     "per_seed": [
+      0.9714285714285714,
+      0.9738095238095238,
+      0.9714285714285714
+     ]
+    }
+   },
+   {
+    "series": "LoRA fine-tune, first configuration (not the best of twelve)",
+    "source": "v50_logs/v50_task2_BANKED.json arms.lora_direct",
+    "task1": null,
+    "task2": {
+     "mean": 0.8007936507936507,
+     "per_seed": [
+      0.85,
+      0.6952380952380952,
+      0.8571428571428571
+     ]
+    }
+   },
+   {
+    "series": "projection trained through the binding loss",
+    "source": "v37_logs/v37b.json arms.spans (task 2 only; task 1 not run)",
+    "task1": null,
+    "task2": {
+     "mean": 0.5023809523809524,
+     "per_seed": [
+      0.49523809523809526,
+      0.5047619047619047,
+      0.5071428571428571
+     ]
+    }
+   },
+   {
+    "series": "handover",
+    "source": "task 1: v35_logs/v35.json cells[family none].chain; task 2: v37_logs/v37b.json arms.probe_argmax",
+    "task1": {
+     "mean": 1.0,
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    "task2": {
+     "mean": 1.0,
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "series": "frozen-state probe",
+    "source": "task 1: v30_logs/v30.json arms.floor; task 2: v48_logs/v48.json floor_last_token",
+    "task1": {
+     "mean": 0.7713333333333333,
+     "per_seed": [
+      0.78,
+      0.782,
+      0.752
+     ]
+    },
+    "task2": {
+     "mean": 0.24523809523809526,
+     "per_seed": [
+      0.2523809523809524,
+      0.2357142857142857,
+      0.24761904761904763
+     ]
+    }
+   }
+  ]
+ }
+}

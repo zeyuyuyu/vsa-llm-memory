@@ -1,0 +1,9 @@
+0k: {'succeeded': 125} spent $0.30
+4k: {'succeeded': 124, 'errored': 1} spent $3.13
+16k: {'succeeded': 125} spent $14.28
+64k: {'succeeded': 125} spent $58.08
+128k: {'succeeded': 125} spent $145.30
+stop before 512k: spent $145.30 + est $114.77 > cap $190.0
+4k: {'succeeded': 125, 'errored': 1} spent $145.32
+512k: {'succeeded': 25} spent $214.45
+stop before 1M: spent $214.45 + est $112.78 > cap $225.0

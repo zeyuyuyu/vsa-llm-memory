@@ -1,0 +1,112 @@
+{
+ "prereg": "1fd4489",
+ "n": 212,
+ "coverage": 1.0,
+ "excl_rate": 0.9122879602813405,
+ "hop_dist": {
+  "2": 181,
+  "3": 5,
+  "4": 26
+ },
+ "arms": {
+  "prompt": {
+   "covered": [
+    0.1650943396226415,
+    0.1650943396226415,
+    0.1650943396226415
+   ]
+  },
+  "prompt_sup": {
+   "covered": [
+    0.4009433962264151,
+    0.4009433962264151,
+    0.4009433962264151
+   ]
+  },
+  "prompt_ev_p0": {
+   "covered": [
+    0.9009433962264151,
+    0.9009433962264151,
+    0.8962264150943396
+   ]
+  },
+  "prompt_ev_p50": {
+   "covered": [
+    0.3490566037735849,
+    0.33962264150943394,
+    0.35377358490566035
+   ]
+  },
+  "prompt_ev_p150": {
+   "covered": [
+    0.15566037735849056,
+    0.22641509433962265,
+    0.1792452830188679
+   ]
+  },
+  "hrr_gold_p0": {
+   "covered": [
+    0.9386792452830188,
+    0.9481132075471698,
+    0.9575471698113207
+   ]
+  },
+  "hrr_gold_p50": {
+   "covered": [
+    0.9150943396226415,
+    0.9386792452830188,
+    0.9433962264150944
+   ]
+  },
+  "hrr_gold_p150": {
+   "covered": [
+    0.6792452830188679,
+    0.6650943396226415,
+    0.6226415094339622
+   ]
+  }
+ },
+ "diag": {
+  "prompt_trunc": [
+   0.8867924528301887,
+   0.8867924528301887,
+   0.8867924528301887
+  ],
+  "prompt_sup_trunc": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "prompt_ev_p0_goldkept": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "prompt_ev_p0_trunc": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "prompt_ev_p50_goldkept": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "prompt_ev_p50_trunc": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "prompt_ev_p150_goldkept": [
+   0.45754716981132076,
+   0.5094339622641509,
+   0.4811320754716981
+  ],
+  "prompt_ev_p150_trunc": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "verdict": "P1 ordering 3/3: True | P2 gain>=.20: True (0.7830) | P3 pool separation: False (hrr@150=0.6557, prompt_ev drop=0.7123) | P4 coverage>=.60: True (1.0000) ; NEGATIVE READING APPLIES: the large-pool separation does not reproduce with real distractor triples, so the manuscript's large-pool sentence must be narrowed ; ADDED (not registered): strongest natural-language baseline prompt_sup=0.4009 vs hrr_gold_p0=0.9481 -> store beats it"
+}

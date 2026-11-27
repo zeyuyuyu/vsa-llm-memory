@@ -1,0 +1,1214 @@
+{
+ "qwen8|256|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|256|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   100.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|256|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|256|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   100.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|256|16|8": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 8902656,
+  "feasible": false,
+  "rechosen": [
+   "flat",
+   "V",
+   "center",
+   "rp",
+   10.0,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.3297709635403053
+ },
+ "qwen8|256|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|1024|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|1024|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   0.1,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|1024|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|1024|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   0.0001,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|1024|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "qwen8|1024|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|256|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   0.0001,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|256|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|256|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|256|16|4": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 8640512,
+  "feasible": false,
+  "rechosen": [
+   "flat",
+   "V",
+   "center",
+   "rp",
+   10.0,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.2542979415144785
+ },
+ "b46|256|16|8": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 8902656,
+  "feasible": false,
+  "rechosen": [
+   "flat",
+   "V",
+   "center",
+   "rp",
+   10.0,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.34310859861323145
+ },
+ "b46|256|16|16": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 9426944,
+  "feasible": false,
+  "rechosen": [
+   "flat",
+   "V",
+   "center",
+   "rp",
+   1.0,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.4387427674290225
+ },
+ "b46|1024|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|1024|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|1024|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|1024|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "center",
+   "pca",
+   0.1,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|1024|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "b46|1024|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|256|2|4": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 10520576,
+  "feasible": false,
+  "rechosen": [
+   "col",
+   "V-1",
+   "center",
+   "rp",
+   0.01,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.7509729313851013
+ },
+ "llama|256|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|256|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|256|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|256|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|256|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|1024|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   0.1,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|1024|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "center",
+   "pca",
+   0.1,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|1024|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "center",
+   "pca",
+   0.1,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|1024|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|1024|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "llama|1024|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|256|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|256|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|256|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|256|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V-1",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|256|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|256|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|1024|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|1024|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   0.1,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|1024|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   0.1,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|1024|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|1024|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "mistral|1024|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|256|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|256|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|256|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|256|16|4": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 342144,
+  "feasible": false,
+  "rechosen": [
+   "flat",
+   "V",
+   "center",
+   "rp",
+   100.0,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.23774368085773526
+ },
+ "e5|256|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|256|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|1024|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   100.0,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|1024|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   100.0,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|1024|2|16": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   100.0,
+   4
+  ],
+  "excess_entries": 884352,
+  "feasible": false,
+  "rechosen": [
+   "col",
+   "V-1",
+   "center",
+   "rp",
+   1.0,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.6236834147055708
+ },
+ "e5|1024|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|1024|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "e5|1024|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|256|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|256|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|256|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   1.0,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|256|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|256|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|256|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|1024|2|4": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "center",
+   "rp",
+   10.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|1024|2|8": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "center",
+   "rp",
+   10.0,
+   4
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|1024|2|16": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "center",
+   "pca",
+   10.0,
+   2
+  ],
+  "excess_entries": 147072,
+  "feasible": false,
+  "rechosen": [
+   "col",
+   "V-1",
+   "center",
+   "rp",
+   1.0,
+   4
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.6002034926180223
+ },
+ "bge|1024|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|1024|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V-1",
+   "whiten",
+   "pca",
+   100.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "bge|1024|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "minilm|256|2|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "center",
+   "rp",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "minilm|256|2|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "center",
+   "rp",
+   0.1,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "minilm|256|2|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "center",
+   "rp",
+   0.1,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "minilm|256|16|4": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 97344,
+  "feasible": false,
+  "rechosen": [
+   "flat",
+   "V",
+   "center",
+   "rp",
+   100.0,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.24070054150580913
+ },
+ "minilm|256|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "minilm|256|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "minilm|1024|2|4": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "rp",
+   0.1,
+   4
+  ],
+  "excess_entries": 73536,
+  "feasible": false,
+  "rechosen": [
+   "col",
+   "V-1",
+   "center",
+   "rp",
+   0.0001,
+   4
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.5653710801233524
+ },
+ "minilm|1024|2|8": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   0.1,
+   2
+  ],
+  "excess_entries": 220992,
+  "feasible": false,
+  "rechosen": [
+   "col",
+   "V",
+   "center",
+   "rp",
+   0.0001,
+   4
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.5653710801233524
+ },
+ "minilm|1024|2|16": {
+  "store_prep": "center",
+  "lamc_cfg": [
+   "col",
+   "V-1",
+   "whiten",
+   "pca",
+   0.1,
+   2
+  ],
+  "excess_entries": 220992,
+  "feasible": false,
+  "rechosen": [
+   "col",
+   "V-1",
+   "center",
+   "rp",
+   0.1,
+   1
+  ],
+  "n_feasible": 72,
+  "dev_acc": 0.5614563937371422
+ },
+ "minilm|1024|16|4": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "pca",
+   10.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "minilm|1024|16|8": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "flat",
+   "V",
+   "whiten",
+   "rp",
+   1.0,
+   1
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ },
+ "minilm|1024|16|16": {
+  "store_prep": "whiten",
+  "lamc_cfg": [
+   "col",
+   "V",
+   "whiten",
+   "pca",
+   1.0,
+   2
+  ],
+  "excess_entries": 0,
+  "feasible": true
+ }
+}

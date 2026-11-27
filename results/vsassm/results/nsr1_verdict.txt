@@ -1,0 +1,153 @@
+# NSR1 verdict: impact reasoning over the tracked state (prereg/NSR1_prereg.md + amendments 1-2), 2026-11-07
+# Held-out split nsr1: 40 fresh logs (10 per scenario, seeds 400+), generated after the prereg with apps/real's generator
+# (vendored at 707351b; reproduces test2's 40 logs exactly) by Qwen3-32B (rev 9216db57, sha256-verified) on the A800 box.
+# 230 impact questions (warehouse 40, biobank 30, home 80, ops 80); 28.3% have an empty true answer ("always none").
+# Scored once with the independent scorer (nsr/nsr1_score.py): nsr/out/nsr1_score_nsr1.json; bars: nsr/out/nsr1_bars_nsr1.json.
+
+## Results (set-exact accuracy, all 230 questions)
+| arm                                                      | all   | warehouse | biobank | home  | ops   |
+| 1  RM state + VSA rule memory (rules from 1 worked trace)  | 0.930 | 0.875     | 0.833   | 0.975 | 0.950 |
+| 2a RM state + count table                                  | 0.930 | (identical answers to arm 1 on 230/230)          |
+| 2b RM state + hand-written graph query                     | 0.930 | (identical answers to arm 1 on 229/230)          |
+| 3  Qwen3-32B thinking over the whole log (forced)          | 0.278 | 0.150     | 0.033   | 0.288 | 0.425 |
+|    same, strict (no answer when the 8,192 limit is hit)    | 0.265 |           |         |       |       |
+| 3  Qwen3-8B thinking over the whole log (forced / strict)  | 0.148 / 0.126                                    |
+| 3b Qwen3-32B thinking over the RM state as sentences       | 0.826 | 0.850     | 0.833   | 0.713 | 0.925 |
+| 4  system of record + graph query                          | 0.313 | 0.200     | 0.167   | 0.363 | 0.375 |
+| sanity: truth + graph query                                | 1.000 |
+| negative control: RM places permuted among things          | 0.313 (always-none 0.283)                        |
+Traces (arm 1): 394 answer items, 887 hops; validity 1.00 (every state hop cites the log line whose reading wrote it);
+correctness 0.970 (every hop true in the truth state).
+
+## Registered bars
+P1 arm 1 >= 0.80: PASS (0.930).  P2 arm 1 - arm 3 (32B, forced) >= 0.20: PASS (+0.652).  P3 arm 1 - arm 4 >= 0.30:
+PASS (+0.617; vs always-none +0.648).  P4 arm 1 = 2b on >= 99%: PASS (229/230); arm 1 = 2a: PASS (230/230).
+P5 trace validity 1.00: PASS.  Sanity 1.000: holds.  Negative control <= always-none + 0.05 (0.333): holds (0.313).
+
+## Predictions vs outcome
+P1 held (predicted ~0.88; 0.930). P2 held, the LLM worse than predicted (predicted 0.35-0.45; 0.278). P3 held (SoR
+predicted ~0.30; 0.313). P4: predicted 100%, got 229/230 (below). P5 held. Arm 3b "within 0.05 of 2b": FAILED as
+registered (0.826 vs 0.930), explained below by a question-wording defect; on the unambiguous scenarios it held.
+
+## What the one P4 difference is
+biobank-404-4, "FRZ-05 defrosted": the reader wrote rack R-07 into box CB-007 (a rack cannot be in a box), creating a
+5-hop chain specimen > CB-013 > R-07 > CB-007 > R-05 > FRZ-05. The graph query follows any length and adds 5 specimens
+that are really in FRZ-07; arm 1 folds paths of <= 4 hops (registered) and does not. Both answers are wrong (arm 1 misses
+one specimen the reader put in the wrong box). A type-aware engine (racks cannot be in boxes) would have rejected the
+fact: an engine-side check on reader output, noted for NSR2.
+
+## Manual inspection (prereg verification)
+- All 16 arm-1 misses are state errors, none composition errors (~9 distinct misread facts; one misread fact usually
+  costs two questions, once as a missing item and once as an extra one): two pallets swapped by a handover note
+  (warehouse-401-1, -403-3), the rack-in-box above, a specimen in the wrong box (biobank-406-6), a specimen's return
+  from the PCR bench missed (biobank-409-9), the cane in the coat pocket instead of the car (home-406-6), the ledger-db
+  primary on db-22 instead of db-11 (ops-400-0), fraud-scorer in canary instead of prod-euw1-a (ops-404-4).
+- 166 arm-3 (32B) misses: 46 missed items, 39 other wrong sets, 33 no answer (limit hit and the forced answer still
+  unparseable), 27 identical to the system-of-record answer (human messages ignored), 21 extra items. Reading 20 sampled
+  misses found one FORMAT failure: on home the model writes IDs as in the camera log ("reading_glasses"), which the
+  registered parser does not map to "reading glasses".
+- Question-wording defect (mine): "Which of Grandpa's things have to be moved out of it?" is read by the LLM as "items
+  that belong to Grandpa" (its own reasoning says so: "the items that are specifically referred to as Grandpa's are the
+  reading glasses and the slippers"), while the gold counts every tracked item. It affects only the LLM arms and only the
+  80 home questions; arms 1/2/4 use the question type, not its wording.
+
+## Sensitivity analyses (reported, not bars)
+- Underscore-normalising parse (all LLM arms): 32B 0.278 -> 0.304 (home 0.288 -> 0.363); 8B 0.148 -> 0.113 (its old
+  credit came from unparsed items on empty-answer questions); 3b unchanged 0.826.
+- P2 upper bound: count every 32B question that hit the reasoning limit as correct: 0.474; arm 1 still +0.457.
+- Excluding the 80 ambiguous home questions (150 left): arm 1 0.907, 32B over the log 0.273, 32B over the RM state 0.887,
+  graph query on the RM state 0.907. With the state given, the LLM composes almost as well as the query (-0.02); its
+  -0.63 over the log is state tracking.
+- Cross-engine: 12 problems answered by both HF generate and vLLM (identical prompts, 6,951-7,321 tokens): same parsed
+  answer on 3/12; correct 6/12 (HF) vs 2/12 (vLLM). Long greedy reasoning chains diverge under different numerics, so
+  per-question LLM answers are unstable; the aggregate gap is far larger than this noise.
+- Reader reproducibility: home/ops re-read on another GPU in another batch: 3/4,600 per-line events differ, final state
+  identical 20/20.
+
+## Deviations from the prereg (all recorded before scoring unless stated)
+Compute on the A800 box, not PACE (PACE estimated a week of queueing; paid account no faster). LLM arms decoded with vLLM
+0.11 instead of HF generate (amendment 2; HF on A800 needed about an hour per 8 problems). Budget forcing answer budget
+512 tokens instead of 64 (amendment 2). The underscore parse and the home exclusion are post-scoring sensitivity
+analyses, not changes to the registered result.
+
+## Conclusion
+On fresh logs, a continuously tracked readable state composed with site facts answers impact questions at 0.93
+set-exact, against 0.28-0.30 for Qwen3-32B thinking over the same log with the same assets and facts, 0.15 for Qwen3-8B,
+and 0.31 for the system of record. Every arm-1 miss is a misread state fact; the composition engine never erred, and the
+VSA rule memory, a count table and a hand-written graph query give the same answers (230/230 and 229/230). Given the
+state as text, Qwen3-32B composes almost as well as the query on unambiguous questions, so the LLM's deficit is state
+tracking over a long, overwritten, multi-channel log, not composition.
+Supports: "reading a continuously updated state from messy logs, then composing it exactly, answers impact questions
+that an LLM reading the log misses." Does not support: "VSA reasons" (NSR0, P4); claims about frontier long-context
+models (not tested); claims beyond these four simulated sites (LLM-written human lines from a simulator, one generation
+seed per log, Qwen3-32B both wrote the human lines and is a baseline; the reader was distilled on similar generator text,
+the LLMs are zero-shot).
+
+## Literature check (conclusion -> literature)
+SUPPORTED: end-to-end LLMs degrade on state tracking with overwrites and indirect effects (ActionReasoningBench: GPT-4o
+state tracking 73-76%, ramification 0%, Tables 3-4, re-opened; PI-LLM: accuracy falls toward zero with overwrites);
+memory systems fail impact questions over changing state (MEME: Cascade 3% on average, abstract re-opened). CONFLICTS
+(partially): long-context GPT-5-mini beat a Mem0 fact memory on recall (arXiv 2603.04814, abstract re-opened); the setups
+differ (single-fact recall vs set-valued impact questions over overwritten multi-channel state), but a frontier
+long-context arm is the strongest baseline we have not run. NO PRECEDENT FOUND for the exact stream setting
+(docs/neurosymbolic_review.md Part III).
+
+## Addendum 2026-11-11: frontier-model arm (prereg amendment 3; POST HOC, added after the verdict at the user's request)
+gpt-6.1-sol via the Sidrune gateway, reasoning_effort "xhigh", streamed, the same prompts as arm 3; 230 calls, 0 errors,
+1 stream without a finish reason, $3.92 (wallet balance before/after), 39 s per question on average.
+| arm                                   | all   | warehouse | biobank | home  | ops   | excl. home (150) |
+| 1  RM state + rules                   | 0.930 | 0.875     | 0.833   | 0.975 | 0.950 | 0.907 |
+| gpt-6.1-sol over the log (registered) | 0.917 | 0.875     | 0.800   | 0.950 | 0.950 |       |
+|   underscore-normalising parse        | 0.922 |           |         | 0.963 |       | 0.900 |
+| Qwen3-32B over the log (forced)       | 0.278 | 0.150     | 0.033   | 0.288 | 0.425 | 0.273 |
+**P2-F (arm 1 - frontier >= 0.20): FAIL** (+0.013; 95% bootstrap interval -0.030 to +0.057, a statistical tie).
+**My prediction (frontier about 0.55, range 0.45-0.70) was wrong**: the frontier model reading the whole ~10k-token log
+answers impact questions as well as the tracked state does.
+Errors are mostly disjoint: both right 198, only RM 16, only frontier 13, both wrong 3; "either right" 0.987.
+**Revised conclusion.** "An LLM reading the log misses impact questions" holds for the open models tested (Qwen3-32B
+0.28, Qwen3-8B 0.15), NOT for a frontier model at this log length. What still separates the pipeline at this scale:
+cost and latency (the frontier model spends $0.017 and 39 s per question and re-reads the log for every question; the
+pipeline reads each message once with a 1.7B model and answers in ~0.3 ms with no generated tokens), on-device
+operation, and traceable answers. Open: whether the frontier model holds up as logs grow (more days, more items,
+more overwrites; PI-LLM reports long-context accuracy falling toward zero with overwrites), and whether the two
+complementary error sets can be exploited (the pipeline as the always-on state, the frontier model as an auditor).
+This sharpens the literature CONFLICT recorded above (2603.04814: long-context GPT-5-mini beat a fact memory on recall):
+it is now confirmed in our own setting for a frontier model.
+
+### Correction 2026-11-11 (prereg/NSR_frontier_amendment1.md): the one dropped stream was re-run
+The stream that closed without a finish reason (ops-406-6, host_down db-19) was re-run. It returned a valid answer
+("none", correct). Registered parse: frontier 0.917 -> 0.922 (ops 0.950 -> 0.963). Underscore parse: 0.922 -> 0.926.
+Pipeline - frontier: +0.009 (95% bootstrap interval -0.035 to +0.057). Both right 199, only RM 15, only frontier 13,
+both wrong 3; either right 0.987. P2-F still FAILS, and the conclusion above is unchanged. Scores:
+nsr/out/nsr1_score_frontier_r.json.
+
+### Correction 2 (2026-11-11, prereg/NSR_frontier_amendment2.md, POST HOC): glued answer segments
+In 5/230 frontier answers, the stream reassembly glued every "Answer:" to the end of a progress note, so the
+registered parser found no Answer line. With the line break restored (--repair; all 5 read by hand), the frontier
+model scores **0.943** (underscore parse 0.948; micro-F1 0.978), against the pipeline's 0.930. Pipeline - frontier:
+-0.013 (95% bootstrap interval -0.057 to +0.030). Both right 203, only RM 11, only frontier 14, both wrong 2; either
+right 0.991. P2-F still FAILS (the registered parse gives 0.922). On the repaired parse the frontier model is
+numerically ahead at one day; the two are statistically tied.
+
+## Addendum 2026-11-11: second frontier arm, Opus 5.5 (prereg/NSR5_amendment1.md, amendments 4-6; secondary, no bar)
+claude-opus-5-5, effort medium, max_tokens 64,000, the 230 NSR1 prompts in the interleaved order of amendment 4
+(all 230 answered, so no subsample). USD 10.12, 0 errors, 0 budget exhaustions; median 1,071 output tokens.
+| arm                                   | set-exact | micro-F1 | warehouse | biobank | home  | ops   |
+| pipeline (arm 1)                      | 0.930     | 0.965    | 0.875     | 0.833   | 0.975 | 0.950 |
+| gpt-6.1-sol, repaired + normalised    | 0.948     | 0.979    | 0.975     | 0.800   | 0.963 | 0.975 |
+| Opus 5.5, registered parse            | 0.852     | 0.930    | 0.925     | 0.800   | 0.725 | 0.963 |
+| Opus 5.5, normalised (= + repair)     | 0.935     | 0.980    | 0.925     | 0.800   | 0.963 | 0.963 |
+Registered gap +0.078 is the underscore-ID format effect (home); normalised the three arms are tied at K = 1.
+Effort xhigh at K = 1: 17 of 230 calls before the USD 180 guard stopped the run; not scored.
+
+## Addendum (2026-11-12): gpt arm on the OpenAI direct route (NSR5 amendment 8; route evidence in nsr5_verdict.txt)
+Every gpt-6.1-sol answer above came through the Sidrune gateway, which is not serving the same model or not counting
+the same tokens as OpenAI (nsr5_verdict.txt, route replication). The 230 NSR1 prompts were re-run on api.openai.com at
+the registered settings (xhigh, 32,000 tokens): 230/230 valid, 0 hit the budget, 0 glued answers, so the registered,
+repaired and normalised parses agree. nsr/out/api/nsr1_gpt-6.1-sol_xhigh_direct.jsonl; scored with nsr1_score.py.
+| arm                                   | all   | warehouse | biobank | home  | ops   |
+| gpt-6.1-sol over the log, OpenAI direct | 0.952 | 0.975     | 0.800   | 0.975 | 0.975 |
+Pipeline - direct: -0.022 (95% bootstrap interval -0.061 to +0.022). Both right 205, only RM 9, only frontier 14, both wrong 2; either right 0.991.
+Cost on the direct route: USD 0.020 and 12 s per question on average (USD 4.55 for 230; median USD 0.016 and 8 s).
+P2-F recomputed on the direct route (reported, not replacing the registered FAIL): -0.022, FAIL. Statistically tied,
+the frontier model numerically ahead.

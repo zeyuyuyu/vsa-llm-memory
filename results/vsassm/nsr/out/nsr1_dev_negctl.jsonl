@@ -1,0 +1,46 @@
+{"log": "warehouse-100-0", "scenario": "warehouse", "qtype": "aisle_closed", "target": "aisle A", "pred": []}
+{"log": "warehouse-100-0", "scenario": "warehouse", "qtype": "aisle_closed", "target": "aisle B", "pred": ["LPN 0421859", "LPN 0433736"]}
+{"log": "warehouse-100-0", "scenario": "warehouse", "qtype": "aisle_closed", "target": "aisle C", "pred": ["LPN 0404886", "LPN 0457063", "LPN 0477351"]}
+{"log": "warehouse-100-0", "scenario": "warehouse", "qtype": "aisle_closed", "target": "aisle D", "pred": ["LPN 0407480"]}
+{"log": "warehouse-101-1", "scenario": "warehouse", "qtype": "aisle_closed", "target": "aisle A", "pred": ["LPN 0416382"]}
+{"log": "warehouse-101-1", "scenario": "warehouse", "qtype": "aisle_closed", "target": "aisle B", "pred": ["LPN 0433638", "LPN 0487004"]}
+{"log": "warehouse-101-1", "scenario": "warehouse", "qtype": "aisle_closed", "target": "aisle C", "pred": ["LPN 0408603", "LPN 0418294", "LPN 0462258"]}
+{"log": "warehouse-101-1", "scenario": "warehouse", "qtype": "aisle_closed", "target": "aisle D", "pred": []}
+{"log": "biobank-100-0", "scenario": "biobank", "qtype": "freezer_down", "target": "FRZ-02", "pred": ["S-26-03307", "S-26-03923"]}
+{"log": "biobank-100-0", "scenario": "biobank", "qtype": "freezer_down", "target": "FRZ-05", "pred": ["S-26-02801", "S-26-03863", "S-26-05315"]}
+{"log": "biobank-100-0", "scenario": "biobank", "qtype": "freezer_down", "target": "FRZ-07", "pred": ["S-26-03386"]}
+{"log": "biobank-101-1", "scenario": "biobank", "qtype": "freezer_down", "target": "FRZ-02", "pred": []}
+{"log": "biobank-101-1", "scenario": "biobank", "qtype": "freezer_down", "target": "FRZ-05", "pred": ["S-26-03638", "S-26-04166", "S-26-04412"]}
+{"log": "biobank-101-1", "scenario": "biobank", "qtype": "freezer_down", "target": "FRZ-07", "pred": ["S-26-02455"]}
+{"log": "home-100-0", "scenario": "home", "qtype": "room_cleared", "target": "bathroom", "pred": []}
+{"log": "home-100-0", "scenario": "home", "qtype": "room_cleared", "target": "bedroom", "pred": ["cane"]}
+{"log": "home-100-0", "scenario": "home", "qtype": "room_cleared", "target": "garage", "pred": ["house keys"]}
+{"log": "home-100-0", "scenario": "home", "qtype": "room_cleared", "target": "garden", "pred": []}
+{"log": "home-100-0", "scenario": "home", "qtype": "room_cleared", "target": "hallway", "pred": ["blood pressure cuff", "phone charger", "reading glasses", "wallet"]}
+{"log": "home-100-0", "scenario": "home", "qtype": "room_cleared", "target": "kitchen", "pred": ["TV remote", "car keys", "tablet"]}
+{"log": "home-100-0", "scenario": "home", "qtype": "room_cleared", "target": "living room", "pred": ["pill organizer", "slippers"]}
+{"log": "home-100-0", "scenario": "home", "qtype": "room_cleared", "target": "study", "pred": []}
+{"log": "home-101-1", "scenario": "home", "qtype": "room_cleared", "target": "bathroom", "pred": []}
+{"log": "home-101-1", "scenario": "home", "qtype": "room_cleared", "target": "bedroom", "pred": []}
+{"log": "home-101-1", "scenario": "home", "qtype": "room_cleared", "target": "garage", "pred": ["car keys", "library book"]}
+{"log": "home-101-1", "scenario": "home", "qtype": "room_cleared", "target": "garden", "pred": []}
+{"log": "home-101-1", "scenario": "home", "qtype": "room_cleared", "target": "hallway", "pred": ["house keys", "wallet"]}
+{"log": "home-101-1", "scenario": "home", "qtype": "room_cleared", "target": "kitchen", "pred": ["hearing aid case", "reading glasses"]}
+{"log": "home-101-1", "scenario": "home", "qtype": "room_cleared", "target": "living room", "pred": ["TV remote", "cane"]}
+{"log": "home-101-1", "scenario": "home", "qtype": "room_cleared", "target": "study", "pred": ["blood pressure cuff", "phone charger", "slippers"]}
+{"log": "ops-100-0", "scenario": "ops", "qtype": "region_down", "target": "eu-west-1", "pred": ["fraud-scorer"]}
+{"log": "ops-100-0", "scenario": "ops", "qtype": "region_down", "target": "us-east-1", "pred": ["chat-gateway", "checkout-web", "search-indexer"]}
+{"log": "ops-100-0", "scenario": "ops", "qtype": "region_down", "target": "us-west-2", "pred": ["image-resizer", "recs-model"]}
+{"log": "ops-100-0", "scenario": "ops", "qtype": "host_down", "target": "db-07", "pred": []}
+{"log": "ops-100-0", "scenario": "ops", "qtype": "host_down", "target": "db-11", "pred": []}
+{"log": "ops-100-0", "scenario": "ops", "qtype": "host_down", "target": "db-14", "pred": []}
+{"log": "ops-100-0", "scenario": "ops", "qtype": "host_down", "target": "db-19", "pred": ["chat-gateway"]}
+{"log": "ops-100-0", "scenario": "ops", "qtype": "host_down", "target": "db-22", "pred": []}
+{"log": "ops-101-1", "scenario": "ops", "qtype": "region_down", "target": "eu-west-1", "pred": []}
+{"log": "ops-101-1", "scenario": "ops", "qtype": "region_down", "target": "us-east-1", "pred": ["auth-service", "chat-gateway", "checkout-web", "fraud-scorer", "search-indexer"]}
+{"log": "ops-101-1", "scenario": "ops", "qtype": "region_down", "target": "us-west-2", "pred": ["payments-api"]}
+{"log": "ops-101-1", "scenario": "ops", "qtype": "host_down", "target": "db-07", "pred": ["chat-gateway"]}
+{"log": "ops-101-1", "scenario": "ops", "qtype": "host_down", "target": "db-11", "pred": []}
+{"log": "ops-101-1", "scenario": "ops", "qtype": "host_down", "target": "db-14", "pred": []}
+{"log": "ops-101-1", "scenario": "ops", "qtype": "host_down", "target": "db-19", "pred": []}
+{"log": "ops-101-1", "scenario": "ops", "qtype": "host_down", "target": "db-22", "pred": []}

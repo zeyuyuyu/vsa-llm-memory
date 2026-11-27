@@ -1,0 +1,285 @@
+{
+ "_about": "B27 (prereg vsassm/prereg/B27_arena_referee_baselines_prereg.md + amendments 1-4): referee baselines in arenas A, B, C. label_free = the dev-selected primary family (A, B: InfoNCE; C: orthogonality); lora = LoRA rank 16 tuned on a dev split over lr x schedule (12 epochs). Test accuracy per seed (42, 123, 456) at each seed's dev-selected epoch. Every value carries its verbatim verdict line.",
+ "label_free": {
+  "A": {
+   "family": "nce",
+   "mean": 0.763,
+   "outcome": "PARTIAL",
+   "seeds": [
+    {
+     "value": 0.777,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.777 [0.750-0.802] ep10; 0.744 [0.716-0.770] ep9; 0.769 [0.742-0.794] ep10",
+     "text": "0.777"
+    },
+    {
+     "value": 0.744,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.777 [0.750-0.802] ep10; 0.744 [0.716-0.770] ep9; 0.769 [0.742-0.794] ep10",
+     "text": "0.744"
+    },
+    {
+     "value": 0.769,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.777 [0.750-0.802] ep10; 0.744 [0.716-0.770] ep9; 0.769 [0.742-0.794] ep10",
+     "text": "0.769"
+    }
+   ],
+   "mean_node": {
+    "value": 0.763,
+    "file": "../results/vsassm/results/b27_verdict.txt",
+    "line": "    nce * mean 0.763 [0.741-0.785]  recovery 0.63 -> PARTIAL",
+    "text": "0.763"
+   }
+  },
+  "B": {
+   "family": "nce",
+   "mean": 0.826,
+   "outcome": "FAIL",
+   "seeds": [
+    {
+     "value": 0.826,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.826 [0.790-0.857] ep1; 0.806 [0.769-0.838] ep1; 0.846 [0.812-0.875] ep1",
+     "text": "0.826"
+    },
+    {
+     "value": 0.806,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.826 [0.790-0.857] ep1; 0.806 [0.769-0.838] ep1; 0.846 [0.812-0.875] ep1",
+     "text": "0.806"
+    },
+    {
+     "value": 0.846,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.826 [0.790-0.857] ep1; 0.806 [0.769-0.838] ep1; 0.846 [0.812-0.875] ep1",
+     "text": "0.846"
+    }
+   ],
+   "mean_node": {
+    "value": 0.826,
+    "file": "../results/vsassm/results/b27_verdict.txt",
+    "line": "    nce * mean 0.826 [0.805-0.845]  recovery 0.06 -> FAIL",
+    "text": "0.826"
+   }
+  },
+  "C": {
+   "family": "orth",
+   "mean": 0.527,
+   "outcome": "FAIL",
+   "seeds": [
+    {
+     "value": 0.526,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.526 [0.482-0.569] ep6; 0.542 [0.498-0.585] ep9; 0.514 [0.470-0.558] ep6",
+     "text": "0.526"
+    },
+    {
+     "value": 0.542,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.526 [0.482-0.569] ep6; 0.542 [0.498-0.585] ep9; 0.514 [0.470-0.558] ep6",
+     "text": "0.542"
+    },
+    {
+     "value": 0.514,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "          seeds 0.526 [0.482-0.569] ep6; 0.542 [0.498-0.585] ep9; 0.514 [0.470-0.558] ep6",
+     "text": "0.514"
+    }
+   ],
+   "mean_node": {
+    "value": 0.527,
+    "file": "../results/vsassm/results/b27_verdict.txt",
+    "line": "    orth* mean 0.527 [0.501-0.552]  recovery 0.03 -> FAIL",
+    "text": "0.527"
+   }
+  }
+ },
+ "lora": {
+  "A": {
+   "mean": 0.5,
+   "published_mean": 0.505,
+   "margin": 0.414,
+   "seeds": [
+    {
+     "value": 0.515,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.515 [0.484-0.546] ep12; 0.489 [0.458-0.520] ep3; 0.495 [0.464-0.526] ep5   per-seed margins +0.400/+0.424/+0.418",
+     "text": "0.515"
+    },
+    {
+     "value": 0.489,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.515 [0.484-0.546] ep12; 0.489 [0.458-0.520] ep3; 0.495 [0.464-0.526] ep5   per-seed margins +0.400/+0.424/+0.418",
+     "text": "0.489"
+    },
+    {
+     "value": 0.495,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.515 [0.484-0.546] ep12; 0.489 [0.458-0.520] ep3; 0.495 [0.464-0.526] ep5   per-seed margins +0.400/+0.424/+0.418",
+     "text": "0.495"
+    }
+   ],
+   "mean_node": {
+    "value": 0.5,
+    "file": "../results/vsassm/results/b27_verdict.txt",
+    "line": "  arena A: LoRA mean 0.500 [0.476-0.523]  (published 0.505)  naming head 0.914  margin +0.414 (published +0.408) -> STANDS  [under-fitted baseline]",
+    "text": "0.500"
+   },
+   "training_line": "    training accuracy: at selected epoch 0.532/0.524/-, max 0.532/0.524/0.534, final 0.532/0.508/0.518   fitted (>= 0.95 in tuning and every seed): False"
+  },
+  "B": {
+   "mean": 0.878,
+   "published_mean": 0.795,
+   "margin": 0.118,
+   "seeds": [
+    {
+     "value": 0.904,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.904 [0.875-0.927] ep11; 0.980 [0.964-0.989] ep11; 0.750 [0.710-0.786] ep11   per-seed margins +0.086/+0.020/+0.248",
+     "text": "0.904"
+    },
+    {
+     "value": 0.98,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.904 [0.875-0.927] ep11; 0.980 [0.964-0.989] ep11; 0.750 [0.710-0.786] ep11   per-seed margins +0.086/+0.020/+0.248",
+     "text": "0.980"
+    },
+    {
+     "value": 0.75,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.904 [0.875-0.927] ep11; 0.980 [0.964-0.989] ep11; 0.750 [0.710-0.786] ep11   per-seed margins +0.086/+0.020/+0.248",
+     "text": "0.750"
+    }
+   ],
+   "mean_node": {
+    "value": 0.878,
+    "file": "../results/vsassm/results/b27_verdict.txt",
+    "line": "  arena B: LoRA mean 0.878 [0.859-0.896]  (published 0.795)  naming head 0.996  margin +0.118 (published +0.201) -> NARROWED  [under-fitted baseline]",
+    "text": "0.878"
+   },
+   "training_line": "    training accuracy: at selected epoch -/-/-, max 0.928/0.987/0.777, final 0.928/0.987/0.777   fitted (>= 0.95 in tuning and every seed): False"
+  },
+  "C": {
+   "mean": 0.482,
+   "published_mean": 0.516,
+   "margin": 0.452,
+   "seeds": [
+    {
+     "value": 0.48,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.480 [0.437-0.524] ep10; 0.472 [0.429-0.516] ep2; 0.494 [0.450-0.538] ep5   per-seed margins +0.452/+0.460/+0.444",
+     "text": "0.480"
+    },
+    {
+     "value": 0.472,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.480 [0.437-0.524] ep10; 0.472 [0.429-0.516] ep2; 0.494 [0.450-0.538] ep5   per-seed margins +0.452/+0.460/+0.444",
+     "text": "0.472"
+    },
+    {
+     "value": 0.494,
+     "file": "../results/vsassm/results/b27_verdict.txt",
+     "line": "    seeds 0.480 [0.437-0.524] ep10; 0.472 [0.429-0.516] ep2; 0.494 [0.450-0.538] ep5   per-seed margins +0.452/+0.460/+0.444",
+     "text": "0.494"
+    }
+   ],
+   "mean_node": {
+    "value": 0.482,
+    "file": "../results/vsassm/results/b27_verdict.txt",
+    "line": "  arena C: LoRA mean 0.482 [0.463-0.500]  (published 0.516)  naming head 0.934  margin +0.452 (published +0.418) -> STANDS  [under-fitted baseline]",
+    "text": "0.482"
+   },
+   "training_line": "    training accuracy: at selected epoch -/-/-, max 0.549/0.544/0.562, final 0.549/0.544/0.562   fitted (>= 0.95 in tuning and every seed): False"
+  }
+ },
+ "families": {
+  "A": {
+   "floor": 0.509,
+   "naming_head": 0.914,
+   "line": "  arena A: floor 0.509, naming head 0.914 (0.915/0.913/0.913), binding loss as published 0.501",
+   "orth": {
+    "mean": 0.575,
+    "outcome": "FAIL",
+    "primary": false,
+    "mean_line": "    orth  mean 0.575 [0.548-0.602]  recovery 0.16 -> FAIL",
+    "seeds_line": "          seeds 0.562 [0.531-0.592] ep10; 0.571 [0.540-0.601] ep8; 0.593 [0.562-0.623] ep10",
+    "crosstalk_line": "    vic   mean 0.503 [0.482-0.524]  recovery -0.01 -> FAIL"
+   },
+   "vic": {
+    "mean": 0.503,
+    "outcome": "FAIL",
+    "primary": false,
+    "mean_line": "    vic   mean 0.503 [0.482-0.524]  recovery -0.01 -> FAIL",
+    "seeds_line": "          seeds 0.498 [0.467-0.529] ep7; 0.517 [0.486-0.548] ep5; 0.495 [0.464-0.526] ep8",
+    "crosstalk_line": "    nce * mean 0.763 [0.741-0.785]  recovery 0.63 -> PARTIAL"
+   },
+   "nce": {
+    "mean": 0.763,
+    "outcome": "PARTIAL",
+    "primary": true,
+    "mean_line": "    nce * mean 0.763 [0.741-0.785]  recovery 0.63 -> PARTIAL",
+    "seeds_line": "          seeds 0.777 [0.750-0.802] ep10; 0.744 [0.716-0.770] ep9; 0.769 [0.742-0.794] ep10",
+    "crosstalk_line": "    (* = primary, chosen on dev)"
+   }
+  },
+  "B": {
+   "floor": 0.815,
+   "naming_head": 0.996,
+   "line": "  arena B: floor 0.815, naming head 0.996 (0.990/1.000/0.998), binding loss as published 0.507",
+   "orth": {
+    "mean": 0.792,
+    "outcome": "FAIL",
+    "primary": false,
+    "mean_line": "    orth  mean 0.792 [0.769-0.816]  recovery -0.13 -> FAIL",
+    "seeds_line": "          seeds 0.756 [0.716-0.792] ep1; 0.798 [0.761-0.831] ep1; 0.822 [0.786-0.853] ep1",
+    "crosstalk_line": "    vic   mean 0.677 [0.651-0.702]  recovery -0.76 -> FAIL"
+   },
+   "vic": {
+    "mean": 0.677,
+    "outcome": "FAIL",
+    "primary": false,
+    "mean_line": "    vic   mean 0.677 [0.651-0.702]  recovery -0.76 -> FAIL",
+    "seeds_line": "          seeds 0.700 [0.658-0.739] ep3; 0.596 [0.552-0.638] ep2; 0.734 [0.694-0.771] ep4",
+    "crosstalk_line": "    nce * mean 0.826 [0.805-0.845]  recovery 0.06 -> FAIL"
+   },
+   "nce": {
+    "mean": 0.826,
+    "outcome": "FAIL",
+    "primary": true,
+    "mean_line": "    nce * mean 0.826 [0.805-0.845]  recovery 0.06 -> FAIL",
+    "seeds_line": "          seeds 0.826 [0.790-0.857] ep1; 0.806 [0.769-0.838] ep1; 0.846 [0.812-0.875] ep1",
+    "crosstalk_line": "    (* = primary, chosen on dev)"
+   }
+  },
+  "C": {
+   "floor": 0.515,
+   "naming_head": 0.934,
+   "line": "  arena C: floor 0.515, naming head 0.934 (0.932/0.932/0.938), binding loss as published 0.483",
+   "orth": {
+    "mean": 0.527,
+    "outcome": "FAIL",
+    "primary": true,
+    "mean_line": "    orth* mean 0.527 [0.501-0.552]  recovery 0.03 -> FAIL",
+    "seeds_line": "          seeds 0.526 [0.482-0.569] ep6; 0.542 [0.498-0.585] ep9; 0.514 [0.470-0.558] ep6",
+    "crosstalk_line": "    vic   mean 0.504 [0.479-0.528]  recovery -0.03 -> FAIL"
+   },
+   "vic": {
+    "mean": 0.504,
+    "outcome": "FAIL",
+    "primary": false,
+    "mean_line": "    vic   mean 0.504 [0.479-0.528]  recovery -0.03 -> FAIL",
+    "seeds_line": "          seeds 0.494 [0.450-0.538] ep9; 0.506 [0.462-0.550] ep5; 0.512 [0.468-0.556] ep8",
+    "crosstalk_line": "    nce   mean 0.512 [0.485-0.540]  recovery -0.01 -> FAIL"
+   },
+   "nce": {
+    "mean": 0.512,
+    "outcome": "FAIL",
+    "primary": false,
+    "mean_line": "    nce   mean 0.512 [0.485-0.540]  recovery -0.01 -> FAIL",
+    "seeds_line": "          seeds 0.516 [0.472-0.560] ep5; 0.518 [0.474-0.561] ep9; 0.502 [0.458-0.546] ep4",
+    "crosstalk_line": "    (* = primary, chosen on dev)"
+   }
+  }
+ }
+}

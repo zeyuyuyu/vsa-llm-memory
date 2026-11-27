@@ -1,0 +1,84 @@
+# B73 sample reading by the AI-assisted process (prereg 'Checks'): e5-base-v2 (b73_sample.py; raw lines below)
+
+## e5: lowest R1-V16 cell STORE - LAMC = -10.01 points at M = 1024, 16 bits per fact
+### LAMC only: 1300 queries in the cell; 10 drawn at random (seed 73)
+  store  0 | alias 'Vanishing Westerner' -> label 'The Vanishing Westerner' | gold 14 | STORE 0 | LAMC 14
+  store  1 | alias '2nd Thessalonians' -> label 'Second Epistle to the Thessalonians' | gold 10 | STORE 0 | LAMC 10
+  store  1 | alias 'Dr Jekyll and Mr Hyde' -> label 'Strange Case of Dr Jekyll and Mr Hyde' | gold 4 | STORE 3 | LAMC 4
+  store  1 | alias 'Wieruszow' -> label 'Wieruszów' | gold 0 | STORE 8 | LAMC 0
+  store  2 | alias 'Dames du Bois de Boulogne' -> label 'Les Dames du Bois de Boulogne' | gold 5 | STORE 8 | LAMC 5
+  store  3 | alias 'Strongest' -> label 'The Strongest' | gold 1 | STORE 4 | LAMC 1
+  store  3 | alias 'Sinkāt' -> label 'Sinkat' | gold 11 | STORE 5 | LAMC 11
+  store  4 | alias 'FWD' -> label 'FWD Group' | gold 4 | STORE 8 | LAMC 4
+  store  4 | alias 'The Best Bette' -> label 'Jackpot! The Best Bette' | gold 11 | STORE 2 | LAMC 11
+  store  4 | alias 'Rape After' -> label 'The Rape After' | gold 4 | STORE 10 | LAMC 4
+### STORE only: 531 queries in the cell; 10 drawn at random (seed 73)
+  store  0 | alias 'Adetola Kunle-Hassan' -> label 'Ade Hassan' | gold 7 | STORE 7 | LAMC 0
+  store  0 | alias 'Chen Peizhe' -> label 'Chen Pei-jer' | gold 10 | STORE 10 | LAMC 3
+  store  0 | alias 'NBC Tuesday Night at the Movies' -> label 'The NBC Monday Movie' | gold 7 | STORE 7 | LAMC 15
+  store  0 | alias 'Texas Chainsaw Massacre' -> label 'The Texas Chain Saw Massacre' | gold 1 | STORE 1 | LAMC 13
+  store  2 | alias 'The Phantom of the Opera (original London cast recording)' -> label 'The Phantom of the Opera' | gold 9 | STORE 9 | LAMC 12
+  store  2 | alias 'Adrian varela' -> label 'sebastian valenzuela' | gold 6 | STORE 6 | LAMC 14
+  store  2 | alias 'Do You Wanna Funk' -> label 'Do Ya Wanna Funk' | gold 11 | STORE 11 | LAMC 9
+  store  3 | alias 'Man Without a Country' -> label 'The Man Without a Country' | gold 4 | STORE 4 | LAMC 9
+  store  3 | alias 'Mariana and Scarlett' -> label 'Mariana & Scarlett' | gold 15 | STORE 15 | LAMC 2
+  store  4 | alias 'Norwegian Coastal Express' -> label 'Hurtigruten' | gold 8 | STORE 8 | LAMC 15
+
+
+Notes (e5-base-v2, M = 1,024, 16 values, 16 bits per fact; the R1-V16 cell with the lowest STORE - LAMC, -10.0 points):
+- LAMC answers 1,300 queries the store misses and the store 531 that LAMC misses (of the cell's 5 stores). The drawn
+  LAMC-only queries are mostly near-copies of the label that the store's random features do not separate from the
+  other 1,023 stored labels: a dropped article ('Vanishing Westerner', 'Strongest', 'Rape After', 'Dames du Bois de
+  Boulogne'), diacritics ('Wieruszow' / 'Wieruszów', 'Sinkāt' / 'Sinkat'), a shortened title ('Dr Jekyll and Mr Hyde',
+  'The Best Bette'), an ordinal written out ('2nd Thessalonians') and an abbreviation ('FWD' / 'FWD Group').
+- The STORE-only queries are also near-copies in half the draws ('Texas Chainsaw Massacre', 'Man Without a Country',
+  'Mariana and Scarlett', 'Do You Wanna Funk', the cast-recording title), plus aliases that share nothing with their
+  label ('Adrian varela' -> 'sebastian valenzuela', 'Adetola Kunle-Hassan' -> 'Ade Hassan', 'Chen Peizhe' -> 'Chen
+  Pei-jer', 'NBC Tuesday Night at the Movies' -> 'The NBC Monday Movie', 'Norwegian Coastal Express' -> 'Hurtigruten'),
+  where a correct answer is close to the 1-in-16 chance of a guess.
+- No scoring artefact: gold values are the stores' own values (0-15), both memories answer in range, the re-drawn
+  stores reproduce the recorded gold vectors exactly, and the two sets differ in which near-copy aliases each memory
+  reads, as on PopQA (B60's sample reading).
+- The fresh aliases look like PopQA's: Wikidata's English aliases of English-Wikipedia items (alternative titles,
+  transliterations, short forms, a few unrelated names).
+
+# Qwen3-8B (computed on the box: b73_sample.py qwen8)
+
+## qwen8: lowest R1-V16 cell STORE - LAMC = -9.28 points at M = 256, 8 bits per fact
+### LAMC only: 1735 queries in the cell; 10 drawn at random (seed 73)
+  store  0 | alias 'Queenstown, South Africa' -> label 'Queenstown' | gold 2 | STORE 4 | LAMC 2
+  store  4 | alias 'Mariana and Scarlett' -> label 'Mariana & Scarlett' | gold 0 | STORE 8 | LAMC 0
+  store  5 | alias 'Its Raining Men' -> label "It's Raining Men" | gold 9 | STORE 5 | LAMC 9
+  store  6 | alias 'Jaqueline Maria Duarte Pires Ferreira Rodrigues Pires' -> label 'Jacqueline Maria Duarte Pires Ferreira Pires' | gold 15 | STORE 9 | LAMC 15
+  store  9 | alias 'Herbert Caen' -> label 'Herb Caen' | gold 15 | STORE 12 | LAMC 15
+  store 13 | alias 'Fiona Jane Hall' -> label 'Fiona Hall' | gold 6 | STORE 14 | LAMC 6
+  store 15 | alias 'Samuel Alexander William Timmins' -> label 'Sam Timmins' | gold 5 | STORE 0 | LAMC 5
+  store 16 | alias 'Sportverein Waldhof Mannheim e.V.' -> label 'SV Waldhof Mannheim' | gold 6 | STORE 11 | LAMC 6
+  store 19 | alias 'Oxford of the East' -> label 'Pune' | gold 6 | STORE 4 | LAMC 6
+  store 19 | alias 'Calabria 2007' -> label 'Calabria' | gold 13 | STORE 7 | LAMC 13
+### STORE only: 1012 queries in the cell; 10 drawn at random (seed 73)
+  store  1 | alias 'Bayer Mack' -> label 'Bayer L. Mack' | gold 10 | STORE 10 | LAMC 14
+  store  1 | alias 'Todres the Trombonist' -> label 'Todros, Blow' | gold 10 | STORE 10 | LAMC 5
+  store  3 | alias 'Leopard' -> label 'The Leopard' | gold 6 | STORE 6 | LAMC 5
+  store  3 | alias 'Allen Onyema' -> label 'Allen Ifechukwu Onyema' | gold 13 | STORE 13 | LAMC 5
+  store  8 | alias 'Facts of Life' -> label 'The Facts of Life' | gold 7 | STORE 7 | LAMC 3
+  store  8 | alias 'Anthony Edward Martin' -> label 'Tony Martin' | gold 11 | STORE 11 | LAMC 3
+  store 11 | alias 'Luis Tinoco' -> label 'Luís Tinoco' | gold 7 | STORE 7 | LAMC 10
+  store 14 | alias 'Steve Face' -> label 'Matt Darey' | gold 2 | STORE 2 | LAMC 7
+  store 14 | alias 'Ipatinga Esporte Clube' -> label 'Ipatinga Futebol Clube' | gold 5 | STORE 5 | LAMC 7
+  store 16 | alias 'Cercasi modella' -> label 'Model Wanted' | gold 6 | STORE 6 | LAMC 0
+
+
+Notes (Qwen3-8B, M = 256, 16 values, 8 bits per fact; the R1-V16 cell with the lowest STORE - LAMC, -9.3 points; 20 stores):
+- LAMC answers 1,735 queries the store misses and the store 1,012 that LAMC misses. The LAMC-only draws are aliases
+  that extend or shorten the label (a qualifier: 'Queenstown, South Africa', 'Calabria 2007'; a full name for a short
+  one: 'Samuel Alexander William Timmins' / 'Sam Timmins', 'Fiona Jane Hall', 'Herbert Caen'; the expanded club name
+  'Sportverein Waldhof Mannheim e.V.'; punctuation: 'Its Raining Men', 'Mariana and Scarlett') and one nickname
+  ('Oxford of the East' / 'Pune').
+- The STORE-only draws are of the same kinds (a dropped article: 'Leopard', 'Facts of Life'; a dropped middle name or
+  initial: 'Bayer Mack', 'Allen Onyema'; a diacritic: 'Luis Tinoco') plus aliases unrelated to the label ('Steve Face'
+  / 'Matt Darey', 'Cercasi modella' / 'Model Wanted', 'Anthony Edward Martin' / 'Tony Martin'), where a right answer
+  is near the 1-in-16 guess rate.
+- No scoring artefact: gold values in 0-15 are the stores' own, both memories answer in range, the re-drawn stores
+  reproduce the recorded gold vectors exactly. As on PopQA (B60, B71) the two memories differ by which near-copy
+  aliases each reads; least squares reads more of them.

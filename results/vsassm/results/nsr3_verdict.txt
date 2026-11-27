@@ -1,0 +1,120 @@
+# NSR3 verdict: temporal impact questions need reasoning over the state's history (prereg/NSR3_prereg.md), 2026-11-09
+# Held-out: the 40 nsr2 logs (seeds 500+), 460 temporal questions (230 targets x 2 windows of 15-35% of the log), first
+# generated after the prereg. Reader output: the nsr2 run NSR2 used. Scored once: nsr/out/nsr3_score_nsr2.json
+# (independent scorer: own event replay and window union).
+
+## Results (set-exact)
+| arm                                                   | all   | warehouse | biobank | home  | ops   |
+| history engine over the read state                    | 0.874 | 0.725     | 0.933   | 0.838 | 0.963 |
+| Qwen3-32B thinking over the log (forced; registered)  | 0.202 | 0.113     | 0.083   | 0.088 | 0.406 |
+|   same, underscore-normalising parse (sensitivity)    | 0.252 | 0.113     | 0.083   | 0.231 | 0.406 |
+|   same, strict (no answer at the 8,192-token limit)    | 0.194 |           |         |       |       |
+| system-of-record history                              | 0.217 | 0.150     | 0.067   | 0.163 | 0.363 |
+| final state only (NSR1's engine)                      | 0.041 | 0.013     | 0.050   | 0.019 | 0.075 |
+| sanity: truth history + the same union                | 1.000 |
+LLM runs: 460, 73 hit the 8,192-token limit (forced with 512 tokens), 40 answers still unparseable.
+
+## Registered bars
+T1 history >= 0.75: PASS (0.874).  T2 history - LLM (forced) >= 0.30: PASS (+0.672; +0.622 with the normalising parse).
+T3 history - SoR history >= 0.40: PASS (+0.657).  T4 history - final state >= 0.50: PASS (+0.833).  Sanity: holds.
+Predictions: all held (T1 predicted ~0.85; the LLM predicted 0.2-0.3, got 0.20 / 0.25).
+
+## Manual inspection
+- History-engine misses in warehouse and home (48): 30 miss items, 15 add items, 3 both. Misses are moves into the region
+  during the window that the reader did not catch (a pallet passing through an aisle) or items it had elsewhere when the
+  window opened; extras are transient misreads later corrected. Warehouse is the weakest scenario (0.725), as in
+  development: a window accumulates every transient error inside it, while the end state only needs the last write.
+- LLM misses (344, normalising parse): 153 missed items, 40 no answer, 38 extra items, 26 equal to the system-of-record
+  history (human messages ignored), 14 equal to the final-state answer (window ignored), 73 other. 10 sampled answer lines
+  were read: all parse as written; the errors are wrong sets, not format failures.
+
+## Conclusion
+Impact questions about a past window cannot be answered from the current state (0.04) and are mostly missed by a strong
+open LLM reading the whole log (0.20-0.25). An engine that keeps the read state's history and takes the union over the
+window answers 0.87 on fresh logs. Here too the engine's errors are the reader's (moves missed or misread inside the
+window); the history engine itself is exact (truth history: 1.000).
+Limits: as NSR1 (simulated sites, one open LLM, no frontier long-context model); windows are drawn from the log's own
+clock; the history engine is deterministic (no reliability weighting; NSR2 found that weighting does not add for flagging).
+
+## Literature check (conclusion -> literature)
+SUPPORTED: LLM accuracy on interval and timeline questions tops out at 36% for frontier models (Test of Time, Table 5,
+opened for docs/neurosymbolic_review.md Part III); end-to-end state tracking plateaus near 75% and indirect effects are
+missed (ActionReasoningBench, Tables 3-4, re-opened). NO PRECEDENT FOUND for window impact questions over a state read
+from multi-channel logs (Part III.5).
+
+## Addendum 2026-11-11: frontier-model arm (T2-F, prereg/NSR1_prereg.md amendment 3; frontier amendment 1)
+gpt-6.1-sol via Sidrune, reasoning_effort "xhigh", streamed, the same 460 prompts as the Qwen3-32B arm, 32,000-token
+budget, no forcing. 460 calls, USD 23.6, plus 17 dropped streams re-run (USD 1.2; frontier amendment 1). Two calls used
+the whole budget with no answer (scored as no answer). Answer of record: nsr/out/api/nsr3_gpt-6.1-sol_xhigh.final.jsonl.
+Scored once with the independent scorer: nsr/out/nsr3_score_frontier.json. Paired analysis: nsr/nsr3_compare.py.
+| arm                                              | all   | warehouse | biobank | home  | ops   | micro-F1 |
+| history engine over the read state               | 0.874 | 0.725     | 0.933   | 0.838 | 0.963 | 0.982    |
+| gpt-6.1-sol over the log (registered parse)      | 0.830 | 0.850     | 0.717   | 0.750 | 0.944 | 0.953    |
+|   underscore-normalising parse                   | 0.859 |           |         | 0.831 |       | 0.965    |
+|   dropped streams scored as no answer (1st pass) | 0.807 |           |         |       |       | 0.936    |
+| Qwen3-32B over the log (forced; registered)      | 0.202 |
+**T2-F (history - frontier >= 0.30): FAIL.** Difference +0.044, paired 95% bootstrap interval +0.002 to +0.087. With
+the normalising parse: +0.015 (-0.026 to +0.057). **My prediction (frontier about 0.40) was wrong**, as in NSR1.
+Errors are mostly disjoint: both right 341, only history 61, only frontier 41, both wrong 17; either right 0.963.
+The frontier model beats the history engine on warehouse (0.850 vs 0.725; frontier-only right 18 of 80 warehouse
+questions). Warehouse is where the reader's transient misreads accumulate inside a window. The engine leads on
+biobank (0.933 vs 0.717) and home.
+Frontier misses (78): 41 miss items, 16 add items, 8 both, 8 no answer (2 budget, 6 unparseable underscore IDs in home),
+4 equal to the system-of-record history, 1 equal to the final state. 8 sampled answer lines were read: each parses as
+written; the errors are sets with one item too many or too few, or underscore-formatted names (home).
+
+**Revised conclusion.** "Window questions are mostly missed by an LLM reading the log" holds for the open model
+(Qwen3-32B 0.20-0.25), NOT for a frontier reasoning model at this log length (~10k tokens). That model comes within
+0.02-0.04 of the history engine. The engine's case at this scale is the same as in NSR1: cost (USD 0.05 and about 40 s
+per question against one 1.7B read of each message and microsecond answers), on-device operation, and traceable
+answers. The two error sets are again complementary (either right 0.963).
+
+Literature check: PARTIAL CONFLICT with Test of Time (frontier models of 2024 at most 36% on interval questions).
+Those were non-reasoning models on synthetic timeline arithmetic. CONSISTENT with TimE (NeurIPS 2025, arXiv
+2505.12891; read only in a secondary summary): reasoning models gain clearly on computation-type temporal tasks,
+and our windows are explicit clock ranges. Open, NSR5: whether the frontier model holds as the record grows.
+Sensitivity (frontier amendment 1, rule 3): the 2 budget-exhausted questions were re-run with a 64,000-token budget.
+Both came back correct, one after 41,632 tokens and one after 210 (so its first exhaustion was stochastic). With
+them counted, the frontier score is 0.835 and the difference +0.039. T2-F is unchanged.
+Correction (2026-11-11, prereg/NSR_frontier_amendment2.md, POST HOC). The 6 "unparseable" frontier answers above were
+NOT underscore IDs. In each, the stream reassembly had glued every "Answer:" to the end of a progress note. With the
+line break restored (--repair) the frontier model scores 0.839 (0.867 with the normalising parse; micro-F1 0.965 /
+0.976). History - frontier: +0.035 (-0.007 to +0.076); with the normalising parse +0.007 (-0.035 to +0.046). T2-F
+fails on every parse; the history engine and the frontier model are statistically tied.
+
+## Addendum 2026-11-11: second frontier arm, Opus 5.5 (prereg/NSR5_amendment1.md, amendment 6; secondary, no bar)
+claude-opus-5-5, effort medium, max_tokens 64,000, the same 460 prompts. 460 calls, USD 19.51, 0 errors, 1 refusal (no
+answer), 0 budget exhaustions. Answers: nsr/out/api/nsr3_claude-opus-5-5_medium.jsonl.
+| arm                                   | set-exact | micro-F1 | history - arm (paired CI)   | either right |
+| history engine                        | 0.874     | 0.982    |                             |              |
+| Opus 5.5, registered parse            | 0.802     | 0.954    | +0.072 (+0.028 to +0.115)   | 0.954        |
+| Opus 5.5, normalised (= + repair)     | 0.878     | 0.981    | -0.004 (-0.046 to +0.035)   | 0.974        |
+| gpt-6.1-sol, repaired + normalised    | 0.867     | 0.976    | +0.007 (-0.035 to +0.046)   | 0.970        |
+The registered gap is again Opus's underscore item IDs. On the normalised parse the history engine, Opus 5.5 and
+gpt-6.1-sol are tied. The two frontier models fail together: both wrong on 39 of 460 questions (disagree on 17 + 22),
+against 12 (Opus) and 14 (gpt) shared with the history engine. Their errors are correlated with each other and
+complementary to the pipeline's.
+
+## Addendum (2026-11-12): gpt arm on the OpenAI direct route (prereg/NSR_frontier_amendment3.md)
+All gpt-arm answers above came through the Sidrune gateway. NSR5 amendment 8 showed that Sidrune's "gpt-6.1-sol" is not
+the same model, or not the same accounting, as OpenAI's (prompt_tokens on identical text 0.72-2.71x; here 0.72-1.91x,
+median 1.14). The 460 NSR3 prompts were re-run on api.openai.com at the registered settings (gpt-6.1-sol, xhigh, 32,000
+tokens). Result: 460/460 valid, 0 errors, 0 hit the budget, completion tokens median 856, p90 2,367, max 7,647. About USD 11.6.
+nsr/out/api/nsr3_gpt-6.1-sol_xhigh_direct.jsonl.
+| arm                                 | set-exact | warehouse / biobank / home / ops |
+| history engine                      | 0.874     | .72 / .93 / .84 / .96            |
+| gpt via Sidrune, registered         | 0.830     | .85 / .72 / .75 / .94            |
+| gpt via Sidrune, repaired + norm.   | 0.867     | .86 / .75 / .83 / .95            |
+| Opus 5.5 medium, normalised         | 0.878     | .88 / .77 / .86 / .94            |
+| gpt via OpenAI direct (all parses)  | 0.904     | .93 / .80 / .88 / .96            |
+History - direct: -0.030 (paired CI -0.067 to +0.007); 33 only-history, 47 only-direct, 11 neither; either right 0.976.
+T2-F recomputed on the direct route (reported, not replacing the registered FAIL): -0.030, FAIL.
+Predictions (frontier amendment 3): hit_limit at most 2%: holds (0). Parses agree: holds (identical). Set-exact about
+0.90: holds (0.904). History - frontier below 0: holds (-0.030, CI includes 0).
+Read: on the official route the frontier model is at least as good as the history engine on temporal questions. It is
+better in warehouse (.93 vs .72, aisle-closure windows) and worse in biobank (.80 vs .93, nested containment). The two
+err on different questions (either right 0.976), as before.
+Same arm at three decimals (nsr3_compare.py / per-site recount from nsr/out/nsr3_nsr2_gptD_strict.jsonl):
+| gpt-6.1-sol over the log, OpenAI direct | 0.904 | 0.925     | 0.800   | 0.875 | 0.963 |
+Errors are mostly disjoint: both right 369, only history 33, only frontier 47, both wrong 11; either right 0.976.
+Cost on the direct route: USD 0.025 and 22 s per question on average (USD 11.55 for 460; median USD 0.021 and 17 s).

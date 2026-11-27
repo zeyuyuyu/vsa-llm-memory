@@ -1,0 +1,319 @@
+# B30b hand-reading (prereg/B30b_referee_baselines_prereg.md, Verification), 2026-11-18
+Helper: b30b_handread.py (logs | bab | babclass). Second scorer: results/b30b_check.txt (0 disagreements).
+
+## Part (a), location (414): S32 R1 vs the published greedy run
+114 questions differ in correctness: S32 right on 67, the published run right on 47 (net +20 = D1 +0.048). Only 9 of
+the 114 had hit the 8,192-token limit in the published run (S32 right on 7 of them), so about 5 of the net 20 come from
+the larger budget and the rest from sampling instead of greedy decoding reading the same log differently. No S32 run
+reached the 32,768 budget (longest reasoning 13,535 tokens). Reading 20 of the 114 (random, seed 0): every miss on
+either side is a misread state, never a format problem: the wrong freezer or rack at the end of a box > rack > freezer
+chain (biobank-301-1, -305-5, -304-4, -307-7), a pallet put back to an earlier slot or the dock (warehouse-301-1,
+-305-5, -306-6), a cluster or primary taken from a stale bot line instead of the engineer's later message (ops-305-5,
+ops-301-1, ops-300-0), a household item placed by the camera rather than by what was heard (home-300-0, -301-1,
+-309-9). Sampling fixes some greedy misreads and makes others; the net is small against the system's 0.959.
+
+## Part (a), impact (230) and window (460): S32 R1 vs the published greedy run
+- The questions the published run lost to the 8,192-token limit stay hard with 32,768 tokens and sampling: of the 48
+  impact questions that hit the limit, S32 R1 answers 5 correctly (the published forced answers: 3); of the 73 window
+  questions, 2 (published forced: 4). S32 R1 itself reached the 32,768 budget on 1 impact and 3 window questions only:
+  the extra budget is used and the reasoning ends, but it ends on a wrong state.
+- Discordant questions: impact 35 (S32 right 20, published right 15), window 48 (22 vs 26). Read 10 of each (random,
+  seed 0). Every miss on either side is a misread or incomplete state, not a format or parse problem: a pallet that
+  moved into or out of the aisle during the day missed (warehouse-500-0, -508-8), a database primary placed on the
+  wrong host so services are added or dropped (ops-400-0, -401-1, -503-3, -500-0, -505-5, ops-405-5), a service's
+  region taken from a stale deploy line (ops-507-7, -502-2), a home item's room missed or added (home-401-1, -406-6,
+  -408-8, -504-4). On the ambiguous home questions ("Grandpa's things") S32 sometimes answers with Grandpa's own items
+  only (home-401-1: "cane" for cane, slippers, tablet), the wording defect the NSR1 verdict recorded.
+- So the two decodings make different single misreads on the same long, overwritten logs; neither tracks the state
+  well. The budget and the decoding were not what kept Qwen3-32B at 0.2-0.3 on these sets.
+
+## Part (b): BABILong 128k, samples where the memory and the notepad disagree (read by hand 2026-11-18)
+
+Every disagreement goes one way: the memory is right on all 106 (q8T) and 200 (q17T) samples where the arms differ.
+Automatic classification of every notepad error (b30b_handread.py babclass) plus reading of 20+ cases in full
+(notepad, answer and the end of the reasoning):
+
+q8T (107 errors at 128k):
+- qa3 "Where was X before Y?" (57 errors): the notepads are long (up to 152 lines; the qa3 stories are long), and the
+  model loses the object's trajectory: it attaches the object to the wrong carrier, or forgets that a carried object
+  moves with its carrier. 13 of the 45 single-label errors name the place before the FIRST visit to Y rather than the
+  most recent one (the bAbI gold and our rule use the most recent; the model's reasoning sometimes says "for the first
+  time"); 7 give no place.
+- qa5 "Who received X / who gave X to Y" (31 errors): 28 list several names with the right one among them ("Mary,
+  Fred"): the record has several gives of the same object, and the model lists them all instead of naming the most
+  recent, which the official rule scores wrong. A task-convention error, not a reading error; frontier models given
+  the raw text follow the convention (B18 references 96.8 / 97.6 at 128k).
+- qa2 "Where is the football?" (10 errors), on SHORT clean notepads (12-33 lines): genuine state-tracking errors, e.g.
+  128k|qa2|84 (12 lines): "John took the football. John went to the garden. ... John went to the bathroom." -> the
+  model answers garden, forgetting that the football moved with John; 128k|qa2|39: drop order misread (bedroom
+  instead of bathroom).
+- qa4 (8 errors): inverse relations misread ("What is the office west of?" answered with what is west of the office),
+  or two places listed.
+- qa1 (1 error): 128k|qa1|92, the model attached two book-text events ("He went to the party", "He went to the town")
+  to John and missed "John went to the hallway". The notepad includes the reader's false events from the book text
+  (e.g. "Fred thompson went to the new york.", "Brinsmade went to the hospital."); the memory is keyed by name and never
+  reads them for a bAbI question, the model has to ignore them.
+q17T: the same kinds, more of them (qa2 57, qa3 78, qa4 34 errors), plus answers that list every place a person
+  visited ("bedroom, office, bathroom, garden").
+Reader with its LoRA (rdT, rdN): mostly a FORMAT failure: on qa2/qa3 it answers with an event list
+  ({"events": [["go", ...]]}) or "nothing" (the adapter was trained to write events); these arms say nothing about
+  reasoning and do not change the conservative reading (q17T is the best 1.7B arm).
+Without thinking (q8N, q17N): many more single wrong labels on qa2-qa4; q17N often echoes the instruction
+  ("a place, a name, an object").
+
+Post-hoc sensitivity (not registered): counting "several labels with the target among them" as right raises q8T at
+128k from 78.6 to 85.4 (+34), still 14.4 points below the memory.
+
+## Automatic classification of every notepad error (python3 -B b30b_handread.py babclass)
+
+128k q8T: errors by kind
+     1  qa1 no label
+    10  qa2 single wrong label
+     7  qa3 no label
+     5  qa3 single wrong label
+    13  qa3 single wrong label / equals the place before the FIRST visit
+    32  qa3 single wrong label / other
+     6  qa4 several, target among them
+     2  qa4 single wrong label
+     2  qa5 no label
+    28  qa5 several, target among them
+     1  qa5 several, target not among them
+
+128k q17T: errors by kind
+     3  qa1 several, target among them
+     2  qa1 single wrong label
+    35  qa2 no label
+    22  qa2 single wrong label
+    21  qa3 no label
+     1  qa3 several, target not among them
+     7  qa3 single wrong label
+     6  qa3 single wrong label / equals the place before the FIRST visit
+    43  qa3 single wrong label / other
+     3  qa4 no label
+    31  qa4 single wrong label
+    21  qa5 several, target among them
+     1  qa5 several, target not among them
+     5  qa5 single wrong label / names a participant of some give
+
+128k rdT: errors by kind
+     1  qa1 no label
+     4  qa1 single wrong label
+    96  qa2 no label
+     1  qa2 single wrong label
+    85  qa3 no label
+     1  qa3 several, target not among them
+     1  qa3 single wrong label
+     2  qa3 single wrong label / equals the place before the FIRST visit
+     8  qa3 single wrong label / other
+     8  qa4 no label
+     3  qa4 several, target among them
+    30  qa4 single wrong label
+     3  qa5 no label
+    24  qa5 several, target among them
+     2  qa5 several, target not among them
+     4  qa5 single wrong label / names a participant of some give
+
+128k q8N: errors by kind
+     3  qa1 several, target among them
+     8  qa1 single wrong label
+     1  qa2 several, target among them
+    51  qa2 single wrong label
+    13  qa3 no label
+     7  qa3 several, target among them
+     2  qa3 several, target not among them
+     6  qa3 single wrong label
+     9  qa3 single wrong label / equals the place before the FIRST visit
+    39  qa3 single wrong label / other
+     3  qa4 no label
+    35  qa4 single wrong label
+    27  qa5 several, target among them
+     2  qa5 single wrong label / names a participant of some give
+     1  qa5 single wrong label / other
+
+128k q17N: errors by kind
+    27  qa1 no label
+     7  qa1 several, target among them
+    11  qa1 single wrong label
+    21  qa2 no label
+    13  qa2 several, target among them
+     2  qa2 several, target not among them
+    35  qa2 single wrong label
+    57  qa3 no label
+     4  qa3 single wrong label
+     4  qa3 single wrong label / equals the place before the FIRST visit
+    25  qa3 single wrong label / other
+    47  qa4 no label
+     8  qa4 several, target among them
+    24  qa4 single wrong label
+    17  qa5 no label
+    26  qa5 several, target among them
+     1  qa5 single wrong label / names a participant of some give
+
+128k rdN: errors by kind
+    11  qa1 no label
+    19  qa1 several, target among them
+    14  qa1 single wrong label
+    92  qa2 no label
+     1  qa2 several, target among them
+     4  qa2 single wrong label
+    88  qa3 no label
+     2  qa3 several, target among them
+     2  qa3 several, target not among them
+     1  qa3 single wrong label
+     1  qa3 single wrong label / equals the place before the FIRST visit
+     5  qa3 single wrong label / other
+    77  qa4 no label
+    12  qa4 several, target among them
+     4  qa4 single wrong label
+     4  qa5 no label
+    29  qa5 several, target among them
+     2  qa5 several, target not among them
+     6  qa5 single wrong label / names a participant of some give
+
+512k q8T: errors by kind
+     2  qa3 no label
+     2  qa3 single wrong label
+     3  qa3 single wrong label / equals the place before the FIRST visit
+     6  qa3 single wrong label / other
+     1  qa4 several, target among them
+     1  qa4 single wrong label
+     6  qa5 several, target among them
+
+512k q17T: errors by kind
+     1  qa1 several, target among them
+     2  qa1 single wrong label
+    11  qa2 no label
+     7  qa2 single wrong label
+     6  qa3 no label
+     1  qa3 single wrong label
+    12  qa3 single wrong label / other
+     8  qa4 single wrong label
+     1  qa5 no label
+     4  qa5 several, target among them
+     1  qa5 single wrong label / names a participant of some give
+
+512k rdT: errors by kind
+     2  qa1 several, target among them
+     2  qa1 single wrong label
+    25  qa2 no label
+    20  qa3 no label
+     1  qa3 several, target not among them
+     1  qa3 single wrong label
+     3  qa3 single wrong label / other
+     2  qa4 no label
+     1  qa4 several, target among them
+     7  qa4 single wrong label
+     7  qa5 several, target among them
+
+512k q8N: errors by kind
+     4  qa1 single wrong label
+     7  qa2 single wrong label
+     4  qa3 no label
+     3  qa3 single wrong label
+     3  qa3 single wrong label / equals the place before the FIRST visit
+     7  qa3 single wrong label / other
+     1  qa4 no label
+     6  qa4 single wrong label
+     7  qa5 several, target among them
+
+512k q17N: errors by kind
+     9  qa1 no label
+     3  qa1 several, target among them
+     2  qa1 single wrong label
+     4  qa2 no label
+     5  qa2 several, target among them
+     9  qa2 single wrong label
+    16  qa3 no label
+     1  qa3 single wrong label
+     5  qa3 single wrong label / other
+     9  qa4 no label
+     1  qa4 several, target among them
+     6  qa4 single wrong label
+     2  qa5 no label
+     6  qa5 several, target among them
+
+512k rdN: errors by kind
+     1  qa1 no label
+     9  qa1 several, target among them
+     6  qa1 single wrong label
+    24  qa2 no label
+    23  qa3 no label
+     2  qa3 single wrong label / other
+    18  qa4 no label
+     1  qa4 several, target among them
+     2  qa4 single wrong label
+     1  qa5 no label
+     5  qa5 several, target among them
+     1  qa5 single wrong label / names a participant of some give
+
+1M q8T: errors by kind
+     3  qa2 no label
+     3  qa2 single wrong label
+     3  qa3 no label
+     1  qa3 single wrong label
+     3  qa3 single wrong label / equals the place before the FIRST visit
+     6  qa3 single wrong label / other
+     1  qa4 no label
+     2  qa4 single wrong label
+     6  qa5 several, target among them
+
+1M q17T: errors by kind
+     2  qa1 several, target among them
+     2  qa1 single wrong label
+    13  qa2 no label
+     5  qa2 single wrong label
+     7  qa3 no label
+     1  qa3 single wrong label
+    12  qa3 single wrong label / other
+     6  qa4 single wrong label
+     4  qa5 several, target among them
+     1  qa5 single wrong label / names a participant of some give
+
+1M rdT: errors by kind
+     3  qa1 single wrong label
+    25  qa2 no label
+    23  qa3 no label
+     1  qa3 single wrong label / other
+     2  qa4 no label
+     7  qa4 single wrong label
+     5  qa5 several, target among them
+     1  qa5 single wrong label / names a participant of some give
+
+1M q8N: errors by kind
+     4  qa1 single wrong label
+    12  qa2 single wrong label
+     4  qa3 no label
+     1  qa3 single wrong label
+     4  qa3 single wrong label / equals the place before the FIRST visit
+     9  qa3 single wrong label / other
+     7  qa4 single wrong label
+     7  qa5 several, target among them
+
+1M q17N: errors by kind
+     5  qa1 no label
+     3  qa1 several, target among them
+     3  qa1 single wrong label
+     6  qa2 no label
+     6  qa2 several, target among them
+     8  qa2 single wrong label
+    16  qa3 no label
+     4  qa3 single wrong label / other
+    10  qa4 no label
+     1  qa4 several, target among them
+     7  qa4 single wrong label
+     4  qa5 no label
+     6  qa5 several, target among them
+
+1M rdN: errors by kind
+     1  qa1 no label
+     4  qa1 several, target among them
+     1  qa1 several, target not among them
+     7  qa1 single wrong label
+    24  qa2 no label
+     1  qa2 several, target among them
+    23  qa3 no label
+     1  qa3 single wrong label / other
+    15  qa4 no label
+     1  qa4 single wrong label
+     2  qa5 no label
+     5  qa5 several, target among them

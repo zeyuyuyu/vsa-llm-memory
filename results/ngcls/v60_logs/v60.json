@@ -1,0 +1,62 @@
+{
+ "codebook": 128,
+ "arms": {
+  "floor": [
+   0.512,
+   0.53,
+   0.504
+  ],
+  "parser": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "vq_spans": [
+   0.474,
+   0.474,
+   0.474
+  ],
+  "vq_inj": [
+   0.5,
+   0.516,
+   0.526
+  ]
+ },
+ "diag": {
+  "vq_spans": [
+   {
+    "codebook_used": 1,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 1.0
+   },
+   {
+    "codebook_used": 1,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 1.0
+   },
+   {
+    "codebook_used": 1,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 1.0
+   }
+  ],
+  "vq_inj": [
+   {
+    "codebook_used": 28,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.27201692983884096
+   },
+   {
+    "codebook_used": 13,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.24825004069672799
+   },
+   {
+    "codebook_used": 18,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.17450756959140484
+   }
+  ]
+ },
+ "verdict": "vq_spans FAILS (discreteness alone does not rescue, as predicted) | RECIPE FAILS (the prescription weakens from sufficient to necessary)"
+}

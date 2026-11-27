@@ -1,0 +1,23 @@
+{
+ "task": 2,
+ "n_train": 775,
+ "n_eval": 420,
+ "banked": {
+  "handover": 1.0,
+  "prompt": 0.386,
+  "probe": 0.2452
+ },
+ "arms": {
+  "lora_direct": [
+   0.85,
+   0.6952380952380952,
+   0.8571428571428571
+  ],
+  "lora_through_vsa": [
+   0.5642857142857143,
+   0.6190476190476191,
+   0.6166666666666667
+  ]
+ },
+ "verdict": "THROUGH-VSA STILL FAILS on task 2 (below lora_direct by >= .05 in 3/3) | HANDOVER SURVIVES A SUPERVISED OPPONENT on task 2"
+}

@@ -1,0 +1,77 @@
+{
+ "host": "atl1-1-03-008-32-0.pace.gatech.edu",
+ "gpu": "NVIDIA H100 80GB HBM3",
+ "config": {
+  "arm": "lmt",
+  "B": 4,
+  "seed": 1,
+  "steps": 8000,
+  "bs": 32,
+  "lr": 0.0002,
+  "lora_r": 64,
+  "codes": "rand",
+  "proj": "mlp",
+  "lmt_layers": 2,
+  "eval_splits": "dev,test",
+  "eval_every": 2000,
+  "eval_sub": 100,
+  "tok_budget": 24000,
+  "device": "cuda",
+  "qfirst": 0,
+  "max_new": 6,
+  "mem_lr": 0.002,
+  "out": "out/test_lmt_B4_s1"
+ },
+ "n_trainable_lm": 69730304,
+ "n_trainable_mem": 117538817,
+ "emb_rms": 0.03449790179729462,
+ "curve": [
+  {
+   "step": 2000,
+   "N8_hop1": 0.05,
+   "N8_hop2": 0.0,
+   "N32_hop1": 0.03,
+   "N32_hop2": 0.05,
+   "N128_hop1": 0.02,
+   "N128_hop2": 0.0
+  },
+  {
+   "step": 4000,
+   "N8_hop1": 0.05,
+   "N8_hop2": 0.02,
+   "N32_hop1": 0.01,
+   "N32_hop2": 0.02,
+   "N128_hop1": 0.0,
+   "N128_hop2": 0.01
+  },
+  {
+   "step": 6000,
+   "N8_hop1": 0.03,
+   "N8_hop2": 0.02,
+   "N32_hop1": 0.02,
+   "N32_hop2": 0.02,
+   "N128_hop1": 0.05,
+   "N128_hop2": 0.04
+  }
+ ],
+ "train_seconds": 1630.9013392925262,
+ "dev": {
+  "N8_hop1": 0.023333333333333334,
+  "N8_hop2": 0.03,
+  "N32_hop1": 0.04,
+  "N32_hop2": 0.03333333333333333,
+  "N128_hop1": 0.03,
+  "N128_hop2": 0.05
+ },
+ "dev_seconds": 4.806115627288818,
+ "test": {
+  "N8_hop1": 0.025,
+  "N8_hop2": 0.028333333333333332,
+  "N32_hop1": 0.03333333333333333,
+  "N32_hop2": 0.02666666666666667,
+  "N128_hop1": 0.03333333333333333,
+  "N128_hop2": 0.025
+ },
+ "test_seconds": 9.080560207366943,
+ "total_seconds": 1654.956825017929
+}

@@ -1,0 +1,267 @@
+# B69 part (A): cells per stored pair for >= 99.5% exact, value vocabulary uncharged / charged
+# (registered B38 / B59 / B61 / B63 test rows; per-store failed-key counts; 30-day i.i.d. cell errors).
+# charged: the store's vocabulary strings on the same cells; cap = BSC capacity bound (no code reaches it);
+# bch = repetition or BCH by B38's closed form, P(any string of the store wrong) <= 1%; utf8 / compact.
+# Delta = steps(table) - steps(store), + = the store needs fewer cells; labels over k1 k2 k4 k8 k16 k32.
+
+== scope pooled: 50 stores, 4776 probed keys; vocabulary bits per pair (max over stores) utf8 288.0, compact 288.0
+  -- accounting free
+                   k1       k2       k4      e05       k8      k16      k32
+    U              76       76       76       91      128      431     1722
+    H-SBC          32       32       45       54       91      304     1448
+    static         19       19       27       38       54      215      724
+    insert         32       32       38       64       91      304     1218
+    static_vs_U       -8 -8 -6 -5 -5 -4 -5  -> TABLE WIN
+    static_vs_H-SBC   -3 -3 -3 -2 -3 -2 -4  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 -1 +1 +0 +0 -1  -> TIE
+    insert_vs_U       -5 -5 -4 -2 -2 -2 -2  -> TABLE WIN
+  -- accounting cap-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             431      431      431      512      861     2435    >4096
+    H-SBC         362      362      431      512      724     2435    >4096
+    static        362      362      431      512      724     2435    >4096
+    insert        362      362      431      512      724     2435    >4096
+    static_vs_U       -1 -1 +0 +0 -1 +0 +0  -> TIE
+    static_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -1 -1 +0 +0 -1 +0 +0  -> TIE
+  -- accounting bch-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             431      431      609     1024     2435    >4096    >4096
+    H-SBC         362      362      609      861     2435    >4096    >4096
+    static        362      362      512      861     2435    >4096    >4096
+    insert        362      362      512     1024     2435    >4096    >4096
+    static_vs_U       -1 -1 -1 -1 +0 +0 +0  -> TIE
+    static_vs_H-SBC   +0 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 -1 +1 +0 +0 +0  -> TIE
+    insert_vs_U       -1 -1 -1 +0 +0 +0 +0  -> TIE
+  -- accounting cap-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             431      431      431      512      861     2435    >4096
+    H-SBC         362      362      431      512      724     2435    >4096
+    static        362      362      431      512      724     2435    >4096
+    insert        362      362      431      512      724     2435    >4096
+    static_vs_U       -1 -1 +0 +0 -1 +0 +0  -> TIE
+    static_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -1 -1 +0 +0 -1 +0 +0  -> TIE
+  -- accounting bch-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             431      431      609     1024     2435    >4096    >4096
+    H-SBC         362      362      609      861     2435    >4096    >4096
+    static        362      362      512      861     2435    >4096    >4096
+    insert        362      362      512     1024     2435    >4096    >4096
+    static_vs_U       -1 -1 -1 -1 +0 +0 +0  -> TIE
+    static_vs_H-SBC   +0 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 -1 +1 +0 +0 +0  -> TIE
+    insert_vs_U       -1 -1 -1 +0 +0 +0 +0  -> TIE
+
+== scope mk2: 20 stores, 3000 probed keys; vocabulary bits per pair (max over stores) utf8 56.0, compact 24.0
+  -- accounting free
+                   k1       k2       k4      e05       k8      k16      k32
+    U              76       76       76       91      128      431     1722
+    H-SBC          32       32       45       64       91      304     1448
+    static         19       19       27       38       54      215      724
+    insert         32       32       38       64       91      304     1218
+    static_vs_U       -8 -8 -6 -5 -5 -4 -5  -> TABLE WIN
+    static_vs_H-SBC   -3 -3 -3 -3 -3 -2 -4  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 -1 +0 +0 +0 -1  -> TIE
+    insert_vs_U       -5 -5 -4 -2 -2 -2 -2  -> TABLE WIN
+  -- accounting cap-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             152      152      152      181      256      861     3444
+    H-SBC          91       91      128      152      215      724     2896
+    static         76       76      108      128      181      609     2048
+    insert         91       91      108      152      215      724     2435
+    static_vs_U       -4 -4 -2 -2 -2 -2 -3  -> TABLE WIN
+    static_vs_H-SBC   -1 -1 -1 -1 -1 -1 -2  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 -1 +0 +0 +0 -1  -> TIE
+    insert_vs_U       -3 -3 -2 -1 -1 -1 -2  -> TABLE WIN
+  -- accounting bch-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             152      152      181      256      609     2435    >4096
+    H-SBC          91       91      152      256      512     2048    >4096
+    static         76       91      128      215      512     2048    >4096
+    insert         91       91      152      256      512     2048    >4096
+    static_vs_U       -4 -3 -2 -1 -1 -1 +0  -> TABLE WIN
+    static_vs_H-SBC   -1 +0 -1 -1 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -3 -3 -1 +0 -1 -1 +0  -> TABLE WIN
+  -- accounting cap-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             108      108      108      128      181      609     2435
+    H-SBC          64       64       76      108      152      512     2048
+    static         45       45       64       76      108      431     1448
+    insert         64       64       76      108      152      512     2048
+    static_vs_U       -5 -5 -3 -3 -3 -2 -3  -> TABLE WIN
+    static_vs_H-SBC   -2 -2 -1 -2 -2 -1 -2  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -3 -3 -2 -1 -1 -1 -1  -> TABLE WIN
+  -- accounting bch-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             108      108      128      181      304     1218    >4096
+    H-SBC          64       64       91      152      304     1024     4096
+    static         45       45       76      108      256     1024     3444
+    insert         64       64       91      152      304     1024     4096
+    static_vs_U       -5 -5 -3 -3 -1 -1 -2  -> TABLE WIN
+    static_vs_H-SBC   -2 -2 -1 -2 -1 +0 -1  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -3 -3 -2 -1 +0 -1 -1  -> TABLE WIN
+
+== scope mk2-6k: 10 stores, 1500 probed keys; vocabulary bits per pair (max over stores) utf8 56.0, compact 24.0
+  -- accounting free
+                   k1       k2       k4      e05       k8      k16      k32
+    U              76       76       76       91      128      431     2048
+    H-SBC          32       32       45       64       91      362     1722
+    static         19       19       27       38       54      215      724
+    insert         32       32       45       64       91      304     1218
+    static_vs_U       -8 -8 -6 -5 -5 -4 -6  -> TABLE WIN
+    static_vs_H-SBC   -3 -3 -3 -3 -3 -3 -5  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 -1 -2  -> TABLE WIN
+    insert_vs_U       -5 -5 -3 -2 -2 -2 -3  -> TABLE WIN
+  -- accounting cap-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             152      152      152      181      256      861     3444
+    H-SBC          91       91      128      152      215      861     3444
+    static         76       76      108      128      181      609     2048
+    insert         91       91      128      152      215      724     2435
+    static_vs_U       -4 -4 -2 -2 -2 -2 -3  -> TABLE WIN
+    static_vs_H-SBC   -1 -1 -1 -1 -1 -2 -3  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 -1 -2  -> TABLE WIN
+    insert_vs_U       -3 -3 -1 -1 -1 -1 -2  -> TABLE WIN
+  -- accounting bch-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             152      152      181      256      609     2435    >4096
+    H-SBC          91       91      152      256      512     2048    >4096
+    static         76       91      128      215      512     2048    >4096
+    insert         91       91      152      256      512     2048    >4096
+    static_vs_U       -4 -3 -2 -1 -1 -1 +0  -> TABLE WIN
+    static_vs_H-SBC   -1 +0 -1 -1 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -3 -3 -1 +0 -1 -1 +0  -> TABLE WIN
+  -- accounting cap-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             108      108      108      128      181      609     2896
+    H-SBC          64       64       76      108      152      609     2435
+    static         45       45       64       76      108      431     1448
+    insert         64       64       76      108      152      512     2048
+    static_vs_U       -5 -5 -3 -3 -3 -2 -4  -> TABLE WIN
+    static_vs_H-SBC   -2 -2 -1 -2 -2 -2 -3  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 -1 -1  -> TIE
+    insert_vs_U       -3 -3 -2 -1 -1 -1 -2  -> TABLE WIN
+  -- accounting bch-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             108      108      128      181      304     1218    >4096
+    H-SBC          64       64       91      152      304     1218    >4096
+    static         45       45       76      108      256     1024     3444
+    insert         64       64       91      152      304     1024     4096
+    static_vs_U       -5 -5 -3 -3 -1 -1 -2  -> TABLE WIN
+    static_vs_H-SBC   -2 -2 -1 -2 -1 -1 -2  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 -1 -1  -> TIE
+    insert_vs_U       -3 -3 -2 -1 +0 -1 -1  -> TABLE WIN
+
+== scope mk3: 10 stores, 1500 probed keys; vocabulary bits per pair (max over stores) utf8 288.0, compact 288.0
+  -- accounting free
+                   k1       k2       k4      e05       k8      k16      k32
+    U              76       76       76       91      128      362     1448
+    H-SBC          32       32       45       54       91      304     1448
+    static         16       16       23       32       54      181      609
+    insert         32       32       38       54       91      304     1024
+    static_vs_U       -9 -9 -7 -6 -5 -4 -5  -> TABLE WIN
+    static_vs_H-SBC   -4 -4 -4 -3 -3 -3 -5  -> TABLE WIN
+    insert_vs_H-SBC   +0 +0 -1 +0 +0 +0 -2  -> TABLE WIN
+    insert_vs_U       -5 -5 -4 -3 -2 -1 -2  -> TABLE WIN
+  -- accounting cap-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             431      431      431      512      861     2435    >4096
+    H-SBC         362      362      431      512      724     2435    >4096
+    static        304      362      362      512      724     2435    >4096
+    insert        362      362      431      512      724     2435    >4096
+    static_vs_U       -2 -1 -1 +0 -1 +0 +0  -> TABLE WIN
+    static_vs_H-SBC   -1 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -1 -1 +0 +0 -1 +0 +0  -> TIE
+  -- accounting bch-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             431      431      609     1024     2435    >4096    >4096
+    H-SBC         362      362      609      861     2435    >4096    >4096
+    static        304      362      512      861     2435    >4096    >4096
+    insert        362      362      512      861     2435    >4096    >4096
+    static_vs_U       -2 -1 -1 -1 +0 +0 +0  -> TABLE WIN
+    static_vs_H-SBC   -1 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -1 -1 -1 -1 +0 +0 +0  -> TIE
+  -- accounting cap-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             431      431      431      512      861     2435    >4096
+    H-SBC         362      362      431      512      724     2435    >4096
+    static        304      362      362      512      724     2435    >4096
+    insert        362      362      431      512      724     2435    >4096
+    static_vs_U       -2 -1 -1 +0 -1 +0 +0  -> TABLE WIN
+    static_vs_H-SBC   -1 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 +0 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -1 -1 +0 +0 -1 +0 +0  -> TIE
+  -- accounting bch-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             431      431      609     1024     2435    >4096    >4096
+    H-SBC         362      362      609      861     2435    >4096    >4096
+    static        304      362      512      861     2435    >4096    >4096
+    insert        362      362      512      861     2435    >4096    >4096
+    static_vs_U       -2 -1 -1 -1 +0 +0 +0  -> TABLE WIN
+    static_vs_H-SBC   -1 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +0 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_U       -1 -1 -1 -1 +0 +0 +0  -> TIE
+
+== scope small: 20 stores, 276 probed keys; vocabulary bits per pair (max over stores) utf8 104.7, compact 104.7
+  -- accounting free
+                   k1       k2       k4      e05       k8      k16      k32
+    U              38       38       45       54       64      215      861
+    H-SBC          19       19       27       32       64      181      724
+    static         10       10       13       23       38      128      512
+    insert         27       27       32       54       76      256     1024
+    static_vs_U       -8 -8 -7 -5 -3 -3 -3  -> TABLE WIN
+    static_vs_H-SBC   -4 -4 -4 -2 -3 -2 -2  -> TABLE WIN
+    insert_vs_H-SBC   +2 +2 +1 +3 +1 +2 +2  -> VSA WIN
+    insert_vs_U       -2 -2 -2 +0 +1 +1 +1  -> TABLE WIN
+  -- accounting cap-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             152      152      181      215      304     1024     3444
+    H-SBC         128      128      152      181      304     1024     3444
+    static        128      128      152      181      304      861     2896
+    insert        152      152      181      215      304     1024     3444
+    static_vs_U       -1 -1 -1 -1 +0 -1 -1  -> TIE
+    static_vs_H-SBC   +0 +0 +0 +0 +0 -1 -1  -> TIE
+    insert_vs_H-SBC   +1 +1 +1 +1 +0 +0 +0  -> TIE
+    insert_vs_U       +0 +0 +0 +0 +0 +0 +0  -> TIE
+  -- accounting bch-utf8
+                   k1       k2       k4      e05       k8      k16      k32
+    U             152      152      215      362      861     3444    >4096
+    H-SBC         128      128      215      304      861     3444    >4096
+    static        128      128      181      304      861     3444    >4096
+    insert        152      152      215      362      861     3444    >4096
+    static_vs_U       -1 -1 -1 -1 +0 +0 +0  -> TIE
+    static_vs_H-SBC   +0 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +1 +1 +0 +1 +0 +0 +0  -> TIE
+    insert_vs_U       +0 +0 +0 +0 +0 +0 +0  -> TIE
+  -- accounting cap-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             152      152      181      215      304     1024     3444
+    H-SBC         128      128      152      181      304     1024     3444
+    static        128      128      152      181      304      861     2896
+    insert        152      152      181      215      304     1024     3444
+    static_vs_U       -1 -1 -1 -1 +0 -1 -1  -> TIE
+    static_vs_H-SBC   +0 +0 +0 +0 +0 -1 -1  -> TIE
+    insert_vs_H-SBC   +1 +1 +1 +1 +0 +0 +0  -> TIE
+    insert_vs_U       +0 +0 +0 +0 +0 +0 +0  -> TIE
+  -- accounting bch-compact
+                   k1       k2       k4      e05       k8      k16      k32
+    U             152      152      215      362      861     3444    >4096
+    H-SBC         128      128      215      304      861     3444    >4096
+    static        128      128      181      304      861     3444    >4096
+    insert        152      152      215      362      861     3444    >4096
+    static_vs_U       -1 -1 -1 -1 +0 +0 +0  -> TIE
+    static_vs_H-SBC   +0 +0 -1 +0 +0 +0 +0  -> TIE
+    insert_vs_H-SBC   +1 +1 +0 +1 +0 +0 +0  -> TIE
+    insert_vs_U       +0 +0 +0 +0 +0 +0 +0  -> TIE
+
+Registered pooled N* reproduced by the uncharged accounting: 0 mismatches of 28

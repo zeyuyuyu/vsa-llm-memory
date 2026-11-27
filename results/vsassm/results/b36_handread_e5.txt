@@ -1,0 +1,54 @@
+## e5|ideal|256|2|8: VSA 69.21, BEST (FBF) 64.62, diff +4.58, EXACT 87.52
+   queries only the VSA gets right: 1083; only BEST: 860; BEST configuration (store 0): ['FBF', 'center', 16]
+   -- only VSA right (10 at random) --
+   alias 'Unfinished Song'                        label 'Song for Marion'                   exact-NN 'So Little Time'               cos(whitened) +0.15
+   alias 'S. Pinakapani'                          label 'Sripada Pinakapani'                exact-NN 'Sripada Pinakapani'           cos(whitened) +0.59
+   alias 'Benny Goodman Story'                    label 'The Benny Goodman Story'           exact-NN 'The Benny Goodman Story'      cos(whitened) +0.91
+   alias 'dj'                                     label 'Djibouti'                          exact-NN 'Ambient'                      cos(whitened) +0.09
+   alias 'City of Angels'                         label 'Los Angeles'                       exact-NN 'Los Angeles'                  cos(whitened) +0.24
+   alias 'Han Empire'                             label 'Han dynasty'                       exact-NN 'Han dynasty'                  cos(whitened) +0.68
+   alias 'Baby on the Barge'                      label 'The Baby on the Barge'             exact-NN 'The Baby on the Barge'        cos(whitened) +0.97
+   alias 'Julia Augusti filia'                    label 'Julia the Elder'                   exact-NN 'Julia the Elder'              cos(whitened) +0.33
+   alias 'zar di Russia Pavel I'                  label 'Paul I of Russia'                  exact-NN 'Paul I of Russia'             cos(whitened) +0.33
+   alias 'URU'                                    label 'Uruguay'                           exact-NN 'Urusei Yatsura'               cos(whitened) +0.06
+   median alias-label cosine (whitened) over all 1083: +0.434
+   -- only BEST right (10 at random) --
+   alias 'Aizawa Keiko'                           label 'Keiko Aizawa'                      exact-NN 'Keiko Aizawa'                 cos(whitened) +0.88
+   alias 'Indiana, United States'                 label 'Indiana'                           exact-NN 'Indiana'                      cos(whitened) +0.61
+   alias 'Tengri Qaghan'                          label 'Emperor Taizong of Tang'           exact-NN 'Emperor Taizong of Tang'      cos(whitened) +0.13
+   alias 'Athletic'                               label 'Charlton Athletic F.C.'            exact-NN 'Fighting'                     cos(whitened) +0.20
+   alias 'Adrian Thaws'                           label 'Tricky'                            exact-NN 'Anthony Sharp'                cos(whitened) +0.00
+   alias 'Star Trek: Deep Space Nine: The Fallen' label 'The Fallen'                        exact-NN 'The Fallen'                   cos(whitened) +0.54
+   alias 'ArsenalFC'                              label 'Arsenal Fútbol Club'               exact-NN 'Arsenal Fútbol Club'          cos(whitened) +0.54
+   alias 'Saint Gregorius Magnus'                 label 'Gregory I'                         exact-NN 'Gregory I'                    cos(whitened) +0.15
+   alias 'Min'                                    label 'Abatai'                            exact-NN 'Shibin Al Kawm, Al Minufiyah' cos(whitened) +0.03
+   alias 'The California and Oregon Trail'        label 'The Oregon Trail: Sketches of Prairie and Rocky-Mountain Life' exact-NN 'The Oregon Trail: Sketches of Prairie and Rocky-Mountain Life' cos(whitened) +0.39
+   median alias-label cosine (whitened) over all 860: +0.373
+
+## e5|ideal|1024|16|64: VSA 38.09, BEST (IDX) 59.75, diff -21.65, EXACT 71.14
+   queries only the VSA gets right: 264; only BEST: 1207; BEST configuration (store 0): ['IDX', 'whiten', 'itq', 1.0]
+   -- only VSA right (10 at random) --
+   alias 'Dubh mac Mhaoil Chaluim'                label 'Dub'                               exact-NN 'Güshi Khan'                   cos(whitened) +0.15
+   alias 'Brongn.'                                label 'Adolphe-Théodore Brongniart'       exact-NN 'Brother'                      cos(whitened) +0.27
+   alias 'Albert Arnold Gore'                     label 'Al Gore'                           exact-NN 'Al Gore'                      cos(whitened) +0.56
+   alias 'Princess Florentine of Monaco'          label 'Princess Florestine, Duchess of Urach' exact-NN 'Princess Florestine, Duchess of Urach' cos(whitened) +0.21
+   alias "People's Republic of Bangladesh"        label 'Bangladesh'                        exact-NN 'Bangladesh'                   cos(whitened) +0.59
+   alias 'Canadian Major Junior Hockey League'    label 'Western Hockey League'             exact-NN 'Western Hockey League'        cos(whitened) +0.59
+   alias 'Yaakov ben HaRosh'                      label 'Jacob ben Asher'                   exact-NN 'Jacob ben Asher'              cos(whitened) +0.31
+   alias 'The Deep'                               label 'Dark Descent'                      exact-NN 'The Shore'                    cos(whitened) +0.17
+   alias 'H.J. Franks'                            label 'Hieronymous Francken I'            exact-NN 'Rodger Stevens'               cos(whitened) +0.10
+   alias 'Rey de Aragón Jaime I'                  label 'James I of Aragon'                 exact-NN 'James I of Aragon'            cos(whitened) +0.52
+   median alias-label cosine (whitened) over all 264: +0.324
+   -- only BEST right (10 at random) --
+   alias 'Československo'                         label 'Czechoslovakia'                    exact-NN 'Czechoslovakia'               cos(whitened) +0.29
+   alias 'Lady Diana Spencer'                     label 'Diana, Princess of Wales'          exact-NN 'Diana, Princess of Wales'     cos(whitened) +0.43
+   alias 'Thiago Quirino da Silva'                label 'Thiago Quirino'                    exact-NN 'Thiago Quirino'               cos(whitened) +0.80
+   alias 'Way We Were'                            label 'The Way We Were'                   exact-NN 'The Way We Were'              cos(whitened) +0.94
+   alias 'William Martin Joel'                    label 'Billy Joel'                        exact-NN 'Billy Joel'                   cos(whitened) +0.43
+   alias 'John Spencer-Churchill'                 label 'John Spencer-Churchill, 11th Duke of Marlborough' exact-NN 'John Spencer-Churchill, 11th Duke of Marlborough' cos(whitened) +0.50
+   alias 'Commonwealth of Kentucky'               label 'Kentucky'                          exact-NN 'Kentucky'                     cos(whitened) +0.70
+   alias 'Vzla'                                   label 'Venezuela'                         exact-NN 'Záblatí'                      cos(whitened) +0.04
+   alias 'Ono Yōko'                               label 'Yoko Ono'                          exact-NN 'Yoko Ono'                     cos(whitened) +0.85
+   alias 'State of Ohio'                          label 'Ohio'                              exact-NN 'Ohio'                         cos(whitened) +0.73
+   median alias-label cosine (whitened) over all 1207: +0.598
+

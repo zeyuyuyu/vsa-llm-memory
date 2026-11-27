@@ -1,0 +1,11 @@
+P1: HELD - R1-V16 LAMc leads on 4 of 4 LLMs (>= 3); store leads on 0 of 7 (0)
+P2: HELD - R1-V2 LAMc leads on 4 of 4 LLMs (4)
+P3: HELD - R1 LAMc leads on 7 of 7 (>= 6); store leads on 0 (0)
+P4: HELD - LAMc - LAM R1-V16: qwen8 +8.46 [+7.58, +9.36], b46 +9.32 [+8.44, +10.21], llama +9.61 [+8.43, +10.77], mistral +9.73 [+8.57, +11.03], e5 +7.48 [+6.60, +8.32], bge +5.32 [+4.40, +6.24], minilm +4.48 [+3.56, +5.33] (each +3..+10, CI > 0); R1-V2 |.| <= 1 on 6 of 7 (>= 6): qwen8 -0.26, b46 +0.30, llama +0.77, mistral +1.97, e5 -0.20, bge -0.44, minilm -0.30
+P5: HELD - BESTc ahead over R1 on 7 of 7 (7); at R1-V16 on 7 (>= 6)
+P6: HELD - LAMc ahead of VSAS over R1 on 7 of 7, of VSAPX on 7 (>= 6 each)
+P7: HELD - R1 V=16 cells: flat 36 of 42 (>= 2/3), V targets 40 (>= 1/2); LLM R1 cells whiten pca 45 of 48 (>= 1/2)
+P8: HELD - |R1 VSAPc - VSAP| <= 1.5 on 6 of 7 (>= 5): qwen8 +0.84, b46 -0.56, llama -0.37, mistral +0.27, e5 +1.13, bge -0.32, minilm +2.28
+P9: HELD - between-map SD of R1 STORE - LAMc: qwen8 0.27, b46 0.59, llama 0.10, mistral 0.50, e5 0.21, bge 0.55, minilm 0.35 (<= 0.8 each); map-mean labels equal registered in 20 of 21 (>= 19 of 21)
+P10: FAILED - |R2 LAMc - LAM| <= 2 on 1 of 7 (>= 5): qwen8 +3.43, b46 +3.97, llama +3.67, mistral +4.25, e5 +3.38, bge +1.84, minilm +3.00
+P11: see results/b60_check.txt

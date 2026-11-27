@@ -1,0 +1,143 @@
+===================== B55 TASK N (2,000 trained-type items TR; 500 held-out HO) =====================
+BASE (B40): TR 0.1930 HO 0.9800   comparison plan: a800
+--- rho 0.0
+   ARG      TR 0.9602 [0.950, 0.968] seeds [0.9635, 0.9545, 0.9625]  HO 0.9653 (add 0.971, div 0.960)  read-exact TR 0.9702  gate-open TR 0.9987 HO 0.0147
+   THR      TR 0.8975 [0.883, 0.910] seeds [0.9005, 0.893, 0.899]  HO 0.9653 (add 0.971, div 0.960)  read-exact TR 0.8875  gate-open TR 0.9987 HO 0.0147
+   DISC     TR 0.9298 [0.918, 0.940] seeds [0.926, 0.9365, 0.927]  HO 0.3600 (add 0.065, div 0.655)  read-exact TR 0.9518  gate-open TR 1.0000 HO 0.6720
+   DISC-MSP TR 0.9275 [0.915, 0.938] seeds [0.9225, 0.935, 0.925]  HO 0.5340 (add 0.108, div 0.960)  read-exact TR 0.9518  gate-open TR 0.9953 HO 0.4727
+   B55-N1 TR(ARG) - TR(DISC) = +0.030 [+0.021, +0.040] -> WIN (ARG > DISC all seeds True; < all seeds False); B40 R2 bar: VSA WIN
+   B55-N2 HO(ARG) - HO(DISC-MSP) = +0.431 [+0.387, +0.475] -> WIN (all seeds True / False); TR(ARG) - TR(DISC-MSP) = +0.033 [+0.023, +0.042]
+   HO(ARG) - HO(DISC-0.8) = +0.605 [+0.564, +0.647]
+   ARG - THR: TR +0.063 [+0.052, +0.073]  HO +0.000 [+0.000, +0.000]
+   HO(ARG) - BASE = -0.015 [-0.025, -0.005]
+   check same-noise ARG vs THR: type read / op_s differ on 0/7500
+   check same-noise DISC-MSP vs DISC: reads differ on 0/7500; where both gates open, pred differs on 0/6681
+--- rho 0.25
+   ARG      TR 0.6705 [0.650, 0.691] seeds [0.6705, 0.666, 0.675]  HO 0.9267 (add 0.893, div 0.960)  read-exact TR 0.6220  gate-open TR 0.9920 HO 0.0593
+   THR      TR 0.6022 [0.580, 0.623] seeds [0.604, 0.5935, 0.609]  HO 0.9253 (add 0.891, div 0.960)  read-exact TR 0.5382  gate-open TR 0.9920 HO 0.0593
+   DISC     TR 0.9088 [0.896, 0.921] seeds [0.906, 0.9145, 0.906]  HO 0.3613 (add 0.061, div 0.661)  read-exact TR 0.9260  gate-open TR 1.0000 HO 0.6700
+   DISC-MSP TR 0.9065 [0.893, 0.918] seeds [0.903, 0.9125, 0.904]  HO 0.5233 (add 0.087, div 0.960)  read-exact TR 0.9260  gate-open TR 0.9950 HO 0.4793
+   B55-N1 TR(ARG) - TR(DISC) = -0.238 [-0.260, -0.217] -> LOSE (ARG > DISC all seeds False; < all seeds True); B40 R2 bar: DISC WIN
+   B55-N2 HO(ARG) - HO(DISC-MSP) = +0.403 [+0.361, +0.445] -> WIN (all seeds True / False); TR(ARG) - TR(DISC-MSP) = -0.236 [-0.257, -0.215]
+   HO(ARG) - HO(DISC-0.8) = +0.565 [+0.523, +0.607]
+   ARG - THR: TR +0.068 [+0.057, +0.080]  HO +0.001 [+0.000, +0.004]
+   HO(ARG) - BASE = -0.053 [-0.073, -0.035]
+   check same-noise ARG vs THR: type read / op_s differ on 0/7500
+   check same-noise DISC-MSP vs DISC: reads differ on 0/7500; where both gates open, pred differs on 0/6689
+   check MSP gate re-derivation: 0 mismatches
+--- rho 0.5
+   ARG      TR 0.1985 [0.182, 0.217] seeds [0.195, 0.202, 0.1985]  HO 0.8493 (add 0.772, div 0.927)  read-exact TR 0.0897  gate-open TR 0.9448 HO 0.1320
+   THR      TR 0.1957 [0.179, 0.213] seeds [0.1925, 0.2, 0.1945]  HO 0.8500 (add 0.772, div 0.928)  read-exact TR 0.0842  gate-open TR 0.9448 HO 0.1320
+   DISC     TR 0.8110 [0.793, 0.828] seeds [0.8075, 0.816, 0.8095]  HO 0.3700 (add 0.057, div 0.683)  read-exact TR 0.8068  gate-open TR 1.0000 HO 0.6667
+   DISC-MSP TR 0.8088 [0.791, 0.826] seeds [0.8045, 0.8145, 0.8075]  HO 0.5260 (add 0.092, div 0.960)  read-exact TR 0.8068  gate-open TR 0.9945 HO 0.4780
+   B55-N1 TR(ARG) - TR(DISC) = -0.613 [-0.634, -0.591] -> LOSE (ARG > DISC all seeds False; < all seeds True); B40 R2 bar: DISC WIN
+   B55-N2 HO(ARG) - HO(DISC-MSP) = +0.323 [+0.278, +0.368] -> WIN (all seeds True / False); TR(ARG) - TR(DISC-MSP) = -0.610 [-0.633, -0.588]
+   HO(ARG) - HO(DISC-0.8) = +0.479 [+0.433, +0.524]
+   ARG - THR: TR +0.003 [-0.002, +0.007]  HO -0.001 [-0.002, +0.000]
+   HO(ARG) - BASE = -0.131 [-0.159, -0.103]
+   check same-noise ARG vs THR: type read / op_s differ on 0/7500
+   check same-noise DISC-MSP vs DISC: reads differ on 0/7500; where both gates open, pred differs on 0/6684
+   check MSP gate re-derivation: 0 mismatches
+--- rho 1.0
+   ARG      TR 0.1207 [0.107, 0.136] seeds [0.1165, 0.1215, 0.124]  HO 0.7193 (add 0.640, div 0.799)  read-exact TR 0.0020  gate-open TR 0.8160 HO 0.2660
+   THR      TR 0.1205 [0.107, 0.136] seeds [0.1165, 0.1215, 0.1235]  HO 0.7193 (add 0.640, div 0.799)  read-exact TR 0.0020  gate-open TR 0.8160 HO 0.2660
+   DISC     TR 0.4748 [0.453, 0.497] seeds [0.4795, 0.473, 0.472]  HO 0.3427 (add 0.024, div 0.661)  read-exact TR 0.4082  gate-open TR 1.0000 HO 0.6740
+   DISC-MSP TR 0.4745 [0.453, 0.496] seeds [0.479, 0.473, 0.4715]  HO 0.5400 (add 0.120, div 0.960)  read-exact TR 0.4082  gate-open TR 0.9928 HO 0.4480
+   B55-N1 TR(ARG) - TR(DISC) = -0.354 [-0.378, -0.332] -> LOSE (ARG > DISC all seeds False; < all seeds True); B40 R2 bar: DISC WIN
+   B55-N2 HO(ARG) - HO(DISC-MSP) = +0.179 [+0.130, +0.228] -> WIN (all seeds True / False); TR(ARG) - TR(DISC-MSP) = -0.354 [-0.377, -0.331]
+   HO(ARG) - HO(DISC-0.8) = +0.377 [+0.329, +0.425]
+   ARG - THR: TR +0.000 [+0.000, +0.001]  HO +0.000 [+0.000, +0.000]
+   HO(ARG) - BASE = -0.261 [-0.297, -0.224]
+   check same-noise ARG vs THR: type read / op_s differ on 0/7500
+   check same-noise DISC-MSP vs DISC: reads differ on 0/7500; where both gates open, pred differs on 0/6629
+   check MSP gate re-derivation: 0 mismatches
+--- rho 2.0
+   ARG      TR 0.1188 [0.106, 0.134] seeds [0.1135, 0.1195, 0.1235]  HO 0.3727 (add 0.341, div 0.404)  read-exact TR 0.0000  gate-open TR 0.7585 HO 0.6560
+   THR      TR 0.1195 [0.106, 0.134] seeds [0.115, 0.12, 0.1235]  HO 0.3673 (add 0.339, div 0.396)  read-exact TR 0.0000  gate-open TR 0.7585 HO 0.6560
+   DISC     TR 0.1413 [0.127, 0.157] seeds [0.1445, 0.135, 0.1445]  HO 0.3127 (add 0.016, div 0.609)  read-exact TR 0.0577  gate-open TR 1.0000 HO 0.7067
+   DISC-MSP TR 0.1432 [0.128, 0.159] seeds [0.147, 0.1355, 0.147]  HO 0.6320 (add 0.307, div 0.957)  read-exact TR 0.0577  gate-open TR 0.9518 HO 0.3527
+   B55-N1 TR(ARG) - TR(DISC) = -0.022 [-0.037, -0.007] -> LOSE (ARG > DISC all seeds False; < all seeds True); B40 R2 bar: UNRESOLVED
+   B55-N2 HO(ARG) - HO(DISC-MSP) = -0.259 [-0.312, -0.207] -> LOSE (all seeds False / True); TR(ARG) - TR(DISC-MSP) = -0.024 [-0.039, -0.010]
+   HO(ARG) - HO(DISC-0.8) = +0.060 [+0.006, +0.112]
+   ARG - THR: TR -0.001 [-0.002, +0.000]  HO +0.005 [+0.001, +0.011]
+   HO(ARG) - BASE = -0.607 [-0.646, -0.568]
+   check same-noise ARG vs THR: type read / op_s differ on 0/7500
+   check same-noise DISC-MSP vs DISC: reads differ on 0/7500; where both gates open, pred differs on 0/6240
+   check MSP gate re-derivation: 0 mismatches
+--- rho 4.0
+   ARG      TR 0.0688 [0.059, 0.081] seeds [0.064, 0.069, 0.0735]  HO 0.1393 (add 0.072, div 0.207)  read-exact TR 0.0000  gate-open TR 0.9403 HO 0.9693
+   THR      TR 0.0685 [0.058, 0.080] seeds [0.0635, 0.0695, 0.0725]  HO 0.1387 (add 0.075, div 0.203)  read-exact TR 0.0000  gate-open TR 0.9403 HO 0.9693
+   DISC     TR 0.0732 [0.062, 0.085] seeds [0.08, 0.0695, 0.07]  HO 0.3133 (add 0.085, div 0.541)  read-exact TR 0.0008  gate-open TR 0.9795 HO 0.7387
+   DISC-MSP TR 0.1003 [0.088, 0.114] seeds [0.105, 0.097, 0.099]  HO 0.7353 (add 0.541, div 0.929)  read-exact TR 0.0008  gate-open TR 0.7658 HO 0.2513
+   B55-N1 TR(ARG) - TR(DISC) = -0.004 [-0.015, +0.006] -> TIE (ARG > DISC all seeds False; < all seeds False); B40 R2 bar: TIE
+   B55-N2 HO(ARG) - HO(DISC-MSP) = -0.596 [-0.637, -0.553] -> LOSE (all seeds False / True); TR(ARG) - TR(DISC-MSP) = -0.032 [-0.043, -0.020]
+   HO(ARG) - HO(DISC-0.8) = -0.174 [-0.216, -0.133]
+   ARG - THR: TR +0.000 [-0.001, +0.001]  HO +0.001 [-0.003, +0.005]
+   HO(ARG) - BASE = -0.841 [-0.867, -0.813]
+   check same-noise ARG vs THR: type read / op_s differ on 0/7500
+   check same-noise DISC-MSP vs DISC: reads differ on 0/7500; where both gates open, pred differs on 0/4972
+   check MSP gate re-derivation: 0 mismatches
+--- rho 8.0
+   ARG      TR 0.0483 [0.040, 0.059] seeds [0.0475, 0.049, 0.0485]  HO 0.1433 (add 0.056, div 0.231)  read-exact TR 0.0000  gate-open TR 0.9948 HO 0.9973
+   THR      TR 0.0483 [0.040, 0.059] seeds [0.0475, 0.049, 0.0485]  HO 0.1420 (add 0.055, div 0.229)  read-exact TR 0.0000  gate-open TR 0.9948 HO 0.9973
+   DISC     TR 0.0777 [0.067, 0.090] seeds [0.082, 0.0725, 0.0785]  HO 0.3307 (add 0.189, div 0.472)  read-exact TR 0.0000  gate-open TR 0.8772 HO 0.7673
+   DISC-MSP TR 0.1315 [0.117, 0.147] seeds [0.1355, 0.129, 0.13]  HO 0.7507 (add 0.671, div 0.831)  read-exact TR 0.0000  gate-open TR 0.4807 HO 0.2627
+   B55-N1 TR(ARG) - TR(DISC) = -0.029 [-0.039, -0.019] -> LOSE (ARG > DISC all seeds False; < all seeds True); B40 R2 bar: UNRESOLVED
+   B55-N2 HO(ARG) - HO(DISC-MSP) = -0.607 [-0.647, -0.568] -> LOSE (all seeds False / True); TR(ARG) - TR(DISC-MSP) = -0.083 [-0.097, -0.070]
+   HO(ARG) - HO(DISC-0.8) = -0.187 [-0.225, -0.150]
+   ARG - THR: TR +0.000 [+0.000, +0.000]  HO +0.001 [+0.000, +0.003]
+   HO(ARG) - BASE = -0.837 [-0.863, -0.809]
+   check same-noise ARG vs THR: type read / op_s differ on 0/7500
+   check same-noise DISC-MSP vs DISC: reads differ on 0/7500; where both gates open, pred differs on 0/3278
+   check MSP gate re-derivation: 0 mismatches
+check: ARG rho 0 vs B40 exploratory-1 files: pred differs on 0/7500, module record differs on 0/7500
+===================== B55 TASK R (all 2,000 items) =====================
+--- rho 0.0
+   ARG      acc 0.9995 [0.997, 1.000] seeds [0.9985, 1.0, 1.0]  reads-ok 1.0000  cells small-d1:1.000 small-d2:1.000 small-d3:1.000 small-d4:0.997 small-d5:0.998 large-d1:1.000 large-d2:1.000 large-d3:1.000 large-d4:1.000 large-d5:1.000
+   VSA-B40  acc 0.9995 [0.997, 1.000] seeds [0.9985, 1.0, 1.0]  reads-ok 1.0000  cells small-d1:1.000 small-d2:1.000 small-d3:1.000 small-d4:0.997 small-d5:0.998 large-d1:1.000 large-d2:1.000 large-d3:1.000 large-d4:1.000 large-d5:1.000
+   DISC     acc 0.9930 [0.988, 0.996] seeds [0.996, 0.991, 0.992]  reads-ok 1.0000  cells small-d1:1.000 small-d2:0.995 small-d3:0.997 small-d4:0.988 small-d5:0.992 large-d1:1.000 large-d2:0.995 large-d3:0.988 large-d4:0.988 large-d5:0.987
+   B55-R1 ARG - DISC = +0.006 [+0.004, +0.009] -> WIN (all seeds True / False); B40 R2 bar: TIE
+   ARG - VSA(B40, mentions uncleaned) = +0.000 [+0.000, +0.000]
+   check same-noise ARG vs VSA-B40: per-item reads_ok differs on 0/6000
+--- rho 0.25
+   ARG      acc 0.9995 [0.997, 1.000] seeds [0.9985, 1.0, 1.0]  reads-ok 1.0000  cells small-d1:1.000 small-d2:1.000 small-d3:1.000 small-d4:0.997 small-d5:0.998 large-d1:1.000 large-d2:1.000 large-d3:1.000 large-d4:1.000 large-d5:1.000
+   VSA-B40  acc 0.9993 [0.997, 1.000] seeds [0.998, 1.0, 1.0]  reads-ok 1.0000  cells small-d1:1.000 small-d2:1.000 small-d3:1.000 small-d4:0.997 small-d5:0.998 large-d1:0.998 large-d2:1.000 large-d3:1.000 large-d4:1.000 large-d5:1.000
+   DISC     acc 0.9930 [0.988, 0.996] seeds [0.996, 0.991, 0.992]  reads-ok 1.0000  cells small-d1:1.000 small-d2:0.995 small-d3:0.997 small-d4:0.988 small-d5:0.992 large-d1:1.000 large-d2:0.995 large-d3:0.988 large-d4:0.988 large-d5:0.987
+   B55-R1 ARG - DISC = +0.006 [+0.004, +0.010] -> WIN (all seeds True / False); B40 R2 bar: TIE
+   ARG - VSA(B40, mentions uncleaned) = +0.000 [+0.000, +0.001]
+   check same-noise ARG vs VSA-B40: per-item reads_ok differs on 0/6000
+--- rho 0.5
+   ARG      acc 0.9995 [0.997, 1.000] seeds [0.9985, 1.0, 1.0]  reads-ok 1.0000  cells small-d1:1.000 small-d2:1.000 small-d3:1.000 small-d4:0.997 small-d5:0.998 large-d1:1.000 large-d2:1.000 large-d3:1.000 large-d4:1.000 large-d5:1.000
+   VSA-B40  acc 0.9912 [0.986, 0.994] seeds [0.988, 0.9915, 0.994]  reads-ok 1.0000  cells small-d1:1.000 small-d2:1.000 small-d3:0.997 small-d4:0.997 small-d5:0.998 large-d1:0.982 large-d2:0.998 large-d3:0.980 large-d4:0.977 large-d5:0.983
+   DISC     acc 0.9930 [0.988, 0.996] seeds [0.996, 0.991, 0.992]  reads-ok 1.0000  cells small-d1:1.000 small-d2:0.995 small-d3:0.997 small-d4:0.988 small-d5:0.992 large-d1:1.000 large-d2:0.995 large-d3:0.988 large-d4:0.988 large-d5:0.987
+   B55-R1 ARG - DISC = +0.006 [+0.004, +0.010] -> WIN (all seeds True / False); B40 R2 bar: TIE
+   ARG - VSA(B40, mentions uncleaned) = +0.008 [+0.005, +0.012]
+   check same-noise ARG vs VSA-B40: per-item reads_ok differs on 0/6000
+--- rho 1.0
+   ARG      acc 0.9990 [0.996, 1.000] seeds [0.9975, 1.0, 0.9995]  reads-ok 0.9998  cells small-d1:1.000 small-d2:1.000 small-d3:1.000 small-d4:0.993 small-d5:0.998 large-d1:1.000 large-d2:1.000 large-d3:1.000 large-d4:0.998 large-d5:1.000
+   VSA-B40  acc 0.7278 [0.708, 0.747] seeds [0.732, 0.722, 0.7295]  reads-ok 0.9998  cells small-d1:0.827 small-d2:0.858 small-d3:0.820 small-d4:0.812 small-d5:0.820 large-d1:0.695 large-d2:0.688 large-d3:0.608 large-d4:0.585 large-d5:0.565
+   DISC     acc 0.9930 [0.988, 0.996] seeds [0.996, 0.991, 0.992]  reads-ok 1.0000  cells small-d1:1.000 small-d2:0.995 small-d3:0.997 small-d4:0.988 small-d5:0.992 large-d1:1.000 large-d2:0.995 large-d3:0.988 large-d4:0.988 large-d5:0.987
+   B55-R1 ARG - DISC = +0.006 [+0.003, +0.009] -> WIN (all seeds True / False); B40 R2 bar: TIE
+   ARG - VSA(B40, mentions uncleaned) = +0.271 [+0.255, +0.287]
+   check same-noise ARG vs VSA-B40: per-item reads_ok differs on 0/6000
+--- rho 2.0
+   ARG      acc 0.5538 [0.532, 0.576] seeds [0.563, 0.5375, 0.561]  reads-ok 0.8560  cells small-d1:0.758 small-d2:0.678 small-d3:0.500 small-d4:0.440 small-d5:0.353 large-d1:0.760 large-d2:0.675 large-d3:0.500 large-d4:0.447 large-d5:0.427
+   VSA-B40  acc 0.3437 [0.323, 0.365] seeds [0.347, 0.3295, 0.3545]  reads-ok 0.8560  cells small-d1:0.613 small-d2:0.470 small-d3:0.253 small-d4:0.300 small-d5:0.248 large-d1:0.550 large-d2:0.413 large-d3:0.197 large-d4:0.180 large-d5:0.212
+   DISC     acc 0.9928 [0.988, 0.996] seeds [0.9955, 0.991, 0.992]  reads-ok 1.0000  cells small-d1:1.000 small-d2:0.995 small-d3:0.997 small-d4:0.987 small-d5:0.992 large-d1:1.000 large-d2:0.995 large-d3:0.988 large-d4:0.988 large-d5:0.987
+   B55-R1 ARG - DISC = -0.439 [-0.457, -0.420] -> LOSE (all seeds False / True); B40 R2 bar: DISC WIN
+   ARG - VSA(B40, mentions uncleaned) = +0.210 [+0.188, +0.232]
+   check same-noise ARG vs VSA-B40: per-item reads_ok differs on 0/6000
+--- rho 4.0
+   ARG      acc 0.3168 [0.297, 0.338] seeds [0.33, 0.287, 0.3335]  reads-ok 0.3174  cells small-d1:0.608 small-d2:0.502 small-d3:0.220 small-d4:0.197 small-d5:0.170 large-d1:0.538 large-d2:0.447 large-d3:0.152 large-d4:0.172 large-d5:0.163
+   VSA-B40  acc 0.3005 [0.281, 0.321] seeds [0.3105, 0.283, 0.308]  reads-ok 0.3174  cells small-d1:0.562 small-d2:0.507 small-d3:0.202 small-d4:0.165 small-d5:0.200 large-d1:0.548 large-d2:0.420 large-d3:0.138 large-d4:0.142 large-d5:0.122
+   DISC     acc 0.8938 [0.880, 0.907] seeds [0.8975, 0.8915, 0.8925]  reads-ok 0.9764  cells small-d1:0.998 small-d2:0.978 small-d3:0.862 small-d4:0.818 small-d5:0.793 large-d1:0.977 large-d2:0.972 large-d3:0.862 large-d4:0.877 large-d5:0.802
+   B55-R1 ARG - DISC = -0.577 [-0.595, -0.559] -> LOSE (all seeds False / True); B40 R2 bar: DISC WIN
+   ARG - VSA(B40, mentions uncleaned) = +0.016 [-0.001, +0.034]
+   check same-noise ARG vs VSA-B40: per-item reads_ok differs on 0/6000
+--- rho 8.0
+   ARG      acc 0.2900 [0.271, 0.310] seeds [0.31, 0.258, 0.302]  reads-ok 0.0983  cells small-d1:0.602 small-d2:0.477 small-d3:0.178 small-d4:0.178 small-d5:0.147 large-d1:0.533 large-d2:0.420 large-d3:0.113 large-d4:0.118 large-d5:0.133
+   VSA-B40  acc 0.2907 [0.271, 0.311] seeds [0.2975, 0.263, 0.3115]  reads-ok 0.0983  cells small-d1:0.533 small-d2:0.495 small-d3:0.173 small-d4:0.145 small-d5:0.155 large-d1:0.598 large-d2:0.452 large-d3:0.125 large-d4:0.113 large-d5:0.117
+   DISC     acc 0.4435 [0.422, 0.465] seeds [0.4445, 0.4425, 0.4435]  reads-ok 0.5576  cells small-d1:0.975 small-d2:0.852 small-d3:0.255 small-d4:0.177 small-d5:0.188 large-d1:0.912 large-d2:0.668 large-d3:0.133 large-d4:0.130 large-d5:0.145
+   B55-R1 ARG - DISC = -0.153 [-0.171, -0.136] -> LOSE (all seeds False / True); B40 R2 bar: DISC WIN
+   ARG - VSA(B40, mentions uncleaned) = -0.001 [-0.018, +0.016]
+   check same-noise ARG vs VSA-B40: per-item reads_ok differs on 0/6000

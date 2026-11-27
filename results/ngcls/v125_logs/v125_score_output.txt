@@ -1,0 +1,13 @@
+===== V-125 verdict (prereg b5a6828; scorer committed before data) =====
+P0 fingerprint match: True (tokens 197733, sha 49eaa80a685bd4e7dfb82ce3)
+rows: 300 | decidable: 287 | undecidable (reported, never judged): 13
+calibration: 40 rows / 80 facts, annotator='AGENT (Claude, orchestrating loop) — read the 40 raw contexts in v125_calibration_contexts.json before any judge output existed; per prereg b5a6828 this is AGENT annotation, not human annotation; the human pass on this file remains available to the user' (AGENT annotation, per prereg)
+judge deepseek/deepseek-v4-flash   pin=DigitalOcean honoured=True | calibration agreement 75/80 = 0.938 -> USABLE
+judge z-ai/glm-5.3                 EXCLUDED (completeness): n_scored 133 != n_decidable 287
+consensus: resolved 287/287 decidable | adjudicated facts 0 | UNRESOLVED rows (excluded) 0
+per-hop ABSENT among resolved: hop1 6 (0.021) | hop2 83 (0.289)
+ANSWERABLE 204/287 | not_answerable_rate = 0.2892
+P2 (bar: not_answerable_rate >= 0.15): TRUE -- the manuscript sentence at ~line 452 is MATERIALLY FALSE as written; rewrite is PROPOSED to the co-author, never applied unilaterally
+QUOTE RULE now in force (registered): no error-removal figure may be quoted anywhere without the answerable-subset figure beside it (extends 0567b10).
+P4 STATED vs ENTAILED among PRESENT judge-verdicts: 413 vs 72 (0.148 entailed)
+wrote v125_verdict.json + v125_answerable.json (input to the step-5 P3 recompute)

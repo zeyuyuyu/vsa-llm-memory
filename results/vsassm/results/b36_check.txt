@@ -1,0 +1,28 @@
+# B36 checks (second angle; prereg/B36_keyfree_equal_bits_prereg.md, "Checks")
+
+1. Independent scorer (b36_check.py score; plain-Python counts from the merged dumps, no shared code):
+   224 cells (2 encoders x 2 accountings x 56) re-scored; largest |difference| from results/b36_verdict.json: 0.00e+00.
+   Store-level bootstrap (stores, not entities, resampled; coarser) for R1 VSA - BEST:
+     qwen8 ideal +6.77 [+5.88, +7.80] (verdict cluster CI [+5.82, +7.74]); qwen8 real +8.84 [+8.02, +9.64];
+     e5 ideal +0.60 [-0.20, +1.42] (verdict [-0.27, +1.43]); e5 real +4.29 [+3.43, +5.17]. Same conclusions.
+2. Bits audit (b36_check.py bits): 19,600 configurations (every new-family prediction on every test store, every
+   budget and accounting, plus the VSA dimension rule and IDX key bits re-derived from the written rules): 0 over
+   budget; largest used / budget among the new families 1.0000.
+3. Independent re-derivation (b36_check.py rederive; 10% of test stores, >= 1 per (M, V): 12 stores per encoder;
+   every family's chosen configuration at every budget under ideal accounting and at 4 and 16 bits per fact under
+   real accounting; pure-Python ribbon build, numpy reads; preprocessing and seeds re-implemented):
+     qwen8: SF 1.00000 (37,900 query-predictions), CM 1.00000, BF 1.00000, FBF 1.00000, SDM 0.99966 (49,311 each);
+     e5:    SF 0.99997 (33,534), CM 0.99996, BF 1.00000, FBF 1.00000, SDM 0.99848 (49,311 each).
+   Re-derived accuracy equals the logged accuracy for every family (difference 0.00000). Partial SF tables (a single
+   table over a prefix of the facts, used when not even one table fits) are not re-derived: 23 (qwen8) and 34 (e5)
+   predictions sets skipped, as registered. SDM disagreements are activations at the float32 threshold.
+   Before the test run the checker was validated on two dev stores (e5, M 256 / 1,024, V 16): agreement 0.9999-1.000.
+4. Hand reading (b36_handread.py; results/b36_handread_{qwen8,e5}.txt), Qwen3-8B, M 256, V 2, 16 bits per fact
+   (VSA 74.29 vs BEST = fly Bloom filter 61.79): 1,299 queries only the VSA answers right (median whitened alias-label
+   cosine +0.38; the exact index also finds the label for all 10 read, e.g. 'Jalaladdin Rumi' -> 'Rumi', 'Bell' ->
+   'Alexander Graham Bell'); 691 only BEST answers right (median cosine +0.17; 4 of the 10 read have cosine ~0.00 and
+   an exact nearest neighbour that is a different entity, e.g. 'The Radical' -> 'Katherine', i.e. right by chance at
+   V = 2). In the R2 cell where the index leads most (M 256, V 1,024, 32 bits per fact, VSA 23.61 vs IDX 35.07), the
+   index's own wins are near-duplicate aliases (median cosine +0.72: 'Joseph Charles Bambera' -> 'Joseph Bambera'),
+   the VSA's wins are lower-similarity aliases (+0.54): with 1,024 values the store's crosstalk loses easy keys that a
+   stored key code resolves exactly. e5 reads the same way (results/b36_handread_e5.txt).

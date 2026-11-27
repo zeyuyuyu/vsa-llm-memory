@@ -1,0 +1,58 @@
+{
+ "arm1": {
+  "warehouse": 0.875,
+  "ALL": 0.9304,
+  "ALL non-empty": 0.903,
+  "biobank": 0.8333,
+  "home": 0.975,
+  "ops": 0.95,
+  "micro_f1": 0.9648
+ },
+ "arm2b": {
+  "warehouse": 0.875,
+  "ALL": 0.9304,
+  "ALL non-empty": 0.903,
+  "biobank": 0.8333,
+  "home": 0.975,
+  "ops": 0.95,
+  "micro_f1": 0.9576
+ },
+ "arm3_qwen3-32b_forced": {
+  "warehouse": 0.15,
+  "ALL": 0.2783,
+  "ALL non-empty": 0.1212,
+  "biobank": 0.0333,
+  "home": 0.2875,
+  "ops": 0.425,
+  "micro_f1": 0.3893
+ },
+ "arm3n_qwen3-32b_forced": {
+  "warehouse": 0.15,
+  "ALL": 0.3043,
+  "ALL non-empty": 0.1818,
+  "biobank": 0.0333,
+  "home": 0.3625,
+  "ops": 0.425,
+  "micro_f1": 0.4524
+ },
+ "arm3_gpt61_strict": {
+  "warehouse": 0.875,
+  "ALL": 0.9174,
+  "ALL non-empty": 0.897,
+  "biobank": 0.8,
+  "home": 0.95,
+  "ops": 0.95,
+  "micro_f1": 0.9633
+ },
+ "arm3n_gpt61_strict": {
+  "warehouse": 0.875,
+  "ALL": 0.9217,
+  "ALL non-empty": 0.903,
+  "biobank": 0.8,
+  "home": 0.9625,
+  "ops": 0.95,
+  "micro_f1": 0.9646
+ },
+ "always_none": 0.2826,
+ "n_questions": 230
+}

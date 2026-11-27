@@ -1,0 +1,210 @@
+# B40 literature check (done before the B40 pre-registration). Each source checked in its own text unless marked (abstract only)/(snippet only).
+# Date of check: 2026-11-18. Quotes are verbatim; "..." marks an elision; LaTeX in abstracts rendered as plain text (e.g. 280x, TC^0, k); en dashes and diacritics rendered in ASCII.
+# Labels are relative to B40's questions: SUPPORTS = backs a B40 design choice or prediction; CONFLICTS = evidence against a B40 premise or expected outcome;
+# QUALIFIES = changes how a B40 result must be read; CONTEXT = background needed for the paper's framing.
+# "(abstract only)" = only the arXiv/venue abstract was read; "(snippet only)" = only a search-engine snippet or publisher record was seen.
+
+======================================================================
+1. THE TARGET WORK, ITS EXTENSIONS, AND WHO CITES IT
+======================================================================
+
+[DE25] Dhanraj, V. & Eliasmith, C. Improving Rule-based Reasoning in LLMs using Neurosymbolic Representations. EMNLP 2025, pp. 30577-30596 (arXiv:2502.01657v3, 28 May 2025). Text (abstract): "an average of 88.6% lower cross-entropy loss and 15.4 times more problems correctly solved" (fragment; compared against chain-of-thought prompting and LoRA fine-tuning).
+  -> CONTEXT: the claim B40 replicates. Method details (layer-17 linear encoder, RMSE to HRR targets, argmax clean-up, 50/50 mix, single-layer rank-2048 "LoRA") were verified separately from the PDF and code and are not repeated here. No discrete (non-VSA) pipeline baseline.
+
+[D26T] Dhanraj, V. Integrating Symbolic Reasoning into Large Language Models. MMath thesis, University of Waterloo, UWSpace, issued 2026-01-20 (hdl:10012/22860; PDF title page says 2025). Text: "We evaluate the proposed Neurosymbolic LLM (NS LLM) against three baselines: (i) a Standard LLM (frozen, with few-shot prompting), (ii) a LoRA-fine-tuned LLM trained on the same task corpus, and (iii) a CoT prompted LLM." Limitations section: "Currently, our approach requires supervised training with explicitly defined VSA structures for each concept."
+  -> SUPPORTS the need for B40's discrete-pipeline arm: the thesis keeps the same three baselines as DE25 (no classifier/table baseline anywhere in the thesis; grep of the full text for "classifier", "discrete", "one-hot", "ablation" found none used as a baseline) and states the method needs supervised VSA targets, so "label-free" is not a property of the published VSA pipeline.
+
+[D26T-ch8] Same thesis, Chapter 8 (adapted from "Efficient and Robust Neurosymbolic LLM Reasoning using Transformer-Based Encoders", preprint 2025). Setting: 1,000 training rows, several question formats per problem type. Text: "achieving 93.1% average accuracy and 0.341 average cross-entropy loss compared to 53.6% accuracy and 2.389 loss for the linear encoder and 30.7% accuracy and 4.861 loss for the standard LLM." And: "This suggests that encoding accuracy plays a pivotal role in overall neurosymbolic system performance". Figure 8.2 caption: "The linear encoder achieves a minimum error rate around layers 17 and 19 of 0.5 digits out of 3, whereas the transformer-based encoder has a minimum error rate around layer 1 and 2 of 0.05 digits out of 3."
+  -> QUALIFIES: the authors' own follow-up shows the hidden-state READ (encoder), not the VSA computation, dominates end-to-end accuracy, and that the layer-17 linear read loses ~0.5 of 3 digits under varied formats. B40 must give both arms the same reader capacity, layer and training data; otherwise a VSA-vs-discrete difference is an encoder difference. It also means the noisy-read robustness question (B40 Q2) is live in the published setting.
+
+[DE26W] Dhanraj, V. & Eliasmith, C. Scalable Neurosymbolic LLM Reasoning via Multi-Token Encoding. IJCAI-ECAI 2026 Workshop on Neuro-Symbolic Intelligence for LLMs and Autonomous Agents (lab publication page; OpenReview id ZxIqZzvjoO, not readable without login). (abstract only) Text: "The transformer encoder achieves 93.1 percent average accuracy, compared to 53.6 percent for the linear encoder."
+  -> CONTEXT: appears to be the published form of thesis Chapter 8 (identical numbers). Code branch github.com/vdhanraj/Neurosymbolic-LLM/tree/transformer_encoder; its README lists LoRA, CoT and plain-LLM baselines only (no classifier baseline).
+
+[CITERS] Semantic Scholar citations API for arXiv:2502.01657 (queried 2026-11-18): 11 citing records. Two are technically related ([GZ26], [FG26] below); the others are reviews or unrelated applications (e.g. "SafeMath" EMNLP, "SenticNet 9", a manufacturing review, a hybrid-QA workshop paper; titles only, not read). Pith.science lists one background citation (arXiv:2605.09271, a position-style paper). (snippet only for the non-related citers)
+  -> CONTEXT: no replication, critique, or VSA-vs-discrete re-test of DE25 was found among its citers.
+
+[GZ26] Granitzer, M., Zerhoudi, S., Al-Maamari, M., Dang, H. D. & Ghosh Dastidar, K. A Tool in the Forward Pass: Frozen Tape Modules as Layers of a Small Language Model. arXiv:2611.00783v1, 31 Oct 2026 (no venue). Text: the tape is "a short sequence of cells, each holding one discrete symbol from a small alphabet"; on DE25: "Dhanraj and Eliasmith encode a hidden state into symbolic vectors by supervised regression." Learning without tape labels: "The writer is updated by REINFORCE" ... "Nothing is differentiated through the module"; 5 of 6 runs succeed on the 1B host and 2 of 4 on the 4B host; gradient estimators failed ("by straight-through gradients (tapes exact 0.00), by two estimators intended to reduce bias, ReinMax and I-MLE", fragment). Baseline: "where the same model with adapters alone answers 0.35-0.38 and 0.10-0.12" (LoRA on every layer; 4-6 and 12 operators) vs 1.00 with the tape layer. Depth: trained on up to six operators it "reaches 0.97-1.00 at twenty-four"; object tracking stays exact at seven exchanges when training stories had five.
+  -> SUPPORTS B40's discrete arm and its design (this is almost exactly the discrete pipeline B40 specifies: learned writer from hidden states into discrete symbols, exact frozen module, learned read-back into the hidden state, all-layer LoRA baseline, train-short/test-long). It shows a discrete pipeline can beat an all-layer LoRA baseline by a wide margin and extrapolate in depth, and can be trained from answers alone with REINFORCE but not with straight-through/ReinMax/I-MLE. CONFLICTS with any B40 prior that only a VSA/soft interface can be trained without symbol labels. It does not run a VSA arm, uses gemma-3 1B/4B hosts, and is an unreviewed 18-day-old preprint.
+
+[FG26] Flamant, C., Ghai, U. & Shimizu, K. The Bicameral Model: Bidirectional Hidden-State Coupling Between Parallel Language Models. arXiv:2605.11167, 11 May 2026 (no venue). (abstract only) Text: "On arithmetic, coupling two 0.5B models with a calculator raises accuracy from 36% to 96%."
+  -> CONTEXT: another DE25 citer that routes hidden states to exact tools (calculator, Z3, Python); no VSA and no same-shape discrete-vs-VSA comparison.
+
+======================================================================
+2. OTHER SYMBOLIC MODULES INSIDE (OR BESIDE) THE FORWARD PASS
+======================================================================
+
+[DK25] Dietz, F. & Klakow, D. IGC: Integrating a Gated Calculator into an LLM to Solve Arithmetic Tasks Reliably and Efficiently. arXiv:2501.00684v1, 1 Jan 2025 (paper says "currently under review at ACL Rolling Review"; no published venue found). Text: "The operands and operator are produced as probability distributions over possible digit values for each digit." / "The calculator itself is emulated on the GPU through a sequence of non-differentiable tensor operations." / "Firstly, we apply an auxiliary loss to the Input Mapping component." Baseline: "We enhance a Llama model with an Adapter method, using the same parameter count as our model" (17M); Table 1 overall BigBench Arithmetic 0.99 (IGC) vs 0.70 (Llama-3.1-8B adapter baseline); multiplication 0.99 vs 0.22.
+  -> SUPPORTS B40's discrete arm and its equal-parameter baseline: a per-digit classifier read (11 classes per digit) of Llama-3.1-8B hidden states, an exact non-differentiable computation, and a learned write-back reach 98-99% and beat an equal-parameter adapter by a wide margin. Like DE25 it needs intermediate (operand) labels. No VSA comparison.
+
+[DU24] Dugan, O., Jimenez Beneto, D. M., Loh, C., Chen, Z., Dangovski, R. & Soljacic, M. OccamLLM: Fast and Exact Language Model Arithmetic in a Single Step. NeurIPS 2024 poster (arXiv:2406.06576v4). Text (abstract): "We use the hidden states of a LLM to control a symbolic architecture that performs arithmetic." Text (Sec. 3.1): "A string parser feeds the necessary numbers from the text into OccamNet". The decoder reads a learned weighted sum over all layers; the LLM is frozen; the operation choice is trained from a reward of 1 when the sampled function's output matches the answer.
+  -> QUALIFIES: precedent for hidden states configuring an exact unit, trained from answers rather than operation labels, but operands are parsed from the text, not decoded from hidden states, so it skips the read B40 is testing. A further existence proof that discrete selection can be learned without intermediate symbol labels (by sampling/reward).
+
+[SC23] Schick, T. et al. Toolformer: Language Models Can Teach Themselves to Use Tools. NeurIPS 2023 (arXiv:2302.04761). (abstract only) Text: "This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API."
+  -> CONTEXT: text-level tool calls (incl. a calculator); the token-space alternative to in-forward-pass modules; cost is extra decoding steps.
+
+[HA23] Hao, S., Liu, T., Wang, Z. & Hu, Z. ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings. NeurIPS 2023 oral (arXiv:2305.11554). (abstract only) Text: learns "an embedding for it, enabling tool calls in the same way as generating a regular word token."
+  -> CONTEXT: discrete tool selection through learned embeddings on a frozen LM; shows a learned embedding interface to discrete tools is standard practice (relevant to B40's learned write-back embedding).
+
+[BA24] Bansal, R. et al. LLM Augmented LLMs: Expanding Capabilities through Composition (CALM). ICLR 2024 (arXiv:2401.02412). (abstract only) Text: CALM "introduces cross-attention between models to compose their representations"; gains of up to 13 points absolute on low-resource translation/arithmetic tasks.
+  -> CONTEXT: a neural (not symbolic) in-forward-pass composition; possible extra comparator, not needed for B40's core question.
+
+======================================================================
+3. ARE OPERANDS / NUMBERS LINEARLY READABLE FROM LLM HIDDEN STATES?
+======================================================================
+
+[LG25] Levy, A. A. & Geva, M. Language Models Encode Numbers Using Digit Representations in Base 10. NAACL 2025 short (arXiv:2410.11781v2). Text: "The highest accuracy of 0.91 for Llama 3 8B and 0.92 for Mistral 7B is achieved when reconstructing the numbers in base 10." (Table 2: all-digit accuracy of digit-wise circular probes averaged over layers >= 3) and "in Mistral 7B, in the best layer, the circular probes achieve perfect accuracy on the validation set." Errors: "about 80% of the errors are in a single output digit, which is often not the units digit."
+  -> SUPPORTS that a per-digit discrete read can be near-perfect on Llama-3-8B-class models: operands are encoded digit-wise, which is what both DE25's digit-by-digit HRR encoder and B40's per-digit classifier heads read. (My inference, not the paper's: a per-digit 10-way linear classifier can implement the circular-probe decision rule, so classifier heads should be at least as accurate as these probes on the same layer.)
+
+[ZH25] Zhu, F., Dai, D. & Sui, Z. Language Models Encode the Value of Numbers Linearly. COLING 2025 (arXiv:2401.03735v4). Text: "In contrast to high correlation coefficients, the AAcc is below 50% on all layers." and "While our experiments show that the original input number cannot be reconstructed from the hidden state via linear probes..." (LLaMA-2; probes regress log2 of the value).
+  -> QUALIFIES: a single scalar-value linear read is approximate; exact operand recovery needs a digit-wise (or otherwise structured) read. Both B40 arms read digit-wise, so this does not favour VSA over classifier heads.
+
+[KA25] Kadlcik, M., Stefanik, M., Mickus, T., Spiegel, M. & Kuchar, J. Pre-trained Language Models Learn Remarkably Accurate Representations of Numbers. arXiv:2506.08966v2, Oct 2025 (no venue). (abstract only) Text: the probe "decodes numeric values from input embeddings with near-perfect accuracy"; "previous probing methods are inadequate for the emergent structure of learned number embeddings with sinusoidal patterns."
+  -> QUALIFIES: near-perfect decoding with a structure-matched (sinusoidal) probe, but at the input-embedding layer, not at a mid-depth residual stream like layer 17.
+
+[ZF24] Zhou, T., Fu, D., Sharan, V. & Jia, R. Pre-trained Large Language Models Use Fourier Features to Compute Addition. NeurIPS 2024 (arXiv:2406.03445). (abstract only) Text: "MLP layers primarily approximate the magnitude of the answer using low-frequency features," with attention handling modular (e.g. parity) structure via high-frequency features.
+  -> CONTEXT: numbers carry periodic (Fourier) structure in hidden states; supports the feasibility of digit/modular reads by any reader.
+
+[KT25] Kantamneni, S. & Tegmark, M. Language Models Use Trigonometry to Do Addition. arXiv:2502.00873 (venue not verified). (abstract only) Text: "We then propose that LLMs compute addition by manipulating this generalized helix using the "Clock" algorithm".
+  -> CONTEXT: numbers as a helix (linear + periodic components) in mid-size LLMs; consistent with [LG25] and [ZF24].
+
+[NI25] Nikankin, Y., Reusch, A., Mueller, A. & Belinkov, Y. Arithmetic Without Algorithms: Language Models Solve Math With a Bag of Heuristics. ICLR 2025 (arXiv:2410.21272v2). (abstract only) Text: LLMs "perform arithmetic using neither robust algorithms nor memorization; rather, they rely on a "bag of heuristics"."
+  -> SUPPORTS the premise of both B40 arms (offloading the computation to an exact module) and predicts that LoRA/CoT baselines will be weakest on operations like mult/mod with 3-digit operands.
+
+[CH24] Chen, J., Hu, S., Liu, Z. & Sun, M. States Hidden in Hidden States: Implicit Discrete State Representations Emerge in LLMs' Hidden States. arXiv:2407.11421v2 (v2 dated 4 Aug 2026; no venue). (abstract only) Text: "these state representations are far from lossless in current open-source models".
+  -> QUALIFIES: intermediate discrete states exist in hidden states but are lossy, so read noise is real; relevant to B40 Q2 (robustness to noisy reads), not decisive for either arm.
+
+======================================================================
+4. LATENT MULTI-HOP REASONING IN ONE FORWARD PASS, AND DEPTH GENERALIZATION
+======================================================================
+
+[YA24] Yang, S., Gribovskaya, E., Kassner, N., Geva, M. & Riedel, S. Do Large Language Models Latently Perform Multi-Hop Reasoning? ACL 2024 (arXiv:2402.16837). (abstract only) Text: evidence for the second hop and full traversal is "rather moderate" and "only substantial for the first hop"; "we find a clear scaling trend with increasing model size for the first hop of reasoning but not for the second hop."
+  -> SUPPORTS B40's expectation that an un-augmented LLM struggles with latent multi-hop composition (parametric facts, not in-context).
+
+[YA25] Yang, S., Kassner, N., Gribovskaya, E., Riedel, S. & Geva, M. Do Large Language Models Perform Latent Multi-Hop Reasoning without Exploiting Shortcuts? Findings of ACL 2025 (arXiv:2411.16679). (abstract only) Text: "the best models achieve 80% latent composability" for country bridge entities, dropping to "just 5%" for years; comparison with chain-of-thought shows "a significant gap".
+  -> SUPPORTS including CoT as a strong baseline on the relational task: explicit reasoning closes much of the latent multi-hop gap (parametric setting).
+
+[BI24] Biran, E., Gottesman, D., Yang, S., Geva, M. & Globerson, A. Hopping Too Late: Exploring the Limitations of Large Language Models on Multi-Hop Queries. EMNLP 2024 (arXiv:2406.12775). (abstract only) Text: "the bridge entity is resolved in the early layers of the model" ... "Because the second hop commences in later layers" the needed knowledge may be gone; back-patching fixes up to 66% of previously wrong answers.
+  -> SUPPORTS a layer-budget argument: each latent hop consumes depth, so a fixed single-layer injection (both B40 arms) may need iteration across layers or tokens for 4-5 hops. Design note: one write-back at one layer cannot chain hops unless the module itself iterates.
+
+[WA24] Wang, B., Yue, X., Su, Y. & Sun, H. Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization. NeurIPS 2024 (arXiv:2405.15071). (abstract only) Text: "transformers fail to systematically generalize for composition but succeed for comparison."
+  -> SUPPORTS predicting poor OOD composition for weight-only (LoRA) learning of chained relations.
+
+[WU25] Wu, Y., Geiger, A. & Milliere, R. How Do Transformers Learn Variable Binding in Symbolic Programs? ICML 2025 (arXiv:2505.20896). Text: "While trained on programs with a maximum of 4 hops, the model was tested on programs ranging from 1 to 13 hops." / "The model maintains high accuracy on programs up to 13 hops" (when the answer is not on line 1 or 2); for first-line answers "accuracy degrades faster as the number of hops increases" and "This performance drop aligns with the limitations of a shallow heuristic". Mechanism: "the model learns to exploit the residual stream as an addressable memory space". Model: ~37.8M-parameter 12-layer transformer trained from scratch.
+  -> CONFLICTS with assuming plain transformer training cannot extrapolate in-context pointer chasing beyond training depth: a from-scratch transformer extrapolated from <=4 to 13 hops in most positions. QUALIFIES: shortcut heuristics break in specific positions, so B40's 4-5 hop test set should report per-position/per-hop accuracy and control for answer position.
+
+[GU25] Guo, T., Zhu, H., Zhang, R., Jiao, J., Mei, S., Jordan, M. I. & Russell, S. How Do LLMs Perform Two-Hop Reasoning in Context? arXiv:2502.13913v2 (no venue). (abstract only) Text: LLMs "can fail at solving simple two-hop reasoning problems when distractors are present", pre-trained models "often resort to random guessing among all plausible conclusions"; after fine-tuning "models achieve near-perfect accuracy and exhibit strong length generalization."
+  -> CONFLICTS (partly) with expecting fine-tuned LLM baselines to fail on in-context hops: fine-tuning fixes two-hop with distractors. Leaves open whether LoRA-trained 1-3 hop models extend to 4-5 hops (not tested there).
+
+[YO25] Yao, Y., Du, Y., Zhu, D., Hahn, M. & Koller, A. Language models can learn implicit multi-hop reasoning, but only if they have lots of training data. EMNLP 2025 (arXiv:2505.17923). Text (abstract): "the required training data grows exponentially in k" and "the required number of transformer layers grows linearly in k"; "the data requirement can be mitigated, but not eliminated, through curriculum learning." Facts are memorized in parameters; separate models per k; no test beyond the trained k (checked in text).
+  -> SUPPORTS predicting that weight-only (LoRA) learning of k-hop composition is data-hungry and depth-limited; not a direct test of in-context 4-5 hop extrapolation.
+
+[SA25] Saparov, A. et al. Transformers Struggle to Learn to Search. ICLR 2025 (arXiv:2412.04703). (abstract only) Text: "as the input graph size increases, the transformer has greater difficulty in learning the task"; the abstract also reports that in-context search (chain-of-thought) does not resolve this on larger graphs (paraphrase).
+  -> QUALIFIES "CoT fixes depth": CoT helps on short chains but is not a guaranteed fix as the search space grows; B40's CoT baseline should be scored per hop count.
+
+[LI24] Li, Z., Liu, H., Zhou, D. & Ma, T. Chain of Thought Empowers Transformers to Solve Inherently Serial Problems. ICLR 2024 (arXiv:2402.12875). (abstract only) Text: constant-depth transformers "can only solve problems in TC^0 without CoT" but with T steps of CoT "can solve any problem solvable by boolean circuits of size T".
+  -> CONTEXT/SUPPORTS: theoretical reason a single forward pass (and a single injected module call) is depth-bounded while CoT is not; frames why B40 compares against CoT on the 4-5 hop test.
+
+[SI19] Sinha, K., Sodhani, S., Dong, J., Pineau, J. & Hamilton, W. L. CLUTRR: A Diagnostic Benchmark for Inductive Reasoning from Text. EMNLP 2019 (arXiv:1908.06177). Text: trained on k = 2,3 (or 2,3,4) and tested on k = 2..10: "Not surprisingly, the performance of all models degrades monotonically as we increase the length of the test clauses, which highlights the challenge of "zero-shot" systematic generalization". The graph model with symbolic input (GAT) is best but also degrades.
+  -> QUALIFIES: train-short/test-long relational chains are hard even for models given the explicit symbolic graph, so a structured (VSA or discrete) interface is not by itself a guarantee of depth generalization; what matters is whether the module iterates the hop.
+
+[FS24] Feng, J. & Steinhardt, J. How do Language Models Bind Entities in Context? ICLR 2024 (arXiv:2310.17191v2). (abstract only) Text: "identify the binding ID mechanism: a general mechanism for solving the binding problem" (fragment).
+  -> CONTEXT: LLMs already carry in-context entity-attribute bindings as vectors; the reader in either B40 arm would read these, so the relational task tests the read of binding IDs, not only the module.
+
+======================================================================
+5. DIFFERENTIABLE DISCRETE / TENSOR-PRODUCT MEMORIES AND LEARNABLE HRR
+======================================================================
+
+[SM90] Smolensky, P. Tensor product variable binding and the representation of symbolic structures in connectionist systems. Artificial Intelligence 46(1-2):159-216, 1990 (doi:10.1016/0004-3702(90)90007-M). (snippet only) Publisher abstract (via search snippet): the representation "saturates gracefully as larger structures are represented".
+  -> CONTEXT: TPR is the exact (non-compressed) binding scheme of which HRR is a compressed version; the natural differentiable non-VSA comparator for B40's "end-to-end differentiability" question.
+
+[SS18] Schlag, I. & Schmidhuber, J. Learning to Reason with Third Order Tensor Products. NeurIPS 2018 (arXiv:1811.12143). Text: "We ignored the provided supporting facts that simplify the problem by pointing out sentences relevant to the question." ... "with no additional supervision signal apart from the prediction error." Table 1 (bAbI 10k, all-tasks, 10 runs): TPR-RNN mean error 1.34 +/- 0.52 vs SDNC 6.4 +/- 2.5, DNC 12.8 +/- 4.7.
+  -> CONFLICTS with any claim that label-free end-to-end training of a structured binding memory requires a VSA: a tensor-product (non-HRR) memory learned bAbI-style multi-fact reasoning from answers only. SUPPORTS adding a TPR/soft-table arm (or at least citing it) when B40 discusses differentiability.
+
+[SI21] Schlag, I., Irie, K. & Schmidhuber, J. Linear Transformers Are Secretly Fast Weight Programmers. ICML 2021, PMLR 139:9355-9366 (arXiv:2102.11174v3). (abstract only) Text: "We show the formal equivalence of linearised self-attention mechanisms and fast weight controllers from the early '90s" and "We infer a memory capacity limitation of recent linearised softmax attention variants".
+  -> CONTEXT: outer-product (tensor) memories are already inside standard architectures and are trained end-to-end; capacity limits of superposed key-value storage apply to VSA bundles as well.
+
+[GA21] Ganesan, A., Gao, H., Gandhi, S., Raff, E., Oates, T., Holt, J. & McLean, M. Learning with Holographic Reduced Representations. NeurIPS 2021 (arXiv:2109.02157v2). Text: "HRRs today are not effective in a differentiable solution due to numerical instability, a problem we solve by introducing a projection step". On regressing to HRR targets with MSE: "However, we found that such an approach resulted in no learning and degenerate random-guessing performance." Ablation: "skipping the projection step caused degradation to random-guessing performance". Versus a fully-connected output layer: "we can reduce the output size by as much as 99.55%" with "similar or improved relative accuracy", though results "still suffer at the largest output spaces with 670k labels".
+  -> QUALIFIES both ways: (a) a direct HRR-vs-plain-output comparison (non-LLM, multi-label) where HRR wins on parameter count at similar accuracy, which is the kind of parameter-count edge B40 Q2 asks about; (b) known failure modes when HRR is trained inside deep nets (numerical instability; MSE regression to HRR targets can collapse to chance). DE25 uses RMSE to fixed HRR targets with a linear encoder; B40 should log encoder target-fit and decoding accuracy to detect this failure.
+
+[AL23] Alam, M. M., Raff, E., Biderman, S., Oates, T. & Holt, J. Recasting Self-Attention with Holographic Reduced Representations (Hrrformer). ICML 2023 (arXiv:2305.19534). (abstract only) Text: "the Hrrformer achieves near state-of-the-art accuracy on LRA benchmarks" and is "up to 280x faster to train on the Long Range Arena benchmark".
+  -> CONTEXT: HRR operations can be trained end-to-end inside a transformer (as attention), so differentiability per se is not unique to the B40 VSA arm nor a barrier to it.
+
+[AL24] Alam, M. M., Raff, E. & Oates, T. Towards Generalization in Subitizing with Neuro-Symbolic Loss using Holographic Reduced Representations. AAAI 2024 NuCLeaR workshop (arXiv:2312.15310). (abstract only) Text: "the proposed HRR loss improves subitizing generalization though it does not completely solve the problem." (baseline: standard cross-entropy).
+  -> QUALIFIES: one of the few direct HRR-vs-discrete (cross-entropy) comparisons; HRR helps generalization modestly in a vision setting. Weak evidence (workshop, abstract only), but it is a precedent for B40's question.
+
+[JA17] Jang, E., Gu, S. & Poole, B. Categorical Reparameterization with Gumbel-Softmax. arXiv:1611.01144v5 (ICLR 2017; venue not re-verified on the page). (abstract only) Text: Gumbel-Softmax "replaces the non-differentiable sample from a categorical distribution" with a differentiable sample.
+  -> CONTEXT: the standard way to make B40's discrete classifier heads trainable without symbol labels; note [GZ26] reports straight-through-style estimators failing for a similar writer, while REINFORCE worked.
+
+======================================================================
+6. ROBUSTNESS OF VSA CLEAN-UP / SUPERPOSITION VS HARD DECISIONS
+======================================================================
+
+[FK18] Frady, E. P., Kleyko, D. & Sommer, F. T. A theory of sequence indexing and working memory in recurrent neural networks. Neural Computation (accepted per arXiv comments; arXiv:1803.00412). (abstract only) Text: storage "is lossy and crosstalk noise limits the retrieval accuracy and information capacity".
+  -> QUALIFIES B40 Q2: superposition adds crosstalk noise that discrete slots do not have; at d=2048 with 6-7 bound items per problem the crosstalk should be small, but robustness claims must be measured, not assumed. Note that DE25's decode already ends in a hard argmax clean-up per digit, so "soft superposition" robustness applies only if a soft decode is used.
+
+[KE20] Kent, S. J., Frady, E. P., Sommer, F. T. & Olshausen, B. A. Resonator Networks outperform optimization methods at solving high-dimensional vector factorization. arXiv:1906.11684 (journal version not verified here). (abstract only) Text: resonator networks are "dramatically more effective at finding factorizations than all alternative approaches considered".
+  -> CONTEXT: VSA-side decoding can be iterative and noise-tolerant (vs one-shot argmax), but the comparison is against optimization methods (ALS, gradient), not against a trained classifier read of LLM hidden states.
+
+[HE23] Hersche, M., Zeqiri, M., Benini, L., Sebastian, A. & Rahimi, A. A Neuro-vector-symbolic Architecture for Solving Raven's Progressive Matrices. Nature Machine Intelligence 5:363-375, 2023 (arXiv:2203.04571v2). (abstract only) Text: "87.7% average accuracy in RAVEN, and 88.1% in I-RAVEN"; VSA-based probabilistic reasoning is "two orders of magnitude faster" than symbolic reasoning in neuro-symbolic approaches.
+  -> SUPPORTS that a VSA back-end can match or beat a discrete-symbolic back-end at the same pipeline position, but the measured edge is speed, not accuracy, and the setting is vision, not LLM residual streams.
+
+[BR25] Bronzini, M., Nicolini, C., Lepri, B., Staiano, J. & Passerini, A. Hyperdimensional Probe: Decoding LLM Representations via Vector Symbolic Architectures. arXiv:2509.25045v2 (preprint, no venue). Text: "The training process minimizes the Binary Cross-Entropy (BCE) error between the bipolar target hypervectors and the predictions." Reports "an average probing@1 across all models equal to 83%"; compared only against DLA/logit lens ("DLA produces no concepts in nearly 30% of analogies on average", vs 28% for VSA on those analogies).
+  -> QUALIFIES: another supervised VSA read of LLM residual streams; it is not compared with a plain linear/classifier probe, so it gives no evidence that the VSA read beats a classifier read.
+  Note on hardware-noise robustness: search results on HDC report robustness to bit flips and weight corruption vs DNNs (e.g. DistHD, DAC 2023), but I could not verify those numbers in the papers' own text, and they concern hardware noise, not noisy reads of hidden states; not used.
+
+======================================================================
+7. WRITING A VALUE INTO THE RESIDUAL STREAM (PRECEDENT FOR THE LEARNED WRITE-BACK)
+======================================================================
+
+[TO24] Todd, E., Li, M. L., Sen Sharma, A., Mueller, A., Wallace, B. C. & Bau, D. Function Vectors in Large Language Models. ICLR 2024 (arXiv:2310.15213). (abstract only) Text: function vectors "trigger execution of the task on inputs such as zero-shot and natural text settings" (fragment).
+  -> SUPPORTS that adding a single vector to the residual stream at one layer can steer the output, the mechanism both B40 arms use for write-back.
+
+[TU23] Turner, A. M., Thiergart, L., Leech, G., Udell, D., Vazquez, J. J., Mini, U. & MacDiarmid, M. Steering Language Models With Activation Engineering. arXiv:2308.10248v5 (venue not listed on arXiv). (abstract only) Text: Activation Addition "contrasts the intermediate activations on prompt pairs" to form a steering vector added during the forward pass.
+  -> CONTEXT: unlearned activation addition; B40's write-backs are learned, so this is only precedent for additive injection.
+
+[GH24] Ghandeharioun, A., Caciularu, A., Pearce, A., Dixon, L. & Geva, M. Patchscopes: A Unifying Framework for Inspecting Hidden Representations of Language Models. ICML 2024 (arXiv:2401.06102). (abstract only) Text: prior methods of "intervening on the LLM computation can be viewed as instances of this framework."
+  -> CONTEXT: patching representations into a forward pass to decode them; relevant if B40 inspects what its write-back vector encodes.
+
+======================================================================
+GAP:
+======================================================================
+Search terms and sources used: Semantic Scholar citations API for arXiv:2502.01657 (11 citers, 2026-11-18); pith.science and lacuna citation pages; "Dhanraj and Eliasmith" 2025; the CNRG lab publication pages and the UWSpace thesis PDF (full-text grep for classifier/discrete/one-hot/ablation/baseline); "vector symbolic architecture probe LLM hidden states hyperdimensional probe"; "holographic reduced representations inside large language model residual stream symbolic module 2025 neurosymbolic"; "comparison vector symbolic architecture versus one-hot discrete symbols neural module ablation holographic OR hyperdimensional one-hot baseline"; "frozen LLM hidden states symbolic executor write back residual stream arithmetic module 2025 2026 single forward pass"; "Integrated Gated Calculator LLM arithmetic hidden states"; "hyperdimensional computing robustness to noise compared with neural network classifier argmax superposition decoding"; "transformers variable binding in-context multi-hop depth generalization".
+
+(1) Main gap, confirmed: I found NO published comparison of a VSA in-forward-pass module against a discrete pipeline of the same shape (classifier heads on the same hidden states -> exact table/program -> learned embedding written back at the same layer). Each side exists separately: VSA = [DE25]/[D26T]/[DE26W] (baselines only plain LLM, CoT, LoRA); discrete = [DK25] IGC (Llama-3.1-8B, per-digit classifiers, 0.99 vs 0.70 for an equal-parameter adapter) and [GZ26] tape layers (gemma-3 1B/4B, discrete tape, 1.00 vs 0.35-0.38 for all-layer LoRA, cites DE25 but does not run it). Given these, the prior should be that the discrete arm is at least competitive; a VSA win in B40 would be new evidence, a tie would be the expected outcome.
+
+(2) The read is the bottleneck: the authors' own follow-up ([D26T-ch8]) shows end-to-end accuracy moves from 53.6% to 93.1% by changing only the encoder. Unless B40 holds the reader fixed across arms, VSA-vs-discrete differences cannot be attributed to the representation.
+
+(3) Robustness of soft superposition decoding vs hard argmax under noisy hidden-state reads: no study found in the LLM setting. Theory ([FK18]) says superposition adds crosstalk noise; HDC hardware-noise robustness results do not transfer to read noise. DE25 itself decodes with argmax clean-up, so a soft-decode variant would have to be built to test the hypothesis.
+
+(4) Label-free training: the published VSA pipeline needs supervised VSA targets ([D26T]); no label-free VSA-in-LLM result was found. Label-free discrete alternatives exist ([DU24] reward-trained operation choice; [GZ26] REINFORCE writer, 5/6 and 2/4 runs succeed, straight-through/ReinMax/I-MLE fail), and non-VSA differentiable binding memories learn multi-fact reasoning from answers alone ([SS18] bAbI 1.34% error). HRR inside deep nets has documented collapse modes ([GA21]). So differentiability alone is not a VSA-specific advantage; B40 should compare against a soft one-hot table / TPR if it claims one.
+
+(5) Depth generalization with an LLM plus an in-forward-pass module on in-context relational chains: only [GZ26] (object tracking, 5 -> 7 exchanges, discrete) is close; no VSA result. Small from-scratch transformers can extrapolate pointer chasing ([WU25], <=4 -> 13 hops except early-line answers), fine-tuning fixes in-context two-hop with distractors ([GU25]), while latent multi-hop over parametric facts stays weak ([YA24], [BI24], [YA25]) and even symbolic-input models degrade with chain length ([SI19]). A single write-back at one layer cannot chain hops unless the module iterates; this design choice, not VSA vs discrete, will likely decide the 4-5 hop result.
+
+(6) Not verified / left out: Kantamneni & Tegmark venue; Google Scholar "cited by" (not reachable); OpenReview text of [DE26W] (login wall); full text of most abstract-only items above.
+
+======================================================================
+AFTER THE RESULT (2026-11-19; conclusion -> literature, one line per conclusion)
+======================================================================
+- Task N, R1 REPLICATED (VSA 0.898 on DE25's 8 types; DE25 report 0.904 on the same types): SUPPORTED by [DE25];
+  the size of the gain over an equal-parameter fine-tune agrees with [DK25] (exact module 0.99 vs adapter 0.70) and
+  [GZ26] (1.00 vs all-layer LoRA 0.35-0.38).
+- Task N, R2 DISC WIN under DE25's clean-up, reversed by argmax clean-up (exploratory 1: VSA 0.960 vs DISC 0.930):
+  QUALIFIED by [D26T-ch8] ("encoding accuracy plays a pivotal role"); the read decides. NO PRECEDENT found for a
+  comparison of an MSE-to-HRR linear read with cross-entropy classifier heads on the same hidden states.
+- Task R, R2 TIE (both >= 0.987 in every cell, depth 1-5): SUPPORTED by [GZ26] (a discrete module stays exact past the
+  trained depth) and [SS18] (structured binding memories solve multi-fact chains); the VSA adds no accuracy here.
+- Task R, LoRA falls with depth and size (0.71 at depth 5, 20 facts; trained on depth <= 3, 10 facts): SUPPORTED by
+  [YO25], [WA24], [SI19]; PARTLY CONFLICTS with [GU25] (strong length generalisation after fine-tuning, two hops)
+  and [WU25] (from-scratch extrapolation to 13 hops).
+- CoT stops at the first hop on deep chains and truncates bitwise arithmetic (517 of 2,500 outputs hit 512 tokens):
+  SUPPORTED by [SA25] (CoT not a guaranteed fix) and DE25's Appendix F (bit-by-bit loops).
+- Read noise: the VSA read is far more fragile than the classifier read (task N dev, rho 0.25: 0.64 vs 0.92; test
+  end-to-end 0.60 vs 0.91): CONFLICTS with the general HDC robustness claims as applied to this setting (robustness
+  there is to device noise in stored HD vectors, [FK18] context); NO PRECEDENT for read noise on LLM hidden states.
+- Held-out types: VSA's similarity gate stays shut (addition open on 2.9% of items) while the classifier's softmax
+  gate opens on 100%: SUPPORTS DE25's Appendix A/B claim; the softmax failure is the known over-confidence of maximum
+  softmax probability on out-of-distribution inputs (Hendrycks & Gimpel, ICLR 2017, arXiv:1610.02136; not re-read for
+  B40), so a discrete pipeline with a better OOD score (untested here) may close the gap.
+- Label-free: no headroom; one learned constant vector added at layer 17 lifts the frozen LLM from 0.23 to 0.97 on
+  depth-3 dev and 0.90 -> 0.995 on depth-2 dev: SUPPORTED by [TO24] / [TU23] (a single residual-stream vector steers the
+  model); the question whether a VSA can be learned without symbol labels is NOT ANSWERED by B40.

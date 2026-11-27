@@ -1,0 +1,54 @@
+# B49 hand reading, b46: R1 cells with the largest and the smallest VSA - BEST (ideal)
+
+## cell M=1024 V=16 bpf=16: VSA 31.4, BEST LHI 30.8, diff +0.60, EXACT 71.3
+  only VSA right: 771 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Brajamohan'                             | 'Krishna'                                | 'The Brave'                              | +0.171 | False
+    'Crowd'                                  | 'The Crowd'                              | 'The Crowd'                              | +0.653 | True
+    'The Terrace'                            | 'La terrazza'                            | 'La terrazza'                            | +0.498 | True
+    'Yadkin County, North Carolina'          | 'Yadkin County'                          | 'Yadkin County'                          | +0.702 | True
+    'Day in the Life'                        | 'A Day in the Life'                      | 'A Day in the Life'                      | +0.807 | True
+    'Homesman'                               | 'The Homesman'                           | 'The Homesman'                           | +0.780 | True
+    'Persona 1'                              | 'Revelations: Persona'                   | 'Revelations: Persona'                   | +0.494 | True
+    'Saint Damien De Veuster'                | 'Father Damien'                          | 'Father Damien'                          | +0.560 | True
+    'Rajalakshmi College'                    | 'Rajalakshmi Engineering College'        | 'Rajalakshmi Engineering College'        | +0.948 | True
+    'Charlton'                               | 'Charlton Athletic F.C.'                 | 'Charlton Athletic F.C.'                 | +0.470 | True
+    mean centred cosine over all 771: +0.649; EXACT right in 0.90
+  only BEST right: 745 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Little Princess'                        | 'A Little Princess'                      | 'A Little Princess'                      | +0.682 | True
+    'Man with the Golden Arm'                | 'The Man with the Golden Arm'            | 'The Man with the Golden Arm'            | +0.909 | True
+    'Exeter City'                            | 'Exeter City F.C.'                       | 'Exeter City F.C.'                       | +0.712 | True
+    'STTNG'                                  | 'Star Trek: The Next Generation'         | 'Star Trek: The Next Generation'         | +0.334 | True
+    'Gabor Janvari'                          | 'Gábor Jánvári'                          | 'Gábor Jánvári'                          | +0.746 | True
+    'Nero Claudius Caesar Augustus Germanicus' | 'Nero'                                   | 'Nero'                                   | +0.200 | True
+    'Holy Cross Voivodeship'                 | 'Świętokrzyskie Voivodeship'             | 'Świętokrzyskie Voivodeship'             | +0.517 | True
+    'Yaakov ben Asher'                       | 'Jacob ben Asher'                        | 'Jacob ben Asher'                        | +0.701 | True
+    'Guinea-Conakry'                         | 'Guinea'                                 | 'Guinea'                                 | +0.810 | True
+    'National Assembly of Nicaragua'         | 'National Assembly'                      | 'National Assembly'                      | +0.556 | True
+    mean centred cosine over all 745: +0.564; EXACT right in 0.83
+
+## cell M=256 V=16 bpf=16: VSA 34.0, BEST LHI 44.5, diff -10.41, EXACT 80.6
+  only VSA right: 637 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'jacomo guardi'                          | 'Giacomo Guardi'                         | 'Giacomo Guardi'                         | +0.536 | True
+    'franzesco guardi'                       | 'Francesco Guardi'                       | 'Francesco Guardi'                       | +0.760 | True
+    'Ezra Dale Polley'                       | 'Dale Polley'                            | 'Dale Polley'                            | +0.422 | True
+    'Juventus'                               | 'Juventus F.C.'                          | 'Juventus F.C.'                          | +0.768 | True
+    'Tathagat'                               | 'Gautama Buddha'                         | 'Gautama Buddha'                         | +0.265 | True
+    'Isle of Devils'                         | 'Bermuda'                                | 'Outer Hebrides'                         | +0.091 | False
+    'Celâleddin-i Rûmî'                      | 'Rumi'                                   | 'Rumi'                                   | +0.146 | True
+    "L'OL"                                   | 'Olympique Lillois'                      | "L'ultima chance"                        | +0.275 | True
+    'Tenzing Choigyal'                       | 'Güshi Khan'                             | 'Bhutan'                                 | +0.308 | False
+    'Na h-Eileanan Siar'                     | 'Outer Hebrides'                         | 'Outer Hebrides'                         | +0.270 | True
+    mean centred cosine over all 637: +0.521; EXACT right in 0.89
+  only BEST right: 1128 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Eglon, West Virginia'                   | 'Eglon'                                  | 'Eglon'                                  | +0.485 | True
+    '2010'                                   | '2010: The Year We Make Contact'         | '2010: The Year We Make Contact'         | +0.566 | True
+    'S. Pinakapani'                          | 'Sripada Pinakapani'                     | 'Sripada Pinakapani'                     | +0.694 | True
+    'Sima De'                                | 'Emperor An of Jin'                      | 'Firaq Gorakhpuri'                       | +0.041 | True
+    'Blade'                                  | 'The Blade'                              | 'The Blade'                              | +0.695 | True
+    'Johnson City, Texas'                    | 'Johnson City'                           | 'Johnson City'                           | +0.791 | True
+    'Rodzilla'                               | 'Dennis Rodman'                          | 'Dennis Rodman'                          | +0.366 | True
+    'Joh. Heinr. Rose'                       | 'Johann Heinrich Roos'                   | 'Johann Heinrich Roos'                   | +0.782 | True
+    'Sac-Town'                               | 'Sacramento'                             | 'Sacramento'                             | +0.688 | True
+    'The Little Red Book'                    | 'Quotations from Chairman Mao Tse-tung'  | 'The Red Squirrel'                       | +0.047 | False
+    mean centred cosine over all 1128: +0.596; EXACT right in 0.92
+

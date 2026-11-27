@@ -1,0 +1,59 @@
+# B75 sample reading by the AI-assisted process (not independent): failed probed keys one grid step below
+# N* (k8 for U-LS / O2, k1 for the joint decoders); per row its diagnostics.
+
+== U-LS|free k8: one step below N* 108 -> B 91, design [1.0, 3]: 57 / 4776 probed keys failed on 50 stores
+  131072/niah_multikey_2/180562            n  5986 failed   7 diag null key_cells None
+  131072/niah_multikey_2/350510            n  5989 failed   5 diag null key_cells None
+  131072/niah_multikey_2/339871            n  5991 failed   4 diag null key_cells None
+  131072/niah_multikey_2/95106             n  5990 failed   4 diag null key_cells None
+  131072/niah_multikey_3/189443            n  1698 failed   4 diag null key_cells None
+  131072/niah_multikey_3/118763            n  1698 failed   4 diag null key_cells None
+
+== O2-BCH|free k8: one step below N* 152 -> B 128, design [6, 1]: 48 / 4776 probed keys failed on 50 stores
+  131072/niah_multikey_2/234552            n  5992 failed   8 diag {"cw_bound": 224, "cw_lib": 5, "cw_fail": 18, "ambiguous": 1, "nearest": 2, "nearest_tie": 5, "stash_hit": 10, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/350510            n  5989 failed   7 diag {"cw_bound": 230, "cw_lib": 2, "cw_fail": 15, "ambiguous": 0, "nearest": 0, "nearest_tie": 2, "stash_hit": 8, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/44358             n  5994 failed   6 diag {"cw_bound": 231, "cw_lib": 3, "cw_fail": 13, "ambiguous": 0, "nearest": 4, "nearest_tie": 0, "stash_hit": 8, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/339871            n  5991 failed   6 diag {"cw_bound": 232, "cw_lib": 7, "cw_fail": 8, "ambiguous": 1, "nearest": 1, "nearest_tie": 2, "stash_hit": 9, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/180562            n  5986 failed   6 diag {"cw_bound": 234, "cw_lib": 1, "cw_fail": 12, "ambiguous": 0, "nearest": 0, "nearest_tie": 1, "stash_hit": 8, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/92134             n  5992 failed   5 diag {"cw_bound": 240, "cw_lib": 2, "cw_fail": 5, "ambiguous": 0, "nearest": 1, "nearest_tie": 2, "stash_hit": 12, "stash_ambiguous": 0} key_cells None
+
+== O2-LDPC|free k8: one step below N* 76 -> B 64, design [6, 1, 0.5]: 1230 / 4776 probed keys failed on 50 stores
+  131072/niah_multikey_2/95106             n  5990 failed 111 diag {"cw_nonconv": 117, "ambiguous": 1, "nearest": 33, "nearest_tie": 41, "stash_hit": 3, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/180562            n  5986 failed 109 diag {"cw_nonconv": 106, "ambiguous": 5, "nearest": 45, "nearest_tie": 43, "stash_hit": 2, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/350510            n  5989 failed 107 diag {"cw_nonconv": 109, "ambiguous": 5, "nearest": 36, "nearest_tie": 29, "stash_hit": 1, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/162015            n  5995 failed 101 diag {"cw_nonconv": 108, "ambiguous": 4, "nearest": 30, "nearest_tie": 36, "stash_hit": 2, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/234552            n  5992 failed 101 diag {"cw_nonconv": 104, "ambiguous": 5, "nearest": 27, "nearest_tie": 38, "stash_hit": 6, "stash_ambiguous": 0} key_cells None
+  131072/niah_multikey_2/170650            n  5990 failed 101 diag {"cw_nonconv": 107, "ambiguous": 6, "nearest": 28, "nearest_tie": 41, "stash_hit": 3, "stash_ambiguous": 0} key_cells None
+
+== U-J|free k1: one step below N* 32 -> B 27, design [3]: 96 / 4776 probed keys failed on 50 stores
+  131072/niah_multikey_2/44358             n  5994 failed  18 diag null key_cells 0
+  131072/niah_multikey_2/162015            n  5995 failed  16 diag null key_cells 0
+  131072/niah_multikey_2/350510            n  5989 failed  13 diag null key_cells 0
+  131072/niah_multikey_2/259411            n  5987 failed  10 diag null key_cells 0
+  131072/niah_multikey_2/339871            n  5991 failed   9 diag null key_cells 0
+  131072/niah_multikey_2/180562            n  5986 failed   9 diag null key_cells 0
+
+== H-SBC-J|free k1: one step below N* 23 -> B 19, design [0.7, 2]: 50 / 4776 probed keys failed on 50 stores
+  131072/niah_multikey_2/92134             n  5992 failed   8 diag null key_cells 0
+  131072/niah_multikey_2/180562            n  5986 failed   8 diag null key_cells 0
+  131072/niah_multikey_2/350510            n  5989 failed   7 diag null key_cells 0
+  131072/niah_multikey_2/162015            n  5995 failed   6 diag null key_cells 0
+  131072/niah_multikey_2/339871            n  5991 failed   6 diag null key_cells 0
+  131072/niah_multikey_2/170650            n  5990 failed   4 diag null key_cells 0
+
+== U-J|chg k1: one step below N* 45 -> B 38, design [3]: 171 / 4776 probed keys failed on 50 stores
+  131072/niah_multikey_2/44358             n  5994 failed  26 diag null key_cells 71285
+  131072/niah_multikey_2/162015            n  5995 failed  19 diag null key_cells 71295
+  131072/niah_multikey_2/350510            n  5989 failed  19 diag null key_cells 71230
+  131072/niah_multikey_2/339871            n  5991 failed  18 diag null key_cells 71254
+  131072/niah_multikey_2/95106             n  5990 failed  18 diag null key_cells 71243
+  131072/niah_multikey_2/234552            n  5992 failed  15 diag null key_cells 71265
+
+== H-SBC-J|chg k1: one step below N* 32 -> B 27, design [0.7, 2]: 2146 / 4776 probed keys failed on 50 stores
+  131072/niah_multikey_2/339871            n  5991 failed 135 diag null key_cells 71254
+  131072/niah_multikey_2/234552            n  5992 failed 134 diag null key_cells 71265
+  131072/niah_multikey_2/259411            n  5987 failed 134 diag null key_cells 71211
+  131072/niah_multikey_2/180562            n  5986 failed 133 diag null key_cells 71201
+  131072/niah_multikey_2/170650            n  5990 failed 132 diag null key_cells 71244
+  131072/niah_multikey_2/350510            n  5989 failed 132 diag null key_cells 71230
+

@@ -1,0 +1,148 @@
+
+## Reading (written by hand after the generated part; reading rules in the prereg)
+
+Setting. Every stored bit of every memory is a cell (a differential pair of PCM devices read as a sign) with i.i.d.
+sign errors at the device model's measured 30-day rate x k (B34 showed the model's errors are i.i.d.; a re-read of 16
+cells with the device model itself agrees, below), or with localized damage at a matched overall error rate. Each
+memory is read at the smallest budget, in cells per stored pair with every stored bit counted (directory, parity,
+codebook where stored), at which it reads >= 99.5% of the 4,776 probed RULER keys exactly; designs were tuned on
+synthetic dev stores and the condition's error rate is known to every designer. The VSA reads regenerate their
+codebook digitally from the value strings (0 cells; the price is N_values x d code bits and dot products per query).
+
+1. H1, primary (the referee's question): TABLE WIN at every noise level. Error-corrected tables need 2-4x fewer cells
+   per fact than the best VSA read: 19 vs 76 cells with no cell errors (k1), 27 vs 76 at k4 (2.1% cell errors), 54 vs
+   128 at k8 (12.3%), 215 vs 431 at k16 (27.6%), 724 vs 1722 at k32 (37.4%) (Delta -8, -8, -6, -5, -4, -5 grid steps;
+   store bootstrap k8 [-5, -4], k16 [-4, -3]). The winning codes: a BCH table (tuned (n, t), repetition only where
+   needed) at low error rates, an LDPC table with the copies' votes combined into soft inputs at high ones (R = 1/3 at
+   k8 and k16, 1/4 at k32). The best VSA read is V-last (each key's last value bound with a LAST code), which needs no
+   threshold; the published read (V-pub, threshold 0.5) needs 108-861 cells up to k8 and never reaches 99.5% at k16 or
+   k32; V-Snt (B34's argmax read) stalls at 98.8% from k16 on (multi-valued keys of the small stores).
+2. The referee's capacity point holds. With no cell errors the VSA store needs 76 cells per fact (about 108 pairs per
+   8,192-cell vector; 0.17 value bits per cell) where a table needs 19 (0.66) and the directory-free capacity bound is
+   13.5. The RULER stores at 16 pairs per vector (512 cells per fact) were over-provisioned 6.7x; B34's exactness at
+   low precision was a property of that over-provisioning. The VSA's distance from the capacity bound (5.6x at k1, 5.8x
+   at k32) is about twice the best table's (1.4x at k1, 2.5x at k32) at every noise level.
+3. Against repetition alone the VSA store does need fewer cells at high noise (T-rep 256 / 1024 / 3444 vs 128 / 431 /
+   1722 at k8 / k16 / k32): B34's comparison was against a repetition-coded table, and its VSA advantage (V-Snt +7 to
+   +61 points at 512 cells) is an advantage over repetition, not over coding. A hashed CAM in BCH (E-CAM) pays for its
+   26-bit key hashes (45-3444 cells).
+4. H2: a table whose directory and values are random high-dimensional codes decoded by similarity, without
+   superposition (T-vhdd), needs fewer cells than the VSA store at every level (32 / 38 / 91 / 304 / 1024 vs 76 / 76 /
+   128 / 431 / 1722; Delta -2 to -5). Superposition costs cells; it buys none.
+5. H1cb, item memory counted: a VSA whose value codebook (N_values x d) is stored on the same cells needs 431 cells at
+   k1 to 1448 at k8 and never reaches 99.5% at k16 or k32 (load 1-2 pairs per vector chosen, i.e. hardly a VSA); 11-19
+   grid steps (7-27x) above the best table. The VSA's competitiveness above depends on regenerating its codebook.
+6. H3 (localized damage with an interleaver, unknown locations): TABLE WIN in all 12 conditions (Delta -2 to -6).
+   With a random interleaver dead lines, stuck clusters and even a contiguous lost band look like i.i.d. errors to
+   every memory: V-last, T-rep, T-vhdd and E-CAM stay within one grid step of their i.i.d. requirement in 12 of 12
+   conditions, E-BCH and E-LDPC in 10 of 12 (E-BCH 91 vs 38 at lines/e05: the small stores' tables are single
+   codewords, and localized damage on a tiny array varies a lot; hand-read below). H5 (locations known, erasures):
+   TABLE WIN in all 4.
+7. H4 (no interleaver, natural layout): VSA WIN in the 8 lines/cluster conditions. The VSA store keeps its i.i.d.
+   requirement within 0-3 grid steps (V-last 76 / 91 / 152 / 512 for dead lines at f = 4 / 10 / 25 / 55% and 76 / 91 /
+   152 / 724 for clusters) while every table needs at least 4 grid steps more than in its own i.i.d. condition (best
+   non-HD table 181 to > 4096 cells; T-vhdd 91 to 2896). The mechanism is superposition: each fact is spread over the d = 8,192 cells of its shard vector, so a dead
+   word line (256 cells) or a 16 x 16 cluster removes a small share of every fact in that vector, whereas a table
+   keeps each fact (and, with copies adjacent, all copies of a bit) in a few contiguous cells, and a coded table
+   concentrates the damage in some codewords (hand-read: 93-167 errors in codewords designed for 59). This is the
+   one place where the VSA store needs fewer cells than every table, and it is specific to superposition: T-vhdd,
+   with the same random codes but no superposition, fails like the other tables. But an interleaver gives the tables
+   the same property at no cost in cells (point 6). Contiguous loss of a fraction f in the natural layout defeats every
+   memory (whole vectors or codewords lost; no arm reaches 99.5% at any f up to 4,096 cells); at 512 cells the VSA
+   reads 1 - f of its keys or slightly more (96.0 / 90.1 / 76.8 / 48.2%), 5-31 points more than the coded tables
+   (T-rep, E-BCH, E-LDPC, T-vhdd), whose contiguous codewords each lose several facts at once.
+   Exploratory (not registered): the ldpc package's belief propagation, the run's LDPC decoder, decodes far fewer words
+   than our own sum-product decoder when stuck cells make the channel inputs confidently wrong (lines-nat-k8 at 512
+   cells: 7 and 10 of about 100 codewords vs 86 and 94; at 54-64 cells 44-64 vs 47-66), while in the i.i.d. cells the
+   two agree on 602 of 604 words and decode the same ones. With our decoder, LDPC tables reach 99.5% at about 128
+   cells for lines/clusters at f = 4% (VSA 76), 512 at f = 10% (VSA 91), 1024-4096 at f = 25% (VSA 152) and never for
+   lines at f = 55% (VSA 512) (octave grid; results/b38_explore_ldpc_own.txt). The VSA WIN in H4 stands, with smaller
+   margins at f = 4% (about 3 grid steps instead of > 17).
+8. H6 (graceful degradation at equal cells, designs fixed for k8 at 128 cells per fact): the coded table degrades
+   later but abruptly - E-LDPC reads 100 / 99.4 / 98.4% at eps = 0.16 / 0.20 / 0.24 against V-last 98.7 / 94.8 / 84.0,
+   then 12.6% at 0.276 and 3.8% at 0.32 against 65.8% and 37.5% (VSA ahead by 57 and 40 points). T-vhdd degrades like
+   the VSA (70.4% at 0.276): the gradual failure belongs to similarity decoding of per-fact random codes, not to
+   superposition. Without an interleaver (lines, natural layout) the VSA is ahead at every eps (+13 to +43 points).
+9. H7 (under-provisioned memories, i.i.d.): below the best table's N* the VSA reads more keys at 37 of 49 budgets,
+   e.g. k16 at 128 cells 65.7% vs 12.6% (E-LDPC), k32 at 431 cells 66.9% vs 10.0%; long codewords fail together. But
+   these are inexact memories (well below 99.5%), and T-vhdd reads as many or more (70.4% at k16/128).
+
+Checks from other angles (results/b38_check_*): the device model re-read (16 cells: 10 stores x 8 families x k8, k16
+at 256 cells) agrees with the i.i.d. flips everywhere (largest |diff| 2.1 points, SE 1.8; no flag; measured flip
+rates 0.1225-0.1227 and 0.2758-0.2761). BCH: the galois library's codes have the same generator polynomials as ours
+(11 of 11 codes), the same encodings (26,771 of 26,771 codewords) and decode identically (26,771 of 26,771 words,
+including 6,239 beyond the design radius); the bounded-distance shortcut was correct for all 20,532 words it covered.
+LDPC: our numpy decoder and the ldpc package agree on 792 of 1,007 codewords overall - 602 of 604 in the six i.i.d.
+cells (same words decoded correctly), 190 of 403 in the four natural-layout cells, where ours decodes many more (above;
+results/b38_check_decoders_ldpc_percell.txt); the registered >= 99% agreement fails, in the direction that makes the
+LDPC tables look worse than they are. Closed form (results/b38_check_closed.json; 953 i.i.d. cells): the VSA reads
+agree with the Gaussian approximation in all 483 cells (V-pub, V-Snt, V-last; largest |diff| 1.73 points; 0 flagged);
+T-rep's exact binomial agrees in 159 of 161 (2 flagged at 11 cells per pair, small stores only, simulation 12-15 points
+below); E-BCH and E-CAM are flagged in 106 of 309 cells, every one with the simulation ABOVE the closed form (0 cells
+below it): the registered closed form counts a key as failed whenever one of its codewords fails, but an undecodable
+codeword returns its received bits and a key's 17 bits are often intact (E-CAM's rows match by hash even with a few
+wrong bits). Near the 99.5% point (287 cells with closed form >= 95% or simulation >= 99%) 3 are flagged, largest
+|diff| 2.6 points. The registered "at most 10 flagged cells" fails; the closed form is the lower bound it was
+registered as. Hand reading (results/b38_handread.txt): VSA failures at N* - 1 are keys whose true value's similarity
+(0.034-0.053) is beaten by a crosstalk winner (0.041-0.055), or whose LAST tag is misread so the read continues; in the
+natural layout the failing keys' shards had more damaged cells (0.13-0.23 vs 0.125 overall). E-BCH failures are keys
+with one codeword beyond 2t; E-LDPC below N* fails almost every codeword at once (99 of 101 not converged); T-vhdd and
+T-rep failures are keys whose value code or majority falls.
+
+Failed predictions: P7 (V-last at 512 cells under contiguous loss read 48.2% at f = 55%, 3.4 points above 1 - f
+instead of within 3; its other parts held), P9 (E-LDPC was ahead of the VSA by 4.6 points at eps = 0.20, not >= 5; the
+other three parts held), and two parts of P11: closed-form flags (108 > 10, all in the lower bound's direction) and
+LDPC decoder agreement (79% < 99%; 213 of the 215 disagreements in natural-layout cells); its other parts held (BCH 100%, device
+model 0 flags). 8 of 10 mechanical predictions held, P11 counted separately.
+
+Deviations and disclosures. (a) Gap fill: the registered extension rule (b38_design.py) extended windows whose top
+read below 99.5% or whose N* sat at the bottom; it missed N* values sitting above unevaluated budgets (e.g. E-BCH at
+lines-il-e05 reported 512 with 91-431 unevaluated). After the first test pass I added a gap-filling step (fill every
+budget between the highest failing budget below N* and N*), in the spirit of the registered "until bracketed", and
+ran it once (113 evaluations); the tables above include it, and it changed 8 N* values, all downward and all tables
+in damage conditions (E-BCH lines-il-e05 512 -> 91, lines-nat-k4 512 -> 181, lines-nat-e05 512 -> 431, clust-nat-k4
+512 -> 215; E-CAM lines-nat-k4 512 -> 304; T-vhdd clust-nat-k4 512 -> 91, clust-nat-e05 512 -> 128, clust-nat-k8
+512 -> 215); no bar label and no prediction outcome changed. (b) The exploratory own-decoder LDPC runs (point 7) are not registered.
+(c) The first full test pass checkpointed its results every 25 jobs, which slowed its tail; I/O only.
+
+Limits. One published PCM model, hard (sign) reads, single-level cells, 30-day errors; localized damage as stuck
+random signs with three geometries; stored cells only - decoder logic, the VSA's N_values x d similarity computation
+per query, interleaver wiring and read energy are not counted (an interleaved table touches cells all over the array
+for one fact; the VSA reads one contiguous vector). Every design knows the overall cell-error rate. The LDPC codes are
+our own IRA constructions at <= 1,024 information bits (high-rate codes of this length have error floors) and the
+run's decoder is weaker than ours under mismatched inputs, so the LDPC requirements are upper bounds; better codes
+would widen the table's lead. V-am's c (0.9) and V-cb's load (1-2) sit at the edge of their dev grids.
+
+What the paper can say (numbers from this file; shares of the 4,776 probed RULER keys; 30-day device statistics):
+- "Read at the smallest budget at which each memory is still exact (>= 99.5% of keys), with every stored bit on the
+  same simulated phase-change cells, tables protected by BCH or LDPC codes need 2-4x fewer cells per fact than the VSA
+  store at every noise level we tested: 19 vs 76 cells with no cell errors, 54 vs 128 at a 12% cell-error rate, 724 vs
+  1,722 at 37%. The VSA store's exactness at 16 pairs per 8,192-dimensional vector reflected 6.7-fold
+  over-provisioning."
+- "A table of random high-dimensional codes decoded by similarity, without superposition, also needs fewer cells than
+  the VSA store (1.4-2.4x); superposition costs storage. A VSA whose codebook is stored on the cells needs 7-27x more
+  cells than the coded table."
+- "Superposition does buy one property: because each fact is spread over a whole vector, the VSA store stored without an
+  interleaver tolerates dead word lines and stuck-cell clusters at the same cell count it needs for random errors,
+  while tables, whose codewords are local, need several times more cells or fail. An interleaver gives tables the same
+  property at no cost in cells."
+- "When a memory is under-provisioned or the error rate exceeds its design point, the VSA store loses facts gradually
+  (e.g. 66% of keys at 27.6% cell errors with 128 cells per fact, where an LDPC table designed for 12% reads 13%), a
+  property shared by tables of random codes decoded by similarity."
+- Method: an equal-cell comparison with BCH and LDPC baselines, "we found no precedent" (results/b38_literature.txt).
+
+What the paper must not say:
+- That the VSA store is more storage-efficient or more robust to device noise than an error-corrected table, at any
+  noise level (H1 TABLE WIN at every k); B34's "VSA beats every non-HD table at x16 / x32" holds against repetition only.
+- That VSA robustness to localized damage is an advantage over ECC in general: it holds only against tables stored
+  without an interleaver (H3 TABLE WIN with one; H5 TABLE WIN when damage locations are known), and contiguous loss
+  defeats the VSA store as much as any table.
+- That graceful degradation is specific to superposition (T-vhdd degrades as gracefully), or that it helps at the
+  99.5% exactness bar (it is a property of inexact memories).
+- That the comparison covers decoder logic, read energy or area (stored cells only), or multi-level cells / analog reads.
+- "First" (no precedent found).
+
+Compute: dev grid 7.0 CPU-h (incl. the E-BCH/E-CAM rerun and the V-cb loads 1-2), dev full run 10.8 CPU-h, test 35.7
+CPU-h (11,750 + 2,100 + 1,050 + 650 + 1,250 jobs: main pass, three extension passes, gap fill), exploratory own-decoder
+LDPC 3.0 CPU-h, checks about 15 CPU-h (closed form two identical runs, device model, decoders, hand reading), all on
+the A800 box's CPUs (up to 120 workers; no GPU); self-tests and the BCH codec check locally (about 1 CPU-h). No paid API.

@@ -1,0 +1,47 @@
+==================================================================================================
+V-153  replication on fresh data and fresh seeds (1001/2002/3003), plus two asymmetries
+==================================================================================================
+
+  ---- Q: replication within 0.04 of the banked mean ----
+    R1  consistent     banked 0.9293   fresh 0.9173  [0.918, 0.918, 0.916]  ok 
+    R1  floor          banked 0.5153   fresh 0.4913  [0.494, 0.514, 0.466]  ok   [load-bearing]
+    R1  frozen_cont    banked 0.9240   fresh 0.9040  [0.91, 0.908, 0.894]  ok 
+    R1  parser         banked 0.9340   fresh 0.9140  [0.92, 0.918, 0.904]  ok   [load-bearing]
+    R1  probe_argmax   banked 0.9340   fresh 0.9140  [0.92, 0.918, 0.904]  ok   [load-bearing]
+    R1  spans          banked 0.4833   fresh 0.5127  [0.51, 0.516, 0.512]  ok   [load-bearing]
+    R2  lora           banked 0.5158   fresh 0.4967  [0.5, 0.505, 0.485]  ok   [load-bearing]
+    R3  floor          banked 0.2032   fresh  --      VOID
+    R3  parser         banked 1.0000   fresh  --      VOID
+    R3  probe_argmax   banked 1.0000   fresh  --      VOID
+    R3  spans          banked 0.5024   fresh  --      VOID
+    R4  floor          banked 0.6147   fresh  --      VOID
+    R4  lora_direct    banked 1.0000   fresh  --      VOID
+    R4  parser         banked 0.6907   fresh  --      VOID
+    R4  probe_argmax   banked 0.6907   fresh  --      VOID
+  Q => FAILS  load-bearing failures: [('R3', 'probe_argmax'), ('R4', 'lora_direct'), ('R4', 'probe_argmax')]
+
+  ---- C: the manuscript's claims, per seed, 3/3 ----
+    C1 spans <= floor+.05          spans [0.51, 0.516, 0.512] floor [0.494, 0.514, 0.466] -> True
+    C2 probe_argmax >= parser-.05  probe [0.92, 0.918, 0.904] parser [0.92, 0.918, 0.904] -> True
+    C3 probe_argmax - lora >= .30  probe [0.92, 0.918, 0.904] lora [0.5, 0.505, 0.485] -> True
+
+  ---- N: the two asymmetries ----
+    N1 probe_full [0.92, 0.918, 0.904] vs probe_argmax [0.92, 0.918, 0.904], |mean diff| 0.0000 -> True
+       id_head top-1 (probe_argmax): [{'ctx': 1.0, 'q': 1.0, 'cand': 1.0}, {'ctx': 0.999984375, 'q': 1.0, 'cand': 1.0}, {'ctx': 1.0, 'q': 1.0, 'cand': 1.0}]
+       id_head top-1 (probe_full): [{'ctx': 1.0, 'q': 1.0, 'cand': 1.0}, {'ctx': 0.999984375, 'q': 1.0, 'cand': 1.0}, {'ctx': 1.0, 'q': 1.0, 'cand': 1.0}]
+    N2 LoRA final-epoch TRAINING accuracy [0.5316666666666666, 0.52, 0.5016666666666667] -> DOES NOT LEARN THE TASK (train <= .60 in 3/3)
+
+    N3 best-minus-final epoch gap, every arm:
+       R1  consistent     [0.0, 0.0, 0.0]
+       R1  floor          [0.0, 0.0, 0.0]
+       R1  frozen_cont    [0.0, 0.0, 0.0]
+       R1  parser         [0.0, 0.0, 0.0]
+       R1  probe_argmax   [0.0, 0.0, 0.0]
+       R1  probe_full     [0.0, 0.0, 0.0]
+       R1  spans          [0.0, 0.0, 0.004]
+       R2  lora           [0.0, 0.0, 0.0]
+
+==================================================================================================
+V-153 VERDICT: Q FAILS | C1 HOLDS | C2 HOLDS | C3 HOLDS | C4 VOID | C5 VOID | N1 HOLDS | N2 DOES NOT LEARN THE TASK (train <= .60 in 3/3)
+==================================================================================================
+V153-SCORED

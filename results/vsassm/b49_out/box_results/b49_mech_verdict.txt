@@ -1,0 +1,22 @@
+# B49 mechanism verdict (prereg/B49 section 6): R1 margin on transformed codes vs the original codes
+# Delta = (VSA - BEST)_T - (VSA - BEST)_original, paired on the same queries; BEST = all ten families
+
+qwen8 T1 vs BEST: margin original -6.10 [-6.88, -5.37] -> transformed -1.70 [-2.34, -1.04]; Delta +4.40 [+3.50, +5.32] (changed)
+qwen8 T1 vs BEST36: margin original +6.77 [+5.84, +7.69] -> transformed +8.58 [+7.65, +9.54]; Delta +1.81 [+0.96, +2.67] (not changed by the bar)
+   original    R1 mean accuracy: EXACT 83.4 VSA 45.4 BEST 51.5 IDX 37.3 SF 36.3 CM 37.5 BF 32.0 FBF 36.4 SDM 35.5 LAM 48.8 LHI 45.5 LHC 43.0 LHS 42.2
+   transformed R1 mean accuracy: EXACT 83.4 VSA 46.8 BEST 48.5 IDX 36.9 SF 36.6 CM 36.9 BF 31.6 FBF 36.5 SDM 35.3 LAM 48.1 LHI 40.2 LHC 38.8 LHS 37.8
+
+e5 T2 vs BEST: margin original -4.46 [-5.16, -3.72] -> transformed -6.16 [-6.91, -5.42]; Delta -1.70 [-2.60, -0.78] (not changed by the bar)
+e5 T2 vs BEST36: margin original +0.60 [-0.25, +1.42] -> transformed +0.49 [-0.41, +1.42]; Delta -0.11 [-1.05, +0.84] (not changed by the bar)
+   original    R1 mean accuracy: EXACT 80.1 VSA 46.1 BEST 50.6 IDX 42.8 SF 40.2 CM 44.0 BF 35.0 FBF 41.4 SDM 38.6 LAM 49.3 LHI 45.9 LHC 44.5 LHS 42.1
+   transformed R1 mean accuracy: EXACT 79.6 VSA 45.6 BEST 51.8 IDX 44.2 SF 40.6 CM 42.5 BF 35.0 FBF 40.3 SDM 37.8 LAM 50.1 LHI 48.4 LHC 45.7 LHS 43.5
+
+qwen8 T3 vs BEST: margin original -6.10 [-6.88, -5.37] -> transformed -3.68 [-4.39, -3.00]; Delta +2.42 [+1.47, +3.37] (changed)
+qwen8 T3 vs BEST36: margin original +6.77 [+5.84, +7.69] -> transformed +5.44 [+4.55, +6.35]; Delta -1.33 [-2.35, -0.32] (not changed by the bar)
+   original    R1 mean accuracy: EXACT 83.4 VSA 45.4 BEST 51.5 IDX 37.3 SF 36.3 CM 37.5 BF 32.0 FBF 36.4 SDM 35.5 LAM 48.8 LHI 45.5 LHC 43.0 LHS 42.2
+   transformed R1 mean accuracy: EXACT 81.7 VSA 44.1 BEST 47.8 IDX 37.4 SF 35.8 CM 37.9 BF 32.2 FBF 36.9 SDM 35.3 LAM 45.4 LHI 44.7 LHC 40.5 LHS 38.6
+
+b46 T1: not run
+bge T2: not run
+b46 T3: not run
+READING (primary runs qwen8 T1, e5 T2, qwen8 T3): neither account explains the interventions

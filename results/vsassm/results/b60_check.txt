@@ -1,0 +1,9 @@
+overlap: LAMc pca map vs independent float64 top-p eigenvectors, min over 60 (encoder, prep, p) = 1.0000 (PASS at 0.95); B49 LamFeat whiten min 0.072 max 0.976; B49 LamFeat center min 0.948
+step5 reconstruction: the step6 dev selection (levels L0 pipeline grid and L3) on b60_step5.py's output reproduces all 24 test accuracies the diagnosis printed (results/b60_step5_recon_check.txt)
+step5 agreement (dev stores, Qwen3-8B, R1 bpf, ideal): identical-map configurations 1728 cells, agreement min 0.9878 mean 0.9998, cells >= 0.99: 1727 (FAIL at 0.99); max |accuracy difference| 0.29 pt; center pca (different basis by design) 576 cells, agreement min 0.1811 mean 0.7371
+step5 agreement (test stores, Qwen3-8B, R1 bpf, ideal): identical-map configurations 8 cells, agreement min 1.0000 mean 1.0000, cells >= 0.99: 8 (PASS at 0.99); max |accuracy difference| 0.00 pt; center pca (different basis by design) 0 cells, agreement min nan mean nan
+rederive: float64 independent code on 84 (encoder, M, V, bpf) test cells (rep 0, ideal, chosen LAMc): agreement min 0.9980 mean 1.0000 (PASS at 0.99)
+bits: 1794374 job rows (dev + test, all maps); over budget or logged bits mismatching 0; not maximal 0 (PASS)
+scorer: 1967 cell accuracies and region statistics recomputed by plain loops; max |difference| 4.163e-17 (PASS at 1e-9)
+step5 selection vs B60 LAMc (Qwen3-8B R1 test accuracy, own dev choices; step5 "L3 + pipeline grid", 4 alphas): M256 V2: B60 73.6/76.4/79.0 vs step5 73.6/76.7/79.0; M256 V16: B60 22.6/33.7/44.3 vs step5 22.6/31.9/44.3; M1024 V2: B60 71.6/73.9/74.5 vs step5 71.6/73.4/74.5; M1024 V16: B60 17.6/28.6/38.5 vs step5 17.6/25.0/40.6
+step5 agreement note: the one identical-map cell under 0.99 is M = 256, V = 2, 4 bpf, flat, V-1, center rp, alpha 100, q = 4 (0.9878); every flat q >= 2 cell differs only through the quantizer step (std in B60, root mean square in step5), as the prereg anticipated; col q = 1 agrees 1.0000 everywhere

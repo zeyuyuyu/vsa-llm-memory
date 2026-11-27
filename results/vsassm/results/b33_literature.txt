@@ -1,0 +1,41 @@
+B33 literature check (prereg "Checks from other angles"). Searched 2026-11-18 ~07:00-07:30 UTC, before the verdict;
+the reading of each item against the B33 result is added after the verdict (bottom).
+
+1. Yang, Ishay and Lee (2023). Coupling large language models with logic programming for robust and general
+   reasoning from text. Findings of ACL 2023, 5186-5219 (arXiv 2307.07696; read in the ar5iv HTML). GPT-3 as a
+   few-shot semantic parser into logical facts + an answer-set-programming solver: 100.0 on bAbI task 2 (two
+   supporting facts; few-shot prompting 60.8, chain of thought 72.2), 99.99% averaged over the 20 tasks; the only two
+   disagreements with the labels are attributed to malformed questions. -> PRECEDENT for the route's principle (an LM
+   reading the text into symbols + an exact symbolic reasoner answers task 2 exactly); no "first" claim is possible.
+   B33 differs in the reader (frozen Phi-2 + a naming head trained on identity labels, a hand-written parse), in the
+   store (a VSA) and in testing on questions no part of the work had used.
+2. Recht, Roelofs, Schmidt and Shankar (2019). Do ImageNet classifiers generalize to ImageNet? ICML 2019 (PMLR 97).
+   Test sets rebuilt by following the original collection process cost trained models 3-15 points (CIFAR-10) and
+   11-14 points (ImageNet); the authors attribute the drop to the new sets being slightly harder, not to test-set
+   reuse. -> CAUTION / design support: a re-created test set can shift difficulty for learned models even when built
+   to the original recipe. This is why B33 reads every bar on the generated set AND on the official remainder, and
+   registered a shift safeguard for the fine-tune.
+3. Tamari, Richardson, et al. (2022). Dyna-bAbI: unlocking bAbI's potential with dynamic synthetic benchmarking.
+   *SEM 2022, 101-122 (arXiv 2112.00086). bAbI lacked a controllable generator; with one, models trained on bAbI-style
+   data generalised poorly to new compositions (< 70% on complex compositions). -> SUPPORT for regenerating bAbI data
+   to test generalisation; also a reason why a learned model, unlike a rule, may lose accuracy on regenerated stories.
+4. facebookarchive/bAbI-tasks README (cloned 2026-11-18): "This code is a rewrite of the original code that was used
+   to generate the publicly available dataset. As such, it is not possible to produce exactly the same dataset.
+   However, we have verified that numbers obtained are very similar." Its WhereIsObject task and templates differ from
+   the public task-2 data (see prereg). -> the reason B33 re-implemented the public distribution rather than running
+   the released generator.
+
+Reading after the verdict (results/b33_verdict.txt):
+- Item 1 SUPPORTS the B33 result and removes any novelty claim for it: an LM-read symbolic route answering task 2
+  exactly is published (GPT-3 + ASP, 100.0). What B33 adds is narrower: the paper's own route (frozen Phi-2, naming
+  head, VSA, hand-written parse) holds at 1.000 on questions it had never seen, after its parse was corrected on the
+  test set it was first scored on -- i.e. the post-hoc 500/500 was not test-set fitting.
+- Item 2 predicted a possible drop for learned models on a re-created set; B33 saw none beyond noise for the
+  fine-tune (best of twelve 0.964 on fresh vs 0.971 on the 1,000 official test questions; shift flag not raised) and a
+  small one for prompting (0.357 vs 0.376-0.386), which the hand-reading partly attributes to the fresh set's larger share of
+  dropped-object questions. NO CONFLICT; the two-set design was not needed to rescue any reading (both sets agree).
+- Item 3: the fine-tune's errors concentrate where the dropper walks on after the drop (0.85-0.92 there vs 0.97-0.99
+  elsewhere), the compositional case that bAbI-trained models are known to find hard; CONSISTENT, no direct precedent
+  for this specific breakdown was searched.
+- Precedent for "memory ahead of a tuned fine-tune by about 3 points on task 2": none sought or claimed; B33 makes no
+  advantage claim (below the registered ten-point bar).

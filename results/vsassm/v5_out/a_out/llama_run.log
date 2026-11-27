@@ -1,0 +1,74 @@
+[0.0 min] Training statistics: 5621 occurrences, dimension 4096
+[0.6 min] Preparing centre/lin, 16320 features
+[2.1 min] Preparing centre/sgn, 16320 features
+[3.4 min] Preparing centre/sgn3, 16320 features
+[10.1 min] Preparing whiten/lin, 16320 features
+[11.0 min] Preparing whiten/sgn, 16320 features
+[12.0 min] Preparing whiten/sgn3, 16320 features
+[14.7 min] Preparing centre/rp, 16320 features
+[15.5 min] Preparing centre/pca, 4096 features
+[15.6 min] Preparing whiten/rp, 16320 features
+[16.5 min] Preparing whiten/pca, 4096 features
+[16.6 min] Preprocessing complete; BLAS permanently reduced to one thread
+[16.7 min] Condition M=256, V=2, b=4: development search
+[16.9 min]   STORE: dev=0.74534, {'prep': 'whiten', 'map': 'lin', 'q': 1, 'share': 1.0}
+[16.9 min]   LAMc: dev=0.77027, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'alpha': 0.1, 'q': 1}
+[16.9 min]   NLMSc: dev=0.75440, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.1, 'output': 'last', 'q': 1}
+[16.9 min]   Selected configurations: test
+[16.9 min] Condition M=256, V=2, b=8: development search
+[17.3 min]   STORE: dev=0.77052, {'prep': 'whiten', 'map': 'lin', 'q': 1, 'share': 1.0}
+[17.3 min]   LAMc: dev=0.80803, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'alpha': 0.1, 'q': 2}
+[17.3 min]   NLMSc: dev=0.79558, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'rp', 'mu': 0.1, 'output': 'last', 'q': 1}
+[17.3 min]   Selected configurations: test
+[17.3 min] Condition M=256, V=2, b=16: development search
+[17.8 min]   STORE: dev=0.78901, {'prep': 'whiten', 'map': 'lin', 'q': 1, 'share': 1.0}
+[17.8 min]   LAMc: dev=0.83444, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'rp', 'alpha': 1.0, 'q': 1}
+[17.8 min]   NLMSc: dev=0.83323, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.5, 'output': 'last', 'q': 1}
+[17.8 min]   Selected configurations: test
+[17.8 min] Condition M=256, V=16, b=4: development search
+[18.0 min]   STORE: dev=0.26176, {'prep': 'centre', 'map': 'lin', 'q': 1, 'share': 1.0}
+[18.0 min]   LAMc: dev=0.29649, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'alpha': 0.0001, 'q': 2}
+[18.0 min]   NLMSc: dev=0.24819, {'scale': 'flat', 'target': 'V', 'prep': 'centre', 'feat': 'rp', 'mu': 0.25, 'output': 'avg', 'q': 1}
+[18.0 min]   Selected configurations: test
+[18.0 min] Condition M=256, V=16, b=8: development search
+[18.2 min]   STORE: dev=0.29912, {'prep': 'centre', 'map': 'lin', 'q': 1, 'share': 1.0}
+[18.2 min]   LAMc: dev=0.40229, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'alpha': 1.0, 'q': 1}
+[18.2 min]   NLMSc: dev=0.34300, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.03, 'output': 'last', 'q': 1}
+[18.2 min]   Selected configurations: test
+[18.2 min] Condition M=256, V=16, b=16: development search
+[18.5 min]   STORE: dev=0.38716, {'prep': 'centre', 'map': 'lin', 'q': 1, 'share': 1.0}
+[18.5 min]   LAMc: dev=0.51245, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'alpha': 10.0, 'q': 1}
+[18.5 min]   NLMSc: dev=0.45583, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.1, 'output': 'last', 'q': 1}
+[18.5 min]   Selected configurations: test
+[18.5 min] Condition M=1024, V=2, b=4: development search
+[20.1 min]   STORE: dev=0.70625, {'prep': 'whiten', 'map': 'lin', 'q': 1, 'share': 1.0}
+[20.1 min]   LAMc: dev=0.73203, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'alpha': 10.0, 'q': 1}
+[20.1 min]   NLMSc: dev=0.74011, {'scale': 'col', 'target': 'V-1', 'prep': 'centre', 'feat': 'pca', 'mu': 0.5, 'output': 'last', 'q': 1}
+[20.1 min]   Selected configurations: test
+[20.1 min] Condition M=1024, V=2, b=8: development search
+[22.5 min]   STORE: dev=0.71782, {'prep': 'whiten', 'map': 'lin', 'q': 2, 'share': 1.0}
+[22.5 min]   LAMc: dev=0.75081, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'alpha': 1.0, 'q': 2}
+[22.5 min]   NLMSc: dev=0.75335, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.1, 'output': 'last', 'q': 2}
+[22.5 min]   Selected configurations: test
+[22.6 min] Condition M=1024, V=2, b=16: development search
+[25.7 min]   STORE: dev=0.71735, {'prep': 'whiten', 'map': 'lin', 'q': 4, 'share': 1.0}
+[25.7 min]   LAMc: dev=0.75681, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'alpha': 1.0, 'q': 4}
+[25.7 min]   NLMSc: dev=0.75335, {'scale': 'col', 'target': 'V-1', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.1, 'output': 'last', 'q': 2}
+[25.7 min]   Selected configurations: test
+[25.7 min] Condition M=1024, V=16, b=4: development search
+[26.7 min]   STORE: dev=0.18469, {'prep': 'centre', 'map': 'lin', 'q': 2, 'share': 1.0}
+[26.7 min]   LAMc: dev=0.28834, {'scale': 'col', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'alpha': 10.0, 'q': 1}
+[26.7 min]   NLMSc: dev=0.26070, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.03, 'output': 'last', 'q': 1}
+[26.7 min]   Selected configurations: test
+[26.7 min] Condition M=1024, V=16, b=8: development search
+[28.1 min]   STORE: dev=0.25895, {'prep': 'whiten', 'map': 'lin', 'q': 1, 'share': 0.5}
+[28.1 min]   LAMc: dev=0.36520, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'alpha': 10.0, 'q': 1}
+[28.1 min]   NLMSc: dev=0.33066, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.25, 'output': 'last', 'q': 1}
+[28.1 min]   Selected configurations: test
+[28.1 min] Condition M=1024, V=16, b=16: development search
+[30.5 min]   STORE: dev=0.35464, {'prep': 'whiten', 'map': 'lin', 'q': 1, 'share': 0.5}
+[30.5 min]   LAMc: dev=0.47077, {'scale': 'flat', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'alpha': 10.0, 'q': 1}
+[30.5 min]   NLMSc: dev=0.44654, {'scale': 'col', 'target': 'V', 'prep': 'whiten', 'feat': 'pca', 'mu': 0.1, 'output': 'last', 'q': 1}
+[30.6 min]   Selected configurations: test
+[30.6 min] Paired entity-cluster bootstrap (2000 draws)
+[30.7 min] Finished: /path/to/scratch

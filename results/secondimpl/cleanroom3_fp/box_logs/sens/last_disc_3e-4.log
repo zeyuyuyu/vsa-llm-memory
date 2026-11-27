@@ -1,0 +1,30 @@
+{'train': 16000, 'dev': 800, 'test': 2000} max answer 1023
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 148.58it/s]
+prompt len 95.809 answer tok lens [0, 15576, 424]
+init recon rel-err vec 0.6531162261962891 disc 0.6531162261962891
+READ ('vec_pub', 'train') operands+op right 0.9722499847412109 answer right 0.9794374704360962 gate open 0.999625027179718
+READ ('vec_best', 'train') operands+op right 0.9984999895095825 answer right 0.9987499713897705 gate open 0.999625027179718
+READ ('disc', 'train') operands+op right 1.0 answer right 1.0 gate open 1.0
+READ ('vec_pub', 'dev') operands+op right 0.8762500286102295 answer right 0.9075000286102295 gate open 0.9987499713897705
+READ ('vec_best', 'dev') operands+op right 0.9850000143051147 answer right 0.9887499809265137 gate open 0.9987499713897705
+READ ('disc', 'dev') operands+op right 0.9649999737739563 answer right 0.9700000286102295 gate open 1.0
+READ ('vec_pub', 'test') operands+op right 0.9125000238418579 answer right 0.9300000071525574 gate open 0.9994999766349792
+READ ('vec_best', 'test') operands+op right 0.9825000166893005 answer right 0.9850000143051147 gate open 0.9994999766349792
+READ ('disc', 'test') operands+op right 0.9605000019073486 answer right 0.9629999995231628 gate open 1.0
+/data0/path/to/HOME/cr3_fp/cr3_fp.py:574: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  run.append(float(loss))
+  ft disc step 50 loss 2.4005 61s
+  ft disc step 100 loss 2.0084 124s
+  ft disc step 150 loss 1.9225 187s
+  ft disc step 200 loss 1.8280 249s
+  ft disc step 250 loss 1.7218 312s
+  ft disc step 300 loss 1.6154 374s
+  ft disc step 350 loss 1.4006 436s
+  ft disc step 400 loss 1.2554 500s
+  ft disc step 450 loss 1.1156 562s
+  ft disc step 500 loss 0.9388 625s
+ft steps disc 500
+dev {'disc': 0.52875}
+done

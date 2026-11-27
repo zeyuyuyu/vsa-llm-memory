@@ -1,0 +1,266 @@
+[
+ {
+  "cond": "N r=3",
+  "kw": {
+   "r": 3
+  },
+  "keys_exact": 4735,
+  "keys": 4776,
+  "frac": 0.9914154103852596,
+  "stores_all_exact": 30,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1477,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1490,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1492,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "N r=4",
+  "kw": {
+   "r": 4
+  },
+  "keys_exact": 3527,
+  "keys": 4776,
+  "frac": 0.7384840871021775,
+  "stores_all_exact": 20,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    881,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1205,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1165,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "N r=6",
+  "kw": {
+   "r": 6
+  },
+  "keys_exact": 466,
+  "keys": 4776,
+  "frac": 0.09757118927973199,
+  "stores_all_exact": 16,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    28,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    89,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    77,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    174,
+    177
+   ],
+   "131072/vt": [
+    98,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "N r=8",
+  "kw": {
+   "r": 8
+  },
+  "keys_exact": 250,
+  "keys": 4776,
+  "frac": 0.052345058626465664,
+  "stores_all_exact": 5,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    0,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    0,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    160,
+    177
+   ],
+   "131072/vt": [
+    89,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "F p=0.4",
+  "kw": {
+   "p": 0.4
+  },
+  "keys_exact": 4776,
+  "keys": 4776,
+  "frac": 1.0,
+  "stores_all_exact": 50,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1500,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    1500,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    177,
+    177
+   ],
+   "131072/vt": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "F p=0.5",
+  "kw": {
+   "p": 0.5
+  },
+  "keys_exact": 2335,
+  "keys": 4776,
+  "frac": 0.4889028475711893,
+  "stores_all_exact": 0,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    769,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    720,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    714,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    91,
+    177
+   ],
+   "131072/vt": [
+    41,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "F p=0.6",
+  "kw": {
+   "p": 0.6
+  },
+  "keys_exact": 1,
+  "keys": 4776,
+  "frac": 0.00020938023450586265,
+  "stores_all_exact": 0,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    0,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    1,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    0,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    0,
+    177
+   ],
+   "131072/vt": [
+    0,
+    99
+   ]
+  }
+ },
+ {
+  "cond": "F p=0.7",
+  "kw": {
+   "p": 0.7
+  },
+  "keys_exact": 0,
+  "keys": 4776,
+  "frac": 0.0,
+  "stores_all_exact": 0,
+  "stores": 50,
+  "per_cell": {
+   "131072/niah_multikey_2": [
+    0,
+    1500
+   ],
+   "32768/niah_multikey_2": [
+    0,
+    1500
+   ],
+   "131072/niah_multikey_3": [
+    0,
+    1500
+   ],
+   "131072/niah_multivalue": [
+    0,
+    177
+   ],
+   "131072/vt": [
+    0,
+    99
+   ]
+  }
+ }
+]

@@ -1,0 +1,554 @@
+{
+ "prereg": "860d207",
+ "acc": {
+  "projection": [
+   0.5133333206176758,
+   0.47333332896232605,
+   0.5249999761581421
+  ],
+  "vcr": [
+   0.5049999952316284,
+   0.4699999988079071,
+   0.5383333563804626
+  ],
+  "ortho": [
+   0.4816666543483734,
+   0.5133333206176758,
+   0.5233333110809326
+  ],
+  "vcr_ortho": [
+   0.503333330154419,
+   0.49166667461395264,
+   0.528333306312561
+  ]
+ },
+ "sep": {
+  "projection": [
+   0.00320211665855874,
+   0.001963713569147041,
+   0.002416214540198136
+  ],
+  "vcr": [
+   0.004164672300622341,
+   0.0026066146911801757,
+   0.002932600376305272
+  ],
+  "ortho": [
+   0.009033613449680289,
+   0.03546988832610154,
+   0.043816877531681064
+  ],
+  "vcr_ortho": [
+   0.011670077724102002,
+   0.03385551393096442,
+   0.0493880416133608
+  ]
+ },
+ "log": [
+  {
+   "arm": "projection",
+   "seed": 0,
+   "epoch": 1,
+   "loss": 1.8285591380393251,
+   "separation": 0.0010831282455642244
+  },
+  {
+   "arm": "projection",
+   "seed": 0,
+   "epoch": 2,
+   "loss": 1.3180406415399084,
+   "separation": 0.001255833675732454
+  },
+  {
+   "arm": "projection",
+   "seed": 0,
+   "epoch": 3,
+   "loss": 1.116567099744335,
+   "separation": 0.002162265315786227
+  },
+  {
+   "arm": "projection",
+   "seed": 0,
+   "epoch": 4,
+   "loss": 0.9527668994157872,
+   "separation": 0.002611555008737887
+  },
+  {
+   "arm": "projection",
+   "seed": 0,
+   "epoch": 5,
+   "loss": 0.8362099286565121,
+   "separation": 0.0032452385033573394
+  },
+  {
+   "arm": "projection",
+   "seed": 0,
+   "epoch": 6,
+   "loss": 0.7481620465504363,
+   "separation": 0.00320211665855874
+  },
+  {
+   "arm": "projection",
+   "seed": 1,
+   "epoch": 1,
+   "loss": 1.8527383715548413,
+   "separation": 0.0013476429651448907
+  },
+  {
+   "arm": "projection",
+   "seed": 1,
+   "epoch": 2,
+   "loss": 1.3339980658381543,
+   "separation": 0.0011186251097971
+  },
+  {
+   "arm": "projection",
+   "seed": 1,
+   "epoch": 3,
+   "loss": 1.1347044761827652,
+   "separation": 0.0011469986578365177
+  },
+  {
+   "arm": "projection",
+   "seed": 1,
+   "epoch": 4,
+   "loss": 0.9714722839441705,
+   "separation": 0.001661778554186144
+  },
+  {
+   "arm": "projection",
+   "seed": 1,
+   "epoch": 5,
+   "loss": 0.8695708208895744,
+   "separation": 0.0019144205574516127
+  },
+  {
+   "arm": "projection",
+   "seed": 1,
+   "epoch": 6,
+   "loss": 0.7665303587279422,
+   "separation": 0.001963713569147041
+  },
+  {
+   "arm": "projection",
+   "seed": 2,
+   "epoch": 1,
+   "loss": 1.8710983804565795,
+   "separation": 0.001433597451394819
+  },
+  {
+   "arm": "projection",
+   "seed": 2,
+   "epoch": 2,
+   "loss": 1.3762340797705854,
+   "separation": 0.0012282665033598317
+  },
+  {
+   "arm": "projection",
+   "seed": 2,
+   "epoch": 3,
+   "loss": 1.1500984882103635,
+   "separation": 0.0018555485343073608
+  },
+  {
+   "arm": "projection",
+   "seed": 2,
+   "epoch": 4,
+   "loss": 0.9878620939685944,
+   "separation": 0.0019231514511881542
+  },
+  {
+   "arm": "projection",
+   "seed": 2,
+   "epoch": 5,
+   "loss": 0.897198129049007,
+   "separation": 0.001822016730501863
+  },
+  {
+   "arm": "projection",
+   "seed": 2,
+   "epoch": 6,
+   "loss": 0.758041169415129,
+   "separation": 0.002416214540198136
+  },
+  {
+   "arm": "vcr",
+   "seed": 0,
+   "epoch": 1,
+   "loss": 2.8274180470628942,
+   "separation": 0.0009327017643430136
+  },
+  {
+   "arm": "vcr",
+   "seed": 0,
+   "epoch": 2,
+   "loss": 2.3101591398107244,
+   "separation": 0.001155627034268969
+  },
+  {
+   "arm": "vcr",
+   "seed": 0,
+   "epoch": 3,
+   "loss": 2.088073802121142,
+   "separation": 0.0020536708133714887
+  },
+  {
+   "arm": "vcr",
+   "seed": 0,
+   "epoch": 4,
+   "loss": 1.94451556560841,
+   "separation": 0.002746975349413372
+  },
+  {
+   "arm": "vcr",
+   "seed": 0,
+   "epoch": 5,
+   "loss": 1.80039991977367,
+   "separation": 0.003521928400606722
+  },
+  {
+   "arm": "vcr",
+   "seed": 0,
+   "epoch": 6,
+   "loss": 1.7102089873019686,
+   "separation": 0.004164672300622341
+  },
+  {
+   "arm": "vcr",
+   "seed": 1,
+   "epoch": 1,
+   "loss": 2.851476121456065,
+   "separation": 0.00045398642082472573
+  },
+  {
+   "arm": "vcr",
+   "seed": 1,
+   "epoch": 2,
+   "loss": 2.3144762573090008,
+   "separation": 0.0008881616834047756
+  },
+  {
+   "arm": "vcr",
+   "seed": 1,
+   "epoch": 3,
+   "loss": 2.1265448052832423,
+   "separation": 0.0013865288232897122
+  },
+  {
+   "arm": "vcr",
+   "seed": 1,
+   "epoch": 4,
+   "loss": 1.958639716214322,
+   "separation": 0.0019445779275250041
+  },
+  {
+   "arm": "vcr",
+   "seed": 1,
+   "epoch": 5,
+   "loss": 1.8564684403703569,
+   "separation": 0.0022854472361169
+  },
+  {
+   "arm": "vcr",
+   "seed": 1,
+   "epoch": 6,
+   "loss": 1.7626519361709028,
+   "separation": 0.0026066146911801757
+  },
+  {
+   "arm": "vcr",
+   "seed": 2,
+   "epoch": 1,
+   "loss": 2.8692487351437834,
+   "separation": 0.0016345384663289941
+  },
+  {
+   "arm": "vcr",
+   "seed": 2,
+   "epoch": 2,
+   "loss": 2.3829022436699967,
+   "separation": 0.00176182869049879
+  },
+  {
+   "arm": "vcr",
+   "seed": 2,
+   "epoch": 3,
+   "loss": 2.1731940089388098,
+   "separation": 0.0018523091668481984
+  },
+  {
+   "arm": "vcr",
+   "seed": 2,
+   "epoch": 4,
+   "loss": 2.0064016580581665,
+   "separation": 0.0020615905254811606
+  },
+  {
+   "arm": "vcr",
+   "seed": 2,
+   "epoch": 5,
+   "loss": 1.8600285135685128,
+   "separation": 0.002561681646484515
+  },
+  {
+   "arm": "vcr",
+   "seed": 2,
+   "epoch": 6,
+   "loss": 1.7736474148770596,
+   "separation": 0.002932600376305272
+  },
+  {
+   "arm": "ortho",
+   "seed": 0,
+   "epoch": 1,
+   "loss": 2.7870594129917468,
+   "separation": -0.00015025047300099015
+  },
+  {
+   "arm": "ortho",
+   "seed": 0,
+   "epoch": 2,
+   "loss": 2.1144764325086105,
+   "separation": 0.019182707272068278
+  },
+  {
+   "arm": "ortho",
+   "seed": 0,
+   "epoch": 3,
+   "loss": 1.6189657880904826,
+   "separation": 0.012009088827417247
+  },
+  {
+   "arm": "ortho",
+   "seed": 0,
+   "epoch": 4,
+   "loss": 1.3747525427569733,
+   "separation": 0.008659033976637642
+  },
+  {
+   "arm": "ortho",
+   "seed": 0,
+   "epoch": 5,
+   "loss": 1.323170320784792,
+   "separation": 0.009024719839657358
+  },
+  {
+   "arm": "ortho",
+   "seed": 0,
+   "epoch": 6,
+   "loss": 1.25545804329375,
+   "separation": 0.009033613449680289
+  },
+  {
+   "arm": "ortho",
+   "seed": 1,
+   "epoch": 1,
+   "loss": 2.8102037583259825,
+   "separation": 0.019154210780654934
+  },
+  {
+   "arm": "ortho",
+   "seed": 1,
+   "epoch": 2,
+   "loss": 2.141718296611563,
+   "separation": 0.06254167822319678
+  },
+  {
+   "arm": "ortho",
+   "seed": 1,
+   "epoch": 3,
+   "loss": 1.6898129278040948,
+   "separation": 0.052363814079907534
+  },
+  {
+   "arm": "ortho",
+   "seed": 1,
+   "epoch": 4,
+   "loss": 1.4095983308680513,
+   "separation": 0.047104982237692994
+  },
+  {
+   "arm": "ortho",
+   "seed": 1,
+   "epoch": 5,
+   "loss": 1.256296361380435,
+   "separation": 0.04091150569263946
+  },
+  {
+   "arm": "ortho",
+   "seed": 1,
+   "epoch": 6,
+   "loss": 1.1749334579452555,
+   "separation": 0.03546988832610154
+  },
+  {
+   "arm": "ortho",
+   "seed": 2,
+   "epoch": 1,
+   "loss": 2.8142849092787885,
+   "separation": 0.012962383795697474
+  },
+  {
+   "arm": "ortho",
+   "seed": 2,
+   "epoch": 2,
+   "loss": 2.1178647482648807,
+   "separation": 0.04975669117112169
+  },
+  {
+   "arm": "ortho",
+   "seed": 2,
+   "epoch": 3,
+   "loss": 1.6585016916406916,
+   "separation": 0.05676089525347583
+  },
+  {
+   "arm": "ortho",
+   "seed": 2,
+   "epoch": 4,
+   "loss": 1.38448736198405,
+   "separation": 0.05595790418134988
+  },
+  {
+   "arm": "ortho",
+   "seed": 2,
+   "epoch": 5,
+   "loss": 1.2576705639032608,
+   "separation": 0.04956530526552039
+  },
+  {
+   "arm": "ortho",
+   "seed": 2,
+   "epoch": 6,
+   "loss": 1.2148289277832558,
+   "separation": 0.043816877531681064
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 0,
+   "epoch": 1,
+   "loss": 3.7779271228516356,
+   "separation": -0.001233111277625376
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 0,
+   "epoch": 2,
+   "loss": 3.0650365714063037,
+   "separation": 0.01959857979299595
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 0,
+   "epoch": 3,
+   "loss": 2.602971802366541,
+   "separation": 0.014590109891202074
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 0,
+   "epoch": 4,
+   "loss": 2.3892447897728455,
+   "separation": 0.012430809020751221
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 0,
+   "epoch": 5,
+   "loss": 2.3178892788734844,
+   "separation": 0.016132758967987437
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 0,
+   "epoch": 6,
+   "loss": 2.223105803449103,
+   "separation": 0.011670077724102002
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 1,
+   "epoch": 1,
+   "loss": 3.8071468282253185,
+   "separation": 0.02083459695717238
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 1,
+   "epoch": 2,
+   "loss": 3.1224017105203994,
+   "separation": 0.06153753810981055
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 1,
+   "epoch": 3,
+   "loss": 2.660459962931085,
+   "separation": 0.04906329096961176
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 1,
+   "epoch": 4,
+   "loss": 2.375592014891036,
+   "separation": 0.04306507331721887
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 1,
+   "epoch": 5,
+   "loss": 2.210951811455666,
+   "separation": 0.0365254902267495
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 1,
+   "epoch": 6,
+   "loss": 2.1592477769293685,
+   "separation": 0.03385551393096442
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 2,
+   "epoch": 1,
+   "loss": 3.8080629224472857,
+   "separation": 0.013440063128600244
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 2,
+   "epoch": 2,
+   "loss": 3.088639348111254,
+   "separation": 0.051025243332497916
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 2,
+   "epoch": 3,
+   "loss": 2.639789479210022,
+   "separation": 0.054912031204689404
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 2,
+   "epoch": 4,
+   "loss": 2.369079903719273,
+   "separation": 0.05624587891833466
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 2,
+   "epoch": 5,
+   "loss": 2.2469263450896486,
+   "separation": 0.051879141256471806
+  },
+  {
+   "arm": "vcr_ortho",
+   "seed": 2,
+   "epoch": 6,
+   "loss": 2.1982953580135995,
+   "separation": 0.0493880416133608
+  }
+ ],
+ "verdict": "P1 gate: True ; P2 best regularised arm 'vcr_ortho' separation 0.0316 >= .10: False ; P3 that arm beats projection by >= .05: False (0.5078 vs 0.5039) ; THE LITERATURE'S NAMED REMEDY DOES NOT TRANSFER: neither variance-covariance regularisation nor a coherence penalty lifts separation above .10 here. A negative about a proposed-but-untested agenda, reported as such."
+}

@@ -1,0 +1,54 @@
+# B30b literature check (conclusion -> literature), 2026-11-18
+Every source below was opened (abstract, model card or paper HTML) on 2026-11-18; where a claim rests on a figure I did
+not re-read, it says so.
+
+## Part (a): Qwen3-32B decoding on the logs
+Conclusion tested: with Qwen3's recommended thinking-mode sampling and a 32,768-token reasoning budget, Qwen3-32B
+reading the whole log scores about what it scored with greedy decoding and 8,192 tokens (S32 R1 0.592 / 0.300 / 0.193
+vs 0.543 / 0.278 / 0.202; every D1 interval includes 0); the questions it lost to the 8,192-token limit stay wrong
+with four times the budget; the system's lead keeps a lower bound of at least +0.30.
+- SUPPORTS the referee's premise but not a large effect: the Qwen3 model card (huggingface.co/Qwen/Qwen3-32B, Best
+  Practices) warns that greedy decoding "can lead to performance degradation and endless repetitions" and asks for
+  T 0.6 / top-p 0.95 / top-k 20 and 32,768 output tokens; Pipis et al. (arXiv 2512.12895, ICML 2026) find reasoning
+  models loop under greedy / low temperature and that temperature reduces looping but leaves the underlying errors
+  ("a stopgap"). Our runs show the same pattern: sampling ends the loops (forced runs 21 / 48 / 73 -> 0 / 1 / 3),
+  but the answers that come out are not more often right.
+- SUPPORTS the size of the seed effect: Hochlehnert et al., "A Sober Look at Progress in Language Model Reasoning"
+  (arXiv 2504.07086): reasoning benchmarks are "highly sensitive to subtle implementation choices", decoding parameters
+  and random seeds among them; our two seeds differ by -0.060 on location (cluster interval excludes 0), so a single
+  sampled run is not enough to read a 0.05 difference.
+- PARTLY CONFLICTS: Qwen3 Technical Report (arXiv 2505.09388): the abstract presents a "thinking budget mechanism"
+  that balances "latency and performance"; its Fig. 2 (per secondary summaries, not re-read) shows accuracy rising
+  with the budget on math, coding and STEM; here a 4x budget changes nothing measurable. The setting differs (state
+  tracking over long, overwritten, multi-channel logs rather than self-contained problems), and the report itself
+  notes that thinking mode slightly hurts long-context retrieval.
+- SUPPORTS the reading that the deficit is state tracking under overwrites, not decoding: Wang & Sun, PI-LLM (arXiv
+  2506.08184): retrieval accuracy "declines log-linearly toward zero as interference accumulates", and prompt
+  engineering against it yields "limited success"; ActionReasoningBench and MEME (cited in the NSR1 verdict) report
+  low accuracy on state changes with indirect effects.
+- NO PRECEDENT FOUND for this exact check (the same open model on the same held-out logs under greedy-8k and
+  recommended-sampling-32k decodings, paired by question with cluster intervals).
+
+## Part (b): the notepad arm (memory + rules vs the same events given to a model as text)
+Conclusion tested: given exactly the events our reader extracted, a language model answering from them as text is
+far below the memory's rules (Qwen3-8B thinking 78.6 vs 99.8 at 128k; Qwen3-1.7B 59.8), and the deficit is
+reasoning over a changing state (qa2 / qa3 / qa5), not reading.
+- SUPPORTS: Kuratov et al., BABILong (NeurIPS 2024 D&B, arXiv 2406.10149): with no distractor text (0k, i.e. the
+  bare bAbI facts) only 23 of 34 LLMs reach 85% on any of QA1-QA3, and only GPT-4 and Gemini 1.5 Pro solve QA2;
+  retrieval of the facts (RAG) fails on QA2/QA3. Our own B18 reference agrees: Qwen3-8B thinking on the bare 0k
+  stories scored qa2 .76, qa3 .44, qa5 .80 (results/b18_verdict.txt), against q8T on our notepad qa2 .90, qa3 .43,
+  qa5 .69 at 128k. The notepad removes the haystack; what is left is the same reasoning gap.
+- SUPPORTS: Yang, Ishay & Lee (Findings ACL 2023, arXiv 2307.07696): an LLM used only as a semantic parser into facts,
+  with an answer-set solver doing the reasoning, is state of the art on bAbI (and StepGame, CLUTRR); the reasoning,
+  not the extraction, is what the LLM alone lacks. Our result is the same decomposition on BABILong at 128k-1M with a
+  1.7B parser.
+- SUPPORTS: Zahn & Chana (arXiv 2603.17781, 2026): facts kept in the prompt are recalled exactly (100% up to 7,000
+  facts in-window for Claude Sonnet 4.5) but multi-hop answers from them reach 31.6% against 78.9% for structured,
+  addressable knowledge objects. Kim & Schuster (ACL 2023, arXiv 2305.02363): tracking box contents through a sequence
+  of operations appears only in the code-pretrained GPT-3.5 models, and "pretraining on text corpora alone does not
+  make this capacity surface".
+- PARTLY CONFLICTS: the B18 frontier references read the whole raw text and reach 96.8 (GPT-6.1 Sol) and 97.6 (Opus
+  5.5) at 128k on the first 25 per task, including the recency convention our notepad models miss on qa5; so
+  "an LLM cannot answer from the facts" is a statement about 1.7B-8B open models, not about frontier models.
+- NO PRECEDENT FOUND for the exact arm (the same small reader's extracted events, rendered as text, answered by the
+  same and a larger open model, paired against the symbolic memory on BABILong up to 1M tokens).

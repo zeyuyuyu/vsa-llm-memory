@@ -1,0 +1,79 @@
+{
+ "_about": "CLUTRR (gen_train23_test2to10, test split, 1,146 stories) accuracy by chain length, main Fig. 4b (figs/fig6_benchmarks.pdf). 'ours' is read from r1_logs/ours_by_k.json (counts recomputed from the per-story file); the other values are transcribed, each with its source. Read by make_fig6_benchmarks.py.",
+ "ours": {
+  "label": "ours (frozen Qwen3-8B reader + rule memory)",
+  "color": "store",
+  "marker": "o",
+  "file": "r1_logs/ours_by_k.json",
+  "check_even_k": {
+   "2": 0.947,
+   "4": 0.805,
+   "6": 0.785,
+   "8": 0.627,
+   "10": 0.622
+  },
+  "check_source": "vsassm/results/r1_verdict.txt: table row 'Readable Reasoner, Qwen3-8B reader (thinking)' (the values typed in the v51 script)"
+ },
+ "direct": {
+  "label": "Qwen3-8B answering directly (reasoning on)",
+  "color": "prompt",
+  "marker": "^",
+  "optional_file": "r1_logs/direct_by_k.json",
+  "optional_file_format": "{\"<k>\": {\"n\": int, \"correct\": int}, ...} (or the same under a top-level \"by_k\")",
+  "points": [
+   {
+    "k": 2,
+    "value": 0.921,
+    "source": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=2"
+   },
+   {
+    "k": 3,
+    "value": 0.4,
+    "source": "vsassm/results/r1_verdict.txt: line '(k=3: 0.667 ours, 0.400 Qwen3-8B; k=5/7/9 in r1_out/test_*.jsonl and the scorer output.)'"
+   },
+   {
+    "k": 4,
+    "value": 0.768,
+    "source": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=4"
+   },
+   {
+    "k": 6,
+    "value": 0.673,
+    "source": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=6"
+   },
+   {
+    "k": 8,
+    "value": 0.58,
+    "source": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=8"
+   },
+   {
+    "k": 10,
+    "value": 0.496,
+    "source": "vsassm/results/r1_verdict.txt: table row 'Qwen3-8B thinking, direct', column k=10"
+   }
+  ]
+ },
+ "references": [
+  {
+   "id": "rule_memory_gold",
+   "label": "rule memory given gold relations, 97.5",
+   "value": 97.5,
+   "linestyle": "dotted",
+   "source": "vsassm/results/r1_verdict.txt: 'The composition engine is exact (oracle facts: 0.975, 1.000 at k=10)'; vsassm/results/nsr0_verdict.txt: 'T reproduces R1's 0.9747 exactly'"
+  },
+  {
+   "id": "satlm",
+   "label": "SatLM (code-davinci-002, rules given), 68.3",
+   "value": 68.3,
+   "linestyle": "dashdot",
+   "source": "Ye et al., SatLM, NeurIPS 2023, Table 1 (CLUTRR, code-davinci-002, greedy; 1,042-story version of the test set, kinship rules given); transcribed from vsassm/docs/neurosymbolic_review.md lines 27, 98 and 147"
+  },
+  {
+   "id": "dsrlm",
+   "label": "DSR-LM (rules learned from data), 61.0",
+   "value": 61.0,
+   "linestyle": "dashed",
+   "source": "Zhang et al., DSR-LM, Findings of ACL 2023, Tables 5/6: 60.98 +- 2.64; transcribed from vsassm/docs/neurosymbolic_review.md lines 107 and 150"
+  }
+ ]
+}

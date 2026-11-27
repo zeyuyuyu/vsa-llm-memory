@@ -1,0 +1,32 @@
+{
+ "n_sym": 13,
+ "ceiling_eval": 0.3355855855855856,
+ "n_train_expressible": 247,
+ "n_eval_expressible": 149,
+ "arms": {
+  "floor": [
+   0.4899328859060403,
+   0.5302013422818792,
+   0.4899328859060403
+  ],
+  "parser": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "probe_argmax": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "spans": [
+   0.8791946308724832,
+   0.8590604026845637,
+   0.87248322147651
+  ]
+ },
+ "floor": 0.5033557046979866,
+ "parser": 1.0,
+ "headroom": 0.49664429530201337,
+ "verdict": "TRANSFERS AT DEPTH TWO (the supervised discrete handover composes on natural text; the central claim now covers two natural-text tasks and two hops) | SPANS UNEXPECTEDLY WORKS (the through-the-loss route clears half the headroom here)"
+}

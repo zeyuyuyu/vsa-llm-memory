@@ -1,0 +1,26 @@
+## Literature check (conclusion -> literature; 2026-11-18)
+Conclusion checked: with the tooling held fixed, a larger or frontier reader does not beat the small reader by a
+margin that matters on RULER (+0.42 points at 128k, at the ceiling), on location questions (-0.005 to +0.002) or on
+impact questions (-0.013 to +0.009); on window questions the larger readers are ahead (+0.013 to +0.035; an unregistered
+complete frontier run +0.054) and a gain of up to about 9 points cannot be excluded. Smaller or untrained readers do
+lose (Qwen3-1.7B prompted, -5.5 points on RULER at 128k; Qwen3-8B prompted, -0.056 and -0.043 on location and window
+questions against the fine-tuned 1.7B). The residual errors of every reader are reading errors, and on the logs larger
+readers trade error types rather than remove them.
+- SUPPORTS: Cai et al., "Large Language Models as Tool Makers" (ICLR 2024, arXiv 2305.17126): with a GPT-4-made tool,
+  GPT-3.5 Turbo as the tool user performs on par with GPT-4 in both roles on most of six tasks (GPT-4 with CoT still
+  higher on some). Same pattern: once the tool carries the hard part, the user's size matters little.
+- SUPPORTS (the tooling effect, not size given tooling): Schick et al., Toolformer (NeurIPS 2023, arXiv 2302.04761):
+  GPT-J 6.7B with tools beats GPT-3 175B on factual, math and temporal benchmarks (not on QA).
+- QUALIFIES / CONFLICTS: Olausson et al., LINC (EMNLP 2023, arXiv 2310.15164): with the same FOL prover, GPT-4 beats
+  StarCoder+ (15.5B) on ProofWriter (abstract: StarCoder+ + LINC is 10 points above GPT-4 CoT, GPT-4 + LINC 26 above
+  it): when the language model must translate whole problems into a formal language, size matters given the tool.
+  Toolformer's own scaling section: tool use "only emerges at around 775M parameters" and improves with size. Gao et
+  al., PAL (ICML 2023): with the same interpreter, weaker code models have lower absolute accuracy (relative gain over
+  CoT kept). Our case differs in what the model must do: copy short symbols chunk by chunk (RULER) or write one event
+  per message under a fixed schema (logs), which the prompted 8B (RULER) and the fine-tuned 1.7B (logs) already do
+  at or near the ceiling; below that the size (or training) effect returns, as in LINC and PAL.
+- NO PRECEDENT FOUND for a paired, same-pipeline comparison of reader size (1.7B fine-tuned / 8B / 32B / frontier)
+  with an exact external store, on long-context needle extraction or on multi-channel operational logs.
+Sources: arxiv.org/abs/2305.17126; arxiv.org/abs/2302.04761 (ar5iv, Section 4.4 scaling); arxiv.org/abs/2310.15164;
+arxiv.org/abs/2211.10435. ChatDB (Hu et al. 2023, arXiv 2306.03901, SQL databases as symbolic memory) compares ChatGPT
+with and without the database only: no reader-size comparison.

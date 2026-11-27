@@ -1,0 +1,20 @@
+{
+ "max_len": 2048,
+ "d": 512,
+ "majority": 0.141,
+ "seq_len_mean": 497.5,
+ "arms": {
+  "hrr": [
+   0.2654
+  ]
+ },
+ "log": [
+  {
+   "arm": "hrr",
+   "seed": 42,
+   "epoch_sec": 331.8,
+   "peak_gb": 41.14,
+   "recovered_from_log": "v105_12716355_19.out"
+  }
+ ]
+}

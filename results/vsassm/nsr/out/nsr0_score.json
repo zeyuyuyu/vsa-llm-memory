@@ -1,0 +1,117 @@
+{
+ "A1": {
+  "pass": false,
+  "passing_cells": [],
+  "largest_mean_diff": [
+   "C_N800",
+   "V-delta",
+   -0.022687609075043635,
+   0,
+   10,
+   0.9520069808027923
+  ]
+ },
+ "A2": {
+  "pass": true,
+  "passing_cells": [
+   [
+    "F_p0.1_m3",
+    "V-delta"
+   ],
+   [
+    "F_p0.2_m3",
+    "V-delta"
+   ],
+   [
+    "F_p0.3_m3",
+    "V-delta"
+   ],
+   [
+    "L_p0.3_m3",
+    "V-delta"
+   ]
+  ],
+  "largest_mean_diff": [
+   "L_p0.3_m3",
+   "V-delta",
+   0.4490401396160558,
+   10,
+   10,
+   0.7801047120418848
+  ]
+ },
+ "A3": {
+  "table_bytes": 219.375,
+  "T_acc_all": 0.9746945898778361,
+  "vsa": {
+   "V-dict": {
+    "min_D": null,
+    "bytes": null
+   },
+   "V-sum": {
+    "min_D": null,
+    "bytes": null
+   },
+   "V-dict-q4": {
+    "min_D": null,
+    "bytes": null
+   },
+   "V-sum-q4": {
+    "min_D": null,
+    "bytes": null
+   }
+  },
+  "pass": false
+ },
+ "A4": {
+  "cells": {
+   "L_p0.3_m3/V-dict": [
+    0.9962724099029593,
+    0.9722838920538655,
+    false
+   ],
+   "L_p0.3_m3/V-sum": [
+    0.9962724099029593,
+    0.9915402883807138,
+    false
+   ],
+   "L_p0.3_m3/V-delta": [
+    0.9962724099029593,
+    0.9743086738255411,
+    false
+   ],
+   "F_p0.3_m3/V-dict": [
+    0.9991342901342734,
+    0.9980868988811711,
+    false
+   ],
+   "F_p0.3_m3/V-sum": [
+    0.9991342901342734,
+    0.9956881359649961,
+    false
+   ],
+   "F_p0.3_m3/V-delta": [
+    0.9991342901342734,
+    0.9794176994424731,
+    false
+   ]
+  },
+  "pass": false
+ },
+ "NC": {
+  "NC1": 0.00881326352530541,
+  "NC2": 0.002356020942408377,
+  "hold": true
+ },
+ "repro": {
+  "T": 0.9746945898778361,
+  "V-dict": 0.961780104712042,
+  "R1": 0.974694589877836,
+  "hold": false
+ },
+ "summary_match": {
+  "checked": 1420,
+  "mismatches": [],
+  "n_mismatch": 0
+ }
+}

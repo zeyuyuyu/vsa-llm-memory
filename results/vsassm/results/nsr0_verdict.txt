@@ -1,0 +1,99 @@
+# NSR0 / NSR0b-e verdict: the VSA rule memory adds nothing over a composition table (CLUTRR, gold facts)
+# 2026-11-06. Preregs: prereg/NSR0_prereg.md (+ amendment 1), NSR0b_prereg.md, NSR0c_prereg.md, NSR0d_prereg.md, NSR0e_prereg.md.
+# Code: nsr/nsr0.py, nsr0b.py, nsr0c.py; scorers: nsr0_score.py, nsr0b_score.py, nsr0c_score.py (independent of the run code).
+# Test split: CLUTRR gen_train23_test2to10, 1,146 stories, k = 2..10; 10 seeds per cell (seeds vary training draws,
+# noise and codebooks). Overall = mean over stories. Parameters chosen on validation only.
+
+## NSR0 (registered bars)
+
+Selected cells (overall accuracy, mean of 10 seeds):
+| cell                     | T (table) | V-dict (R1) | V-sum | V-delta |
+| S_m1  (1 story per chain)| 0.975     | 0.962       | 0.000 | 0.000   |
+| S_m3                     | 0.975     | 0.962       | 0.178 | 0.854   |
+| S_all (9,074 stories)    | 0.975     | 0.962       | 0.121 | 0.585   |
+| C_N200 (200 random)      | 0.951     | 0.951       | 0.113 | 0.771   |
+| L_p0.3_m3 (label noise)  | 0.331     | 0.331       | 0.530 | 0.780   |
+| F_p0.3_m3 (fact noise)   | 0.232     | 0.212       | 0.358 | 0.542   |
+| Q (5% test-fact noise)   | 0.742     | 0.733       | 0.103 | 0.463   |
+Full table: nsr/out/nsr0_score.log.
+
+A1 sample efficiency: FAIL (no S/C cell where a pure VSA arm beats T; the largest difference is -0.023, C_N800).
+A2 noise robustness: PASS as registered, in 4 cells, all m = 3 (L_p0.3_m3 +0.449; F_p0.1/0.2/0.3_m3). Attributed by
+   NSR0b/NSR0c below: it is rule pruning, not the vector store.
+A3 size: FAIL. No D up to 2048 reaches T - 0.01 (V-dict at D = 2048: 0.962; 4-bit phase: 0.951). The packed table is
+   219 bytes; the D = 2048 complex vector is 16,384 bytes.
+A4 confidence: FAIL (T's AUROC >= every VSA arm's in L_p0.3_m3 and F_p0.3_m3; T 0.996 / 0.999).
+Negative controls hold: NC1 (rule values permuted) 0.009, NC2 (labels shuffled) 0.002.
+Reproduction check: T reproduces R1's 0.9747 exactly; V-dict does NOT (0.962 mean over 10 codebooks). R1's
+   "117/117 rules read back exactly at D = 2048" was one codebook draw; crosstalk costs 0.013 on average.
+Other findings: pure VSA stores need >= 2-3 consistent writes before a rule counts as known (S_m1: 0.000, where the
+   table already has 0.975 from one story per chain), and V-delta degrades as data grows (0.854 at m = 3, 0.585 on all
+   data) because accumulated crosstalk makes unseen pairs look known.
+Predictions: A1, A3, A4 fail as predicted; A2 predicted to fail, passed as registered (attribution below); "V-dict ties
+   T exactly at D = 2048" wrong (0.962 vs 0.975).
+
+## NSR0b: is the noise win pruning? (T-prune tuned on validation: s = 1, q = 0.5)
+B1 (V-delta beats T-prune): PASS in F_p0.1/0.2/0.3_m3 (e.g. F_p0.3_m3 0.542 vs 0.282). B2: FAIL in those cells,
+   holds in L_p0.3_m3 (T-prune 0.871 > V-delta 0.780). My prediction (B1 fails everywhere) was wrong for fact noise.
+Mechanism: fact noise creates spurious keys with one vote (share 1.0), which a share threshold keeps and a minimum
+   support of 2 removes; validation (without fact noise) tied s = 1 and s = 2 and the tie rule picked s = 1.
+Manual check (prereg item): in 10 sampled L_p0.3_m3 stories where V-delta is right and T wrong, T's error is AMBIG
+   from at least one weakly supported rule in 10/10; a support-pruned table (s = 2, q = 0.6) answers 10/10 (0.992 of
+   all 749 such stories). F_p0.3_m3: weak rule in 10/10, pruned table right on 4/10 (0.542 of 502).
+
+## NSR0c: confirmatory, both arms re-tuned with fact noise in the validation criterion, fresh seeds 10-19
+Tuning: T-prune s = 2, q = 0.6; V-delta tau = 0.4, alpha = 0.3 (unchanged).
+C1 (V-delta beats T-prune anywhere): FAIL in every cell. C2 (T-prune >= V-delta - 0.02 wherever V-delta >= 0.5): HOLDS.
+   e.g. L_p0.3_m3 0.904 vs 0.758; F_p0.3_m3 0.580 vs 0.537; F_p0.3_m10 0.595 vs 0.326; S_m3 0.975 vs 0.877.
+   Both lose single-example learning (S_m1: 0.000 each); the unpruned table is best there (0.975).
+Prediction: held.
+
+## Exploratory upper bound (NSR0b, parameters chosen per cell on test; never quoted as a result)
+Best T-prune and best V-delta per cell, both chosen on test (nsr/out/nsr0b_upper_score.log): T-prune >= V-delta in
+22 of 27 cells, but V-delta was ahead in the m = 1 noisy cells (L_p0.1/0.2/0.3_m1 +0.151 / +0.145 / +0.100;
+F_p0.1/0.2_m1 +0.024 / +0.036). Diagnosis (L_p0.2_m1): plain T learns 176 rules (117 clean) and answers AMBIG 77% of the
+time, because a wrong k = 2 rule spawns wrong derived rules in closure; V-delta keeps 121 rules (41% AMBIG). T-prune
+uses one threshold inside and after closure, so it cannot keep single-vote k = 2 rules while demanding support for
+derived ones. This lead was registered and tested as NSR0d and NSR0e.
+
+## NSR0d: staged support thresholds and derivation voting vs V-delta (prereg/NSR0d_prereg.md), fresh seeds 20-29
+Arms tuned on validation over five cells including m = 1: T-stage (s2 = 1, sc = 3, q = 0.5), T-stage+vote (same),
+V-delta (tau = 0.3, alpha = 0.3). The two symbolic arms tie on validation (k <= 3 gives voting a 1:1 tie at most), and
+the tie rule made T-stage the registered bar.
+D1 (V-delta beats the selected symbolic arm): PASS in L_p0.1_m1 (0.653 vs 0.429) and F_p0.2_m1 (0.581 vs 0.415).
+D2: FAIL. My prediction was wrong as registered.
+Reported, not the bar: T-stage+vote scored above V-delta in all 27 cells (L_p0.1_m1 0.777, L_p0.2_m1 0.621,
+F_p0.2_m1 0.767 vs V-delta 0.653 / 0.436 / 0.581).
+Second implementation: an independently written staged learner + recursive derivation counter reproduced
+T-stage+vote's answers exactly in 3 cells (L_p0.2_m1 s20, F_p0.2_m1 s23, S_m3 s25; 0 of 1,146 differ each).
+
+## NSR0e: confirmatory, parameters fixed in advance, fresh seeds 30-39 (prereg/NSR0e_prereg.md)
+T-stage+vote (1, 3, 0.5) vs V-delta (0.3, 0.3) and V-delta (0.4, 0.3).
+E1 (either V-delta beats the voting table anywhere): FAIL in all 27 cells. E2 (table >= each V-delta - 0.02 in every
+cell): HOLDS. e.g. L_p0.1_m1 0.829 vs 0.738 / 0.000; L_p0.2_m1 0.623 vs 0.473 / 0.000; F_p0.2_m1 0.834 vs 0.620 /
+0.072; L_p0.3_m3 0.947 vs 0.430 / 0.720; S_m1 0.979 vs 0.934 / 0.000; S_all 0.979 vs 0.279 / 0.573.
+Prediction: held. Derivation voting also lifts the clean table from 0.975 to 0.979 (it resolves CLUTRR's inherently
+ambiguous compositions).
+
+## Verification
+Independent scorers for every stage (nsr0*_score.py). NSR0's recomputed all 1,420 accuracies from per-story predictions (0 mismatches); a second,
+separately written table implementation reproduced T's per-story answers in 4 cells (S_all, S_m1, L_p0.3_m3, F_p0.3_m3;
+0 of 1,146 differ in each); the vectorised CYK equals the reference CYK on validation and test (predictions and
+confidences). Seeds vary training data, noise and codebooks. Not checked: another dataset (NSR1 is the next angle).
+
+## Conclusion
+On relation symbols, a count table learns kinship composition from one story per chain, is 75x smaller than the vector
+at D = 2048 and more accurate, and gives confidence at least as useful. Under label or fact noise every VSA store's
+apparent advantage traced to how weakly supported rules are handled, and a symbolic table with staged support
+thresholds and derivation voting beats every VSA store tested in every cell, confirmed on fresh data (NSR0e). Two
+registered bars passed along the way (NSR0 A2, NSR0d D1) and both were explained by a weaker table variant, never by
+something the table family cannot do. No NSR claim may attribute reasoning to VSA.
+Not tested: VSA with structured, non-commutative codes that could reuse a rule on unseen relation pairs (the one
+VSA-specific advantage with published evidence, Learn-VRF); another dataset.
+
+## Literature check (conclusion -> literature)
+SUPPORTED. R5 (ICLR 2022) learns CLUTRR composition with a hash table (r_B0, r_B1) : r_head and reaches .97 at
+k = 10 (Table 2, opened); DSR-LM's learned and hand-written tables tie (60.98 vs 61.34, Table 6); RotatE's rotation is
+FHRR binding and composes commutatively, so binding alone cannot implement kinship composition. NO PRECEDENT FOUND
+for a direct table-vs-VSA comparison on CLUTRR (8 queries, docs/neurosymbolic_review.md I.5.2). The one VSA advantage
+with published evidence, rule reuse on unseen pairs (Learn-VRF Table 3), needs structured codes and is not tested here.

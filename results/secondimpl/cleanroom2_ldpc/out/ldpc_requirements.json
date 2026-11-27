@@ -1,0 +1,510 @@
+{
+ "k4": {
+  "cond": "k4",
+  "p": 0.021,
+  "rows": [
+   {
+    "B": 22.63,
+    "dev_rate": [
+     4,
+     5
+    ],
+    "rho": 1,
+    "dev_share": 0.8237639553429027,
+    "test_share": 0.8327051926298158,
+    "oracle": 0.8327051926298158,
+    "oracle_rate": [
+     4,
+     5
+    ],
+    "oracle_rho": 1,
+    "strict_rate": [
+     4,
+     5
+    ],
+    "strict_rho": 1,
+    "strict_test": 0.8327051926298158
+   },
+   {
+    "B": 26.91,
+    "dev_rate": [
+     2,
+     3
+    ],
+    "rho": 1,
+    "dev_share": 1.0,
+    "test_share": 0.9997906197654941,
+    "oracle": 0.9997906197654941,
+    "oracle_rate": [
+     2,
+     3
+    ],
+    "oracle_rho": 1,
+    "strict_rate": [
+     2,
+     3
+    ],
+    "strict_rho": 1,
+    "strict_test": 0.9997906197654941
+   },
+   {
+    "B": 32.0,
+    "dev_rate": [
+     3,
+     5
+    ],
+    "rho": 1,
+    "dev_share": 1.0,
+    "test_share": 1.0,
+    "oracle": 1.0,
+    "oracle_rate": [
+     3,
+     5
+    ],
+    "oracle_rho": 1,
+    "strict_rate": [
+     3,
+     5
+    ],
+    "strict_rho": 1,
+    "strict_test": 1.0
+   },
+   {
+    "B": 38.05,
+    "dev_rate": [
+     1,
+     2
+    ],
+    "rho": 1,
+    "dev_share": 1.0,
+    "test_share": 1.0,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     2
+    ],
+    "oracle_rho": 1,
+    "strict_rate": [
+     1,
+     2
+    ],
+    "strict_rho": 1,
+    "strict_test": 1.0
+   }
+  ],
+  "req_dev_rule": 26.91,
+  "req_oracle": 26.91,
+  "req_strict_dev": 26.91,
+  "max_budget_evaluated": 38.05
+ },
+ "k8": {
+  "cond": "k8",
+  "p": 0.123,
+  "rows": [
+   {
+    "B": 38.05462768008707,
+    "dev_rate": null,
+    "test_share": 0.0,
+    "oracle": 0.0,
+    "strict_test": 0.0
+   },
+   {
+    "B": 45.25,
+    "dev_rate": [
+     2,
+     5
+    ],
+    "rho": 1,
+    "dev_share": 0.7392344497607656,
+    "test_share": 0.7690536013400335,
+    "oracle": 0.7690536013400335,
+    "oracle_rate": [
+     2,
+     5
+    ],
+    "oracle_rho": 1,
+    "strict_rate": [
+     2,
+     5
+    ],
+    "strict_rho": 1,
+    "strict_test": 0.7690536013400335
+   },
+   {
+    "B": 53.82,
+    "dev_rate": [
+     1,
+     3
+    ],
+    "rho": 1,
+    "dev_share": 0.988835725677831,
+    "test_share": 0.9987437185929648,
+    "oracle": 0.9987437185929648,
+    "oracle_rate": [
+     1,
+     3
+    ],
+    "oracle_rho": 1,
+    "strict_rate": [
+     1,
+     3
+    ],
+    "strict_rho": 1,
+    "strict_test": 0.9987437185929648
+   },
+   {
+    "B": 64.0,
+    "dev_rate": [
+     1,
+     3
+    ],
+    "rho": 1,
+    "dev_share": 0.9976076555023924,
+    "test_share": 0.9989530988274706,
+    "oracle": 0.9989530988274706,
+    "oracle_rate": [
+     1,
+     3
+    ],
+    "oracle_rho": 1,
+    "strict_rate": [
+     1,
+     3
+    ],
+    "strict_rho": 1,
+    "strict_test": 0.9989530988274706
+   },
+   {
+    "B": 76.11,
+    "dev_rate": [
+     1,
+     3
+    ],
+    "rho": 1,
+    "dev_share": 0.9968102073365231,
+    "test_share": 0.9935092127303182,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     2
+    ],
+    "oracle_rho": 2,
+    "strict_rate": [
+     1,
+     2
+    ],
+    "strict_rho": 2,
+    "strict_test": 1.0
+   },
+   {
+    "B": 90.51,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 1,
+    "dev_share": 1.0,
+    "test_share": 1.0,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 1,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 1,
+    "strict_test": 1.0
+   }
+  ],
+  "req_dev_rule": 90.51,
+  "req_oracle": 53.82,
+  "req_strict_dev": 53.82,
+  "max_budget_evaluated": 90.51
+ },
+ "k16": {
+  "cond": "k16",
+  "p": 0.276,
+  "rows": [
+   {
+    "B": 128.0,
+    "dev_rate": null,
+    "test_share": 0.0,
+    "oracle": 0.0,
+    "strict_test": 0.0
+   },
+   {
+    "B": 152.22,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 2,
+    "dev_share": 0.1419457735247209,
+    "test_share": 0.1597571189279732,
+    "oracle": 0.1597571189279732,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 2,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 2,
+    "strict_test": 0.1597571189279732
+   },
+   {
+    "B": 181.02,
+    "dev_rate": [
+     2,
+     5
+    ],
+    "rho": 4,
+    "dev_share": 0.7464114832535885,
+    "test_share": 0.7696817420435511,
+    "oracle": 0.7696817420435511,
+    "oracle_rate": [
+     2,
+     5
+    ],
+    "oracle_rho": 4,
+    "strict_rate": [
+     2,
+     5
+    ],
+    "strict_rho": 4,
+    "strict_test": 0.7696817420435511
+   },
+   {
+    "B": 215.27,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 3,
+    "dev_share": 1.0,
+    "test_share": 0.9995812395309883,
+    "oracle": 0.9995812395309883,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 3,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 3,
+    "strict_test": 0.9995812395309883
+   },
+   {
+    "B": 256.0,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 3,
+    "dev_share": 1.0,
+    "test_share": 0.9991624790619765,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     3
+    ],
+    "oracle_rho": 4,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 3,
+    "strict_test": 0.9991624790619765
+   },
+   {
+    "B": 304.44,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 4,
+    "dev_share": 1.0,
+    "test_share": 1.0,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 4,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 4,
+    "strict_test": 1.0
+   },
+   {
+    "B": 362.04,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 5,
+    "dev_share": 1.0,
+    "test_share": 1.0,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 5,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 5,
+    "strict_test": 1.0
+   }
+  ],
+  "req_dev_rule": 215.27,
+  "req_oracle": 215.27,
+  "req_strict_dev": 215.27,
+  "max_budget_evaluated": 362.04
+ },
+ "k32": {
+  "cond": "k32",
+  "p": 0.374,
+  "rows": [
+   {
+    "B": 362.03867196751236,
+    "dev_rate": null,
+    "test_share": 0.0,
+    "oracle": 0.0,
+    "strict_test": 0.0
+   },
+   {
+    "B": 430.5389646099018,
+    "dev_rate": null,
+    "test_share": 0.0,
+    "oracle": 0.0,
+    "strict_test": 0.0
+   },
+   {
+    "B": 512.0,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 7,
+    "dev_share": 0.44577352472089316,
+    "test_share": 0.5806113902847572,
+    "oracle": 0.5806113902847572,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 7,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 7,
+    "strict_test": 0.5806113902847572
+   },
+   {
+    "B": 608.87,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 8,
+    "dev_share": 0.9202551834130781,
+    "test_share": 0.9376046901172529,
+    "oracle": 0.9478643216080402,
+    "oracle_rate": [
+     2,
+     5
+    ],
+    "oracle_rho": 14,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 8,
+    "strict_test": 0.9376046901172529
+   },
+   {
+    "B": 724.08,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 10,
+    "dev_share": 0.9992025518341308,
+    "test_share": 1.0,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 10,
+    "strict_rate": [
+     1,
+     3
+    ],
+    "strict_rho": 13,
+    "strict_test": 0.998324958123953
+   },
+   {
+    "B": 861.08,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 12,
+    "dev_share": 1.0,
+    "test_share": 1.0,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 12,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 12,
+    "strict_test": 1.0
+   },
+   {
+    "B": 1024.0,
+    "dev_rate": [
+     1,
+     4
+    ],
+    "rho": 14,
+    "dev_share": 1.0,
+    "test_share": 1.0,
+    "oracle": 1.0,
+    "oracle_rate": [
+     1,
+     4
+    ],
+    "oracle_rho": 14,
+    "strict_rate": [
+     1,
+     4
+    ],
+    "strict_rho": 14,
+    "strict_test": 1.0
+   }
+  ],
+  "req_dev_rule": 724.08,
+  "req_oracle": 724.08,
+  "req_strict_dev": 724.08,
+  "max_budget_evaluated": 1024.0
+ }
+}

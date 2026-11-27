@@ -1,0 +1,63 @@
+# NSR2 verdict: a neuro-symbolic engine that knows when the read state may be wrong (prereg/NSR2_prereg.md + amendment 1)
+# 2026-11-09. Held-out nsr2: 40 fresh logs (seeds 500+, generated after the prereg; fallbacks warehouse 2.7%, biobank 3.9%,
+# home 0.8%, ops 12.1%), read by the shipped reader (A800). Reliability model, w_prev (0.352) and the containment-type table
+# fitted on dev + retired test + nsr1 (1,383 facts). Scored once: nsr/out/nsr2_score_nsr2.json (independent scorer).
+
+## Results (230 impact questions; 627 state facts, 19 wrong)
+Deterministic answers (graph query on the read state): 0.917 set-exact (warehouse 0.950, biobank 0.900, home 0.925,
+ops 0.900); the NS engine's MAP answers are identical (0.917). Fact level: reliability AUROC 0.782, ECE 0.016.
+Question level, AUROC of the confidence for "the deterministic answer is right" (19 wrong answers):
+| arm                                              | AUROC | selective acc @70 / @80 / @90 coverage |
+| NS engine (learned reliability + inference)      | 0.687 | 0.944 / 0.935 / 0.932 |
+| min reliability over the answer's facts (2a)     | 0.705 | 0.957 / 0.951 / 0.923 |
+| facts written by human messages (2b)             | 0.700 | 0.944 / 0.935 / 0.937 |
+| answer-set size (2c)                             | 0.634 | 0.938 / 0.929 / 0.928 |
+| log mean reliability (log_rel)                   | 0.490 | 0.919 / 0.918 / 0.918 |
+| structure only (constant reliability, ns_const)  | 0.610 | 0.932 / 0.924 / 0.923 |
+| reliabilities permuted within each log           | 0.615 | 0.938 / 0.935 / 0.928 |
+| VSA substrate, mean of 3 codebooks, D=256/1024/2048 | 0.552 / 0.549 / 0.587 |
+Paired bootstrap over questions (2,000 resamples), 95% intervals: NS - min reliability [-0.085, +0.049] (P > 0: 0.29);
+NS - structure only [-0.005, +0.176] (0.97); NS - permuted [+0.016, +0.134] (1.00); min reliability - human [-0.071,
++0.089] (0.54).
+
+## Registered bars
+Floor (fact AUROC >= 0.75, >= 8 wrong facts): holds (0.782, 19).  B1 NS AUROC >= 0.72: FAIL (0.687).
+B2 NS - best simple baseline >= 0.03: FAIL (-0.018; min reliability is the best baseline).  B3 NS selective accuracy at
+80% - deterministic accuracy >= 0.025: FAIL (+0.017).  B4 ProbLog equals the engine: PASS (max |diff| 0).
+B5 NS - structure only >= 0.03: PASS (+0.077).  B5b (reported): NS - permuted = +0.071.  B6 VSA within 0.02 at D=2048:
+FAIL (-0.100).
+
+## Predictions vs outcome
+Wrong: B1 (predicted ~0.75), B2 (predicted a pass at ~60%), B3 (predicted ~+0.03), B5b (predicted ~0: on held-out data the
+reliability model DOES single out the wrong fact; development said it did not), B6 was "uncertain" (fails clearly).
+Right: floor, B4, B5, MAP = deterministic.
+
+## Conclusion
+The useful part of the engine is the neural one: a reliability model over observable features of the log (which channel
+wrote a fact, how many moves a message carried) separates wrong facts from right ones (AUROC 0.78 on fresh logs) and, on
+held-out data, does point at the wrong fact (permuting the scores costs 0.07 AUROC). Its plainest use, the lowest
+reliability among the facts an answer depends on, flags wrong answers as well as anything tried (AUROC 0.70). The
+symbolic layer on top, exact probabilistic inference over type-consistent alternative places, gave +0.09 and +0.03 over
+that baseline in development and -0.02 on held-out data (95% interval -0.085 to +0.049): no measurable added value for
+knowing when an answer is wrong. It also never changes an answer (MAP = deterministic). Storing the soft state in a VSA
+superposition loses 0.10 AUROC to crosstalk at D = 2048.
+Error that no confidence signal here catches: an item misread into another place, which leaves the asked place's answer
+empty or short with nothing pointing at it (home garden/garage, ops db-11 in nsr2): the engine would have to suspect a
+fact elsewhere.
+Power: 19 wrong answers out of 230, so AUROC differences below ~0.08 are not resolvable on one split.
+
+## Verification
+Independent scorer (own AUROC and gold); ProbLog second implementation exact; paired bootstrap; the 19 wrong answers
+inspected by rank (both methods rank the two warehouse-509-9 misses lowest; both miss the empty-answer misses).
+
+## Literature check (conclusion -> literature)
+SUPPORTED in direction: Hendrycks & Gimpel (ICLR 2017, abstract opened) find the maximum softmax probability an effective
+baseline for detecting misclassified examples that other methods "can sometimes" surpass; here the analogous direct
+signal (minimum fact reliability) is not surpassed by probabilistic propagation. The review's neuro-symbolic engines
+(Scallop, DeepProbLog; docs/neurosymbolic_review.md Part III.6) report answer accuracy, not selective prediction over a
+read state; NO PRECEDENT FOUND for this exact comparison.
+
+## What next
+The engine's open problem is the missed-item error (a fact elsewhere should be suspected). Candidate: re-reading messages
+that mention the asked place, or per-place reliability, as an NSR2b prereg. The learned fact reliability is worth keeping
+as a product feature ("ask a human to confirm these facts"), with min-reliability as the answer-level flag.

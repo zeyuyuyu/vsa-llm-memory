@@ -1,0 +1,439 @@
+# B26 verdict (prereg/B26_vector_form_prereg.md): does the vector form itself beat an equally exact table?
+# Part a: RULER needle tasks, entity names varied in surface form; part b: the store and a table on the PCM model
+
+## Dev choice (results/b26_dev_choice.json, committed before any test run)
+  V: n-gram set 3, binding ng; L: levnorm; N uses V's n-gram set
+  dev scores: E 0.00, En 13.14, Ev 0.00, L:lev 90.33, L:levnorm 95.87, L:osa 90.33, N:123 98.52, N:23 98.38, N:234 98.33, N:3 98.40, V:123:ng 98.42, V:123:rand 98.42, V:234:ng 98.33, V:234:rand 98.33, V:23:ng 98.43, V:23:rand 98.43, V:3:ng 98.40, V:3:rand 98.40, W 97.95
+
+## Query side (n = 4800 samples per condition; string_match_all, points)
+arm         C0      T1      T2      T3       P       A
+E        99.71    0.00    0.00    0.00    0.00    0.00
+Ev       99.71    0.00    0.00    0.00    0.00    0.00
+En       99.71    0.00    0.00    0.00   71.58    0.00
+L        99.71   99.71   99.69   99.71   99.71   92.41
+W        99.71   99.65   99.67   99.54   99.71   96.22
+N        99.71   99.71   99.69   99.59   99.71   98.48
+V        99.71   99.71   99.69   99.59   99.71   98.57
+
+Paired: V minus each arm, mean difference in points [95% bootstrap], sign test (V better / other better)
+  V-E  T1      +99.71 [+99.58, +99.83]  sign 4793/0 p=0
+  V-E  T2      +99.69 [+99.56, +99.81]  sign 4792/0 p=0
+  V-E  T3      +99.59 [+99.42, +99.73]  sign 4787/0 p=0
+  V-E  P       +99.71 [+99.58, +99.83]  sign 4793/0 p=0
+  V-E  A       +98.57 [+98.23, +98.88]  sign 4738/0 p=0
+  V-E  pooled  +99.46 [+99.31, +99.59]  sign 4793/0 p=0
+  V-En T1      +99.71 [+99.58, +99.83]  sign 4793/0 p=0
+  V-En T2      +99.69 [+99.56, +99.81]  sign 4792/0 p=0
+  V-En T3      +99.59 [+99.42, +99.73]  sign 4787/0 p=0
+  V-En P       +28.14 [+26.92, +29.35]  sign 1623/0 p=0
+  V-En A       +98.57 [+98.23, +98.88]  sign 4738/0 p=0
+  V-En pooled  +85.14 [+84.87, +85.41]  sign 4793/0 p=0
+  V-L  T1       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-L  T2       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-L  T3       -0.12 [ -0.23,  -0.04]  sign 0/6 p=0.031
+  V-L  P        +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-L  A        +6.16 [ +5.51,  +6.82]  sign 341/2 p=6.6e-99
+  V-L  pooled   +1.21 [ +1.08,  +1.34]  sign 340/7 p=8.1e-91
+  V-W  T1       +0.07 [ +0.01,  +0.15]  sign 4/0 p=0.12
+  V-W  T2       +0.02 [ -0.04,  +0.10]  sign 2/1 p=1
+  V-W  T3       +0.05 [ -0.10,  +0.21]  sign 10/6 p=0.45
+  V-W  P        +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-W  A        +2.35 [ +1.87,  +2.84]  sign 178/22 p=1.6e-31
+  V-W  pooled   +0.50 [ +0.39,  +0.61]  sign 180/26 p=1.6e-29
+  V-N  T1       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-N  T2       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-N  T3       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-N  P        +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-N  A        +0.08 [ -0.02,  +0.21]  sign 6/2 p=0.29
+  V-N  pooled   +0.02 [ -0.00,  +0.04]  sign 6/2 p=0.29
+
+T1 by length (n = 800 per length): arm accuracy; V-L and V-W [95%]
+       4k E   0.00 En   0.00 L  99.69 W  99.69 N  99.69 V  99.69  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+       8k E   0.00 En   0.00 L  99.97 W  99.97 N  99.97 V  99.97  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      16k E   0.00 En   0.00 L  99.69 W  99.69 N  99.69 V  99.69  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      32k E   0.00 En   0.00 L  99.78 W  99.78 N  99.78 V  99.78  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      64k E   0.00 En   0.00 L  99.41 W  99.16 N  99.41 V  99.41  V-L +0.00 [+0.00, +0.00]  V-W +0.25 [+0.00, +0.62]
+     128k E   0.00 En   0.00 L  99.75 W  99.59 N  99.75 V  99.75  V-L +0.00 [+0.00, +0.00]  V-W +0.16 [+0.00, +0.44]
+T1 by task (n = 600 per task)
+  niah_single_1     E   0.00 En   0.00 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_single_2     E   0.00 En   0.00 L  99.67 W  99.33 N  99.67 V  99.67
+  niah_single_3     E   0.00 En   0.00 L 100.00 W  99.83 N 100.00 V 100.00
+  niah_multikey_1   E   0.00 En   0.00 L  99.50 W  99.50 N  99.50 V  99.50
+  niah_multikey_2   E   0.00 En   0.00 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_multikey_3   E   0.00 En   0.00 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_multivalue   E   0.00 En   0.00 L  99.67 W  99.67 N  99.67 V  99.67
+  niah_multiquery   E   0.00 En   0.00 L  99.21 W  99.17 N  99.21 V  99.21
+
+T2 by length (n = 800 per length): arm accuracy; V-L and V-W [95%]
+       4k E   0.00 En   0.00 L  99.69 W  99.69 N  99.69 V  99.69  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+       8k E   0.00 En   0.00 L  99.97 W  99.97 N  99.97 V  99.97  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      16k E   0.00 En   0.00 L  99.69 W  99.69 N  99.69 V  99.69  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      32k E   0.00 En   0.00 L  99.78 W  99.78 N  99.78 V  99.78  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      64k E   0.00 En   0.00 L  99.41 W  99.28 N  99.41 V  99.41  V-L +0.00 [+0.00, +0.00]  V-W +0.12 [+0.00, +0.38]
+     128k E   0.00 En   0.00 L  99.62 W  99.62 N  99.62 V  99.62  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [-0.38, +0.38]
+T2 by task (n = 600 per task)
+  niah_single_1     E   0.00 En   0.00 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_single_2     E   0.00 En   0.00 L  99.67 W  99.33 N  99.67 V  99.67
+  niah_single_3     E   0.00 En   0.00 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_multikey_1   E   0.00 En   0.00 L  99.50 W  99.50 N  99.50 V  99.50
+  niah_multikey_2   E   0.00 En   0.00 L  99.67 W  99.83 N  99.67 V  99.67
+  niah_multikey_3   E   0.00 En   0.00 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_multivalue   E   0.00 En   0.00 L  99.67 W  99.67 N  99.67 V  99.67
+  niah_multiquery   E   0.00 En   0.00 L  99.21 W  99.21 N  99.21 V  99.21
+
+T3 by length (n = 800 per length): arm accuracy; V-L and V-W [95%]
+       4k E   0.00 En   0.00 L  99.69 W  99.69 N  99.56 V  99.56  V-L -0.12 [-0.38, +0.00]  V-W -0.12 [-0.38, +0.00]
+       8k E   0.00 En   0.00 L  99.97 W  99.97 N  99.97 V  99.97  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      16k E   0.00 En   0.00 L  99.69 W  99.69 N  99.69 V  99.69  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      32k E   0.00 En   0.00 L  99.78 W  99.66 N  99.78 V  99.78  V-L +0.00 [+0.00, +0.00]  V-W +0.12 [+0.00, +0.38]
+      64k E   0.00 En   0.00 L  99.41 W  98.88 N  98.91 V  98.91  V-L -0.50 [-1.00, -0.12]  V-W +0.03 [-0.66, +0.75]
+     128k E   0.00 En   0.00 L  99.75 W  99.34 N  99.62 V  99.62  V-L -0.12 [-0.38, +0.00]  V-W +0.28 [-0.19, +0.78]
+T3 by task (n = 600 per task)
+  niah_single_1     E   0.00 En   0.00 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_single_2     E   0.00 En   0.00 L  99.67 W  99.50 N  99.67 V  99.67
+  niah_single_3     E   0.00 En   0.00 L 100.00 W  99.50 N 100.00 V 100.00
+  niah_multikey_1   E   0.00 En   0.00 L  99.50 W  99.50 N  99.50 V  99.50
+  niah_multikey_2   E   0.00 En   0.00 L  99.83 W  99.17 N  98.83 V  98.83
+  niah_multikey_3   E   0.00 En   0.00 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_multivalue   E   0.00 En   0.00 L  99.67 W  99.67 N  99.67 V  99.67
+  niah_multiquery   E   0.00 En   0.00 L  99.21 W  99.12 N  99.21 V  99.21
+
+P by length (n = 800 per length): arm accuracy; V-L and V-W [95%]
+       4k E   0.00 En  74.22 L  99.69 W  99.69 N  99.69 V  99.69  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+       8k E   0.00 En  70.97 L  99.97 W  99.97 N  99.97 V  99.97  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      16k E   0.00 En  71.25 L  99.69 W  99.69 N  99.69 V  99.69  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      32k E   0.00 En  68.44 L  99.78 W  99.78 N  99.78 V  99.78  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      64k E   0.00 En  72.19 L  99.41 W  99.41 N  99.41 V  99.41  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+     128k E   0.00 En  72.41 L  99.75 W  99.75 N  99.75 V  99.75  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+P by task (n = 600 per task)
+  niah_single_1     E   0.00 En  73.17 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_single_2     E   0.00 En  76.00 L  99.67 W  99.67 N  99.67 V  99.67
+  niah_single_3     E   0.00 En  75.50 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_multikey_1   E   0.00 En  74.33 L  99.50 W  99.50 N  99.50 V  99.50
+  niah_multikey_2   E   0.00 En  72.33 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_multikey_3   E   0.00 En  52.67 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_multivalue   E   0.00 En  76.79 L  99.67 W  99.67 N  99.67 V  99.67
+  niah_multiquery   E   0.00 En  71.83 L  99.21 W  99.21 N  99.21 V  99.21
+
+A by length (n = 800 per length): arm accuracy; V-L and V-W [95%]
+       4k E   0.00 En   0.00 L  98.16 W  99.44 N  99.56 V  99.56  V-L +1.41 [+0.66, +2.28]  V-W +0.12 [+0.00, +0.38]
+       8k E   0.00 En   0.00 L  96.72 W  98.72 N  99.22 V  99.22  V-L +2.50 [+1.50, +3.62]  V-W +0.50 [-0.12, +1.25]
+      16k E   0.00 En   0.00 L  94.72 W  97.94 N  99.44 V  99.44  V-L +4.72 [+3.31, +6.22]  V-W +1.50 [+0.62, +2.50]
+      32k E   0.00 En   0.00 L  93.91 W  98.28 N  99.53 V  99.53  V-L +5.62 [+4.09, +7.22]  V-W +1.25 [+0.50, +2.12]
+      64k E   0.00 En   0.00 L  88.53 W  93.91 N  96.78 V  97.03  V-L +8.50 [+6.62, +10.44]  V-W +3.12 [+1.66, +4.66]
+     128k E   0.00 En   0.00 L  82.44 W  89.03 N  96.38 V  96.62  V-L +14.19 [+11.84, +16.59]  V-W +7.59 [+5.56, +9.72]
+A by task (n = 600 per task)
+  niah_single_1     E   0.00 En   0.00 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_single_2     E   0.00 En   0.00 L  97.17 W  97.83 N  99.67 V  99.67
+  niah_single_3     E   0.00 En   0.00 L  96.67 W  97.50 N 100.00 V 100.00
+  niah_multikey_1   E   0.00 En   0.00 L  97.33 W  97.67 N  99.50 V  99.50
+  niah_multikey_2   E   0.00 En   0.00 L  66.33 W  82.17 N  90.00 V  90.67
+  niah_multikey_3   E   0.00 En   0.00 L  87.33 W  99.83 N  99.83 V  99.83
+  niah_multivalue   E   0.00 En   0.00 L  98.00 W  98.50 N  99.67 V  99.67
+  niah_multiquery   E   0.00 En   0.00 L  96.46 W  96.25 N  99.21 V  99.21
+
+Bar 0 checks: share of samples whose score equals E's in C0: E 1.0000, Ev 1.0000, En 1.0000, L 1.0000, W 1.0000, N 1.0000, V 1.0000
+              share of samples where Ev equals E, by condition: C0 1.0000, T1 1.0000, T2 1.0000, T3 1.0000, P 1.0000, A 1.0000
+
+Second scorer 1, key choice: share of queried keys for which the arm chose the gold key (keys whose gold key is stored)
+E       1.0000  0.0000  0.0000  0.0000  0.0000  0.0000   (n keys 6574 per condition)
+En      1.0000  0.0000  0.0000  0.0000  0.7195  0.0000   (n keys 6574 per condition)
+L       1.0000  1.0000  0.9998  1.0000  1.0000  0.9392   (n keys 6574 per condition)
+W       1.0000  0.9994  0.9997  0.9985  1.0000  0.9664   (n keys 6574 per condition)
+N       1.0000  1.0000  0.9998  0.9991  1.0000  0.9910   (n keys 6574 per condition)
+V       1.0000  1.0000  0.9998  0.9991  1.0000  0.9916   (n keys 6574 per condition)
+Second scorer 2, strict: the predicted values equal the gold values as a set (points)
+E        99.31    0.00    0.00    0.00    0.00    0.00   (samples where primary = 1 disagrees with strict: 0)
+Ev       99.31    0.00    0.00    0.00    0.00    0.00   (samples where primary = 1 disagrees with strict: 0)
+En       99.31    0.00    0.00    0.00   65.81    0.00   (samples where primary = 1 disagrees with strict: 0)
+L        99.31   99.31   99.29   99.31   99.31   91.12   (samples where primary = 1 disagrees with strict: 0)
+W        99.31   99.23   99.27   99.10   99.31   94.98   (samples where primary = 1 disagrees with strict: 0)
+N        99.31   99.31   99.29   99.19   99.31   98.08   (samples where primary = 1 disagrees with strict: 0)
+V        99.31   99.31   99.29   99.19   99.31   98.17   (samples where primary = 1 disagrees with strict: 0)
+
+## Bars, query side
+  Bar 0 (C0: every arm = E on >= 99.9%; Ev = E in every condition): min agreement 1.0000 / 1.0000 -> PASS
+  Bar 1 (pooled V - E >= 50, interval above 0): +99.46 [+99.31, +99.59] -> PASS
+  Bar 2 (pooled V - L >= +1.0, interval excludes 0): +1.21 [+1.08, +1.34] -> PASS
+  Bar 3 (pooled V - W >= +1.0, interval excludes 0): +0.50 [+0.39, +0.61] -> FAIL
+
+## Write side (n = 4800 samples per condition; string_match_all, points)
+arm         C0      T2       P       A
+E        99.74    0.00    0.00    0.00
+Ev       99.74    0.00    0.00    0.00
+En       99.74    0.00   68.98    0.00
+L        99.74   99.05   97.18   73.73
+W        99.74   99.03   98.16   97.92
+N        99.74   98.68   98.56   96.97
+V        99.74   98.70   98.56   97.01
+
+Paired: V minus each arm, mean difference in points [95% bootstrap], sign test (V better / other better)
+  V-E  T2      +98.70 [+98.39, +98.99]  sign 4750/0 p=0
+  V-E  P       +98.56 [+98.25, +98.85]  sign 4751/0 p=0
+  V-E  A       +97.01 [+96.59, +97.42]  sign 4704/0 p=0
+  V-E  pooled  +98.09 [+97.86, +98.31]  sign 4798/0 p=0
+  V-En T2      +98.70 [+98.39, +98.99]  sign 4750/0 p=0
+  V-En P       +29.58 [+28.33, +30.82]  sign 1696/0 p=0
+  V-En A       +97.01 [+96.59, +97.42]  sign 4704/0 p=0
+  V-En pooled  +75.10 [+74.64, +75.56]  sign 4789/0 p=0
+  V-L  T2       -0.35 [ -0.52,  -0.21]  sign 0/17 p=1.5e-05
+  V-L  P        +1.38 [ +1.06,  +1.71]  sign 66/0 p=2.7e-20
+  V-L  A       +23.28 [+22.10, +24.45]  sign 1190/0 p=0
+  V-L  pooled   +8.10 [ +7.66,  +8.53]  sign 1183/10 p=0
+  V-W  T2       -0.33 [ -0.52,  -0.17]  sign 2/18 p=0.0004
+  V-W  P        +0.40 [ +0.23,  +0.58]  sign 19/0 p=3.8e-06
+  V-W  A        -0.91 [ -1.21,  -0.62]  sign 6/49 p=1.8e-09
+  V-W  pooled   -0.28 [ -0.43,  -0.14]  sign 26/57 p=0.00088
+  V-N  T2       +0.02 [ +0.00,  +0.06]  sign 1/0 p=1
+  V-N  P        +0.00 [ +0.00,  +0.00]  sign 0/0 p=1
+  V-N  A        +0.04 [ +0.00,  +0.10]  sign 2/0 p=0.5
+  V-N  pooled   +0.02 [ +0.00,  +0.05]  sign 3/0 p=0.25
+
+T2 by length (n = 800 per length): arm accuracy; V-L and V-W [95%]
+       4k E   0.00 En   0.00 L  99.56 W  99.56 N  99.56 V  99.56  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+       8k E   0.00 En   0.00 L  98.97 W  98.97 N  98.84 V  98.84  V-L -0.12 [-0.38, +0.00]  V-W -0.12 [-0.38, +0.00]
+      16k E   0.00 En   0.00 L  99.31 W  99.31 N  99.06 V  99.06  V-L -0.25 [-0.62, +0.00]  V-W -0.25 [-0.62, +0.00]
+      32k E   0.00 En   0.00 L  99.22 W  99.22 N  99.22 V  99.22  V-L +0.00 [+0.00, +0.00]  V-W +0.00 [+0.00, +0.00]
+      64k E   0.00 En   0.00 L  98.38 W  98.25 N  97.38 V  97.50  V-L -0.88 [-1.62, -0.25]  V-W -0.75 [-1.50, -0.12]
+     128k E   0.00 En   0.00 L  98.88 W  98.88 N  98.00 V  98.00  V-L -0.88 [-1.62, -0.25]  V-W -0.88 [-1.62, -0.25]
+T2 by task (n = 600 per task)
+  niah_single_1     E   0.00 En   0.00 L  99.50 W  99.50 N  99.50 V  99.50
+  niah_single_2     E   0.00 En   0.00 L  99.50 W  99.17 N  99.50 V  99.50
+  niah_single_3     E   0.00 En   0.00 L  99.00 W  99.00 N  99.00 V  99.00
+  niah_multikey_1   E   0.00 En   0.00 L  98.50 W  98.50 N  98.50 V  98.50
+  niah_multikey_2   E   0.00 En   0.00 L  98.67 W  98.83 N  95.67 V  95.83
+  niah_multikey_3   E   0.00 En   0.00 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_multivalue   E   0.00 En   0.00 L  98.79 W  98.79 N  98.79 V  98.79
+  niah_multiquery   E   0.00 En   0.00 L  98.46 W  98.46 N  98.46 V  98.46
+
+P by length (n = 800 per length): arm accuracy; V-L and V-W [95%]
+       4k E   0.00 En  71.66 L  97.41 W  97.78 N  98.41 V  98.41  V-L +1.00 [+0.38, +1.75]  V-W +0.62 [+0.12, +1.25]
+       8k E   0.00 En  68.50 L  97.53 W  98.03 N  98.41 V  98.41  V-L +0.88 [+0.25, +1.50]  V-W +0.38 [+0.00, +0.88]
+      16k E   0.00 En  67.88 L  96.62 W  97.75 N  98.25 V  98.25  V-L +1.62 [+0.88, +2.50]  V-W +0.50 [+0.12, +1.00]
+      32k E   0.00 En  66.59 L  98.00 W  99.12 N  99.38 V  99.38  V-L +1.38 [+0.62, +2.25]  V-W +0.25 [+0.00, +0.62]
+      64k E   0.00 En  68.22 L  95.34 W  97.47 N  98.09 V  98.09  V-L +2.75 [+1.62, +3.88]  V-W +0.62 [+0.12, +1.25]
+     128k E   0.00 En  71.03 L  98.19 W  98.81 N  98.81 V  98.81  V-L +0.62 [+0.12, +1.25]  V-W +0.00 [+0.00, +0.00]
+P by task (n = 600 per task)
+  niah_single_1     E   0.00 En  73.00 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_single_2     E   0.00 En  75.50 L  99.00 W  99.00 N  99.00 V  99.00
+  niah_single_3     E   0.00 En  75.33 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_multikey_1   E   0.00 En  73.00 L  98.00 W  98.00 N  98.00 V  98.00
+  niah_multikey_2   E   0.00 En  72.33 L  99.83 W  99.83 N  99.83 V  99.83
+  niah_multikey_3   E   0.00 En  35.83 L  84.33 W  92.17 N  95.33 V  95.33
+  niah_multivalue   E   0.00 En  75.79 L  98.33 W  98.33 N  98.33 V  98.33
+  niah_multiquery   E   0.00 En  71.04 L  98.29 W  98.29 N  98.29 V  98.29
+
+A by length (n = 800 per length): arm accuracy; V-L and V-W [95%]
+       4k E   0.00 En   0.00 L  78.44 W  97.25 N  97.00 V  97.00  V-L +18.56 [+15.88, +21.28]  V-W -0.25 [-0.62, +0.00]
+       8k E   0.00 En   0.00 L  77.12 W  97.94 N  97.56 V  97.56  V-L +20.44 [+17.69, +23.25]  V-W -0.38 [-0.88, +0.00]
+      16k E   0.00 En   0.00 L  75.31 W  97.94 N  96.69 V  96.69  V-L +21.38 [+18.56, +24.28]  V-W -1.25 [-2.12, -0.50]
+      32k E   0.00 En   0.00 L  75.38 W  99.12 N  98.38 V  98.38  V-L +23.00 [+20.12, +25.94]  V-W -0.75 [-1.38, -0.25]
+      64k E   0.00 En   0.00 L  68.91 W  96.97 N  95.34 V  95.47  V-L +26.56 [+23.53, +29.59]  V-W -1.50 [-2.50, -0.62]
+     128k E   0.00 En   0.00 L  67.25 W  98.31 N  96.84 V  96.97  V-L +29.72 [+26.62, +32.84]  V-W -1.34 [-2.38, -0.38]
+A by task (n = 600 per task)
+  niah_single_1     E   0.00 En   0.00 L 100.00 W 100.00 N 100.00 V 100.00
+  niah_single_2     E   0.00 En   0.00 L  91.83 W  95.67 N  96.00 V  96.00
+  niah_single_3     E   0.00 En   0.00 L  95.83 W  99.67 N 100.00 V 100.00
+  niah_multikey_1   E   0.00 En   0.00 L  91.00 W  96.33 N  96.33 V  96.33
+  niah_multikey_2   E   0.00 En   0.00 L  27.17 W  99.83 N  91.50 V  91.83
+  niah_multikey_3   E   0.00 En   0.00 L   0.00 W  99.83 N  99.83 V  99.83
+  niah_multivalue   E   0.00 En   0.00 L  93.12 W  96.38 N  96.38 V  96.38
+  niah_multiquery   E   0.00 En   0.00 L  90.92 W  95.67 N  95.71 V  95.71
+
+Bar 0 checks: share of samples whose score equals E's in C0: E 1.0000, Ev 1.0000, En 1.0000, L 1.0000, W 1.0000, N 1.0000, V 1.0000
+              share of samples where Ev equals E, by condition: C0 1.0000, T2 1.0000, P 1.0000, A 1.0000
+
+Second scorer 1, key choice: share of queried keys for which the arm chose the stored variant key (keys whose variant key is stored)
+E       1.0000  0.0000  0.0000  0.0000   (n keys 6450 per condition)
+En      1.0000  0.0000  0.7142  0.0000   (n keys 6450 per condition)
+L       1.0000  0.9997  1.0000  0.8051   (n keys 6450 per condition)
+W       1.0000  0.9995  1.0000  0.9991   (n keys 6450 per condition)
+N       1.0000  0.9969  1.0000  0.9921   (n keys 6450 per condition)
+V       1.0000  0.9971  1.0000  0.9924   (n keys 6450 per condition)
+Second scorer 2, strict: the predicted values equal the gold values as a set (points)
+E        99.31    0.00    0.00    0.00   (samples where primary = 1 disagrees with strict: 0)
+Ev       99.31    0.00    0.00    0.00   (samples where primary = 1 disagrees with strict: 0)
+En       99.31    0.00   62.90    0.00   (samples where primary = 1 disagrees with strict: 0)
+L        99.31   98.33   96.06   69.83   (samples where primary = 1 disagrees with strict: 0)
+W        99.31   98.31   97.04   95.27   (samples where primary = 1 disagrees with strict: 0)
+N        99.31   97.96   97.44   94.33   (samples where primary = 1 disagrees with strict: 0)
+V        99.31   97.98   97.44   94.38   (samples where primary = 1 disagrees with strict: 0)
+
+## Bars, write side
+  Bar 0 (C0: every arm = E on >= 99.9%; Ev = E in every condition): min agreement 1.0000 / 1.0000 -> PASS
+  Bar 1 (pooled V - E >= 50, interval above 0): +98.09 [+97.86, +98.31] -> PASS
+  Bar 2 (pooled V - L >= +1.0, interval excludes 0): +8.10 [+7.66, +8.53] -> PASS
+  Bar 3 (pooled V - W >= +1.0, interval excludes 0): -0.28 [-0.43, -0.14] -> FAIL
+
+## Write side: re-reading and copying
+  C0  re-read chunks 8400, identical to B21's banked output 8390 (0.9988); queried keys whose variant was stored 6576 / 6600 (0.9964)
+  T2  re-read chunks 8400, identical to B21's banked output 42 (0.0050); queried keys whose variant was stored 6531 / 6600 (0.9895)
+  P   re-read chunks 8400, identical to B21's banked output 20 (0.0024); queried keys whose variant was stored 6437 / 6600 (0.9753)
+  A   re-read chunks 8400, identical to B21's banked output 32 (0.0038); queried keys whose variant was stored 6450 / 6600 (0.9773)
+
+## Predictions (part a)
+  Bar 0 passes; every arm = E on all C0 samples; Ev = E in every condition: bar0 True, min C0 agreement 1.0000, min Ev 1.0000 -> HELD
+  E and Ev = 0.0 in every variant condition: max 0.00 -> HELD
+  En 65-80 in P and <= 0.5 in T1-T3, A: P 71.58, others max 0.00 -> HELD
+  V T1 in [99, 100]: 99.71 -> HELD
+  V T2 in [98.5, 100]: 99.69 -> HELD
+  V T3 in [96, 100]: 99.59 -> HELD
+  V P in [99.3, 100]: 99.71 -> HELD
+  V A in [85, 98]: 98.57 -> NOT HELD
+  Typos: 0 <= L - V <= 1.0 pooled over T1-T3: +0.04 -> HELD
+  Largest per-cell typo gap L - V on niah_multikey_2 at 64k/128k: +4.00 at T3 64k niah_multikey_2 -> HELD
+  P: V, L, W, N within 0.3 of their C0: V +0.00, L +0.00, W +0.00, N +0.00 -> HELD
+  A: V - L >= 10: +6.16 -> NOT HELD; |V - W| <= 3: +2.35 -> HELD
+  Bar 1 pass, bar 2 pass, bar 3 fail: True / True / False -> HELD
+  |V - N| <= 0.3 pooled: +0.02 -> HELD
+  V alias on niah_multikey_2 >= 95 at 4k and <= 80 at 128k: 99.0 / 74.0 -> HELD
+  Dev choice V {2,3} or {3} with ng; L OSA: V 3 ng, L levnorm -> HELD / NOT HELD
+  Write side: see the write-side section for the copy rates; bars as on the query side: bar1 True bar2 True bar3 False -> HELD
+
+## Part b: share of the 4,776 probed keys read exactly on the simulated PCM device (16 pairs per vector)
+  arm   k        60 s      1 h      1 d     30 d      1 y   bit errors (VSA store, mean over stores)
+  VSA   x1     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.000
+  Trep  x1     1.0000   1.0000   1.0000   1.0000   1.0000
+  T1    x1     1.0000   1.0000   1.0000   1.0000   1.0000
+  VSA   x2     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.001
+  Trep  x2     1.0000   1.0000   1.0000   1.0000   1.0000
+  T1    x2     1.0000   0.9998   0.9998   0.9990   0.9927
+  VSA   x4     1.0000   1.0000   1.0000   1.0000   1.0000   0.002 0.004 0.010 0.021 0.032
+  Trep  x4     1.0000   1.0000   1.0000   1.0000   1.0000
+  T1    x4     0.9835   0.9613   0.8955   0.7931   0.6972
+  VSA   x8     1.0000   0.9998   0.9977   0.9860   0.9445   0.076 0.086 0.101 0.123 0.140
+  Trep  x8     1.0000   1.0000   1.0000   1.0000   1.0000
+  T1    x8     0.4282   0.3696   0.3107   0.2314   0.1920
+  VSA   x16    0.0304   0.0285   0.0090   0.0015   0.0002   0.240 0.241 0.256 0.276 0.291
+  Trep  x16    0.9994   0.9983   0.9969   0.9879   0.9786
+  T1    x16    0.0509   0.0526   0.0385   0.0339   0.0291
+  VSA   x32    0.0000   0.0000   0.0000   0.0000   0.0000   0.370 0.359 0.365 0.374 0.382
+  Trep  x32    0.6367   0.7140   0.6673   0.5953   0.5316
+  T1    x32    0.0069   0.0136   0.0090   0.0096   0.0094
+## Bars, part b
+  H0 (k = 1: every arm >= 99.5% at every time): PASS
+  H1 (VSA >= Trep at every k and time): worst VSA - Trep -0.9879 at x16 1 d -> FAIL
+  H2 (VSA - T1 >= 5 points at x8, 30 d): +0.7546 -> PASS
+## Predictions (part b)
+  H0 passes -> HELD
+  T1 at 30 d: 60-90% at x4 (79.3), 5-35% at x8 (23.1), <= 5% at x16 (3.4) -> HELD
+  VSA at 30 d: >= 99.5% at x4 (100.0), 95-100% at x8 (98.6), < 1% at x16 (0.1) -> HELD
+  Trep at 30 d: >= 99.5% up to x8 (100.0), >= 95% at x16 (98.8), 30-80% at x32 (59.5) -> HELD
+  H1 fails with Trep > VSA at x16 and x32 at every time; H2 passes -> HELD
+
+## Compute
+  dev re-read (aborted: GPU 0 taken by another process at launch) A800       GPU 0        0.04 GPU-h
+  dev re-read (2,222 prompts)        A800       GPU 7        0.07 GPU-h
+  test re-read (32,839 prompts)      A800       GPU 7        1.03 GPU-h
+  Total 1.15 GPU-hours (cap 40). Wall-clock x 1 GPU from the run logs. PACE: 0 GPU-hours (two sbatch --test-only start estimates only). CPU (local, 16 cores): dev grid ~45 min x 2 workers, query side ~45 min x 3, write side ~30 min x 3, part b ~10 min x 2. No paid API.
+
+## Reading (written by hand after the generated part; the reading rules are in the prereg)
+
+Part a, query side (primary; the question names the variant; 4,800 RULER needle samples x 5 variant conditions):
+- The exact table and B21's random-code store fail completely once the question names the entity differently: 0.0
+  in every variant condition, and they agree with each other on all 28,800 sample-conditions. Normalizing case and
+  separators (En) recovers 71.6 on format variants and nothing else.
+- The VSA store with character-trigram codes (dev choice) restores almost all of the clean accuracy: 99.71 / 99.69 /
+  99.59 on the three typo rates, 99.71 on format variants, 98.57 on short aliases, against 99.71 with unchanged names.
+  On unchanged names every arm gives the same score as the exact table on all 4,800 samples, so the similarity codes
+  cost nothing on clean queries.
+- Against the mandatory fair table (normalized edit distance, the dev choice): equal on T1, T2 and P (0 discordant
+  samples); edit distance is slightly better on the heaviest typos (T3: -0.12, 6 samples to 0, all niah_multikey_2,
+  where trigram overlap prefers a key that shares the adjective, e.g. "damp-apsty" -> "damp-manor"); the VSA is much
+  better on short aliases (+6.16, 341 to 2), because edit distance prefers short keys (including the reader's junk keys
+  such as "noora") over the long key that contains the alias. Pooled +1.21 [+1.08, +1.34]: bar 2 PASSES, carried
+  entirely by aliases.
+- Against WRatio: equal on typos and format; better on aliases (+2.35, 178 to 22). Pooled +0.50 [+0.39, +0.61]:
+  significant but below the registered +1.0, so bar 3 FAILS.
+- V against N (a plain table whose fuzzy index is the exact cosine of character-trigram counts): +0.02 [-0.00, +0.04]
+  pooled; V chose the same key as exact trigram cosine on 846 of 849 sampled queries (2 ties). The vector form
+  behaves as character-trigram cosine; superposition and clean-up add nothing beyond that similarity.
+- Registered reading for bar 2 PASS, bar 3 FAIL: the VSA beats plain edit distance but not, by the registered margin, a
+  stronger standard fuzzy matcher; the advantage is the similarity built into its codes, which a table with an n-gram
+  index reproduces exactly (N). The paper may not claim that the vector form beats an equally exact table.
+
+Part a, write side (secondary; the text carries the variant, the reader re-reads those chunks, the question is exact):
+- E and Ev 0.0 again; V 98.70 (T2), 98.56 (P), 97.01 (A); L 99.05 / 97.18 / 73.73; W 99.03 / 98.16 / 97.92; N equals V
+  (+0.02 pooled).
+- Here the fair WRatio table is significantly BETTER than the VSA: pooled V - W = -0.28 [-0.43, -0.14] (26 samples to
+  57); on aliases -0.91 (6 to 49); 9 of the 10 hand-read cases are niah_multikey_2 stores where WRatio is right: when the stored key is the
+  short alias ("drug"), trigram cosine prefers keys that share the question's long adjective ("outstanding-landmine")
+  over the stored short noun, while WRatio finds the short stored string inside the question. On T2 the VSA is also
+  behind both tables (-0.35 vs L, -0.33 vs W; 17 and 18 samples to 0 and 2), again on crowded stores.
+- Edit distance collapses on write-side aliases (73.73; 0.0 on niah_multikey_3, where every stored short uuid is
+  closer to some other full uuid), so bar 2 passes (+8.10) and bar 3 fails (-0.28, the interval below 0). The bars fall
+  as on the query side, but the sign of V - W flips: which fuzzy measure wins depends on where the variation sits, not
+  on the vector form.
+
+Part b (PCM device model, 4,776 probed keys, 16 pairs per vector):
+- At the measured device parameters (x1) every arm reads every key at every time to 1 year (H0 PASS): no bit errors.
+- With every noise source scaled x4 and beyond, the unprotected table fails first (30 days: 79.3% at x4, 23.1% at x8),
+  while the VSA store holds (100% at x4, 98.6% at x8): H2 PASSES (+75.5 points at x8, 30 d).
+- The same facts in a table that spends the VSA store's cell count on a plain repetition code (39-46 copies per bit
+  on the large stores, up to 227 on the small ones; majority vote) are more robust than the VSA store at every level where either fails: 100% vs
+  98.6% at x8, 98.8% vs 0.1% at x16 and 59.5% vs 0.0% at x32 (30 days); H1 FAILS. At x16 and x32 even the unprotected
+  table reads more keys than the VSA store (3.4% vs 0.1%; 1.0% vs 0.0% at 30 days), because the store's similarity
+  threshold fails all at once.
+- So the store is robust because it is redundant (about 512 cells per pair on the large stores), and the vector form is a poor code for
+  that redundancy: at a fixed cell budget a table with the simplest error-correcting code is more robust.
+
+In one sentence: similarity-preserving codes let the VSA store absorb misspelled, reformatted and abbreviated entity
+names that defeat the exact store (0% -> 97-99.7%), but a table with a standard fuzzy index does as well (trigram
+cosine: identical; WRatio: within half a point either way), and at equal cell count a repetition-coded table is more
+robust on the device model, so B26 does not show that the vector form beats an equally exact table.
+
+## Checks from other angles
+- Second scorer (independent code, b26_check.py and an inline re-score): every logged arm score re-scored with a
+  separately written string-match scorer: 0 of 201,600 (query side) and 0 of 134,400 (write side) differ. Pooled
+  differences recomputed without the bootstrap code: V - L +1.206, V - W +0.498, V - N +0.017 (query side).
+- Independent key choice: on 849 queries sampled from the query side, a pure-Python normalized Levenshtein and an exact
+  trigram-count cosine reproduce the logged choices of L and N on all 849; V matches exact trigram cosine on 846 (2
+  ties, 1 different).
+- Strict scorer (predicted values equal the gold values as a set) and key-choice scorer agree with the primary metric
+  in direction everywhere; on every sample with a primary score of 1 the strict scorer also scores 1.
+- B21 reproduced: in C0, E's predictions equal B21's banked table predictions and Ev's equal B21's vector-store
+  predictions on 4,800 of 4,800 samples; E's C0 accuracy per length 99.69 / 99.97 / 99.69 / 99.78 / 99.41 / 99.75.
+- Write-side re-reading: 8,390 of 8,400 unchanged needle chunks re-read on the A800 reproduce B21's banked PACE output
+  (99.88%; same Qwen3-8B snapshot b968826d, transformers 4.57.6); the reader stored the varied key for 98.95% (T2),
+  97.53% (P) and 97.73% (A) of queried keys.
+- Hand-read (results/b26_handread.txt): all 6 T3 cases where L beats V and the 10 drawn A cases on each side were read.
+  The errors are real key confusions (shared adjective; alias contained in a longer word, e.g. "car" -> "splendid-cargo";
+  short junk keys), not parse or format failures.
+- Post hoc, not registered (results/b26_posthoc_minlen.txt): the reader stores a few junk pairs from the essay
+  haystacks (e.g. "m." -> "Slavery in the Ancient World"), and WRatio's substring score sends many short aliases to the
+  one-letter key "m.". With keys shorter than 3 characters removed for every arm, query-side WRatio rises to 97.47 on
+  aliases and V - W falls to +1.09 (aliases) and +0.21 (pooled); V - L is unchanged (+1.19). The VSA's query-side lead
+  over WRatio is therefore mostly this one failure mode of WRatio.
+- Seeds: the alias variants are deterministic (noun / uuid prefix), so a new variant seed would change only T1-T3 and
+  P, where the arms tie; no seed replicate was run.
+
+## Literature (searched after the result)
+- Cohen, Ravikumar & Fienberg 2003 (IJCAI-03 Workshop on Information Integration, 73-78), a comparison of string
+  distance metrics for name matching: no single metric dominates; the best was a hybrid of token TF-IDF cosine and
+  Jaro-Winkler. SUPPORTED (direction): here too the winner among trigram cosine, edit distance and WRatio changes with
+  the kind and place of the variation.
+- Joshi, Halseth & Kanerva 2016 (Quantum Interaction, LNCS 10106, 265-274): letter-trigram hypervectors bundled into
+  language profiles, compared by inner product. SUPPORTED (same mechanism): a bundle of n-gram codes is a random
+  projection of the n-gram count vector, so its inner products track n-gram-count cosine up to O(1/sqrt(d)); V = N here
+  is what that predicts.
+- Kim, Imani, Moshiri & Rosing 2020 (GenieHD, DATE 2020): hyperdimensional encoding for DNA pattern matching, with the
+  gain reported as speed and energy on hardware against an FPGA design, not as more accurate matches. SUPPORTED
+  (direction): what the vector form offers is a hardware-friendly way to compute a standard similarity.
+- Part b: no study was found that compares a VSA store with a repetition-coded table on the same device model; the
+  result is what elementary coding arguments predict (NO PRECEDENT FOUND for the specific comparison).
+
+## Predictions that failed
+- V on query-side aliases in [85, 98]: 98.57 (better than predicted).
+- V - L on query-side aliases >= 10: +6.16.
+- Dev choice of L: OSA predicted, normalized Levenshtein chosen.
+- Write side: the reader stores the varied key for >= 98% of P and A needles: 97.53% and 97.73%.
+- (Held, but not as pictured: "bars read as on the query side" held in pass/fail terms, yet V - W changed sign; the
+  prediction did not foresee WRatio beating the VSA on the write side.)
+- All part-b predictions held.
+
+## Deviations and what went wrong (no design change; nothing selected on test results)
+- First dev re-read launched on A800 GPU 0, which had been idle at the check but was taken by another process at the
+  moment of launch; killed by PID after 2.5 minutes, partial output deleted, rerun on idle GPU 7 (recorded in the dev
+  record before any test run). The test re-read ran on GPU 7 alone.
+- The prereg's compute section estimated about 27,000 test prompts; there were 32,839 (corrected in the dev record).
+- PACE was not used: its start estimates on 2026-11-17 were 2026-11-19 (L40S) to 2026-11-23 (H200).

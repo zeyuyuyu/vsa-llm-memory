@@ -1,0 +1,12 @@
+The script crashed in --smoke mode (command: python3 v5_gpt_a.py --enc qwen8 --out OUT --workers 8 --smoke). Output, run with python3 -X faulthandler:
+
+[0.0 min] Training statistics: 5621 occurrences, dimension 128
+Fatal Python error: Segmentation fault
+
+Thread 0x00007f783fc141c0 (most recent call first):
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/scipy/linalg/_decomp.py", line 559 in eigh
+  File "v5_gpt_a.py", line 194 in <module>
+
+Environment fact (reproduced in a six-line test, independent of your script): on this machine, setting OPENBLAS_NUM_THREADS=1 (or OMP_NUM_THREADS=1) before importing numpy and then calling threadpoolctl.threadpool_limits(limits=8) around scipy.linalg.eigh segfaults; without the environment variables, or without raising the limit, eigh works.
+
+The reply size per message is limited, so send the corrected COMPLETE script in TWO consecutive pieces that I will concatenate verbatim. Now send PIECE 1 of 2 (about the first half, ending at a top-level boundary), as exactly one fenced ```python block and nothing else.

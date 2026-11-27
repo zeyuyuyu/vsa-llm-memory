@@ -1,0 +1,289 @@
+# B69 part (B): vocabulary sweep. Synthetic stores of 6,002 pairs (B34's mk2big2 generator), N distinct
+# 7-digit values in the vocabulary; 8 test stores x 300 probed keys per N; designs from 3 dev stores per N.
+# N* in cells per stored pair; Delta = steps(table) - steps(store), + = the store needs fewer cells.
+
+== accounting free
+  memory   N            k1       k4       k8      k16
+  U        256          54       64      108      304
+  U        1024         64       76      128      362
+  U        6000         76       91      128      431
+  U        24000        91       91      152      512
+  H-SBC    256          27       32       76      256
+  H-SBC    1024         32       38       91      304
+  H-SBC    6000         32       45      108      362
+  H-SBC    24000        38       54      108      431
+  T-rep    256          13       64      215      724
+  T-rep    1024         16       76      215      861
+  T-rep    6000         19       91      304     1024
+  T-rep    24000        23      108      304     1218
+  E-BCH    256          13       19       76      362
+  E-BCH    1024         16       23       91      431
+  E-BCH    6000         19       27      108      512
+  E-BCH    24000        23       32      128      512
+  E-LDPC   256          16       19       38      152
+  E-LDPC   1024         19       23       45      181
+  E-LDPC   6000         23       27       54      215
+  E-LDPC   24000        23       32       64      256
+  O-BCH    256          23       32      152      609
+  O-BCH    1024         27       38      152      609
+  O-BCH    6000         32       45      181      724
+  O-BCH    24000        32       45      215      861
+  O-LDPC   256          27       32       76      256
+  O-LDPC   1024         32       38       76      304
+  O-LDPC   6000         32       45       91      304
+  O-LDPC   24000        38       45       91      362
+  static   256          13       19       38      152
+  static   1024         16       23       45      181
+  static   6000         19       27       54      215
+  static   24000        23       32       64      256
+  insert   256          23       32       76      256
+  insert   1024         27       38       76      304
+  insert   6000         32       45       91      304
+  insert   24000        32       45       91      362
+  static_vs_U       N 256    k1 -8 k4 -7 k8 -6 k16 -4  -> TABLE WIN
+  static_vs_U       N 1024   k1 -8 k4 -7 k8 -6 k16 -4  -> TABLE WIN
+  static_vs_U       N 6000   k1 -8 k4 -7 k8 -5 k16 -4  -> TABLE WIN
+  static_vs_U       N 24000  k1 -8 k4 -6 k8 -5 k16 -4  -> TABLE WIN
+  static_vs_H-SBC   N 256    k1 -4 k4 -3 k8 -4 k16 -3  -> TABLE WIN
+  static_vs_H-SBC   N 1024   k1 -4 k4 -3 k8 -4 k16 -3  -> TABLE WIN
+  static_vs_H-SBC   N 6000   k1 -3 k4 -3 k8 -4 k16 -3  -> TABLE WIN
+  static_vs_H-SBC   N 24000  k1 -3 k4 -3 k8 -3 k16 -3  -> TABLE WIN
+  insert_vs_H-SBC   N 256    k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 1024   k1 -1 k4 +0 k8 -1 k16 +0  -> TIE
+  insert_vs_H-SBC   N 6000   k1 +0 k4 +0 k8 -1 k16 -1  -> TIE
+  insert_vs_H-SBC   N 24000  k1 -1 k4 -1 k8 -1 k16 -1  -> TIE
+  insert_vs_U       N 256    k1 -5 k4 -4 k8 -2 k16 -1  -> TABLE WIN
+  insert_vs_U       N 1024   k1 -5 k4 -4 k8 -3 k16 -1  -> TABLE WIN
+  insert_vs_U       N 6000   k1 -5 k4 -4 k8 -2 k16 -2  -> TABLE WIN
+  insert_vs_U       N 24000  k1 -6 k4 -4 k8 -3 k16 -2  -> TABLE WIN
+
+== accounting cap-utf8
+  memory   N            k1       k4       k8      k16
+  U        256          64       76      128      362
+  U        1024         76       91      152      431
+  U        6000        152      181      256      861
+  U        24000       362      362      724     2048
+  H-SBC    256          32       38       91      304
+  H-SBC    1024         45       54      128      431
+  H-SBC    6000         91      128      256      861
+  H-SBC    24000       304      362      609     2048
+  T-rep    256          16       76      256      861
+  T-rep    1024         27       91      256     1024
+  T-rep    6000         76      181      431     1448
+  T-rep    24000       256      431      861     2896
+  E-BCH    256          16       23       91      431
+  E-BCH    1024         27       38      128      512
+  E-BCH    6000         76      108      256     1024
+  E-BCH    24000       256      304      724     2048
+  E-LDPC   256          19       23       45      181
+  E-LDPC   1024         32       38       76      256
+  E-LDPC   6000         91      108      181      609
+  E-LDPC   24000       256      304      609     2048
+  O-BCH    256          27       38      181      724
+  O-BCH    1024         38       54      181      724
+  O-BCH    6000         91      128      304     1218
+  O-BCH    24000       256      362      724     2435
+  O-LDPC   256          32       38       91      304
+  O-LDPC   1024         45       54      108      431
+  O-LDPC   6000         91      128      215      724
+  O-LDPC   24000       304      362      609     2048
+  static   256          16       23       45      181
+  static   1024         27       38       76      256
+  static   6000         76      108      181      609
+  static   24000       256      304      609     2048
+  insert   256          27       38       91      304
+  insert   1024         38       54      108      431
+  insert   6000         91      128      215      724
+  insert   24000       256      362      609     2048
+  static_vs_U       N 256    k1 -8 k4 -7 k8 -6 k16 -4  -> TABLE WIN
+  static_vs_U       N 1024   k1 -6 k4 -5 k8 -4 k16 -3  -> TABLE WIN
+  static_vs_U       N 6000   k1 -4 k4 -3 k8 -2 k16 -2  -> TABLE WIN
+  static_vs_U       N 24000  k1 -2 k4 -1 k8 -1 k16 +0  -> TABLE WIN
+  static_vs_H-SBC   N 256    k1 -4 k4 -3 k8 -4 k16 -3  -> TABLE WIN
+  static_vs_H-SBC   N 1024   k1 -3 k4 -2 k8 -3 k16 -3  -> TABLE WIN
+  static_vs_H-SBC   N 6000   k1 -1 k4 -1 k8 -2 k16 -2  -> TABLE WIN
+  static_vs_H-SBC   N 24000  k1 -1 k4 -1 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 256    k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 1024   k1 -1 k4 +0 k8 -1 k16 +0  -> TIE
+  insert_vs_H-SBC   N 6000   k1 +0 k4 +0 k8 -1 k16 -1  -> TIE
+  insert_vs_H-SBC   N 24000  k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_U       N 256    k1 -5 k4 -4 k8 -2 k16 -1  -> TABLE WIN
+  insert_vs_U       N 1024   k1 -4 k4 -3 k8 -2 k16 +0  -> TABLE WIN
+  insert_vs_U       N 6000   k1 -3 k4 -2 k8 -1 k16 -1  -> TABLE WIN
+  insert_vs_U       N 24000  k1 -2 k4 +0 k8 -1 k16 +0  -> TABLE WIN
+
+== accounting bch-utf8
+  memory   N            k1       k4       k8      k16
+  U        256          64       76      128      431
+  U        1024         76      108      215      724
+  U        6000        152      181      609     2435
+  U        24000       362      512     2048    >4096
+  H-SBC    256          32       38      108      362
+  H-SBC    1024         45       54      181      609
+  H-SBC    6000         91      152      512     2048
+  H-SBC    24000       304      431     1722    >4096
+  T-rep    256          16       76      256      861
+  T-rep    1024         27      108      304     1218
+  T-rep    6000         76      181      724     2896
+  T-rep    24000       256      512     2048    >4096
+  E-BCH    256          16       27      108      431
+  E-BCH    1024         27       38      181      724
+  E-BCH    6000         76      128      512     2435
+  E-BCH    24000       256      431     1722    >4096
+  E-LDPC   256          19       27       64      256
+  E-LDPC   1024         32       38      128      512
+  E-LDPC   6000         91      128      512     2048
+  E-LDPC   24000       256      431     1722    >4096
+  O-BCH    256          27       38      181      724
+  O-BCH    1024         38       54      256     1024
+  O-BCH    6000         91      152      609     2435
+  O-BCH    24000       256      431     2048    >4096
+  O-LDPC   256          32       38      108      362
+  O-LDPC   1024         45       54      152      609
+  O-LDPC   6000         91      152      512     2048
+  O-LDPC   24000       304      431     1722    >4096
+  static   256          16       27       64      256
+  static   1024         27       38      128      512
+  static   6000         76      128      512     2048
+  static   24000       256      431     1722    >4096
+  insert   256          27       38      108      362
+  insert   1024         38       54      152      609
+  insert   6000         91      152      512     2048
+  insert   24000       256      431     1722    >4096
+  static_vs_U       N 256    k1 -8 k4 -6 k8 -4 k16 -3  -> TABLE WIN
+  static_vs_U       N 1024   k1 -6 k4 -6 k8 -3 k16 -2  -> TABLE WIN
+  static_vs_U       N 6000   k1 -4 k4 -2 k8 -1 k16 -1  -> TABLE WIN
+  static_vs_U       N 24000  k1 -2 k4 -1 k8 -1 k16 +0  -> TABLE WIN
+  static_vs_H-SBC   N 256    k1 -4 k4 -2 k8 -3 k16 -2  -> TABLE WIN
+  static_vs_H-SBC   N 1024   k1 -3 k4 -2 k8 -2 k16 -1  -> TABLE WIN
+  static_vs_H-SBC   N 6000   k1 -1 k4 -1 k8 +0 k16 +0  -> TIE
+  static_vs_H-SBC   N 24000  k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 256    k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 1024   k1 -1 k4 +0 k8 -1 k16 +0  -> TIE
+  insert_vs_H-SBC   N 6000   k1 +0 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 24000  k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_U       N 256    k1 -5 k4 -4 k8 -1 k16 -1  -> TABLE WIN
+  insert_vs_U       N 1024   k1 -4 k4 -4 k8 -2 k16 -1  -> TABLE WIN
+  insert_vs_U       N 6000   k1 -3 k4 -1 k8 -1 k16 -1  -> TABLE WIN
+  insert_vs_U       N 24000  k1 -2 k4 -1 k8 -1 k16 +0  -> TABLE WIN
+
+== accounting cap-compact
+  memory   N            k1       k4       k8      k16
+  U        256          64       76      128      362
+  U        1024         76       91      152      431
+  U        6000        108      128      181      609
+  U        24000       215      215      362     1218
+  H-SBC    256          32       38       91      304
+  H-SBC    1024         38       45      108      362
+  H-SBC    6000         64       76      181      609
+  H-SBC    24000       152      181      362     1218
+  T-rep    256          16       76      256      861
+  T-rep    1024         23       91      256     1024
+  T-rep    6000         45      128      362     1218
+  T-rep    24000       128      256      512     2048
+  E-BCH    256          16       23       91      431
+  E-BCH    1024         23       32      108      512
+  E-BCH    6000         45       64      181      724
+  E-BCH    24000       128      152      362     1218
+  E-LDPC   256          19       23       45      181
+  E-LDPC   1024         27       32       64      215
+  E-LDPC   6000         54       64      108      431
+  E-LDPC   24000       128      152      304     1024
+  O-BCH    256          27       38      181      724
+  O-BCH    1024         32       45      181      724
+  O-BCH    6000         64       76      256     1024
+  O-BCH    24000       128      181      431     1722
+  O-LDPC   256          32       38       91      304
+  O-LDPC   1024         38       45       91      362
+  O-LDPC   6000         64       76      152      512
+  O-LDPC   24000       152      181      304     1024
+  static   256          16       23       45      181
+  static   1024         23       32       64      215
+  static   6000         45       64      108      431
+  static   24000       128      152      304     1024
+  insert   256          27       38       91      304
+  insert   1024         32       45       91      362
+  insert   6000         64       76      152      512
+  insert   24000       128      181      304     1024
+  static_vs_U       N 256    k1 -8 k4 -7 k8 -6 k16 -4  -> TABLE WIN
+  static_vs_U       N 1024   k1 -7 k4 -6 k8 -5 k16 -4  -> TABLE WIN
+  static_vs_U       N 6000   k1 -5 k4 -4 k8 -3 k16 -2  -> TABLE WIN
+  static_vs_U       N 24000  k1 -3 k4 -2 k8 -1 k16 -1  -> TABLE WIN
+  static_vs_H-SBC   N 256    k1 -4 k4 -3 k8 -4 k16 -3  -> TABLE WIN
+  static_vs_H-SBC   N 1024   k1 -3 k4 -2 k8 -3 k16 -3  -> TABLE WIN
+  static_vs_H-SBC   N 6000   k1 -2 k4 -1 k8 -3 k16 -2  -> TABLE WIN
+  static_vs_H-SBC   N 24000  k1 -1 k4 -1 k8 -1 k16 -1  -> TIE
+  insert_vs_H-SBC   N 256    k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 1024   k1 -1 k4 +0 k8 -1 k16 +0  -> TIE
+  insert_vs_H-SBC   N 6000   k1 +0 k4 +0 k8 -1 k16 -1  -> TIE
+  insert_vs_H-SBC   N 24000  k1 -1 k4 +0 k8 -1 k16 -1  -> TIE
+  insert_vs_U       N 256    k1 -5 k4 -4 k8 -2 k16 -1  -> TABLE WIN
+  insert_vs_U       N 1024   k1 -5 k4 -4 k8 -3 k16 -1  -> TABLE WIN
+  insert_vs_U       N 6000   k1 -3 k4 -3 k8 -1 k16 -1  -> TABLE WIN
+  insert_vs_U       N 24000  k1 -3 k4 -1 k8 -1 k16 -1  -> TABLE WIN
+
+== accounting bch-compact
+  memory   N            k1       k4       k8      k16
+  U        256          64       76      128      362
+  U        1024         76       91      181      512
+  U        6000        108      152      304     1218
+  U        24000       215      256      861     3444
+  H-SBC    256          32       38       91      304
+  H-SBC    1024         38       45      128      431
+  H-SBC    6000         64       91      304     1218
+  H-SBC    24000       152      215      861     3444
+  T-rep    256          16       76      256      861
+  T-rep    1024         23       91      256     1024
+  T-rep    6000         45      152      512     1722
+  T-rep    24000       128      304     1024     4096
+  E-BCH    256          16       23       91      431
+  E-BCH    1024         23       32      128      609
+  E-BCH    6000         45       76      304     1218
+  E-BCH    24000       128      215      861     3444
+  E-LDPC   256          19       23       45      181
+  E-LDPC   1024         27       32       76      304
+  E-LDPC   6000         54       76      256     1024
+  E-LDPC   24000       128      215      861     3444
+  O-BCH    256          27       38      181      724
+  O-BCH    1024         32       45      181      724
+  O-BCH    6000         64       91      362     1448
+  O-BCH    24000       128      215     1024     4096
+  O-LDPC   256          32       38       91      304
+  O-LDPC   1024         38       45      108      431
+  O-LDPC   6000         64       91      304     1024
+  O-LDPC   24000       152      215      861     3444
+  static   256          16       23       45      181
+  static   1024         23       32       76      304
+  static   6000         45       76      256     1024
+  static   24000       128      215      861     3444
+  insert   256          27       38       91      304
+  insert   1024         32       45      108      431
+  insert   6000         64       91      304     1024
+  insert   24000       128      215      861     3444
+  static_vs_U       N 256    k1 -8 k4 -7 k8 -6 k16 -4  -> TABLE WIN
+  static_vs_U       N 1024   k1 -7 k4 -6 k8 -5 k16 -3  -> TABLE WIN
+  static_vs_U       N 6000   k1 -5 k4 -4 k8 -1 k16 -1  -> TABLE WIN
+  static_vs_U       N 24000  k1 -3 k4 -1 k8 +0 k16 +0  -> TABLE WIN
+  static_vs_H-SBC   N 256    k1 -4 k4 -3 k8 -4 k16 -3  -> TABLE WIN
+  static_vs_H-SBC   N 1024   k1 -3 k4 -2 k8 -3 k16 -2  -> TABLE WIN
+  static_vs_H-SBC   N 6000   k1 -2 k4 -1 k8 -1 k16 -1  -> TABLE WIN
+  static_vs_H-SBC   N 24000  k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 256    k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_H-SBC   N 1024   k1 -1 k4 +0 k8 -1 k16 +0  -> TIE
+  insert_vs_H-SBC   N 6000   k1 +0 k4 +0 k8 +0 k16 -1  -> TIE
+  insert_vs_H-SBC   N 24000  k1 -1 k4 +0 k8 +0 k16 +0  -> TIE
+  insert_vs_U       N 256    k1 -5 k4 -4 k8 -2 k16 -1  -> TABLE WIN
+  insert_vs_U       N 1024   k1 -5 k4 -4 k8 -3 k16 -1  -> TABLE WIN
+  insert_vs_U       N 6000   k1 -3 k4 -3 k8 +0 k16 -1  -> TABLE WIN
+  insert_vs_U       N 24000  k1 -3 k4 -1 k8 +0 k16 +0  -> TABLE WIN
+
+== predictions (theory) vs test, uncharged: N* per (memory, N, condition), steps test - predicted
+  U       N256 k1:54/54 k4:64/64 k8:108/108 k16:362/304 | N1024 k1:64/64 k4:76/76 k8:108/128 k16:362/362 | N6000 k1:76/76 k4:76/91 k8:128/128 k16:431/431 | N24000 k1:76/91 k4:91/91 k8:152/152 k16:512/512
+  H-SBC   N256 k1:23/27 k4:32/32 k8:76/76 k16:215/256 | N1024 k1:27/32 k4:38/38 k8:76/91 k16:256/304 | N6000 k1:32/32 k4:45/45 k8:91/108 k16:304/362 | N24000 k1:38/38 k4:45/54 k8:108/108 k16:362/431
+  T-rep   N256 k1:13/13 k4:76/64 k8:215/215 k16:861/724 | N1024 k1:16/16 k4:76/76 k8:215/215 k16:861/861 | N6000 k1:19/19 k4:91/91 k8:256/304 k16:1024/1024 | N24000 k1:23/23 k4:108/108 k8:304/304 k16:1218/1218
+  E-BCH   N256 k1:16/13 k4:23/19 k8:91/76 k16:362/362 | N1024 k1:16/16 k4:23/23 k8:91/91 k16:362/431 | N6000 k1:19/19 k4:27/27 k8:108/108 k16:431/512 | N24000 k1:23/23 k4:32/32 k8:128/128 k16:512/512
+  E-LDPC  N256 k1:19/16 k4:23/19 k8:45/38 k16:181/152 | N1024 k1:19/19 k4:23/23 k8:45/45 k16:181/181 | N6000 k1:23/23 k4:27/27 k8:54/54 k16:215/215 | N24000 k1:27/23 k4:32/32 k8:64/64 k16:256/256
+  O-BCH   N256 k1:27/23 k4:38/32 k8:152/152 k16:609/609 | N1024 k1:32/27 k4:45/38 k8:181/152 k16:724/609 | N6000 k1:32/32 k4:45/45 k8:181/181 k16:724/724 | N24000 k1:38/32 k4:54/45 k8:215/215 k16:861/861
+  O-LDPC  N256 k1:27/27 k4:32/32 k8:76/76 k16:256/256 | N1024 k1:32/32 k4:38/38 k8:91/76 k16:304/304 | N6000 k1:32/32 k4:38/45 k8:91/91 k16:304/304 | N24000 k1:38/38 k4:45/45 k8:108/91 k16:362/362
+  within 2 steps of the prediction: 112 of 112
+  step change N = 256 -> 24000 (uncharged): U k1 3 k4 2 k8 2 k16 3; H-SBC k1 2 k4 3 k8 2 k16 3; T-rep k1 3 k4 3 k8 2 k16 3; E-BCH k1 3 k4 3 k8 3 k16 2; E-LDPC k1 2 k4 3 k8 3 k16 3; O-BCH k1 2 k4 2 k8 2 k16 2; O-LDPC k1 2 k4 2 k8 1 k16 2; static k1 3 k4 3 k8 3 k16 3; insert k1 2 k4 2 k8 1 k16 2

@@ -1,0 +1,327 @@
+B41 literature check: superposed multi-hop inference in VSAs vs table-based alternatives
+Compiled 2026-11-18. Every item below was opened (arXiv abstract page, publisher/DOI page, or the full PDF text);
+quoted numbers come from the paper text, not from memory. Tags are relative to our prior:
+  PRIOR = per-hop crosstalk grows with stored facts (D ~ linear in items), noise compounds over hops without
+  clean-up, clean-up costs E*D per hop, so sparse exact / top-k-merged tables should dominate on cost; VSA's real
+  advantages are fixed width, bilinearity (all pairs in one bind), and differentiability.
+Tag counts: SUPPORTS 14, CONFLICTS 5, GAP 9 (28 items).
+
+Not verified directly: Plate's 2003 book (CSLI). Its capacity formula is cited here only as Frady et al. 2018
+reproduce it (item 8). Everything else below was opened and checked.
+
+
+GROUP 1. COMPUTING IN SUPERPOSITION / SUPERPOSED INFERENCE
+
+1. Zhao, Q., Pandey, N. P., Tian, Y., Rosing, T. (2026). Superposed Inference for Hyperdimensional Computing.
+   arXiv:2609.32320 (cs.LG, submitted 26 Sep 2026).
+   URL: https://arxiv.org/abs/2609.32320   (EXISTS; this is the paper the user named)
+   What it actually is: SupHDC, which batches K independent classification queries. Each query gets a random slot key,
+   the keyed queries are superposed before one shared HDC encoding, and slot-specific classifiers read each one out.
+   There is no binding chain, codebook clean-up, multi-hop, or uncertain-symbol propagation. Reported cost: 1.39x
+   analytical speedup with no mean accuracy loss (K=2 with 20% fallback); 2.08x with -2.67 pp; 2.01x wall-clock on a
+   Raspberry Pi 5. Without fallback, at D=10,000, accuracy falls -1.09 / -4.21 / -7.11 pp at K=2/3/4. Cross-slot
+   interference is ~sqrt((K-1)/d) (Prop. 1). At K=4 the loss shrinks from 8.31 pp (D=1,000) to 2.67 pp (D=10,000).
+   Tag: GAP. It does not address multi-hop or table baselines. Mechanistically consistent with the prior: interference
+   grows with the number superposed, and a clean re-encode fallback is needed to hold accuracy.
+
+2. Kleyko, D., Davies, M., Frady, E. P., Kanerva, P., Kent, S. J., Olshausen, B. A., Osipov, E., Rabaey, J. M.,
+   Rachkovskij, D. A., Rahimi, A., Sommer, F. T. (2022). Vector Symbolic Architectures as a Computing Framework for
+   Emerging Hardware. Proceedings of the IEEE 110(10):1538-1571. arXiv:2106.05268.
+   URL: https://arxiv.org/abs/2106.05268  (also https://pmc.ncbi.nlm.nih.gov/articles/PMC10588678)
+   Calls "computing in superposition" the distinguishing feature of VSAs. Cross product of two sets in one bind:
+   7 ops vs 29 brute force. It also says "computing the cross product in the symbolic domain might still require lower
+   computational costs", and that for retrievable elements "the dimensionality ... should be proportional to the
+   product of the sets' cardinalities".
+   Substring search in superposition (an automaton run step by step): "required dimensionality ... grows extremely
+   fast with the length of strings since every step ... introduces additional crosstalk noise". Per-step clean-up
+   p_j = S S^T p_j (item memory, i.e. codebook-size x D per step) cuts D sharply but raises complexity from O(|Q|) to
+   O(|Q||B|). The authors add that "its computational complexity exceeds that of the conventional algorithms
+   optimized for the problem."
+   Tag: SUPPORTS (strongly). This is the field's own statement of our per-hop crosstalk / clean-up cost trade-off.
+   Bilinearity (all pairs in one bind) is confirmed as the genuine advantage.
+
+3. Frady, E. P., Kleyko, D., Kymn, C. J., Olshausen, B. A., Sommer, F. T. (2021). Computing on Functions Using
+   Randomized Vector Representations. arXiv:2109.03429 (no journal ref on the abs page).
+   URL: https://arxiv.org/abs/2109.03429
+   Vector Function Architectures: inner products of fractional-power-encoded vectors are similarity kernels, and VSA
+   ops become function-space ops (density estimation, kernel regression). This gives the formal sense in which a
+   weighted bundle is a kernel/function. It makes no cost comparison with tables and covers no multi-hop.
+   Tag: GAP.
+
+4. Kleyko, D., Rachkovskij, D. A., Osipov, E., Rahimi, A. (2022). A Survey on Hyperdimensional Computing aka Vector
+   Symbolic Architectures, Part I: Models and Data Transformations. ACM Computing Surveys 55(6). arXiv:2111.06077.
+   URL: https://arxiv.org/abs/2111.06077
+   Reference survey of models, capacity, and data structures (including HRR knowledge-graph embeddings such as HolE).
+   A full-text search finds no mention of sparse matrices, belief propagation, TensorLog, or the forward algorithm.
+   Tag: GAP (background; no comparison with exact probabilistic propagation).
+
+5. Kleyko, D., Rachkovskij, D. A., Osipov, E., Rahimi, A. (2023). A Survey on Hyperdimensional Computing aka Vector
+   Symbolic Architectures, Part II: Applications, Cognitive Models, and Challenges. ACM Computing Surveys 55(9).
+   arXiv:2112.15424.
+   URL: https://arxiv.org/abs/2112.15424
+   VSA finite-state automata keep the transition function as a superposition, and each step returns "next state +
+   noise", which is then queried against the item memory. That is per-step clean-up, as in our design. "Due to the
+   capacity limitations of HVs ... achieving deterministic behavior depends on several design choices" (dimension,
+   number of atomic HVs, number of arguments superposed). No cost comparison with tables.
+   Tag: GAP (weakly consistent with the prior).
+
+6. Kanerva, P. (2009). Hyperdimensional Computing: An Introduction to Computing in Distributed Representation with
+   High-Dimensional Random Vectors. Cognitive Computation 1:139-159. doi:10.1007/s12559-009-9009-8.
+   URL: https://doi.org/10.1007/s12559-009-9009-8
+   Defines item memory = clean-up memory. Its "job is nearest-neighbor search among the set of stored ... patterns",
+   because many operations "produce approximate or noisy results that require cleaning up". Also: "the capacity of a
+   single binary vector sets a limit on the length of history that it can represent reliably."
+   Tag: SUPPORTS (clean-up is a search over the codebook, so its cost is about E*D).
+
+
+GROUP 2. CAPACITY / CROSSTALK THEORY (how D scales with bundled items and codebook size)
+
+7. Plate, T. A. (1995). Holographic Reduced Representations. IEEE Transactions on Neural Networks 6(3):623-641.
+   doi:10.1109/72.377968.
+   URL: https://doi.org/10.1109/72.377968  (full text checked)
+   Number of stored pairs k >= n / (16 ln(m^2/q)); numerically n ~ 4.5(k+0.7) ln(m/(30 q^4)), where n = dimension,
+   m = number of candidates, q = error probability. Dimension is linear in stored items and logarithmic in codebook
+   size. Intermediate clean-up "gives stronger results at the expense of introducing intermediate cleanup
+   operations"; without it "the chances of error are higher". Decoding deeper structures is slightly worse; unitary
+   cues remove that.
+   Tag: SUPPORTS.
+
+8. Frady, E. P., Kleyko, D., Sommer, F. T. (2018). A Theory of Sequence Indexing and Working Memory in Recurrent
+   Neural Networks. Neural Computation 30(6):1449-1513. doi:10.1162/neco_a_01084. arXiv:1803.00412.
+   URL: https://arxiv.org/abs/1803.00412
+   Retrieval sensitivity is universal across VSA models: s = sqrt(N/M) (N = dimension, M = items superposed).
+   "Achieving large sensitivity for high-fidelity recall requires the number of memory items to be smaller than the
+   number of neurons." Capacity bound is 0.39 bits/neuron in the high-fidelity regime. Methods 4.2.2 reproduces
+   Plate's (2003) linear relation N ~ 8 M log(D/eps) for alphabet size D.
+   Tag: SUPPORTS (D linear in stored items, log in codebook).
+
+9. Thomas, A., Dasgupta, S., Rosing, T. (2021). A Theoretical Perspective on Hyperdimensional Computing. Journal of
+   Artificial Intelligence Research 72. doi:10.1613/jair.1.12664. arXiv:2010.07426.
+   URL: https://www.jair.org/index.php/jair/article/view/12664
+   With subset-incoherent random codes, decoding a bundle of s items from alphabet m needs d = O(s ln m). From
+   worst-case pairwise incoherence alone, d scales "quadratically with the number of elements in the set, but only
+   logarithmically in the alphabet size". Bound-pair incoherence scales only with log(m x n).
+   Tag: SUPPORTS.
+
+10. Clarkson, K. L., Ubaru, S., Yang, E. (2023). Capacity Analysis of Vector Symbolic Architectures.
+    arXiv:2301.10352 (no venue on abs page).
+    URL: https://arxiv.org/abs/2301.10352
+    MAP-B bundle membership needs m = O(n log(d/delta)) (Thm 16); a bundle of key-value bindings needs the same
+    (Thm 20); sequences of length L need m = O(L n log(Ld/delta)) (Thm 18). Here n = items bundled and d = codebook
+    size. Lemma 17: for nested (depth-r) MAP-B bundling, reliability "decays exponentially with the depth". The paper
+    explicitly links VSAs to sketches and Bloom filters.
+    Tag: SUPPORTS. Linear-in-items D, plus a formal compounding result for repeated non-linear bundling.
+
+11. Steinberg, J., Sompolinsky, H. (2022). Associative Memory of Structured Knowledge. Scientific Reports 12:21808.
+    doi:10.1038/s41598-022-25708-y.
+    URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9759586
+    Binarized HRR structures of L relations decode accurately when N >~ O(L log D) (D = dictionary size), with SNR
+    ~ N/L. Storage capacity is P < alpha_c N structures.
+    Tag: SUPPORTS.
+
+12. Kleyko, D., Bybee, C., Huang, P.-C., Kymn, C. J., Olshausen, B. A., Frady, E. P., Sommer, F. T. (2023).
+    Efficient Decoding of Compositional Structure in Holistic Representations. Neural Computation.
+    doi:10.1162/neco_a_01590. arXiv:2305.16873.
+    URL: https://arxiv.org/abs/2305.16873
+    Decoders from sparse coding and compressed sensing, combined with interference cancellation, raise information
+    rate from 1.20 to 1.40 bits/dim (small codebooks) and from 0.60 to 1.26 bits/dim (large codebooks).
+    Tag: CONFLICTS (mild, constant-factor only). A naive single-pass clean-up understates achievable capacity, so the
+    per-item D constant in our prior is pessimistic. But these decoders are iterative (cost > one E*D pass), and the
+    scaling stays linear in items.
+
+13. Qiu, F. (2022; v5 2023). Graph Embeddings via Tensor Products and Approximately Orthonormal Codes.
+    arXiv:2208.10917.
+    URL: https://arxiv.org/abs/2208.10917
+    This is the only head-to-head analysis we found of a superposed (bind-and-sum) graph memory against sparse matrix
+    formats. Embeddings "need to scale with the number of edges k". At best (tensor-product binding) they "match"
+    DoK / COO / CSR in memory (O(k)) and in matrix-multiply cost (O(k^2)); there is no asymptotic win. Hadamard
+    (HRR-family) binding of dimension d stores O(d) edges for a single-edge query but only O(sqrt d) edges for edge
+    composition (2-hop path). The paper concludes: "We actually do not save any memory by compression via the
+    Hadamard product".
+    Tag: SUPPORTS (strongly). Composition in compressed binding is worse than single-hop: D ~ k^2 for 2-hop.
+
+
+GROUP 3. RESONATOR NETWORKS (factorizing bound products without enumeration)
+
+14. Frady, E. P., Kent, S. J., Olshausen, B. A., Sommer, F. T. (2020). Resonator Networks, 1: An Efficient Solution
+    for Factoring High-Dimensional, Distributed Representations of Data Structures. Neural Computation
+    32(12):2311-2331. arXiv:2007.03748 (arXiv title: "Resonator networks for factoring distributed representations
+    of data structures").
+    URL: https://arxiv.org/abs/2007.03748
+    Decoding a product of factors by nearest-neighbour lookup "would require storing every possible combination".
+    Past VSA work "sidestepped this problem by limiting the depth ... or using a brute force approach". Resonators
+    start from the superposition of all codevectors and alternate unbinding with clean-up, so they never enumerate
+    the product space.
+    Tag: CONFLICTS, but only with a k^h-enumeration framing. VSA does not need to enumerate the product space to
+    decode one bound composite. It does not address weighted superpositions of many chains or compare to factorized
+    exact propagation.
+
+15. Kent, S. J., Frady, E. P., Sommer, F. T., Olshausen, B. A. (2020). Resonator Networks, 2: Factorization
+    Performance and Capacity Compared to Optimization-Based Methods. Neural Computation 32(12):2332-2388.
+    arXiv:1906.11684 (arXiv title: "Resonator Networks outperform optimization methods at solving high-dimensional
+    vector factorization").
+    URL: https://arxiv.org/abs/1906.11684
+    Explicit brute-force comparison: storing all composites needs M*N bits. With F=4 factors, 100 codevectors each,
+    and N=10,000, M=1e8, which is "about 125 GB". Resonator operational capacity M_max (99% accuracy) "scales as a
+    quadratic function of N, regardless of how many factors". The method is "dramatically" better than ALS and
+    gradient methods but "not guaranteed to converge".
+    Tag: CONFLICTS with "VSA = enumeration cost". The win holds against brute force over the joint space, for a single
+    clean product. Search space is capped at ~N^2. There is no comparison with factorized/sparse exact inference.
+
+
+GROUP 4. PROBABILISTIC / SOFT INFERENCE WITH VSAs; MULTI-HOP AND REASONING IN SUPERPOSITION
+
+16. Furlong, P. M., Eliasmith, C. (2023, issue 2024). Modelling Neural Probabilistic Computation Using Vector
+    Symbolic Architectures. Cognitive Neurodynamics 18(6). doi:10.1007/s11571-023-10031-7. Extends Furlong &
+    Eliasmith (2022), Fractional Binding in Vector Symbolic Architectures as Quasi-Probability Statements, CogSci 2022
+    (https://escholarship.org/uc/item/33j7c63v).
+    URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11655797
+    Bundles of fractionally bound HRR/SSP vectors define a quasi-kernel density (a Fourier integral estimator). It can
+    go negative and needs a bias-and-rectify correction. Belief update is vector addition, memory is fixed (vs KDE),
+    and D=2048 is used in experiments. "None of the candidate methods exactly achieve the exact value of entropy."
+    No multi-hop chains, no table baseline.
+    Tag: GAP (probability-in-superposition is established but approximate; no cost comparison).
+
+17. Ganesan, A., Gao, H., Gandhi, S., Raff, E., Oates, T., Holt, J., McLean, M. (2021). Learning with Holographic
+    Reduced Representations. NeurIPS 2021. arXiv:2109.02157.
+    URL: https://arxiv.org/abs/2109.02157
+    "HRRs today are not effective in a differentiable solution due to numerical instability." A projection step
+    improves concept retrieval by over 100x. Applied to multi-label output layers.
+    Tag: GAP. It qualifies the "differentiability" advantage: HRR needs projection or normalization to be usable
+    inside gradient training.
+
+18. Hersche, M., Zeqiri, M., Benini, L., Sebastian, A., Rahimi, A. (2023). A Neuro-Vector-Symbolic Architecture for
+    Solving Raven's Progressive Matrices. Nature Machine Intelligence 5(4):363-375. doi:10.1038/s42256-023-00630-8.
+    arXiv:2203.04571.
+    URL: https://arxiv.org/abs/2203.04571
+    Each perceptual PMF is mapped to "the weighted superposition with the values in the PMF used as weights and the
+    corresponding codewords as basis vectors". This is exactly our softmax-to-bundle encoding. Rule abduction then runs
+    by bind/unbind in superposition. On the 3x3 grid (2000 tests, CPU), NVSA is 244x faster than unrestricted PrAE
+    (63.2 min vs 15,408 min), uses <10 GB vs >53 GB, and scores 96.89% vs 97.50% accuracy.
+    Tag: CONFLICTS. This is the strongest published cost win for superposed probabilistic inference. Caveat: the
+    baseline is PrAE's exhaustive probabilistic search, not a factorized/sparse exact method, and accuracy is 0.6 pp
+    lower.
+
+19. Kumar, R. (2026). Holographic Memory for Zero-Shot Compositional Reasoning in Knowledge Graphs: A Mechanistic
+    Study of Where and Why It Fails. arXiv:2606.24948 (single author, preprint).
+    URL: https://arxiv.org/abs/2606.24948
+    HRR and FHRR with modern-Hopfield clean-up on FB15k-237 (two-hop, leakage-controlled, 5 seeds). Single-hop filtered
+    MRR is 0.358, but zero-shot two-hop composition "stays at chance across all cleanup temperatures". The hop-1
+    intermediate is recovered (MRR 0.896), yet the second hop fails: "a capacity and interference effect present
+    already at a single hop", "not the bind-unbind algebra or the cleanup".
+    Tag: SUPPORTS (per-memory crosstalk is the binding constraint for multi-hop HRR retrieval).
+
+20. Liu, Y., Chung, W. Y., Chen, H., Yeung, C., Imani, M. (2025; v2 Feb 2026). Encoder-Free Knowledge-Graph
+    Reasoning with LLMs via Hyperdimensional Path Retrieval (PathHD). arXiv:2512.09369.
+    URL: https://arxiv.org/abs/2512.09369
+    Relation paths are encoded as block-diagonal GHRR hypervectors (non-commutative binding), retrieved by blockwise
+    cosine plus Top-K pruning, then answered with one LLM call. Reports 40-60% lower latency and 3-5x less GPU memory
+    than neural-encoder / multi-call LLM pipelines, with Hits@1 matching or better on WebQSP, CWQ, GrailQA.
+    Tag: GAP. Baselines are neural encoders, not sparse/symbolic traversal, and the method itself relies on a Top-K
+    (table-like) prune.
+
+21. Zhu, H., Hao, S., Hu, Z., Jiao, J., Russell, S., Tian, Y. (2025). Reasoning by Superposition: A Theoretical
+    Perspective on Chain of Continuous Thought. NeurIPS 2025. arXiv:2505.12514.
+    URL: https://arxiv.org/abs/2505.12514
+    With companion: Hao, S., Sukhbaatar, S., Su, D., Li, X., Hu, Z., Weston, J., Tian, Y. (2024). Training Large
+    Language Models to Reason in a Continuous Latent Space (Coconut). COLM 2025. arXiv:2412.06769.
+    URL: https://arxiv.org/abs/2412.06769
+    "Each continuous thought vector is a superposition state that encodes multiple search frontiers simultaneously."
+    Graph reachability takes D steps (D = diameter) vs O(n^2) decoding steps for the best known constant-depth
+    discrete CoT. Coconut's continuous thoughts "encode multiple alternative next steps", which amounts to BFS.
+    Tag: CONFLICTS with the argmax-per-hop baseline only: carrying a superposed frontier beats committing to one
+    path. The comparator is discrete CoT, not an explicit sparse frontier vector, and width/capacity limits are not
+    the subject.
+
+22. Zhang, Z., He, X., Yan, W., Shen, A., Zhao, C., Wang, S., Shen, Y., Wang, X. E. (2025). Soft Thinking:
+    Unlocking the Reasoning Potential of LLMs in Continuous Concept Space. arXiv:2505.15778.
+    URL: https://arxiv.org/abs/2505.15778
+    Training-free "concept tokens" = "probability-weighted mixture of token embeddings", i.e. the LLM's softmax is
+    carried forward as a superposition. Up to +2.48 pass@1 and -22.4% tokens vs CoT on math/code.
+    Tag: GAP. This is the closest LLM-side analogue of our uncertain-reading superposition, but there is no binding,
+    no external multi-hop memory, and no table baseline.
+
+
+GROUP 5. CLASSICAL / TABLE BASELINES AND COST COMPARISONS
+
+23. Cohen, W. W. (2016). TensorLog: A Differentiable Deductive Database. arXiv:1605.06523; and Cohen, W. W.,
+    Yang, F., Mazaitis, K. R. (2020). TensorLog: A Probabilistic Database Implemented Using Deep-Learning
+    Infrastructure. JAIR 67:285-325. doi:10.1613/jair.1.11944.
+    URLs: https://arxiv.org/abs/1605.06523 ; https://jair.org/index.php/jair/article/view/11944
+    Exact probabilistic deduction by unrolled belief propagation (as matrix ops). "Inference is linear in database
+    size and the number of message-passing steps." It runs on GPU at hundreds of thousands of triples.
+    Tag: SUPPORTS. Exact propagation is linear in hops, with no k^h, and differentiable too, so differentiability is
+    not unique to VSAs.
+
+24. Cohen, W. W., Sun, H., Hofer, R. A., Siegler, M. (2020). Scalable Neural Methods for Reasoning with a Symbolic
+    Knowledge Base. ICLR 2020. arXiv:2002.06115.
+    URL: https://arxiv.org/abs/2002.06115
+    Weighted entity sets are k-hot vectors, and follow(x, r) = x M_R is a sparse matvec whose support is exactly the
+    R-neighbours. In the 2-hop benchmark, a key-value memory network (dense embedding memory, one slot per triple,
+    dim 64) is about 7x slower at 50 relations / 10k entities and runs out of memory beyond 200k entities or 100
+    relations. The reified KB handles 10x the entities and 20x the relations; it scales to tens of millions of facts.
+    Tag: SUPPORTS (direct cost evidence: sparse exact propagation beats a distributed embedding memory).
+
+25. Sun, H., Arnold, A. O., Bedrax-Weiss, T., Pereira, F., Cohen, W. W. (2020). Faithful Embeddings for Knowledge
+    Base Queries (EmQL). NeurIPS 2020. arXiv:2004.03658.
+    URL: https://arxiv.org/abs/2004.03658
+    Query-embedding systems (Query2Box) are not logically faithful: models "do not have the capacity to model all the
+    information in a large KB accurately, unless embeddings are impractically large." EmQL's fix is to represent
+    sets as a centroid plus a count-min sketch, decoded via Top-k MIPS and then the sketch, which is a sparse /
+    sketch table.
+    Tag: SUPPORTS.
+
+26. Rabiner, L. R. (1989). A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition.
+    Proceedings of the IEEE 77(2):257-286. doi:10.1109/5.18626.
+    URL: https://doi.org/10.1109/5.18626  (full text checked)
+    Direct enumeration of state sequences costs on the order of 2T*N^T; the forward procedure costs N^2*T (N=5, T=100:
+    about 3000 vs about 10^72 operations). Exact per-step marginalization removes the k^h blow-up entirely.
+    Tag: SUPPORTS. The right exact baseline is per-hop marginalization (forward / sparse matvec), not enumeration.
+    Most published VSA cost wins (items 14, 15, 18) are measured against enumeration.
+
+27. Zhang, J., Zhang, X., Yu, J., Tang, J., Tang, J., Li, C., Chen, H. (2022). Subgraph Retrieval Enhanced Model for
+    Multi-hop Knowledge Base Question Answering. ACL 2022. doi:10.18653/v1/2022.acl-long.396. arXiv:2202.13296.
+    URL: https://arxiv.org/abs/2202.13296
+    "Since the top-1 relevant path cannot be guaranteed to be right, we perform a top-K beam search at each time."
+    The top-K trees are then unioned and identical entities merged.
+    Tag: SUPPORTS (argmax-per-hop is fragile; top-k beam with merging is the standard table remedy).
+
+28. Chen, H., Ni, Y., Zakeri, A., Zou, Z., Yun, S., Wen, F., Khaleghi, B., Srinivasa, N., Latapie, H., Imani, M.
+    (2024). HDReason: Algorithm-Hardware Codesign for Hyperdimensional Knowledge Graph Reasoning. arXiv:2403.05763.
+    URL: https://arxiv.org/abs/2403.05763
+    HDC knowledge-graph completion on FPGA: 10.6x speedup and 65x energy efficiency vs RTX 4090; 4.2x / 3.4x vs an
+    FPGA GCN. It does not do multi-hop and makes no comparison with sparse or symbolic traversal.
+    Tag: GAP (an HDC cost win, but against GNNs, not tables).
+
+
+SYNTHESIS
+- Capacity theory agrees across Plate 1995, Frady 2018, Thomas 2021, Clarkson 2023, and Steinberg & Sompolinsky
+  2022: required D grows linearly with the number of superposed items and only logarithmically with codebook size.
+  Composition is worse. Hadamard/HRR binding holds only O(sqrt d) edges for 2-hop composition (Qiu), and nested
+  bundling decays exponentially with depth (Clarkson Lemma 17). Multi-step superposed computation without clean-up
+  needs D that "grows extremely fast" with steps, while per-step clean-up costs codebook x D (Kleyko et al., Proc
+  IEEE). This matches our prior.
+- Every published case where superposition wins on cost (NVSA 244x vs PrAE, resonators vs a 125 GB brute-force
+  table, the 7-vs-29-op cross product, continuous vs discrete CoT) compares against enumeration of a product space or
+  against single-path commitment. None compares against factorized exact propagation (forward algorithm, sparse
+  matvec, TensorLog), which already avoids k^h (Rabiner: N^2 T vs 2T N^T).
+- The two direct comparisons with sparse structures go against VSA. Qiu shows at best parity with DoK/COO/CSR in
+  memory and multiply cost for tensor binding, and a loss for HRR-family binding. Cohen et al. 2020 and EmQL find
+  sparse/sketch methods faster and more faithful than dense embedding memories. HRR 2-hop composition on FB15k-237
+  is at chance (Kumar 2026).
+- The documented advantages are the ones we listed: fixed width, bilinearity (all pairs in one bind), end-to-end
+  differentiability (NVSA), and parallel or in-memory clean-up that makes the E*D step O(1) in time on suitable
+  hardware (Proc IEEE). Differentiability is not unique, since TensorLog and the reified KB are differentiable too,
+  and HRR needs a projection step to train stably (Ganesan).
+- Open gap: we found no paper that, on the same multi-hop task with uncertain (softmax) symbol readings, measures
+  accuracy together with ops, memory traffic, and state size for weighted-superposition VSA vs argmax per hop vs
+  top-k beam with merging vs exact sparse forward propagation. Also missing: how peaked vs flat reading
+  distributions change effective crosstalk, and in which regime (dense frontiers, small per-relation memories, or
+  in-memory hardware) VSA could break even. B41 would fill this gap.
+
+Spot-check after the test (main agent, 2026-11-19, arXiv abstract pages): item 1 (arXiv 2609.32320) confirmed as
+described (title, authors, 26 Sep 2026, SupHDC: multiple classification queries superposed before a shared encoding;
+1.39x / 2.08x speed-ups, 2.01x on a Raspberry Pi 5). Item 13 (Qiu, arXiv 2208.10917): the abstract confirms title,
+author and a memory-vs-size capacity analysis, but does NOT itself state the 2-hop O(sqrt(d)) bound or the DoK/COO/CSR
+comparison; those two claims rest on the literature agent's full-text reading and should be re-checked in the PDF
+before the paper cites them.

@@ -1,0 +1,183 @@
+Task: implement the following specification as one standalone Python script.
+
+## PART B. Equal-cell device simulation: cells per stored pair for exact recall
+
+### B.1 Paper text (Methods, "Equal-cell device simulation"; trimmed; numbers of results redacted)
+
+We rebuilt 50 RULER stores (4,776 probed keys) and placed every stored bit of every memory, a table's directory and
+parity included, in a cell of the statistical phase-change device model of Joshi et al. (Nat. Commun. 11, 2473, 2020),
+a differential pair of devices read as a sign, 30 days after writing, with every noise source multiplied by k. Tables
+found their rows through a stored minimal perfect hash, built with every key known, or (B63) a cuckoo table of 12- to
+18-bit key fingerprints filled one pair at a time (four slots per bucket, load at most 0.95, every slot on the cells),
+and were protected by repetition, shortened BCH codes (lengths 63 to 1,023, any strength) or LDPC codes (rates 1/4 to
+9/10, decoded by belief propagation); the store was read by rules among them one that marks each key's last value. For
+each memory we found, on synthetic development stores and then once on the test stores, the smallest number of cells
+per stored key-value pair at which it read at least 99.5% of the probed keys exactly, under independent cell errors.
+B61 replaced the dense bipolar store by a store of sparse block codes (one active position per block, binding by
+block-wise index addition, superposition by OR, read by overlap). The store's codebook and the tables' index map come
+from the same vocabulary and are free to both.
+
+### B.2 Box 1 (rows that Part B needs)
+
+- Algebra: bipolar codes on the devices; sparse block codes in the sparse-block store, whose pairs are superposed by OR
+  and read by overlap.
+- Stores: the device store (dense bipolar codes on simulated devices) and the sparse-block store (one active position
+  per block).
+- Error-corrected table: a table whose entries are protected by an error-correcting code (BCH or LDPC).
+- Clean-up, codebook: replacing a noisy read by the nearest code in the codebook, the table of known codes.
+
+### B.3 Supplementary Table "Implementation details" (rows that Part B needs, verbatim)
+
+- Device model: Joshi et al., Supplementary Note 2, Eqs. 8-17, as implemented: target 25 uS (SET) or 0 (RESET);
+  programming noise of standard deviation 1.2 uS (SET) or 0.2 uS (RESET) at two events, 27.36 and 55.39 s after
+  targets defined at 20 s; a per-device drift exponent, Gaussian with the measured mean and spread and truncated at
+  zero; 1/f read noise with Q_s = min(0.0388 G^-0.5729, 0.2) (t/T_Q)^(-nu_Q(G)), T_Q = 1.089e5 s, integrated from
+  1/(t + T_read) to 1/(2 T_read) with T_read = 250 ns; conductances clipped at zero; an 8-bit converter and global drift
+  compensation. "Times k" multiplies the drift-exponent spread and the programming-noise and read-noise standard
+  deviations by k.
+- Probed keys: Up to 150 keys per store, every floor(n/150)-th key in store order.
+- Store layout and load: S = ceil(B n / 8,192) vectors of d = floor(B n / S) cells; the load follows from the budget,
+  with no load search.
+- Last-value marker: The key's last value is bound with a LAST code; clean-up runs over each value and value x LAST,
+  and a read stops when a LAST variant wins. Tables store a last-value flag per row.
+- Tables: Minimal perfect hash by displacement, with rows of (last flag, value index). BCH: the logical bits in
+  shortened binary codewords (n = 63 to 1,023, any t), each coded bit repeated rho >= 1 times, a majority per bit with
+  ties as erasures, errors-and-erasures bounded-distance decoding, (n, t) chosen per store by closed form at the
+  condition's error rate. LDPC: IRA codewords of at most 1,024 information bits, rate chosen on development stores,
+  soft combining of copies, sum-product decoding for 60 iterations.
+- Budget: Every store must fit the budget in cells per pair; the 99.5% share of exact reads is pooled over the 4,776
+  probed keys; the requirement is the smallest grid budget at which the share holds there and at every larger budget
+  evaluated.
+- Device design choice: Per memory, noise level and budget, the design with the highest development accuracy; exact
+  ties go to the higher development accuracy at the next harder noise level at the same budget, then to the first in
+  the memory's design list. BCH's information bits are the true dimension of the narrow-sense code (from its
+  cyclotomic cosets), not n - mt.
+- Stores of sparse block codes (B61): Blocks with one active position each, binding by adding the active indices of
+  the key, the value's slot and the value block by block (modulo the block length), superposition of a shard's pairs by
+  OR on binary cells, the block load chosen on development stores; a query scores every value of the vocabulary by its
+  overlap with the cells and stops on the last-value code.
+- Insertable directory (B63): Bucketized cuckoo table: four slots per bucket, two candidate buckets, partial-key cuckoo
+  hashing, load at most 0.95, 500 moves per insertion; each slot holds an f-bit key fingerprint (f in {12, 14, 16, 18}),
+  the last flag and the value index; every slot on the cells, coded by the BCH or LDPC codes above; two or more
+  fingerprint matches fail the key.
+
+### B.4 Supplementary text (redacted)
+
+Every bit on the devices: every stored bit of every memory, including a table's directory, is a differential pair of
+cells on the device model. A key is read exactly when all its values come back, in order, with nothing extra. The
+tables were searched over code lengths, rates and repetition, the store over its load where it has one. The value
+vocabulary (index -> value string) is a shared output dictionary, free to every memory; every memory returns
+vocabulary indices. The dense store's codes are regenerated digitally from the strings (seeded hashes; no cells).
+
+The sparse store (H-SBC): every key and value code has one active position in each of its blocks; binding adds the
+codes' active positions block by block, and the pairs of a shard are superposed by OR onto binary cells; a query
+scores every value by the overlap of its bound code with the cells and stops on the code that marks each key's last
+value. The block load was chosen on the 12 synthetic development stores, and the test ran once.
+
+Tables with an insertable directory (B63): a bucketized cuckoo table with four slots per bucket, two candidate buckets,
+partial-key cuckoo hashing, load at most 0.95 and 500 moves per insertion, filled one pair at a time. Each slot holds an
+f-bit fingerprint of the key, the last-value flag and the value index; every slot, empty or not, and every fingerprint
+bit is on the cells and protected by the BCH or LDPC codes unchanged; a lookup with two or more fingerprint matches
+fails the key; f in {12, 14, 16, 18} and the code were chosen on the development stores.
+
+### B.5 Values the text leaves unstated [filled from prereg]
+
+1. Cells and errors. One cell = one stored bit (a differential pair: +1 -> (25 uS, RESET), -1 -> (RESET, 25 uS); read
+   as the sign of the converter's output for G+ - G-; an 8-bit symmetric mid-tread converter over [-25, +25] uS, 255
+   levels; an output of exactly zero is a random sign). The conditions of Part B are independent cell (sign) errors at
+   the device model's 30-day cell-error rate p(k): estimate p(k) yourself from the device model on at least 10^7 random
+   cells per k, then flip each memory's cells independently at that rate. Binary 0/1 cells (the sparse store) are the
+   same sign cells (0 -> -1).
+2. Device-model equations (Joshi et al. SI; conductance in uS, time in s; G_T the target): drift-exponent mean
+   mu_nu(G_T) = max(-0.0045 G_T + 0.08, min(0.06, max(-0.00169 G_T + 0.0825, 0.055))); spread
+   sd_nu(G_T) = 1 / (8 G_T + 30.032); nu_Q(G_T) = min(0.081, 0.04 G_T + 0.02) - [G_T > 13.21] min(0.035,
+   -0.2048 + 0.0155 G_T); read-noise exponent of the 1/f spectrum gamma = 1.21, so the integral term is
+   sqrt((f_max^(1-gamma) - f_min^(1-gamma)) / (1 - gamma)), f_max = 1/(2 T_read), f_min = 1/(t + T_read). Programming:
+   nu ~ max(mu_nu + k sd_nu N(0,1), 0) per device; G(T0) = max(G_T (T0/T_ref)^(-nu) + k sigma_prog N, 0);
+   G(T1) = max(G(T0) (T1/T0)^(-nu) + k sigma_prog N, 0); drift to t: G_d(t) = G(T1) (t/T1)^(-nu); read:
+   G(t) = max(G_d(t) + k Q_s(G_T, t) * integral * G_d(t) * N, 0). t = 30 days.
+3. RULER stores' content (files below): a store is a list of (key string, value string, j), j = the value's position
+   within its key (0, 1, ...); a key's values are its pairs in increasing j. n = the number of pairs. N = the number of
+   distinct value strings in the store (the vocabulary). Probed keys: the distinct keys in order of first appearance,
+   every max(1, floor(K/150))-th, at most 150 (K distinct keys); a probed key is exact iff the memory returns exactly its
+   list of values in order. Test: 50 stores, 4,776 probed keys in all (check your count).
+4. Budget grid: B = 2^(i/4) cells per pair, i = 12 .. 48 (8 to 4,096; one step = 19%). On a store with n pairs a memory
+   may use at most floor(B n) cells; every bit it keeps between write and read is on them.
+5. Dense bipolar store (the store with the last-value marker; no threshold). Random +-1 codes of length 8,192 for each
+   key string, each position j, each value string, and one LAST code, from seeded hashes of the strings, truncated to
+   the first d components. Pair code = key * pos_j * value (elementwise), times LAST if j is the key's last position.
+   Key -> shard by a seeded hash of the key string mod S. A shard's cells = the sign of the integer sum of its pairs'
+   codes (ties to +-1 at random). Read of a probed key: for j = 0, 1, ..., maxj (maxj = the store's largest j): unbind
+   the key's shard with key * pos_j, score each of the 2N candidates (each value code; each value code * LAST) by
+   inner product, take the best (first maximum; the LAST variant only if strictly higher than every plain one), append
+   its value, and stop if the LAST variant won.
+6. Sparse-block store (H-SBC). Geometry as the dense store (S, d, key -> shard). Block length
+   Lb = max(2, round((n/S) / lam)), nb = floor(d / Lb) blocks (the last d - nb Lb cells of a shard are unused and
+   counted). Each key, position j, value and LAST has one active index in each block (in 0 .. Lb-1), from seeded hashes.
+   A pair's code: per block, (key + pos_j + value [+ LAST on the key's last value]) mod Lb; a shard's cells are the OR
+   of its pairs' one-hot blocks. Read: for j = 0, 1, ...: for each of the 2N candidates (value; value + LAST), the
+   overlap = the number of blocks whose candidate position reads 1; argmax (first index; LAST only if strictly
+   higher); the dense store's stop rule. Block load lam in {0.35, 0.5, 0.7, 1.0}, chosen on the dev stores per
+   (noise level, budget).
+7. BCH static table (E-BCH). A minimal perfect hash over the n (key, j) pairs by hash-and-displace (on average 5 pairs
+   per bucket), its displacement array on the cells; one row per pair: the last flag (only if some key has more than
+   one value) and the value index in ceil(log2 N) bits. Read of a probed key: for j = 0, 1, ...: locate the row of
+   (key, j) through the decoded displacements, append its value index, stop when its last flag is set (or after
+   maxj + 1 rows). All logical bits (displacements, then rows) are cut into shortened binary narrow-sense BCH codewords
+   (n in {63, 127, 255, 511, 1023}; any t with information length k >= 2, k the true dimension); each coded bit is
+   repeated rho >= 1 times (rho or rho + 1 copies, spread so that the whole budget is used); majority per coded bit, a
+   tie is an erasure; errors-and-erasures bounded-distance decoding (a word with 2e + s <= 2t is corrected; an
+   undecodable word returns its received information bits). (n, t) per store, budget and noise level by closed form:
+   the design that minimizes the expected number of failed probed keys at the condition's cell-error rate (ties: the
+   expectation at the next harder noise level; then the shorter code). Write your own BCH encoder and decoder.
+8. Cuckoo insertable table (O-BCH and O-LDPC; report each and the better of the two). Bucketized cuckoo table over the n
+   (key, j) pairs filled one pair at a time: two candidate buckets per (key, j) (partial-key cuckoo hashing: the second
+   bucket is the first XOR a hash of the fingerprint), four slots per bucket, number of buckets the smallest with
+   n <= 0.95 x 4 x buckets, at most 500 moves per insertion (a failed insertion: report it). A slot holds the f-bit
+   fingerprint of (key, j) (reserve one fingerprint value for "empty"), the last flag and the value index; all slots,
+   empty or not, are on the cells, coded by the BCH scheme of item 7 (O-BCH) or the LDPC scheme of item 9 (O-LDPC).
+   Lookup of (key, j): the 8 slots of its two buckets; exactly one fingerprint match -> its value and last flag; zero
+   or two or more matches -> the key fails. Design: f in {12, 14, 16, 18} and (for O-LDPC) the rate, chosen on dev;
+   (n, t) for O-BCH by the closed form of item 7.
+9. LDPC (O-LDPC). Systematic irregular repeat-accumulate (IRA) codes, H = [H1 | dual-diagonal], at most 1,024
+   information bits per codeword, rate R in {1/4, 1/3, 1/2, 2/3, 3/4, 5/6, 9/10} with information-column weight
+   dv = 6, 6, 5, 6, 5, 4, 5 respectively; each coded bit repeated rho >= 1 times; the copies' votes combined into a
+   channel log-likelihood ratio at the condition's cell-error rate; sum-product belief propagation, flooding schedule,
+   60 iterations. Write your own encoder and decoder (numpy / numba).
+10. Development and test procedure. Dev: the 12 synthetic development stores (file below). For each memory, noise level
+   and grid budget, evaluate every design, keep the design with the highest pooled dev share of exact probed keys (a
+   design counts at a budget only if it fits on all 12 dev stores); dev requirement = the smallest grid budget at which
+   the dev share is >= 99.5% there and at every larger dev budget evaluated. Test: every grid budget within 4 grid
+   steps of the dev requirement, each with that budget's dev design; while the test requirement is not bracketed (a
+   passing budget whose every larger evaluated budget also passes, with the budget one step below it evaluated and
+   failing, or the grid's lower end), extend by 4 more steps in the needed direction, up to 4,096. A memory that never
+   reaches 99.5% by 4,096 is reported as "> 4096". Channel draws: one uniform per cell per (store, memory, budget,
+   design), shared across noise levels.
+
+### B.6 Data
+
+- Test stores: /path/to/vsassm/b34_out/test_stores.json.gz (gzip JSON): a list of 50 entries [store_id, pairs],
+  pairs = [[key, value, j], ...]; store ids like "131072/niah_multikey_2/259411" (five task types: multi-key needles
+  with 2 and 3 keys, multi-value needles, variable tracking; up to about 6,000 pairs per store, a few with as few as
+  9 pairs).
+- Dev stores (synthetic, no test data): /path/to/vsassm/b34_out/dev_stores.json.gz, the same format, 12 entries.
+- Noise levels in scope: k = 1, 8 and 16 at 30 days. Vocabulary uncharged (free).
+
+### B.7 Deliverable for Part B
+
+One standalone Python 3.10 script (numpy 2.2, scipy 1.15, numba 0.68, joblib, the standard library; CPU only; your own
+BCH and LDPC codecs, no coding-theory package). It must:
+- take --memory {dense, sbc, bch, cuckoo, all}, --k (comma list, default 1,8,16), --out DIR, --workers N (default 14),
+  and --smoke (two small dev stores, two budgets, k = 8 only, to finish in under 3 minutes);
+- estimate and write p(k) (30 days) from the device model;
+- for each memory and k: the dev table (design and pooled share per budget), the dev requirement, the test budgets
+  evaluated with their designs and pooled test shares (exact keys / 4,776), and the test requirement in cells per pair;
+  for the cuckoo table also O-BCH and O-LDPC separately and the number of failed insertions;
+- write DIR/b_result.json, print progress, and finish within about 90 minutes on 14 cores with at most 12 GB of RAM.
+
+
+The reply size per message is limited, so write the script in THREE consecutive pieces that I will concatenate verbatim into one file. Plan the whole script first so that the pieces fit together (consistent names; all imports in piece 1; piece 3 ends with the main entry point).
+
+Now write PIECE 1 of 3: the header comment listing your choices where the specification is open, imports, command-line interface, data loading, the probe rule, the budget grid and geometry, the device-model estimate of p(k), the independent-flip channel, and the dense store and the sparse-block store (build and read). Reply with exactly one fenced ```python block containing piece 1 only, ending at a top-level boundary. Keep it under about 350 lines.
+
+General requirements for the script: it will be run unchanged on a Linux machine with 16 CPU cores; the data paths in the specification are valid there. You will not see the results; if the script fails, you will be sent the traceback only. Make it robust: validate shapes, keep memory within the stated limit (stream or chunk large matrix products; use float32 where safe), parallelise over stores with joblib or multiprocessing, and write the output JSON at the end (and partial progress files as you go). Note about this machine: setting OPENBLAS_NUM_THREADS / OMP_NUM_THREADS to 1 before importing numpy and then raising the limit with threadpoolctl.threadpool_limits segfaults here; do not raise thread limits after setting them.

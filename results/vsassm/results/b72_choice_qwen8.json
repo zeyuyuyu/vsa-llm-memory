@@ -1,0 +1,3137 @@
+{
+ "choice": {
+  "1024|16|16|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.3695296164814688,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "1024|16|16|LAMC|K1e4": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.37178054221959767,
+   "n_feasible": 288,
+   "n_tied": 1
+  },
+  "1024|16|16|LAMC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.4070334122479955,
+   "n_feasible": 288,
+   "n_tied": 1
+  },
+  "1024|16|16|LAMP": {
+   "cfg4": [
+    "flat",
+    "V",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.2872363978088576,
+   "feat": [
+    "whiten",
+    "sgn"
+   ],
+   "lamc_dev": 0.4180173414152943,
+   "n_tied": 1,
+   "src": "LAMC"
+  },
+  "1024|16|16|NLMSC|K1e3": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    0.5,
+    "avg",
+    1
+   ],
+   "dev_acc": 0.3199363707844373,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "1024|16|16|NLMSC|K1e4": {
+   "cfg": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "dev_acc": 0.32834725911787843,
+   "n_feasible": 480,
+   "n_tied": 1
+  },
+  "1024|16|16|NLMSC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "dev_acc": 0.42063341126297904,
+   "n_feasible": 480,
+   "n_tied": 1
+  },
+  "1024|16|16|OPTP": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.24127002947603346,
+   "dev_acc_float": 0.2421979021878576,
+   "fmt": [
+    "whiten",
+    "plin",
+    4
+   ],
+   "n_tied": 1
+  },
+  "1024|16|16|OPTQ": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.38919709055503765,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|16|OPTR": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.38919709055503765,
+   "dev_acc_float": 0.46697202270769894,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|16|OPTS": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.38919709055503765,
+   "dev_acc_float": 0.46697202270769894,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|16|OPTX": {
+   "src": "OPTS",
+   "vsapcx_src": "VSAS"
+  },
+  "1024|16|16|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "LA",
+    32,
+    "onehot",
+    "clip3",
+    0.5
+   ],
+   "dev_acc": 0.15542912318165608,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "1024|16|16|SDMT|K1e4": {
+   "cfg": [
+    "whiten",
+    "LA",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.25139499932094084,
+   "n_feasible": 504,
+   "n_tied": 2
+  },
+  "1024|16|16|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.3595521567013402,
+   "n_feasible": 504,
+   "n_tied": 3
+  },
+  "1024|16|16|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.227782145677372,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|16|16|STORE|K1e4": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.2958031480591602,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|16|STORE|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.36223579501765596,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|16|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.21178738111400253,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|16|16|VSAR|K1e4": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.29140873020166363,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|16|VSAR|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.36412796173820833,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|4|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.21284380192792554,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "1024|16|4|LAMC|K1e4": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.21615154769433506,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "1024|16|4|LAMC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.21615154769433506,
+   "n_feasible": 288,
+   "n_tied": 1
+  },
+  "1024|16|4|LAMP": {
+   "cfg4": [
+    "flat",
+    "V",
+    0.1,
+    2
+   ],
+   "dev_acc": 0.1511591476324691,
+   "feat": [
+    "whiten",
+    "sgn"
+   ],
+   "lamc_dev": 0.24165731074102248,
+   "n_tied": 2,
+   "src": "LAMC"
+  },
+  "1024|16|4|NLMSC|K1e3": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.25,
+    "last",
+    1
+   ],
+   "dev_acc": 0.21337519921634884,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "1024|16|4|NLMSC|K1e4": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.25,
+    "last",
+    1
+   ],
+   "dev_acc": 0.21399015099085614,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "1024|16|4|NLMSC|K1e5": {
+   "cfg": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "avg",
+    1
+   ],
+   "dev_acc": 0.2264659305456381,
+   "n_feasible": 480,
+   "n_tied": 1
+  },
+  "1024|16|4|OPTP": {
+   "cfg": [
+    0.5,
+    1.0
+   ],
+   "dev_acc": 0.1827368695263869,
+   "dev_acc_float": 0.2254624522091029,
+   "fmt": [
+    "whiten",
+    "plin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|4|OPTQ": {
+   "cfg": [
+    1.0,
+    10000.0
+   ],
+   "dev_acc": 0.21199317719429336,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|4|OPTR": {
+   "cfg": [
+    1.0,
+    10000.0
+   ],
+   "dev_acc": 0.21199317719429336,
+   "dev_acc_float": 0.2335234496583208,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|4|OPTS": {
+   "cfg": [
+    1.0,
+    10000.0
+   ],
+   "dev_acc": 0.21199317719429336,
+   "dev_acc_float": 0.2335234496583208,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|4|OPTX": {
+   "src": "OPTS",
+   "vsapcx_src": "VSAS"
+  },
+  "1024|16|4|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "LA",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.12505230263297976,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "1024|16|4|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "A",
+    1,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "dev_acc": 0.1375857100390626,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "1024|16|4|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "dev_acc": 0.20042938989191306,
+   "n_feasible": 504,
+   "n_tied": 2
+  },
+  "1024|16|4|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.1932410721511472,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|16|4|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.19175484151496516,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|16|4|STORE|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.19094903974220126,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|4|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.16067296273492346,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|16|4|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.1577749500849386,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|16|4|VSAR|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.19976645506919255,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|8|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.2778756875266295,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "1024|16|8|LAMC|K1e4": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.28176486275021806,
+   "n_feasible": 288,
+   "n_tied": 1
+  },
+  "1024|16|8|LAMC|K1e5": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.28176486275021806,
+   "n_feasible": 288,
+   "n_tied": 1
+  },
+  "1024|16|8|LAMP": {
+   "cfg4": [
+    "flat",
+    "V",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.2310375377176579,
+   "feat": [
+    "whiten",
+    "sgn"
+   ],
+   "lamc_dev": 0.28697811367220666,
+   "n_tied": 2,
+   "src": "LAMC"
+  },
+  "1024|16|8|NLMSC|K1e3": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    0.1,
+    "last",
+    1
+   ],
+   "dev_acc": 0.25098545412298634,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "1024|16|8|NLMSC|K1e4": {
+   "cfg": [
+    "col",
+    "V",
+    "center",
+    "pca",
+    0.25,
+    "avg",
+    1
+   ],
+   "dev_acc": 0.24988341785374732,
+   "n_feasible": 480,
+   "n_tied": 1
+  },
+  "1024|16|8|NLMSC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "dev_acc": 0.2943667767786721,
+   "n_feasible": 480,
+   "n_tied": 1
+  },
+  "1024|16|8|OPTP": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.22777112879971306,
+   "dev_acc_float": 0.2421979021878576,
+   "fmt": [
+    "whiten",
+    "plin",
+    2
+   ],
+   "n_tied": 1
+  },
+  "1024|16|8|OPTQ": {
+   "cfg": [
+    1.0,
+    10.0
+   ],
+   "dev_acc": 0.28082466672275846,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|8|OPTR": {
+   "cfg": [
+    1.0,
+    10.0
+   ],
+   "dev_acc": 0.28082466672275846,
+   "dev_acc_float": 0.34729940076498905,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|8|OPTS": {
+   "cfg": [
+    1.0,
+    10.0
+   ],
+   "dev_acc": 0.28082466672275846,
+   "dev_acc_float": 0.34729940076498905,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|16|8|OPTX": {
+   "src": "OPTS",
+   "vsapcx_src": "VSAS"
+  },
+  "1024|16|8|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "LA",
+    16,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "dev_acc": 0.1342963103302994,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "1024|16|8|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "LA",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.16573723189379874,
+   "n_feasible": 504,
+   "n_tied": 2
+  },
+  "1024|16|8|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "dev_acc": 0.2973516458850265,
+   "n_feasible": 504,
+   "n_tied": 1
+  },
+  "1024|16|8|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.21109645543054809,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|16|8|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.20951149782495224,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|8|STORE|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.25621418844795535,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|8|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.18143733705914267,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|16|8|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "dev_acc": 0.18111209658254238,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|16|8|VSAR|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.25656567187377793,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|16|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.1,
+    1
+   ],
+   "dev_acc": 0.7293114475174228,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "1024|2|16|LAMC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    2
+   ],
+   "dev_acc": 0.767334358731846,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "1024|2|16|LAMC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    4
+   ],
+   "dev_acc": 0.7762015428500201,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "1024|2|16|LAMP": {
+   "cfg4": [
+    "col",
+    "V-1",
+    0.1,
+    1
+   ],
+   "dev_acc": 0.7202495722954207,
+   "feat": [
+    "whiten",
+    "sgn"
+   ],
+   "lamc_dev": 0.7762015428500201,
+   "n_tied": 2,
+   "src": "LAMC"
+  },
+  "1024|2|16|NLMSC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.6644661308395062,
+   "n_feasible": 240,
+   "n_tied": 4
+  },
+  "1024|2|16|NLMSC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    2
+   ],
+   "dev_acc": 0.763962915962067,
+   "n_feasible": 480,
+   "n_tied": 2
+  },
+  "1024|2|16|NLMSC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    2
+   ],
+   "dev_acc": 0.763962915962067,
+   "n_feasible": 480,
+   "n_tied": 6
+  },
+  "1024|2|16|OPTP": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7762015428500201,
+   "dev_acc_float": 0.7732970966513096,
+   "fmt": [
+    "whiten",
+    "plin",
+    4
+   ],
+   "n_tied": 1
+  },
+  "1024|2|16|OPTQ": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.760094783789934,
+   "fmt": [
+    "whiten",
+    "lin",
+    2
+   ],
+   "n_tied": 1
+  },
+  "1024|2|16|OPTR": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7522469077409903,
+   "dev_acc_float": 0.7581908254436316,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|16|OPTS": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7522469077409903,
+   "dev_acc_float": 0.7581908254436316,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|16|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "1024|2|16|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "LA",
+    16,
+    "bits",
+    "clip3",
+    1.0
+   ],
+   "dev_acc": 0.5760107122220184,
+   "n_feasible": 252,
+   "n_tied": 2
+  },
+  "1024|2|16|SDMT|K1e4": {
+   "cfg": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "dev_acc": 0.6483071931327293,
+   "n_feasible": 504,
+   "n_tied": 2
+  },
+  "1024|2|16|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "LA",
+    8,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.680609084375865,
+   "n_feasible": 504,
+   "n_tied": 2
+  },
+  "1024|2|16|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6182827983411531,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|2|16|STORE|K1e4": {
+   "cfg": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.7255663196901178,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|16|STORE|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7385565303839531,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|16|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6073296124648103,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|2|16|VSAR|K1e4": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6963614808807512,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|16|VSAR|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.718536233283587,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|4|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.1,
+    1
+   ],
+   "dev_acc": 0.6585005378095599,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "1024|2|4|LAMC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.01,
+    1
+   ],
+   "dev_acc": 0.6605496887046536,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "1024|2|4|LAMC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.7370139472610443,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "1024|2|4|LAMP": {
+   "cfg4": [
+    "col",
+    "V-1",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.6519224265396264,
+   "feat": [
+    "whiten",
+    "sgn"
+   ],
+   "lamc_dev": 0.7468308584757479,
+   "n_tied": 2,
+   "src": "LAMC"
+  },
+  "1024|2|4|NLMSC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.6361935381613372,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "1024|2|4|NLMSC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.6411280542311383,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "1024|2|4|NLMSC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.740551573453558,
+   "n_feasible": 480,
+   "n_tied": 2
+  },
+  "1024|2|4|OPTP": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7468308584757479,
+   "dev_acc_float": 0.7708632549004589,
+   "fmt": [
+    "whiten",
+    "plin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|4|OPTQ": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7115578793713624,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|4|OPTR": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7115578793713624,
+   "dev_acc_float": 0.7266627623434604,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|4|OPTS": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7115578793713624,
+   "dev_acc_float": 0.7266627623434604,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|4|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "1024|2|4|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "LA",
+    4,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.5520786312413413,
+   "n_feasible": 252,
+   "n_tied": 3
+  },
+  "1024|2|4|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "LA",
+    8,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.5837270641366507,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "1024|2|4|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.6510122899730699,
+   "n_feasible": 504,
+   "n_tied": 2
+  },
+  "1024|2|4|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5917094719430135,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|2|4|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5920371315498523,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|2|4|STORE|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6922864457388371,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|4|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5715352803365147,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|2|4|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5768337082112196,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|2|4|VSAR|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6614499749679387,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|8|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.01,
+    2
+   ],
+   "dev_acc": 0.7104512903919792,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "1024|2|8|LAMC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.01,
+    2
+   ],
+   "dev_acc": 0.7130555991580149,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "1024|2|8|LAMC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "dev_acc": 0.7696454850116087,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "1024|2|8|LAMP": {
+   "cfg4": [
+    "col",
+    "V-1",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.6906640654155668,
+   "feat": [
+    "whiten",
+    "sgn"
+   ],
+   "lamc_dev": 0.767334358731846,
+   "n_tied": 2,
+   "src": "LAMC"
+  },
+  "1024|2|8|NLMSC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.6489760073307312,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "1024|2|8|NLMSC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "rp",
+    0.25,
+    "last",
+    1
+   ],
+   "dev_acc": 0.6806142923113269,
+   "n_feasible": 480,
+   "n_tied": 2
+  },
+  "1024|2|8|NLMSC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    2
+   ],
+   "dev_acc": 0.7678636154048247,
+   "n_feasible": 480,
+   "n_tied": 2
+  },
+  "1024|2|8|OPTP": {
+   "cfg": [
+    1.0,
+    0.1
+   ],
+   "dev_acc": 0.767334358731846,
+   "dev_acc_float": 0.7652380549576651,
+   "fmt": [
+    "whiten",
+    "plin",
+    2
+   ],
+   "n_tied": 1
+  },
+  "1024|2|8|OPTQ": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7416415618573295,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|8|OPTR": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7416415618573295,
+   "dev_acc_float": 0.754608245095711,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|8|OPTS": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7416415618573295,
+   "dev_acc_float": 0.754608245095711,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "1024|2|8|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "1024|2|8|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "LA",
+    8,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "dev_acc": 0.5781366021216026,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "1024|2|8|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "L",
+    2,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.596447534011315,
+   "n_feasible": 504,
+   "n_tied": 4
+  },
+  "1024|2|8|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "L",
+    4,
+    "bits",
+    "clip3",
+    1.0
+   ],
+   "dev_acc": 0.660430609176916,
+   "n_feasible": 504,
+   "n_tied": 1
+  },
+  "1024|2|8|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6080959849645429,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|2|8|STORE|K1e4": {
+   "cfg": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6723942960479391,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|8|STORE|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7270670558375807,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|8|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.5934830071055183,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "1024|2|8|VSAR|K1e4": {
+   "cfg": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6486229384850574,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "1024|2|8|VSAR|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7017396289051683,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|16|16|LAMC|K1e3": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.4597093542700729,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "256|16|16|LAMC|K1e4": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.4610232066585429,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "256|16|16|LAMC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.4610232066585429,
+   "n_feasible": 288,
+   "n_tied": 1
+  },
+  "256|16|16|LAMP": {
+   "cfg4": [
+    "flat",
+    "V",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.27668164239237975,
+   "feat": [
+    "center",
+    "sgn"
+   ],
+   "lamc_dev": 0.5016990097403684,
+   "n_tied": 1,
+   "src": "LAMC"
+  },
+  "256|16|16|NLMSC|K1e3": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.25,
+    "last",
+    1
+   ],
+   "dev_acc": 0.4116874867737446,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "256|16|16|NLMSC|K1e4": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.25,
+    "last",
+    1
+   ],
+   "dev_acc": 0.41849938066385634,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "256|16|16|NLMSC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.25,
+    "last",
+    1
+   ],
+   "dev_acc": 0.41849938066385634,
+   "n_feasible": 480,
+   "n_tied": 1
+  },
+  "256|16|16|OPTP": {
+   "cfg": [
+    1.0,
+    100.0
+   ],
+   "dev_acc": 0.4025316687323897,
+   "dev_acc_float": 0.43820174420542307,
+   "fmt": [
+    "whiten",
+    "plin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|16|OPTQ": {
+   "cfg": [
+    1.0,
+    10000.0
+   ],
+   "dev_acc": 0.36510567780616704,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|16|OPTR": {
+   "cfg": [
+    1.0,
+    10000.0
+   ],
+   "dev_acc": 0.36510567780616704,
+   "dev_acc_float": 0.4283414859066679,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|16|OPTS": {
+   "cfg": [
+    1.0,
+    10000.0
+   ],
+   "dev_acc": 0.36510567780616704,
+   "dev_acc_float": 0.4283414859066679,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|16|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "256|16|16|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "L",
+    2,
+    "onehot",
+    "clip3",
+    1.0
+   ],
+   "dev_acc": 0.15666056882352122,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|16|16|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "LA",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.22339930765237662,
+   "n_feasible": 252,
+   "n_tied": 2
+  },
+  "256|16|16|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.32633938074344754,
+   "n_feasible": 504,
+   "n_tied": 3
+  },
+  "256|16|16|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.3197043452870289,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|16|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.32458208831586727,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|16|STORE|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.32399108467182947,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|16|16|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.3419181387961689,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|16|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.34283460845336466,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|16|VSAR|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.3406689078937048,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|16|4|LAMC|K1e3": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.2350057113209082,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "256|16|4|LAMC|K1e4": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    100.0,
+    1
+   ],
+   "dev_acc": 0.24423516276189083,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "256|16|4|LAMC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    100.0,
+    1
+   ],
+   "dev_acc": 0.24423516276189083,
+   "n_feasible": 216,
+   "n_tied": 1
+  },
+  "256|16|4|LAMP": {
+   "cfg4": [
+    "flat",
+    "V",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.1653426789359239,
+   "feat": [
+    "center",
+    "sgn"
+   ],
+   "lamc_dev": 0.2653884468925882,
+   "n_tied": 1,
+   "src": "LAMC"
+  },
+  "256|16|4|NLMSC|K1e3": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.03,
+    "last",
+    1
+   ],
+   "dev_acc": 0.23726656189783524,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "256|16|4|NLMSC|K1e4": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.03,
+    "last",
+    1
+   ],
+   "dev_acc": 0.24925225586881475,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "256|16|4|NLMSC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.03,
+    "last",
+    1
+   ],
+   "dev_acc": 0.24925225586881475,
+   "n_feasible": 360,
+   "n_tied": 1
+  },
+  "256|16|4|OPTP": {
+   "cfg": [
+    1.0,
+    100.0
+   ],
+   "dev_acc": 0.22056077657594406,
+   "dev_acc_float": 0.23113064602184044,
+   "fmt": [
+    "whiten",
+    "plin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|4|OPTQ": {
+   "cfg": [
+    1.0,
+    10.0
+   ],
+   "dev_acc": 0.1931171913458428,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|4|OPTR": {
+   "cfg": [
+    1.0,
+    10.0
+   ],
+   "dev_acc": 0.1931171913458428,
+   "dev_acc_float": 0.22599717856914472,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|4|OPTS": {
+   "cfg": [
+    1.0,
+    10.0
+   ],
+   "dev_acc": 0.1931171913458428,
+   "dev_acc_float": 0.22599717856914472,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|4|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "256|16|4|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "LA",
+    1,
+    "onehot",
+    "clip3",
+    1.0
+   ],
+   "dev_acc": 0.1244375974295507,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|16|4|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "L",
+    1,
+    "onehot",
+    "clip3",
+    1.0
+   ],
+   "dev_acc": 0.16976848597632774,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|16|4|SDMT|K1e5": {
+   "cfg": [
+    "center",
+    "LA",
+    1,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "dev_acc": 0.15593641618455337,
+   "n_feasible": 504,
+   "n_tied": 1
+  },
+  "256|16|4|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.1803534902093975,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|4|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.18885586962590317,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|4|STORE|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.1805752131903856,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|16|4|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.19004812614353273,
+   "n_feasible": 36,
+   "n_tied": 2
+  },
+  "256|16|4|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.19855308402715896,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|4|VSAR|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.19876874361523988,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|16|8|LAMC|K1e3": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.32475661781989357,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "256|16|8|LAMC|K1e4": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.32969242644341806,
+   "n_feasible": 144,
+   "n_tied": 1
+  },
+  "256|16|8|LAMC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.32969242644341806,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "256|16|8|LAMP": {
+   "cfg4": [
+    "flat",
+    "V",
+    10.0,
+    1
+   ],
+   "dev_acc": 0.22478596828699438,
+   "feat": [
+    "center",
+    "sgn"
+   ],
+   "lamc_dev": 0.3874016728972611,
+   "n_tied": 1,
+   "src": "LAMC"
+  },
+  "256|16|8|NLMSC|K1e3": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.25,
+    "avg",
+    1
+   ],
+   "dev_acc": 0.30897216406689965,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "256|16|8|NLMSC|K1e4": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.1,
+    "last",
+    1
+   ],
+   "dev_acc": 0.3152364568431734,
+   "n_feasible": 240,
+   "n_tied": 1
+  },
+  "256|16|8|NLMSC|K1e5": {
+   "cfg": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.1,
+    "last",
+    1
+   ],
+   "dev_acc": 0.3152364568431734,
+   "n_feasible": 480,
+   "n_tied": 1
+  },
+  "256|16|8|OPTP": {
+   "cfg": [
+    1.0,
+    10000.0
+   ],
+   "dev_acc": 0.322125832221025,
+   "dev_acc_float": 0.3598102808547985,
+   "fmt": [
+    "whiten",
+    "plin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|8|OPTQ": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.30962035064680066,
+   "fmt": [
+    "center",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|8|OPTR": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.30962035064680066,
+   "dev_acc_float": 0.42827376450890536,
+   "fmt": [
+    "center",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|8|OPTS": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.30962035064680066,
+   "dev_acc_float": 0.42827376450890536,
+   "fmt": [
+    "center",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|16|8|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "256|16|8|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.1359953687860564,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|16|8|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "LA",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.17042329863581054,
+   "n_feasible": 252,
+   "n_tied": 2
+  },
+  "256|16|8|SDMT|K1e5": {
+   "cfg": [
+    "center",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.20168380729226001,
+   "n_feasible": 504,
+   "n_tied": 2
+  },
+  "256|16|8|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.2696676165280347,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|8|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.27397947998183153,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|8|STORE|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.2720414878091727,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|16|8|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.2626056472205912,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|8|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.26370415211325965,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|16|8|VSAR|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.2641738126268375,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|2|16|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.01,
+    2
+   ],
+   "dev_acc": 0.7758934011224538,
+   "n_feasible": 144,
+   "n_tied": 4
+  },
+  "256|2|16|LAMC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.1,
+    2
+   ],
+   "dev_acc": 0.7850437280732274,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "256|2|16|LAMC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.8266830986963359,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "256|2|16|LAMP": {
+   "cfg4": [
+    "col",
+    "V-1",
+    0.01,
+    1
+   ],
+   "dev_acc": 0.7537500271865625,
+   "feat": [
+    "whiten",
+    "sgn"
+   ],
+   "lamc_dev": 0.8273375184850852,
+   "n_tied": 2,
+   "src": "LAMC"
+  },
+  "256|2|16|NLMSC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.7323332865915604,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "256|2|16|NLMSC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    2
+   ],
+   "dev_acc": 0.7315879343235298,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "256|2|16|NLMSC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "dev_acc": 0.8155566244395199,
+   "n_feasible": 480,
+   "n_tied": 2
+  },
+  "256|2|16|OPTP": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.8273375184850852,
+   "dev_acc_float": 0.8410713669246684,
+   "fmt": [
+    "whiten",
+    "plin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|2|16|OPTQ": {
+   "cfg": [
+    1.0,
+    0.1
+   ],
+   "dev_acc": 0.7787368836013613,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|2|16|OPTR": {
+   "cfg": [
+    1.0,
+    0.1
+   ],
+   "dev_acc": 0.7787368836013613,
+   "dev_acc_float": 0.8015695365822655,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|2|16|OPTS": {
+   "cfg": [
+    1.0,
+    0.1
+   ],
+   "dev_acc": 0.7787368836013613,
+   "dev_acc_float": 0.8015695365822655,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|2|16|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "256|2|16|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "L",
+    8,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.5700245913010035,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|2|16|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "L",
+    4,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.6339190188999092,
+   "n_feasible": 252,
+   "n_tied": 2
+  },
+  "256|2|16|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "L",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "dev_acc": 0.7496808786109539,
+   "n_feasible": 504,
+   "n_tied": 1
+  },
+  "256|2|16|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6385815220136711,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|16|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6352529533623218,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|16|STORE|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.7350768980645505,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|2|16|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6248754799544335,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|16|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6243019012907186,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|16|VSAR|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6718629269579779,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|2|4|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.7273111584254144,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "256|2|4|LAMC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.1,
+    1
+   ],
+   "dev_acc": 0.7313090143863805,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "256|2|4|LAMC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.1,
+    1
+   ],
+   "dev_acc": 0.7357426580864633,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "256|2|4|LAMP": {
+   "cfg4": [
+    "col",
+    "V-1",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.6657372412097191,
+   "feat": [
+    "center",
+    "sgn"
+   ],
+   "lamc_dev": 0.7458502775672867,
+   "n_tied": 2,
+   "src": "LAMC"
+  },
+  "256|2|4|NLMSC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    1.0,
+    "avg",
+    1
+   ],
+   "dev_acc": 0.7098413284901377,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "256|2|4|NLMSC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.7169464310125506,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "256|2|4|NLMSC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.7199573588913551,
+   "n_feasible": 480,
+   "n_tied": 2
+  },
+  "256|2|4|OPTP": {
+   "cfg": [
+    1.0,
+    1.0
+   ],
+   "dev_acc": 0.7458502775672867,
+   "dev_acc_float": 0.8030022525159536,
+   "fmt": [
+    "whiten",
+    "plin",
+    1
+   ],
+   "n_tied": 3
+  },
+  "256|2|4|OPTQ": {
+   "cfg": [
+    1.0,
+    0.1
+   ],
+   "dev_acc": 0.718009752087668,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|2|4|OPTR": {
+   "cfg": [
+    1.0,
+    0.1
+   ],
+   "dev_acc": 0.718009752087668,
+   "dev_acc_float": 0.7456671951948626,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|2|4|OPTS": {
+   "cfg": [
+    1.0,
+    0.1
+   ],
+   "dev_acc": 0.718009752087668,
+   "dev_acc_float": 0.7456671951948626,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|2|4|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "256|2|4|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "A",
+    4,
+    "bits",
+    "clip3",
+    1.0
+   ],
+   "dev_acc": 0.5815461113461118,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|2|4|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "A",
+    16,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "dev_acc": 0.5859008055044402,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|2|4|SDMT|K1e5": {
+   "cfg": [
+    "center",
+    "L",
+    2,
+    "bits",
+    "tern",
+    0.5
+   ],
+   "dev_acc": 0.6018358285997096,
+   "n_feasible": 504,
+   "n_tied": 2
+  },
+  "256|2|4|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6357003671829301,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|4|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6402312009160878,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|4|STORE|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6380625328633521,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|2|4|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    4,
+    1.0
+   ],
+   "dev_acc": 0.6197341509627224,
+   "n_feasible": 36,
+   "n_tied": 2
+  },
+  "256|2|4|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6245723975231642,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|4|VSAR|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "dev_acc": 0.6245723975231642,
+   "n_feasible": 72,
+   "n_tied": 2
+  },
+  "256|2|8|LAMC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.01,
+    1
+   ],
+   "dev_acc": 0.7655641613293124,
+   "n_feasible": 144,
+   "n_tied": 4
+  },
+  "256|2|8|LAMC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "dev_acc": 0.7588785697045529,
+   "n_feasible": 144,
+   "n_tied": 2
+  },
+  "256|2|8|LAMC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    2
+   ],
+   "dev_acc": 0.7725429992163463,
+   "n_feasible": 288,
+   "n_tied": 2
+  },
+  "256|2|8|LAMP": {
+   "cfg4": [
+    "col",
+    "V-1",
+    0.0001,
+    1
+   ],
+   "dev_acc": 0.6992624826924513,
+   "feat": [
+    "whiten",
+    "sgn"
+   ],
+   "lamc_dev": 0.7921842534107549,
+   "n_tied": 4,
+   "src": "LAMC"
+  },
+  "256|2|8|NLMSC|K1e3": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.7259198395418736,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "256|2|8|NLMSC|K1e4": {
+   "cfg": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "last",
+    1
+   ],
+   "dev_acc": 0.7231768804066353,
+   "n_feasible": 240,
+   "n_tied": 2
+  },
+  "256|2|8|NLMSC|K1e5": {
+   "cfg": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    2
+   ],
+   "dev_acc": 0.7633369746299113,
+   "n_feasible": 480,
+   "n_tied": 2
+  },
+  "256|2|8|OPTP": {
+   "cfg": [
+    1.0,
+    100.0
+   ],
+   "dev_acc": 0.7921842534107549,
+   "dev_acc_float": 0.8209268063030363,
+   "fmt": [
+    "whiten",
+    "plin",
+    1
+   ],
+   "n_tied": 1
+  },
+  "256|2|8|OPTQ": {
+   "cfg": [
+    1.0,
+    0.0001
+   ],
+   "dev_acc": 0.7654986933062502,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 2
+  },
+  "256|2|8|OPTR": {
+   "cfg": [
+    1.0,
+    0.0001
+   ],
+   "dev_acc": 0.7654986933062502,
+   "dev_acc_float": 0.7721303238067613,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 2
+  },
+  "256|2|8|OPTS": {
+   "cfg": [
+    1.0,
+    0.0001
+   ],
+   "dev_acc": 0.7654986933062502,
+   "dev_acc_float": 0.7721303238067613,
+   "fmt": [
+    "whiten",
+    "lin",
+    1
+   ],
+   "n_tied": 2
+  },
+  "256|2|8|OPTX": {
+   "src": "OPTP",
+   "vsapcx_src": "VSAPC"
+  },
+  "256|2|8|SDMT|K1e3": {
+   "cfg": [
+    "center",
+    "LA",
+    2,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "dev_acc": 0.5695539060498317,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|2|8|SDMT|K1e4": {
+   "cfg": [
+    "center",
+    "A",
+    8,
+    "onehot",
+    "clip3",
+    1.0
+   ],
+   "dev_acc": 0.5954002823824314,
+   "n_feasible": 252,
+   "n_tied": 1
+  },
+  "256|2|8|SDMT|K1e5": {
+   "cfg": [
+    "whiten",
+    "LA",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "dev_acc": 0.6612545167162341,
+   "n_feasible": 504,
+   "n_tied": 1
+  },
+  "256|2|8|STORE|K1e3": {
+   "cfg": [
+    "center",
+    "sgn",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6447514174741444,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|8|STORE|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    4,
+    1.0
+   ],
+   "dev_acc": 0.6380023504461879,
+   "n_feasible": 36,
+   "n_tied": 2
+  },
+  "256|2|8|STORE|K1e5": {
+   "cfg": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "dev_acc": 0.6824558905757275,
+   "n_feasible": 72,
+   "n_tied": 1
+  },
+  "256|2|8|VSAR|K1e3": {
+   "cfg": [
+    "center",
+    "lin",
+    4,
+    1.0
+   ],
+   "dev_acc": 0.6419667101798429,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|8|VSAR|K1e4": {
+   "cfg": [
+    "center",
+    "lin",
+    4,
+    1.0
+   ],
+   "dev_acc": 0.6433827740258938,
+   "n_feasible": 36,
+   "n_tied": 1
+  },
+  "256|2|8|VSAR|K1e5": {
+   "cfg": [
+    "center",
+    "lin",
+    4,
+    1.0
+   ],
+   "dev_acc": 0.6419660751075317,
+   "n_feasible": 72,
+   "n_tied": 1
+  }
+ },
+ "enc": "qwen8"
+}

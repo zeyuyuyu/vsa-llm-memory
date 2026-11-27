@@ -1,0 +1,9 @@
+# B66 part (D) check: plain-loop point statistics (pure Python loops over the records) vs b66_D_part_*.json
+qwen8: checked through 51 values so far, max |diff| 1.39e-17
+b46: checked through 102 values so far, max |diff| 1.39e-17
+llama: checked through 153 values so far, max |diff| 1.39e-17
+mistral: checked through 204 values so far, max |diff| 1.39e-17
+e5: checked through 255 values so far, max |diff| 1.39e-17
+bge: checked through 306 values so far, max |diff| 1.39e-17
+minilm: checked through 357 values so far, max |diff| 1.39e-17
+ALL: 357 point statistics, max |difference| 1.39e-17 -> PASS (bar 1e-9)

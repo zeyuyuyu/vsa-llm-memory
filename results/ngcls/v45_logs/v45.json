@@ -1,0 +1,56 @@
+{
+ "buckets": {
+  "train_short": 540,
+  "eval_short": 600,
+  "eval_long": 200
+ },
+ "short_max": 6,
+ "long_min": 10,
+ "cells": {
+  "short": {
+   "probe_argmax": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "parser": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "floor": [
+    0.3416666666666667,
+    0.34833333333333333,
+    0.3616666666666667
+   ],
+   "span_identity": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "long": {
+   "probe_argmax": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "parser": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "floor": [
+    0.165,
+    0.21,
+    0.27
+   ],
+   "span_identity": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "verdict": "NO USABLE BASELINE (the probe is not at .70 even on short stories, so this substrate is no better than arena C for a contrast and I stop rather than claim one)"
+}

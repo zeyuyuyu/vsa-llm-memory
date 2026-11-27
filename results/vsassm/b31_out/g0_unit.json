@@ -1,0 +1,92 @@
+{
+ "A/exact": {
+  "max_abs_diff_logit": 9.5367431640625e-07,
+  "same_decision": 1.0,
+  "same_initial_parameters": true
+ },
+ "A/exact/perturbed": {
+  "max_abs_diff_logit": 9.5367431640625e-07,
+  "same_decision": 1.0,
+  "same_initial_parameters": true
+ },
+ "A/name": {
+  "max_abs_diff_logit": 1.430511474609375e-06,
+  "same_decision": 1.0,
+  "same_initial_parameters": true
+ },
+ "A/name/perturbed": {
+  "max_abs_diff_logit": 1.430511474609375e-06,
+  "same_decision": 1.0,
+  "same_initial_parameters": true
+ },
+ "A/bind": {
+  "max_abs_diff_logit": 1.430511474609375e-06,
+  "same_decision": 1.0,
+  "same_initial_parameters": true
+ },
+ "A/bind/perturbed": {
+  "max_abs_diff_logit": 1.430511474609375e-06,
+  "same_decision": 1.0,
+  "same_initial_parameters": true
+ },
+ "C/exact": {
+  "max_abs_diff_cos": 1.1920928955078125e-07,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": null
+ },
+ "C/exact/perturbed": {
+  "max_abs_diff_cos": 1.1920928955078125e-07,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": null
+ },
+ "C/name": {
+  "max_abs_diff_cos": 5.960464477539063e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": true
+ },
+ "C/name/perturbed": {
+  "max_abs_diff_cos": 5.960464477539063e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": true
+ },
+ "C/bind": {
+  "max_abs_diff_cos": 2.9802322387695312e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": true
+ },
+ "C/bind/perturbed": {
+  "max_abs_diff_cos": 2.421438694000244e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": true
+ },
+ "B/exact": {
+  "max_abs_diff_cos": 2.9802322387695312e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": null
+ },
+ "B/exact/perturbed": {
+  "max_abs_diff_cos": 2.9802322387695312e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": null
+ },
+ "B/name": {
+  "max_abs_diff_cos": 8.381903171539307e-09,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": true
+ },
+ "B/name/perturbed": {
+  "max_abs_diff_cos": 1.1175870895385742e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": true
+ },
+ "B/bind": {
+  "max_abs_diff_cos": 3.818422555923462e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": true
+ },
+ "B/bind/perturbed": {
+  "max_abs_diff_cos": 3.166496753692627e-08,
+  "same_sign_at_0.1": 1.0,
+  "same_initial_parameters": true
+ }
+}

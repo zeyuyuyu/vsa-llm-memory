@@ -1,0 +1,11 @@
+{
+ "prereg": "dd06b93",
+ "grid": {
+  "2048": {
+   "32": 1.0,
+   "128": 0.9166666666666666,
+   "256": 0.2833333333333333
+  }
+ },
+ "verdict": "P1 gate: d=2048 reproduces V-100 (k128 0.9167 vs .7417, k256 0.2833 vs .2417): False ; GATE FAILS: this store differs from V-100's, so no reading is taken. Note V-100's arm used real 2Wiki triples where this uses synthetic chains, which is a protocol difference I should have matched before registering the bar."
+}

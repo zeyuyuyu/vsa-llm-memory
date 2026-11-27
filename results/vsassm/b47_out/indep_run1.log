@@ -1,0 +1,52 @@
+sweep rho 1.0 {'agree': 1.0, 'acc_second': 1.0, 'acc_main': 1.0, 'max_abs_score_diff': 5.002289069286348e-07, 'thr_main': 0.9999997615814209, 'thr_second': 0.9999997292255851}
+sweep rho 0.8 {'agree': 1.0, 'acc_second': 0.996, 'acc_main': 0.996, 'max_abs_score_diff': 7.189145828645493e-07, 'thr_main': 0.6204644441604614, 'thr_second': 0.6204642662930585}
+sweep rho 0.6 {'agree': 1.0, 'acc_second': 0.796, 'acc_main': 0.796, 'max_abs_score_diff': 5.30917288465993e-07, 'thr_main': 0.06545674800872803, 'thr_second': 0.0654567389972037}
+sweep rho 0.55 {'agree': 1.0, 'acc_second': 0.7, 'acc_main': 0.7, 'max_abs_score_diff': 6.203809406746252e-07, 'thr_main': 0.055560048669576645, 'thr_second': 0.0555600374448545}
+sweep rho 0.4 {'agree': 1.0, 'acc_second': 0.552, 'acc_main': 0.552, 'max_abs_score_diff': 4.998110723006266e-07, 'thr_main': 0.03776446357369423, 'thr_second': 0.037764465750315536}
+{'margin': 'b31(b)|qwen8|C|name-lora', 'second': [0.282, 0.4373333333333333], 'main': [0.2819999999999999, 0.44066666666666654], 'max_end_diff': 0.0033333333333332438}
+{'margin': 'b31|phi2|C|name-lora', 'second': [0.506, 0.558], 'main': [0.5066666666666666, 0.5586666666666666], 'max_end_diff': 0.0006666666666665932}
+{'margin': 'b31(b)|phi2|A|name-lora', 'second': [0.4709999999999999, 0.5126666666666666], 'main': [0.47099999999999986, 0.512], 'max_end_diff': 0.0006666666666665932}
+{
+ "labels_agree": 1.0,
+ "bootstrap_check": [
+  {
+   "margin": "b31(b)|qwen8|C|name-lora",
+   "second": [
+    0.282,
+    0.4373333333333333
+   ],
+   "main": [
+    0.2819999999999999,
+    0.44066666666666654
+   ],
+   "max_end_diff": 0.0033333333333332438
+  },
+  {
+   "margin": "b31|phi2|C|name-lora",
+   "second": [
+    0.506,
+    0.558
+   ],
+   "main": [
+    0.5066666666666666,
+    0.5586666666666666
+   ],
+   "max_end_diff": 0.0006666666666665932
+  },
+  {
+   "margin": "b31(b)|phi2|A|name-lora",
+   "second": [
+    0.4709999999999999,
+    0.5126666666666666
+   ],
+   "main": [
+    0.47099999999999986,
+    0.512
+   ],
+   "max_end_diff": 0.0006666666666665932
+  }
+ ],
+ "all_cells_ge_0.99": true,
+ "min_agree": 1.0
+}
+rc=0

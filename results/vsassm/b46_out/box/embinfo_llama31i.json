@@ -1,0 +1,24 @@
+{
+ "tag": "llama31i",
+ "path": "/path/to/work/b40/llama31_8b_instruct",
+ "tokenizer_loader": "AutoTokenizer",
+ "layers": [
+  8,
+  16,
+  24,
+  32
+ ],
+ "num_hidden_layers": 32,
+ "adds_bos": true,
+ "pad": 128009,
+ "name_tokens_mean": 3.833041766892631,
+ "example": "Gabon",
+ "example_tokens": [
+  "<|begin_of_text|>",
+  "Name",
+  ":",
+  "ĠGab",
+  "on"
+ ],
+ "seconds": 76.8
+}

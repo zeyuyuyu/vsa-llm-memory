@@ -1,0 +1,32 @@
+{
+ "prereg": "v143_prereg.md",
+ "model": "Qwen/Qwen2.5-32B-Instruct",
+ "v140_sha256_16": "ec7251f3e4b40806",
+ "n_train": 150,
+ "n_eval": 200,
+ "coverage": 1.0,
+ "epochs": 3,
+ "rank": 16,
+ "lr": 0.0001,
+ "store_banked_V106": {
+  "64": 0.936,
+  "1024": 0.908
+ },
+ "pools": {
+  "0": {
+   "prompt_tokens_row0": 81,
+   "lora": {
+    "42": {
+     "full": 1.0,
+     "covered": 1.0
+    }
+   },
+   "prompt_arm": {
+    "full": 0.95,
+    "covered": 0.95
+   },
+   "lora_mean_covered": 1.0,
+   "minutes": 5.5175194382667545
+  }
+ }
+}

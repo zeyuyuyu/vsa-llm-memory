@@ -1,0 +1,33 @@
+B41 hand-reading notes (prereg gate "Hand-reading"). Source: b41_handread.py on the test run test_s1_N320_r0.200
+(primary regime: high noise, N = 320, h = 6, seed 1); first 15 failures each of ARGMAX, BEAM(4,16), EXACT and v* =
+VSA_HOP4_D65536_kb4 (raw traces on the box: /path/to/work/b41/results/b41_handread_raw.txt; every trace shows the
+start mention and both mentions of every true hop fact with their top-3 readings, the decoy flag and the answer).
+Failures in this run: ARGMAX 961/1000, BEAM(4,16) 484, EXACT 435, v* 716.
+
+ARGMAX (read 4 traces in full, 15 headers). Every failure is a DEAD chain: one of the 13 mentions on the chain is
+misread (typically a cluster-mate at 0.6-0.99 confidence) and the committed entity has no fact with the next
+relation. With 13 readings at a 26% per-mention error the chain survives in about 0.74^13 = 2% of queries plus the
+cases where both readings of an entity are misread the same way. Nothing in the traces suggests a scoring problem.
+
+EXACT (read 5 in full, 15 headers). 13 of the first 15 failures return the true answer's cluster-mate: (a) the last
+object mention is confidently misread (q1 'Dutriam Surdiahiam' -> Surdiathiam 1.00, truth 0.00; likewise q5, q11,
+q18, q22): no arm can recover this from the given distributions; (b) the start is misread and the decoy chain exists
+(q3: start p(true) = 0.07, decoy=True -> EXACT follows the decoy to its end 'Biktar Falgum'). q0 returns an
+unrelated entity: hop-3 subject 'BruusbrfGijnpflom' is read as a different cluster at 0.98 (truth 0.00), so the true
+path has no mass. These are naming-head failures (overconfident misreadings), not propagation failures.
+
+BEAM(4,16): the same near-miss pattern as EXACT on 12 of 15 (often the identical wrong answer), plus 3 DEAD chains
+(q9, q13, q19) where the truth fell outside a mention's top-4 (EXACT also misses q9, returning a cluster-mate).
+
+v* (VSA_HOP4_D65536_kb4; read 3 in full, 15 headers): 13 of 15 failures return an UNRELATED entity (another
+cluster), only 2 a cluster-mate (q11, q12). Full traces show the mechanism diagnosed on dev: where a hop's two
+readings of the same entity overlap little (q6 hop 1: start p(true) = 0.05, subject reading 0.97 on a cluster-mate
+-> overlap <p, ps> about 0.04; q5 hop 1: subject reading 0.16/0.09 spread), the surviving mass is a few percent of
+the query's mass, the VSA's signal is proportional to that unnormalised mass while crosstalk from the 7-17 facts of
+the relation is proportional to the whole query, and the clean-up picks noise. EXACT renormalises over the surviving
+path and answers these queries correctly (q6, q2, q15 are not among EXACT's failures).
+
+Summary: table failures are near misses forced by the naming distributions (irreducible for any arm given these
+readings); VSA failures are mostly crosstalk picks of unrelated entities, i.e. the VSA loses the chain-breaking
+evidence that a table gets for free by renormalising. The failure-type shares over all test queries are in
+results/b41_report.txt.

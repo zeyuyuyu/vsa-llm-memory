@@ -1,0 +1,59 @@
+{
+ "floor_ref": 0.5153333333333333,
+ "parser_ref": 0.934,
+ "arms": {
+  "fsq_con": [
+   0.522,
+   0.552,
+   0.534
+  ],
+  "fsq_con_only": [
+   0.546,
+   0.552,
+   0.556
+  ]
+ },
+ "diag": {
+  "fsq_con": [
+   {
+    "tuples_used": 46,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.5018720494872212,
+    "distinct_symbol_code_cosine": 0.9734253856517651
+   },
+   {
+    "tuples_used": 68,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.5608009116067069,
+    "distinct_symbol_code_cosine": 0.9490775086791428
+   },
+   {
+    "tuples_used": 43,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.5848933745726843,
+    "distinct_symbol_code_cosine": 0.964648492442237
+   }
+  ],
+  "fsq_con_only": [
+   {
+    "tuples_used": 289,
+    "role_distinct_rate": 0.14333333333333334,
+    "same_symbol_consistency": 0.45368712355526614,
+    "distinct_symbol_code_cosine": 0.5036413791921955
+   },
+   {
+    "tuples_used": 384,
+    "role_distinct_rate": 0.13,
+    "same_symbol_consistency": 0.4278040045580335,
+    "distinct_symbol_code_cosine": 0.5108743751468827
+   },
+   {
+    "tuples_used": 392,
+    "role_distinct_rate": 0.08,
+    "same_symbol_consistency": 0.3835259645124532,
+    "distinct_symbol_code_cosine": 0.4849612808035238
+   }
+  ]
+ },
+ "verdict": "fsq_con: FAILS (equivalence supervision insufficient where fixed targets succeed; narrow the claim) | fsq_con_only: FAILS (equivalence supervision insufficient where fixed targets succeed; narrow the claim)"
+}

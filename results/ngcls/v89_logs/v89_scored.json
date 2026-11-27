@@ -1,0 +1,31 @@
+{
+ "prereg": "352ea41",
+ "corrected": "db519d9",
+ "arms": {
+  "parser": [
+   0.925000011920929,
+   0.92166668176651,
+   0.9266666769981384
+  ],
+  "projection": [
+   0.5133333206176758,
+   0.47333332896232605,
+   0.5249999761581421
+  ],
+  "vq": [
+   0.4883333444595337,
+   0.4699999988079071,
+   0.5116666555404663
+  ]
+ },
+ "diag": {
+  "code_usage_seed0": {
+   "distinct_codes_used": 6,
+   "symbols_seen": 64,
+   "symbols_sharing_a_code": 58,
+   "unstable_assignments": 15055,
+   "lookups": 25600
+  }
+ },
+ "verdict": "P1 gate: True ; P2 vq >= projection+.10 in 2/3: False (0.4900 vs 0.5039) ; P3 vq >= .75 in 2/3: False ; LEARNED DISCRETENESS IS NOT SUFFICIENT: the manuscript's 'must be supplied' claim survives a test built to break it. Convenient for us, which is why the bars were fixed beforehand."
+}

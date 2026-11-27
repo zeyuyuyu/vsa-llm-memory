@@ -1,0 +1,35 @@
+{
+ "args": {
+  "cmd": "reader",
+  "pos": "ops",
+  "arm": "vsa",
+  "split": "train",
+  "layers": "20",
+  "layer": 8,
+  "bs": 16,
+  "epochs": "100",
+  "lr": 0.001,
+  "seed": 0,
+  "steps": 1000,
+  "eval_every": 250,
+  "reader": "",
+  "ckpt": "",
+  "out": "out/scan/ops_L8",
+  "pred": "",
+  "limit": 0,
+  "dec_init": "recon",
+  "recon_epochs": 100,
+  "dev_split": "dev",
+  "dev_limit": 0,
+  "train_split": "train",
+  "train_limit": 0
+ },
+ "hist": [
+  {
+   "pub": 0.8787500262260437,
+   "bm": 0.981249988079071,
+   "epoch": 100,
+   "loss": 0.020349733531475067
+  }
+ ]
+}

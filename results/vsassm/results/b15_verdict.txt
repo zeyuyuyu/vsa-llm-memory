@@ -1,0 +1,21 @@
+# B15 verdict (prereg/B15_prereg.md), new frozen hand-written test set b15_accept.jsonl, 2026-10-20
+
+=== b15_preds/E8B_C.jsonl  (Qwen3-8B reader, prompt C, no merging: the frozen configuration)
+  locations  Q-acc 0.930 (66/71)  stories 26/30  by category: A 18/20 B 16/17 C 20/20 D 12/14
+  containers Q-acc 0.900 (18/20)  stories 8/10
+  events: precision 0.863 recall 0.900; 23.5 generated tokens per sentence, no thinking
+=== Qwen3-1.7B reader, prompt B: 0.732 / 0.700 (23.5 -> 20.9 tokens per sentence)
+=== S0 (current SDK): 0.437 / 0.150     B13 writers: s0 0.437 / 0.350, s1 0.606 / 0.750
+=== Qwen3-8B thinking, direct: 0.817 / 0.750 (lenient 0.831 / 0.800); Qwen3-1.7B thinking: 0.704 / 0.100 (lenient 0.718 / 0.300)
+
+P1 locations >= 0.90: PASS (0.930). P2 containers >= 0.85: PASS (0.900).
+Prediction (P1, P2 hold; locations 0.88-0.93; 1.7B arm fails both): held.
+Manual check of all 7 wrong answers: 6 are reader errors (a container's move attributed to its contents x2, "her old one"
+read as the new kettle, state facts before a swap missed, a crate move missed, a planned move wrongly kept); 1 is a strict
+alias miss ("drawer by the sink" vs "drawer", arguably right).
+Caveats: one greedy run on one 40-story set (91 questions); the configuration was chosen on the B13 + B14 sets; the
+reader is 8B, not the small 1.7B model.
+
+Post-B15 swap guard (drop moves into swapped places in a swap sentence), 8B / prompt C / no merging:
+  B13 dev 0.963 -> 0.925 (one flashback-swap story lost), B14 dev 0.914 -> 0.914, B15 (spent, post hoc) 0.930 -> 0.930; fixes the sdk_smoke3 swap story.
+  Not adopted: SDK default stays the tested configuration (guard off).

@@ -1,0 +1,29 @@
+# B38 exploratory (NOT registered): E-LDPC tables decoded by our own numpy sum-product decoder (b38_check._sp_decode,
+# flooding, 60 iterations, same channel log-likelihood ratios) instead of the ldpc package, on the 50 test stores.
+# Run after the registered test, prompted by the decoder cross-check (b38_check decoders): in natural-layout cells
+# the package's belief propagation corrected fewer codewords than ours. Designs are the registered dev designs for the
+# matched i.i.d. condition at each budget. Files: b38_out/b38_explore_ldpc_own*.json (box), plans
+# b38_plan_explore_ldpc_own*.json; command: B38_LDPC_OWN=1 python3 b38_eq.py test ... (b38_eq.ldpc_decode_stream).
+# Share of the 4,776 probed keys read exactly; library = the registered run's share at the same budget ('-' = not run).
+
+i.i.d. (decoders agree):
+  k8   B=45  own 61.39  library 61.29 | B=54  own 100.00 library 100.00 | B=64 own 100.00 library 99.90
+  k16  B=181 own 97.99  library 97.99 | B=215 own 100.00 library 100.00 | B=256 own 100.00 library 100.00
+
+Natural layout (octave budgets from the matched i.i.d. N*; N*(own) on that coarse grid):
+  lines-nat-k4   27:90.12 64:96.02 128:99.58 256:100 512:100 ... 4096:100          N*(own) 128   (library: > 4096)
+  lines-nat-e05  38:84.34 64:98.24 128:95.96 256:99.29 512:99.81 1024:100 ...     N*(own) 512   (library: > 4096)
+  lines-nat-k8   54:70.08 64:60.93 128:95.37 256:99.64 512:93.61 1024:94.79 2048:96.23 4096:99.98   N*(own) 4096 (library > 4096)
+  lines-nat-k16  215:39.32 256:47.76 512:70.71 1024:11.68 2048:5.51 4096:10.05    not reached   (library: not reached)
+  clust-nat-k4   27:89.47 64:94.60 128:99.96 256:100 ...                          N*(own) 128   (library: 512)
+  clust-nat-e05  38:82.41 64:98.22 128:85.20 256:99.35 512:100 ...                N*(own) 512   (library: 724)
+  clust-nat-k8   54:54.90 64:42.96 128:92.76 256:100 512:97.78 1024:100 ...       N*(own) 1024  (library: 1024)
+  clust-nat-k16  215:4.12 256:5.09 512:42.59 1024:35.05 2048:100 4096:100         N*(own) 2048  (library: 2435)
+  Same-budget comparisons (first exploratory pass): lines-nat-k8 at 512 / 1024 / 2048 / 4096: own 93.6 / 94.8 / 96.2 /
+  99.98 vs library 59.6 / 47.3 / 37.6 / 48.3; lines-nat-e05 at 512: 99.8 vs 83.7; clust-nat-k8 at 512: 97.8 vs 85.1.
+
+Reading: with a decoder that handles confidently wrong inputs, an LDPC table without an interleaver still needs more
+cells than the VSA store under dead lines and stuck clusters (VSA V-last 76 / 91 / 152 / 512 for lines at f = 4 / 10 /
+25 / 55%, 76 / 91 / 152 / 724 for clusters), but the margin at f = 4% is about 3 grid steps (128 vs 76), not > 17.
+Curves are non-monotone because each budget has its own damage map (array size) and code rate. The i.i.d. results
+are unaffected (identical shares).

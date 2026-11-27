@@ -1,0 +1,1379 @@
+{
+ "_about": "B26 (prereg vsassm/prereg/B26_vector_form_prereg.md): RULER needle tasks (4,800 samples) with entity names varied (T1-T3 typos at 0.05/0.10/0.20 edits per character, P separator and case, A short alias), seven memories answering from the same pairs; part b: the VSA store and two tables on the PCM model. Every value carries its verbatim verdict line.",
+ "query": {
+  "E": [
+   {
+    "cond": "C0",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "99.71"
+   },
+   {
+    "cond": "T1",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "T2",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "T3",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "P",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "A",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   }
+  ],
+  "Ev": [
+   {
+    "cond": "C0",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "99.71"
+   },
+   {
+    "cond": "T1",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "T2",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "T3",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "P",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "A",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.71    0.00    0.00    0.00    0.00    0.00",
+    "text": "0.00"
+   }
+  ],
+  "En": [
+   {
+    "cond": "C0",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.71    0.00    0.00    0.00   71.58    0.00",
+    "text": "99.71"
+   },
+   {
+    "cond": "T1",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.71    0.00    0.00    0.00   71.58    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "T2",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.71    0.00    0.00    0.00   71.58    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "T3",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.71    0.00    0.00    0.00   71.58    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "P",
+    "value": 71.58,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.71    0.00    0.00    0.00   71.58    0.00",
+    "text": "71.58"
+   },
+   {
+    "cond": "A",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.71    0.00    0.00    0.00   71.58    0.00",
+    "text": "0.00"
+   }
+  ],
+  "L": [
+   {
+    "cond": "C0",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.71   99.71   99.69   99.71   99.71   92.41",
+    "text": "99.71"
+   },
+   {
+    "cond": "T1",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.71   99.71   99.69   99.71   99.71   92.41",
+    "text": "99.71"
+   },
+   {
+    "cond": "T2",
+    "value": 99.69,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.71   99.71   99.69   99.71   99.71   92.41",
+    "text": "99.69"
+   },
+   {
+    "cond": "T3",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.71   99.71   99.69   99.71   99.71   92.41",
+    "text": "99.71"
+   },
+   {
+    "cond": "P",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.71   99.71   99.69   99.71   99.71   92.41",
+    "text": "99.71"
+   },
+   {
+    "cond": "A",
+    "value": 92.41,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.71   99.71   99.69   99.71   99.71   92.41",
+    "text": "92.41"
+   }
+  ],
+  "W": [
+   {
+    "cond": "C0",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.71   99.65   99.67   99.54   99.71   96.22",
+    "text": "99.71"
+   },
+   {
+    "cond": "T1",
+    "value": 99.65,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.71   99.65   99.67   99.54   99.71   96.22",
+    "text": "99.65"
+   },
+   {
+    "cond": "T2",
+    "value": 99.67,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.71   99.65   99.67   99.54   99.71   96.22",
+    "text": "99.67"
+   },
+   {
+    "cond": "T3",
+    "value": 99.54,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.71   99.65   99.67   99.54   99.71   96.22",
+    "text": "99.54"
+   },
+   {
+    "cond": "P",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.71   99.65   99.67   99.54   99.71   96.22",
+    "text": "99.71"
+   },
+   {
+    "cond": "A",
+    "value": 96.22,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.71   99.65   99.67   99.54   99.71   96.22",
+    "text": "96.22"
+   }
+  ],
+  "N": [
+   {
+    "cond": "C0",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.71   99.71   99.69   99.59   99.71   98.48",
+    "text": "99.71"
+   },
+   {
+    "cond": "T1",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.71   99.71   99.69   99.59   99.71   98.48",
+    "text": "99.71"
+   },
+   {
+    "cond": "T2",
+    "value": 99.69,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.71   99.71   99.69   99.59   99.71   98.48",
+    "text": "99.69"
+   },
+   {
+    "cond": "T3",
+    "value": 99.59,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.71   99.71   99.69   99.59   99.71   98.48",
+    "text": "99.59"
+   },
+   {
+    "cond": "P",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.71   99.71   99.69   99.59   99.71   98.48",
+    "text": "99.71"
+   },
+   {
+    "cond": "A",
+    "value": 98.48,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.71   99.71   99.69   99.59   99.71   98.48",
+    "text": "98.48"
+   }
+  ],
+  "V": [
+   {
+    "cond": "C0",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.71   99.71   99.69   99.59   99.71   98.57",
+    "text": "99.71"
+   },
+   {
+    "cond": "T1",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.71   99.71   99.69   99.59   99.71   98.57",
+    "text": "99.71"
+   },
+   {
+    "cond": "T2",
+    "value": 99.69,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.71   99.71   99.69   99.59   99.71   98.57",
+    "text": "99.69"
+   },
+   {
+    "cond": "T3",
+    "value": 99.59,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.71   99.71   99.69   99.59   99.71   98.57",
+    "text": "99.59"
+   },
+   {
+    "cond": "P",
+    "value": 99.71,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.71   99.71   99.69   99.59   99.71   98.57",
+    "text": "99.71"
+   },
+   {
+    "cond": "A",
+    "value": 98.57,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.71   99.71   99.69   99.59   99.71   98.57",
+    "text": "98.57"
+   }
+  ]
+ },
+ "write": {
+  "E": [
+   {
+    "cond": "C0",
+    "value": 99.74,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.74    0.00    0.00    0.00",
+    "text": "99.74"
+   },
+   {
+    "cond": "T2",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.74    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "P",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.74    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "A",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "E        99.74    0.00    0.00    0.00",
+    "text": "0.00"
+   }
+  ],
+  "Ev": [
+   {
+    "cond": "C0",
+    "value": 99.74,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.74    0.00    0.00    0.00",
+    "text": "99.74"
+   },
+   {
+    "cond": "T2",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.74    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "P",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.74    0.00    0.00    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "A",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "Ev       99.74    0.00    0.00    0.00",
+    "text": "0.00"
+   }
+  ],
+  "En": [
+   {
+    "cond": "C0",
+    "value": 99.74,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.74    0.00   68.98    0.00",
+    "text": "99.74"
+   },
+   {
+    "cond": "T2",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.74    0.00   68.98    0.00",
+    "text": "0.00"
+   },
+   {
+    "cond": "P",
+    "value": 68.98,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.74    0.00   68.98    0.00",
+    "text": "68.98"
+   },
+   {
+    "cond": "A",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "En       99.74    0.00   68.98    0.00",
+    "text": "0.00"
+   }
+  ],
+  "L": [
+   {
+    "cond": "C0",
+    "value": 99.74,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.74   99.05   97.18   73.73",
+    "text": "99.74"
+   },
+   {
+    "cond": "T2",
+    "value": 99.05,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.74   99.05   97.18   73.73",
+    "text": "99.05"
+   },
+   {
+    "cond": "P",
+    "value": 97.18,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.74   99.05   97.18   73.73",
+    "text": "97.18"
+   },
+   {
+    "cond": "A",
+    "value": 73.73,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "L        99.74   99.05   97.18   73.73",
+    "text": "73.73"
+   }
+  ],
+  "W": [
+   {
+    "cond": "C0",
+    "value": 99.74,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.74   99.03   98.16   97.92",
+    "text": "99.74"
+   },
+   {
+    "cond": "T2",
+    "value": 99.03,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.74   99.03   98.16   97.92",
+    "text": "99.03"
+   },
+   {
+    "cond": "P",
+    "value": 98.16,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.74   99.03   98.16   97.92",
+    "text": "98.16"
+   },
+   {
+    "cond": "A",
+    "value": 97.92,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "W        99.74   99.03   98.16   97.92",
+    "text": "97.92"
+   }
+  ],
+  "N": [
+   {
+    "cond": "C0",
+    "value": 99.74,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.74   98.68   98.56   96.97",
+    "text": "99.74"
+   },
+   {
+    "cond": "T2",
+    "value": 98.68,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.74   98.68   98.56   96.97",
+    "text": "98.68"
+   },
+   {
+    "cond": "P",
+    "value": 98.56,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.74   98.68   98.56   96.97",
+    "text": "98.56"
+   },
+   {
+    "cond": "A",
+    "value": 96.97,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "N        99.74   98.68   98.56   96.97",
+    "text": "96.97"
+   }
+  ],
+  "V": [
+   {
+    "cond": "C0",
+    "value": 99.74,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.74   98.70   98.56   97.01",
+    "text": "99.74"
+   },
+   {
+    "cond": "T2",
+    "value": 98.7,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.74   98.70   98.56   97.01",
+    "text": "98.70"
+   },
+   {
+    "cond": "P",
+    "value": 98.56,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.74   98.70   98.56   97.01",
+    "text": "98.56"
+   },
+   {
+    "cond": "A",
+    "value": 97.01,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "V        99.74   98.70   98.56   97.01",
+    "text": "97.01"
+   }
+  ]
+ },
+ "paired": {
+  "query": {
+   "L T1": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  T1       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "L T2": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  T2       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "L T3": {
+    "value": -0.12,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  T3       -0.12 [ -0.23,  -0.04]  sign 0/6 p=0.031",
+    "text": "-0.12"
+   },
+   "L P": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  P        +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "L A": {
+    "value": 6.16,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  A        +6.16 [ +5.51,  +6.82]  sign 341/2 p=6.6e-99",
+    "text": "+6.16"
+   },
+   "L pooled": {
+    "value": 1.21,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  pooled   +1.21 [ +1.08,  +1.34]  sign 340/7 p=8.1e-91",
+    "text": "+1.21"
+   },
+   "W T1": {
+    "value": 0.07,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  T1       +0.07 [ +0.01,  +0.15]  sign 4/0 p=0.12",
+    "text": "+0.07"
+   },
+   "W T2": {
+    "value": 0.02,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  T2       +0.02 [ -0.04,  +0.10]  sign 2/1 p=1",
+    "text": "+0.02"
+   },
+   "W T3": {
+    "value": 0.05,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  T3       +0.05 [ -0.10,  +0.21]  sign 10/6 p=0.45",
+    "text": "+0.05"
+   },
+   "W P": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  P        +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "W A": {
+    "value": 2.35,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  A        +2.35 [ +1.87,  +2.84]  sign 178/22 p=1.6e-31",
+    "text": "+2.35"
+   },
+   "W pooled": {
+    "value": 0.5,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  pooled   +0.50 [ +0.39,  +0.61]  sign 180/26 p=1.6e-29",
+    "text": "+0.50"
+   },
+   "N T1": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  T1       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "N T2": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  T2       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "N T3": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  T3       +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "N P": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  P        +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "N A": {
+    "value": 0.08,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  A        +0.08 [ -0.02,  +0.21]  sign 6/2 p=0.29",
+    "text": "+0.08"
+   },
+   "N pooled": {
+    "value": 0.02,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  pooled   +0.02 [ -0.00,  +0.04]  sign 6/2 p=0.29",
+    "text": "+0.02"
+   }
+  },
+  "write": {
+   "L T2": {
+    "value": -0.35,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  T2       -0.35 [ -0.52,  -0.21]  sign 0/17 p=1.5e-05",
+    "text": "-0.35"
+   },
+   "L P": {
+    "value": 1.38,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  P        +1.38 [ +1.06,  +1.71]  sign 66/0 p=2.7e-20",
+    "text": "+1.38"
+   },
+   "L A": {
+    "value": 23.28,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  A       +23.28 [+22.10, +24.45]  sign 1190/0 p=0",
+    "text": "+23.28"
+   },
+   "L pooled": {
+    "value": 8.1,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-L  pooled   +8.10 [ +7.66,  +8.53]  sign 1183/10 p=0",
+    "text": "+8.10"
+   },
+   "W T2": {
+    "value": -0.33,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  T2       -0.33 [ -0.52,  -0.17]  sign 2/18 p=0.0004",
+    "text": "-0.33"
+   },
+   "W P": {
+    "value": 0.4,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  P        +0.40 [ +0.23,  +0.58]  sign 19/0 p=3.8e-06",
+    "text": "+0.40"
+   },
+   "W A": {
+    "value": -0.91,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  A        -0.91 [ -1.21,  -0.62]  sign 6/49 p=1.8e-09",
+    "text": "-0.91"
+   },
+   "W pooled": {
+    "value": -0.28,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-W  pooled   -0.28 [ -0.43,  -0.14]  sign 26/57 p=0.00088",
+    "text": "-0.28"
+   },
+   "N T2": {
+    "value": 0.02,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  T2       +0.02 [ +0.00,  +0.06]  sign 1/0 p=1",
+    "text": "+0.02"
+   },
+   "N P": {
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  P        +0.00 [ +0.00,  +0.00]  sign 0/0 p=1",
+    "text": "+0.00"
+   },
+   "N A": {
+    "value": 0.04,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  A        +0.04 [ +0.00,  +0.10]  sign 2/0 p=0.5",
+    "text": "+0.04"
+   },
+   "N pooled": {
+    "value": 0.02,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  V-N  pooled   +0.02 [ +0.00,  +0.05]  sign 3/0 p=0.25",
+    "text": "+0.02"
+   }
+  }
+ },
+ "pcm": {
+  "VSA x1": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x1     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x1     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x1     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.000",
+    "text": "1.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x1     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x1     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.000",
+    "text": "1.0000"
+   }
+  ],
+  "Trep x1": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   }
+  ],
+  "T1 x1": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x1     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   }
+  ],
+  "VSA x2": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x2     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.001",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x2     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.001",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x2     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.001",
+    "text": "1.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x2     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.001",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x2     1.0000   1.0000   1.0000   1.0000   1.0000   0.000 0.000 0.000 0.000 0.001",
+    "text": "1.0000"
+   }
+  ],
+  "Trep x2": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x2     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x2     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x2     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x2     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x2     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   }
+  ],
+  "T1 x2": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x2     1.0000   0.9998   0.9998   0.9990   0.9927",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 0.9998,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x2     1.0000   0.9998   0.9998   0.9990   0.9927",
+    "text": "0.9998"
+   },
+   {
+    "time": "1 d",
+    "value": 0.9998,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x2     1.0000   0.9998   0.9998   0.9990   0.9927",
+    "text": "0.9998"
+   },
+   {
+    "time": "30 d",
+    "value": 0.999,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x2     1.0000   0.9998   0.9998   0.9990   0.9927",
+    "text": "0.9990"
+   },
+   {
+    "time": "1 y",
+    "value": 0.9927,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x2     1.0000   0.9998   0.9998   0.9990   0.9927",
+    "text": "0.9927"
+   }
+  ],
+  "VSA x4": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x4     1.0000   1.0000   1.0000   1.0000   1.0000   0.002 0.004 0.010 0.021 0.032",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x4     1.0000   1.0000   1.0000   1.0000   1.0000   0.002 0.004 0.010 0.021 0.032",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x4     1.0000   1.0000   1.0000   1.0000   1.0000   0.002 0.004 0.010 0.021 0.032",
+    "text": "1.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x4     1.0000   1.0000   1.0000   1.0000   1.0000   0.002 0.004 0.010 0.021 0.032",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x4     1.0000   1.0000   1.0000   1.0000   1.0000   0.002 0.004 0.010 0.021 0.032",
+    "text": "1.0000"
+   }
+  ],
+  "Trep x4": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x4     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x4     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x4     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x4     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x4     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   }
+  ],
+  "T1 x4": [
+   {
+    "time": "60 s",
+    "value": 0.9835,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x4     0.9835   0.9613   0.8955   0.7931   0.6972",
+    "text": "0.9835"
+   },
+   {
+    "time": "1 h",
+    "value": 0.9613,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x4     0.9835   0.9613   0.8955   0.7931   0.6972",
+    "text": "0.9613"
+   },
+   {
+    "time": "1 d",
+    "value": 0.8955,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x4     0.9835   0.9613   0.8955   0.7931   0.6972",
+    "text": "0.8955"
+   },
+   {
+    "time": "30 d",
+    "value": 0.7931,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x4     0.9835   0.9613   0.8955   0.7931   0.6972",
+    "text": "0.7931"
+   },
+   {
+    "time": "1 y",
+    "value": 0.6972,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x4     0.9835   0.9613   0.8955   0.7931   0.6972",
+    "text": "0.6972"
+   }
+  ],
+  "VSA x8": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x8     1.0000   0.9998   0.9977   0.9860   0.9445   0.076 0.086 0.101 0.123 0.140",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 0.9998,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x8     1.0000   0.9998   0.9977   0.9860   0.9445   0.076 0.086 0.101 0.123 0.140",
+    "text": "0.9998"
+   },
+   {
+    "time": "1 d",
+    "value": 0.9977,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x8     1.0000   0.9998   0.9977   0.9860   0.9445   0.076 0.086 0.101 0.123 0.140",
+    "text": "0.9977"
+   },
+   {
+    "time": "30 d",
+    "value": 0.986,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x8     1.0000   0.9998   0.9977   0.9860   0.9445   0.076 0.086 0.101 0.123 0.140",
+    "text": "0.9860"
+   },
+   {
+    "time": "1 y",
+    "value": 0.9445,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x8     1.0000   0.9998   0.9977   0.9860   0.9445   0.076 0.086 0.101 0.123 0.140",
+    "text": "0.9445"
+   }
+  ],
+  "Trep x8": [
+   {
+    "time": "60 s",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x8     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x8     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x8     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x8     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 1.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x8     1.0000   1.0000   1.0000   1.0000   1.0000",
+    "text": "1.0000"
+   }
+  ],
+  "T1 x8": [
+   {
+    "time": "60 s",
+    "value": 0.4282,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x8     0.4282   0.3696   0.3107   0.2314   0.1920",
+    "text": "0.4282"
+   },
+   {
+    "time": "1 h",
+    "value": 0.3696,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x8     0.4282   0.3696   0.3107   0.2314   0.1920",
+    "text": "0.3696"
+   },
+   {
+    "time": "1 d",
+    "value": 0.3107,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x8     0.4282   0.3696   0.3107   0.2314   0.1920",
+    "text": "0.3107"
+   },
+   {
+    "time": "30 d",
+    "value": 0.2314,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x8     0.4282   0.3696   0.3107   0.2314   0.1920",
+    "text": "0.2314"
+   },
+   {
+    "time": "1 y",
+    "value": 0.192,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x8     0.4282   0.3696   0.3107   0.2314   0.1920",
+    "text": "0.1920"
+   }
+  ],
+  "VSA x16": [
+   {
+    "time": "60 s",
+    "value": 0.0304,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x16    0.0304   0.0285   0.0090   0.0015   0.0002   0.240 0.241 0.256 0.276 0.291",
+    "text": "0.0304"
+   },
+   {
+    "time": "1 h",
+    "value": 0.0285,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x16    0.0304   0.0285   0.0090   0.0015   0.0002   0.240 0.241 0.256 0.276 0.291",
+    "text": "0.0285"
+   },
+   {
+    "time": "1 d",
+    "value": 0.009,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x16    0.0304   0.0285   0.0090   0.0015   0.0002   0.240 0.241 0.256 0.276 0.291",
+    "text": "0.0090"
+   },
+   {
+    "time": "30 d",
+    "value": 0.0015,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x16    0.0304   0.0285   0.0090   0.0015   0.0002   0.240 0.241 0.256 0.276 0.291",
+    "text": "0.0015"
+   },
+   {
+    "time": "1 y",
+    "value": 0.0002,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x16    0.0304   0.0285   0.0090   0.0015   0.0002   0.240 0.241 0.256 0.276 0.291",
+    "text": "0.0002"
+   }
+  ],
+  "Trep x16": [
+   {
+    "time": "60 s",
+    "value": 0.9994,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x16    0.9994   0.9983   0.9969   0.9879   0.9786",
+    "text": "0.9994"
+   },
+   {
+    "time": "1 h",
+    "value": 0.9983,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x16    0.9994   0.9983   0.9969   0.9879   0.9786",
+    "text": "0.9983"
+   },
+   {
+    "time": "1 d",
+    "value": 0.9969,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x16    0.9994   0.9983   0.9969   0.9879   0.9786",
+    "text": "0.9969"
+   },
+   {
+    "time": "30 d",
+    "value": 0.9879,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x16    0.9994   0.9983   0.9969   0.9879   0.9786",
+    "text": "0.9879"
+   },
+   {
+    "time": "1 y",
+    "value": 0.9786,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x16    0.9994   0.9983   0.9969   0.9879   0.9786",
+    "text": "0.9786"
+   }
+  ],
+  "T1 x16": [
+   {
+    "time": "60 s",
+    "value": 0.0509,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x16    0.0509   0.0526   0.0385   0.0339   0.0291",
+    "text": "0.0509"
+   },
+   {
+    "time": "1 h",
+    "value": 0.0526,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x16    0.0509   0.0526   0.0385   0.0339   0.0291",
+    "text": "0.0526"
+   },
+   {
+    "time": "1 d",
+    "value": 0.0385,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x16    0.0509   0.0526   0.0385   0.0339   0.0291",
+    "text": "0.0385"
+   },
+   {
+    "time": "30 d",
+    "value": 0.0339,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x16    0.0509   0.0526   0.0385   0.0339   0.0291",
+    "text": "0.0339"
+   },
+   {
+    "time": "1 y",
+    "value": 0.0291,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x16    0.0509   0.0526   0.0385   0.0339   0.0291",
+    "text": "0.0291"
+   }
+  ],
+  "VSA x32": [
+   {
+    "time": "60 s",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x32    0.0000   0.0000   0.0000   0.0000   0.0000   0.370 0.359 0.365 0.374 0.382",
+    "text": "0.0000"
+   },
+   {
+    "time": "1 h",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x32    0.0000   0.0000   0.0000   0.0000   0.0000   0.370 0.359 0.365 0.374 0.382",
+    "text": "0.0000"
+   },
+   {
+    "time": "1 d",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x32    0.0000   0.0000   0.0000   0.0000   0.0000   0.370 0.359 0.365 0.374 0.382",
+    "text": "0.0000"
+   },
+   {
+    "time": "30 d",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x32    0.0000   0.0000   0.0000   0.0000   0.0000   0.370 0.359 0.365 0.374 0.382",
+    "text": "0.0000"
+   },
+   {
+    "time": "1 y",
+    "value": 0.0,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  VSA   x32    0.0000   0.0000   0.0000   0.0000   0.0000   0.370 0.359 0.365 0.374 0.382",
+    "text": "0.0000"
+   }
+  ],
+  "Trep x32": [
+   {
+    "time": "60 s",
+    "value": 0.6367,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x32    0.6367   0.7140   0.6673   0.5953   0.5316",
+    "text": "0.6367"
+   },
+   {
+    "time": "1 h",
+    "value": 0.714,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x32    0.6367   0.7140   0.6673   0.5953   0.5316",
+    "text": "0.7140"
+   },
+   {
+    "time": "1 d",
+    "value": 0.6673,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x32    0.6367   0.7140   0.6673   0.5953   0.5316",
+    "text": "0.6673"
+   },
+   {
+    "time": "30 d",
+    "value": 0.5953,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x32    0.6367   0.7140   0.6673   0.5953   0.5316",
+    "text": "0.5953"
+   },
+   {
+    "time": "1 y",
+    "value": 0.5316,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  Trep  x32    0.6367   0.7140   0.6673   0.5953   0.5316",
+    "text": "0.5316"
+   }
+  ],
+  "T1 x32": [
+   {
+    "time": "60 s",
+    "value": 0.0069,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x32    0.0069   0.0136   0.0090   0.0096   0.0094",
+    "text": "0.0069"
+   },
+   {
+    "time": "1 h",
+    "value": 0.0136,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x32    0.0069   0.0136   0.0090   0.0096   0.0094",
+    "text": "0.0136"
+   },
+   {
+    "time": "1 d",
+    "value": 0.009,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x32    0.0069   0.0136   0.0090   0.0096   0.0094",
+    "text": "0.0090"
+   },
+   {
+    "time": "30 d",
+    "value": 0.0096,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x32    0.0069   0.0136   0.0090   0.0096   0.0094",
+    "text": "0.0096"
+   },
+   {
+    "time": "1 y",
+    "value": 0.0094,
+    "file": "../results/vsassm/results/b26_verdict.txt",
+    "line": "  T1    x32    0.0069   0.0136   0.0090   0.0096   0.0094",
+    "text": "0.0094"
+   }
+  ]
+ }
+}

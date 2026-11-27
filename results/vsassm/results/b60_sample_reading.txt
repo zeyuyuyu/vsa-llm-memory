@@ -1,0 +1,70 @@
+# B60 sample reading by the AI-assisted process (not independent, not a hand reading): Qwen3-8B and e5-base-v2,
+# the R1-V16 cell with the lowest STORE - LAMc; 10 queries only LAMc answers right and 10 only the store answers
+# right, drawn with seed 60 (rep, alias, stored label, gold value, store answer, LAMc answer). Notes at the end.
+
+## qwen8 M=256 V=16 bpf=8: STORE - LAMc -11.05; LAMc cfg ['flat', 'V', 'whiten', 'pca', 10.0, 1]; only LAMc right 1042, only store right 521
+  only LAMc right: (rep, alias, stored label, gold, store answer, LAMc answer)
+    (0, 'Rondonia state', 'Rondônia', 15, 6, 15)
+    (8, 'Peter Joseph Donohue', 'Pete Donohue', 11, 8, 11)
+    (19, 'Brokedown Melody', 'A Brokedown Melody', 11, 1, 11)
+    (3, 'Bridget Ireton', 'Bridget Bendish', 5, 4, 5)
+    (19, 'Björn Lars Böhning', 'Björn Böhning', 0, 8, 0)
+    (1, 'United Kingdom of Great Britain', 'Great Britain', 6, 3, 6)
+    (19, 'Snow White and the 7 Dwarfs', 'Snow White and the Seven Dwarfs', 6, 14, 6)
+    (7, 'Egyptian', 'The Egyptian', 3, 10, 3)
+    (19, 'Ate', 'Atë', 9, 13, 9)
+    (17, 'Brokedown Melody', 'A Brokedown Melody', 9, 2, 9)
+  only store right: (rep, alias, stored label, gold, store answer, LAMc answer)
+    (18, 'Gaurdi', 'Francesco Guardi', 5, 5, 8)
+    (8, 'Guyane', 'French Guiana', 11, 11, 10)
+    (7, 'mnw', 'Mon', 1, 1, 9)
+    (15, 'Jelaluddin Rumi', 'Rumi', 0, 0, 5)
+    (7, 'Wright, Kansas', 'Wright', 1, 1, 0)
+    (11, 'Eriu', 'Ériu', 7, 7, 15)
+    (13, 'You Ri', 'Youri Messen-Jaschin', 11, 11, 13)
+    (0, 'Mark Thomas Vande Hei', 'Mark T. Vande Hei', 11, 11, 13)
+    (5, 'Matthew Whitfield Moralee', 'Matt Moralee', 14, 14, 2)
+    (11, 'Tournament Players Championship', 'The Players Championship', 15, 15, 11)
+## e5 M=256 V=16 bpf=8: STORE - LAMc -15.19; LAMc cfg ['flat', 'V', 'whiten', 'pca', 10.0, 1]; only LAMc right 1241, only store right 525
+  only LAMc right: (rep, alias, stored label, gold, store answer, LAMc answer)
+    (0, 'Eiríkr', 'Eric Anundsson', 13, 5, 13)
+    (7, 'Ofen', 'Budapest', 11, 9, 11)
+    (19, 'Djalal-od-Din Rumi', 'Rumi', 1, 8, 1)
+    (3, 'Ciudad de México', 'Mexico City', 11, 6, 11)
+    (19, 'Björn Lars Böhning', 'Björn Böhning', 0, 2, 0)
+    (1, 'Ciudad de México', 'Mexico City', 15, 14, 15)
+    (19, 'Most Beautiful', 'The Most Beautiful', 0, 7, 0)
+    (6, 'Hanoverton, Ohio', 'Hanoverton', 6, 13, 6)
+    (19, 'George Lawrence Mikan III', 'Larry Mikan', 10, 11, 10)
+    (17, 'Himachal', 'Himachal Pradesh', 4, 1, 4)
+  only store right: (rep, alias, stored label, gold, store answer, LAMc answer)
+    (18, 'An Di', 'Emperor An of Jin', 11, 11, 10)
+    (10, 'Clarence Abiodun Peters', 'Clarence Peters', 10, 10, 6)
+    (8, 'Note', 'The Note', 10, 10, 5)
+    (16, 'Tours, France', 'Tours', 7, 7, 6)
+    (9, 'Princess Florestine Gabrielle Antoinette of Monaco', 'Princess Florestine, Duchess of Urach', 9, 9, 11)
+    (12, 'Territory of Bermuda', 'Bermuda', 7, 7, 5)
+    (14, 'Brotherhood', 'The Brotherhood', 6, 6, 8)
+    (0, 'Jeanne III', "Jeanne d'Albret", 11, 11, 3)
+    (7, 'Valdemar III von Schleswig, King of Denmark', 'Valdemar III of Denmark', 7, 7, 10)
+    (12, 'Oak', 'The Oak', 14, 14, 12)
+
+## Notes (AI-assisted process)
+- Both cells are M = 256, V = 16, 8 bits per fact, where LAMc chose flat scales, all V target columns and the
+  corrected whiten principal map (alpha 10, q = 1). The asymmetry is large: 1,042 queries only LAMc answers right
+  against 521 only the store answers right on Qwen3-8B, 1,241 against 525 on e5; it matches the cell differences
+  (-11.05 and -15.19 points). Every listed LAMc-only answer equals the gold value and every store-only answer equals
+  the gold value, so the difference is not a scoring or alignment artefact (the plain-loop scorer agrees to 4e-17).
+- The queries only LAMc reads are mostly close variants of the stored label: added or dropped articles ('Brokedown
+  Melody' / 'A Brokedown Melody', 'Egyptian' / 'The Egyptian', 'Most Beautiful' / 'The Most Beautiful'), diacritics
+  ('Ate' / 'Atë', 'Rondonia state' / 'Rondônia'), longer forms of a name ('Björn Lars Böhning', 'Peter Joseph Donohue'),
+  and a few translations ('Ciudad de México' / 'Mexico City', 'Ofen' / 'Budapest'). These are the aliases whose codes
+  sit closest to their label; the store's matched-filter read loses them to cross-talk at 8 bits per fact with 16
+  values, while the decorrelating least-squares write keeps them.
+- The queries only the store reads are a mixed set: misspellings and abbreviations ('Gaurdi', 'mnw', 'Guyane'),
+  qualified place names ('Wright, Kansas', 'Tours, France', 'Territory of Bermuda'), and article variants that LAMc
+  misses ('The Note', 'The Oak', 'The Brotherhood'). No pattern marks them as a class the store handles and LAMc does
+  not; they look like the fragile reads of memories with low accuracy in this cell (store 22.7 / LAMc 33.7% on Qwen3-8B,
+  28.8 / 43.9% on e5; exact index 82.1 / 77.2%; chance 6.25%).
+- The same entity recurs across stores and encoders (store rep 19 contains 'Björn Böhning' for both encoders;
+  'Brokedown Melody' in reps 17 and 19): stores are drawn from the same entity pool and the value draw is per store.

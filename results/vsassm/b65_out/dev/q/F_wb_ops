@@ -1,0 +1,6 @@
+b65_run.py train --pos ops --arm vsapub --layer 17 --reader out/rd/ops_vsa_lr1e-3_s1/e300 --lr 1e-3 --steps 1000 --eval_every 250 --seed 1 --out out/fin/ops_vsapub_s1
+b65_run.py train --pos ops --arm vsapub --layer 17 --reader out/rd/ops_vsa_lr1e-3_s2/e300 --lr 1e-3 --steps 1000 --eval_every 250 --seed 2 --out out/fin/ops_vsapub_s2
+b65_run.py train --pos ops --arm vsabm --layer 17 --reader out/rd/ops_vsa_lr1e-3_s1/e100 --lr 1e-3 --steps 1000 --eval_every 250 --seed 1 --out out/fin/ops_vsabm_s1
+b65_run.py train --pos ops --arm vsabm --layer 17 --reader out/rd/ops_vsa_lr1e-3_s2/e100 --lr 1e-3 --steps 1000 --eval_every 250 --seed 2 --out out/fin/ops_vsabm_s2
+b65_run.py train --pos ops --arm disc --layer 17 --reader out/rd/ops_disc_lr1e-3_s1/e30 --lr 1e-2 --steps 1000 --eval_every 250 --seed 1 --out out/fin/ops_disc_s1
+b65_run.py train --pos ops --arm disc --layer 17 --reader out/rd/ops_disc_lr1e-3_s2/e30 --lr 1e-2 --steps 1000 --eval_every 250 --seed 2 --out out/fin/ops_disc_s2

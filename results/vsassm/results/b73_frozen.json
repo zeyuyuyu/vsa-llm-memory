@@ -1,0 +1,5768 @@
+{
+ "cells": {
+  "b46|1024|16|16|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     0.5
+    ],
+    "cfg": [
+     4,
+     "3:0.1"
+    ],
+    "dev": 0.1957361473201006,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.3556963732411953,
+    "fam": "RT"
+   }
+  },
+  "b46|1024|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "center",
+    "pca",
+    0.1,
+    2
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "center",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.18691544135187987,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.16869412146847532,
+    "fam": "LM"
+   }
+  },
+  "b46|1024|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    2
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "center",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     2,
+     10.0
+    ],
+    "dev": 0.19605683675302446,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.24090163320807348,
+    "fam": "LM"
+   }
+  },
+  "b46|1024|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "rp",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    16,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:0.1"
+    ],
+    "dev": 0.727187861458728,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.7228202634130808,
+    "fam": "LM"
+   }
+  },
+  "b46|1024|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     10.0
+    ],
+    "dev": 0.7091001355029664,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.671691486097345,
+    "fam": "LM"
+   }
+  },
+  "b46|1024|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    8,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "10:0.1"
+    ],
+    "dev": 0.7160165830578422,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.7058852096091819,
+    "fam": "LM"
+   }
+  },
+  "b46|256|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:1.0"
+    ],
+    "dev": 0.39956360797172935,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.41140387678499585,
+    "fam": "LM"
+   }
+  },
+  "b46|256|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "center",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "LA",
+    2,
+    "onehot",
+    "tern",
+    0.5
+   ],
+   "STORE": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.23864072488783317,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.23017233795562597,
+    "fam": "LM"
+   }
+  },
+  "b46|256|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     Infinity
+    ],
+    "dev": 0.3063928716010445,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.331240113151911,
+    "fam": "LM"
+   }
+  },
+  "b46|256|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    4,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     Infinity
+    ],
+    "dev": 0.8204139743643327,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.7776710447839452,
+    "fam": "RT"
+   }
+  },
+  "b46|256|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.0001,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "A",
+    32,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:1.0"
+    ],
+    "dev": 0.7588661246710373,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:1.0"
+    ],
+    "dev": 0.6864973710863808,
+    "fam": "RT"
+   }
+  },
+  "b46|256|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "10:0.1"
+    ],
+    "dev": 0.8096588448610714,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.7587092293384509,
+    "fam": "LM"
+   }
+  },
+  "bge|1024|16|16|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    4,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.13166324312212227,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.27473367110511265,
+    "fam": "RT"
+   }
+  },
+  "bge|1024|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.13166324312212227,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.23097657696595006,
+    "fam": "RT"
+   }
+  },
+  "bge|1024|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V-1",
+    "whiten",
+    "pca",
+    100.0,
+    2
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.13166324312212227,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "3:0.1"
+    ],
+    "dev": 0.2594130288972692,
+    "fam": "RT"
+   }
+  },
+  "bge|1024|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "center",
+    "pca",
+    10.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    1.0,
+    "avg",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    32,
+    "bits",
+    "clip3",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "center",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.6083411550995386,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "sgn3",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.6428340146503893,
+    "fam": "RT"
+   }
+  },
+  "bge|1024|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.5,
+    "avg",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    8,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "sgn",
+    2,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "center",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.6083411550995386,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "sgn",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     1.0
+    ],
+    "dev": 0.629897988832692,
+    "fam": "LM"
+   }
+  },
+  "bge|1024|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    10.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    1.0,
+    "avg",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    16,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "center",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.6083411550995386,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "sgn",
+    4,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "sgn3",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.6138569139947759,
+    "fam": "RT"
+   }
+  },
+  "bge|256|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     0.5
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.1913924966964015,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.41711522519558814,
+    "fam": "LM"
+   }
+  },
+  "bge|256|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     10.0
+    ],
+    "dev": 0.18455507123538437,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.24603993022044937,
+    "fam": "LM"
+   }
+  },
+  "bge|256|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     0.5
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.1913924966964015,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.3296480615281844,
+    "fam": "LM"
+   }
+  },
+  "bge|256|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    4
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    4,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:1.0"
+    ],
+    "dev": 0.7022105427635373,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    4,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "10:1.0"
+    ],
+    "dev": 0.717005572374298,
+    "fam": "RT"
+   }
+  },
+  "bge|256|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    64,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "10:0.1"
+    ],
+    "dev": 0.6895943229463951,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:1.0"
+    ],
+    "dev": 0.6918042580402769,
+    "fam": "RT"
+   }
+  },
+  "bge|256|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    4
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:1.0"
+    ],
+    "dev": 0.7022105427635373,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:1.0"
+    ],
+    "dev": 0.720524271541587,
+    "fam": "RT"
+   }
+  },
+  "e5|1024|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "center",
+    "L",
+    2,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.16809986985754008,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.28596709324136005,
+    "fam": "LM"
+   }
+  },
+  "e5|1024|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "center",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "A",
+    1,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    0.5
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.16809986985754008,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     0.5
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.18091120634319258,
+    "fam": "LM"
+   }
+  },
+  "e5|1024|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    2
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "L",
+    1,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.16809986985754008,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.23575706549787015,
+    "fam": "LM"
+   }
+  },
+  "e5|1024|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    100.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "rp",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    8,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.642150411758537,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "sgn3",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.6477042837176904,
+    "fam": "LM"
+   }
+  },
+  "e5|1024|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    100.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    4
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    16,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.642150411758537,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     2,
+     10.0
+    ],
+    "dev": 0.6443736375456068,
+    "fam": "LM"
+   }
+  },
+  "e5|1024|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    100.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    4
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.642150411758537,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     4,
+     10.0
+    ],
+    "dev": 0.6401601249116529,
+    "fam": "LM"
+   }
+  },
+  "e5|256|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    2
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "center",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.22777847159791867,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.40567712121989713,
+    "fam": "LM"
+   }
+  },
+  "e5|256|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "center",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     Infinity
+    ],
+    "dev": 0.19195117761561312,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.22546190969270538,
+    "fam": "LM"
+   }
+  },
+  "e5|256|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "center",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "L",
+    1,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.21346219610819814,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    0.5
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.3013608537219871,
+    "fam": "RT"
+   }
+  },
+  "e5|256|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    8,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.7256106359447206,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.7194597180461969,
+    "fam": "RT"
+   }
+  },
+  "e5|256|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    8,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.7220541777379456,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "sgn",
+     1,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "10:0.1"
+    ],
+    "dev": 0.6788522073900588,
+    "fam": "RT"
+   }
+  },
+  "e5|256|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "LA",
+    16,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "sgn",
+    2,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.7220541777379456,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "sgn",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     10.0
+    ],
+    "dev": 0.6893450438797916,
+    "fam": "LM"
+   }
+  },
+  "llama|1024|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:0.1"
+    ],
+    "dev": 0.21160590725836045,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.3793198369953614,
+    "fam": "RT"
+   }
+  },
+  "llama|1024|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     Infinity
+    ],
+    "dev": 0.17933789284934545,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.2229663543680542,
+    "fam": "LM"
+   }
+  },
+  "llama|1024|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "3:0.1"
+    ],
+    "dev": 0.20802746574495753,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.28589367106742825,
+    "fam": "RT"
+   }
+  },
+  "llama|1024|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "center",
+    "pca",
+    0.1,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    4
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "1:0.1"
+    ],
+    "dev": 0.7337967649217868,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:1.0"
+    ],
+    "dev": 0.7345186558963839,
+    "fam": "RT"
+   }
+  },
+  "llama|1024|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.7159332269647797,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    4,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:1.0"
+    ],
+    "dev": 0.6977229203103713,
+    "fam": "RT"
+   }
+  },
+  "llama|1024|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "center",
+    "pca",
+    0.1,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    4,
+    "bits",
+    "clip3",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "1:0.1"
+    ],
+    "dev": 0.7337967649217868,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:1.0"
+    ],
+    "dev": 0.7037509556100857,
+    "fam": "RT"
+   }
+  },
+  "llama|256|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.5,
+    "avg",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.4205892206371645,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.3644718871962446,
+    "fam": "RT"
+   }
+  },
+  "llama|256|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.5,
+    "avg",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "A",
+    1,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.2517458785152006,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.21941610400815936,
+    "fam": "RT"
+   }
+  },
+  "llama|256|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.3431473675419818,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.28657584459615854,
+    "fam": "RT"
+   }
+  },
+  "llama|256|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "1:0.1"
+    ],
+    "dev": 0.8079189506369856,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:1.0"
+    ],
+    "dev": 0.7668514450414627,
+    "fam": "RT"
+   }
+  },
+  "llama|256|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "A",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "1:0.1"
+    ],
+    "dev": 0.7504248740860461,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.7370698868040876,
+    "fam": "LM"
+   }
+  },
+  "llama|256|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "A",
+    2,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "10:0.1"
+    ],
+    "dev": 0.7805505881992459,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:1.0"
+    ],
+    "dev": 0.7311754029708348,
+    "fam": "RT"
+   }
+  },
+  "minilm|1024|16|16|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    4,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "center",
+     "psgn",
+     4,
+     0.5
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.09497564039036525,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:1.0"
+    ],
+    "dev": 0.2642246721536202,
+    "fam": "RT"
+   }
+  },
+  "minilm|1024|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "A",
+    2,
+    "onehot",
+    "tern",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "center",
+     "psgn",
+     4,
+     0.5
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.09497564039036525,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.1967831882150571,
+    "fam": "LM"
+   }
+  },
+  "minilm|1024|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "rp",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "center",
+     "psgn",
+     4,
+     0.5
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.09497564039036525,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:1.0"
+    ],
+    "dev": 0.22348695362741,
+    "fam": "RT"
+   }
+  },
+  "minilm|1024|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    8,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "3:0.1"
+    ],
+    "dev": 0.5684759750422727,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "sgn3",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:1.0"
+    ],
+    "dev": 0.6452474922588656,
+    "fam": "RT"
+   }
+  },
+  "minilm|1024|2|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "rp",
+    0.1,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V",
+    "whiten",
+    "rp",
+    0.03,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "3:0.1"
+    ],
+    "dev": 0.5684759750422727,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "sgn3",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:1.0"
+    ],
+    "dev": 0.5861750188656926,
+    "fam": "RT"
+   }
+  },
+  "minilm|1024|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "3:0.1"
+    ],
+    "dev": 0.5684759750422727,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "center",
+    "sgn3",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "sgn3",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.6082929799092603,
+    "fam": "RT"
+   }
+  },
+  "minilm|256|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     1.0
+    ],
+    "dev": 0.14637098507392649,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.4038483912555462,
+    "fam": "RT"
+   }
+  },
+  "minilm|256|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.1,
+    "avg",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "tern",
+    0.5
+   ],
+   "STORE": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.14193511675223455,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.235388612798027,
+    "fam": "LM"
+   }
+  },
+  "minilm|256|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     1.0
+    ],
+    "dev": 0.14637098507392649,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.3024989169019017,
+    "fam": "RT"
+   }
+  },
+  "minilm|256|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "center",
+    "rp",
+    0.1,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    4,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "sgn",
+    2,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:1.0"
+    ],
+    "dev": 0.6901116804888886,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "sgn",
+     2,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:1.0"
+    ],
+    "dev": 0.7087404201003188,
+    "fam": "RT"
+   }
+  },
+  "minilm|256|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "10:1.0"
+    ],
+    "dev": 0.6975625849795541,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "sgn",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.6817502693315269,
+    "fam": "LM"
+   }
+  },
+  "minilm|256|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "center",
+    "rp",
+    0.1,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:1.0"
+    ],
+    "dev": 0.6901116804888886,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "sgn",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "sgn",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.6863271971760797,
+    "fam": "LM"
+   }
+  },
+  "mistral|1024|16|16|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:0.1"
+    ],
+    "dev": 0.2411331868864375,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.37579910407526235,
+    "fam": "RT"
+   }
+  },
+  "mistral|1024|16|4|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    2
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.21661840227123577,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.20591869898077939,
+    "fam": "LM"
+   }
+  },
+  "mistral|1024|16|8|ideal": {
+   "LAMC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "1:0.1"
+    ],
+    "dev": 0.23804311742398268,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.2735821340537964,
+    "fam": "LM"
+   }
+  },
+  "mistral|1024|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    4
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    8,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:1.0"
+    ],
+    "dev": 0.7415296122948223,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "10:1.0"
+    ],
+    "dev": 0.7347858392165144,
+    "fam": "RT"
+   }
+  },
+  "mistral|1024|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "A",
+    8,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:1.0"
+    ],
+    "dev": 0.7287900613961549,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:1.0"
+    ],
+    "dev": 0.7116327013768826,
+    "fam": "RT"
+   }
+  },
+  "mistral|1024|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    8,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "10:1.0"
+    ],
+    "dev": 0.7387228679079865,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "10:1.0"
+    ],
+    "dev": 0.7212667586916197,
+    "fam": "RT"
+   }
+  },
+  "mistral|256|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:1.0"
+    ],
+    "dev": 0.43547867992131173,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.4122336692828464,
+    "fam": "RT"
+   }
+  },
+  "mistral|256|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V-1",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "avg",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "tern",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     0.5
+    ],
+    "cfg": [
+     2,
+     10.0
+    ],
+    "dev": 0.25093568789206366,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.22498848325162368,
+    "fam": "RT"
+   }
+  },
+  "mistral|256|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.32625298807722186,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.34421848827537055,
+    "fam": "LM"
+   }
+  },
+  "mistral|256|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:1.0"
+    ],
+    "dev": 0.8414466758312683,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     1.0
+    ],
+    "dev": 0.8080506027553603,
+    "fam": "LM"
+   }
+  },
+  "mistral|256|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "sgn",
+    2,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.771908776602229,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "sgn",
+    2,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "sgn",
+     2,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.6790608707441704,
+    "fam": "RT"
+   }
+  },
+  "mistral|256|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:1.0"
+    ],
+    "dev": 0.8037393645455605,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.7665445237538168,
+    "fam": "LM"
+   }
+  },
+  "qwen8|1024|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     Infinity
+    ],
+    "dev": 0.2260407525090585,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     10.0
+    ],
+    "dev": 0.3677710304814888,
+    "fam": "LM"
+   }
+  },
+  "qwen8|1024|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.0001,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V",
+    "whiten",
+    "pca",
+    0.25,
+    "avg",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     0.5
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.18090540244977327,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.21199317719429336,
+    "fam": "LM"
+   }
+  },
+  "qwen8|1024|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "1:0.1"
+    ],
+    "dev": 0.21679844668772094,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAS",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.27890670392130734,
+    "fam": "RT"
+   }
+  },
+  "qwen8|1024|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    4
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    8,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     4,
+     1.0
+    ],
+    "cfg": [
+     4,
+     "3:0.1"
+    ],
+    "dev": 0.7577423602156456,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.7510520875601142,
+    "fam": "RT"
+   }
+  },
+  "qwen8|1024|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.7280787822288403,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.7032030696258448,
+    "fam": "RT"
+   }
+  },
+  "qwen8|1024|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    2
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    2
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    8,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     2,
+     1.0
+    ],
+    "cfg": [
+     2,
+     "3:1.0"
+    ],
+    "dev": 0.7408086297765051,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.7394401864163936,
+    "fam": "RT"
+   }
+  },
+  "qwen8|256|16|16|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.40564589811929874,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.37575875260720637,
+    "fam": "RT"
+   }
+  },
+  "qwen8|256|16|4|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    100.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "center",
+    "rp",
+    0.03,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "center",
+    "A",
+    2,
+    "onehot",
+    "tern",
+    0.5
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.20381121367668606,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.18997445578782154,
+    "fam": "LM"
+   }
+  },
+  "qwen8|256|16|8|ideal": {
+   "LAMC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    10.0,
+    1
+   ],
+   "NLMSC": [
+    "flat",
+    "V",
+    "whiten",
+    "pca",
+    0.5,
+    "avg",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    1,
+    "onehot",
+    "cnt",
+    1.0
+   ],
+   "STORE": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.322125832221025,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "center",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "center",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "3:0.1"
+    ],
+    "dev": 0.30716581534120696,
+    "fam": "RT"
+   }
+  },
+  "qwen8|256|2|16|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    4,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.8189706057829986,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:0.1"
+    ],
+    "dev": 0.7573972423249845,
+    "fam": "RT"
+   }
+  },
+  "qwen8|256|2|4|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    1.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.5,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "LA",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:0.1"
+    ],
+    "dev": 0.7497986733150114,
+    "fam": "PRT"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "center",
+    "lin",
+    2,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "10:1.0"
+    ],
+    "dev": 0.6996202448907285,
+    "fam": "RT"
+   }
+  },
+  "qwen8|256|2|8|ideal": {
+   "LAMC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    100.0,
+    1
+   ],
+   "NLMSC": [
+    "col",
+    "V-1",
+    "whiten",
+    "pca",
+    0.1,
+    "last",
+    1
+   ],
+   "SDMT": [
+    "whiten",
+    "L",
+    2,
+    "bits",
+    "tern",
+    1.0
+   ],
+   "STORE": [
+    "whiten",
+    "lin",
+    1,
+    1.0
+   ],
+   "VSAPC": {
+    "bundle": [
+     "whiten",
+     "plin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     Infinity
+    ],
+    "dev": 0.7889425964437252,
+    "fam": "PLM"
+   },
+   "VSAPCX": "VSAPC",
+   "VSAR": [
+    "center",
+    "lin",
+    4,
+    1.0
+   ],
+   "VSAS": {
+    "bundle": [
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "cfg": [
+     1,
+     "1:1.0"
+    ],
+    "dev": 0.7307542863109346,
+    "fam": "RT"
+   }
+  }
+ },
+ "choice_files_md5": {
+  "b49_choice_b46.json": "ede37833ddd4158d07650060ba49481d",
+  "b49_choice_bge.json": "8ff42e71853700997652e40a29346566",
+  "b49_choice_e5.json": "3c747f99a6ce4631d34cc8a9817c0ff7",
+  "b49_choice_llama.json": "87b44cee1d3162cecaa5df90f07c76f1",
+  "b49_choice_minilm.json": "39cd65b94e350b0d6cdab4a3faf7d39b",
+  "b49_choice_mistral.json": "7183a0298a1bff427ad2b9baafdd3b28",
+  "b49_choice_qwen8.json": "10eb43a4874d490b05e4143764bd6d1e",
+  "b53_choice_b46.json": "abe17bd5b9a8eda2cd4b76f0b2ae2a1f",
+  "b53_choice_bge.json": "057582aa8a1b2493859c2f2d812ddbd2",
+  "b53_choice_e5.json": "13201e70e2bb4848bfb11904d7fcd73a",
+  "b53_choice_llama.json": "1c30be0a7e27f38c07825d2023692bcd",
+  "b53_choice_minilm.json": "96b84bfc81c8db8cebc8f062f12ceb79",
+  "b53_choice_mistral.json": "95efee69e69a173401944262e0510bc1",
+  "b53_choice_qwen8.json": "5505a55390514f8e021a8149d6a7083c",
+  "b56_choice_b46.json": "ca5392460e0a65f7ff5e7501b6da9913",
+  "b56_choice_bge.json": "5da5e27cd60a2cd833a6395f169ff74a",
+  "b56_choice_e5.json": "ae37820bc992854b1d95087916bd2134",
+  "b56_choice_llama.json": "b7cdaa1978305e5c53ed58a83a1467d2",
+  "b56_choice_minilm.json": "4b2d6c5e9c31a3ac7119aef6655824ed",
+  "b56_choice_mistral.json": "82892c3252635aafdab076ed37bde96a",
+  "b56_choice_qwen8.json": "0d2b3aa7d7b1f21685c91de771efa660",
+  "b60_choice_b46.json": "1271374b0abdbe29a0abc7c27db2c3f9",
+  "b60_choice_bge.json": "8a00d483e3a83251139196c4bdc69403",
+  "b60_choice_e5.json": "2c607ecda41f003125e035e3ae6f36d7",
+  "b60_choice_llama.json": "4c46646049c6d04b03608877506bb31f",
+  "b60_choice_minilm.json": "699e2aa760fcde92032787bcdecdef42",
+  "b60_choice_mistral.json": "bf8f8a87fd420cf7d0d24dc883b64626",
+  "b60_choice_qwen8.json": "05a9404f15e862c1ed6b373593b7067e",
+  "b60_choicepc_b46.json": "5f347897e510c8f15638dd5400d70e7a",
+  "b60_choicepc_bge.json": "642a30691d3f373bb7c8e983039a065f",
+  "b60_choicepc_e5.json": "b6163b378f5443c2ac1aa51ecc73ae7e",
+  "b60_choicepc_llama.json": "85a6b81f55ca4f319d691ead0a7abd99",
+  "b60_choicepc_minilm.json": "e0069a4d1b5bf504b44cca2185151852",
+  "b60_choicepc_mistral.json": "ad64449a1eb50e094169832e81fc71dd",
+  "b60_choicepc_qwen8.json": "2433da8c8212d134f5fc5eeb5bc8c33e",
+  "b62_choice_b46.json": "40aa3cb806e5f016aafc7b8da0a8daaa",
+  "b62_choice_bge.json": "3abefdacb18c3fa44c9698f5d20d4cbe",
+  "b62_choice_e5.json": "269e7e7caa734d5791257f8126f32cd4",
+  "b62_choice_llama.json": "c2a05cf05edbe50ae3f7d10ed5017f58",
+  "b62_choice_minilm.json": "094920508fe1d5220ea1c471b32ae4ec",
+  "b62_choice_mistral.json": "e8627d285c4b58f0b905b650a546c6dc",
+  "b62_choice_qwen8.json": "33c847c19c9a0ae3e5e3d2d30c5ce2a9",
+  "b64_choice_b46.json": "1450cb649b6956e08636183e80c855ce",
+  "b64_choice_bge.json": "462592f241a02c7df7cae367daa9cac7",
+  "b64_choice_e5.json": "dacfb09062c5986b956f8efefe127dd4",
+  "b64_choice_llama.json": "4e538b34eb9e4749d91433ca8f46dc4f",
+  "b64_choice_minilm.json": "2cbc38f4686209224d5cc338a24776fa",
+  "b64_choice_mistral.json": "acdd2d37c7bfa3b88e01f3a3e8df05c6",
+  "b64_choice_qwen8.json": "9fae4e675d417ab4c5d6def87eec21ba"
+ },
+ "rule": "PopQA dev choices of the paper runs (B49 / B53 / B56 / B60 / B62 / B64), ideal accounting, R1 cells; VSAPCX source = VSAPC iff its PopQA dev accuracy > VSAS dev accuracy + 0.001 (b60_verdict.add_vsapx)"
+}

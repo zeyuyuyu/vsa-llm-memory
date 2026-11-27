@@ -1,0 +1,25 @@
+# B36: the registered predictions (prereg/B36_keyfree_equal_bits_prereg.md) against the test results
+# (results/b36_verdict.txt, results/b36_check.txt, results/b36_choice_*.json). 7 held, 3 failed in part, 1 failed.
+
+P1  HELD    H1 passes on Qwen3-8B, R1 VSA - BEST between +4 and +10: +6.77 [+5.82, +7.74] (ORACLE +5.66 [+4.79, +6.52]).
+P2  HELD    e5 R1 between -1 and +4: +0.60 [-0.27, +1.43]. (Not predicted: it misses the +2 bar, so H1 does not
+            replicate on e5.)
+P3  FAILED  BEST is the index in >= 8 of 12 R1 cells: 4 of 12 on Qwen3-8B (FBF 3, CM 3, SF 1, SDM 1) and 5 of 12 on
+            e5 (dev choice; recorded in the dev record before the test).
+P4  HELD    every key-free family trails the VSA over R1 by >= 5 (Qwen3-8B): SF +9.10, CM +7.86, BF +13.36, FBF +8.97,
+            SDM +9.86 (BF and SDM >= 8: yes).
+P5  PARTLY  R0 VSA - BEST between -4 and +4: +1.31 [+0.03, +2.62]. FAILED: at M 1,024, V 16, 1 bit per fact BEST (CM)
+            does not lead by >= 2 (9.94 vs VSA 9.92, -0.02).
+P6  HELD    R2 VSA - BEST <= -2, CI below 0, both encoders: -3.88 [-4.23, -3.54] (Qwen3-8B), -6.21 [-6.64, -5.78] (e5);
+            BEST = IDX in 13 of 14 R2 cells on each encoder.
+P7  HELD    RH: +4.04 [+3.30, +4.77] on Qwen3-8B (predicted -1 to +7); -11.13 [-11.97, -10.28] on e5 (predicted < -4).
+P8  HELD    rate at lift 0.25 (Qwen3-8B, ideal): BEST / VSA = 2.27 [0.12, 8.52] (M 256, V 2), 1.36 [1.21, 1.59] (256, 16),
+            8.07 [1.40, 16.87] (1,024, 2), 2.32 [1.93, 2.70] (1,024, 16): >= 1.5 in 3 of 4 (point estimates; two
+            intervals are wide). Per family, the LSH bucket sketch CM reaches the M 256, V 2 target at 2.81 bits per
+            fact, below the VSA's 3.59.
+P9  PARTLY  at 64 bits per fact the best key-free family is >= 10 points below the index in 6 of 8 (M, V); FAILED at
+            V = 2 (M 256: SDM 69.60 vs IDX 74.22, 4.6 points; M 1,024: FBF / SDM 64.87 vs 72.58, 7.7 points).
+P10 HELD    dev choices: CM coarse in 32 / 32 cells at <= 8 bits per fact, SF coarse in 22 / 21 of 32; BF never BEST.
+P11 PARTLY  scorer 0.00e+00, 0 over budget; re-derivation >= 99.97% for SF, CM, BF, FBF and >= 99.85% for SDM (all
+            above the predicted 99% / 98%). Counted as partly only because partial SF tables (23 / 34 prediction sets)
+            are, as registered, not re-derived.

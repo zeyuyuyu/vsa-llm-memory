@@ -1,0 +1,12 @@
+{
+ "prereg": "cc5ae08",
+ "grid": {
+  "d2048_K512_S1": [
+   0.05
+  ],
+  "d2048_K512_S8": [
+   0.9166666666666666
+  ]
+ },
+ "verdict": "P1 gate: S=1 reproduces V-101: False off at [('d2048_K128_S1', None, 0.728), ('d2048_K256_S1', None, 0.219)] ; GATE FAILS: the sharding wrapper changed the unsharded path, so no reading is taken."
+}

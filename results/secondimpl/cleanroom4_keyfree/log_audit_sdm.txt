@@ -1,0 +1,9 @@
+setup qwen8 done 49s
+M256 V16 b8 store 0: N=1453 cost=2036 <= B=2048: True; agreement on non-tied queries 0.9241 (79/183)
+M256 V16 b8 store 1: N=1453 cost=2036 <= B=2048: True; agreement on non-tied queries 0.9318 (88/259)
+M256 V16 b8 store 2: N=1453 cost=2035 <= B=2048: True; agreement on non-tied queries 0.8804 (92/201)
+M256 V16 b8 cfg=['sdm', 'whiten', 'data', '1', 'onehot', '1.0'] budget ok=True mean agreement=0.9121
+M1024 V2 b8 store 0: N=3707 cost=7728 <= B=8192: True; agreement on non-tied queries 1.0000 (678/793)
+M1024 V2 b8 store 1: N=4114 cost=8098 <= B=8192: True; agreement on non-tied queries 1.0000 (840/989)
+M1024 V2 b8 store 2: N=4114 cost=8086 <= B=8192: True; agreement on non-tied queries 1.0000 (747/897)
+M1024 V2 b8 cfg=['sdm', 'whiten', 'data', '4', 'bits', '1.0'] budget ok=True mean agreement=1.0000

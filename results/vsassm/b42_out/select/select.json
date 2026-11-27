@@ -1,0 +1,4219 @@
+{
+ "vq": {
+  "phi2_A": {
+   "cfg": {
+    "cleanup": "hard",
+    "mult": 4,
+    "inw": 1,
+    "lr": 0.0003
+   },
+   "dev": 0.572,
+   "epoch": 2,
+   "file": "phi2_A_vq_cleanuphard_inw1_lr0.0003_mult4.json"
+  },
+  "qwen8_A": {
+   "cfg": {
+    "cleanup": "st",
+    "mult": 1,
+    "inw": 0,
+    "lr": 0.0003
+   },
+   "dev": 0.556,
+   "epoch": 8,
+   "file": "qwen8_A_vq_cleanupst_inw0_lr0.0003_mult1.json"
+  },
+  "phi2_B": {
+   "cfg": {
+    "cleanup": "st",
+    "mult": 1,
+    "inw": 0,
+    "lr": 0.0003
+   },
+   "dev": 0.968,
+   "epoch": 10,
+   "file": "phi2_B_vq_cleanupst_inw0_lr0.0003_mult1.json"
+  },
+  "qwen8_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "mult": 1,
+    "inw": 0,
+    "lr": 0.0003
+   },
+   "dev": 1.0,
+   "epoch": 2,
+   "file": "qwen8_B_vq_cleanuphard_inw0_lr0.0003_mult1.json"
+  },
+  "phi2_C": {
+   "cfg": {
+    "cleanup": "hard",
+    "mult": 4,
+    "inw": 0,
+    "lr": 0.0003
+   },
+   "dev": 0.556,
+   "epoch": 5,
+   "file": "phi2_C_vq_cleanuphard_inw0_lr0.0003_mult4.json"
+  },
+  "qwen8_C": {
+   "cfg": {
+    "cleanup": "hard",
+    "mult": 1,
+    "inw": 1,
+    "lr": 0.001
+   },
+   "dev": 0.544,
+   "epoch": 7,
+   "file": "qwen8_C_vq_cleanuphard_inw1_lr0.001_mult1.json"
+  }
+ },
+ "dkvb": {
+  "phi2_A": {
+   "cfg": {
+    "cleanup": "hard",
+    "mult": 4,
+    "heads": 1,
+    "lr": 0.001
+   },
+   "dev": 0.578,
+   "epoch": 9,
+   "file": "phi2_A_dkvb_cleanuphard_heads1_lr0.001_mult4.json"
+  },
+  "qwen8_A": {
+   "cfg": {
+    "cleanup": "st",
+    "mult": 4,
+    "heads": 8,
+    "lr": 0.001
+   },
+   "dev": 0.57,
+   "epoch": 8,
+   "file": "qwen8_A_dkvb_cleanupst_heads8_lr0.001_mult4.json"
+  },
+  "phi2_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "mult": 1,
+    "heads": 8,
+    "lr": 0.001
+   },
+   "dev": 0.754,
+   "epoch": 2,
+   "file": "phi2_B_dkvb_cleanuphard_heads8_lr0.001_mult1.json"
+  },
+  "qwen8_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "mult": 1,
+    "heads": 8,
+    "lr": 0.001
+   },
+   "dev": 0.992,
+   "epoch": 3,
+   "file": "qwen8_B_dkvb_cleanuphard_heads8_lr0.001_mult1.json"
+  },
+  "phi2_C": {
+   "cfg": {
+    "cleanup": "st",
+    "mult": 4,
+    "heads": 8,
+    "lr": 0.001
+   },
+   "dev": 0.56,
+   "epoch": 10,
+   "file": "phi2_C_dkvb_cleanupst_heads8_lr0.001_mult4.json"
+  },
+  "qwen8_C": {
+   "cfg": {
+    "cleanup": "hard",
+    "mult": 1,
+    "heads": 1,
+    "lr": 0.001
+   },
+   "dev": 0.544,
+   "epoch": 10,
+   "file": "qwen8_C_dkvb_cleanuphard_heads1_lr0.001_mult1.json"
+  }
+ },
+ "gumbel": {
+  "phi2_A": {
+   "cfg": {
+    "cleanup": "st",
+    "div": 1.0,
+    "lr": 0.0003
+   },
+   "dev": 0.548,
+   "epoch": 2,
+   "file": "phi2_A_gumbel_cleanupst_div1_lr0.0003.json"
+  },
+  "qwen8_A": {
+   "cfg": {
+    "cleanup": "hard",
+    "div": 1.0,
+    "lr": 0.0003
+   },
+   "dev": 0.57,
+   "epoch": 5,
+   "file": "qwen8_A_gumbel_cleanuphard_div1_lr0.0003.json"
+  },
+  "phi2_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "div": 0.0,
+    "lr": 0.0003
+   },
+   "dev": 0.966,
+   "epoch": 8,
+   "file": "phi2_B_gumbel_cleanuphard_div0_lr0.0003.json"
+  },
+  "qwen8_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "div": 0.0,
+    "lr": 0.0003
+   },
+   "dev": 1.0,
+   "epoch": 3,
+   "file": "qwen8_B_gumbel_cleanuphard_div0_lr0.0003.json"
+  },
+  "phi2_C": {
+   "cfg": {
+    "cleanup": "hard",
+    "div": 1.0,
+    "lr": 0.0003
+   },
+   "dev": 0.548,
+   "epoch": 6,
+   "file": "phi2_C_gumbel_cleanuphard_div1_lr0.0003.json"
+  },
+  "qwen8_C": {
+   "cfg": {
+    "cleanup": "st",
+    "div": 1.0,
+    "lr": 0.0003
+   },
+   "dev": 0.53,
+   "epoch": 8,
+   "file": "qwen8_C_gumbel_cleanupst_div1_lr0.0003.json"
+  }
+ },
+ "st": {
+  "phi2_A": {
+   "cfg": {
+    "cleanup": "st",
+    "div": 1.0,
+    "lr": 0.001
+   },
+   "dev": 0.556,
+   "epoch": 10,
+   "file": "phi2_A_st_cleanupst_div1_lr0.001.json"
+  },
+  "qwen8_A": {
+   "cfg": {
+    "cleanup": "st",
+    "div": 1.0,
+    "lr": 0.001
+   },
+   "dev": 0.516,
+   "epoch": 1,
+   "file": "qwen8_A_st_cleanupst_div1_lr0.001.json"
+  },
+  "phi2_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "div": 1.0,
+    "lr": 0.0003
+   },
+   "dev": 0.962,
+   "epoch": 10,
+   "file": "phi2_B_st_cleanuphard_div1_lr0.0003.json"
+  },
+  "qwen8_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "div": 0.1,
+    "lr": 0.0003
+   },
+   "dev": 0.998,
+   "epoch": 6,
+   "file": "qwen8_B_st_cleanuphard_div0.1_lr0.0003.json"
+  },
+  "phi2_C": {
+   "cfg": {
+    "cleanup": "st",
+    "div": 1.0,
+    "lr": 0.0003
+   },
+   "dev": 0.544,
+   "epoch": 6,
+   "file": "phi2_C_st_cleanupst_div1_lr0.0003.json"
+  },
+  "qwen8_C": {
+   "cfg": {
+    "cleanup": "st",
+    "div": 1.0,
+    "lr": 0.001
+   },
+   "dev": 0.54,
+   "epoch": 8,
+   "file": "qwen8_C_st_cleanupst_div1_lr0.001.json"
+  }
+ },
+ "cw": {
+  "phi2_A": {
+   "cfg": {
+    "cleanup": "st",
+    "inw": 0,
+    "code": "inst",
+    "lr": 0.0003
+   },
+   "dev": 0.562,
+   "epoch": 4,
+   "file": "phi2_A_cw_cleanupst_codeinst_inw0_lr0.0003.json"
+  },
+  "qwen8_A": {
+   "cfg": {
+    "cleanup": "hard",
+    "inw": 0,
+    "code": "zca",
+    "lr": 0.001
+   },
+   "dev": 0.56,
+   "epoch": 8,
+   "file": "qwen8_A_cw_cleanuphard_codezca_inw0_lr0.001.json"
+  },
+  "phi2_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "inw": 0,
+    "code": "center",
+    "lr": 0.0003
+   },
+   "dev": 0.974,
+   "epoch": 8,
+   "file": "phi2_B_cw_cleanuphard_codecenter_inw0_lr0.0003.json"
+  },
+  "qwen8_B": {
+   "cfg": {
+    "cleanup": "hard",
+    "inw": 0,
+    "code": "center",
+    "lr": 0.0003
+   },
+   "dev": 1.0,
+   "epoch": 3,
+   "file": "qwen8_B_cw_cleanuphard_codecenter_inw0_lr0.0003.json"
+  },
+  "phi2_C": {
+   "cfg": {
+    "cleanup": "hard",
+    "inw": 0,
+    "code": "center",
+    "lr": 0.0003
+   },
+   "dev": 0.55,
+   "epoch": 9,
+   "file": "phi2_C_cw_cleanuphard_codecenter_inw0_lr0.0003.json"
+  },
+  "qwen8_C": {
+   "cfg": {
+    "cleanup": "st",
+    "inw": 0,
+    "code": "zca",
+    "lr": 0.001
+   },
+   "dev": 0.556,
+   "epoch": 8,
+   "file": "qwen8_C_cw_cleanupst_codezca_inw0_lr0.001.json"
+  }
+ },
+ "grids": {
+  "vq": {
+   "phi2_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.538,
+     "epoch": 8,
+     "file": "phi2_A_vq_cleanuphard_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.524,
+     "epoch": 7,
+     "file": "phi2_A_vq_cleanuphard_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.544,
+     "epoch": 5,
+     "file": "phi2_A_vq_cleanuphard_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.546,
+     "epoch": 1,
+     "file": "phi2_A_vq_cleanuphard_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.538,
+     "epoch": 3,
+     "file": "phi2_A_vq_cleanuphard_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 3,
+     "file": "phi2_A_vq_cleanuphard_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.572,
+     "epoch": 2,
+     "file": "phi2_A_vq_cleanuphard_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.556,
+     "epoch": 2,
+     "file": "phi2_A_vq_cleanuphard_inw1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.522,
+     "epoch": 9,
+     "file": "phi2_A_vq_cleanupst_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.552,
+     "epoch": 7,
+     "file": "phi2_A_vq_cleanupst_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.538,
+     "epoch": 7,
+     "file": "phi2_A_vq_cleanupst_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.518,
+     "epoch": 2,
+     "file": "phi2_A_vq_cleanupst_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.526,
+     "epoch": 2,
+     "file": "phi2_A_vq_cleanupst_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 5,
+     "file": "phi2_A_vq_cleanupst_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.54,
+     "epoch": 2,
+     "file": "phi2_A_vq_cleanupst_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.542,
+     "epoch": 2,
+     "file": "phi2_A_vq_cleanupst_inw1_lr0.001_mult4.json"
+    }
+   ],
+   "qwen8_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.54,
+     "epoch": 1,
+     "file": "qwen8_A_vq_cleanuphard_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 9,
+     "file": "qwen8_A_vq_cleanuphard_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.538,
+     "epoch": 6,
+     "file": "qwen8_A_vq_cleanuphard_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 6,
+     "file": "qwen8_A_vq_cleanuphard_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.542,
+     "epoch": 5,
+     "file": "qwen8_A_vq_cleanuphard_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 4,
+     "file": "qwen8_A_vq_cleanuphard_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.544,
+     "epoch": 5,
+     "file": "qwen8_A_vq_cleanuphard_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.528,
+     "epoch": 9,
+     "file": "qwen8_A_vq_cleanuphard_inw1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.556,
+     "epoch": 8,
+     "file": "qwen8_A_vq_cleanupst_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.54,
+     "epoch": 8,
+     "file": "qwen8_A_vq_cleanupst_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.546,
+     "epoch": 9,
+     "file": "qwen8_A_vq_cleanupst_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.536,
+     "epoch": 4,
+     "file": "qwen8_A_vq_cleanupst_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.548,
+     "epoch": 9,
+     "file": "qwen8_A_vq_cleanupst_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 1,
+     "file": "qwen8_A_vq_cleanupst_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.54,
+     "epoch": 9,
+     "file": "qwen8_A_vq_cleanupst_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 2,
+     "file": "qwen8_A_vq_cleanupst_inw1_lr0.001_mult4.json"
+    }
+   ],
+   "phi2_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.962,
+     "epoch": 4,
+     "file": "phi2_B_vq_cleanuphard_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.964,
+     "epoch": 9,
+     "file": "phi2_B_vq_cleanuphard_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.754,
+     "epoch": 1,
+     "file": "phi2_B_vq_cleanuphard_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.638,
+     "epoch": 1,
+     "file": "phi2_B_vq_cleanuphard_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.964,
+     "epoch": 9,
+     "file": "phi2_B_vq_cleanuphard_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.966,
+     "epoch": 9,
+     "file": "phi2_B_vq_cleanuphard_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.932,
+     "epoch": 6,
+     "file": "phi2_B_vq_cleanuphard_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.962,
+     "epoch": 7,
+     "file": "phi2_B_vq_cleanuphard_inw1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.968,
+     "epoch": 10,
+     "file": "phi2_B_vq_cleanupst_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.966,
+     "epoch": 4,
+     "file": "phi2_B_vq_cleanupst_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.754,
+     "epoch": 1,
+     "file": "phi2_B_vq_cleanupst_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.638,
+     "epoch": 1,
+     "file": "phi2_B_vq_cleanupst_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.964,
+     "epoch": 10,
+     "file": "phi2_B_vq_cleanupst_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.97,
+     "epoch": 6,
+     "file": "phi2_B_vq_cleanupst_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.938,
+     "epoch": 6,
+     "file": "phi2_B_vq_cleanupst_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.962,
+     "epoch": 6,
+     "file": "phi2_B_vq_cleanupst_inw1_lr0.001_mult4.json"
+    }
+   ],
+   "qwen8_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 2,
+     "file": "qwen8_B_vq_cleanuphard_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 2,
+     "file": "qwen8_B_vq_cleanuphard_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 7,
+     "file": "qwen8_B_vq_cleanuphard_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.996,
+     "epoch": 10,
+     "file": "qwen8_B_vq_cleanuphard_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_vq_cleanuphard_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_vq_cleanuphard_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 4,
+     "file": "qwen8_B_vq_cleanuphard_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 5,
+     "file": "qwen8_B_vq_cleanuphard_inw1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 2,
+     "file": "qwen8_B_vq_cleanupst_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 4,
+     "file": "qwen8_B_vq_cleanupst_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 7,
+     "file": "qwen8_B_vq_cleanupst_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.994,
+     "epoch": 1,
+     "file": "qwen8_B_vq_cleanupst_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_vq_cleanupst_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 4,
+     "file": "qwen8_B_vq_cleanupst_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 4,
+     "file": "qwen8_B_vq_cleanupst_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.998,
+     "epoch": 5,
+     "file": "qwen8_B_vq_cleanupst_inw1_lr0.001_mult4.json"
+    }
+   ],
+   "phi2_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.536,
+     "epoch": 2,
+     "file": "phi2_C_vq_cleanuphard_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.54,
+     "epoch": 8,
+     "file": "phi2_C_vq_cleanuphard_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.532,
+     "epoch": 5,
+     "file": "phi2_C_vq_cleanuphard_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.516,
+     "epoch": 7,
+     "file": "phi2_C_vq_cleanuphard_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.556,
+     "epoch": 5,
+     "file": "phi2_C_vq_cleanuphard_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.542,
+     "epoch": 10,
+     "file": "phi2_C_vq_cleanuphard_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.532,
+     "epoch": 1,
+     "file": "phi2_C_vq_cleanuphard_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.518,
+     "epoch": 8,
+     "file": "phi2_C_vq_cleanuphard_inw1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.536,
+     "epoch": 7,
+     "file": "phi2_C_vq_cleanupst_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 8,
+     "file": "phi2_C_vq_cleanupst_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.53,
+     "epoch": 1,
+     "file": "phi2_C_vq_cleanupst_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.52,
+     "epoch": 1,
+     "file": "phi2_C_vq_cleanupst_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.55,
+     "epoch": 5,
+     "file": "phi2_C_vq_cleanupst_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 4,
+     "file": "phi2_C_vq_cleanupst_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.532,
+     "epoch": 6,
+     "file": "phi2_C_vq_cleanupst_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 4,
+     "file": "phi2_C_vq_cleanupst_inw1_lr0.001_mult4.json"
+    }
+   ],
+   "qwen8_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.518,
+     "epoch": 2,
+     "file": "qwen8_C_vq_cleanuphard_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.532,
+     "epoch": 4,
+     "file": "qwen8_C_vq_cleanuphard_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.518,
+     "epoch": 2,
+     "file": "qwen8_C_vq_cleanuphard_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.544,
+     "epoch": 7,
+     "file": "qwen8_C_vq_cleanuphard_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.53,
+     "epoch": 10,
+     "file": "qwen8_C_vq_cleanuphard_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.52,
+     "epoch": 5,
+     "file": "qwen8_C_vq_cleanuphard_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.53,
+     "epoch": 7,
+     "file": "qwen8_C_vq_cleanuphard_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.528,
+     "epoch": 10,
+     "file": "qwen8_C_vq_cleanuphard_inw1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.52,
+     "epoch": 2,
+     "file": "qwen8_C_vq_cleanupst_inw0_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.532,
+     "epoch": 7,
+     "file": "qwen8_C_vq_cleanupst_inw0_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.512,
+     "epoch": 1,
+     "file": "qwen8_C_vq_cleanupst_inw1_lr0.0003_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 4,
+     "file": "qwen8_C_vq_cleanupst_inw1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.0003
+     },
+     "dev": 0.54,
+     "epoch": 3,
+     "file": "qwen8_C_vq_cleanupst_inw0_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 0,
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 5,
+     "file": "qwen8_C_vq_cleanupst_inw0_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.0003
+     },
+     "dev": 0.534,
+     "epoch": 6,
+     "file": "qwen8_C_vq_cleanupst_inw1_lr0.0003_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "inw": 1,
+      "lr": 0.001
+     },
+     "dev": 0.536,
+     "epoch": 5,
+     "file": "qwen8_C_vq_cleanupst_inw1_lr0.001_mult4.json"
+    }
+   ]
+  },
+  "dkvb": {
+   "phi2_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.55,
+     "epoch": 3,
+     "file": "phi2_A_dkvb_cleanuphard_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.514,
+     "epoch": 10,
+     "file": "phi2_A_dkvb_cleanuphard_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.578,
+     "epoch": 9,
+     "file": "phi2_A_dkvb_cleanuphard_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.546,
+     "epoch": 6,
+     "file": "phi2_A_dkvb_cleanuphard_heads8_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 6,
+     "file": "phi2_A_dkvb_cleanupst_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 10,
+     "file": "phi2_A_dkvb_cleanupst_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.552,
+     "epoch": 1,
+     "file": "phi2_A_dkvb_cleanupst_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 7,
+     "file": "phi2_A_dkvb_cleanupst_heads8_lr0.001_mult4.json"
+    }
+   ],
+   "qwen8_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.532,
+     "epoch": 10,
+     "file": "qwen8_A_dkvb_cleanuphard_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.514,
+     "epoch": 6,
+     "file": "qwen8_A_dkvb_cleanuphard_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.532,
+     "epoch": 1,
+     "file": "qwen8_A_dkvb_cleanuphard_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.554,
+     "epoch": 4,
+     "file": "qwen8_A_dkvb_cleanuphard_heads8_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.52,
+     "epoch": 8,
+     "file": "qwen8_A_dkvb_cleanupst_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.536,
+     "epoch": 10,
+     "file": "qwen8_A_dkvb_cleanupst_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.544,
+     "epoch": 8,
+     "file": "qwen8_A_dkvb_cleanupst_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.57,
+     "epoch": 8,
+     "file": "qwen8_A_dkvb_cleanupst_heads8_lr0.001_mult4.json"
+    }
+   ],
+   "phi2_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.618,
+     "epoch": 3,
+     "file": "phi2_B_dkvb_cleanuphard_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.754,
+     "epoch": 2,
+     "file": "phi2_B_dkvb_cleanuphard_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.574,
+     "epoch": 7,
+     "file": "phi2_B_dkvb_cleanuphard_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.542,
+     "epoch": 3,
+     "file": "phi2_B_dkvb_cleanuphard_heads8_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.618,
+     "epoch": 3,
+     "file": "phi2_B_dkvb_cleanupst_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.754,
+     "epoch": 2,
+     "file": "phi2_B_dkvb_cleanupst_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.574,
+     "epoch": 7,
+     "file": "phi2_B_dkvb_cleanupst_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.542,
+     "epoch": 3,
+     "file": "phi2_B_dkvb_cleanupst_heads8_lr0.001_mult4.json"
+    }
+   ],
+   "qwen8_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.984,
+     "epoch": 5,
+     "file": "qwen8_B_dkvb_cleanuphard_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.992,
+     "epoch": 3,
+     "file": "qwen8_B_dkvb_cleanuphard_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.98,
+     "epoch": 1,
+     "file": "qwen8_B_dkvb_cleanuphard_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.994,
+     "epoch": 2,
+     "file": "qwen8_B_dkvb_cleanuphard_heads8_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.984,
+     "epoch": 5,
+     "file": "qwen8_B_dkvb_cleanupst_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.988,
+     "epoch": 3,
+     "file": "qwen8_B_dkvb_cleanupst_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.98,
+     "epoch": 1,
+     "file": "qwen8_B_dkvb_cleanupst_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.994,
+     "epoch": 3,
+     "file": "qwen8_B_dkvb_cleanupst_heads8_lr0.001_mult4.json"
+    }
+   ],
+   "phi2_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.55,
+     "epoch": 8,
+     "file": "phi2_C_dkvb_cleanuphard_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 5,
+     "file": "phi2_C_dkvb_cleanuphard_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.504,
+     "epoch": 7,
+     "file": "phi2_C_dkvb_cleanuphard_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 2,
+     "file": "phi2_C_dkvb_cleanuphard_heads8_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.528,
+     "epoch": 1,
+     "file": "phi2_C_dkvb_cleanupst_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.522,
+     "epoch": 2,
+     "file": "phi2_C_dkvb_cleanupst_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 7,
+     "file": "phi2_C_dkvb_cleanupst_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.56,
+     "epoch": 10,
+     "file": "phi2_C_dkvb_cleanupst_heads8_lr0.001_mult4.json"
+    }
+   ],
+   "qwen8_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.544,
+     "epoch": 10,
+     "file": "qwen8_C_dkvb_cleanuphard_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.522,
+     "epoch": 4,
+     "file": "qwen8_C_dkvb_cleanuphard_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 10,
+     "file": "qwen8_C_dkvb_cleanuphard_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.544,
+     "epoch": 5,
+     "file": "qwen8_C_dkvb_cleanuphard_heads8_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 5,
+     "file": "qwen8_C_dkvb_cleanupst_heads1_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 1,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 2,
+     "file": "qwen8_C_dkvb_cleanupst_heads8_lr0.001_mult1.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 1,
+      "lr": 0.001
+     },
+     "dev": 0.536,
+     "epoch": 5,
+     "file": "qwen8_C_dkvb_cleanupst_heads1_lr0.001_mult4.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "mult": 4,
+      "heads": 8,
+      "lr": 0.001
+     },
+     "dev": 0.546,
+     "epoch": 10,
+     "file": "qwen8_C_dkvb_cleanupst_heads8_lr0.001_mult4.json"
+    }
+   ]
+  },
+  "gumbel": {
+   "phi2_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.528,
+     "epoch": 10,
+     "file": "phi2_A_gumbel_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.502,
+     "epoch": 6,
+     "file": "phi2_A_gumbel_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.492,
+     "epoch": 7,
+     "file": "phi2_A_gumbel_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.52,
+     "epoch": 2,
+     "file": "phi2_A_gumbel_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.496,
+     "epoch": 10,
+     "file": "phi2_A_gumbel_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 3,
+     "file": "phi2_A_gumbel_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.51,
+     "epoch": 1,
+     "file": "phi2_A_gumbel_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.518,
+     "epoch": 7,
+     "file": "phi2_A_gumbel_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.52,
+     "epoch": 6,
+     "file": "phi2_A_gumbel_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 6,
+     "file": "phi2_A_gumbel_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.548,
+     "epoch": 2,
+     "file": "phi2_A_gumbel_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.526,
+     "epoch": 3,
+     "file": "phi2_A_gumbel_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "qwen8_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.514,
+     "epoch": 8,
+     "file": "qwen8_A_gumbel_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.524,
+     "epoch": 2,
+     "file": "qwen8_A_gumbel_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.546,
+     "epoch": 2,
+     "file": "qwen8_A_gumbel_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.526,
+     "epoch": 2,
+     "file": "qwen8_A_gumbel_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.57,
+     "epoch": 5,
+     "file": "qwen8_A_gumbel_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.554,
+     "epoch": 9,
+     "file": "qwen8_A_gumbel_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 5,
+     "file": "qwen8_A_gumbel_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.522,
+     "epoch": 2,
+     "file": "qwen8_A_gumbel_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.542,
+     "epoch": 6,
+     "file": "qwen8_A_gumbel_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.528,
+     "epoch": 2,
+     "file": "qwen8_A_gumbel_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.508,
+     "epoch": 6,
+     "file": "qwen8_A_gumbel_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.524,
+     "epoch": 10,
+     "file": "qwen8_A_gumbel_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "phi2_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.966,
+     "epoch": 8,
+     "file": "phi2_B_gumbel_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.96,
+     "epoch": 6,
+     "file": "phi2_B_gumbel_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.958,
+     "epoch": 5,
+     "file": "phi2_B_gumbel_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.494,
+     "epoch": 1,
+     "file": "phi2_B_gumbel_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.96,
+     "epoch": 6,
+     "file": "phi2_B_gumbel_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.96,
+     "epoch": 3,
+     "file": "phi2_B_gumbel_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.966,
+     "epoch": 8,
+     "file": "phi2_B_gumbel_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.96,
+     "epoch": 6,
+     "file": "phi2_B_gumbel_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.958,
+     "epoch": 5,
+     "file": "phi2_B_gumbel_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.494,
+     "epoch": 1,
+     "file": "phi2_B_gumbel_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.96,
+     "epoch": 6,
+     "file": "phi2_B_gumbel_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.96,
+     "epoch": 3,
+     "file": "phi2_B_gumbel_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "qwen8_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_gumbel_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_gumbel_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 4,
+     "file": "qwen8_B_gumbel_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 1,
+     "file": "qwen8_B_gumbel_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 2,
+     "file": "qwen8_B_gumbel_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 1,
+     "file": "qwen8_B_gumbel_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_gumbel_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_gumbel_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 4,
+     "file": "qwen8_B_gumbel_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 1,
+     "file": "qwen8_B_gumbel_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 2,
+     "file": "qwen8_B_gumbel_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 1.0,
+     "epoch": 1,
+     "file": "qwen8_B_gumbel_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "phi2_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.514,
+     "epoch": 5,
+     "file": "phi2_C_gumbel_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.51,
+     "epoch": 3,
+     "file": "phi2_C_gumbel_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.51,
+     "epoch": 10,
+     "file": "phi2_C_gumbel_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.52,
+     "epoch": 9,
+     "file": "phi2_C_gumbel_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.548,
+     "epoch": 6,
+     "file": "phi2_C_gumbel_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 2,
+     "file": "phi2_C_gumbel_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "phi2_C_gumbel_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 6,
+     "file": "phi2_C_gumbel_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.518,
+     "epoch": 7,
+     "file": "phi2_C_gumbel_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.526,
+     "epoch": 10,
+     "file": "phi2_C_gumbel_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.544,
+     "epoch": 7,
+     "file": "phi2_C_gumbel_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 3,
+     "file": "phi2_C_gumbel_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "qwen8_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "qwen8_C_gumbel_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 2,
+     "file": "qwen8_C_gumbel_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.524,
+     "epoch": 8,
+     "file": "qwen8_C_gumbel_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 2,
+     "file": "qwen8_C_gumbel_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.524,
+     "epoch": 8,
+     "file": "qwen8_C_gumbel_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.508,
+     "epoch": 7,
+     "file": "qwen8_C_gumbel_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "qwen8_C_gumbel_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.514,
+     "epoch": 10,
+     "file": "qwen8_C_gumbel_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.522,
+     "epoch": 5,
+     "file": "qwen8_C_gumbel_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.52,
+     "epoch": 2,
+     "file": "qwen8_C_gumbel_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.53,
+     "epoch": 8,
+     "file": "qwen8_C_gumbel_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 7,
+     "file": "qwen8_C_gumbel_cleanupst_div1_lr0.001.json"
+    }
+   ]
+  },
+  "st": {
+   "phi2_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.486,
+     "epoch": 10,
+     "file": "phi2_A_st_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.548,
+     "epoch": 3,
+     "file": "phi2_A_st_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.526,
+     "epoch": 8,
+     "file": "phi2_A_st_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.486,
+     "epoch": 2,
+     "file": "phi2_A_st_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.516,
+     "epoch": 10,
+     "file": "phi2_A_st_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.512,
+     "epoch": 2,
+     "file": "phi2_A_st_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.496,
+     "epoch": 2,
+     "file": "phi2_A_st_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.52,
+     "epoch": 1,
+     "file": "phi2_A_st_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.522,
+     "epoch": 5,
+     "file": "phi2_A_st_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.472,
+     "epoch": 1,
+     "file": "phi2_A_st_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.496,
+     "epoch": 7,
+     "file": "phi2_A_st_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.556,
+     "epoch": 10,
+     "file": "phi2_A_st_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "qwen8_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.472,
+     "epoch": 1,
+     "file": "qwen8_A_st_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.494,
+     "epoch": 4,
+     "file": "qwen8_A_st_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.494,
+     "epoch": 4,
+     "file": "qwen8_A_st_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.498,
+     "epoch": 4,
+     "file": "qwen8_A_st_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.5,
+     "epoch": 5,
+     "file": "qwen8_A_st_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.508,
+     "epoch": 7,
+     "file": "qwen8_A_st_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.494,
+     "epoch": 6,
+     "file": "qwen8_A_st_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.472,
+     "epoch": 1,
+     "file": "qwen8_A_st_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.492,
+     "epoch": 10,
+     "file": "qwen8_A_st_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.476,
+     "epoch": 3,
+     "file": "qwen8_A_st_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.482,
+     "epoch": 9,
+     "file": "qwen8_A_st_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.516,
+     "epoch": 1,
+     "file": "qwen8_A_st_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "phi2_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.5,
+     "epoch": 6,
+     "file": "phi2_B_st_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.514,
+     "epoch": 3,
+     "file": "phi2_B_st_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.788,
+     "epoch": 10,
+     "file": "phi2_B_st_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.494,
+     "epoch": 1,
+     "file": "phi2_B_st_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.962,
+     "epoch": 10,
+     "file": "phi2_B_st_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.566,
+     "epoch": 6,
+     "file": "phi2_B_st_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.5,
+     "epoch": 6,
+     "file": "phi2_B_st_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.514,
+     "epoch": 3,
+     "file": "phi2_B_st_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.788,
+     "epoch": 10,
+     "file": "phi2_B_st_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.494,
+     "epoch": 1,
+     "file": "phi2_B_st_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.962,
+     "epoch": 10,
+     "file": "phi2_B_st_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.566,
+     "epoch": 6,
+     "file": "phi2_B_st_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "qwen8_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.494,
+     "epoch": 1,
+     "file": "qwen8_B_st_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.494,
+     "epoch": 1,
+     "file": "qwen8_B_st_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.998,
+     "epoch": 6,
+     "file": "qwen8_B_st_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.504,
+     "epoch": 1,
+     "file": "qwen8_B_st_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.996,
+     "epoch": 6,
+     "file": "qwen8_B_st_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.584,
+     "epoch": 8,
+     "file": "qwen8_B_st_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.494,
+     "epoch": 1,
+     "file": "qwen8_B_st_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.494,
+     "epoch": 1,
+     "file": "qwen8_B_st_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.998,
+     "epoch": 6,
+     "file": "qwen8_B_st_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.504,
+     "epoch": 1,
+     "file": "qwen8_B_st_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.996,
+     "epoch": 6,
+     "file": "qwen8_B_st_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.584,
+     "epoch": 8,
+     "file": "qwen8_B_st_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "phi2_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "phi2_C_st_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "phi2_C_st_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.52,
+     "epoch": 6,
+     "file": "phi2_C_st_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.508,
+     "epoch": 8,
+     "file": "phi2_C_st_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.534,
+     "epoch": 1,
+     "file": "phi2_C_st_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.516,
+     "epoch": 2,
+     "file": "phi2_C_st_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "phi2_C_st_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "phi2_C_st_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.522,
+     "epoch": 5,
+     "file": "phi2_C_st_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.51,
+     "epoch": 6,
+     "file": "phi2_C_st_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.544,
+     "epoch": 6,
+     "file": "phi2_C_st_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "phi2_C_st_cleanupst_div1_lr0.001.json"
+    }
+   ],
+   "qwen8_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "qwen8_C_st_cleanuphard_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "qwen8_C_st_cleanuphard_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 3,
+     "file": "qwen8_C_st_cleanuphard_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "qwen8_C_st_cleanuphard_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.524,
+     "epoch": 10,
+     "file": "qwen8_C_st_cleanuphard_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.512,
+     "epoch": 9,
+     "file": "qwen8_C_st_cleanuphard_div1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "qwen8_C_st_cleanupst_div0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.0,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "qwen8_C_st_cleanupst_div0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 3,
+     "file": "qwen8_C_st_cleanupst_div0.1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 0.1,
+      "lr": 0.001
+     },
+     "dev": 0.506,
+     "epoch": 1,
+     "file": "qwen8_C_st_cleanupst_div0.1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.0003
+     },
+     "dev": 0.51,
+     "epoch": 4,
+     "file": "qwen8_C_st_cleanupst_div1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "div": 1.0,
+      "lr": 0.001
+     },
+     "dev": 0.54,
+     "epoch": 8,
+     "file": "qwen8_C_st_cleanupst_div1_lr0.001.json"
+    }
+   ]
+  },
+  "cw": {
+   "phi2_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.53,
+     "epoch": 9,
+     "file": "phi2_A_cw_cleanuphard_codecenter_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.554,
+     "epoch": 9,
+     "file": "phi2_A_cw_cleanuphard_codeinst_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.528,
+     "epoch": 9,
+     "file": "phi2_A_cw_cleanuphard_codezca_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.528,
+     "epoch": 1,
+     "file": "phi2_A_cw_cleanuphard_codecenter_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.532,
+     "epoch": 1,
+     "file": "phi2_A_cw_cleanuphard_codeinst_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.538,
+     "epoch": 9,
+     "file": "phi2_A_cw_cleanuphard_codezca_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.556,
+     "epoch": 9,
+     "file": "phi2_A_cw_cleanupst_codecenter_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.562,
+     "epoch": 4,
+     "file": "phi2_A_cw_cleanupst_codeinst_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.54,
+     "epoch": 6,
+     "file": "phi2_A_cw_cleanupst_codezca_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.528,
+     "epoch": 3,
+     "file": "phi2_A_cw_cleanupst_codecenter_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.55,
+     "epoch": 9,
+     "file": "phi2_A_cw_cleanupst_codeinst_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.534,
+     "epoch": 1,
+     "file": "phi2_A_cw_cleanupst_codezca_inw1_lr0.0003.json"
+    }
+   ],
+   "qwen8_A": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.001
+     },
+     "dev": 0.554,
+     "epoch": 7,
+     "file": "qwen8_A_cw_cleanuphard_codecenter_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.001
+     },
+     "dev": 0.544,
+     "epoch": 1,
+     "file": "qwen8_A_cw_cleanuphard_codeinst_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.001
+     },
+     "dev": 0.56,
+     "epoch": 8,
+     "file": "qwen8_A_cw_cleanuphard_codezca_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.001
+     },
+     "dev": 0.556,
+     "epoch": 1,
+     "file": "qwen8_A_cw_cleanuphard_codecenter_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.001
+     },
+     "dev": 0.532,
+     "epoch": 8,
+     "file": "qwen8_A_cw_cleanuphard_codeinst_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 4,
+     "file": "qwen8_A_cw_cleanuphard_codezca_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.001
+     },
+     "dev": 0.546,
+     "epoch": 4,
+     "file": "qwen8_A_cw_cleanupst_codecenter_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.001
+     },
+     "dev": 0.552,
+     "epoch": 3,
+     "file": "qwen8_A_cw_cleanupst_codeinst_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.001
+     },
+     "dev": 0.528,
+     "epoch": 5,
+     "file": "qwen8_A_cw_cleanupst_codezca_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 8,
+     "file": "qwen8_A_cw_cleanupst_codecenter_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.001
+     },
+     "dev": 0.544,
+     "epoch": 6,
+     "file": "qwen8_A_cw_cleanupst_codeinst_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.001
+     },
+     "dev": 0.53,
+     "epoch": 3,
+     "file": "qwen8_A_cw_cleanupst_codezca_inw1_lr0.001.json"
+    }
+   ],
+   "phi2_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.974,
+     "epoch": 8,
+     "file": "phi2_B_cw_cleanuphard_codecenter_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.96,
+     "epoch": 6,
+     "file": "phi2_B_cw_cleanuphard_codeinst_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.65,
+     "epoch": 10,
+     "file": "phi2_B_cw_cleanuphard_codezca_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.94,
+     "epoch": 5,
+     "file": "phi2_B_cw_cleanuphard_codecenter_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.964,
+     "epoch": 6,
+     "file": "phi2_B_cw_cleanuphard_codeinst_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 2,
+     "file": "phi2_B_cw_cleanuphard_codezca_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.974,
+     "epoch": 8,
+     "file": "phi2_B_cw_cleanupst_codecenter_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.96,
+     "epoch": 6,
+     "file": "phi2_B_cw_cleanupst_codeinst_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.65,
+     "epoch": 10,
+     "file": "phi2_B_cw_cleanupst_codezca_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.94,
+     "epoch": 5,
+     "file": "phi2_B_cw_cleanupst_codecenter_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.964,
+     "epoch": 6,
+     "file": "phi2_B_cw_cleanupst_codeinst_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 2,
+     "file": "phi2_B_cw_cleanupst_codezca_inw1_lr0.0003.json"
+    }
+   ],
+   "qwen8_B": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_cw_cleanuphard_codecenter_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 1,
+     "file": "qwen8_B_cw_cleanuphard_codeinst_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.804,
+     "epoch": 10,
+     "file": "qwen8_B_cw_cleanuphard_codezca_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.996,
+     "epoch": 4,
+     "file": "qwen8_B_cw_cleanuphard_codecenter_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.996,
+     "epoch": 4,
+     "file": "qwen8_B_cw_cleanuphard_codeinst_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 3,
+     "file": "qwen8_B_cw_cleanuphard_codezca_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 3,
+     "file": "qwen8_B_cw_cleanupst_codecenter_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 1.0,
+     "epoch": 1,
+     "file": "qwen8_B_cw_cleanupst_codeinst_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.804,
+     "epoch": 10,
+     "file": "qwen8_B_cw_cleanupst_codezca_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.996,
+     "epoch": 4,
+     "file": "qwen8_B_cw_cleanupst_codecenter_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.996,
+     "epoch": 4,
+     "file": "qwen8_B_cw_cleanupst_codeinst_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.506,
+     "epoch": 3,
+     "file": "qwen8_B_cw_cleanupst_codezca_inw1_lr0.0003.json"
+    }
+   ],
+   "phi2_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.55,
+     "epoch": 9,
+     "file": "phi2_C_cw_cleanuphard_codecenter_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.522,
+     "epoch": 2,
+     "file": "phi2_C_cw_cleanuphard_codeinst_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.528,
+     "epoch": 4,
+     "file": "phi2_C_cw_cleanuphard_codezca_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.538,
+     "epoch": 7,
+     "file": "phi2_C_cw_cleanuphard_codecenter_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.528,
+     "epoch": 9,
+     "file": "phi2_C_cw_cleanuphard_codeinst_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.544,
+     "epoch": 8,
+     "file": "phi2_C_cw_cleanuphard_codezca_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.546,
+     "epoch": 7,
+     "file": "phi2_C_cw_cleanupst_codecenter_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.536,
+     "epoch": 1,
+     "file": "phi2_C_cw_cleanupst_codeinst_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.55,
+     "epoch": 1,
+     "file": "phi2_C_cw_cleanupst_codezca_inw0_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.0003
+     },
+     "dev": 0.544,
+     "epoch": 4,
+     "file": "phi2_C_cw_cleanupst_codecenter_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.0003
+     },
+     "dev": 0.536,
+     "epoch": 1,
+     "file": "phi2_C_cw_cleanupst_codeinst_inw1_lr0.0003.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.0003
+     },
+     "dev": 0.526,
+     "epoch": 4,
+     "file": "phi2_C_cw_cleanupst_codezca_inw1_lr0.0003.json"
+    }
+   ],
+   "qwen8_C": [
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 9,
+     "file": "qwen8_C_cw_cleanuphard_codecenter_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.001
+     },
+     "dev": 0.534,
+     "epoch": 4,
+     "file": "qwen8_C_cw_cleanuphard_codeinst_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.001
+     },
+     "dev": 0.544,
+     "epoch": 1,
+     "file": "qwen8_C_cw_cleanuphard_codezca_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.001
+     },
+     "dev": 0.548,
+     "epoch": 2,
+     "file": "qwen8_C_cw_cleanuphard_codecenter_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 10,
+     "file": "qwen8_C_cw_cleanuphard_codeinst_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "hard",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.001
+     },
+     "dev": 0.526,
+     "epoch": 8,
+     "file": "qwen8_C_cw_cleanuphard_codezca_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "center",
+      "lr": 0.001
+     },
+     "dev": 0.532,
+     "epoch": 2,
+     "file": "qwen8_C_cw_cleanupst_codecenter_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "inst",
+      "lr": 0.001
+     },
+     "dev": 0.544,
+     "epoch": 9,
+     "file": "qwen8_C_cw_cleanupst_codeinst_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 0,
+      "code": "zca",
+      "lr": 0.001
+     },
+     "dev": 0.556,
+     "epoch": 8,
+     "file": "qwen8_C_cw_cleanupst_codezca_inw0_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "center",
+      "lr": 0.001
+     },
+     "dev": 0.548,
+     "epoch": 1,
+     "file": "qwen8_C_cw_cleanupst_codecenter_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "inst",
+      "lr": 0.001
+     },
+     "dev": 0.52,
+     "epoch": 5,
+     "file": "qwen8_C_cw_cleanupst_codeinst_inw1_lr0.001.json"
+    },
+    {
+     "cfg": {
+      "cleanup": "st",
+      "inw": 1,
+      "code": "zca",
+      "lr": 0.001
+     },
+     "dev": 0.538,
+     "epoch": 1,
+     "file": "qwen8_C_cw_cleanupst_codezca_inw1_lr0.001.json"
+    }
+   ]
+  }
+ },
+ "missing": []
+}

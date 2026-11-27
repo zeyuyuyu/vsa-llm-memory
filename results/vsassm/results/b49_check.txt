@@ -1,0 +1,30 @@
+lh minilm: learned map re-derived (scipy.linalg.eigh generalized): |cos| with the run's directions median 1.000000, min 1.000000 (r = 256, s = 1.0)
+lh bge: learned map re-derived (scipy.linalg.eigh generalized): |cos| with the run's directions median 1.000000, min 1.000000 (r = 256, s = 1.0)
+lh e5: learned map re-derived (scipy.linalg.eigh generalized): |cos| with the run's directions median 1.000000, min 1.000000 (r = 256, s = 10.0)
+score qwen8: R1 VSA - BEST -6.10, store-level bootstrap [-6.89, -5.32]
+lh bge: LHI LSH predictions re-derived with the re-derived map: agreement 1.0000 on 5520
+lh minilm: LHI LSH predictions re-derived with the re-derived map: agreement 1.0000 on 2857
+lh e5: LHI LSH predictions re-derived with the re-derived map: agreement 1.0000 on 4294
+score b46: R1 VSA - BEST -5.16, store-level bootstrap [-5.79, -4.50]
+score llama: R1 VSA - BEST -3.02, store-level bootstrap [-3.76, -2.30]
+bits: 39200 logged new-family bit counts checked; over budget or off the written rule: 0
+score mistral: R1 VSA - BEST -6.16, store-level bootstrap [-6.87, -5.43]
+score e5: R1 VSA - BEST -4.46, store-level bootstrap [-5.18, -3.75]
+lam minilm: independent LAM re-derivation agreement 1.0000 on 79948 query predictions (lowest cell ('256|2|1|ideal', 1.0))
+score bge: R1 VSA - BEST -5.22, store-level bootstrap [-5.91, -4.56]
+score minilm: R1 VSA - BEST -4.40, store-level bootstrap [-5.14, -3.69]
+score: 784 cells re-scored by plain loops; max |difference| from the verdict 0.00e+00
+lam bge: independent LAM re-derivation agreement 1.0000 on 79948 query predictions (lowest cell ('256|2|1|ideal', 1.0))
+lh mistral: learned map re-derived (scipy.linalg.eigh generalized): |cos| with the run's directions median 1.000000, min 1.000000 (r = 256, s = 1.0)
+lh mistral: LHI LSH predictions re-derived with the re-derived map: agreement 1.0000 on 2808
+lh llama: learned map re-derived (scipy.linalg.eigh generalized): |cos| with the run's directions median 1.000000, min 1.000000 (r = 256, s = 0.01)
+lh b46: learned map re-derived (scipy.linalg.eigh generalized): |cos| with the run's directions median 1.000000, min 1.000000 (r = 256, s = 0.1)
+lh llama: LHI LSH predictions re-derived with the re-derived map: agreement 1.0000 on 10446
+lh b46: LHI LSH predictions re-derived with the re-derived map: agreement 1.0000 on 3133
+lh qwen8: learned map re-derived (scipy.linalg.eigh generalized): |cos| with the run's directions median 1.000000, min 1.000000 (r = 256, s = 1.0)
+lh qwen8: LHI LSH predictions re-derived with the re-derived map: agreement 1.0000 on 3525
+lam e5: independent LAM re-derivation agreement 1.0000 on 79948 query predictions (lowest cell ('256|2|1|ideal', 1.0))
+lam mistral: independent LAM re-derivation agreement 1.0000 on 79948 query predictions (lowest cell ('256|2|1|ideal', 1.0))
+lam b46: independent LAM re-derivation agreement 1.0000 on 79948 query predictions (lowest cell ('256|2|1|ideal', 1.0))
+lam llama: independent LAM re-derivation agreement 0.9996 on 79948 query predictions (lowest cell ('256|16|2|ideal', 0.9825819672131147))
+lam qwen8: independent LAM re-derivation agreement 1.0000 on 79948 query predictions (lowest cell ('256|2|1|ideal', 1.0))

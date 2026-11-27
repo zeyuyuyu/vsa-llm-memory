@@ -1,0 +1,1050 @@
+{
+ "paragraph_sha256": "f8ff99b5329837e4da096ec2",
+ "sentence_sha256": "cabb6de9587df870598828da",
+ "indices": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39
+ ],
+ "undecidable": [],
+ "n_rows": 300,
+ "items": [
+  {
+   "i": 0,
+   "id": "2hop__460946_294723",
+   "question": "Who is the spouse of the Green performer?",
+   "facts": {
+    "hop1": {
+     "s": "Green",
+     "r": "performer",
+     "o": "Steve Hillage",
+     "form": "relational",
+     "q": "Green >> performer",
+     "line": "the performer of \"Green\" is \"Steve Hillage\"."
+    },
+    "hop2": {
+     "s": "Steve Hillage",
+     "r": "spouse",
+     "o": "Miquette Giraudy",
+     "form": "relational",
+     "q": "Steve Hillage >> spouse",
+     "line": "the spouse of \"Steve Hillage\" is \"Miquette Giraudy\"."
+    }
+   },
+   "paragraph": "Green (Steve Hillage album): Green is the fourth studio album by British progressive rock musician Steve Hillage. Written in spring 1977 at the same time as his previous album, the funk-inflected \"Motivation Radio\" (1977), \"Green\" was originally going to be released as \"The Green Album\" as a companion to \"The Red Album\" (the originally intended name for \"Motivation Radio\"). However, this plan was dropped and after a US tour in late 1977, \"Green\" was recorded alone, primarily in Dorking, Surrey, and in London.\nMiquette Giraudy: Miquette Giraudy (born 9 February 1953, Nice, France) is a keyboard player and vocalist, best known for her work in Gong and with her partner Steve Hillage. She and Hillage currently form the core of the ambient band System 7. In addition to her performances in music, she has also worked as an actress, film editor and writer. In each role, she has used different stage names.",
+   "sentence": "Green (Steve Hillage album): Green is the fourth studio album by British progressive rock musician Steve Hillage.\nMiquette Giraudy: Miquette Giraudy (born 9 February 1953, Nice, France) is a keyboard player and vocalist, best known for her work in Gong and with her partner Steve Hillage."
+  },
+  {
+   "i": 1,
+   "id": "2hop__252311_366220",
+   "question": "Who founded the company that distributed the film UHF?",
+   "facts": {
+    "hop1": {
+     "s": "UHF",
+     "r": "distributed by",
+     "o": "Orion Pictures",
+     "form": "relational",
+     "q": "UHF >> distributed by",
+     "line": "the distributed by of \"UHF\" is \"Orion Pictures\"."
+    },
+    "hop2": {
+     "s": "Orion Pictures",
+     "r": "founded by",
+     "o": "Mike Medavoy",
+     "form": "relational",
+     "q": "Orion Pictures >> founded by",
+     "line": "the founded by of \"Orion Pictures\" is \"Mike Medavoy\"."
+    }
+   },
+   "paragraph": "UHF (film): Yankovic and Levey wrote the film after Yankovic's second studio album, looking to apply the musician's parody and comedy to film, and chose the approach of George being a straight man with a vivid imagination to support the inclusion of parodies within the film. They struggled with finding a film production company for financing the film, but were eventually able to get Orion Pictures' support after stating they could keep the film costs under $5 million. Principal filming took place around Tulsa, Oklahoma, with many of the extras for the film from the Tulsa and Dallas, Texas areas.\nMike Medavoy: Morris Mike Medavoy (born January 21, 1941) is an American film producer and executive, co-founder of Orion Pictures (1978), former chairman of TriStar Pictures, former head of production for United Artists (1974–1978) and current chairman and CEO of Phoenix Pictures.",
+   "sentence": "UHF (film): They struggled with finding a film production company for financing the film, but were eventually able to get Orion Pictures' support after stating they could keep the film costs under $5 million.\nMike Medavoy: Morris Mike Medavoy (born January 21, 1941) is an American film producer and executive, co-founder of Orion Pictures (1978), former chairman of TriStar Pictures, former head of production for United Artists (1974–1978) and current chairman and CEO of Phoenix Pictures."
+  },
+  {
+   "i": 2,
+   "id": "2hop__701895_752697",
+   "question": "What administrative territorial entity is the owner of Ciudad Deportiva located?",
+   "facts": {
+    "hop1": {
+     "s": "Ciudad Deportiva",
+     "r": "owned by",
+     "o": "Nuevo Laredo",
+     "form": "relational",
+     "q": "Ciudad Deportiva >> owned by",
+     "line": "the owned by of \"Ciudad Deportiva\" is \"Nuevo Laredo\"."
+    },
+    "hop2": {
+     "s": "Nuevo Laredo",
+     "r": "located in the administrative territorial entity",
+     "o": "Tamaulipas",
+     "form": "relational",
+     "q": "Nuevo Laredo >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Nuevo Laredo\" is \"Tamaulipas\"."
+    }
+   },
+   "paragraph": "Ciudad Deportiva (Nuevo Laredo): The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico. It is home to the Tecolotes de Nuevo Laredo Mexican Baseball League team and the Toros de Nuevo Laredo Mexican professional basketball team from the Liga Nacional de Baloncesto Profesional. The Ciudad Deportiva's Estadio Nuevo Laredo (baseball park) can seat up to 12,000 fans at a baseball game and the Nuevo Laredo Multidisciplinary Gymnasium can seat 4,000 fans at a basketball game.\nNuevo Laredo Municipality: The Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas. Its municipal seat is Nuevo Laredo. The municipality contains more than 60 localities which the most important ones are Nuevo Laredo, El Campanario y Oradel, and Álvarez, the last two being suburbs of the city of Nuevo Laredo. By population, the municipality is the third largest in the state of Tamaulipas (behind Reynosa and Matamoros respectively). The Nuevo Laredo municipality is the northernmost in Tamaulipas, lying at the extreme northwestern tip of its narrow strip of land along the Río Grande. The city of Nuevo Laredo contains approximately 97.5% of the total population of the municipality.",
+   "sentence": "Ciudad Deportiva (Nuevo Laredo): The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico.\nNuevo Laredo Municipality: The Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas."
+  },
+  {
+   "i": 3,
+   "id": "2hop__259228_793698",
+   "question": "Where is Ulrich Walter's employer headquartered?",
+   "facts": {
+    "hop1": {
+     "s": "Ulrich Walter",
+     "r": "employer",
+     "o": "German Aerospace Center",
+     "form": "relational",
+     "q": "Ulrich Walter >> employer",
+     "line": "the employer of \"Ulrich Walter\" is \"German Aerospace Center\"."
+    },
+    "hop2": {
+     "s": "German Aerospace Center",
+     "r": "headquarters location",
+     "o": "Cologne",
+     "form": "relational",
+     "q": "German Aerospace Center >> headquarters location",
+     "line": "the headquarters location of \"German Aerospace Center\" is \"Cologne\"."
+    }
+   },
+   "paragraph": "Ulrich Walter: After two post-doc positions at the Argonne National Laboratory, Chicago, Illinois, and the University of California at Berkeley, California, he was selected in 1987 to join the German astronaut team. From 1988 to 1990, he completed basic training at the German Aerospace Center, and was then nominated to be in the prime crew for the second German Spacelab mission.\nPhilae (spacecraft): The lander is named after the Philae obelisk, which bears a bilingual inscription and was used along with the Rosetta Stone to decipher Egyptian hieroglyphs. \"Philae\" was monitored and operated from DLR's Lander Control Center in Cologne, Germany.",
+   "sentence": "Ulrich Walter: From 1988 to 1990, he completed basic training at the German Aerospace Center, and was then nominated to be in the prime crew for the second German Spacelab mission.\nPhilae (spacecraft): The lander is named after the Philae obelisk, which bears a bilingual inscription and was used along with the Rosetta Stone to decipher Egyptian hieroglyphs."
+  },
+  {
+   "i": 4,
+   "id": "2hop__481349_302087",
+   "question": "Which company owns the manufacturer of Learjet 60?",
+   "facts": {
+    "hop1": {
+     "s": "Learjet 60",
+     "r": "manufacturer",
+     "o": "Bombardier Aerospace",
+     "form": "relational",
+     "q": "Learjet 60 >> manufacturer",
+     "line": "the manufacturer of \"Learjet 60\" is \"Bombardier Aerospace\"."
+    },
+    "hop2": {
+     "s": "Bombardier Aerospace",
+     "r": "owned by",
+     "o": "Bombardier Inc.",
+     "form": "relational",
+     "q": "Bombardier Aerospace >> owned by",
+     "line": "the owned by of \"Bombardier Aerospace\" is \"Bombardier Inc.\"."
+    }
+   },
+   "paragraph": "Learjet 60: The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012.\nList of Bombardier CRJ operators: Produced by Bombardier Aerospace, aerospace division of the Canadian aerospace and defence company Bombardier Inc. the former CRJ100 and CRJ200 series are no longer in production but still in active airline service, while the more recent CRJ700, CRJ900 and CRJ1000 series are in production and in service.",
+   "sentence": "Learjet 60: The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.\nList of Bombardier CRJ operators: Produced by Bombardier Aerospace, aerospace division of the Canadian aerospace and defence company Bombardier Inc."
+  },
+  {
+   "i": 5,
+   "id": "2hop__697790_864352",
+   "question": "Who is the child of Caroline LeRoy's spouse?",
+   "facts": {
+    "hop1": {
+     "s": "Caroline LeRoy",
+     "r": "spouse",
+     "o": "Daniel Webster",
+     "form": "relational",
+     "q": "Caroline LeRoy >> spouse",
+     "line": "the spouse of \"Caroline LeRoy\" is \"Daniel Webster\"."
+    },
+    "hop2": {
+     "s": "Daniel Webster",
+     "r": "child",
+     "o": "Fletcher Webster",
+     "form": "relational",
+     "q": "Daniel Webster >> child",
+     "line": "the child of \"Daniel Webster\" is \"Fletcher Webster\"."
+    }
+   },
+   "paragraph": "Caroline LeRoy: Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster. Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world. Her father was also the first Holland Consul to the United States. Caroline's mother was Hannah Cornell, daughter of the last Royal Attorney General of the State of North Carolina. Caroline was a descendant of Thomas Cornell.\nFletcher Webster: Daniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster. He was educated at Harvard College. During his father's first term as Secretary of State, Fletcher served as Chief Clerk of the United States State Department which, at the time, was the second most powerful office in the State Department. As Chief Clerk, he delivered the news of President William Henry Harrison's death to the new President, John Tyler.",
+   "sentence": "Caroline LeRoy: Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster.\nFletcher Webster: Daniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster."
+  },
+  {
+   "i": 6,
+   "id": "2hop__207476_625987",
+   "question": "Who is the grandmother of Philippe, Duke of Orléans?",
+   "facts": {
+    "hop1": {
+     "s": "Philippe, Duke of Orléans",
+     "r": "father",
+     "o": "Louis XIII",
+     "form": "relational",
+     "q": "Philippe, Duke of Orléans >> father",
+     "line": "the father of \"Philippe, Duke of Orléans\" is \"Louis XIII\"."
+    },
+    "hop2": {
+     "s": "Louis XIII",
+     "r": "mother",
+     "o": "Marie de' Medici",
+     "form": "relational",
+     "q": "Louis XIII of France >> mother",
+     "line": "the mother of \"Louis XIII\" is \"Marie de' Medici\"."
+    }
+   },
+   "paragraph": "Philippe I, Duke of Orléans: Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king.\nLeonora Dori: Leonora Dori Galigaï (19 May 1568 – 8 July 1617) was a French courtier of Italian origin, an influential favourite of the French regent Marie de' Medici, mother of King Louis XIII of France. Galigaï was married to Concino Concini, the later marquis and then marshal d'Ancre, during Marie's reign as Queen Mother and Regent of France.",
+   "sentence": "Philippe I, Duke of Orléans: Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.\nLeonora Dori: Leonora Dori Galigaï (19 May 1568 – 8 July 1617) was a French courtier of Italian origin, an influential favourite of the French regent Marie de' Medici, mother of King Louis XIII of France."
+  },
+  {
+   "i": 7,
+   "id": "2hop__390947_232243",
+   "question": "What is the goal of the group that European Movement Germany is a member of?",
+   "facts": {
+    "hop1": {
+     "s": "European Movement Germany",
+     "r": "member of",
+     "o": "European Movement International",
+     "form": "relational",
+     "q": "European Movement Germany >> member of",
+     "line": "the member of of \"European Movement Germany\" is \"European Movement International\"."
+    },
+    "hop2": {
+     "s": "European Movement International",
+     "r": "movement",
+     "o": "European integration",
+     "form": "relational",
+     "q": "European Movement International >> movement",
+     "line": "the movement of \"European Movement International\" is \"European integration\"."
+    }
+   },
+   "paragraph": "Bernd Hüttemann: Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.\nEuropean Movement International: The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.",
+   "sentence": "Bernd Hüttemann: Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.\nEuropean Movement International: The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
+  },
+  {
+   "i": 8,
+   "id": "2hop__354635_174222",
+   "question": "What company succeeded the owner of Empire Sports Network?",
+   "facts": {
+    "hop1": {
+     "s": "Empire Sports Network",
+     "r": "owned by",
+     "o": "Adelphia Communications Corporation",
+     "form": "relational",
+     "q": "Empire Sports Network >> owned by",
+     "line": "the owned by of \"Empire Sports Network\" is \"Adelphia Communications Corporation\"."
+    },
+    "hop2": {
+     "s": "Adelphia Communications Corporation",
+     "r": "followed by",
+     "o": "Time Warner Cable",
+     "form": "relational",
+     "q": "Adelphia Communications Corporation >> followed by",
+     "line": "the followed by of \"Adelphia Communications Corporation\" is \"Time Warner Cable\"."
+    }
+   },
+   "paragraph": "Empire Sports Network: Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy.\nWindjammer Communications: Windjammer Cable is a small cable company formed by the sale of 25 systems that served 80,000 customers in rural areas that Time Warner Cable acquired from the bankrupt Adelphia. Windjammer was created specifically for this deal and consisted of Boston private-equity concern MAST Capital Management and Jupiter, Fla.-based small cable operator Communications Construction Services (CCS).",
+   "sentence": "Empire Sports Network: Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.\nWindjammer Communications: Windjammer Cable is a small cable company formed by the sale of 25 systems that served 80,000 customers in rural areas that Time Warner Cable acquired from the bankrupt Adelphia."
+  },
+  {
+   "i": 9,
+   "id": "2hop__635187_861533",
+   "question": "What province shares a border with the province where Lago District is located?",
+   "facts": {
+    "hop1": {
+     "s": "Lago District",
+     "r": "located in the administrative territorial entity",
+     "o": "Niassa Province",
+     "form": "relational",
+     "q": "Lago District >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Lago District\" is \"Niassa Province\"."
+    },
+    "hop2": {
+     "s": "Niassa Province",
+     "r": "shares border with",
+     "o": "Cabo Delgado Province",
+     "form": "relational",
+     "q": "Niassa Province >> shares border with",
+     "line": "the shares border with of \"Niassa Province\" is \"Cabo Delgado Province\"."
+    }
+   },
+   "paragraph": "Lago District: Lago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania.\nNiassa Reserve: Niassa Reserve is a nature reserve in Cabo Delgado Province and Niassa Province, Mozambique. Covering over , it is the largest protected area in the country. The reserve is part of the Trans-Frontier Conservation Area and links to the Tanzanian Lukwika-Lumesule Game Reserve. It will connect to the Lake Niassa Reserve when it is completed.",
+   "sentence": "Lago District: Lago District is a district of Niassa Province in north-western Mozambique.\nNiassa Reserve: Niassa Reserve is a nature reserve in Cabo Delgado Province and Niassa Province, Mozambique."
+  },
+  {
+   "i": 10,
+   "id": "2hop__166824_185403",
+   "question": "What league does the team that plays in Stadio Ciro Vigorito play for?",
+   "facts": {
+    "hop1": {
+     "s": "Stadio Ciro Vigorito",
+     "r": "occupant",
+     "o": "Benevento Calcio",
+     "form": "relational",
+     "q": "Stadio Ciro Vigorito >> occupant",
+     "line": "the occupant of \"Stadio Ciro Vigorito\" is \"Benevento Calcio\"."
+    },
+    "hop2": {
+     "s": "Benevento Calcio",
+     "r": "league",
+     "o": "Lega Pro Prima Divisione",
+     "form": "relational",
+     "q": "Benevento Calcio >> league",
+     "line": "the league of \"Benevento Calcio\" is \"Lega Pro Prima Divisione\"."
+    }
+   },
+   "paragraph": "Stadio Ciro Vigorito: Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979.\nCarmelo Imbriani: Carmelo Imbriani (10 February 1976 – 15 February 2013) was an Italian footballer and former coach of Benevento in Lega Pro Prima Divisione.",
+   "sentence": "Stadio Ciro Vigorito: Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy.\nCarmelo Imbriani: Carmelo Imbriani (10 February 1976 – 15 February 2013) was an Italian footballer and former coach of Benevento in Lega Pro Prima Divisione."
+  },
+  {
+   "i": 11,
+   "id": "2hop__698577_851686",
+   "question": "What is a notable work written by the author of The Timothy files?",
+   "facts": {
+    "hop1": {
+     "s": "The Timothy Files",
+     "r": "author",
+     "o": "Lawrence Sanders",
+     "form": "relational",
+     "q": "The Timothy Files >> author",
+     "line": "the author of \"The Timothy Files\" is \"Lawrence Sanders\"."
+    },
+    "hop2": {
+     "s": "Lawrence Sanders",
+     "r": "notable work",
+     "o": "Anderson Tapes",
+     "form": "relational",
+     "q": "Lawrence Sanders >> notable work",
+     "line": "the notable work of \"Lawrence Sanders\" is \"Anderson Tapes\"."
+    }
+   },
+   "paragraph": "The Timothy Files: The Timothy Files is a 1987 best selling work of fiction by Lawrence Sanders. It consists of linked stories featuring Timothy Cone, who works as a hard-boiled type investigator. He is a scruffy character, rough of mouth and demeanor but pure of heart. Cone has trouble with relationships, surviving on a rough-edged on-going affair with his supervisor, and an only slightly softer relationship with his cat Cleo. The stories in the book deal with his successful attempts to find out the truth and put villains behind bars.\nThe Anderson Tapes (novel): The Anderson Tapes is the debut crime fiction novel by Lawrence Sanders, published in 1970. The story revolves around the complicated burglary of an entire upscale New York apartment building by a gang of ex-convicts, who are unaware that the entire operation is under wiretap and camera surveillance by various agencies. The story also introduces the character of NYPD police detective Edward X. Delaney who became Sander's enduring protagonist in his \"Deadly Sin\" series of novels. The book earned Sanders the Mystery Writers of America Edgar Award for best first mystery novel. The same year, it was adapted into a film, directed by Sidney Lumet, with Sean Connery in the title role.",
+   "sentence": "The Timothy Files: The Timothy Files is a 1987 best selling work of fiction by Lawrence Sanders.\nThe Anderson Tapes (novel): The Anderson Tapes is the debut crime fiction novel by Lawrence Sanders, published in 1970."
+  },
+  {
+   "i": 12,
+   "id": "2hop__362107_652514",
+   "question": "In which borough was Callum McManaman born?",
+   "facts": {
+    "hop1": {
+     "s": "Callum McManaman",
+     "r": "place of birth",
+     "o": "Whiston",
+     "form": "relational",
+     "q": "Callum McManaman >> place of birth",
+     "line": "the place of birth of \"Callum McManaman\" is \"Whiston\"."
+    },
+    "hop2": {
+     "s": "Whiston",
+     "r": "located in the administrative territorial entity",
+     "o": "Knowsley",
+     "form": "relational",
+     "q": "Whiston >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Whiston\" is \"Knowsley\"."
+    }
+   },
+   "paragraph": "Callum McManaman: Born in Whiston, Merseyside, lived and brought up in Rainhill, Merseyside, McManaman began his youth career at Everton before being released in 2007 and joining Wigan Athletic. He made his first team debut in 2009, and was the man of the match as they won the FA Cup in 2013. In January 2015, he joined West Bromwich Albion for £4.75 million.\nWhiston, Merseyside: Whiston is a large village and civil parish within the Metropolitan Borough of Knowsley in Merseyside, England. At the 2001 Census the population was recorded as 13,629, (6,560 males and 7,069 females), increasing to 14,263 at the 2011 Census.",
+   "sentence": "Callum McManaman: Born in Whiston, Merseyside, lived and brought up in Rainhill, Merseyside, McManaman began his youth career at Everton before being released in 2007 and joining Wigan Athletic.\nWhiston, Merseyside: Whiston is a large village and civil parish within the Metropolitan Borough of Knowsley in Merseyside, England."
+  },
+  {
+   "i": 13,
+   "id": "2hop__402530_774333",
+   "question": "What other county does the county where Imperial is located share a border with?",
+   "facts": {
+    "hop1": {
+     "s": "Imperial",
+     "r": "located in the administrative territorial entity",
+     "o": "Pecos County",
+     "form": "relational",
+     "q": "Imperial >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Imperial\" is \"Pecos County\"."
+    },
+    "hop2": {
+     "s": "Pecos County",
+     "r": "shares border with",
+     "o": "Crockett County",
+     "form": "relational",
+     "q": "Pecos County >> shares border with",
+     "line": "the shares border with of \"Pecos County\" is \"Crockett County\"."
+    }
+   },
+   "paragraph": "Imperial, Texas: Imperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census.\nLancaster Crossing: Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas. Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.",
+   "sentence": "Imperial, Texas: Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.\nLancaster Crossing: Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas."
+  },
+  {
+   "i": 14,
+   "id": "2hop__195917_575657",
+   "question": "In what county is William W. Blair's birthplace located?",
+   "facts": {
+    "hop1": {
+     "s": "William W. Blair",
+     "r": "place of birth",
+     "o": "Holley",
+     "form": "relational",
+     "q": "William W. Blair >> place of birth",
+     "line": "the place of birth of \"William W. Blair\" is \"Holley\"."
+    },
+    "hop2": {
+     "s": "Holley",
+     "r": "located in the administrative territorial entity",
+     "o": "Orleans County",
+     "form": "relational",
+     "q": "Holley >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Holley\" is \"Orleans County\"."
+    }
+   },
+   "paragraph": "William W. Blair: Blair was born in Holley, New York. In 1839, his family moved to LaSalle County, Illinois. In 1851, Blair encountered missionaries from the Latter Day Saint movement. On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.\nHolley, New York: Holley is a village in the town of Murray in Orleans County, New York, United States. The population was 1,811 at the 2010 census. It is part of the Rochester Metropolitan Statistical Area.",
+   "sentence": "William W. Blair: On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.\nHolley, New York: Holley is a village in the town of Murray in Orleans County, New York, United States."
+  },
+  {
+   "i": 15,
+   "id": "2hop__683835_709167",
+   "question": "What award did the author of The Red Tree receive?",
+   "facts": {
+    "hop1": {
+     "s": "The Red Tree",
+     "r": "author",
+     "o": "Shaun Tan",
+     "form": "relational",
+     "q": "The Red Tree >> author",
+     "line": "the author of \"The Red Tree\" is \"Shaun Tan\"."
+    },
+    "hop2": {
+     "s": "Shaun Tan",
+     "r": "award received",
+     "o": "Academy Award for Best Animated Short Film",
+     "form": "relational",
+     "q": "Shaun Tan >> award received",
+     "line": "the award received of \"Shaun Tan\" is \"Academy Award for Best Animated Short Film\"."
+    }
+   },
+   "paragraph": "The Red Tree (Shaun Tan): The Red Tree (2001), written and illustrated by Shaun Tan, is a picture book that presents a fragmented journey through a dark world. The illustrations are surreal. The text is sparse and matches the dark illustrations.\nPassion Pictures: The company's core business is in commercial and animation output, which includes work for Cartoon Network, music videos for Gorillaz, and the Compare the Market.com commercial campaign featuring Aleksandr Orlov (meerkat). Passion Australia produced \"The Lost Thing\", directed by Andrew Ruhemann and Shaun Tan, which won an Academy Award for Best Animated Short Film in 2011.",
+   "sentence": "The Red Tree (Shaun Tan): The Red Tree (2001), written and illustrated by Shaun Tan, is a picture book that presents a fragmented journey through a dark world.\nPassion Pictures: Passion Australia produced \"The Lost Thing\", directed by Andrew Ruhemann and Shaun Tan, which won an Academy Award for Best Animated Short Film in 2011."
+  },
+  {
+   "i": 16,
+   "id": "2hop__197470_271394",
+   "question": "Where was Tyler MacDuff's child educated?",
+   "facts": {
+    "hop1": {
+     "s": "Tyler MacDuff",
+     "r": "child",
+     "o": "Dana MacDuff",
+     "form": "relational",
+     "q": "Tyler MacDuff >> child",
+     "line": "the child of \"Tyler MacDuff\" is \"Dana MacDuff\"."
+    },
+    "hop2": {
+     "s": "Dana MacDuff",
+     "r": "educated at",
+     "o": "Blair High School",
+     "form": "relational",
+     "q": "Dana MacDuff >> educated at",
+     "line": "the educated at of \"Dana MacDuff\" is \"Blair High School\"."
+    }
+   },
+   "paragraph": "Dana MacDuff: He was born in Pasadena, California, to the actor Tyler MacDuff and the former Beverlie May Anderson (born 1930), who divorced in 1961. He is named for his father's close friend, the actor Dana Andrews. He graduated in 1974 from Blair International Baccalaureate School in Pasadena. Like his father, Dana MacDuff served in the United States Navy, having been on active duty from 1974–1977. He then worked as a page at the American Broadcasting Company. After working in features for a time, he accepted a position as a floor and stage manager with the BBC in Belfast, Northern Ireland. He returned to Hollywood in 1995 to produce films.\nDana MacDuff: He and his older brother, Brandon R. MacDuff (born 1954), a 1972 graduate of Blair High School, have formed Oakdale Pictures, a production company in Reno.",
+   "sentence": "Dana MacDuff: He was born in Pasadena, California, to the actor Tyler MacDuff and the former Beverlie May Anderson (born 1930), who divorced in 1961.\nDana MacDuff: MacDuff (born 1954), a 1972 graduate of Blair High School, have formed Oakdale Pictures, a production company in Reno."
+  },
+  {
+   "i": 17,
+   "id": "2hop__458131_174974",
+   "question": "Who is the spouse of the Rabbit Hole's producer?",
+   "facts": {
+    "hop1": {
+     "s": "Rabbit Hole",
+     "r": "producer",
+     "o": "Nicole Kidman",
+     "form": "relational",
+     "q": "Rabbit Hole >> producer",
+     "line": "the producer of \"Rabbit Hole\" is \"Nicole Kidman\"."
+    },
+    "hop2": {
+     "s": "Nicole Kidman",
+     "r": "spouse",
+     "o": "Keith Urban",
+     "form": "relational",
+     "q": "Nicole Kidman >> spouse",
+     "line": "the spouse of \"Nicole Kidman\" is \"Keith Urban\"."
+    }
+   },
+   "paragraph": "Rabbit Hole (film): Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget.\nPlanet Cake: Planet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines. They have also created a host of ‘stunt’ cakes, the most famous being a realistic replica of the Sydney Opera House for Australia Day 2011, which weighed over 1.3 tons and required 32 cake decorators to make.",
+   "sentence": "Rabbit Hole (film): Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.\nPlanet Cake: Planet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines."
+  },
+  {
+   "i": 18,
+   "id": "2hop__299142_347613",
+   "question": "Who is the child of Sigrid Eskilsdotter's child?",
+   "facts": {
+    "hop1": {
+     "s": "Sigrid Eskilsdotter",
+     "r": "child",
+     "o": "Christina Gyllenstierna",
+     "form": "relational",
+     "q": "Sigrid Eskilsdotter >> child",
+     "line": "the child of \"Sigrid Eskilsdotter\" is \"Christina Gyllenstierna\"."
+    },
+    "hop2": {
+     "s": "Christina Gyllenstierna",
+     "r": "child",
+     "o": "Svante Stensson Sture",
+     "form": "relational",
+     "q": "Christina Gyllenstierna >> child",
+     "line": "the child of \"Christina Gyllenstierna\" is \"Svante Stensson Sture\"."
+    }
+   },
+   "paragraph": "Sigrid Eskilsdotter (Banér): Sigrid Eskilsdotter (Banér) (died 1527), was a Swedish noble, the mother of the Swedish regent Christina Gyllenstierna and the maternal grandmother of King Gustav Vasa of Sweden.\nSigrid Sture: She was the daughter of Svante Stensson Sture and Märta (\"king Martha\") Erikdotter Leijonhufvud, thereby the niece of queen Margaret Leijonhufvud and the granddaughter of regent Christina Gyllenstierna. She married to Ture Pedersson Bielke and became the mother of Svante Turesson Bielke. After the death of her husband in 1577, she succeeded him as royal governor of Stranda hundred. This was an unusual position for a person of her gender in 16th century Sweden, and one she kept until her death over 30 years later. She was, however, not allowed to rule formally, but was forced to appoint male proxies to officially rule in her place.",
+   "sentence": "Sigrid Eskilsdotter (Banér): Sigrid Eskilsdotter (Banér) (died 1527), was a Swedish noble, the mother of the Swedish regent Christina Gyllenstierna and the maternal grandmother of King Gustav Vasa of Sweden.\nSigrid Sture: She was the daughter of Svante Stensson Sture and Märta (\"king Martha\") Erikdotter Leijonhufvud, thereby the niece of queen Margaret Leijonhufvud and the granddaughter of regent Christina Gyllenstierna."
+  },
+  {
+   "i": 19,
+   "id": "2hop__528263_865831",
+   "question": "In which county is Kimbrough Memorial Stadium located?",
+   "facts": {
+    "hop1": {
+     "s": "Kimbrough Memorial Stadium",
+     "r": "located in the administrative territorial entity",
+     "o": "Canyon",
+     "form": "relational",
+     "q": "Kimbrough Memorial Stadium >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Kimbrough Memorial Stadium\" is \"Canyon\"."
+    },
+    "hop2": {
+     "s": "Canyon",
+     "r": "located in the administrative territorial entity",
+     "o": "Randall County",
+     "form": "relational",
+     "q": "Canyon >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Canyon\" is \"Randall County\"."
+    }
+   },
+   "paragraph": "Kimbrough Memorial Stadium: Kimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.\nCanyon, Texas: Canyon is a city in, and the county seat of, Randall County, Texas, United States. The population was 13,303 at the 2010 census. It is part of the Amarillo, Texas, metropolitan statistical area. Canyon is the home of West Texas A&M University and Panhandle–Plains Historical Museum, and the world-famous outdoor musical drama \"Texas\".",
+   "sentence": "Kimbrough Memorial Stadium: It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.\nCanyon, Texas: Canyon is a city in, and the county seat of, Randall County, Texas, United States."
+  },
+  {
+   "i": 20,
+   "id": "2hop__569582_304416",
+   "question": "What record label is the performer of Almost Made Ya signed to?",
+   "facts": {
+    "hop1": {
+     "s": "Almost Made Ya",
+     "r": "performer",
+     "o": "Ali & Gipp",
+     "form": "relational",
+     "q": "Almost Made Ya >> performer",
+     "line": "the performer of \"Almost Made Ya\" is \"Ali & Gipp\"."
+    },
+    "hop2": {
+     "s": "Ali & Gipp",
+     "r": "record label",
+     "o": "Derrty Entertainment",
+     "form": "relational",
+     "q": "Ali & Gipp >> record label",
+     "line": "the record label of \"Ali & Gipp\" is \"Derrty Entertainment\"."
+    }
+   },
+   "paragraph": "Almost Made Ya: Almost Made Ya is an R&B song by American duo Ali & Gipp, for the debut album, \"Kinfolk\" (2007). The song samples Brandy's \"Almost Doesn't Count\". The song is about a relationship between a female and a male; LeToya sings that she is \"almost done\" with her man, that \"they\" need improve the relationship, while the men say about the situation they've been passing. The song leaked on April 13, 2007 and officially released (for commercial purposes) on Sunday, June 13, 2007. The song was written by LeToya Luckett, Jermaine Dupri, Ali Vaskabi-Waski-Jones, Cameron Gipp, Shelly Peiken and Guy Roche\nKinfolk (album): Kinfolk is the debut and only album by American rap duo Ali & Gipp, released on August 14, 2007, through Derrty Entertainment and Universal Records. The first single off the album was already released, called \"Go 'Head\" featuring Chocolate Tai. The second single is \"N da Paint\" featuring Nelly. The third single is \"Work Dat, Twerk Dat\" featuring Murphy Lee. The fourth and final single is \"Almost Made Ya\" featuring LeToya Luckett.",
+   "sentence": "Almost Made Ya: Almost Made Ya is an R&B song by American duo Ali & Gipp, for the debut album, \"Kinfolk\" (2007).\nKinfolk (album): Kinfolk is the debut and only album by American rap duo Ali & Gipp, released on August 14, 2007, through Derrty Entertainment and Universal Records."
+  },
+  {
+   "i": 21,
+   "id": "2hop__505860_650613",
+   "question": "Where was the author of Hannibal and Scipio educated at?",
+   "facts": {
+    "hop1": {
+     "s": "Hannibal and Scipio",
+     "r": "author",
+     "o": "Thomas Nabbes",
+     "form": "relational",
+     "q": "Hannibal and Scipio >> author",
+     "line": "the author of \"Hannibal and Scipio\" is \"Thomas Nabbes\"."
+    },
+    "hop2": {
+     "s": "Thomas Nabbes",
+     "r": "educated at",
+     "o": "Exeter College",
+     "form": "relational",
+     "q": "Thomas Nabbes >> educated at",
+     "line": "the educated at of \"Thomas Nabbes\" is \"Exeter College\"."
+    }
+   },
+   "paragraph": "Hannibal and Scipio: Hannibal and Scipio is a Caroline era stage play, a classical tragedy written by Thomas Nabbes. The play was first performed in 1635 by Queen Henrietta's Men, and was first published in 1637. The first edition of the play contained a cast list of the original production, making the 1637 quarto an important information source on English Renaissance theatre.\nThomas Nabbes: He was born in humble circumstances in Worcestershire, and educated at Exeter College, Oxford in 1621. He left the university without taking a degree, and in about 1630 began a career in London as a dramatist. He was employed at some point in the household of a nobleman near Worcester, and seems to have been of a convivial disposition. He had at least two children, Bridget and William, both of whom died within two years of his death, and were buried with him at St Giles in the Fields.",
+   "sentence": "Hannibal and Scipio: Hannibal and Scipio is a Caroline era stage play, a classical tragedy written by Thomas Nabbes.\nThomas Nabbes: He was born in humble circumstances in Worcestershire, and educated at Exeter College, Oxford in 1621."
+  },
+  {
+   "i": 22,
+   "id": "2hop__821197_368148",
+   "question": "In which county is Southern Maryland Electric Cooperative headquartered?",
+   "facts": {
+    "hop1": {
+     "s": "Southern Maryland Electric Cooperative",
+     "r": "headquarters location",
+     "o": "Hughesville",
+     "form": "relational",
+     "q": "Southern Maryland Electric Cooperative >> headquarters location",
+     "line": "the headquarters location of \"Southern Maryland Electric Cooperative\" is \"Hughesville\"."
+    },
+    "hop2": {
+     "s": "Hughesville",
+     "r": "located in the administrative territorial entity",
+     "o": "Charles County",
+     "form": "relational",
+     "q": "Hughesville >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Hughesville\" is \"Charles County\"."
+    }
+   },
+   "paragraph": "Southern Maryland Electric Cooperative: The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit.\nHughesville, Maryland: Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States. The population was 2,197 at the 2010 census. Truman's Place was listed on the National Register of Historic Places in 1988.",
+   "sentence": "Southern Maryland Electric Cooperative: The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.\nHughesville, Maryland: Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States."
+  },
+  {
+   "i": 23,
+   "id": "2hop__554167_451128",
+   "question": "Who is the child of the Victim of Romance performer?",
+   "facts": {
+    "hop1": {
+     "s": "Victim of Romance",
+     "r": "performer",
+     "o": "Michelle Phillips",
+     "form": "relational",
+     "q": "Victim of Romance >> performer",
+     "line": "the performer of \"Victim of Romance\" is \"Michelle Phillips\"."
+    },
+    "hop2": {
+     "s": "Michelle Phillips",
+     "r": "child",
+     "o": "Chynna Phillips",
+     "form": "relational",
+     "q": "Michelle Phillips >> child",
+     "line": "the child of \"Michelle Phillips\" is \"Chynna Phillips\"."
+    }
+   },
+   "paragraph": "Victim of Romance: Victim of Romance is singer and songwriter Michelle Phillips' first and only solo album, and was released in February 1977 (see 1977 in music). The record was unsuccessful and Phillips (previously with The Mamas & the Papas) then favored her acting career. The front cover photography was by Terry O'Neill.\nWilson Phillips: Wilson Phillips is an American vocal group consisting of Carnie Wilson, Wendy Wilson, and Chynna Phillips, the daughters, respectively, of Brian Wilson of The Beach Boys and of John and Michelle Phillips of The Mamas & the Papas.",
+   "sentence": "Victim of Romance: Victim of Romance is singer and songwriter Michelle Phillips' first and only solo album, and was released in February 1977 (see 1977 in music).\nWilson Phillips: Wilson Phillips is an American vocal group consisting of Carnie Wilson, Wendy Wilson, and Chynna Phillips, the daughters, respectively, of Brian Wilson of The Beach Boys and of John and Michelle Phillips of The Mamas & the Papas."
+  },
+  {
+   "i": 24,
+   "id": "2hop__702496_430061",
+   "question": "What county was Tim Dubois born in?",
+   "facts": {
+    "hop1": {
+     "s": "Tim DuBois",
+     "r": "place of birth",
+     "o": "Southwest City",
+     "form": "relational",
+     "q": "Tim DuBois >> place of birth",
+     "line": "the place of birth of \"Tim DuBois\" is \"Southwest City\"."
+    },
+    "hop2": {
+     "s": "Southwest City",
+     "r": "located in the administrative territorial entity",
+     "o": "McDonald County",
+     "form": "relational",
+     "q": "Southwest City >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Southwest City\" is \"McDonald County\"."
+    }
+   },
+   "paragraph": "Tim DuBois: Tim DuBois (born May 4, 1948 in Southwest City, Missouri) is a Nashville, Tennessee-based music executive. He attended Oklahoma State University and received a B.A. and M.A. in Accounting and in 2016 he was awarded an honorary PHD in Accounting. He then entered into the music business and has taken part in multiple aspects of the industry including songwriting, record labels, management, and production. DuBois has been recognized for numerous honors and awards for his contributions to the music industry.\nSouthwest City, Missouri: Southwest City is a city in McDonald County, Missouri, United States. The population was 937 at the 2010 census, at which time it was a town. It is part of the Fayetteville–Springdale–Rogers, AR-MO Metropolitan Statistical Area and is located in the southwestern corner of the state of Missouri.",
+   "sentence": "Tim DuBois: Tim DuBois (born May 4, 1948 in Southwest City, Missouri) is a Nashville, Tennessee-based music executive.\nSouthwest City, Missouri: Southwest City is a city in McDonald County, Missouri, United States."
+  },
+  {
+   "i": 25,
+   "id": "2hop__549146_223121",
+   "question": "What record label did the person who is part of The Bruce Lee Band start?",
+   "facts": {
+    "hop1": {
+     "s": "The Bruce Lee Band",
+     "r": "has part",
+     "o": "Mike Park",
+     "form": "relational",
+     "q": "The Bruce Lee Band >> has part",
+     "line": "the has part of \"The Bruce Lee Band\" is \"Mike Park\"."
+    },
+    "hop2": {
+     "s": "Mike Park",
+     "r": "record label",
+     "o": "Asian Man Records",
+     "form": "relational",
+     "q": "Mike Park >> record label",
+     "line": "the record label of \"Mike Park\" is \"Asian Man Records\"."
+    }
+   },
+   "paragraph": "The Bruce Lee Band: The Bruce Lee Band (or B. Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits.\nAsian Man Records: Asian Man Records is a DIY record label run by Mike Park in Monte Sereno, California. Park started a record label and began releasing music in 1989 under the name Dill Records, with the Asian Man label established May 1996.",
+   "sentence": "The Bruce Lee Band: Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits.\nAsian Man Records: Asian Man Records is a DIY record label run by Mike Park in Monte Sereno, California."
+  },
+  {
+   "i": 26,
+   "id": "2hop__647996_551681",
+   "question": "What is another notable work made by the author of Miss Sara Sampson?",
+   "facts": {
+    "hop1": {
+     "s": "Miss Sara Sampson",
+     "r": "author",
+     "o": "Gotthold Ephraim Lessing",
+     "form": "relational",
+     "q": "Miss Sara Sampson >> author",
+     "line": "the author of \"Miss Sara Sampson\" is \"Gotthold Ephraim Lessing\"."
+    },
+    "hop2": {
+     "s": "Gotthold Ephraim Lessing",
+     "r": "notable work",
+     "o": "Emilia Galotti",
+     "form": "relational",
+     "q": "Gotthold Ephraim Lessing >> notable work",
+     "line": "the notable work of \"Gotthold Ephraim Lessing\" is \"Emilia Galotti\"."
+    }
+   },
+   "paragraph": "Miss Sara Sampson: Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing. Written in 1755 while the author was living in Potsdam, it is seen by many scholars to be one of the first bourgeois tragedies. In the same year it was represented at Frankfurt-on-the-Oder and was very well received. It was afterwards translated and acted in France, where it also met with success. The play was Lessing's first real success as a playwright and it was in part due to the success of this play that he was asked to be the dramaturg at the German National Theatre in Hamburg.\nEmilia Galotti: Emilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German). The work is a classic example of German \"bürgerliches Trauerspiel\" (bourgeois tragedy). Other works in this category include Schiller's \"Kabale und Liebe\" and Hebbel's \"Maria Magdalene\". The story is based upon the Roman myth of Verginia.",
+   "sentence": "Miss Sara Sampson: Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.\nEmilia Galotti: Emilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German)."
+  },
+  {
+   "i": 27,
+   "id": "2hop__673655_316668",
+   "question": "What instrument is played by the person from The Blackout All-Stars?",
+   "facts": {
+    "hop1": {
+     "s": "The Blackout All-Stars",
+     "r": "has part",
+     "o": "Ray Barretto",
+     "form": "relational",
+     "q": "The Blackout All-Stars >> has part",
+     "line": "the has part of \"The Blackout All-Stars\" is \"Ray Barretto\"."
+    },
+    "hop2": {
+     "s": "Ray Barretto",
+     "r": "instrument",
+     "o": "conga",
+     "form": "relational",
+     "q": "Ray Barretto >> instrument",
+     "line": "the instrument of \"Ray Barretto\" is \"conga\"."
+    }
+   },
+   "paragraph": "The Blackout All-Stars: The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.\nMidnight Blue (Kenny Burrell album): Midnight Blue is a 1963 album by Jazz guitarist Kenny Burrell featuring Stanley Turrentine on tenor saxophone, Major Holley on double bass, Bill English on drums and Ray Barretto on conga, and is one of Burrell's best-known works for Blue Note. \"Jazz Improv\" magazine lists the album among its top five recommended recordings for Burrell, indicating that \"[i]f you need to know 'the Blue Note sound', here it is\". In 2005, NPR included the album in its \"Basic Jazz Library\", describing it as \"one of the great jazzy blues records\". The album has been re-issued by Blue Note and the French label Classics.",
+   "sentence": "The Blackout All-Stars: The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.\nMidnight Blue (Kenny Burrell album): Midnight Blue is a 1963 album by Jazz guitarist Kenny Burrell featuring Stanley Turrentine on tenor saxophone, Major Holley on double bass, Bill English on drums and Ray Barretto on conga, and is one of Burrell's best-known works for Blue Note."
+  },
+  {
+   "i": 28,
+   "id": "2hop__574419_270105",
+   "question": "What is the seat of the county where Van Hook Township is located?",
+   "facts": {
+    "hop1": {
+     "s": "Van Hook Township",
+     "r": "located in the administrative territorial entity",
+     "o": "Mountrail County",
+     "form": "relational",
+     "q": "Van Hook Township >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Van Hook Township\" is \"Mountrail County\"."
+    },
+    "hop2": {
+     "s": "Mountrail County",
+     "r": "capital",
+     "o": "Stanley",
+     "form": "relational",
+     "q": "Mountrail County >> capital",
+     "line": "the capital of \"Mountrail County\" is \"Stanley\"."
+    }
+   },
+   "paragraph": "Van Hook Township, Mountrail County, North Dakota: Van Hook Township is a township in Mountrail County in the U.S. state of North Dakota. At the time of the 2000 Census, its population was 42, and estimated to be 41 as of 2009.\nMountrail County Courthouse: The Mountrail County Courthouse in Stanley, North Dakota was built in 1914 and served Mountrail County as its courthouse continuously since then. It was designed by architects Buechner & Orth in what can be termed Academic Revival architecture and/or Late 19th and 20th Century Revivals architecture. It was listed on the National Register of Historic Places in 1978; a area was included in the listing.",
+   "sentence": "Van Hook Township, Mountrail County, North Dakota: Van Hook Township is a township in Mountrail County in the U.S.\nMountrail County Courthouse: The Mountrail County Courthouse in Stanley, North Dakota was built in 1914 and served Mountrail County as its courthouse continuously since then."
+  },
+  {
+   "i": 29,
+   "id": "2hop__403712_793210",
+   "question": "Who is the father of Edward Baring, 1st Baron Revelstoke's father?",
+   "facts": {
+    "hop1": {
+     "s": "Edward Baring, 1st Baron Revelstoke",
+     "r": "father",
+     "o": "Henry Baring",
+     "form": "relational",
+     "q": "Edward Baring, 1st Baron Revelstoke >> father",
+     "line": "the father of \"Edward Baring, 1st Baron Revelstoke\" is \"Henry Baring\"."
+    },
+    "hop2": {
+     "s": "Henry Baring",
+     "r": "father",
+     "o": "Sir Francis Baring, 1st Baronet",
+     "form": "relational",
+     "q": "Henry Baring >> father",
+     "line": "the father of \"Henry Baring\" is \"Sir Francis Baring, 1st Baronet\"."
+    }
+   },
+   "paragraph": "Tom Baring: Thomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke. Like his brother, Baring was involved in the family banking business, beginning his career in the Liverpool office of Barings Bank. He later moved to New York City to join Kidder Peabody. When, in 1890, Kidder Peabody split its dual Boston-New York firm, Baring became a partner in the separated New York firm. He and another Kidder-Peabody alumnus, George C. Magoun, formed Baring, Magoun. Both houses continued as North American agents for Barings.\nGodfrey Baring: A member of the influential Baring family, he was the son of Lieutenant-General Charles Baring, son of Henry Bingham Baring, son of Henry Baring, third son of Sir Francis Baring, 1st Baronet. His mother was Helen Graham, daughter of Sir James Graham, 2nd Baronet. He was a lifelong resident of the Isle of Wight. He became involved in politics and public affairs at an early age: he was elected president of the Isle of Wight Liberal Union aged 23, was made a Justice of the Peace a year later and was High Sheriff of Hampshire in 1897 at the age of 26. In 1898 he became chairman of the Isle of Wight County Council, a position he held for the rest of his life.",
+   "sentence": "Tom Baring: Thomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke.\nGodfrey Baring: A member of the influential Baring family, he was the son of Lieutenant-General Charles Baring, son of Henry Bingham Baring, son of Henry Baring, third son of Sir Francis Baring, 1st Baronet."
+  },
+  {
+   "i": 30,
+   "id": "2hop__832795_350510",
+   "question": "What group was the performer of Be the One a member of?",
+   "facts": {
+    "hop1": {
+     "s": "Be the One",
+     "r": "performer",
+     "o": "Jackie Jackson",
+     "form": "relational",
+     "q": "Be the One >> performer",
+     "line": "the performer of \"Be the One\" is \"Jackie Jackson\"."
+    },
+    "hop2": {
+     "s": "Jackie Jackson",
+     "r": "member of",
+     "o": "Jackson 5",
+     "form": "relational",
+     "q": "Jackie Jackson >> member of",
+     "line": "the member of of \"Jackie Jackson\" is \"Jackson 5\"."
+    }
+   },
+   "paragraph": "Be the One (album): Be the One is the second studio album by Jackie Jackson, released on September 9, 1989. The musicians included Paul Jackson, Jr., Jeff Lorber, Robert Brookins and Gerald Albright.\nJackie Jackson (album): Jackie Jackson is the self-titled debut album from Jackie Jackson, the eldest member of The Jackson 5, released on Motown Records. It was arranged by Eddy Manson, Gene Page and The Corporation.",
+   "sentence": "Be the One (album): Be the One is the second studio album by Jackie Jackson, released on September 9, 1989.\nJackie Jackson (album): Jackie Jackson is the self-titled debut album from Jackie Jackson, the eldest member of The Jackson 5, released on Motown Records."
+  },
+  {
+   "i": 31,
+   "id": "2hop__744055_408817",
+   "question": "Who is the lead singer of the band performing Bang Bang Rock & Roll?",
+   "facts": {
+    "hop1": {
+     "s": "Bang Bang Rock & Roll",
+     "r": "performer",
+     "o": "Art Brut",
+     "form": "relational",
+     "q": "Bang Bang Rock & Roll >> performer",
+     "line": "the performer of \"Bang Bang Rock & Roll\" is \"Art Brut\"."
+    },
+    "hop2": {
+     "s": "Art Brut",
+     "r": "has part",
+     "o": "Eddie Argos",
+     "form": "relational",
+     "q": "Art Brut >> has part",
+     "line": "the has part of \"Art Brut\" is \"Eddie Argos\"."
+    }
+   },
+   "paragraph": "Bang Bang Rock & Roll: Bang Bang Rock & Roll is the debut studio album by British rock band Art Brut. It was re-released in 2006 with bonus CD.\nEddie Argos: Eddie Argos (born Kevin Macklin 25 October 1979) is the lead singer of English rock band Art Brut, and writer of comics.",
+   "sentence": "Bang Bang Rock & Roll: Bang Bang Rock & Roll is the debut studio album by British rock band Art Brut.\nEddie Argos: Eddie Argos (born Kevin Macklin 25 October 1979) is the lead singer of English rock band Art Brut, and writer of comics."
+  },
+  {
+   "i": 32,
+   "id": "2hop__726717_610238",
+   "question": "What is the network which National Cycle Route 57 is part of an example of?",
+   "facts": {
+    "hop1": {
+     "s": "National Cycle Route 57",
+     "r": "part of",
+     "o": "National Cycle Network",
+     "form": "relational",
+     "q": "National Cycle Route 57 >> part of",
+     "line": "the part of of \"National Cycle Route 57\" is \"National Cycle Network\"."
+    },
+    "hop2": {
+     "s": "National Cycle Network",
+     "r": "instance of",
+     "o": "national cycling route network",
+     "form": "relational",
+     "q": "National Cycle Network >> instance of",
+     "line": "the instance of of \"National Cycle Network\" is \"national cycling route network\"."
+    }
+   },
+   "paragraph": "National Cycle Route 57: National Cycle Route 57 is part of the United Kingdom's National Cycle Network. When complete, it will run west to east from Farmington, Gloucestershire near Northleach to Welwyn Garden City in Hertfordshire.\nNational Cycle Network: The National Cycle Network (NCN) is the national cycling route network of the United Kingdom, which was established to encourage cycling throughout Britain, as well as for the purposes of bicycle touring. It was created by the charity Sustrans who were aided by a £42.5 million National Lottery grant. In 2017, the 16,575 mile network was used for over 786 million trips.",
+   "sentence": "National Cycle Route 57: National Cycle Route 57 is part of the United Kingdom's National Cycle Network.\nNational Cycle Network: The National Cycle Network (NCN) is the national cycling route network of the United Kingdom, which was established to encourage cycling throughout Britain, as well as for the purposes of bicycle touring."
+  },
+  {
+   "i": 33,
+   "id": "2hop__499577_617190",
+   "question": "Who is the spouse of the child of Peter Andreas Heiberg?",
+   "facts": {
+    "hop1": {
+     "s": "Peter Andreas Heiberg",
+     "r": "child",
+     "o": "Johan Ludvig Heiberg",
+     "form": "relational",
+     "q": "Peter Andreas Heiberg >> child",
+     "line": "the child of \"Peter Andreas Heiberg\" is \"Johan Ludvig Heiberg\"."
+    },
+    "hop2": {
+     "s": "Johan Ludvig Heiberg",
+     "r": "spouse",
+     "o": "Johanne Luise Heiberg",
+     "form": "relational",
+     "q": "Johan Ludvig Heiberg >> spouse",
+     "line": "the spouse of \"Johan Ludvig Heiberg\" is \"Johanne Luise Heiberg\"."
+    }
+   },
+   "paragraph": "Johan Ludvig Heiberg (poet): Johan Ludvig Heiberg (14 December 1791 – 25 August 1860), Danish poet, playwright, literary critic, literary historian son of the political writer Peter Andreas Heiberg (1758–1841), and of the novelist, afterwards the Baroness Gyllembourg-Ehrensvärd, was born in Copenhagen. He promoted Hegelian philosophy and introduced vaudeville to Denmark.\nThe Crisis and a Crisis in the Life of an Actress: The actress in question is Johanne Luise Heiberg, the wife of Johan Ludvig Heiberg, although she is not mentioned by name in the articles. Johanne Luise was a popular and leading lady of the Danish stage at the time and she had written an autobiographical reflection of her life, in which she praised Kierkegaard for his insight into her art.",
+   "sentence": "Johan Ludvig Heiberg (poet): Johan Ludvig Heiberg (14 December 1791 – 25 August 1860), Danish poet, playwright, literary critic, literary historian son of the political writer Peter Andreas Heiberg (1758–1841), and of the novelist, afterwards the Baroness Gyllembourg-Ehrensvärd, was born in Copenhagen.\nThe Crisis and a Crisis in the Life of an Actress: The actress in question is Johanne Luise Heiberg, the wife of Johan Ludvig Heiberg, although she is not mentioned by name in the articles."
+  },
+  {
+   "i": 34,
+   "id": "2hop__685280_510757",
+   "question": "The Unwinding author volunteered for which organisation?",
+   "facts": {
+    "hop1": {
+     "s": "The Unwinding",
+     "r": "author",
+     "o": "George Packer",
+     "form": "relational",
+     "q": "The Unwinding >> author",
+     "line": "the author of \"The Unwinding\" is \"George Packer\"."
+    },
+    "hop2": {
+     "s": "George Packer",
+     "r": "member of",
+     "o": "Peace Corps",
+     "form": "relational",
+     "q": "George Packer >> member of",
+     "line": "the member of of \"George Packer\" is \"Peace Corps\"."
+    }
+   },
+   "paragraph": "The Unwinding: The Unwinding: An Inner History of the New America is a 2013 non-fiction book by the American journalist George Packer. The book uses biographies of individual Americans as a means of discussing important forces in American history from 1978 to 2012, including the subprime mortgage crisis, the decline of American manufacturing, and the influence of money on politics. \"The Unwinding\" includes lengthy profiles of five subjects: a Youngstown, Ohio factory worker turned community organizer, a biodiesel entrepreneur from North Carolina, a Washington lobbyist and Congressional staffer, the Silicon Valley entrepreneur Peter Thiel, and people involved in the distressed housing market in Tampa, Florida. Interspersed with these longer accounts are ten briefer biographical sketches of famous Americans such as the rapper Jay-Z, the politician Newt Gingrich, and the restaurateur and food activist Alice Waters.\nThe Village of Waiting: After serving with the Peace Corps in Togo in 1982–1983, George Packer wrote The Village of Waiting about his experiences there. The book chronicles Packer's time as an English teacher in the small village of Lavie (meaning \"wait a little longer\"), as well as his visits to the capital Lomé and several other African countries. Packer mixes anecdotes about the people he met in Togo with political observations (notably harsh criticisms of Togolese President Gnassingbe Eyadema) and many of the lessons he learned while serving. In an afterword to the most recent (2001) edition, Packer follows up with many of the characters from the original version and reflects upon the changes Togo has experienced since his time there. Packer was an early termination from the Peace Corps, leaving Togo six months prior to the end of his contracted period of service. He chose not to mention this in the book.",
+   "sentence": "The Unwinding: The Unwinding: An Inner History of the New America is a 2013 non-fiction book by the American journalist George Packer.\nThe Village of Waiting: After serving with the Peace Corps in Togo in 1982–1983, George Packer wrote The Village of Waiting about his experiences there."
+  },
+  {
+   "i": 35,
+   "id": "2hop__341305_332933",
+   "question": "What is the capital of the county that Pine Springs is located in?",
+   "facts": {
+    "hop1": {
+     "s": "Pine Springs",
+     "r": "located in the administrative territorial entity",
+     "o": "Culberson County",
+     "form": "relational",
+     "q": "Pine Springs >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Pine Springs\" is \"Culberson County\"."
+    },
+    "hop2": {
+     "s": "Culberson County",
+     "r": "capital",
+     "o": "Van Horn",
+     "form": "relational",
+     "q": "Culberson County >> capital",
+     "line": "the capital of \"Culberson County\" is \"Van Horn\"."
+    }
+   },
+   "paragraph": "Pine Springs, Texas: Pine Springs is an unincorporated community in northern Culberson County, Texas, United States. It is the closest settlement to the headquarters of Guadalupe Mountains National Park, which contains Guadalupe Peak, the highest point in the state of Texas. Pine Springs is located on U.S. Routes 62 and 180. The last population read 51 residents.\nCulberson County-Allamoore Independent School District: Culberson County-Allamoore Independent School District is a public school district based in Van Horn, Texas (USA). The district serves all of Culberson County and eastern portions of Hudspeth County. The district was created in 1995 by the consolidation of the Culberson County and Allamore districts.",
+   "sentence": "Pine Springs, Texas: Pine Springs is an unincorporated community in northern Culberson County, Texas, United States.\nCulberson County-Allamoore Independent School District: Culberson County-Allamoore Independent School District is a public school district based in Van Horn, Texas (USA)."
+  },
+  {
+   "i": 36,
+   "id": "2hop__731228_609866",
+   "question": "What district is the headquarter of Julia's House located?",
+   "facts": {
+    "hop1": {
+     "s": "Julia's House",
+     "r": "headquarters location",
+     "o": "Corfe Mullen",
+     "form": "relational",
+     "q": "Julia's House >> headquarters location",
+     "line": "the headquarters location of \"Julia's House\" is \"Corfe Mullen\"."
+    },
+    "hop2": {
+     "s": "Corfe Mullen",
+     "r": "located in the administrative territorial entity",
+     "o": "East Dorset",
+     "form": "relational",
+     "q": "Corfe Mullen >> located in the administrative territorial entity",
+     "line": "the located in the administrative territorial entity of \"Corfe Mullen\" is \"East Dorset\"."
+    }
+   },
+   "paragraph": "Julia's House: Julia's House is a children's hospice located in Corfe Mullen, Dorset, England. It is a hospice in Dorset for children with life-limiting conditions. The majority of the children who are cared for by Julia's House are unlikely to live beyond the age of 18. The hospice costs £1.9 million to be maintained. Only 3% of this cost is provided by the government.\nCorfe Mullen: Corfe Mullen is a village in Dorset, England, on the north-western urban fringe of the South East Dorset conurbation and is part of the rural district of East Dorset. The village has a population of 10,133 (2011) and is served by six churches, five pubs, five schools, a library, various shops and local businesses, a village hall, and many community and sports organisations. There are three electoral wards within the village (Central,North and South).",
+   "sentence": "Julia's House: Julia's House is a children's hospice located in Corfe Mullen, Dorset, England.\nCorfe Mullen: Corfe Mullen is a village in Dorset, England, on the north-western urban fringe of the South East Dorset conurbation and is part of the rural district of East Dorset."
+  },
+  {
+   "i": 37,
+   "id": "2hop__693444_220151",
+   "question": "Who is the spouse of Young Man Luther's author?",
+   "facts": {
+    "hop1": {
+     "s": "Young Man Luther",
+     "r": "author",
+     "o": "Erik Erikson",
+     "form": "relational",
+     "q": "Young Man Luther >> author",
+     "line": "the author of \"Young Man Luther\" is \"Erik Erikson\"."
+    },
+    "hop2": {
+     "s": "Erik Erikson",
+     "r": "spouse",
+     "o": "Joan Erikson",
+     "form": "relational",
+     "q": "Erik Erikson >> spouse",
+     "line": "the spouse of \"Erik Erikson\" is \"Joan Erikson\"."
+    }
+   },
+   "paragraph": "Young Man Luther: Young Man Luther: A Study in Psychoanalysis and History is a 1958 book by psychologist Erik Erikson. It was one of the first psychobiographies of a famous historical figure. Erikson found in Martin Luther a good model of his discovery of \"the identity crisis\". Erikson was sure he could explain Luther's spontaneous eruption, during a monastery choir practice, \"I am not!\"\nErikson's stages of psychosocial development: Erikson's stages of psychosocial development, as articulated in the second half of the 20th century by Erik Erikson in collaboration with Joan Erikson, is a comprehensive psychoanalytic theory that identifies a series of eight stages that a healthy developing individual should pass through from infancy to late adulthood.",
+   "sentence": "Young Man Luther: Young Man Luther: A Study in Psychoanalysis and History is a 1958 book by psychologist Erik Erikson.\nErikson's stages of psychosocial development: Erikson's stages of psychosocial development, as articulated in the second half of the 20th century by Erik Erikson in collaboration with Joan Erikson, is a comprehensive psychoanalytic theory that identifies a series of eight stages that a healthy developing individual should pass through from infancy to late adulthood."
+  },
+  {
+   "i": 38,
+   "id": "2hop__235471_565925",
+   "question": "What record label did the performer of The Place and the Time belong to?",
+   "facts": {
+    "hop1": {
+     "s": "The Place and the Time",
+     "r": "performer",
+     "o": "Moby Grape",
+     "form": "relational",
+     "q": "The Place and the Time >> performer",
+     "line": "the performer of \"The Place and the Time\" is \"Moby Grape\"."
+    },
+    "hop2": {
+     "s": "Moby Grape",
+     "r": "record label",
+     "o": "Columbia Records",
+     "form": "relational",
+     "q": "Moby Grape 69 >> record label",
+     "line": "the record label of \"Moby Grape\" is \"Columbia Records\"."
+    }
+   },
+   "paragraph": "The Place and the Time: The Place and the Time is a compilation album of demos, outtakes, alternative versions and live versions of songs by Moby Grape, released by Sundazed Records in 2009 in CD and double LP format.\nGreat Grape: Great Grape is a compilation album released by Columbia Records in 1972 that compiles songs from three of Moby Grape's Columbia albums - \"Moby Grape\", \"Wow\", and \"Moby Grape '69\". It has been speculated that Columbia's decision to release this album was based solely on trying to capitalize on any interest generated in Moby Grape by the then-recent release of a new studio album, \"20 Granite Creek\", on Reprise Records.",
+   "sentence": "The Place and the Time: The Place and the Time is a compilation album of demos, outtakes, alternative versions and live versions of songs by Moby Grape, released by Sundazed Records in 2009 in CD and double LP format.\nGreat Grape: Great Grape is a compilation album released by Columbia Records in 1972 that compiles songs from three of Moby Grape's Columbia albums - \"Moby Grape\", \"Wow\", and \"Moby Grape '69\"."
+  },
+  {
+   "i": 39,
+   "id": "2hop__310456_846599",
+   "question": "Who is the child of the person who followed Tihomir of Serbia?",
+   "facts": {
+    "hop1": {
+     "s": "Tihomir of Serbia",
+     "r": "followed by",
+     "o": "Stefan Nemanja",
+     "form": "relational",
+     "q": "Tihomir of Serbia >> followed by",
+     "line": "the followed by of \"Tihomir of Serbia\" is \"Stefan Nemanja\"."
+    },
+    "hop2": {
+     "s": "Stefan Nemanja",
+     "r": "child",
+     "o": "Saint Sava",
+     "form": "relational",
+     "q": "Stefan Nemanja >> child",
+     "line": "the child of \"Stefan Nemanja\" is \"Saint Sava\"."
+    }
+   },
+   "paragraph": "Stracimir Zavidović: In 1166 Stefan Nemanja overthrew Tihomir in a coup and had him and his brothers, Stracimir and Miroslav, expelled to Byzantium in 1167/1168. Stefan Nemanja defeated Tihomir and his Byzantine army. Tihomir drowned in a river and the other brothers were stripped of their titles, with Nemanja becoming ruler of All Serbia. He pardoned his brothers and Stracimir continued to rule his lands. When Stefan Nemanja besieged and retook control of Duklja in the 1180s, Stracimir and Miroslav attacked the forces of Doclean ruler and kinsman Mihailo.\nSaint Sava: He is widely considered as one of the most important figures of Serbian history. Saint Sava is venerated by the Serbian Orthodox Church as its founder on . Many artistic works from the Middle Ages to modern times have interpreted his career. He is the patron saint of Serbia, Serbs, and Serbian education. The Church of Saint Sava in Belgrade is dedicated to him, built where the Ottomans burnt his remains in 1594 during an uprising in which the Serbs used icons of Sava as their war flags; the church is one of the largest church buildings in the world.",
+   "sentence": "Stracimir Zavidović: Tihomir drowned in a river and the other brothers were stripped of their titles, with Nemanja becoming ruler of All Serbia.\nSaint Sava: The Church of Saint Sava in Belgrade is dedicated to him, built where the Ottomans burnt his remains in 1594 during an uprising in which the Serbs used icons of Sava as their war flags; the church is one of the largest church buildings in the world."
+  }
+ ]
+}

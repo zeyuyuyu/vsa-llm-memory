@@ -1,0 +1,43 @@
+{
+ "arms": {
+  "floor": [
+   0.512,
+   0.53,
+   0.504
+  ],
+  "parser": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "probe_argmax": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "lsh_raw": [
+   0.506,
+   0.514,
+   0.55
+  ],
+  "lsh_inst": [
+   0.498,
+   0.544,
+   0.548
+  ]
+ },
+ "diagnostic": {
+  "lsh_raw": {
+   "same_symbol_cos": 0.5756635628640652,
+   "diff_symbol_cos": 0.4942842457486295
+  },
+  "lsh_inst": {
+   "same_symbol_cos": 0.3417855456471443,
+   "diff_symbol_cos": 0.19916709061369472
+  }
+ },
+ "floor": 0.5153333333333333,
+ "parser": 0.934,
+ "headroom": 0.41866666666666674,
+ "verdict": "FAILS (V-23's conclusion stands for a second independent reason; the diagnostic says which geometric property is missing)"
+}

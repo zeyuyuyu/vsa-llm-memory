@@ -1,0 +1,56 @@
+# B61 sample reading by the AI-assisted process (not an independent reader): failed keys one grid step below N*
+# (test stores; b61_check.py handread; raw lines below the summary).
+
+Summary (written after reading the lines below):
+- H-SBC at k1, B = 27 (one step below N* = 32; lam 0.7, 18 blocks of length 428 on the large niah_multikey_2 stores):
+  every sampled failure is a full-score false positive. The true LAST item hits all 18 blocks (no cell errors at k1),
+  and one wrong value's non-LAST variant also hits all 18 (each of its 18 positions happens to be set by other pairs:
+  density about 0.5, so 0.5^18 per candidate, times 2 x 6,000 candidates). B38's V-last tie rule (LAST only if strictly
+  higher) then decides for the wrong non-LAST value. This is the Bloom-filter failure mode; it sets the sparse store's
+  noise-free requirement (32 cells per pair, against U's 76 and the table's 19).
+- H-SBC at k8, B = 76 (lam 0.5, 38 blocks): a mixture of the same ties (true and wrong at the same score, 27-31 of 38)
+  and wrong values one or two blocks above the true value (cell errors removed 7-11 of the true value's 38 hits).
+- H-SBC at k16, B = 256 (lam 0.5, 127 blocks of length 64): wrong values 1-6 blocks above the true value (true 76-86 of
+  127): the overlap SNR limit, no ties.
+- H-HAD at k8, B = 108 (the dense store with the Reed-Muller item codebook): wrong values whose correlation exceeds the
+  true value's (true 255-361, winner 321-393 on d of about 8,160); the spread of the candidates' correlations is 90,
+  i.e. sqrt(d), the random cross-talk of the other bundled pairs, so the item codebook's larger minimum distance does
+  not change the noise the clean-up sees; the true value sits 2.8-4.0 SD above the candidates' mean, about where the
+  largest of 12,000 noise samples falls.
+- Every sampled failure is on the large niah_multikey_2 stores (6,000 pairs, 6,000 values), where the clean-up has the
+  most candidates.
+
+# B61 sample reading by the AI-assisted process (not independent): failed keys one grid step below N*.
+
+H-SBC k1 at B = 27 (lam 0.7): 117 failed keys in 29 stores
+  131072/niah_multikey_2/162015 key 7 j 0: want 273 LAST, got 2025; true score 18, winner 18 of nb 18 (Lb 428); candidates at the winning score 1; tie
+  131072/niah_multikey_2/162015 key 17 j 0: want 663 LAST, got 318; true score 18, winner 18 of nb 18 (Lb 428); candidates at the winning score 1; tie
+  131072/niah_multikey_2/162015 key 44 j 0: want 1716 LAST, got 257 LAST; true score 18, winner 18 of nb 18 (Lb 428); candidates at the winning score 2; tie
+  131072/niah_multikey_2/162015 key 60 j 0: want 2340 LAST, got 738; true score 18, winner 18 of nb 18 (Lb 428); candidates at the winning score 1; tie
+  131072/niah_multikey_2/162015 key 111 j 0: want 4332 LAST, got 2628; true score 18, winner 18 of nb 18 (Lb 428); candidates at the winning score 1; tie
+  131072/niah_multikey_2/162015 key 121 j 0: want 4723 LAST, got 585; true score 18, winner 18 of nb 18 (Lb 428); candidates at the winning score 1; tie
+
+H-SBC k8 at B = 76 (lam 0.5): 53 failed keys in 22 stores
+  131072/niah_multikey_2/162015 key 98 j 0: want 3824 LAST, got 22; true score 27, winner 27 of nb 38 (Lb 214); candidates at the winning score 7; tie
+  131072/niah_multikey_2/162015 key 134 j 0: want 5230 LAST, got 765 LAST; true score 30, winner 30 of nb 38 (Lb 214); candidates at the winning score 2; tie
+  131072/niah_multikey_2/170650 key 19 j 0: want 741 LAST, got 2934 LAST; true score 28, winner 29 of nb 38 (Lb 214); candidates at the winning score 1; wrong value
+  131072/niah_multikey_2/170650 key 35 j 0: want 1365 LAST, got 4131; true score 27, winner 29 of nb 38 (Lb 214); candidates at the winning score 1; wrong value
+  131072/niah_multikey_2/170650 key 50 j 0: want 1950 LAST, got 1385; true score 27, winner 29 of nb 38 (Lb 214); candidates at the winning score 1; wrong value
+  131072/niah_multikey_2/170650 key 113 j 0: want 4407 LAST, got 104 LAST; true score 31, winner 31 of nb 38 (Lb 214); candidates at the winning score 3; tie
+
+H-SBC k16 at B = 256 (lam 0.5): 80 failed keys in 28 stores
+  131072/niah_multikey_2/162015 key 47 j 0: want 1833 LAST, got 5929; true score 83, winner 89 of nb 127 (Lb 64); candidates at the winning score 1; wrong value
+  131072/niah_multikey_2/162015 key 66 j 0: want 2575 LAST, got 1036; true score 83, winner 84 of nb 127 (Lb 64); candidates at the winning score 1; wrong value
+  131072/niah_multikey_2/162015 key 96 j 0: want 3745 LAST, got 4206 LAST; true score 76, winner 77 of nb 127 (Lb 64); candidates at the winning score 1; wrong value
+  131072/niah_multikey_2/162015 key 129 j 0: want 5035 LAST, got 451; true score 84, winner 88 of nb 127 (Lb 64); candidates at the winning score 1; wrong value
+  131072/niah_multikey_2/170650 key 4 j 0: want 156 LAST, got 4241 LAST; true score 86, winner 88 of nb 127 (Lb 64); candidates at the winning score 1; wrong value
+  131072/niah_multikey_2/170650 key 25 j 0: want 975 LAST, got 4646 LAST; true score 82, winner 86 of nb 127 (Lb 64); candidates at the winning score 1; wrong value
+
+H-HAD k8 at B = 108 (lam None): 48 failed keys in 22 stores
+  131072/niah_multikey_2/162015 key 19 j 0: want 741 LAST, got 2034 LAST; true correlation 361, winner 373 (d 8167; noise SD of all candidates 91, true value 4.0 SD above the candidates' mean); wrong value
+  131072/niah_multikey_2/170650 key 0 j 0: want 0 LAST, got 5623 LAST; true correlation 347, winner 391 (d 8161; noise SD of all candidates 90, true value 3.8 SD above the candidates' mean); wrong value
+  131072/niah_multikey_2/170650 key 19 j 0: want 741 LAST, got 5668; true correlation 343, winner 393 (d 8161; noise SD of all candidates 91, true value 3.8 SD above the candidates' mean); wrong value
+  131072/niah_multikey_2/170650 key 76 j 0: want 2963 LAST, got 723; true correlation 329, winner 333 (d 8161; noise SD of all candidates 90, true value 3.6 SD above the candidates' mean); wrong value
+  131072/niah_multikey_2/170650 key 97 j 0: want 3782 LAST, got 437 LAST; true correlation 315, winner 357 (d 8161; noise SD of all candidates 91, true value 3.5 SD above the candidates' mean); wrong value
+  131072/niah_multikey_2/170650 key 130 j 0: want 5071 LAST, got 2078; true correlation 255, winner 321 (d 8161; noise SD of all candidates 90, true value 2.8 SD above the candidates' mean); wrong value
+

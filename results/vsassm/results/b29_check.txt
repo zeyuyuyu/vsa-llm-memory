@@ -1,0 +1,30 @@
+# B29 second scorer
+
+## RULER 9-task means (dict answers), recomputed
+  8B (B21, banked)             4096:99.54 8192:99.91 16384:99.63 32768:99.74 65536:99.47 131072:99.58   verdict agrees
+  8B replay (gate G1)          4096:99.71 8192:99.91 16384:99.69 32768:99.74 65536:99.39 131072:99.58   verdict agrees
+  32B                          4096:99.73 8192:99.92 16384:99.89 32768:99.91 65536:99.96 131072:100.0   verdict agrees
+  1.7B                         4096:92.56 8192:93.81 16384:92.54 32768:92.31 65536:93.49 131072:94.03   verdict agrees
+  32B full read (vLLM)         4096:None 8192:None 16384:None 32768:None 65536:None 131072:100.0   verdict agrees
+  32B full read (vLLM) store   4096:None 8192:None 16384:None 32768:None 65536:None 131072:100.0   (not in verdict)
+
+## Logs, accuracy with an independently derived gold
+  where  1.7B fine-tuned (banked)             0.9589 (397/414)   verdict 0.9589 agrees
+  where  1.7B fine-tuned (re-run, gate G2)    0.9517 (394/414)   verdict 0.9517 agrees   dict 0.9517
+  where  Qwen3-8B prompted                    0.9034 (374/414)   verdict 0.9034 agrees   dict 0.9034
+  where  Qwen3-32B prompted                   0.9541 (395/414)   verdict 0.9541 agrees   dict 0.9541
+  where  GPT-6.1 Sol (low) prompted           0.9614 (398/414)   verdict 0.9614 agrees   dict 0.9614
+  impact 1.7B fine-tuned (banked)             0.9304 (214/230)   verdict 0.9304 agrees
+  impact 1.7B fine-tuned (re-run, gate G2)    0.9304 (214/230)   verdict 0.9304 agrees   dict 0.9304
+  impact Qwen3-8B prompted                    0.9348 (215/230)   verdict 0.9348 agrees   dict 0.9348
+  impact Qwen3-32B prompted                   0.9304 (214/230)   verdict 0.9304 agrees   dict 0.9304
+  impact GPT-6.1 Sol (low) prompted           0.9391 (216/230)   verdict 0.9391 agrees   dict 0.9391
+  impact Claude Opus 5.5 (low) prompted       0.9174 (211/230)   verdict 0.9174 agrees   dict 0.9174
+  window 1.7B fine-tuned (banked)             0.8739 (402/460)   verdict 0.8739 agrees
+  window 1.7B fine-tuned (re-run, gate G2)    0.8739 (402/460)   verdict 0.8739 agrees   dict 0.8739
+  window Qwen3-8B prompted                    0.8304 (382/460)   verdict 0.8304 agrees   dict 0.8304
+  window Qwen3-32B prompted                   0.8870 (408/460)   verdict 0.8870 agrees   dict 0.8870
+  window GPT-6.1 Sol (low) prompted           0.9087 (418/460)   verdict 0.9087 agrees   dict 0.9087
+  window Claude Opus 5.5 (low) prompted       0.9087 (418/460)   verdict 0.9087 agrees   dict 0.9087
+
+0 disagreements with the verdict

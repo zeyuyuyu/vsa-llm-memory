@@ -1,0 +1,119 @@
+{
+ "arm1": {
+  "warehouse": 0.875,
+  "ALL": 0.9304,
+  "ALL non-empty": 0.903,
+  "biobank": 0.8333,
+  "home": 0.975,
+  "ops": 0.95,
+  "micro_f1": 0.9648
+ },
+ "arm2a": {
+  "warehouse": 0.875,
+  "ALL": 0.9304,
+  "ALL non-empty": 0.903,
+  "biobank": 0.8333,
+  "home": 0.975,
+  "ops": 0.95,
+  "micro_f1": 0.9648
+ },
+ "arm2b": {
+  "warehouse": 0.875,
+  "ALL": 0.9304,
+  "ALL non-empty": 0.903,
+  "biobank": 0.8333,
+  "home": 0.975,
+  "ops": 0.95,
+  "micro_f1": 0.9576
+ },
+ "arm4": {
+  "warehouse": 0.2,
+  "ALL": 0.313,
+  "ALL non-empty": 0.1697,
+  "biobank": 0.1667,
+  "home": 0.3625,
+  "ops": 0.375,
+  "micro_f1": 0.5459
+ },
+ "sanity": {
+  "warehouse": 1.0,
+  "ALL": 1.0,
+  "ALL non-empty": 1.0,
+  "biobank": 1.0,
+  "home": 1.0,
+  "ops": 1.0,
+  "micro_f1": 1.0
+ },
+ "negctl": {
+  "warehouse": 0.3,
+  "ALL": 0.313,
+  "ALL non-empty": 0.0545,
+  "biobank": 0.1667,
+  "home": 0.2875,
+  "ops": 0.4,
+  "micro_f1": 0.2877
+ },
+ "arm3_qwen3-32b_forced": {
+  "warehouse": 0.15,
+  "ALL": 0.2783,
+  "ALL non-empty": 0.1212,
+  "biobank": 0.0333,
+  "home": 0.2875,
+  "ops": 0.425,
+  "micro_f1": 0.3893
+ },
+ "arm3_qwen3-32b_strict": {
+  "warehouse": 0.075,
+  "ALL": 0.2652,
+  "ALL non-empty": 0.1091,
+  "biobank": 0.0333,
+  "home": 0.2875,
+  "ops": 0.425,
+  "micro_f1": 0.3956
+ },
+ "arm3b_qwen3-32b_forced": {
+  "warehouse": 0.85,
+  "ALL": 0.8261,
+  "ALL non-empty": 0.7576,
+  "biobank": 0.8333,
+  "home": 0.7125,
+  "ops": 0.925,
+  "micro_f1": 0.9007
+ },
+ "arm3b_qwen3-32b_strict": {
+  "warehouse": 0.85,
+  "ALL": 0.8261,
+  "ALL non-empty": 0.7576,
+  "biobank": 0.8333,
+  "home": 0.7125,
+  "ops": 0.925,
+  "micro_f1": 0.8957
+ },
+ "arm3_qwen3-8b_forced": {
+  "warehouse": 0.025,
+  "ALL": 0.1478,
+  "ALL non-empty": 0.0606,
+  "biobank": 0.0,
+  "home": 0.1875,
+  "ops": 0.225,
+  "micro_f1": 0.3161
+ },
+ "arm3_qwen3-8b_strict": {
+  "warehouse": 0.025,
+  "ALL": 0.1261,
+  "ALL non-empty": 0.0424,
+  "biobank": 0.0,
+  "home": 0.1375,
+  "ops": 0.2125,
+  "micro_f1": 0.1942
+ },
+ "always_none": 0.2826,
+ "n_questions": 230,
+ "trace": {
+  "items": 394,
+  "hops": 887,
+  "validity": 1.0,
+  "correctness": 0.9695,
+  "invalid_examples": []
+ }
+}

@@ -1,0 +1,23 @@
+qwen8 M=256 V=2 rep=0: VSA agree 2380/2380, IDX agree 2380/2380
+qwen8 M=256 V=2 rep=4: VSA agree 4970/4970, IDX agree 4970/4970
+qwen8 M=256 V=2 rep=5: VSA agree 7450/7450, IDX agree 7450/7450
+qwen8 M=256 V=2 rep=14: VSA agree 9450/9450, IDX agree 9450/9450
+qwen8 M=256 V=2 rep=16: VSA agree 11800/11800, IDX agree 11800/11800
+qwen8 M=256 V=16 rep=2: VSA agree 14600/14600, IDX agree 14534/14600
+qwen8 M=256 V=16 rep=9: VSA agree 16300/16300, IDX agree 16203/16300
+qwen8 M=256 V=16 rep=17: VSA agree 18810/18810, IDX agree 18675/18810
+WARNING clustering 5621 points to 256 centroids: please provide at least 9984 training points
+qwen8 M=256 V=128 rep=4: VSA agree 21870/21870, IDX agree 21511/21870
+qwen8 M=256 V=128 rep=15: VSA agree 24160/24160, IDX agree 23646/24160
+qwen8 M=256 V=128 rep=16: VSA agree 25910/25910, IDX agree 25302/25910
+qwen8 M=256 V=128 rep=17: VSA agree 27670/27670, IDX agree 26970/27670
+qwen8 M=256 V=128 rep=18: VSA agree 30570/30570, IDX agree 29697/30570
+qwen8 M=256 V=1024 rep=1: VSA agree 33080/33080, IDX agree 32207/33080
+qwen8 M=256 V=1024 rep=5: VSA agree 34860/34860, IDX agree 33987/34860
+qwen8 M=1024 V=2 rep=3: VSA agree 43392/43420, IDX agree 42547/43420
+qwen8 IDX:itq    agree 1267/1402 = 0.9037; accuracy logged 0.1191 re-derived 0.1220 (difference +0.29 points)
+qwen8 IDX:lsh    agree 37201/37201 = 1.0000; accuracy logged 0.4558 re-derived 0.4558 (difference +0.00 points)
+qwen8 IDX:pq8    agree 1294/2032 = 0.6368; accuracy logged 0.2283 re-derived 0.2259 (difference -0.25 points)
+qwen8 IDX:sq1    agree 2785/2785 = 1.0000; accuracy logged 0.2962 re-derived 0.2962 (difference +0.00 points)
+qwen8 VSA:lin    agree 41708/41708 = 1.0000; accuracy logged 0.4432 re-derived 0.4432 (difference +0.00 points)
+qwen8 VSA:sgn    agree 1684/1712 = 0.9836; accuracy logged 0.7488 re-derived 0.7488 (difference +0.00 points)

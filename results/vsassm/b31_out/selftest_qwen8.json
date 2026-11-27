@@ -1,0 +1,139 @@
+{
+ "enc": "qwen8",
+ "padding_side": "right",
+ "A_train": {
+  "n": 2000,
+  "dict_equals_label": 2000,
+  "mentions_per_instance": [
+   98
+  ],
+  "max_len": 486,
+  "mean_len": 467.2,
+  "mention_span_decode_failures": 0
+ },
+ "A_dev": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   98
+  ],
+  "max_len": 482,
+  "mean_len": 467.2,
+  "mention_span_decode_failures": 0
+ },
+ "A_test": {
+  "n": 1000,
+  "dict_equals_label": 1000,
+  "mentions_per_instance": [
+   98
+  ],
+  "max_len": 483,
+  "mean_len": 467.3,
+  "mention_span_decode_failures": 0
+ },
+ "A_train_v2": {
+  "n": 2000,
+  "dict_equals_label": 2000,
+  "mentions_per_instance": [
+   98
+  ],
+  "max_len": 486,
+  "mean_len": 467.2,
+  "mention_span_decode_failures": 0
+ },
+ "A_overlap": {
+  "dev_train": 0,
+  "dev_test": 0,
+  "test_train": 0
+ },
+ "B_train": {
+  "n": 1000,
+  "dict_equals_label": 1000,
+  "mentions_per_instance": [
+   130
+  ],
+  "max_len": 576,
+  "mean_len": 558.0,
+  "mention_span_decode_failures": 0
+ },
+ "B_dev": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   130
+  ],
+  "max_len": 573,
+  "mean_len": 558.0,
+  "mention_span_decode_failures": 0
+ },
+ "B_test": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   130
+  ],
+  "max_len": 570,
+  "mean_len": 558.1,
+  "mention_span_decode_failures": 0
+ },
+ "B_train_v2": {
+  "n": 1000,
+  "dict_equals_label": 1000,
+  "mentions_per_instance": [
+   130
+  ],
+  "max_len": 576,
+  "mean_len": 558.0,
+  "mention_span_decode_failures": 0
+ },
+ "B_overlap": {
+  "dev_train": 0,
+  "dev_test": 0,
+  "test_train": 0
+ },
+ "C_train": {
+  "n": 800,
+  "dict_equals_label": 800,
+  "mentions_per_instance": [
+   130
+  ],
+  "max_len": 520,
+  "mean_len": 511.9,
+  "mention_span_decode_failures": 0
+ },
+ "C_dev": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   130
+  ],
+  "max_len": 520,
+  "mean_len": 512.0,
+  "mention_span_decode_failures": 0
+ },
+ "C_test": {
+  "n": 500,
+  "dict_equals_label": 500,
+  "mentions_per_instance": [
+   130
+  ],
+  "max_len": 519,
+  "mean_len": 511.9,
+  "mention_span_decode_failures": 0
+ },
+ "C_train_v2": {
+  "n": 800,
+  "dict_equals_label": 800,
+  "mentions_per_instance": [
+   130
+  ],
+  "max_len": 520,
+  "mean_len": 511.9,
+  "mention_span_decode_failures": 0
+ },
+ "C_overlap": {
+  "dev_train": 0,
+  "dev_test": 0,
+  "test_train": 0
+ }
+}

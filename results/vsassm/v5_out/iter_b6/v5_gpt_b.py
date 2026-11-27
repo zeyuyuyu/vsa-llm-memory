@@ -1,0 +1,1468 @@
+#!/usr/bin/env python3
+# Part B equal-cell simulation (Python 3.10).
+#
+# Choices where the specification is open:
+# * Stable BLAKE2b hashes, with separate namespaces, seed all digital codebooks,
+#   layouts and random draws. Codebook randomness is not device storage.
+# * Global drift compensation rescales the differential read by
+#   25 / E[G_d(SET,t)]. The expectation is estimated in a separate, fixed-seed
+#   Monte Carlo calibration, before estimating the sign-error probability.
+# * Converter rounding is symmetric nearest-level rounding, with saturation;
+#   a zero output receives an independent fair random sign.
+# * A shard's unused sparse-block tail is charged, but need not be simulated:
+#   its readout can never affect a query. Dense sum ties are independent coins.
+# * Sparse codebooks use independent uniformly distributed indices in each
+#   block; their seeds are stable across budgets, with geometry-dependent draws.
+# * Smoke uses the two smallest development stores, the two smallest test
+#   stores, budgets 512 and 4096, and k=8. Its output is explicitly diagnostic,
+#   not an estimate of the full-study requirement. Device estimation still
+#   uses at least 10^7 cells.
+# * No test content is used to select a design. All cell uniforms are seeded
+#   without k, so channel draws are shared across noise conditions.
+# * The driver and table codecs follow in pieces 2 and 3.
+
+import os
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["NUMBA_NUM_THREADS"] = "1"
+
+import argparse
+import gzip
+import hashlib
+import json
+import math
+import time
+from pathlib import Path
+from collections import defaultdict
+from dataclasses import dataclass
+from functools import lru_cache
+
+import numpy as np
+from scipy import special
+from scipy.stats import binom
+from scipy.optimize import minimize_scalar
+from numba import njit
+from joblib import Parallel, delayed
+
+TEST_PATH = "/path/to/vsassm/b34_out/test_stores.json.gz"
+DEV_PATH = "/path/to/vsassm/b34_out/dev_stores.json.gz"
+GRID = np.exp2(np.arange(12, 49, dtype=np.float64) / 4)
+NOISE_LEVELS = (1.0, 8.0, 16.0)
+LAMBDAS = (0.35, 0.5, 0.7, 1.0)
+TARGET_SHARE = 0.995
+MASTER_SEED = 20250317
+
+
+def seed_of(*parts):
+    payload = json.dumps([MASTER_SEED, *parts], ensure_ascii=False,
+                         separators=(",", ":")).encode("utf-8")
+    return int.from_bytes(hashlib.blake2b(payload, digest_size=8).digest(),
+                          "little")
+
+
+def rng_of(*parts):
+    return np.random.default_rng(seed_of(*parts))
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Part B equal-cell simulation")
+    parser.add_argument("--memory", choices=("dense", "sbc", "bch", "cuckoo", "all"),
+                        default="all")
+    parser.add_argument("--k", default="1,8,16")
+    parser.add_argument("--out", required=True)
+    parser.add_argument("--workers", type=int, default=14)
+    parser.add_argument("--smoke", action="store_true")
+    args = parser.parse_args()
+    try:
+        args.ks = sorted(set(float(x) for x in args.k.split(",")))
+    except ValueError:
+        parser.error("--k must be a comma-separated list of numbers")
+    if not args.ks or any(not math.isfinite(k) or k < 0 for k in args.ks):
+        parser.error("noise multipliers must be finite and nonnegative")
+    if args.workers < 1:
+        parser.error("--workers must be positive")
+    if args.smoke:
+        args.ks = [8.0]
+    return args
+
+
+@dataclass
+class Store:
+    sid: str
+    keys: list
+    values: list
+    pair_key: np.ndarray
+    pair_value: np.ndarray
+    pair_j: np.ndarray
+    last: np.ndarray
+    truth: list
+    probes: np.ndarray
+    maxj: int
+
+    @property
+    def n(self):
+        return len(self.pair_j)
+
+    @property
+    def N(self):
+        return len(self.values)
+
+
+def make_store(sid, pairs):
+    if not pairs:
+        raise ValueError(f"{sid}: empty store")
+    keys, values, km, vm = [], [], {}, {}
+    pk, pv, pj = [], [], []
+    per_key = defaultdict(dict)
+    for row in pairs:
+        if len(row) != 3:
+            raise ValueError(f"{sid}: malformed pair")
+        key, value, j = row
+        if not isinstance(key, str) or not isinstance(value, str):
+            raise ValueError(f"{sid}: keys and values must be strings")
+        if not isinstance(j, int) or j < 0:
+            raise ValueError(f"{sid}: invalid position")
+        if key not in km:
+            km[key] = len(keys)
+            keys.append(key)
+        if value not in vm:
+            vm[value] = len(values)
+            values.append(value)
+        ki, vi = km[key], vm[value]
+        if j in per_key[ki]:
+            raise ValueError(f"{sid}: duplicate (key,j)")
+        per_key[ki][j] = vi
+        pk.append(ki)
+        pv.append(vi)
+        pj.append(j)
+    truth = []
+    for ki in range(len(keys)):
+        entries = per_key[ki]
+        if sorted(entries) != list(range(len(entries))):
+            raise ValueError(f"{sid}: noncontiguous key positions")
+        truth.append([entries[j] for j in range(len(entries))])
+    pk = np.asarray(pk, dtype=np.int32)
+    pj = np.asarray(pj, dtype=np.int32)
+    last = np.asarray([j == len(truth[k]) - 1 for k, j in zip(pk, pj)],
+                      dtype=np.uint8)
+    probes = np.arange(0, len(keys), max(1, len(keys) // 150),
+                       dtype=np.int32)[:150]
+    return Store(str(sid), keys, values, pk, np.asarray(pv, dtype=np.int32),
+                 pj, last, truth, probes, int(pj.max()))
+
+
+def load_stores(path):
+    with gzip.open(path, "rt", encoding="utf-8") as handle:
+        entries = json.load(handle)
+    stores = [make_store(sid, pairs) for sid, pairs in entries]
+    if len({s.sid for s in stores}) != len(stores):
+        raise ValueError("duplicate store identifiers")
+    return stores
+
+
+def load_data(smoke=False):
+    dev, test = load_stores(DEV_PATH), load_stores(TEST_PATH)
+    count = sum(len(s.probes) for s in test)
+    if len(dev) != 12 or len(test) != 50 or count != 4776:
+        raise ValueError(f"dataset mismatch: dev={len(dev)}, test={len(test)}, "
+                         f"test probes={count}, expected 12,50,4776")
+    if smoke:
+        dev = sorted(dev, key=lambda s: (s.n, s.sid))[:2]
+        test = sorted(test, key=lambda s: (s.n, s.sid))[:2]
+    return dev, test
+
+
+def geometry(n, budget):
+    # Integer budget is authoritative; floor(d) guarantees no overspend.
+    cap = math.floor(float(budget) * n)
+    shards = max(1, math.ceil(float(budget) * n / 8192))
+    d = cap // shards
+    if d < 1 or d > 8192:
+        raise ValueError("invalid store geometry")
+    return shards, d, cap
+
+
+def shard_ids(store, shards):
+    return np.asarray([seed_of("shard", k) % shards for k in store.keys],
+                      dtype=np.int32)
+
+
+def drift_read(target, k, size, rng, read=True):
+    t, t0, t1, tref = 30 * 86400.0, 27.36, 55.39, 20.0
+    mu = max(-0.0045 * target + 0.08,
+             min(0.06, max(-0.00169 * target + 0.0825, 0.055)))
+    nu = np.maximum(mu + k / (8 * target + 30.032) *
+                    rng.standard_normal(size), 0.0)
+    sigma = 1.2 if target else 0.2
+    g = np.maximum(target * (t0 / tref) ** (-nu) +
+                   k * sigma * rng.standard_normal(size), 0.0)
+    g = np.maximum(g * (t1 / t0) ** (-nu) +
+                   k * sigma * rng.standard_normal(size), 0.0)
+    g *= (t / t1) ** (-nu)
+    if read:
+        nuq = min(0.081, 0.04 * target + 0.02)
+        if target > 13.21:
+            nuq -= min(0.035, -0.2048 + 0.0155 * target)
+        q = min(0.0388 * target ** (-0.5729), 0.2) if target else 0.2
+        q *= (t / 1.089e5) ** (-nuq)
+        fmax, fmin, gamma = 1 / (2 * 250e-9), 1 / (t + 250e-9), 1.21
+        integ = math.sqrt((fmax ** (1 - gamma) - fmin ** (1 - gamma)) /
+                          (1 - gamma))
+        g = np.maximum(g + k * q * integ * g * rng.standard_normal(size), 0)
+    return g
+
+
+def estimate_p(k, samples=10_000_000, chunk=250_000):
+    if samples < 10_000_000:
+        raise ValueError("cell-rate estimation requires at least 10^7 cells")
+    calibration = rng_of("device-calibration", k)
+    total = 0.0
+    for start in range(0, 1_000_000, chunk):
+        size = min(chunk, 1_000_000 - start)
+        total += float(drift_read(25.0, k, size, calibration, False).sum())
+    compensation = 25.0 / max(total / 1_000_000, np.finfo(float).tiny)
+    rng = rng_of("device-estimate", k)
+    errors = 0
+    # Symmetry permits writing +1 throughout; this has precisely the same
+    # error distribution as independent equiprobable written signs.
+    for start in range(0, samples, chunk):
+        size = min(chunk, samples - start)
+        diff = compensation * (drift_read(25.0, k, size, rng) -
+                               drift_read(0.0, k, size, rng))
+        quantized = np.rint(np.clip(diff, -25, 25) * (127 / 25))
+        errors += int(np.count_nonzero(quantized < 0))
+        zeros = int(np.count_nonzero(quantized == 0))
+        errors += int(rng.binomial(zeros, 0.5))
+    p = errors / samples
+    return {"k": float(k), "p": p, "samples": samples, "errors": errors,
+            "standard_error": math.sqrt(p * (1 - p) / samples),
+            "global_compensation": compensation}
+
+
+def channel_rng(store, memory, budget, design):
+    return rng_of("channel", store.sid, memory, float(budget), design)
+
+
+def flip_cells(cells, p, rng):
+    result = cells.copy()
+    flat = result.reshape(-1)
+    for start in range(0, flat.size, 262144):
+        view = flat[start:start + 262144]
+        mask = rng.random(len(view)) < p
+        if result.dtype == np.bool_ or result.dtype == np.uint8:
+            view[mask] ^= 1
+        else:
+            view[mask] *= -1
+    return result
+
+
+def bipolar(namespace, token, d):
+    return (2 * rng_of("bipolar", namespace, token).integers(
+        0, 2, size=8192, dtype=np.int8)[:d] - 1)
+
+
+def block_code(namespace, token, blocks, length):
+    return rng_of("block", namespace, token).integers(
+        0, length, size=blocks, dtype=np.int32)
+
+
+def dense_run(store, budget, p, design="dense"):
+    shards, d, cap = geometry(store.n, budget)
+    ids = shard_ids(store, shards)
+    kc = np.asarray([bipolar("key", k, d) for k in store.keys])
+    vc = np.asarray([bipolar("value", v, d) for v in store.values])
+    pc = np.asarray([bipolar("position", j, d)
+                     for j in range(store.maxj + 1)])
+    last = bipolar("LAST", "", d)
+    sums = np.zeros((shards, d), dtype=np.int32)
+    for ki, vi, j, flag in zip(store.pair_key, store.pair_value,
+                               store.pair_j, store.last):
+        code = kc[ki] * pc[j] * vc[vi]
+        if flag:
+            code = code * last
+        sums[ids[ki]] += code
+    cells = np.where(sums > 0, 1, -1).astype(np.int8)
+    tie_rng = rng_of("sum-ties", store.sid, float(budget))
+    for sh in range(shards):
+        mask = sums[sh] == 0
+        cells[sh, mask] = 2 * tie_rng.integers(
+            0, 2, size=int(mask.sum()), dtype=np.int8) - 1
+    del sums
+    cells = flip_cells(cells, p, channel_rng(store, "dense", budget, design))
+    flat, offsets = packed_truth(store)
+    exact = dense_exact_reads(cells, ids, kc, vc, pc, last, store.probes,
+                              flat, offsets, store.maxj)
+    return {"exact": int(exact), "probes": len(store.probes),
+            "cells": shards * d, "failed_insertions": 0}
+
+
+def sbc_run(store, budget, p, design):
+    lam = float(design["lam"] if isinstance(design, dict) else design)
+    shards, d, cap = geometry(store.n, budget)
+    length = max(2, round((store.n / shards) / lam))
+    blocks = d // length
+    ids = shard_ids(store, shards)
+    kc = np.asarray([block_code("key", k, blocks, length) for k in store.keys])
+    vc = np.asarray([block_code("value", v, blocks, length)
+                     for v in store.values])
+    pc = np.asarray([block_code("position", j, blocks, length)
+                     for j in range(store.maxj + 1)])
+    last = block_code("LAST", "", blocks, length)
+    cells = np.zeros((shards, blocks * length), dtype=np.uint8)
+    offsets = np.arange(blocks, dtype=np.int64) * length
+    for ki, vi, j, flag in zip(store.pair_key, store.pair_value,
+                               store.pair_j, store.last):
+        pos = (kc[ki] + pc[j] + vc[vi] + (last if flag else 0)) % length
+        cells[ids[ki], offsets + pos] = 1
+    cells = flip_cells(cells, p,
+                       channel_rng(store, "sbc", budget, {"lam": lam}))
+    flat, truth_offsets = packed_truth(store)
+    exact = sparse_exact_reads(cells, ids, kc, vc, pc, last, store.probes,
+                               flat, truth_offsets, store.maxj, length)
+    return {"exact": int(exact), "probes": len(store.probes),
+            "cells": shards * d, "failed_insertions": 0}
+# BCH polynomials and word coordinates are little-endian: coefficient i
+# multiplies x^i. Shortening removes highest systematic coordinates.
+# Cuckoo bucket counts are powers of two: XOR partial-key hashing requires
+# closure under XOR. The smallest admissible power of two is used.
+# BCH design objective uses the union probability of failed codewords touched
+# by each probed key; it conservatively treats a failed word as corrupting
+# every field touched. Directory words are included for static-table queries.
+
+
+@lru_cache(None)
+def gf_tables(m):
+    primitive = {6: 0x43, 7: 0x83, 8: 0x11D, 9: 0x211, 10: 0x409}[m]
+    n = (1 << m) - 1
+    exp = np.zeros(2 * n, dtype=np.int32)
+    log = np.full(n + 1, -1, dtype=np.int32)
+    x = 1
+    for i in range(n):
+        exp[i], log[x] = x, i
+        x <<= 1
+        if x & (1 << m):
+            x ^= primitive
+    if x != 1 or len(set(exp[:n])) != n:
+        raise RuntimeError("invalid primitive polynomial")
+    exp[n:] = exp[:n]
+    return exp, log
+
+
+def gf_mul(a, b, exp, log):
+    return int(exp[int(log[a]) + int(log[b])]) if a and b else 0
+
+
+def gf_div(a, b, exp, log):
+    if not b:
+        raise ZeroDivisionError("GF division")
+    return int(exp[(int(log[a]) - int(log[b])) % (len(exp) // 2)]) if a else 0
+
+
+def gf_poly_mul(a, b, exp, log):
+    c = [0] * (len(a) + len(b) - 1)
+    for i, x in enumerate(a):
+        for j, y in enumerate(b):
+            c[i + j] ^= gf_mul(x, y, exp, log)
+    return c
+
+
+@lru_cache(None)
+def bch_specs(n):
+    m = (n + 1).bit_length() - 1
+    exp, log = gf_tables(m)
+    roots, generator, specs = set(), [1], []
+    for t in range(1, n // 2 + 1):
+        for r in (2 * t - 1, 2 * t):
+            if r % n in roots:
+                continue
+            coset, x = [], r % n
+            while x not in coset:
+                coset.append(x)
+                x = 2 * x % n
+            roots.update(coset)
+            minimal = [1]
+            for x in coset:
+                minimal = gf_poly_mul(minimal, [int(exp[x]), 1], exp, log)
+            if any(v not in (0, 1) for v in minimal):
+                raise RuntimeError("nonbinary BCH generator")
+            generator = gf_poly_mul(generator, minimal, exp, log)
+        k = n - len(generator) + 1
+        if k < 2:
+            break
+        specs.append((n, t, k, tuple(generator)))
+    return tuple(specs)
+
+
+def bch_encode(info, spec):
+    n, t, k, generator = spec
+    info = np.asarray(info, dtype=np.uint8)
+    if not 0 < len(info) <= k:
+        raise ValueError("invalid shortened BCH information length")
+    return bch_encode_kernel(
+        info, np.asarray(generator, dtype=np.uint8), n - k)
+
+
+@njit(cache=True)
+def bch_syndromes(word, exp, log, t):
+    n = len(exp) // 2
+    syn = np.zeros(2 * t, dtype=np.int32)
+    for i in range(len(word)):
+        if word[i]:
+            for j in range(2 * t):
+                syn[j] ^= exp[((j + 1) * i) % n]
+    return syn
+
+
+def berlekamp_massey(syn, exp, log):
+    c, b, degree, gap, scale = [1], [1], 0, 1, 1
+    for step in range(len(syn)):
+        discrepancy = int(syn[step])
+        for i in range(1, degree + 1):
+            if i < len(c):
+                discrepancy ^= gf_mul(c[i], int(syn[step - i]), exp, log)
+        if not discrepancy:
+            gap += 1
+            continue
+        old = c[:]
+        factor = gf_div(discrepancy, scale, exp, log)
+        c.extend([0] * max(0, len(b) + gap - len(c)))
+        for i, v in enumerate(b):
+            c[i + gap] ^= gf_mul(factor, v, exp, log)
+        if 2 * degree <= step:
+            degree, b, scale, gap = step + 1 - degree, old, discrepancy, 1
+        else:
+            gap += 1
+    return c[:degree + 1]
+
+
+def bch_decode(received, erased, spec):
+    n, t, k, _ = spec
+    r = n - k
+    raw = np.asarray(received, dtype=np.uint8).copy()
+    fallback = raw[r:].copy()
+    erasures = np.flatnonzero(erased)
+    if len(erasures) > 2 * t:
+        return fallback
+    exp, log = gf_tables((n + 1).bit_length() - 1)
+    syn = bch_syndromes(raw, exp, log, t)
+    if not syn.any() and not len(erasures):
+        return fallback
+    fs = list(map(int, syn))
+    eloc = [1]
+    for pos in erasures:
+        x = int(exp[int(pos)])
+        eloc = gf_poly_mul(eloc, [1, x], exp, log)
+        fs = [gf_mul(fs[j], x, exp, log) ^ fs[j + 1]
+              for j in range(len(fs) - 1)]
+    error_loc = berlekamp_massey(fs, exp, log)
+    e = len(error_loc) - 1
+    if 2 * e + len(erasures) > 2 * t:
+        return fallback
+    locator = gf_poly_mul(eloc, error_loc, exp, log)
+    positions = bch_locator_roots(
+        np.asarray(locator, dtype=np.int32), len(raw), exp, log)
+    v = len(positions)
+    if v != len(locator) - 1 or not set(erasures).issubset(positions):
+        return fallback
+    if not len(erasures):
+        # Binary error magnitudes are necessarily one: no GF linear solve
+        # is needed in the overwhelmingly common no-erasure case.
+        raw[positions] ^= 1
+    else:
+        matrix = [
+            [int(exp[((row + 1) * int(pos)) % n]) for pos in positions] +
+            [int(syn[row])] for row in range(v)]
+        for col in range(v):
+            pivot = next((i for i in range(col, v) if matrix[i][col]), None)
+            if pivot is None:
+                return fallback
+            matrix[col], matrix[pivot] = matrix[pivot], matrix[col]
+            divisor = matrix[col][col]
+            matrix[col] = [gf_div(x, divisor, exp, log) for x in matrix[col]]
+            for i in range(v):
+                if i != col and matrix[i][col]:
+                    factor = matrix[i][col]
+                    matrix[i] = [x ^ gf_mul(factor, y, exp, log)
+                                 for x, y in zip(matrix[i], matrix[col])]
+        for pos, row in zip(positions, matrix):
+            if row[-1] not in (0, 1):
+                return fallback
+            raw[pos] ^= row[-1]
+    if bch_syndromes(raw, exp, log, t).any():
+        return fallback
+    return raw[r:].copy()
+
+
+def repetition_counts(length, budget):
+    if length > budget:
+        return None
+    counts = np.full(length, budget // length, dtype=np.int32)
+    extra = budget % length
+    if extra:
+        counts[(np.arange(extra, dtype=np.int64) * length // extra)] += 1
+    return counts
+
+
+def repetition_read(bits, counts, p, rng, soft=False):
+    # Binomial inverse CDF uses one fixed uniform per physical cell.
+    votes = np.zeros(len(bits), dtype=np.int32)
+    for copy in range(int(counts.max())):
+        indices = np.flatnonzero(counts > copy)
+        flips = rng.random(len(indices)) < p
+        votes[indices] += bits[indices] ^ flips.astype(np.uint8)
+    if soft:
+        return (counts - 2 * votes) * math.log(
+            max(1 - p, 1e-15) / max(p, 1e-15))
+    return (2 * votes > counts).astype(np.uint8), 2 * votes == counts
+
+
+@lru_cache(maxsize=32768)
+def majority_rates(rho, p):
+    erasure = float(binom.pmf(rho // 2, rho, p)) if rho % 2 == 0 else 0.0
+    error = float(binom.sf(rho // 2, rho, p))
+    return error, erasure
+
+
+@lru_cache(maxsize=131072)
+def word_failure(length, t, error, erasure):
+    if error + erasure == 0:
+        return 0.0
+    s = np.arange(min(2 * t, length) + 1)
+    conditional = error / max(1 - erasure, 1e-300)
+    success = np.sum(
+        binom.pmf(s, length, erasure) *
+        binom.cdf((2 * t - s) // 2, length - s, conditional))
+    return float(np.clip(1 - success, 0, 1))
+
+
+def choose_bch(logical_length, cap, p, harder_p=None, touches=None):
+    """Evaluate every admissible strength, reusing equal full-word lengths."""
+    if logical_length < 1:
+        raise ValueError("BCH logical length must be positive")
+    hp = p if harder_p is None else harder_p
+    best, answer = None, None
+    # All but the final shortened word have the same length and failure rate.
+    # Collapse touched-word lists into (full-word count, touches-final-word).
+    for n in (63, 127, 255, 511, 1023):
+        for spec in bch_specs(n):
+            _, t, k, _ = spec
+            word_count = (logical_length + k - 1) // k
+            final_info = logical_length - (word_count - 1) * k
+            final_length = final_info + n - k
+            total = (word_count - 1) * n + final_length
+            if total > cap:
+                continue
+            rho, extra = divmod(cap, total)
+            weight = extra / total
+            if touches is not None:
+                full_counts = np.empty(len(touches), dtype=np.int32)
+                final_touched = np.empty(len(touches), dtype=np.bool_)
+                for i, indices in enumerate(touches):
+                    words = np.unique(
+                        np.asarray(indices, dtype=np.int64) // k)
+                    is_final = bool(len(words) and words[-1] == word_count - 1)
+                    full_counts[i] = len(words) - int(is_final)
+                    final_touched[i] = is_final
+
+            def objective(rate):
+                e0, s0 = majority_rates(rho, rate)
+                e1, s1 = majority_rates(rho + 1, rate)
+                error = (1 - weight) * e0 + weight * e1
+                erasure = (1 - weight) * s0 + weight * s1
+                full_success = 1 - word_failure(n, t, error, erasure)
+                final_success = 1 - word_failure(
+                    final_length, t, error, erasure)
+                if touches is None:
+                    return float(1 - full_success ** (word_count - 1) *
+                                 final_success)
+                successes = np.power(full_success, full_counts)
+                successes[final_touched] *= final_success
+                return float(np.sum(1 - successes))
+
+            primary = objective(p)
+            # A secondary objective cannot change a strictly worse primary.
+            if best is not None and primary > best[0]:
+                continue
+            secondary = primary if hp == p else objective(hp)
+            score = (primary, secondary, n, t)
+            if best is None or score < best:
+                best, answer = score, spec
+    return answer
+
+
+def bch_transport(logical, cap, p, rng, spec):
+    if spec is None:
+        return None
+    k = spec[2]
+    words = [bch_encode(logical[i:i + k], spec)
+             for i in range(0, len(logical), k)]
+    encoded = np.concatenate(words)
+    counts = repetition_counts(len(encoded), cap)
+    if counts is None:
+        return None
+    received, erased = repetition_read(encoded, counts, p, rng)
+    decoded, offset = [], 0
+    for word in words:
+        end = offset + len(word)
+        decoded.append(bch_decode(received[offset:end], erased[offset:end], spec))
+        offset = end
+    return np.concatenate(decoded)
+
+
+def uint_bits(values, width):
+    a = np.asarray(values, dtype=np.uint64).reshape(-1)
+    return ((a[:, None] >> np.arange(width, dtype=np.uint64)) & 1
+            ).astype(np.uint8).reshape(-1)
+
+
+def bits_uint(bits, width):
+    if width == 0:
+        return np.zeros(0, dtype=np.uint64)
+    return (np.asarray(bits).reshape(-1, width).astype(np.uint64) *
+            (np.uint64(1) << np.arange(width, dtype=np.uint64))).sum(axis=1)
+
+
+def pair_token(store, i):
+    return (store.keys[int(store.pair_key[i])], int(store.pair_j[i]))
+
+
+def mph_build(store):
+    buckets = max(1, math.ceil(store.n / 5))
+    groups = [[] for _ in range(buckets)]
+    for i in range(store.n):
+        groups[seed_of("mph-bucket", pair_token(store, i)) % buckets].append(i)
+    occupied = np.zeros(store.n, dtype=np.bool_)
+    displacements = np.zeros(buckets, dtype=np.uint64)
+    rows = np.empty(store.n, dtype=np.int32)
+    for bucket in sorted(range(buckets), key=lambda x: -len(groups[x])):
+        group = groups[bucket]
+        if not group:
+            continue
+        displacement = 0
+        while True:
+            loc = [seed_of("mph-row", pair_token(store, i), displacement) %
+                   store.n for i in group]
+            if len(set(loc)) == len(loc) and not occupied[loc].any():
+                break
+            displacement += 1
+            if displacement > 10_000_000:
+                raise RuntimeError("MPH displacement search exhausted")
+        displacements[bucket] = displacement
+        occupied[loc] = True
+        rows[loc] = group
+    return displacements, rows
+
+
+def table_fields(store):
+    return max(1, (store.N - 1).bit_length()), int(store.maxj > 0)
+
+
+def static_layout(store):
+    disp, order = mph_build(store)
+    dw = max(1, int(disp.max()).bit_length())
+    vw, flag = table_fields(store)
+    rowbits = np.concatenate((uint_bits(store.pair_value[order], vw).reshape(
+        store.n, vw), store.last[order, None] if flag else
+        np.empty((store.n, 0), dtype=np.uint8)), axis=1).reshape(-1)
+    logical = np.concatenate((uint_bits(disp, dw), rowbits))
+    touches = []
+    base, rw = len(disp) * dw, vw + flag
+    inverse = np.empty(store.n, dtype=np.int32)
+    inverse[order] = np.arange(store.n)
+    for ki in store.probes:
+        fields = []
+        for i in np.flatnonzero(store.pair_key == ki):
+            b = seed_of("mph-bucket", pair_token(store, i)) % len(disp)
+            fields.extend(range(b * dw, (b + 1) * dw))
+            fields.extend(range(base + inverse[i] * rw,
+                                base + (inverse[i] + 1) * rw))
+        touches.append(fields)
+    return logical, (len(disp), dw, vw, flag), touches
+
+
+def static_read(store, decoded, meta):
+    buckets, dw, vw, flag = meta
+    disp = bits_uint(decoded[:buckets * dw], dw)
+    rows = decoded[buckets * dw:].reshape(store.n, vw + flag)
+    values = bits_uint(rows[:, :vw].reshape(-1), vw)
+    exact = 0
+    for ki in store.probes:
+        output = []
+        for j in range(store.maxj + 1):
+            token = (store.keys[ki], j)
+            bucket = seed_of("mph-bucket", token) % buckets
+            row = seed_of("mph-row", token, int(disp[bucket])) % store.n
+            output.append(int(values[row]))
+            if flag and rows[row, vw]:
+                break
+        exact += output == store.truth[ki]
+    return int(exact)
+
+
+def bch_run(store, budget, p, design=None, harder_p=None):
+    logical, meta, touches = static_layout(store)
+    cap = math.floor(budget * store.n)
+    spec = choose_bch(len(logical), cap, p, harder_p, touches)
+    decoded = bch_transport(logical, cap, p,
+                            channel_rng(store, "bch", budget, "closed-form"), spec)
+    return {"exact": 0 if decoded is None else static_read(store, decoded, meta),
+            "probes": len(store.probes), "cells": cap if decoded is not None else 0,
+            "fits": decoded is not None, "failed_insertions": 0}
+
+
+def cuckoo_address(token, f, buckets):
+    fingerprint = 1 + seed_of("fingerprint", token) % ((1 << f) - 1)
+    first = seed_of("cuckoo-first", token) % buckets
+    delta = seed_of("cuckoo-delta", fingerprint) % buckets
+    if buckets > 1 and delta == 0:
+        delta = 1
+    return fingerprint, first, first ^ delta
+
+
+def cuckoo_build(store, f):
+    needed = max(1, math.ceil(store.n / (0.95 * 4)))
+    buckets = 1 << (needed - 1).bit_length()
+    slots = np.full((buckets, 4), -1, dtype=np.int32)
+    fingerprints = np.zeros((buckets, 4), dtype=np.uint32)
+    rng = rng_of("cuckoo-insert", store.sid, f)
+    failed = 0
+    for i in range(store.n):
+        fp, b1, b2 = cuckoo_address(pair_token(store, i), f, buckets)
+        empty = [(b, int(s)) for b in sorted(set((b1, b2)))
+                 for s in np.flatnonzero(slots[b] < 0)]
+        if empty:
+            b, s = empty[0]
+            slots[b, s], fingerprints[b, s] = i, fp
+            continue
+        # Roll back failed walks: previously inserted rows are never lost.
+        changes, item, fingerprint = [], i, fp
+        b = b1 if rng.integers(2) == 0 else b2
+        success = False
+        for move in range(500):
+            s = int(rng.integers(4))
+            old, oldfp = int(slots[b, s]), int(fingerprints[b, s])
+            changes.append((b, s, old, oldfp))
+            slots[b, s], fingerprints[b, s] = item, fingerprint
+            item, fingerprint = old, oldfp
+            _, a, c = cuckoo_address(pair_token(store, item), f, buckets)
+            b = c if b == a else a
+            vacancies = np.flatnonzero(slots[b] < 0)
+            if len(vacancies):
+                s = int(vacancies[0])
+                slots[b, s], fingerprints[b, s] = item, fingerprint
+                success = True
+                break
+        if not success:
+            failed += 1
+            for b, s, old, oldfp in reversed(changes):
+                slots[b, s], fingerprints[b, s] = old, oldfp
+    vw, flag = table_fields(store)
+    flat = slots.reshape(-1)
+    vals = np.zeros(len(flat), dtype=np.uint32)
+    last = np.zeros(len(flat), dtype=np.uint8)
+    used = flat >= 0
+    vals[used], last[used] = store.pair_value[flat[used]], store.last[flat[used]]
+    rows = np.concatenate((uint_bits(fingerprints, f).reshape(-1, f),
+                           uint_bits(vals, vw).reshape(-1, vw),
+                           last[:, None] if flag else
+                           np.empty((len(flat), 0), dtype=np.uint8)), axis=1)
+    return rows.reshape(-1), (buckets, f, vw, flag), failed
+
+
+def cuckoo_read(store, decoded, meta):
+    buckets, f, vw, flag = meta
+    rows = decoded.reshape(buckets * 4, f + vw + flag)
+    fingerprints = bits_uint(rows[:, :f].reshape(-1), f)
+    values = bits_uint(rows[:, f:f + vw].reshape(-1), vw)
+    addresses, offsets, truth_flat, truth_offsets = cuckoo_query_plan(
+        store, f, buckets)
+    return int(cuckoo_exact_kernel(
+        rows, fingerprints, values, addresses, offsets,
+        truth_flat, truth_offsets, store.probes, store.maxj,
+        f + vw if flag else -1))
+# IRA information-column neighbours are sampled without replacement, with
+# stable geometry seeds. Check nodes are not degree-regularised. Short final
+# words are constructed at their own information length and requested rate.
+# BP uses clipped LLRs for numerical stability; a failed decoder returns its
+# current systematic hard decisions. No extra CRC or failure flag is stored.
+# Cuckoo designs must fit even when an insertion fails; failed insertions
+# contribute lookup failures, rather than removing the store from evaluation.
+
+IRA_RATES = ((1, 4, 6), (1, 3, 6), (1, 2, 5), (2, 3, 6),
+             (3, 4, 5), (5, 6, 4), (9, 10, 5))
+
+
+@lru_cache(maxsize=256)
+def ira_graph(k, numerator, denominator, dv):
+    checks = math.ceil(k * (denominator - numerator) / numerator)
+    # A minimum of dv checks makes distinct information neighbours possible.
+    checks = max(checks, dv)
+    rng = rng_of("IRA-graph", k, numerator, denominator, dv)
+    variables, check_ids = [], []
+    for v in range(k):
+        neighbours = rng.choice(checks, size=dv, replace=False)
+        variables.extend([v] * dv)
+        check_ids.extend(map(int, neighbours))
+    for c in range(checks):
+        variables.append(k + c)
+        check_ids.append(c)
+        if c:
+            variables.append(k + c - 1)
+            check_ids.append(c)
+    variables = np.asarray(variables, dtype=np.int32)
+    check_ids = np.asarray(check_ids, dtype=np.int32)
+    order = np.argsort(check_ids, kind="stable").astype(np.int32)
+    pointers = np.concatenate(([0], np.cumsum(
+        np.bincount(check_ids, minlength=checks)))).astype(np.int32)
+    return variables, check_ids, order, pointers, checks
+
+
+def ira_encode(info, rate):
+    k = len(info)
+    variables, check_ids, order, pointers, checks = ira_graph(k, *rate)
+    rhs = np.zeros(checks, dtype=np.uint8)
+    edges = variables < k
+    np.bitwise_xor.at(rhs, check_ids[edges], info[variables[edges]])
+    return np.concatenate((info, np.bitwise_xor.accumulate(rhs)))
+
+
+@njit(cache=True)
+def ira_bp(channel, variables, order, pointers, iterations=60):
+    edges = len(variables)
+    outgoing = np.empty(edges, dtype=np.float64)
+    incoming = np.zeros(edges, dtype=np.float64)
+    posterior = channel.copy()
+    hard = np.zeros(len(channel), dtype=np.uint8)
+    for e in range(edges):
+        outgoing[e] = max(-40.0, min(40.0, channel[variables[e]]))
+    maxdegree = 0
+    for c in range(len(pointers) - 1):
+        maxdegree = max(maxdegree, pointers[c + 1] - pointers[c])
+    prefix = np.empty(maxdegree + 1, dtype=np.float64)
+    suffix = np.empty(maxdegree + 1, dtype=np.float64)
+    for iteration in range(iterations):
+        for c in range(len(pointers) - 1):
+            begin, end = pointers[c], pointers[c + 1]
+            degree = end - begin
+            prefix[0] = 1.0
+            for j in range(degree):
+                e = order[begin + j]
+                prefix[j + 1] = prefix[j] * math.tanh(outgoing[e] * 0.5)
+            suffix[degree] = 1.0
+            for j in range(degree - 1, -1, -1):
+                e = order[begin + j]
+                suffix[j] = suffix[j + 1] * math.tanh(outgoing[e] * 0.5)
+            for j in range(degree):
+                product = max(-1 + 1e-12, min(1 - 1e-12,
+                                             prefix[j] * suffix[j + 1]))
+                incoming[order[begin + j]] = 2 * math.atanh(product)
+        posterior[:] = channel
+        for e in range(edges):
+            posterior[variables[e]] += incoming[e]
+        for v in range(len(channel)):
+            hard[v] = posterior[v] < 0
+        valid = True
+        for c in range(len(pointers) - 1):
+            parity = 0
+            for j in range(pointers[c], pointers[c + 1]):
+                parity ^= hard[variables[order[j]]]
+            if parity:
+                valid = False
+                break
+        if valid:
+            return hard
+        for e in range(edges):
+            outgoing[e] = max(-40.0, min(40.0,
+                posterior[variables[e]] - incoming[e]))
+    return hard
+
+
+def ira_transport(logical, cap, p, rng, rate):
+    words = [ira_encode(logical[i:i + 1024], rate)
+             for i in range(0, len(logical), 1024)]
+    encoded = np.concatenate(words)
+    counts = repetition_counts(len(encoded), cap)
+    if counts is None:
+        return None
+    llr = repetition_read(encoded, counts, p, rng, soft=True).astype(np.float64)
+    output, offset = [], 0
+    for i, word in enumerate(words):
+        k = min(1024, len(logical) - 1024 * i)
+        variables, _, order, pointers, _ = ira_graph(k, *rate)
+        decoded = ira_bp(llr[offset:offset + len(word)],
+                         variables, order, pointers)
+        output.append(decoded[:k])
+        offset += len(word)
+    return np.concatenate(output)
+
+
+def cuckoo_run(store, budget, p, design, harder_p=None):
+    f = int(design["f"])
+    logical, meta, failures = cuckoo_build(store, f)
+    cap = math.floor(budget * store.n)
+    codec = design["codec"]
+    rng = channel_rng(store, "O-" + codec.upper(), budget, design)
+    if codec == "bch":
+        spec = choose_bch(len(logical), cap, p, harder_p)
+        decoded = cuckoo_bch_transport(logical, cap, p, rng, spec)
+    else:
+        decoded = cuckoo_ira_transport(
+            logical, cap, p, rng, tuple(design["rate"]))
+    return {
+        "exact": 0 if decoded is None else cuckoo_read(store, decoded, meta),
+        "probes": len(store.probes),
+        "fits": decoded is not None,
+        "cells": cap if decoded is not None else 0,
+        "failed_insertions": failures,
+    }
+
+
+def evaluate_store(store, memory, budget, p, design, harder_p):
+    if memory == "dense":
+        return dense_run(store, budget, p, design)
+    if memory == "sbc":
+        return sbc_run(store, budget, p, design)
+    if memory == "bch":
+        return bch_run(store, budget, p, design, harder_p)
+    return cuckoo_run(store, budget, p, design, harder_p)
+
+
+def designs_for(memory):
+    if memory == "dense":
+        return ["dense"]
+    if memory == "sbc":
+        return [{"lam": lam} for lam in LAMBDAS]
+    if memory == "bch":
+        return ["closed-form"]
+    codec = "bch" if memory == "O-BCH" else "ldpc"
+    if codec == "bch":
+        return [{"codec": codec, "f": f} for f in (12, 14, 16, 18)]
+    return [{"codec": codec, "f": f, "rate": list(rate)}
+            for f in (12, 14, 16, 18) for rate in IRA_RATES]
+
+
+def pooled_evaluate(pool, stores, memory, budget, p, design, harder_p):
+    # Send only a small, self-contained worker function and plain data.
+    # Cached functions defined in __main__ otherwise get pickled by reference
+    # and cannot be resolved by loky's worker bootstrap module.
+    script_path = str(Path(__file__).resolve())
+    rows = pool(delayed(isolated_store_worker)(
+        script_path, dict(s.__dict__), memory, float(budget), p, design,
+        harder_p) for s in stores)
+    exact = sum(row["exact"] for row in rows)
+    probes = sum(row["probes"] for row in rows)
+    return {
+        "exact": exact,
+        "probes": probes,
+        "share": exact / probes,
+        "fits": all(row.get("fits", True) for row in rows),
+        "failed_insertions": sum(row["failed_insertions"] for row in rows),
+        "cells": [row["cells"] for row in rows],
+    }
+
+
+def requirement_index(records):
+    # Require a passing suffix of ALL larger evaluated budgets.
+    indices = sorted(records)
+    candidate = None
+    for i in reversed(indices):
+        row = records[i]
+        if not row.get("fits", True) or row["share"] < TARGET_SHARE:
+            break
+        candidate = i
+    return candidate
+
+
+def atomic_json(path, data):
+    temporary = str(path) + ".tmp"
+    with open(temporary, "w", encoding="utf-8") as handle:
+        json.dump(data, handle, indent=2, allow_nan=False)
+        handle.write("\n")
+    os.replace(temporary, path)
+
+
+def record_budget(index, budgets, row, design):
+    return {"grid_index": int(index), "budget": float(budgets[index]),
+            "design": design, **row}
+
+
+def main():
+    args = parse_args()
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+    started = time.time()
+    dev, test = load_data(args.smoke)
+    budgets = np.asarray([512.0, 4096.0]) if args.smoke else GRID
+    memories = (["dense", "sbc", "bch", "O-BCH", "O-LDPC"]
+                if args.memory == "all" else
+                ["O-BCH", "O-LDPC"] if args.memory == "cuckoo"
+                else [args.memory])
+    result = {"smoke": args.smoke, "seed": MASTER_SEED,
+              "dev_stores": len(dev), "test_stores": len(test),
+              "test_probe_count": sum(len(s.probes) for s in test),
+              "budget_grid": budgets.tolist(), "device": {}, "memories": {}}
+    # Include next harder preregistered condition for design tie-breaking,
+    # even when the user requests only a subset of noise conditions.
+    calibration_ks = sorted(set(args.ks) | {
+        min((q for q in NOISE_LEVELS if q > k), default=k) for k in args.ks})
+    for k in calibration_ks:
+        print(f"Estimating device p({k:g}), 10^7 cells", flush=True)
+        result["device"][str(k)] = estimate_p(k)
+        atomic_json(out / "p_device.json", result["device"])
+    rates = {k: result["device"][str(k)]["p"] for k in calibration_ks}
+    # Process-based parallelism; BLAS and numba remain single-threaded.
+    with Parallel(n_jobs=min(args.workers, 14), backend="loky",
+                  max_nbytes="2M", pre_dispatch="n_jobs") as pool:
+        for memory in memories:
+            result["memories"][memory] = {}
+            designs = designs_for(memory)
+            dev_records = {k: {} for k in args.ks}
+            for index, budget in enumerate(budgets):
+                evaluations = {}
+                needed = sorted(set(args.ks) | {
+                    min((q for q in NOISE_LEVELS if q > k), default=k)
+                    for k in args.ks})
+                for k in needed:
+                    evaluations[k] = []
+                    harder = min((q for q in NOISE_LEVELS if q > k), default=k)
+                    hp = rates.get(harder, rates[k])
+                    for di, design in enumerate(designs):
+                        row = pooled_evaluate(pool, dev, memory, budget,
+                                              rates[k], design, hp)
+                        evaluations[k].append(row)
+                    print(f"Dev {memory} k={k:g} B={budget:.3f}", flush=True)
+                for k in args.ks:
+                    harder = min((q for q in NOISE_LEVELS if q > k), default=k)
+                    feasible = [i for i, row in enumerate(evaluations[k])
+                                if row["fits"] and evaluations[harder][i]["fits"]]
+                    if feasible:
+                        winner = max(feasible, key=lambda i: (
+                            evaluations[k][i]["exact"],
+                            evaluations[harder][i]["exact"], -i))
+                        row, design = evaluations[k][winner], designs[winner]
+                    else:
+                        row = {"exact": 0, "probes": sum(len(s.probes) for s in dev),
+                               "share": 0.0, "fits": False,
+                               "failed_insertions": 0}
+                        design = None
+                    dev_records[k][index] = record_budget(
+                        index, budgets, row, design)
+                atomic_json(out / f"dev_{memory}.json",
+                            {str(k): list(v.values()) for k, v in dev_records.items()})
+            for k in args.ks:
+                dr = dev_records[k]
+                dev_index = requirement_index(dr)
+                entry = {"dev": list(dr.values()),
+                         "dev_requirement": "> 4096" if dev_index is None else
+                         float(budgets[dev_index]), "test": []}
+                result["memories"][memory][str(k)] = entry
+                centre = len(budgets) - 1 if dev_index is None else dev_index
+                pending = set(range(max(0, centre - 4),
+                                    min(len(budgets), centre + 5)))
+                tested = {}
+                harder = min((q for q in NOISE_LEVELS if q > k), default=k)
+                while True:
+                    for index in sorted(pending - tested.keys()):
+                        design = dr[index]["design"]
+                        if design is None:
+                            row = {"exact": 0, "probes": result["test_probe_count"],
+                                   "share": 0.0, "fits": False,
+                                   "failed_insertions": 0}
+                        else:
+                            row = pooled_evaluate(pool, test, memory, budgets[index],
+                                                  rates[k], design,
+                                                  rates.get(harder, rates[k]))
+                        tested[index] = record_budget(index, budgets, row, design)
+                        print(f"Test {memory} k={k:g} B={budgets[index]:.3f}: "
+                              f"{row['exact']}/{row['probes']}", flush=True)
+                        entry["test"] = [tested[i] for i in sorted(tested)]
+                        atomic_json(out / "b_result.partial.json", result)
+                    candidate = requirement_index(tested)
+                    if candidate is not None:
+                        if candidate == 0 or (candidate - 1 in tested and
+                                             tested[candidate - 1]["share"] <
+                                             TARGET_SHARE):
+                            break
+                        lo = min(tested)
+                        pending.update(range(max(0, lo - 4), lo))
+                    else:
+                        hi = max(tested)
+                        if hi == len(budgets) - 1:
+                            break
+                        pending.update(range(hi + 1,
+                                             min(len(budgets), hi + 5)))
+                entry["test_requirement"] = ("> 4096" if candidate is None
+                                             else float(budgets[candidate]))
+                entry["failed_insertions_by_test_budget"] = {
+                    str(row["budget"]): row["failed_insertions"]
+                    for row in entry["test"]}
+                atomic_json(out / "b_result.partial.json", result)
+    if "O-BCH" in result["memories"] and "O-LDPC" in result["memories"]:
+        result["cuckoo_better"] = {}
+        for k in args.ks:
+            choices = [(m, result["memories"][m][str(k)]["test_requirement"])
+                       for m in ("O-BCH", "O-LDPC")]
+            winner = min(choices, key=lambda x: math.inf if isinstance(x[1], str)
+                         else x[1])
+            result["cuckoo_better"][str(k)] = {
+                "memory": winner[0], "test_requirement": winner[1]}
+    result["elapsed_seconds"] = time.time() - started
+    atomic_json(out / "b_result.json", result)
+    print(f"Finished: {out / 'b_result.json'}", flush=True)
+
+
+def isolated_store_worker(script_path, store_data, memory, budget, p, design,
+                          harder_p):
+    import importlib.util
+    import sys
+
+    module_name = "_part_b_worker_implementation"
+    module = sys.modules.get(module_name)
+    if module is None:
+        spec = importlib.util.spec_from_file_location(module_name, script_path)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"Cannot load simulation script: {script_path}")
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[module_name] = module
+        try:
+            spec.loader.exec_module(module)
+            module.install_worker_layout_cache(module)
+        except BaseException:
+            sys.modules.pop(module_name, None)
+            raise
+    store = module.Store(**store_data)
+    return module.evaluate_store(store, memory, budget, p, design, harder_p)
+
+
+@njit(cache=True)
+def dense_exact_reads(cells, ids, kc, vc, pc, last, probes, truth_flat,
+                      truth_offsets, maxj):
+    """Score exhaustively, but stop a query once exact recall is impossible."""
+    d = cells.shape[1]
+    exact = 0
+    query = np.empty(d, dtype=np.int8)
+    for ki in probes:
+        start, end = truth_offsets[ki], truth_offsets[ki + 1]
+        valid = True
+        stopped = False
+        for j in range(maxj + 1):
+            if j >= end - start:
+                valid = False
+                break
+            for component in range(d):
+                query[component] = (
+                    cells[ids[ki], component] * kc[ki, component] *
+                    pc[j, component])
+            best = -2147483647
+            winner = 0
+            marked = False
+            # Plain candidates precede marked candidates; strict updates
+            # preserve the original first-maximum tie rule.
+            for flag in range(2):
+                for vi in range(vc.shape[0]):
+                    score = 0
+                    for component in range(d):
+                        term = query[component] * vc[vi, component]
+                        if flag:
+                            term *= last[component]
+                        score += term
+                    if score > best:
+                        best = score
+                        winner = vi
+                        marked = flag == 1
+            if winner != truth_flat[start + j]:
+                valid = False
+                break
+            if marked:
+                stopped = True
+                if j + 1 != end - start:
+                    valid = False
+                break
+            if j + 1 == end - start and j < maxj:
+                # A longer output cannot become equal to the truth.
+                valid = False
+                break
+        # At maxj, the specified read returns its output even without LAST.
+        if valid:
+            exact += 1
+    return exact
+
+
+@njit(cache=True)
+def sparse_exact_reads(cells, ids, kc, vc, pc, last, probes, truth_flat,
+                       truth_offsets, maxj, length):
+    blocks = kc.shape[1]
+    exact = 0
+    for ki in probes:
+        start, end = truth_offsets[ki], truth_offsets[ki + 1]
+        valid = True
+        for j in range(maxj + 1):
+            if j >= end - start:
+                valid = False
+                break
+            best, winner, marked = -1, 0, False
+            for flag in range(2):
+                for vi in range(vc.shape[0]):
+                    score = 0
+                    for b in range(blocks):
+                        pos = kc[ki, b] + pc[j, b] + vc[vi, b]
+                        if flag:
+                            pos += last[b]
+                        score += cells[ids[ki], b * length + pos % length]
+                    if score > best:
+                        best, winner, marked = score, vi, flag == 1
+            if winner != truth_flat[start + j]:
+                valid = False
+                break
+            if marked:
+                if j + 1 != end - start:
+                    valid = False
+                break
+            if j + 1 == end - start and j < maxj:
+                valid = False
+                break
+        if valid:
+            exact += 1
+    return exact
+
+
+def packed_truth(store):
+    offsets = np.concatenate((
+        np.array([0], dtype=np.int64),
+        np.cumsum([len(v) for v in store.truth], dtype=np.int64)))
+    flat = np.asarray([v for row in store.truth for v in row], dtype=np.int32)
+    return flat, offsets
+
+
+@njit(cache=True)
+def bch_encode_kernel(info, generator, redundancy):
+    word = np.zeros(redundancy + len(info), dtype=np.uint8)
+    word[redundancy:] = info
+    work = word.copy()
+    for i in range(len(work) - 1, redundancy - 1, -1):
+        if work[i]:
+            for j in range(len(generator)):
+                work[i - redundancy + j] ^= generator[j]
+    word[:redundancy] = work[:redundancy]
+    return word
+
+
+@njit(cache=True)
+def bch_locator_roots(locator, length, exp, log):
+    n = len(exp) // 2
+    result = np.empty(length, dtype=np.int32)
+    count = 0
+    for pos in range(length):
+        x = exp[(-pos) % n]
+        value = 0
+        for j in range(len(locator) - 1, -1, -1):
+            if value and x:
+                value = exp[log[value] + log[x]]
+            else:
+                value = 0
+            value ^= locator[j]
+        if value == 0:
+            result[count] = pos
+            count += 1
+    return result[:count]
+
+
+def install_worker_layout_cache(module):
+    """Cache deterministic layouts, not channel outcomes, inside each process."""
+    from collections import OrderedDict
+
+    def cached_layout(function, maximum):
+        cache = OrderedDict()
+
+        def wrapped(store, *args):
+            key = (store.sid, *args)
+            if key in cache:
+                cache.move_to_end(key)
+                return cache[key]
+            result = function(store, *args)
+            cache[key] = result
+            if len(cache) > maximum:
+                cache.popitem(last=False)
+            return result
+
+        return wrapped
+
+    module.static_layout = cached_layout(module.static_layout, 64)
+    module.cuckoo_build = cached_layout(module.cuckoo_build, 128)
+
+
+def cuckoo_bch_transport(logical, cap, p, rng, spec):
+    if spec is None:
+        return None
+    k = spec[2]
+    words = [bch_encode(logical[i:i + k], spec)
+             for i in range(0, len(logical), k)]
+    encoded = np.concatenate(words)
+    counts = repetition_counts(len(encoded), cap)
+    if counts is None:
+        return None
+    received, erased = cuckoo_repetition_read(encoded, counts, p, rng)
+    output = np.empty(len(logical), dtype=np.uint8)
+    offset = 0
+    information_offset = 0
+    for word in words:
+        end = offset + len(word)
+        information_length = len(word) - (spec[0] - spec[2])
+        destination = slice(information_offset,
+                            information_offset + information_length)
+        if np.array_equal(received[offset:end], word):
+            output[destination] = logical[destination]
+        else:
+            output[destination] = bch_decode(
+                received[offset:end], erased[offset:end], spec)
+        offset = end
+        information_offset += information_length
+    return output
+
+
+def cuckoo_ira_transport(logical, cap, p, rng, rate):
+    words = [ira_encode(logical[i:i + 1024], rate)
+             for i in range(0, len(logical), 1024)]
+    encoded = np.concatenate(words)
+    counts = repetition_counts(len(encoded), cap)
+    if counts is None:
+        return None
+    llr = cuckoo_repetition_read(
+        encoded, counts, p, rng, soft=True).astype(np.float64)
+    output = np.empty(len(logical), dtype=np.uint8)
+    offset = 0
+    for i, word in enumerate(words):
+        k = min(1024, len(logical) - 1024 * i)
+        channel = llr[offset:offset + len(word)]
+        hard = (channel < 0).astype(np.uint8)
+        variables, _, order, pointers, _ = ira_graph(k, *rate)
+        if (np.all(channel != 0) and
+                ira_valid_word(hard, variables, order, pointers)):
+            output[i * 1024:i * 1024 + k] = hard[:k]
+        else:
+            output[i * 1024:i * 1024 + k] = ira_bp(
+                channel, variables, order, pointers)[:k]
+        offset += len(word)
+    return output
+
+
+@njit(cache=True)
+def ira_valid_word(hard, variables, order, pointers):
+    for c in range(len(pointers) - 1):
+        parity = 0
+        for j in range(pointers[c], pointers[c + 1]):
+            parity ^= hard[variables[order[j]]]
+        if parity:
+            return False
+    return True
+
+
+@njit(cache=True)
+def cuckoo_exact_kernel(rows, fingerprints, values, addresses, offsets,
+                        truth_flat, truth_offsets, probes, maxj, flag_column):
+    exact = 0
+    for probe_number in range(len(probes)):
+        ki = probes[probe_number]
+        start, end = truth_offsets[ki], truth_offsets[ki + 1]
+        valid = True
+        for j in range(maxj + 1):
+            if j >= end - start:
+                valid = False
+                break
+            fp = addresses[offsets[probe_number] + j, 0]
+            a = addresses[offsets[probe_number] + j, 1]
+            b = addresses[offsets[probe_number] + j, 2]
+            matched = -1
+            count = 0
+            for s in range(4):
+                loc = 4 * a + s
+                if fingerprints[loc] == fp:
+                    matched = loc
+                    count += 1
+            if b != a:
+                for s in range(4):
+                    loc = 4 * b + s
+                    if fingerprints[loc] == fp:
+                        matched = loc
+                        count += 1
+            if count != 1 or values[matched] != truth_flat[start + j]:
+                valid = False
+                break
+            if flag_column >= 0 and rows[matched, flag_column]:
+                if j + 1 != end - start:
+                    valid = False
+                break
+            if j + 1 == end - start and j < maxj:
+                valid = False
+                break
+        if valid:
+            exact += 1
+    return exact
+
+
+def cuckoo_query_plan(store, f, buckets):
+    # Keep a bounded worker-local cache; never cache noisy read outcomes.
+    cache = getattr(cuckoo_query_plan, "_cache", None)
+    if cache is None:
+        from collections import OrderedDict
+        cache = OrderedDict()
+        cuckoo_query_plan._cache = cache
+    key = (store.sid, f, buckets)
+    if key in cache:
+        cache.move_to_end(key)
+        return cache[key]
+    addresses = []
+    offsets = [0]
+    for ki in store.probes:
+        # Positions beyond the true output length cannot restore exact recall;
+        # no address needs to be generated for them.
+        for j in range(len(store.truth[ki])):
+            addresses.append(cuckoo_address((store.keys[ki], j), f, buckets))
+        offsets.append(len(addresses))
+    truth_offsets = np.concatenate((
+        np.array([0], dtype=np.int64),
+        np.cumsum([len(v) for v in store.truth], dtype=np.int64)))
+    truth_flat = np.asarray(
+        [v for row in store.truth for v in row], dtype=np.int32)
+    plan = (np.asarray(addresses, dtype=np.int64),
+            np.asarray(offsets, dtype=np.int64), truth_flat, truth_offsets)
+    cache[key] = plan
+    if len(cache) > 128:
+        cache.popitem(last=False)
+    return plan
+
+
+def cuckoo_repetition_read(bits, counts, p, rng, soft=False):
+    """Batch copy-major channel draws without changing their cell assignment."""
+    length = len(bits)
+    if length == 0 or len(counts) != length or np.any(counts < 1):
+        raise ValueError("invalid repetition layout")
+    votes = np.zeros(length, dtype=np.int64)
+    minimum = int(counts.min())
+    maximum = int(counts.max())
+    # repetition_counts produces only rho and rho+1. All rho complete
+    # passes therefore have identical indices and can be drawn in batches.
+    batch_rows = max(1, 1_048_576 // length)
+    completed = 0
+    while completed < minimum:
+        rows = min(batch_rows, minimum - completed)
+        uniforms = rng.random((rows, length))
+        flips = uniforms < p
+        errors = flips.sum(axis=0, dtype=np.int64)
+        votes += np.where(bits != 0, rows - errors, errors)
+        completed += rows
+    # Preserve the original ascending-index ordering for partial passes.
+    for copy in range(minimum, maximum):
+        indices = np.flatnonzero(counts > copy)
+        flips = rng.random(len(indices)) < p
+        votes[indices] += bits[indices] ^ flips.astype(np.uint8)
+    if soft:
+        return (counts - 2 * votes) * math.log(
+            max(1 - p, 1e-15) / max(p, 1e-15))
+    return ((2 * votes > counts).astype(np.uint8),
+            2 * votes == counts)
+
+
+if __name__ == "__main__":
+    main()

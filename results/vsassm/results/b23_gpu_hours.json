@@ -1,0 +1,87 @@
+{
+ "jobs": [
+  {
+   "id": "15758342",
+   "name": "Y_s0",
+   "state": "FAILED",
+   "node": "atl1-1-03-018-14-0",
+   "gpu": "H200",
+   "seconds": 212,
+   "hours": 0.059,
+   "note": "OOM in the preflight: model still in eval mode, so no gradient checkpointing (fixed in 1b01b8b)"
+  },
+  {
+   "id": "15758343",
+   "name": "N_s0",
+   "state": "CANCELLED",
+   "node": "atl1-1-03-018-14-0",
+   "gpu": "H200",
+   "seconds": 813,
+   "hours": 0.226,
+   "note": "slow node (no step 25 after 10 min); preflight also ran in eval mode"
+  },
+  {
+   "id": "15758344",
+   "name": "Y_s1",
+   "state": "CANCELLED",
+   "node": "atl1-1-01-002-28-0",
+   "gpu": "A100",
+   "seconds": 82,
+   "hours": 0.023,
+   "note": "started with the pre-fix code; cancelled"
+  },
+  {
+   "id": "15758619",
+   "name": "Y_s1",
+   "state": "CANCELLED",
+   "node": "atl1-1-03-018-14-0",
+   "gpu": "H200",
+   "seconds": 1231,
+   "hours": 0.342,
+   "note": "slow node again (100% util at ~128 W, 35 C; >10x slower); cancelled"
+  },
+  {
+   "id": "15758618",
+   "name": "Y_s0",
+   "state": "CANCELLED",
+   "node": "atl1-1-01-002-28-0",
+   "gpu": "A100",
+   "seconds": 25698,
+   "hours": 7.138,
+   "note": "train + dev + test 0k-64k + 128k qa1-qa3; cancelled once its 128k qa1-qa3 were done (qa4-qa5 ran in 15769169)"
+  },
+  {
+   "id": "15758963",
+   "name": "N_s0",
+   "state": "COMPLETED",
+   "node": "atl1-1-02-012-9-0",
+   "gpu": "H200",
+   "seconds": 15395,
+   "hours": 4.276,
+   "note": "train + dev + test"
+  },
+  {
+   "id": "15759628",
+   "name": "Y_s1",
+   "state": "COMPLETED",
+   "node": "atl1-1-02-012-9-0",
+   "gpu": "H200",
+   "seconds": 18416,
+   "hours": 5.116,
+   "note": "train + dev + test"
+  },
+  {
+   "id": "15769169",
+   "name": "Y_s0 part",
+   "state": "COMPLETED",
+   "node": "atl1-1-01-002-28-0",
+   "gpu": "A100",
+   "seconds": 2290,
+   "hours": 0.636,
+   "note": "Y_s0 test 128k qa4-qa5, in parallel"
+  }
+ ],
+ "total_gpu_hours": 17.82,
+ "usd_at_1.17": 20.85,
+ "source": "sacct -X ElapsedRaw, 1 GPU per job, 2026-11-17"
+}

@@ -1,0 +1,36 @@
+---------------------------------------
+Begin Slurm Prolog: Nov-18-2026 06:36:58
+Job ID:    15814320
+User ID:   <user>
+Account:   gts-nimam6
+Job name:  b31_qwen8_B_id1_s123
+Partition: gpu-a100
+QOS:       inferno
+---------------------------------------
+B31-PACE start 2026-11-18T11:36:58Z host atl1-1-01-002-28-0.pace.gatech.edu job 15814320
+NVIDIA A100-SXM4-80GB, 81920 MiB
+B31 LoRA {"n": {"train": 1000, "dev": 500, "test": 500}, "max_len": {"train": 576, "dev": 573, "test": 570}, "gpu": "NVIDIA A100-SXM4-80GB"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:00<00:00, 35.36it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 43.53it/s]
+  qwen8 B r8 lr1e-04 id1 sd123 ep1 loss 0.3057 train_sub 1.0000 dev 1.0000 id 1.0000 (243s)
+  qwen8 B r8 lr1e-04 id1 sd123 ep2 loss 0.0067 train_sub 1.0000 dev 1.0000 id 1.0000 (486s)
+  qwen8 B r8 lr1e-04 id1 sd123 ep3 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (728s)
+  qwen8 B r8 lr1e-04 id1 sd123 ep4 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (970s)
+  qwen8 B r8 lr1e-04 id1 sd123 ep5 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (1213s)
+  qwen8 B r8 lr1e-04 id1 sd123 ep6 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (1456s)
+  qwen8 B r8 lr1e-04 id1 sd123 ep7 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (1699s)
+  qwen8 B r8 lr1e-04 id1 sd123 ep8 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (1941s)
+  TEST qwen8 B seed 123 at dev-best epoch 1: 0.9980
+B31-PACE end 2026-11-18T12:11:37Z rc=0
+---------------------------------------
+Begin Slurm Epilog: Nov-18-2026 07:12:51
+Job ID:        15814320
+User ID:       <user>
+Account:       gts-nimam6
+Job name:      b31_qwen8_B_id1_s123
+Resources:     cpu=8,gres/gpu:a100=1,mem=120G,node=1
+Rsrc Used:     cput=04:38:48,vmem=0,walltime=00:34:51,mem=13459964K,energy_used=0
+Partition:     gpu-a100
+QOS:           inferno
+Nodes:         atl1-1-01-002-28-0
+---------------------------------------

@@ -1,0 +1,66 @@
+---------------------------------------
+Begin Slurm Prolog: Sep-01-2026 22:15:55
+Job ID:    12715492
+User ID:   <user>
+Account:   gts-nimam6
+Job name:  v104
+Partition: gpu-h200
+QOS:       inferno
+---------------------------------------
+===== V-104 verbalisation test (inference only, base Qwen/Qwen3-8B) =====
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:15<01:02, 15.55s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:30<00:44, 14.97s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:43<00:28, 14.42s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:54<00:13, 13.09s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:58<00:00,  9.68s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:58<00:00, 11.71s/it]
+  few-shot (TRAIN-mined):
+    '13 June' -> '13 June 1946'  | q: What is the date of birth of Mina Gerhardsen's father?
+    'Hungarian' -> 'Hungarian'  | q: What nationality is the director of film Wedding Night In Paradise (19
+    '14 March' -> '14 March 1918'  | q: When is the composer of film Sruthilayalu 's birthday?
+    'Rome' -> 'Rome'  | q: Where was the director of film The Fascist born?
+    'November 28' -> 'November 28, 1919'  | q: What is the date of birth of the director of film Wandering Fires?
+    'Canadian' -> 'Canadian'  | q: Which country the performer of song Soldier (Neil Young Song) is from?
+    '2 November' -> '2 November 2004'  | q: When did Fatima Bint Mubarak Al Ketbi's husband die?
+    'India' -> 'India'  | q: What nationality is the director of film Borunbabur Bondhu?
+  extract_ft_10k_123     surface rows 21, gold answer verbatim in passages for 1.00 of them
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  extract_ft_10k_123     closed         EM 0.4667 (store 0.4800, lift -0.0133) kept-hits 0.972 credit +0.0000 leak +0.0000  {'broken': 4}
+  extract_ft_10k_123     evidence       EM 0.4467 (store 0.4800, lift -0.0333) kept-hits 0.875 credit +0.0167 leak +0.0100  {'leak:identity': 1, 'broken': 18, 'credit': 5, 'leak:wrongRel': 2}
+  extract_ft_10k_123     evidence_only  EM 0.4333 (store 0.4800, lift -0.0467) kept-hits 0.750 credit +0.0200 leak +0.0533  {'leak:identity': 1, 'broken': 36, 'leak:wrongRel': 13, 'credit': 6, 'leak:no-two-hop-gold': 1, 'leak:wrongObj': 1}
+  extract_ft_10k_42      surface rows 25, gold answer verbatim in passages for 1.00 of them
+  extract_ft_10k_42      closed         EM 0.4500 (store 0.4633, lift -0.0133) kept-hits 0.971 credit +0.0000 leak +0.0000  {'broken': 4}
+  extract_ft_10k_42      evidence       EM 0.4333 (store 0.4633, lift -0.0300) kept-hits 0.871 credit +0.0233 leak +0.0067  {'broken': 18, 'credit': 7, 'leak:wrongRel': 2}
+  extract_ft_10k_42      evidence_only  EM 0.4267 (store 0.4633, lift -0.0367) kept-hits 0.755 credit +0.0200 leak +0.0567  {'broken': 34, 'credit': 6, 'leak:wrongRel': 14, 'leak:no-two-hop-gold': 1, 'leak:wrongObj': 2}
+  extract_ft_10k_456     surface rows 25, gold answer verbatim in passages for 1.00 of them
+  extract_ft_10k_456     closed         EM 0.4633 (store 0.4733, lift -0.0100) kept-hits 0.972 credit +0.0033 leak +0.0000  {'broken': 4, 'credit': 1}
+  extract_ft_10k_456     evidence       EM 0.4400 (store 0.4733, lift -0.0333) kept-hits 0.873 credit +0.0233 leak +0.0033  {'broken': 18, 'credit': 7, 'leak:wrongRel': 1}
+  extract_ft_10k_456     evidence_only  EM 0.4200 (store 0.4733, lift -0.0533) kept-hits 0.747 credit +0.0233 leak +0.0433  {'broken': 36, 'credit': 7, 'leak:wrongRel': 10, 'leak:no-two-hop-gold': 1, 'leak:wrongObj': 2}
+  extract_ft_qc_123      surface rows 39, gold answer verbatim in passages for 1.00 of them
+  extract_ft_qc_123      closed         EM 0.5267 (store 0.5433, lift -0.0167) kept-hits 0.945 credit +0.0100 leak +0.0033  {'credit': 3, 'broken': 9, 'leak:wrongObj': 1}
+  extract_ft_qc_123      evidence       EM 0.5200 (store 0.5433, lift -0.0233) kept-hits 0.847 credit +0.0533 leak +0.0067  {'credit': 16, 'broken': 25, 'leak:wrongRel': 1, 'leak:wrongObj': 1}
+  extract_ft_qc_123      evidence_only  EM 0.4533 (store 0.5433, lift -0.0900) kept-hits 0.706 credit +0.0567 leak +0.0133  {'credit': 17, 'broken': 48, 'leak:wrongRel': 1, 'leak:no-two-hop-gold': 1, 'leak:identity': 1, 'leak:wrongObj': 1}
+  extract_ft_qc_42       surface rows 37, gold answer verbatim in passages for 1.00 of them
+  extract_ft_qc_42       closed         EM 0.5333 (store 0.5467, lift -0.0133) kept-hits 0.951 credit +0.0100 leak +0.0033  {'credit': 3, 'broken': 8, 'leak:wrongObj': 1}
+  extract_ft_qc_42       evidence       EM 0.5233 (store 0.5467, lift -0.0233) kept-hits 0.848 credit +0.0533 leak +0.0067  {'credit': 16, 'broken': 25, 'leak:wrongRel': 1, 'leak:wrongObj': 1}
+  extract_ft_qc_42       evidence_only  EM 0.4500 (store 0.5467, lift -0.0967) kept-hits 0.707 credit +0.0533 leak +0.0100  {'credit': 16, 'broken': 48, 'leak:wrongRel': 1, 'leak:no-two-hop-gold': 1, 'leak:wrongObj': 1}
+  extract_ft_qc_456      surface rows 36, gold answer verbatim in passages for 1.00 of them
+  extract_ft_qc_456      closed         EM 0.5333 (store 0.5433, lift -0.0100) kept-hits 0.963 credit +0.0100 leak +0.0000  {'credit': 3, 'broken': 6}
+  extract_ft_qc_456      evidence       EM 0.5100 (store 0.5433, lift -0.0333) kept-hits 0.847 credit +0.0500 leak +0.0000  {'credit': 15, 'broken': 25}
+  extract_ft_qc_456      evidence_only  EM 0.4600 (store 0.5433, lift -0.0833) kept-hits 0.742 credit +0.0467 leak +0.0100  {'credit': 14, 'broken': 42, 'leak:no-two-hop-gold': 1, 'leak:wrongObj': 2}
+
+  >>> extract_ft_10k  store 0.4722 | closed 0.4600 (leak 0.0000) | evidence 0.4400 (leak 0.0067) | evidence_only 0.4267 | lora_only ref .7333 (V-99, 10k)
+  >>> extract_ft_qc   store 0.5444 | closed 0.5311 (leak 0.0022) | evidence 0.5178 (leak 0.0045) | evidence_only 0.4544 | lora_only ref .7333 (V-99, 10k)
+  >>> P1 gate: closed keeps >= .97 of store hits (both arms) : False
+  >>> P2: closed lifts qc EM by >= .06 : False
+  >>> P3: closed leak <= .03 (both arms) : True
+  >>> P4: evidence lift > closed lift AND evidence leak > closed leak (qc) : False
+  >>> P5: evidence EM >= evidence_only EM + .03 (qc) : True
+V104-DONE
+---------------------------------------
+Begin Slurm Epilog: Sep-01-2026 22:19:44
+Job ID:        12715492
+User ID:       <user>
+Account:       gts-nimam6
+Job name:      v104
+Resources:     cpu=8,gres/gpu:h200=1,mem=120G,node=1
+Rsrc Used:     cput=00:30:40,vmem=0,walltime=00:03:50,mem=4225868K,energy_used=0
+Partition:     gpu-h200
+QOS:           inferno
+Nodes:         atl1-1-02-012-9-0
+---------------------------------------

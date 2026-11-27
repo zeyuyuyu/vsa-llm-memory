@@ -1,0 +1,43 @@
+B33 hand-reading record (prereg "Checks from other angles"). Cases printed by b33_handread.py from the per-question
+outputs in b33_out/ (raw story texts dumped by b33_babi.py); read by eye on 2026-11-18 ~07:40-08:40 UTC.
+
+Memory (naming head, comm, corrected parse). Errors or unanswered questions: none on the fresh set (1,000 questions,
+3 seeds), none on hfrest (500, 3 seeds), none on the paper's 500. There is nothing to read; instead, the ten fresh stories printed with the prompting errors were read whole to check
+that the generated text reads like bAbI task 2 (questions 71, 436, 512, 588, 630, 655, 680, 763, 777, 825):
+same sentences, people, rooms and objects; questions about dropped objects whose dropper moved on (q588: Mary drops
+the apple in the garden and walks to the bathroom, gold garden; q777: Daniel takes the football in the garden,
+discards it and walks on, gold garden), about objects carried through several rooms (q436, q763), re-picked objects
+(q630: Daniel drops, re-takes, discards and re-grabs the apple), and "there" on drops (q512, q655, q825). The memory
+answered each correctly.
+
+Published parse on the new sets: every one of its errors contains "grabbed" or "discarded" (fresh 137 of 137, hfrest 63
+of 63, the paper's 500 80 of 80); 733 of the 1,000 fresh questions and 371 of the 500 hfrest questions contain one of
+the two verbs somewhere in the story, and the corrected parse answers all of them.
+
+Prompting (V-49 zero-shot), ten fresh errors (seed 0 sample): q71 kitchen (gold bathroom), q436 kitchen (hallway), q512
+kitchen (bathroom), q588 kitchen (garden), q630 hallway (office: John picks up and drops the milk in the office, then
+Mary goes to the hallway -- the model follows the last-mentioned room), q655 kitchen (garden), q680 bedroom (hallway:
+"Daniel moved to the bedroom" is the last sentence), q763 kitchen (bathroom), q777 bedroom (garden: the last sentence
+is "Daniel went back to the bedroom"), q825 hallway (office). The predictions lean on "kitchen" whatever the
+story: 47.8% of fresh predictions, 47.0% on hfrest and 47.0% on the paper's 500 (the same distribution on all three
+sets), and otherwise on the last room mentioned. Accuracy is 0.58 on held-object questions and 0.27 on dropped-object
+questions on fresh (0.53 / 0.29 on hfrest); fresh has more dropped-object questions (72.3% vs 65.2%), which accounts
+for part of its lower score (0.357 vs 0.376).
+
+Fine-tune (best of twelve, trained on the 775 as published), ten fresh errors (seed 0 sample of the 81 questions
+with an error in at least one seed; 8 are wrong in all three seeds):
+  q604 (all three seeds wrong: hallway/bathroom/bathroom; gold bedroom): John's only stated place is "John went back
+       to the bedroom" (sentence 1); he picks up and puts down three objects and discards the milk at sentence 23,
+       then travels to the hallway and the bedroom. The fine-tune follows John after the drop.
+  q618 (bathroom in one seed; gold office): John leaves the milk in the office and travels to the bedroom.
+  q647 (garden in one seed; gold office): Daniel discards the milk in the office, then goes to the garden.
+  q759 (kitchen in two seeds; gold bedroom): John leaves the milk in the bedroom; Mary went to the kitchen earlier.
+  q654 (bedroom in one seed; gold hallway): John discards the football in the hallway and journeys to the bedroom.
+  q65, q454, q504, q766, q836: one-seed errors: the room of a later move by another person (q65, q504), by the
+       dropper after the drop (q454), or the room where a carried object was picked up rather than where its holder
+       went (q766: John picks up the apple in the bathroom and journeys to the garden; one seed says bathroom).
+  The pattern holds in the counts: on fresh, best of twelve is right on 0.986 of held-object questions and 0.981 of
+  dropped-object questions whose dropper stayed, but 0.852 when the dropper moved after the drop (137 questions; seed
+  average); hfrest 0.973 / 0.988 / 0.908 (80), the paper's 500 0.982 / 0.981 / 0.920 (75). This is the case the
+  memory's ordering rule handles from outside the algebra (the dropper's last move before the drop), and the memory
+  answered all of them.

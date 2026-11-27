@@ -1,0 +1,50 @@
+{
+ "n_questions": 230,
+ "always_none": 0.2826,
+ "P1 arm1 >= 0.80": [
+  0.9304,
+  true
+ ],
+ "P2 arm1 - arm3(32B, forced) >= 0.20, arm1 >= 0.60": [
+  0.6521,
+  true
+ ],
+ "P3 arm1 - arm4(SoR) >= 0.30": [
+  0.6174,
+  true
+ ],
+ "P3 vs always-none (reported)": 0.6478,
+ "P4 arm1 == arm2b on >= 99%": [
+  0.9957,
+  true
+ ],
+ "P4 arm1 == arm2a on >= 99%": [
+  1.0,
+  true
+ ],
+ "P5 trace validity == 1.00": [
+  1.0,
+  true
+ ],
+ "trace correctness (reported)": 0.9695,
+ "sanity == 1.000": [
+  1.0,
+  true
+ ],
+ "negctl <= always-none + 0.05": [
+  0.313,
+  true
+ ],
+ "D1 arm3b(32B over RM state) vs arm2b (reported)": [
+  0.8261,
+  0.9304
+ ],
+ "arm3 strict / forced (32B)": [
+  0.2652,
+  0.2783
+ ],
+ "arm3 8B strict / forced": [
+  0.1261,
+  0.1478
+ ]
+}

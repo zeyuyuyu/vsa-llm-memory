@@ -1,0 +1,46 @@
+# B46 summary: B36 on a second LLM family (prereg/B46_second_llm_family_prereg.md; verdict results/b46_verdict.txt)
+
+Encoder (chosen before any memory comparison by B32's dev entity-retrieval criterion over 24 variants of three non-Qwen
+families): Granite-3.3-8B-Instruct, mean of layer-30 (of 40) hidden states over the name's tokens, criterion 0.6538
+(Llama-3.1-8B-Instruct best 0.6478 at mean L24; Mistral-7B-Instruct-v0.3 best 0.6427 at PromptEOL L24; Qwen3-8B 0.7035;
+e5 0.6980). Same entities, stores, queries, memories, grids, choice rules, accounting and verdict code as B36.
+
+Region VSA - X, ideal accounting (points; 95% cluster bootstrap); B36 columns from results/b36_verdict.txt
+
+| region | X | Granite-3.3-8B L30 (B46) | Qwen3-8B L9 (B36) | e5-base-v2 (B36) |
+| --- | --- | --- | --- | --- |
+| R1 (V 2/16, 4-16 bpf) | BEST (registered) | **+6.06 [+5.04, +7.10]** | +6.77 [+5.82, +7.74] | +0.60 [-0.27, +1.43] |
+| R1 | ORACLE (test-selected) | +4.75 [+3.89, +5.66] | +5.66 [+4.79, +6.52] | +0.40 [-0.56, +1.38] |
+| R1 | IDX (B32's comparison) | +7.71 [+6.75, +8.68] | +8.06 [+7.32, +8.81] | +3.31 [+2.46, +4.13] |
+| R1 | BEST, real accounting | +8.19 [+7.13, +9.26] | +8.84 [+7.98, +9.70] | +4.29 [+3.38, +5.18] |
+| R0 (V 2/16, 1-2 bpf) | BEST | -0.05 [-1.24, +1.19] | +1.31 [+0.03, +2.62] | +1.96 [+0.72, +3.19] |
+| RH (V 2/16, 32-64 bpf) | BEST | -0.27 [-1.09, +0.56] | +4.04 [+3.30, +4.77] | -11.13 [-11.97, -10.28] |
+| R2 (V 1,024) | BEST | -4.60 [-4.96, -4.25] | -3.88 [-4.23, -3.54] | -6.21 [-6.64, -5.78] |
+
+Mean accuracy over R1's cells: B46 VSA 45.51, BEST 39.45, EXACT 81.39 (Qwen3-8B 45.41 / 38.63 / 83.41; e5 46.13 /
+45.53 / 80.14). Per family, R1 VSA - family: IDX +7.71, SF +8.65, CM +7.11, BF +12.64, FBF +8.00, SDM +9.84 (all CIs > 0).
+Cells (Bonferroni, 56): 9 VSA wins (8 useful; 7 of them in R1: M 256 V 2 at 8 / 16, M 1,024 V 2 at 8 / 16, M 1,024 V 16
+at 4 / 8 / 16), 15 BEST wins (11 at V = 1,024, 3 at V = 128, 1 at M 256 V 16 32 bpf). R1 is not uniform: at M 256,
+V 16 the three R1 cells are ties (-2.14, +3.18, +1.44), where the LSH bucket sketch (CM) is close.
+Rate at equal accuracy (lift 0.25): BEST needs 4.90x / 4.74x the VSA's bits per fact at V = 2 (M 256 / 1,024; wide
+intervals [0.83, 6.77], [0.32, 7.37]), 1.26x [0.99, 1.46] and 1.85x [1.58, 2.25] at V = 16.
+
+Bars: H1-B46 PASS (R1 VSA - BEST >= +2, CI > 0); also under real accounting; R0 not ahead (tie); vs ORACLE still ahead.
+Checks: scorer 0 difference; 0 of 9,800 configurations over budget; re-derivation SF / CM / BF / FBF 1.0000, SDM 0.9997,
+VSA 1.0000, LSH / PCA-sign 1.0000 (PQ8 0.59, iterative fit, as in B32); wrapper reproduces B36's e5 rows exactly;
+hand reading: wins are real aliases. Predictions: 10 of 11 held; P1 (which encoder) failed.
+
+What the paper may say (registered reading, "H1-B46 passes"): at equal bits, in the few-values low-budget region
+(V in {2, 16}, 4-16 bits per fact), the superposed store beats the best dev-chosen classical memory (key-free sketches,
+static functions, Bloom filters, SDM, or the per-fact index) on frozen hidden-state codes of two LLM families: Qwen3-8B
+(mean of layer 9; +6.8 points) and Granite-3.3-8B-Instruct (mean of layer 30; +6.1 points), with the layer and pooling of
+each chosen by an alias-retrieval criterion, not by the memory comparison; the margin also holds against the
+test-selected competitor (+5.7 / +4.8). In the same breath: no win on the e5 sentence encoder (tie, +0.6); the store
+loses with 1,024 values (-3.9 / -4.6) and is not ahead at 1-2 or 32-64 bits per fact on the Granite codes.
+What it must not say: that the win holds for LLM codes in general, for every reader, or for neural codes as such (two of
+three readers; the e5 tie is the counterexample; on Granite the three M 256, V 16 cells of R1 are ties); that the
+second family was chosen to favour the store (it was not, but the paper should name the criterion); that the Qwen3-8B
+RH advantage replicates (it does not: RH is a tie on Granite).
+Mechanism (descriptive): after centring, Granite's alias-label geometry resembles Qwen3-8B's (alias-label cosine median
+0.53 vs 0.51; an alias shares its label's 8-bit SimHash signature 8% of the time in both, 12% for e5), so exact-signature
+structures rarely match and the store's graded-similarity read keeps its edge; on e5 coarse signatures match more often.

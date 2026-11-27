@@ -1,0 +1,47 @@
+{
+ "args": {
+  "cmd": "reader",
+  "pos": "last",
+  "arm": "vsa",
+  "split": "train",
+  "layers": "20",
+  "layer": 20,
+  "bs": 16,
+  "epochs": "100,300,1000",
+  "lr": 0.001,
+  "seed": 2,
+  "steps": 1000,
+  "eval_every": 250,
+  "reader": "",
+  "ckpt": "",
+  "out": "out/rd/last_vsa_lr1e-3_s2",
+  "pred": "",
+  "limit": 0,
+  "dec_init": "recon",
+  "recon_epochs": 100,
+  "dev_split": "dev",
+  "dev_limit": 0,
+  "train_split": "train",
+  "train_limit": 0
+ },
+ "hist": [
+  {
+   "pub": 0.8600000143051147,
+   "bm": 0.9649999737739563,
+   "epoch": 100,
+   "loss": 0.018661275506019592
+  },
+  {
+   "pub": 0.8912500143051147,
+   "bm": 0.9725000262260437,
+   "epoch": 300,
+   "loss": 0.01597336307168007
+  },
+  {
+   "pub": 0.8962500095367432,
+   "bm": 0.9737499952316284,
+   "epoch": 1000,
+   "loss": 0.015481310896575451
+  }
+ ]
+}

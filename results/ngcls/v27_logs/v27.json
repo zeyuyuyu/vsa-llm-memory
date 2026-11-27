@@ -1,0 +1,43 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "hidden": 3584,
+ "hops": 2,
+ "n_ctx": 32,
+ "n_sym": 64,
+ "arms": {
+  "floor": [
+   0.538,
+   0.486,
+   0.494
+  ],
+  "parser": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "consistent": [
+   0.94,
+   0.914,
+   0.934
+  ],
+  "spans": [
+   0.486,
+   0.488,
+   0.478
+  ],
+  "probe_argmax": [
+   0.914,
+   0.93,
+   0.924
+  ],
+  "frozen_cont": [
+   0.78,
+   0.8,
+   0.758
+  ]
+ },
+ "floor": 0.506,
+ "parser": 0.934,
+ "headroom": 0.42800000000000005,
+ "verdict": "PATTERN REPLICATES on a second model"
+}

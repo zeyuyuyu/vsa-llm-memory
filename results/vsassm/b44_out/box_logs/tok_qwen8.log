@@ -1,0 +1,25 @@
+tok qwen8 std:train 80000 max_len 522 mean_len 511.9 140s
+tok qwen8 std:dev 500 max_len 520 mean_len 512.0 4s
+tok qwen8 std:test 500 max_len 519 mean_len 511.9 2s
+tok qwen8 ho:train 80000 max_len 522 mean_len 511.4 135s
+tok qwen8 ho:dev 500 max_len 519 mean_len 512.2 4s
+tok qwen8 ho:test 500 max_len 519 mean_len 512.4 2s
+tok qwen8 k2:train 800 max_len 42 mean_len 41.3 0s
+tok qwen8 k2:dev 500 max_len 42 mean_len 41.2 0s
+tok qwen8 k2:test 500 max_len 42 mean_len 41.2 0s
+tok qwen8 k4:train 800 max_len 74 mean_len 72.6 0s
+tok qwen8 k4:dev 500 max_len 74 mean_len 72.7 0s
+tok qwen8 k4:test 500 max_len 74 mean_len 72.6 0s
+tok qwen8 k8:train 800 max_len 138 mean_len 135.4 0s
+tok qwen8 k8:dev 500 max_len 138 mean_len 135.3 0s
+tok qwen8 k8:test 500 max_len 138 mean_len 135.4 0s
+tok qwen8 k16:train 800 max_len 266 mean_len 260.8 1s
+tok qwen8 k16:dev 500 max_len 266 mean_len 261.0 1s
+tok qwen8 k16:test 500 max_len 266 mean_len 261.0 1s
+tok qwen8 k24:train 800 max_len 394 mean_len 386.4 2s
+tok qwen8 k24:dev 500 max_len 393 mean_len 386.5 1s
+tok qwen8 k24:test 500 max_len 393 mean_len 386.2 1s
+tok qwen8 k32:train 800 max_len 520 mean_len 511.9 3s
+tok qwen8 k32:dev 500 max_len 520 mean_len 512.0 2s
+tok qwen8 k32:test 500 max_len 519 mean_len 511.9 2s
+TOKDONE

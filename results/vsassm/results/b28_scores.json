@@ -1,0 +1,1135 @@
+{
+ "gates": {
+  "G0/task4/parser": true,
+  "G0/task4/probe_argmax": true,
+  "G0/task15/parser": true,
+  "G0/task15/probe_argmax": true,
+  "G0/task2/parser": true,
+  "G0/task2/probe_argmax": true,
+  "G1/task4/parser": true,
+  "G1/task4/probe_argmax": true,
+  "G1/task15/parser": true,
+  "G1/task15/probe_argmax": true,
+  "G2/C/parser": true,
+  "G2/C/probe_argmax": true,
+  "G3/counts": true,
+  "G3/parser": true,
+  "G3/probe_argmax": true,
+  "G4/r8_e2_lr0.0001": false,
+  "G4/r16_e6_lr0.0001": true
+ },
+ "part1": {
+  "task4/parser/comm": {
+   "per_seed": [
+    0.674,
+    0.702,
+    0.696
+   ],
+   "mean": 0.6906666666666667,
+   "ci": [
+    0.6613333333333333,
+    0.7186666666666666
+   ],
+   "reading": null
+  },
+  "task4/parser/perm": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "task4/parser/roles": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "task4/parser/rtag": {
+   "per_seed": [
+    0.678,
+    0.692,
+    0.686
+   ],
+   "mean": 0.6853333333333333,
+   "ci": [
+    0.6566666666666667,
+    0.714
+   ],
+   "reading": "NO EFFECT"
+  },
+  "task4/parser/shift": {
+   "per_seed": [
+    0.674,
+    0.702,
+    0.696
+   ],
+   "mean": 0.6906666666666667,
+   "ci": [
+    0.6613333333333333,
+    0.7186666666666666
+   ],
+   "reading": "NO EFFECT"
+  },
+  "task4/probe_argmax/comm": {
+   "per_seed": [
+    0.674,
+    0.702,
+    0.696
+   ],
+   "mean": 0.6906666666666667,
+   "ci": [
+    0.6613333333333333,
+    0.7186666666666666
+   ],
+   "reading": null
+  },
+  "task4/probe_argmax/perm": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "task4/probe_argmax/roles": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "task4/probe_argmax/rtag": {
+   "per_seed": [
+    0.678,
+    0.692,
+    0.686
+   ],
+   "mean": 0.6853333333333333,
+   "ci": [
+    0.6566666666666667,
+    0.714
+   ],
+   "reading": "NO EFFECT"
+  },
+  "task4/probe_argmax/shift": {
+   "per_seed": [
+    0.674,
+    0.702,
+    0.696
+   ],
+   "mean": 0.6906666666666667,
+   "ci": [
+    0.6613333333333333,
+    0.7186666666666666
+   ],
+   "reading": "NO EFFECT"
+  },
+  "task15/parser/comm": {
+   "per_seed": [
+    0.824,
+    0.848,
+    0.836
+   ],
+   "mean": 0.836,
+   "ci": [
+    0.8066666666666666,
+    0.864
+   ],
+   "reading": null
+  },
+  "task15/parser/perm": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "task15/parser/roles": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "task15/parser/rtag": {
+   "per_seed": [
+    0.83,
+    0.858,
+    0.808
+   ],
+   "mean": 0.832,
+   "ci": [
+    0.8066666666666666,
+    0.8566666666666666
+   ],
+   "reading": "NO EFFECT"
+  },
+  "task15/parser/shift": {
+   "per_seed": [
+    0.824,
+    0.848,
+    0.836
+   ],
+   "mean": 0.836,
+   "ci": [
+    0.8066666666666666,
+    0.864
+   ],
+   "reading": "NO EFFECT"
+  },
+  "task15/probe_argmax/comm": {
+   "per_seed": [
+    0.824,
+    0.848,
+    0.836
+   ],
+   "mean": 0.836,
+   "ci": [
+    0.8066666666666666,
+    0.864
+   ],
+   "reading": null
+  },
+  "task15/probe_argmax/perm": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "task15/probe_argmax/roles": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "task15/probe_argmax/rtag": {
+   "per_seed": [
+    0.83,
+    0.858,
+    0.808
+   ],
+   "mean": 0.832,
+   "ci": [
+    0.8066666666666666,
+    0.8566666666666666
+   ],
+   "reading": "NO EFFECT"
+  },
+  "task15/probe_argmax/shift": {
+   "per_seed": [
+    0.824,
+    0.848,
+    0.836
+   ],
+   "mean": 0.836,
+   "ci": [
+    0.8066666666666666,
+    0.864
+   ],
+   "reading": "NO EFFECT"
+  },
+  "C/parser/comm": {
+   "per_seed": [
+    0.932,
+    0.932,
+    0.938
+   ],
+   "mean": 0.934,
+   "ci": [
+    0.9166666666666666,
+    0.9499999999999998
+   ],
+   "reading": null
+  },
+  "C/parser/perm": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "C/parser/roles": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "C/parser/rtag": {
+   "per_seed": [
+    0.904,
+    0.892,
+    0.886
+   ],
+   "mean": 0.894,
+   "ci": [
+    0.874,
+    0.9133333333333334
+   ],
+   "reading": "GRADED"
+  },
+  "C/parser/shift": {
+   "per_seed": [
+    0.932,
+    0.932,
+    0.938
+   ],
+   "mean": 0.934,
+   "ci": [
+    0.9166666666666666,
+    0.9499999999999998
+   ],
+   "reading": "NO EFFECT"
+  },
+  "C/probe_argmax/comm": {
+   "per_seed": [
+    0.932,
+    0.932,
+    0.938
+   ],
+   "mean": 0.934,
+   "ci": [
+    0.9166666666666666,
+    0.9499999999999998
+   ],
+   "reading": null
+  },
+  "C/probe_argmax/perm": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "C/probe_argmax/roles": {
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "reading": "REMOVES THE LIMIT"
+  },
+  "C/probe_argmax/rtag": {
+   "per_seed": [
+    0.904,
+    0.892,
+    0.886
+   ],
+   "mean": 0.894,
+   "ci": [
+    0.874,
+    0.9133333333333334
+   ],
+   "reading": "GRADED"
+  },
+  "C/probe_argmax/shift": {
+   "per_seed": [
+    0.932,
+    0.932,
+    0.938
+   ],
+   "mean": 0.934,
+   "ci": [
+    0.9166666666666666,
+    0.9499999999999998
+   ],
+   "reading": "NO EFFECT"
+  }
+ },
+ "mechanism": {
+  "task4/alias_share": 0.628,
+  "task4/parser/comm": {
+   "alias": [
+    0.48089171974522293,
+    0.5254777070063694,
+    0.5159235668789809
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/parser/perm": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/parser/roles": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/parser/rtag": {
+   "alias": [
+    0.4872611464968153,
+    0.5095541401273885,
+    0.5
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/parser/shift": {
+   "alias": [
+    0.48089171974522293,
+    0.5254777070063694,
+    0.5159235668789809
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/probe_argmax/comm": {
+   "alias": [
+    0.48089171974522293,
+    0.5254777070063694,
+    0.5159235668789809
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/probe_argmax/perm": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/probe_argmax/roles": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/probe_argmax/rtag": {
+   "alias": [
+    0.4872611464968153,
+    0.5095541401273885,
+    0.5
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task4/probe_argmax/shift": {
+   "alias": [
+    0.48089171974522293,
+    0.5254777070063694,
+    0.5159235668789809
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/alias_share": 0.45,
+  "task15/parser/comm": {
+   "alias": [
+    0.6088888888888889,
+    0.6622222222222223,
+    0.6355555555555555
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/parser/perm": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/parser/roles": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/parser/rtag": {
+   "alias": [
+    0.6222222222222222,
+    0.6844444444444444,
+    0.5733333333333334
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/parser/shift": {
+   "alias": [
+    0.6088888888888889,
+    0.6622222222222223,
+    0.6355555555555555
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/probe_argmax/comm": {
+   "alias": [
+    0.6088888888888889,
+    0.6622222222222223,
+    0.6355555555555555
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/probe_argmax/perm": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/probe_argmax/roles": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/probe_argmax/rtag": {
+   "alias": [
+    0.6222222222222222,
+    0.6844444444444444,
+    0.5733333333333334
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "task15/probe_argmax/shift": {
+   "alias": [
+    0.6088888888888889,
+    0.6622222222222223,
+    0.6355555555555555
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "C/alias_share": 0.266,
+  "C/parser/comm": {
+   "alias": [
+    0.5263157894736842,
+    0.47368421052631576,
+    0.5338345864661654
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "C/parser/perm": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "C/parser/roles": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "C/parser/rtag": {
+   "alias": [
+    0.48872180451127817,
+    0.44360902255639095,
+    0.47368421052631576
+   ],
+   "non_alias": [
+    0.896457765667575,
+    0.9100817438692098,
+    0.8583106267029973
+   ]
+  },
+  "C/parser/shift": {
+   "alias": [
+    0.5263157894736842,
+    0.47368421052631576,
+    0.5338345864661654
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "C/probe_argmax/comm": {
+   "alias": [
+    0.5263157894736842,
+    0.47368421052631576,
+    0.5338345864661654
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "C/probe_argmax/perm": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "C/probe_argmax/roles": {
+   "alias": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "C/probe_argmax/rtag": {
+   "alias": [
+    0.48872180451127817,
+    0.44360902255639095,
+    0.47368421052631576
+   ],
+   "non_alias": [
+    0.896457765667575,
+    0.9100817438692098,
+    0.8583106267029973
+   ]
+  },
+  "C/probe_argmax/shift": {
+   "alias": [
+    0.5263157894736842,
+    0.47368421052631576,
+    0.5338345864661654
+   ],
+   "non_alias": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "task2": {
+  "MEM exact rows comm": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM exact rows perm": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM exact rows roles": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM exact rows rtag": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM exact rows shift": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM naming head comm": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM naming head perm": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM naming head roles": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM naming head rtag": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM naming head shift": {
+   "all500_per_seed": [
+    0.84,
+    0.84,
+    0.84
+   ],
+   "all500_mean": 0.84,
+   "ci": [
+    0.8080000000000002,
+    0.87
+   ],
+   "subsets": {
+    "all 500": 0.84,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 0.0,
+    "56 not parsed": 0.0
+   }
+  },
+  "MEM-v exact rows comm (completed verbs)": {
+   "all500_per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "all500_mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "subsets": {
+    "all 500": 1.0,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 1.0,
+    "56 not parsed": 1.0
+   }
+  },
+  "MEM-v naming head comm (completed verbs)": {
+   "all500_per_seed": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "all500_mean": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "subsets": {
+    "all 500": 1.0,
+    "420 expressible": 1.0,
+    "24 parsed, not expressible": 1.0,
+    "56 not parsed": 1.0
+   }
+  },
+  "FT first config r8/2ep/1e-4 (r8_e2_lr0.0001, trained on 775 expressible)": {
+   "all500_per_seed": [
+    0.84,
+    0.832,
+    0.846
+   ],
+   "all500_mean": 0.8393333333333334,
+   "ci": [
+    0.8113333333333334,
+    0.8653333333333334
+   ],
+   "subsets": {
+    "all 500": 0.8393333333333334,
+    "420 expressible": 0.8333333333333334,
+    "24 parsed, not expressible": 0.7222222222222222,
+    "56 not parsed": 0.9345238095238095
+   }
+  },
+  "FT first config r8/2ep/1e-4 (r8_e2_lr0.0001, trained on all 900)": {
+   "all500_per_seed": [
+    0.896,
+    0.748,
+    0.92
+   ],
+   "all500_mean": 0.8546666666666667,
+   "ci": [
+    0.8339833333333333,
+    0.8746666666666667
+   ],
+   "subsets": {
+    "all 500": 0.8546666666666667,
+    "420 expressible": 0.8484126984126984,
+    "24 parsed, not expressible": 0.7361111111111112,
+    "56 not parsed": 0.9523809523809523
+   }
+  },
+  "FT best of twelve r16/6ep/1e-4 (r16_e6_lr0.0001, trained on 775 expressible)": {
+   "all500_per_seed": [
+    0.968,
+    0.986,
+    0.958
+   ],
+   "all500_mean": 0.9706666666666667,
+   "ci": [
+    0.9606666666666666,
+    0.98
+   ],
+   "subsets": {
+    "all 500": 0.9706666666666667,
+    "420 expressible": 0.9722222222222222,
+    "24 parsed, not expressible": 0.875,
+    "56 not parsed": 1.0
+   }
+  },
+  "FT best of twelve r16/6ep/1e-4 (r16_e6_lr0.0001, trained on all 900)": {
+   "all500_per_seed": [
+    0.98,
+    0.98,
+    0.984
+   ],
+   "all500_mean": 0.9813333333333333,
+   "ci": [
+    0.9733333333333333,
+    0.9886666666666667
+   ],
+   "subsets": {
+    "all 500": 0.9813333333333333,
+    "420 expressible": 0.9777777777777777,
+    "24 parsed, not expressible": 1.0,
+    "56 not parsed": 1.0
+   }
+  },
+  "contrast/r16_e6_lr0.0001": {
+   "per_seed": [
+    -0.128,
+    -0.14600000000000002,
+    -0.118
+   ],
+   "mean": -0.13066666666666668,
+   "ci": [
+    -0.16466666666666674,
+    -0.09866666666666668
+   ],
+   "reading": "FINE-TUNE LEADS"
+  },
+  "contrast/r8_e2_lr0.0001": {
+   "per_seed": [
+    0.0,
+    0.008000000000000007,
+    -0.006000000000000005
+   ],
+   "mean": 0.0006666666666666673,
+   "ci": [
+    -0.04133333333333322,
+    0.043333333333333335
+   ],
+   "reading": "NO CLEAR DIFFERENCE"
+  }
+ },
+ "predictions": {
+  "P1 gates G0-G3 pass in every cell": true,
+  "P2 perm, exact symbols, REMOVES on bAbI task 4": true,
+  "P2 perm, exact symbols, REMOVES on bAbI task 15": true,
+  "P2 perm, exact symbols, REMOVES on arena C": true,
+  "P3 perm, naming head, REMOVES on bAbI task 4 and equals exact rows within 0.004 per seed": true,
+  "P3 perm, naming head, REMOVES on bAbI task 15 and equals exact rows within 0.004 per seed": true,
+  "P3 perm, naming head, REMOVES on arena C and equals exact rows within 0.004 per seed": true,
+  "P4 roles, exact symbols, REMOVES on bAbI task 4": true,
+  "P4 roles, exact symbols, REMOVES on bAbI task 15": true,
+  "P4 roles, exact symbols, REMOVES on arena C": true,
+  "P5 rtag, exact symbols, does NOT remove on bAbI task 4": true,
+  "P5 rtag, exact symbols, does NOT remove on bAbI task 15": true,
+  "P5 rtag, exact symbols, does NOT remove on arena C": true,
+  "P6 shift equals comm per question (agreement >= 0.99) on bAbI task 4 [1.000/1.000/1.000]": true,
+  "P6 shift equals comm per question (agreement >= 0.99) on bAbI task 15 [1.000/1.000/1.000]": true,
+  "P6 shift equals comm per question (agreement >= 0.99) on arena C [1.000/1.000/1.000]": true,
+  "P7 comm: non-alias >= 0.99 and alias in [0.30, 0.70], every seed, bAbI task 4": true,
+  "P7 comm: non-alias >= 0.99 and alias in [0.30, 0.70], every seed, bAbI task 15": true,
+  "P7 comm: non-alias >= 0.99 and alias in [0.30, 0.70], every seed, arena C": true,
+  "P8 perm: >= 0.98 on alias and on non-alias instances, every seed, bAbI task 4": true,
+  "P8 perm: >= 0.98 on alias and on non-alias instances, every seed, bAbI task 15": true,
+  "P8 perm: >= 0.98 on alias and on non-alias instances, every seed, arena C": true,
+  "P9 alias share of bAbI task 4 in [0.50, 0.75] (measured 0.628)": true,
+  "P9 alias share of bAbI task 15 in [0.20, 0.45] (measured 0.450)": true,
+  "P9 alias share of arena C in [0.10, 0.25] (measured 0.266)": false,
+  "P10 memory (naming head, perm) TIES the banked fine-tune on bAbI task 4": true,
+  "P10 memory (naming head, perm) TIES the banked fine-tune on bAbI task 15": true,
+  "P11a task 2: memory on all 500 in [0.835, 0.850] every seed (0.840/0.840/0.840)": true,
+  "P11b task 2: tuned fine-tune (best of twelve) on all 500, mean in [0.90, 0.96] (0.971)": false,
+  "P11c task 2: memory vs best of twelve on all 500 = FINE-TUNE LEADS": true,
+  "P12 task 2: memory vs first configuration on all 500 = NO CLEAR DIFFERENCE": true,
+  "P13 task 2: memory 1.000 on the 420 and <= 0.05 on the other 80 (1.000 / 0.000)": true,
+  "P14a independent implementation agrees >= 0.99 per question in every cell": true,
+  "P14b fresh codebooks: perm >= 0.98 in 20/20 for every setting": true,
+  "P14c fresh codebooks: comm mean within 0.03 of the published ceiling (task 4 .691, task 15 .836, C .934)": true,
+  "P15 completed verb patterns: memory on all 500 in [0.90, 0.97] (1.000)": false,
+  "P16 best of twelve trained on all 900 >= trained on the 775 (all-500 mean)": true
+ },
+ "overall_removes": true,
+ "gpu_hours": 2.5277777777777777
+}

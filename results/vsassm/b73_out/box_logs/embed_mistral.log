@@ -1,0 +1,13 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 49.69it/s]
+mistral7i: /path/to/work/b46/mistral7b_instruct_v03; layers 32, hidden 4096; tokenizer (tokenizer.json) adds BOS: True; pad 2
+0 21166 0s
+3200 21166 16s
+6400 21166 32s
+9600 21166 47s
+12800 21166 61s
+16000 21166 75s
+19200 21166 91s
+done {"tag": "mistral7i", "path": "/path/to/work/b46/mistral7b_instruct_v03", "tokenizer_loader": "tokenizer.json", "layers": [24], "num_hidden_layers": 32, "adds_bos": true, "pad": 2, "name_tokens_mean": 5.8308608145138425, "example": "Bud! The Amazing Bud Powell (Vol. 3)", "example_tokens": ["<s>", "▁Name", ":", "▁Bud", "!", "▁The", "▁Amaz", "ing", "▁Bud", "▁Pow", "ell", "▁(", "Vol", ".", "▁", "3", ")"], "seconds": 100.6}
+b32_data/emb_mistral7i_eol_L24_f16.npy (21166, 4096)
+83ec09501aa8eaaaafa0a9a4fd6a597b  b32_data/emb_mistral7i_eol_L24_f16.npy
+EMBED_DONE mistral rc=0

@@ -1,0 +1,29 @@
+{
+ "_about": "Fig. 5b re-score (B58 part c): natural-layout LDPC table decoded with the guarded decoder (E-LDPC*), verbatim lines of vsassm results/b58_verdict.txt, commit dc70cf4.",
+ "lines-nat": {
+  "k4": {
+   "file": "../results/vsassm/results/b58_verdict.txt",
+   "line": "  lines-nat-k4           76                      >4096      181    >4096      128      304      512  | not run | +3 store fewer cells",
+   "text": "128",
+   "value": 128.0
+  },
+  "e05": {
+   "file": "../results/vsassm/results/b58_verdict.txt",
+   "line": "  lines-nat-e05          91                      >4096      431    >4096      304      724      861  | not run | +7 store fewer cells",
+   "text": "304",
+   "value": 304.0
+  },
+  "k8": {
+   "file": "../results/vsassm/results/b58_verdict.txt",
+   "line": "  lines-nat-k8          152                      >4096     2896    >4096     3444    >4096     1218  | not run | +17 store fewer cells",
+   "text": "3444",
+   "value": 3444.0
+  },
+  "k16": {
+   "file": "../results/vsassm/results/b58_verdict.txt",
+   "line": "  lines-nat-k16         512                      >4096    >4096    >4096    >4096    >4096     2896  | not run | +13 store fewer cells",
+   "text": ">4096",
+   "censored": true
+  }
+ }
+}

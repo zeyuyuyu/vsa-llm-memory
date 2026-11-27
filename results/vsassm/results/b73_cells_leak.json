@@ -1,0 +1,76 @@
+{
+ "fresh_keys": 91977,
+ "fresh_values": 92056,
+ "overlaps": {
+  "ruler_test": {
+   "ref_keys": 91400,
+   "ref_values": 91604,
+   "fresh_keys_in_ref": 0,
+   "fresh_values_in_ref": 0,
+   "examples": []
+  },
+  "dev": {
+   "ref_keys": 30405,
+   "ref_values": 30432,
+   "fresh_keys_in_ref": 0,
+   "fresh_values_in_ref": 0,
+   "examples": []
+  },
+  "b69_sweep_dev": {
+   "ref_keys": 71631,
+   "ref_values": 93479,
+   "fresh_keys_in_ref": 0,
+   "fresh_values_in_ref": 0,
+   "examples": []
+  },
+  "b69_sweep_test": {
+   "ref_keys": 189145,
+   "ref_values": 247071,
+   "fresh_keys_in_ref": 0,
+   "fresh_values_in_ref": 0,
+   "examples": []
+  }
+ },
+ "normalized_overlaps": {
+  "ruler_test": {
+   "fresh_keys": 1,
+   "fresh_values": 1,
+   "examples": [
+    "crazyhedge",
+    "doubtfuldivorce"
+   ]
+  },
+  "dev": {
+   "fresh_keys": 1,
+   "fresh_values": 0,
+   "examples": [
+    "spuriousairline"
+   ]
+  },
+  "b69_sweep_dev": {
+   "fresh_keys": 2,
+   "fresh_values": 0,
+   "examples": [
+    "easyflag",
+    "madlyspirit"
+   ]
+  },
+  "b69_sweep_test": {
+   "fresh_keys": 7,
+   "fresh_values": 3,
+   "examples": [
+    "boredtotal",
+    "breezysnowplow",
+    "clumsyanybody",
+    "drunkrazor",
+    "joblesstepee",
+    "plasticcarriage",
+    "seemlyparsley",
+    "sloppytuba",
+    "solidboxer",
+    "watchfulresort"
+   ]
+  }
+ },
+ "fresh_keys_in_several_stores": 4
+}

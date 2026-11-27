@@ -1,0 +1,40 @@
+{
+ "prereg": "0998f99",
+ "arm": "ft_passages",
+ "rank": 16,
+ "epochs": 6,
+ "lr": 0.0001,
+ "banked": {
+  "prompt": 0.253,
+  "prompt_ev": 0.95,
+  "hrr_gold": 0.974
+ },
+ "gate": {
+  "n_eval": 300,
+  "first_q": "Who is the mother of the director of film Polish-Russian War (Film)?",
+  "last_q": "What is the place of birth of the director of film Samarpane?",
+  "overlap_with_train": 0
+ },
+ "n_train": 1000,
+ "n_eval": 300,
+ "coverage": 1.0,
+ "seeds": {
+  "42": {
+   "full": 0.2833333333333333,
+   "covered": 0.2833333333333333,
+   "minutes": 12.307497374216716
+  },
+  "123": {
+   "full": 0.30333333333333334,
+   "covered": 0.30333333333333334,
+   "minutes": 12.729804519812266
+  },
+  "456": {
+   "full": 0.23,
+   "covered": 0.23,
+   "minutes": 12.975715299447378
+  }
+ },
+ "mean_covered": 0.2722222222222222,
+ "verdict": "SUPPORTED (store keeps a double-digit lead)"
+}

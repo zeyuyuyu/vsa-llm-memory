@@ -1,0 +1,264 @@
+B43 literature check (written 2026-11-19)
+Method: primary PDFs pulled from arXiv / ACL Anthology / NeurIPS proceedings and read with pdftotext (copies in
+/path/to/scratch). VERIFIED = read in the primary
+text, table, figure text or official repo. UNVERIFIED = secondary source only (Semantic Scholar, search snippets, or a
+number quoted in another paper's table). No number below was guessed.
+
+1. Kim & Schuster 2023, boxes task
+Citation: Najoung Kim, Sebastian Schuster. "Entity Tracking in Language Models." ACL 2023. arXiv 2305.02363 (v2, 8 Sep 2023,
+  arXiv comment "ACL 2023 Camera-ready").
+Claims:
+ - VERIFIED design: world W=(O,n,m,e) with n=7 boxes, m=3 max objects per box, e=2 expected objects per box at the start,
+   |O|=100 nouns (BNC frequency >27). Each scenario = initial state + 12 operations (NumOps fixed at 12); 2,200 scenarios
+   sampled, only valid operations. Operations: put in, take out, move between boxes; deliberately no "empty the box" op.
+ - VERIFIED templated: "The initial state and the operations were converted into naturalistic descriptions using
+   predefined templates." Task: after 0-12 operations, cloze "Box N contains __"; one test item per box after each
+   operation = n x (NumOps+1) = 91 items per scenario. Initial-state "signatures" are kept disjoint between train and eval.
+ - VERIFIED variants: AltForms (disjoint phrasings, Table 2), AmbiRef (adjective-modified objects resolved only by the
+   current state), MoveContents (move a whole box's contents). Fine-tuning splits: Base, NumOps (train <=2 ops, test up
+   to 12), Vocab (disjoint object names), AltForms, AltForms+NumOps, AmbiRef, MoveContents.
+ - VERIFIED in-context (2 demos; davinci, text-davinci-003, Flan-T5; strong random baseline of 0-3 co-mentioned
+   objects): only text-davinci-003 consistently beat the baseline ("all contents of a box after 7 operations in more
+   than 25% of the cases"); Flan-T5 mostly copied the initial state; code-trained GPT-3.5 models (incl.
+   code-davinci-002, no RLHF) beat GPT-3 -> the code-pretraining hypothesis. Fine-tuned T5-base is near-perfect on Base,
+   degrades on NumOps/AltForms/AmbiRef/MoveContents; random-init T5 fails.
+ - VERIFIED reanalysis of Li et al. 2021 (Alchemy): 87.6% of probe items are trivial (unchanged or emptied beaker); only
+   12.4% test real state change; always-predict-initial-state baseline = 62.7%.
+ - VERIFIED dataset access (README of github.com/sebschu/entity-tracking-lms): data/boxes-dataset-v1.zip is
+   password-protected "to prevent leakage of the dataset into the training data of future language models"; the password
+   (iamnotaLM) is printed in the README; model-outputs/model-outputs.zip uses the same one; the README asks users not to put
+   the uncompressed files in any repository. The README does not describe the variants/splits.
+ - VERIFIED (abstract only) follow-up: Tang, Zhao, Franco, Wijaya, Mueller, Schuster, Kim, "Do Language Models Track
+   Entities Across State Changes?", arXiv 2605.30233, ICML 2026: LMs "do not incrementally track world states across
+   tokens ... but simply aggregate relevant information in parallel at the last token"; REMOVE is implemented by a
+   "fragile global suppression tag" that predicts failure modes.
+Bearing on B43: boxes is templated synthetic text, so it is a clean contamination-guarded probe but not "natural text";
+  ProPara has to carry the natural-text claim. Keep the unzipped data out of any repo or released deposit.
+
+2. Kim, Schuster & Toshniwal 2024
+Citation: Najoung Kim, Sebastian Schuster, Shubham Toshniwal. "Code Pretraining Improves Entity Tracking Abilities of
+  Language Models." arXiv 2405.21068 (v1 only, 31 May 2024). Venue: none on arXiv (no comment or journal-ref); Semantic
+  Scholar lists arXiv only. Treat as a preprint (any peer-reviewed venue UNVERIFIED).
+Claims (VERIFIED):
+ - Base vs +code pairs (Llama 2/Code Llama 7-70B, DeepSeek/-Coder 7B, Gemma/CodeGemma 8B), +math pairs (Llemma,
+   DeepSeek-Math, FLoat, OpenMathMistral) and alignment pairs (Chat/Instruct). Task: boxes "base" version, "seven boxes
+   followed by 1-12 descriptions of operations"; constrained decoding (outlines) because small models broke the format.
+ - Findings: "clear evidence that models additionally trained on large amounts of code outperform the base models"; "no
+   consistent benefit of additional math training or alignment tuning"; base models gain more from alignment tuning than
+   code models; best model CodeLlama 70B-instruct, 64.9 accuracy on items with 1+ operations. Gains for Gemma and the
+   DeepSeek pair are smaller, in line with scale / amount of code.
+Bearing on B43: Qwen3-8B is heavily code-trained, so the direct-LM arm on boxes is not a straw man. For scale, the best
+  open model in 2024 reached 64.9% on 1+-operation items.
+
+3. ProPara, the document-level metric, and reported numbers
+Citations:
+ a) Bhavana Dalvi Mishra, Lifu Huang, Niket Tandon, Wen-tau Yih, Peter Clark. "Tracking State Changes in Procedural Text: a
+    Challenge Dataset and Models for Process Paragraph Comprehension." NAACL 2018. arXiv 1805.06975. (Usually cited as
+    Dalvi et al. 2018; "Mishra et al." is the same paper.)
+ b) Niket Tandon, Bhavana Dalvi Mishra, Joel Grus, Wen-tau Yih, Antoine Bosselut, Peter Clark. "Reasoning about Actions and
+    State Changes by Injecting Commonsense Knowledge" (ProStruct). EMNLP 2018. arXiv 1808.10012.
+Claims:
+ - VERIFIED (a): 488 crowd-written paragraphs about 183 processes (paragraphs of <=4 sentences dropped); 81,345
+   annotations; experts set participants and create/destroy steps, Turkers filled locations (span or "unknown"), 5 grids
+   per paragraph, average pairwise agreement 0.67; 80/10/10 split by process prompt (test processes unseen).
+ - VERIFIED split (downloaded allenai/propara data/emnlp18/grids.v1.{train,dev,test}.json): 391/43/54 paragraphs;
+   1,504/175/236 participants; 2,639/290/373 sentences; naacl18.partition.paraid.tsv agrees, as do KG-MRC Table 1, CGLI
+   Table 2 and the leaderboard README ("Evaluated 54 predictions against 54 answers"). Inconsistent: CoCoGen Table 12
+   (387/43/54) and IWCS 2025 ("42 paragraphs out of 52 of the original ProPara test set").
+ - VERIFIED metric (b, Sec 6.1): four templated questions per process: Inputs (exist at the start but not at the end),
+   Outputs (not at the start, exist at the end), Conversions (4-tuple convert-from, convert-to, location, sentence-id) and
+   Moves (4-tuple entity, from-location, to-location, sentence-id). Each question gets its own F1; tuples are paired by
+   sentence-id and scored by Hamming distance; the four F1s are macro-averaged. Items to predict, train/dev/test:
+   7043/913/1095.
+ - VERIFIED evaluator README (aristo-leaderboard/propara/evaluator): overall P = (avg IP + avg OP + avg CP + avg MP)/4,
+   same for R, overall F1 = harmonic mean of P and R. Locations are lower-cased, a leading article is stripped, then Porter
+   stemmed; participants are not normalized. Action column is NONE/CREATE/MOVE/DESTROY; "?" = unknown, "-" = does not
+   exist. No version number is given.
+ - VERIFIED (b) Table 1, test P/R/F1: ProLocal 77.4/22.9/35.3, ProGlobal 46.7/52.4/49.4, ProStruct 74.2/42.1/53.7.
+ - VERIFIED evaluator drift: leaderboard-sourced tables (KOALA Table 2 says so; CGLI copies it) give ProLocal 50.7,
+   ProGlobal 51.9, ProStruct 74.3/43.0/54.5, KG-MRC 57.6 (KOALA) vs 56.8 in the KG-MRC paper.
+ - VERIFIED fine-tuned document-level test P/R/F1, each read in its own paper:
+     KG-MRC (Das et al., ICLR 2019, arXiv 1810.05682)      64.52/50.68/56.77
+     NCET (Gupta & Durrett 2019, arXiv 1904.03518)         64.2/53.9/58.6; +ELMo 67.1/58.5/62.5
+       (venue: NAACL 2019 SPNLP workshop per Semantic Scholar, UNVERIFIED)
+     DynaPro (Amini et al., AKBC 2020, arXiv 2003.13878)   75.2/58.0/65.5
+     TSLM (Rajaby Faghihi & Kordjamshidi, NAACL 2021, arXiv 2104.07635)   68.4/68.9/68.6
+     KOALA (Zhang, Geng, Qin, Wu, Jiang; WWW 2021, not AAAI; arXiv 2009.13199)   77.7/64.4/70.4
+     CGLI (Ma, Ilievski, Francis, Nyberg, Oltramari; COLING 2022, arXiv 2208.12848)   74.9/70.0/72.4; +data aug. 75.7/70.0/72.7
+     MeeT (Singh, Bai, Wang; EACL 2023, arXiv 2210.06444; fine-tuned T5)   80.3/67.1/73.1  <- best fine-tuned number I verified
+   UNVERIFIED: LEMON (Shi et al. 2022) 74.8/69.8/72.2, quoted only in MeeT's Table 1.
+ - VERIFIED LLM-prompted numbers:
+   * CoCoGen: Aman Madaan, Shuyan Zhou, Uri Alon, Yiming Yang, Graham Neubig. "Language Models of Code are Few-Shot
+     Commonsense Learners." EMNLP 2022. arXiv 2210.07128. ProPara is written as Python: one state_k variable per
+     participant, one function per sentence that reassigns every state ("UNK" = unknown, None = does not exist). 3-shot,
+     mean of 5 random prompts (Table 3): curie 95.1/22.3/36.1, davinci 75.5/47.1/58.0, CoCoGen (code-davinci-002)
+     80.0/53.6/63.0; "would be ranked 6th" on the leaderboard as of 10/11/2022. Caution: the metric is described only as
+     "follow Dalvi et al. (2018) and measure precision, recall and F1 score of the predicted entity states", so it is not
+     clearly the aristo document-level evaluator.
+   * Ye, Obiso, Tu, Pustejovsky. "ProPara-CRTS: Canonical Referent Tracking for Reliable Evaluation of Entity State
+     Tracking in Process Narratives." IWCS 2025, pp. 254-268 (ACL Anthology 2025.iwcs-main.22). GPT-4o, ProPara test,
+     sentence/document F1 (Table 2): Direct 37.1/59.6; CoT 38.4/60.8; Self-consistency (8 samples) 40.2/62.1; Few-shot
+     39.0/61.3. Table 3: GPT-4o-mini 24.8/55.0; Llama-3.1-8B LoRA 59.5/64.9; their re-runs of MeeT 54.9/69.4 and CGLI
+     65.4/72.4. Prompts are per participant per step (6-label state + location extraction), paragraph cut at step t, so
+     not a full-grid prompt. The re-annotation fixed 789 errors (Table 1), "approximately 11%" of the annotations.
+Bearing on B43: reference points on the document-level metric are GPT-4o prompted 59.6-62.1, code-davinci-002 3-shot
+  63.0, fine-tuned SOTA 72-73. Report the evaluator version; label noise means no arm should be expected near 100.
+
+4. OpenPI and OpenPI 2.0
+Citations: Niket Tandon, Keisuke Sakaguchi, Bhavana Dalvi Mishra, Dheeraj Rajagopal, Peter Clark, Michal Guerquin, Kyle
+  Richardson, Eduard Hovy. "A Dataset for Tracking Entities in Open Domain Procedural Text." EMNLP 2020. arXiv 2011.08092
+  (NB: arXiv 2010.02311 is a different paper). Li Zhang, Hainiu Xu, Abhinav Kommula, Chris Callison-Burch, Niket Tandon.
+  "OpenPI2.0: An Improved Dataset for Entity Tracking in Texts." EACL 2024. arXiv 2305.14603.
+Claims (VERIFIED):
+ - OpenPI: input is only the procedural text; output per step is a set of (entity, attribute, before-state, after-state)
+   tuples, "where the entity, attribute, and state values must be predicted from an open vocabulary". 29,928 state
+   changes over 4,050 sentences from 810 WikiHow paragraphs; 91.5% coverage judged by humans; the best generation model
+   reached 16.1% F1 under a BLEU-based metric.
+ - OpenPI2.0: canonicalizes (clusters) entities and attributes and adds salience; exact-match F1 / BERTScore. Schemata
+   (global) exact F1: gpt-3.5-turbo .151, text-davinci-003 .362, LLaMA 65B .129; state accuracy .074/.225/.102.
+Bearing on B43: the attributes and values are free-form strings, so there is no closed state space and no exact-match
+  read rule; a key-value store comparison would need canonicalization first. This is the reason to use ProPara, where
+  the state space is existence plus a location span.
+
+5. Chain-of-Agents
+Citation: Yusen Zhang, Ruoxi Sun, Yanfei Chen, Tomas Pfister, Rui Zhang, Sercan O. Arik. "Chain of Agents: Large Language
+  Models Collaborating on Long-Context Tasks." NeurIPS 2024 (main track). arXiv 2406.02818. arXiv has only v1, which lacks
+  the camera-ready appendices. There is no "Goldberg" among the authors.
+Claims (VERIFIED in arXiv v1 Table 9 and the NeurIPS camera-ready Table 11; the wording is identical):
+ - Worker W_i prompt: "{Input Chunk c_i} / Here is the summary of the previous source text: {Previous Communication Unit
+   (CU_i-1)} / Question: {Query q} / You need to read current source text and summary of previous source text (if any)
+   and generate a summary to include them both. Later, this summary will be used for other agents to answer the Query,
+   if any. So please write the summary that can include the evidence for answering the Query:"
+ - Manager prompt: "{Task specific requirement} / The following are given passages. However, the source text is too long
+   and has been summarized. You need to answer based on the summary: / {Previous Communication Unit CU_l} / Question:
+   {question} / Answer:". Algorithm 1: chunks shorter than window k, CU_0 = empty string, the same LLM serves as workers
+   and manager unless stated otherwise.
+ - Settings: default window 8k ("due to the limitation of text-bison and unicorn"); temperature 0 except the
+   self-consistency runs; max generation 1024 tokens (2048 for gemini-ultra). Backbones: text-bison, text-unicorn
+   (PaLM 2), gemini-ultra, claude-3-haiku/sonnet/opus (llama3-8b only for timing, Sec 5.7). Datasets: HotpotQA, MuSiQue,
+   NarrativeQA, Qasper, QuALITY, QMSum, GovReport, BookSum, RepoBench-P. Baselines: Vanilla, RAG (300-word chunks),
+   Merge, Hierarchical.
+ - Camera-ready only: App. F.3 runs NIAH PLUS (following LongAgent); text-bison rises from 26.0% (Vanilla 8k) to
+   97.8% (CoA 8k), with Figure 7 token limits of 1,000-128,000. App. D: Claude 3 Haiku, windows 4k-128k on NarrativeQA,
+   rises up to 16k, then holds near 20. App. F.4 "catastrophic collapse": rejection cues in CU_i-1 ("I don't know the
+   answer to the query", "not mentioned") are repeated by later workers, and the chain can fall below a single agent W_1.
+ - Neither version evaluates RULER or BABILong (full-text search). The checklist says "We will provide open access to
+   the data and code upon acceptance"; whether an official repo exists is UNVERIFIED.
+Bearing on B43: run CoA with the Table 11 prompts verbatim, temperature 0, 8k chunks and one model for both roles.
+  Report how often chains collapse (rejection phrases in CU). A low CoA score on RULER NIAH has to be squared with the
+  authors' own 97.8% on NIAH PLUS.
+
+6. LLM x MapReduce (and V2)
+Citation: Zihan Zhou, Chong Li, Xinyi Chen, Shuo Wang, Yu Chao, Zhili Li, Haoyu Wang, Rongqiao An, Qi Shi, Zhixing Tan,
+  Xu Han, Xiaodong Shi, Zhiyuan Liu, Maosong Sun. "LLMxMapReduce: Simplified Long-Sequence Processing using Large Language
+  Models." ACL 2025 (Long Papers), pp. 27664-27678 (2025.acl-long.1341). arXiv 2410.09342 (arXiv comment: "Work in
+  Progress"). I downloaded the ACL PDF; its Table 1 matches arXiv v1.
+Claims (VERIFIED):
+ - Method: chunk -> map (structured output with confidence) -> collapse -> reduce, with in-context confidence
+   calibration for conflicts. Llama3-70B-Instruct (8K effective) and Qwen2-72B-Instruct, vLLM, temperature 0.7.
+ - InfiniteBench (Code.Run and Math.Calc excluded), Table 1, Re.PassKey / Re.Number / Re.KV / Avg:
+     GPT-4 100/100/89.00/57.34; Qwen2-72B-Instruct 100/100/29.00/54.74
+     L3-70B-I + LongAgent 99.32/93.05/74.60/53.81
+     L3-70B-I + CoA        9.32/15.59/ 1.80/15.97   <- third-party CoA re-run collapses on synthetic retrieval
+     L3-70B-I x MR        100/99.79/98.89/68.66;  Q2-72B-I x MR 100/100/98.80/65.97
+ - NIAH extended to 1280K tokens with Llama3-70B-Instruct (Figure 3; no table). No RULER or BABILong results.
+ - V2 (Haoyu Wang, Yujia Fu, Zhu Zhang, ..., Maosong Sun; arXiv 2504.05732) targets long-form article generation from
+   long sources (SurveyEval benchmark). It has no retrieval or state-tracking results and is not relevant to B43.
+Bearing on B43: the only third-party CoA run on synthetic retrieval I found gives 1.8% on KV retrieval. A weak CoA arm in
+  B43 would match this, but we must show it is not an implementation artifact (check for collapse) before using it as
+  evidence.
+
+7. Map-reduce / agent / chunked baselines on NIAH, BABILong, RULER
+ - BABILong: Yuri Kuratov, Aydar Bulatov, Petr Anokhin, Ivan Rodkin, Dmitry Sorokin, Artyom Sorokin, Mikhail Burtsev.
+   NeurIPS 2024 Datasets & Benchmarks. arXiv 2406.10149 (v2). VERIFIED abstract: "popular LLMs effectively utilize only
+   10-20% of the context"; "Retrieval-Augmented Generation methods achieve a modest 60% accuracy on single-fact question
+   answering, independent of context length". Baselines are RAG-C (512-token chunks) and RAG-S (sentences), top-5/top-20,
+   with GPT-4 and Llama-3, plus fine-tuned Mamba/RMT/ARMT. There is no agent, map-reduce or CoA baseline.
+   VERIFIED figure values at 128K (Fig. 3; columns matched by reconstructing the rotated labels, so check the mapping
+   before quoting): QA1 GPT-4+RAG-C-top5 16, GPT-4+RAG-S-top5 56, GPT-4+RAG-S-top20 51. Panel (b), GPT-4 alone vs
+   Llama3+RAG-S: QA1 39 vs 64, QA2 25 vs 6, QA3 32 vs 19, QA4 32 vs 60, QA5 51 vs 75; fine-tuned Mamba-130M
+   100/87/81/98/98; RMT-137M 94/39/36/38/86. Text: "In QA2 and QA3, retrieval fails dramatically with accuracy
+   plummeting below random guessing."
+ - RULER (Hsieh et al., COLM 2024, arXiv 2404.06654) and InfiniteBench (Zhang et al., ACL 2024, arXiv 2402.13718).
+   VERIFIED by text search: both evaluate long-context LMs only (InfiniteBench with truncation), with no RAG, chunked or
+   agent baselines. RULER = 13 tasks in 4 categories (NIAH, variable tracking, aggregation, QA).
+ - LongAgent: Jun Zhao, Can Zu, Hao Xu, Yi Lu, Wei He, Yiwen Ding, Tao Gui, Qi Zhang, Xuanjing Huang. arXiv 2402.11550
+   (v2; no peer-reviewed venue found). VERIFIED: a leader plus member agents; members are fine-tuned LLaMA with a 4k
+   window, reaching 128k. NIAH PLUS (QA over needle documents, 1k-128k): single-document average 81.53% vs GPT-4 62.00%;
+   multi-document 55.33% vs 50.37%. Table 1, PassKey/Number/KV/numerical comparison: GPT-4 1.000/1.000/0.890/0.600;
+   LongAgent-GPT3.5 1.000/1.000/0.638/0.511; LongAgent-LLaMA-7B 1.000/1.000/0.966/0.625.
+ - GraphReader (Li, He, Guo, Bu et al., EMNLP 2024 per arXiv comment, arXiv 2406.14550) and ReadAgent (Lee, Chen,
+   Furuta, Canny, Fischer, ICML 2024 per Semantic Scholar, arXiv 2402.09727). VERIFIED: GraphReader uses LongBench
+   multi-hop QA and LV-Eval 16k-256k (HotpotWikiQA-mixup 256k F1*: GraphReader 33.0, GPT-4-128k 10.3, ReadAgent 10.4);
+   ReadAgent uses QuALITY, NarrativeQA and QMSum. Neither reports NIAH, BABILong or RULER.
+ - MemGPT: Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir G. Patil, Ion Stoica, Joseph E. Gonzalez.
+   arXiv 2310.08560. VERIFIED: nested KV retrieval with 140 UUID pairs (~8k tokens), nesting levels 0-4, 30 orderings.
+   GPT-3.5 hits 0% at 1 nesting level; GPT-4 and GPT-4 Turbo hit 0% by 3 levels; MemGPT+GPT-4 "is unaffected with the
+   number of nesting levels"; MemGPT with GPT-4 Turbo or GPT-3.5 starts dropping at 2 levels. Accuracies are in a figure
+   only.
+ - Recursive Language Models: Alex L. Zhang, Tim Kraska, Omar Khattab. arXiv 2512.24601 (v3, May 2026, preprint).
+   VERIFIED: base vs CodeAct vs compaction/summary agent vs RLM on CodeQA, BrowseComp+, OOLONG, OOLONG-Pairs (Table 1)
+   and S-NIAH (after RULER; figure only). GPT-5 OOLONG-Pairs: base 0.1, compaction 0.1, RLM depth 3 76.0.
+Bearing on B43: I found no CoA or map-reduce numbers on RULER or BABILong. The nearest comparisons are CoA on NIAH PLUS
+  (its own paper), CoA/LongAgent/MapReduce on InfiniteBench retrieval (item 6), and RAG on BABILong. MemGPT's nested KV is
+  the closest earlier "LM + external store" result on synthetic key-value data.
+
+8. Store / symbolic-state vs direct LM on state tracking
+ a) IC-DST: Yushi Hu, Chia-Hsuan Lee, Tianbao Xie, Tao Yu, Noah A. Smith, Mari Ostendorf. "In-Context Learning for
+    Few-Shot Dialogue State Tracking." Findings of EMNLP 2022. arXiv 2203.08568. VERIFIED: Codex writes each turn's state
+    changes as SQL, accumulated into the state. Table 3 (MultiWOZ 2.4, 5% data, JGA): full context -> full state 45.0;
+    prev. state + turn -> full state 47.9; full context -> changes 52.0; single turn -> changes 55.8; prev. state + turn ->
+    changes 58.7. Fig. 5: full-state JGA falls in later turns, change JGA stays high.
+    Bearing: the closest earlier evidence that "LM extracts updates + deterministic accumulation" beats "LM outputs the full
+    state" (+10.8 JGA). B43's store arm has the same structure, so do not claim novelty for update extraction itself.
+ b) PROPOLIS: Hossein Rajaby Faghihi, Parisa Kordjamshidi, Choh Man Teng, James Allen. "The Role of Semantic Parsing in
+    Understanding Procedural Text." Findings of EACL 2023. arXiv 2302.06829. VERIFIED (Table 4, ProPara test): PROPOLIS, a
+    symbolic system with no training (TRIPS deep semantic parse + rules), scores 70.9/50.0/58.7 at document level vs
+    ProLocal 35.3, ProGlobal 49.4, KG-MRC 56.8. NCET+PROPOLIS 74.6/65.8/69.9; CGLI+TRIPS 71.4 (CGLI 72.4).
+    Bearing: a symbolic state tracker has already been scored on ProPara with this metric. B43 differs in using an LLM as
+    the extractor and a VSA/dict store with fixed read rules.
+ c) CoCoGen (item 3) already writes ProPara states as code, but the LM writes the full state at every step; nothing is
+    executed and there are no deltas.
+ d) Ruoyao Wang, Graham Todd, Ziang Xiao, Xingdi Yuan, Marc-Alexandre Cote, Peter Clark, Peter Jansen. "Can Language
+    Models Serve as Text-Based World Simulators?" ACL 2024. arXiv 2406.06485. VERIFIED: on ByteSized32-State-Prediction,
+    GPT-4 "does not exceed 59.9%" on transitions with a non-trivial change. Table 2, full vs diff prediction, whole
+    transition F: human rules dynamic 59.9 vs 51.6, static 63.5 vs 73.9; no rules dynamic 54.1 vs 52.2; LLM rules
+    dynamic 59.0 vs 59.5. (Human rules F_act 77.1 vs 68.4, F_env 38.6 vs 22.2.)
+    Bearing: predicting changes is not uniformly better. On transitions that do change, full-state prediction matched or
+    beat diffs for GPT-4, so B43 has to test the direction rather than assume it.
+ e) Li, Nye, Andreas, "Implicit Representations of Meaning in Neural Language Models", ACL 2021, arXiv 2106.00737.
+    VERIFIED (abstract): BART/T5 states allow "a linear readout of each entity's current properties and relations"
+    (Alchemy, TextWorld); item 1 has the 87.6%-trivial reanalysis. Toshniwal, Wiseman, Livescu, Gimpel, "Chess as a
+    Testbed for Language Model State Tracking", AAAI 2022, arXiv 2102.13249. VERIFIED (abstract): with enough data,
+    transformers track pieces and predict legal moves; with little data, board-state supervision helps; full attention
+    over the history is needed. Both are probing/training studies, not store-vs-LM comparisons.
+ f) PROC2PDDL: Tianyi Zhang, Li Zhang, Zhaoyi Hou, Ziyu Wang, Yuling Gu, Peter Clark, Chris Callison-Burch, Niket Tandon.
+    NLRSE 2024 workshop. arXiv 2403.00092. VERIFIED: LLMs turn open-domain procedural text into PDDL actions for a
+    classical solver. GPT-3.5 success "close to 0%"; GPT-4o 38%, 45% with ZPD instructions vs 34% with CoT (abstract).
+    Table 2: GPT-4 action acc 15.9 / problem solve 33.7; GPT-4o 18.2/37.9.
+    Bearing (my inference): the solver is exact, so the low success rates come from the LM's translation step. B43 should
+    likewise report extraction errors separately from read errors.
+
+Implications
+(i) Novelty. I found no paper that compares "LLM extracts per-sentence updates into an external key-value store (VSA or
+dict) with deterministic reads" against "the same LLM answers the full grid" on ProPara or on the boxes task, so a hedged
+"to our knowledge" is defensible for that exact comparison. "First symbolic/store approach on ProPara" is not: PROPOLIS
+(Findings EACL 2023, F1 58.7) scores a symbolic tracker on ProPara with the document-level metric, CoCoGen (EMNLP 2022)
+writes ProPara states as code, and IC-DST (Findings EMNLP 2022) shows update extraction plus accumulation beating
+full-state prediction for dialogue state (58.7 vs 47.9 JGA). On boxes, prior work is behavioural, mechanistic or about
+pretraining data; I found no store or code-execution arm, but my search was not exhaustive.
+(ii) CoA / map-reduce on RULER or BABILong. None found. The original CoA paper has NIAH PLUS only in the camera-ready
+(text-bison 26.0% -> 97.8% up to 128k; absent from arXiv v1). The one third-party CoA run on synthetic retrieval
+(LLMxMapReduce, ACL 2025, InfiniteBench, Llama3-70B) gives PassKey 9.32 / Number 15.59 / KV 1.80, while LongAgent gets
+99.32/93.05/74.60 and MapReduce 100/99.79/98.89. BABILong's own baselines are RAG only (RAG-S Llama3 at 128K: QA2 6,
+QA3 19). B43 would be among the first CoA results on RULER/BABILong; word it as "we could not find", not "first".
+(iii) Cautions. (1) ProPara document-level numbers depend on evaluator version (ProStruct 53.7 in its paper vs 54.5 on
+the leaderboard; ProLocal 35.3 vs 50.7): state the evaluator and quote leaderboard-consistent baselines (KOALA/CGLI/MeeT
+tables). (2) Use grids.v1 test = 54 paragraphs / 236 participants; IWCS 2025 says 52. (3) Published LLM numbers use other
+prompt formats (IWCS per entity and step with the paragraph cut at t; CoCoGen 3-shot code), so they are reference points,
+not matched baselines. (4) CoA chains can collapse (CoA camera-ready F.4; MapReduce re-run): use the verbatim prompts,
+temperature 0 and 8k chunks, and report the collapse rate, or a store win over CoA can be blamed on a weak
+re-implementation. (5) Boxes text is template-generated and password-protected against contamination: do not
+redistribute the unzipped data or call it natural text. (6) ProPara label noise (location agreement 0.67; ~11% of
+annotations corrected by CRTS) caps every arm's F1. (7) Wang et al. 2024 found diff prediction worse than full-state
+prediction on changing transitions, so the store-vs-direct direction is an open question for the prereg, not a given.

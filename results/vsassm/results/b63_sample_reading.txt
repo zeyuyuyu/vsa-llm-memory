@@ -1,0 +1,57 @@
+# B63 sample reading by the AI-assisted process (not independent): failed keys one grid step below N* of
+# OT-best at k1, k8, k16, re-run locally on the same channel draw; cause per failed key.
+
+== k1: OT-best = O-BCH, N* 32.0; reading B = 27 (one step below), design f 16 R None
+   failed keys pooled: 0 of 105; stores with failures: 0
+   causes (sampled keys): {}
+
+== k8: OT-best = O-LDPC, N* 90.50966799187809; reading B = 76 (one step below), design f 12 R 0.5
+   failed keys pooled: 1217 of 4776; stores with failures: 30
+   store 131072/niah_multikey_2/95106 (n 5990, m 1577, lost 0): 98 failed; residual logical bit errors 0.0725
+     key inexpensive-serum                        values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key tame-petitioner                          values 1: exact match, payload (last flag / value) has 1 bit errors at j 0
+     key little-dancer                            values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key damaging-entity                          values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key stereotyped-disruption                   values 1: exact match, payload (last flag / value) has 1 bit errors at j 0
+     key weak-incense                             values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+   store 131072/niah_multikey_2/170650 (n 5990, m 1577, lost 0): 96 failed; residual logical bit errors 0.0715
+     key long-workshop                            values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key brief-trafficker                         values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key quickest-tag                             values 1: exact match, payload (last flag / value) has 1 bit errors at j 0
+     key zippy-corporation                        values 1: exact match, payload (last flag / value) has 3 bit errors at j 0
+     key orange-plenty                            values 1: exact match, payload (last flag / value) has 1 bit errors at j 0
+     key aloof-validate                           values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+   store 131072/niah_multikey_2/180562 (n 5986, m 1576, lost 0): 91 failed; residual logical bit errors 0.0633
+     key lying-playwright                         values 1: own fingerprint corrupted at j 0 (3 bit errors), nearest-slot fallback chose another slot or tied
+     key roomy-bout                               values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key ubiquitous-screamer                      values 1: exact match, payload (last flag / value) has 1 bit errors at j 0
+     key imperfect-email                          values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key icy-counsellor                           values 1: exact match, payload (last flag / value) has 1 bit errors at j 0
+     key abashed-toque                            values 1: own fingerprint corrupted at j 0 (3 bit errors), nearest-slot fallback chose another slot or tied
+   causes (sampled keys): {'own fingerprint corrupted': 11, 'exact match, payload': 7}
+
+== k16: OT-best = O-LDPC, N* 304.4370214406966; reading B = 256 (one step below), design f 12 R 0.25
+   failed keys pooled: 898 of 4776; stores with failures: 26
+   store 131072/niah_multikey_2/170650 (n 5990, m 1577, lost 0): 93 failed; residual logical bit errors 0.0726
+     key long-workshop                            values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key brief-trafficker                         values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key faded-gearshift                          values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key exotic-noise                             values 1: exact match, payload (last flag / value) has 2 bit errors at j 0
+     key orange-plenty                            values 1: exact match, payload (last flag / value) has 3 bit errors at j 0
+     key earthy-hydrocarb                         values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+   store 131072/niah_multikey_2/95106 (n 5990, m 1577, lost 0): 89 failed; residual logical bit errors 0.0803
+     key tough-palm                               values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key inexpensive-serum                        values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key gainful-vintner                          values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key weak-treasure                            values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key tame-petitioner                          values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key damaging-entity                          values 1: exact match, payload (last flag / value) has 3 bit errors at j 0
+   store 131072/niah_multikey_2/180562 (n 5986, m 1576, lost 0): 88 failed; residual logical bit errors 0.0783
+     key known-democracy                          values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key distinct-alternative                     values 1: exact match, payload (last flag / value) has 2 bit errors at j 0
+     key broad-accent                             values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key horrible-brilliant                       values 1: own fingerprint corrupted at j 0 (2 bit errors), nearest-slot fallback chose another slot or tied
+     key clever-marionberry                       values 1: own fingerprint corrupted at j 0 (1 bit errors), nearest-slot fallback chose another slot or tied
+     key periodic-galley                          values 1: exact match, payload (last flag / value) has 1 bit errors at j 0
+   causes (sampled keys): {'own fingerprint corrupted': 13, 'exact match, payload': 5}
+

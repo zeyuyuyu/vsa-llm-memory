@@ -1,0 +1,251 @@
+# B29 verdict (prereg/B29_same_tooling_prereg.md): does model size matter given the same tooling?
+
+## RULER memory tasks (9 tasks: niah_single_1-3, niah_multikey_1-3, niah_multivalue, niah_multiquery, vt)
+B19 seed-42 test sets, 100 samples per task and length, official string_match_all. Same extraction prompt, chunking,
+grounding, dict (B21's table) and sharded Fourier HRR store for every reader; only the reader model differs.
+
+9-task mean, dict (plain table) answers
+reader                          4k      8k     16k     32k     64k    128k
+8B (B21, banked)              99.5    99.9    99.6    99.7    99.5    99.6
+8B replay (gate G1)           99.7    99.9    99.7    99.7    99.4    99.6
+32B                           99.7    99.9    99.9    99.9   100.0   100.0
+1.7B                          92.6    93.8    92.5    92.3    93.5    94.0
+32B full read (vLLM)             -       -       -       -       -   100.0
+
+128k per task, dict answers
+reader                       single_1   single_2   single_3 multikey_1 multikey_2 multikey_3 multivalue multiquery         vt
+8B (B21, banked)                100.0       99.0      100.0      100.0       99.0      100.0      100.0      100.0       98.2
+8B replay (gate G1)             100.0       99.0      100.0      100.0       99.0      100.0      100.0      100.0       98.2
+32B                             100.0      100.0      100.0      100.0      100.0      100.0      100.0      100.0      100.0
+1.7B                             79.0      100.0       98.0       96.0      100.0      100.0       98.0       96.5       78.8
+32B full read (vLLM)            100.0      100.0      100.0      100.0      100.0      100.0      100.0      100.0      100.0
+
+Paired differences, 9-task mean, dict answers (points; 95% stratified paired bootstrap, 10,000 resamples, seed 0)
+comparison                                            4k                    8k                   16k                   32k                   64k                  128k
+32B - 8B (B21, banked)               +0.19 [-0.27,+0.66]   +0.01 [-0.17,+0.20]   +0.26 [-0.11,+0.62]   +0.17 [-0.09,+0.48]   +0.48 [+0.15,+0.89]   +0.42 [+0.09,+0.84]
+1.7B - 8B (B21, banked)              -6.98 [-8.53,-5.52]   -6.09 [-7.44,-4.77]   -7.09 [-8.64,-5.60]   -7.43 [-8.93,-5.97]   -5.98 [-7.43,-4.58]   -5.54 [-6.95,-4.25]
+8B replay (gate G1) - 8B (B21, banked)   +0.17 [+0.00,+0.44]   +0.00 [+0.00,+0.00]   +0.06 [+0.00,+0.14]   +0.00 [+0.00,+0.00]   -0.08 [-0.19,+0.00]   +0.00 [+0.00,+0.00]
+32B full read (vLLM) - 32B                             -                     -                     -                     -                     -   +0.00 [+0.00,+0.00]
+
+Store vs dict on the same reader output (identical predictions / samples)
+  8B (B21, banked): 5400/5400 (all lengths; B21)
+  32B full read (vLLM): 128k 900/900
+  32B: 4k 100/100, 8k 100/100, 16k 100/100, 32k 100/100, 64k 100/100, 128k 100/100  (VT only: NIAH store needs every chunk read)
+  1.7B: 4k 100/100, 8k 100/100, 16k 100/100, 32k 100/100, 64k 100/100, 128k 100/100  (VT only: NIAH store needs every chunk read)
+  32B full read, 128k 9-task mean: store 100.00, dict 100.00
+
+Gates
+  G1   4k: chunks equal 1496/1500, samples equal 897/900, mean diff +0.17
+  G1   8k: chunks equal 1497/1500, samples equal 900/900, mean diff +0.00
+  G1  16k: chunks equal 1496/1500, samples equal 898/900, mean diff +0.06
+  G1  32k: chunks equal 1498/1500, samples equal 900/900, mean diff +0.00
+  G1  64k: chunks equal 1496/1500, samples equal 897/900, mean diff -0.08
+  G1 128k: chunks equal 1495/1500, samples equal 900/900, mean diff +0.00
+  G1 (8B replay reproduces B21: >= 99% chunks, >= 99% samples, |mean diff| <= 0.25 at every length): PASS
+    diff: ["chunk", 4096, "niah_multikey_1", 90, 6, "[]", "[[\"cloistered-vol\", \"8229768\"]]"]
+    diff: ["sample", 4096, "niah_multikey_1", 90, "", "8229768"]
+    diff: ["chunk", 4096, "niah_multivalue", 13, 16, "[]", "[[\"different-burn\", \"6075395\"]]"]
+    diff: ["sample", 4096, "niah_multivalue", 13, "9874152 1131249 8351517", "9874152 6075395 1131249 8351517"]
+    diff: ["chunk", 4096, "niah_multiquery", 75, 61, "[]", "[[\"stupid-notepad\", \"9123194\"]]"]
+    diff: ["sample", 4096, "niah_multiquery", 75, "5993143 5135904 6007984", "5993143 5135904 6007984 9123194"]
+    diff: ["chunk", 8192, "niah_multiquery", 28, 124, "[[\"abandoned-enigma\", \"7853787\"]]", "[[\"abandoned-enigma\", \"7853787\"], [\"Android\", \"orphan\"], [\"Google\", \"doesn't rea"]
+    diff: ["chunk", 16384, "niah_multiquery", 41, 76, "[]", "[[\"cagey-jute\", \"5951131\"]]"]
+    diff: ["sample", 16384, "niah_multiquery", 41, "7970985 3204724 7121355", "5951131 7970985 3204724 7121355"]
+    diff: ["chunk", 16384, "niah_multiquery", 48, 241, "[]", "[[\"bad-cutover\", \"9035982\"]]"]
+    diff: ["sample", 16384, "niah_multiquery", 48, "9748499 1522621 8684678", "9035982 9748499 1522621 8684678"]
+    diff: ["chunk", 32768, "niah_multiquery", 32, 187, "[[\"yummy-step-aunt\", \"3204724\"], [\"1996\", \"70\"], [\"1997\", \"500\"], [\"Six months l", "[[\"yummy-step-aunt\", \"3204724\"], [\"1996\", \"70\"], [\"1997\", \"500\"], [\"Six months l"]
+  G0 (CPU, before registration): G0    4096: 900/900 samples reproduce B21 | G0    8192: 900/900 samples reproduce B21 | G0   16384: 900/900 samples reproduce B21 | G0   32768: 900/900 samples reproduce B21 | G0   65536: 900/900 samples reproduce B21 | G0  131072: 900/900 samples reproduce B21 | G0 mismatches: []
+
+Bars (registered)
+  RS1 (32B - 8B at 128k, dict; margin 1.0 point): +0.42 [+0.09, +0.84] -> SMALL READER SUFFICES (interval below the margin)
+  RS2 (32B store = dict on >= 99% of the 900 samples at 128k): 900/900 -> PASS
+  RS3 (cross-engine: 32B dict answers, vLLM full read = HF needed-chunk read, >= 98%): 900/900 -> PASS
+  RS4 (secondary, 1.7B - 8B at 128k): -5.54 [-6.95, -4.25] -> smaller reader worse
+
+## Operational logs: the same pipeline (prompt C with its worked examples, forced choice, yes/no check, registry,
+connectors, 256 x 256 matrix memory, engines) with the reader model varied. Set-exact accuracy; paired differences
+with a 95% cluster bootstrap over logs (10,000 resamples, numpy seed 0; cluster_bootstrap.cl_boot), larger - small.
+
+### where questions (test2)
+  1.7B fine-tuned (banked)                     0.959 (397/414)
+  1.7B fine-tuned (re-run, gate G2)            0.952 (394/414)   dict 0.952, same answers 414/414
+      - 1.7B fine-tuned (banked)       -0.007 [-0.022, +0.000] (stratified [-0.022, +0.000]; 414 q, 40 logs) -> 
+  Qwen3-8B prompted                            0.903 (374/414)   dict 0.903, same answers 414/414
+      - 1.7B fine-tuned (banked)       -0.056 [-0.099, -0.017] (stratified [-0.091, -0.022]; 414 q, 40 logs) -> LARGER READER WORSE (interval below 0)
+      - 1.7B fine-tuned (re-run)       -0.048 [-0.089, -0.012] (stratified [-0.084, -0.014]; 414 q, 40 logs) -> LARGER READER WORSE (interval below 0)
+  Qwen3-32B prompted                           0.954 (395/414)   dict 0.954, same answers 414/414
+      - 1.7B fine-tuned (banked)       -0.005 [-0.026, +0.017] (stratified [-0.026, +0.015]; 414 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+      - 1.7B fine-tuned (re-run)       +0.002 [-0.022, +0.029] (stratified [-0.022, +0.027]; 414 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+  GPT-6.1 Sol (low) prompted                   0.961 (398/414)   dict 0.961, same answers 414/414
+      - 1.7B fine-tuned (banked)       +0.002 [-0.020, +0.026] (stratified [-0.019, +0.024]; 414 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+      - 1.7B fine-tuned (re-run)       +0.010 [-0.017, +0.037] (stratified [-0.015, +0.036]; 414 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+  Claude Opus 5.5 (low) prompted               not run
+  GPT-6.1 Sol (low) prompted: 0 of 6904 calls failed after retries (0.00%), touching 0 logs
+  G2 where: re-run answers equal the banked ones on 411/414, accuracy 0.952 vs 0.959 -> PASS
+  Qwen3-32B whole log (forced)                 0.543 (414 q)   same model in the pipeline - this: +0.411 [+0.350, +0.474]
+      (1.7B fine-tuned pipeline - this: +0.415 [+0.355, +0.477])
+
+### impact questions (nsr1)
+  1.7B fine-tuned (banked)                     0.930 (214/230)   count-table rules 0.930
+  1.7B fine-tuned (re-run, gate G2)            0.930 (214/230)   dict 0.930, same answers 230/230   count-table rules 0.930
+      - 1.7B fine-tuned (banked)       +0.000 [+0.000, +0.000] (stratified [+0.000, +0.000]; 230 q, 40 logs) -> 
+  Qwen3-8B prompted                            0.935 (215/230)   dict 0.935, same answers 230/230   count-table rules 0.935
+      - 1.7B fine-tuned (banked)       +0.004 [-0.037, +0.048] (stratified [-0.035, +0.043]; 230 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+      - 1.7B fine-tuned (re-run)       +0.004 [-0.037, +0.048] (stratified [-0.035, +0.043]; 230 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+  Qwen3-32B prompted                           0.930 (214/230)   dict 0.930, same answers 230/230   count-table rules 0.930
+      - 1.7B fine-tuned (banked)       +0.000 [-0.048, +0.048] (stratified [-0.043, +0.043]; 230 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+      - 1.7B fine-tuned (re-run)       +0.000 [-0.048, +0.048] (stratified [-0.043, +0.043]; 230 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+  GPT-6.1 Sol (low) prompted                   0.939 (216/230)   dict 0.939, same answers 230/230   count-table rules 0.939
+      - 1.7B fine-tuned (banked)       +0.009 [-0.027, +0.049] (stratified [-0.026, +0.043]; 230 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+      - 1.7B fine-tuned (re-run)       +0.009 [-0.027, +0.049] (stratified [-0.026, +0.043]; 230 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+  Claude Opus 5.5 (low) prompted               0.917 (211/230)   dict 0.917, same answers 230/230   count-table rules 0.917
+      - 1.7B fine-tuned (banked)       -0.013 [-0.055, +0.029] (stratified [-0.052, +0.026]; 230 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+      - 1.7B fine-tuned (re-run)       -0.013 [-0.055, +0.029] (stratified [-0.052, +0.026]; 230 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+  GPT-6.1 Sol (low) prompted: 0 of 7124 calls failed after retries (0.00%), touching 0 logs
+  Claude Opus 5.5 (low) prompted: 0 of 7026 calls failed after retries (0.00%), touching 0 logs
+  G2 impact: re-run answers equal the banked ones on 230/230, accuracy 0.930 vs 0.930 -> PASS
+  Qwen3-32B whole log (forced)                 0.278 (230 q)   same model in the pipeline - this: +0.652 [+0.590, +0.716]
+      (1.7B fine-tuned pipeline - this: +0.652 [+0.572, +0.730])
+  GPT-6.1 Sol whole log (xhigh, OpenAI direct) 0.952 (230 q)   same model in the pipeline - this: -0.013 [-0.056, +0.029]
+      (1.7B fine-tuned pipeline - this: -0.022 [-0.073, +0.025])
+
+### window questions (nsr2)
+  1.7B fine-tuned (banked)                     0.874 (402/460)
+  1.7B fine-tuned (re-run, gate G2)            0.874 (402/460)   dict 0.874, same answers 460/460
+      - 1.7B fine-tuned (banked)       +0.000 [+0.000, +0.000] (stratified [+0.000, +0.000]; 460 q, 40 logs) -> 
+  Qwen3-8B prompted                            0.830 (382/460)   dict 0.830, same answers 460/460
+      - 1.7B fine-tuned (banked)       -0.043 [-0.097, +0.004] (stratified [-0.087, +0.004]; 460 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+      - 1.7B fine-tuned (re-run)       -0.043 [-0.097, +0.004] (stratified [-0.087, +0.004]; 460 q, 40 logs) -> SMALL READER SUFFICES (interval below the margin)
+  Qwen3-32B prompted                           0.887 (408/460)   dict 0.887, same answers 460/460
+      - 1.7B fine-tuned (banked)       +0.013 [-0.041, +0.067] (stratified [-0.037, +0.061]; 460 q, 40 logs) -> INCONCLUSIVE
+      - 1.7B fine-tuned (re-run)       +0.013 [-0.041, +0.067] (stratified [-0.037, +0.061]; 460 q, 40 logs) -> INCONCLUSIVE
+  GPT-6.1 Sol (low) prompted                   0.909 (418/460)   dict 0.909, same answers 460/460
+      - 1.7B fine-tuned (banked)       +0.035 [-0.016, +0.088] (stratified [-0.013, +0.080]; 460 q, 40 logs) -> INCONCLUSIVE
+      - 1.7B fine-tuned (re-run)       +0.035 [-0.016, +0.088] (stratified [-0.013, +0.080]; 460 q, 40 logs) -> INCONCLUSIVE
+  Claude Opus 5.5 (low) prompted               0.909 (418/460)   dict 0.909, same answers 460/460
+      - 1.7B fine-tuned (banked)       +0.035 [-0.017, +0.091] (stratified [-0.015, +0.083]; 460 q, 40 logs) -> INCONCLUSIVE
+      - 1.7B fine-tuned (re-run)       +0.035 [-0.017, +0.091] (stratified [-0.015, +0.083]; 460 q, 40 logs) -> INCONCLUSIVE
+  GPT-6.1 Sol (low) prompted: 29 of 7026 calls failed after retries (0.41%), touching 26 logs; without those logs: 0.900 vs 1.7B 0.808, +0.092 [-0.007, +0.216] (130 q, 14 logs)
+  Claude Opus 5.5 (low) prompted: 0 of 6948 calls failed after retries (0.00%), touching 0 logs
+  G2 window: re-run answers equal the banked ones on 460/460, accuracy 0.874 vs 0.874 -> PASS
+  Qwen3-32B whole log (forced)                 0.202 (460 q)   same model in the pipeline - this: +0.685 [+0.611, +0.756]
+      (1.7B fine-tuned pipeline - this: +0.672 [+0.601, +0.740])
+  GPT-6.1 Sol whole log (xhigh, OpenAI direct) 0.904 (460 q)   same model in the pipeline - this: +0.004 [-0.044, +0.053]
+      (1.7B fine-tuned pipeline - this: -0.030 [-0.090, +0.026])
+
+Bars (registered; margin 0.05; a set counts only if its gate G2 passed, else the re-run is the baseline)
+  L-where  Qwen3-8B prompted              -0.056 [-0.099, -0.017] vs 1.7B fine-tuned (banked) -> LARGER READER WORSE (interval below 0)
+  L-where  Qwen3-32B prompted             -0.005 [-0.026, +0.017] vs 1.7B fine-tuned (banked) -> SMALL READER SUFFICES (interval below the margin)
+  L-where  GPT-6.1 Sol (low) prompted     +0.002 [-0.020, +0.026] vs 1.7B fine-tuned (banked) -> SMALL READER SUFFICES (interval below the margin)
+  L-impact Qwen3-8B prompted              +0.004 [-0.037, +0.048] vs 1.7B fine-tuned (banked) -> SMALL READER SUFFICES (interval below the margin)
+  L-impact Qwen3-32B prompted             +0.000 [-0.048, +0.048] vs 1.7B fine-tuned (banked) -> SMALL READER SUFFICES (interval below the margin)
+  L-impact GPT-6.1 Sol (low) prompted     +0.009 [-0.027, +0.049] vs 1.7B fine-tuned (banked) -> SMALL READER SUFFICES (interval below the margin)
+  L-impact Claude Opus 5.5 (low) prompted -0.013 [-0.055, +0.029] vs 1.7B fine-tuned (banked) -> SMALL READER SUFFICES (interval below the margin)
+  L-window Qwen3-8B prompted              -0.043 [-0.097, +0.004] vs 1.7B fine-tuned (banked) -> SMALL READER SUFFICES (interval below the margin)
+  L-window Qwen3-32B prompted             +0.013 [-0.041, +0.067] vs 1.7B fine-tuned (banked) -> INCONCLUSIVE
+  L-window GPT-6.1 Sol (low) prompted     +0.035 [-0.016, +0.088] vs 1.7B fine-tuned (banked) -> INCONCLUSIVE
+  L-window Claude Opus 5.5 (low) prompted +0.035 [-0.017, +0.091] vs 1.7B fine-tuned (banked) -> INCONCLUSIVE
+
+Exploratory (not registered; reported because the registered rule left failed calls in place)
+  GPT-6.1 Sol window set with the 29 refused calls re-asked (all other answers replayed from the cache; 44 new calls): 0.928; - 1.7B +0.054 [+0.006, +0.106] -> would read SIZE MATTERS (gain >= margin, interval above 0)
+      the same model reading the whole log (xhigh, OpenAI direct): pipeline - whole log +0.024 [-0.019, +0.069]
+  GPT-6.1 Sol impact set, run 1 (103 refused calls left as no events; replaced by the registered re-run): 0.926; - 1.7B -0.004 [-0.046, +0.038] -> would read SMALL READER SUFFICES (interval below the margin)
+  LD (dict = matrix memory on >= 99% of questions, every reader and set): where 1.7B fine-tuned (re-run, gate G2): 414/414; where Qwen3-8B prompted: 414/414; where Qwen3-32B prompted: 414/414; where GPT-6.1 Sol (low) prompted: 414/414; impact 1.7B fine-tuned (re-run, gate G2): 230/230; impact Qwen3-8B prompted: 230/230; impact Qwen3-32B prompted: 230/230; impact GPT-6.1 Sol (low) prompted: 230/230; impact Claude Opus 5.5 (low) prompted: 230/230; window 1.7B fine-tuned (re-run, gate G2): 460/460; window Qwen3-8B prompted: 460/460; window Qwen3-32B prompted: 460/460; window GPT-6.1 Sol (low) prompted: 460/460; window Claude Opus 5.5 (low) prompted: 460/460
+
+## Registered predictions
+  held: G1 passes
+  FAILED: RS1: d32 at 128k in [-0.5, +0.4] (got +0.42)
+  held: RS1 reads small reader suffices
+  held: RS2 holds
+  held: RS3 holds
+  held: RS4: 1.7B at least 1 point below 8B at 128k, interval below 0 (got -5.54)
+  held: 32B |d| <= 0.03 on each log set (got -0.005, +0.000, +0.013)
+  held: 32B: small reader suffices on >= 2 of 3 log sets (got 2)
+  held: frontier d in [-0.02, +0.04] on every set run (got +0.002, +0.009, -0.013, +0.035, +0.035)
+  FAILED: frontier: small reader suffices on each set run (3 of 5)
+  FAILED: 8B prompted within 0.03 of the 1.7B (got -0.056, +0.004, -0.043)
+  held: LD holds for every reader and set (14 of 14)
+  held: tooling effect of Qwen3-32B >= +0.30 on all three sets (got +0.411, +0.652, +0.685)
+  held: tooling effect of GPT-6.1 Sol within +-0.05 (got -0.013, +0.004)
+
+## Compute and spend
+A800 GPU-hours (claimed GPUs x wall time, b29_out/gpu_ledger.txt): 14.65 (cap 60)
+  devB_v32                     gpus 1,2      0.073
+  devD_l17                     gpus 5        0.064
+  devA_r32                     gpus 0        0.105
+  devC_l32                     gpus 4        0.217
+  devB2_v32tp1                 gpus 1        0.232
+  G2_test2                     gpus 2        0.154
+  G2_nsr1                      gpus 2        0.146
+  G1_r8                        gpus 1        0.344
+  G2_nsr2                      gpus 2        0.145
+  R17_rel                      gpus 2        0.172
+  R32_rel                      gpus 4        1.24
+  L32_nsr1                     gpus 1        0.943
+  L32_nsr2                     gpus 0        0.885
+  L32_test2                    gpus 2        0.878
+  L8_nsr2                      gpus 4        0.327
+  L8_nsr1                      gpus 1        0.347
+  L8_test2                     gpus 6        0.366
+  R32_full1                    gpus 7        2.136
+  R32_full0                    gpus 5        2.335
+  R32_full1_orphan_engine      gpus 7        0.297
+  R32_full1r03                 gpus 4        0.757
+  R32_full1r02                 gpus 2        0.822
+  R32_full1r00                 gpus 0        0.829
+  R32_full1r01                 gpus 1        0.834
+Frontier (GPT-6.1 Sol via api_zheng): 9,504,155 prompt + 279,537 completion tokens = USD 21.80 at the list-price estimate of apps/real/api_reader.PRICE (2 / 10 per million); includes 1700 answered calls of stopped runs at the mean tokens per call of the metered runs
+Frontier (Claude Opus 5.5 via the user's endpoint): 10,501,373 prompt + 486,883 completion tokens = USD 60.99 (list price incl. cache writes, claude_api.PRICE)
+Frontier total: USD 82.79 (cap 150; dev pilots included where their meta files exist)
+
+## Execution record (deviations from the plan are compute-only unless stated)
+- Registration: prereg + code committed at 461160b before any test run; 638404b (before any test output was read)
+  caches the deterministic HRR codes in the assembler (same outputs; selftest 0 mismatches in 444 checks).
+- Gates were read before any new-arm output: G1 (8B replay) and G2 (1.7B re-run on all three log sets) passed.
+- A800 jobs ran through b29_run.sh (idle GPUs only, never GPU 3). Two sequential job chains (32B logs; 1.7B RULER +
+  8B logs) were replaced by independent jobs once GPUs freed up (no setting changed).
+- The 32B full read (vLLM, store arm): the second half of the prompts was stopped after 80,000 of 143,713 prompts
+  (a chunk boundary, 21:50:39Z) and its remaining 63,713 prompts were split over four GPUs (R32_full1r00-03); the
+  stopped job's vLLM engine process outlived its parent and held GPU 7 until 22:08:30Z (killed; 0.3 GPU-hours added to
+  the ledger by hand as R32_full1_orphan_engine). The assembler reads all six output files.
+- GPT-6.1 Sol through api_zheng: the gateway served about 0.9-1.3 calls per second in total, whatever the
+  concurrency. The location-set run (third in the registered order) was started early, then paused three times so
+  that the impact and window runs (first and second in the order) and the impact re-run finished first; its completed calls replay from the client's
+  prompt cache, so the restarted run asks only the remaining prompts.
+- GPT-6.1 Sol failed calls (gateway HTTP 429 "rate_limit_exceeded" after the client's retries; returned as no events):
+  impact run 1, 103 of 7,070 calls (1.46% > 0.5%): re-run once as registered (run 1 kept as b29_out/logs/run1_*;
+  the re-run replays every answered prompt from the cache and asks the rest with 16 workers instead of 40); window,
+  29 of 7,026 (0.41%): not re-run, sensitivity analysis without the logs those calls touched (above).
+- Exploratory, not registered: the GPT window set re-run with the 29 refused calls re-asked (tag gpt61low_wr; 44 new
+  calls, everything else replayed from the cache); reported in the Exploratory block above, not used for any bar.
+- Claude Opus 5.5: the window set was started by the registered rule (frontier total USD 35 < 90 when the impact
+  set finished).
+- Hand-reading: results/b29_handread.txt. Discordance listings: b29_out/ruler/discord_q32_vs_8b.txt,
+  b29_out/logs/discord_<set>_<reader>_vs_banked.txt.
+
+## Literature check (conclusion -> literature; 2026-11-18)
+Conclusion checked: with the tooling held fixed, a larger or frontier reader does not beat the small reader by a
+margin that matters on RULER (+0.42 points at 128k, at the ceiling), on location questions (-0.005 to +0.002) or on
+impact questions (-0.013 to +0.009); on window questions the larger readers are ahead (+0.013 to +0.035; an unregistered
+complete frontier run +0.054) and a gain of up to about 9 points cannot be excluded. Smaller or untrained readers do
+lose (Qwen3-1.7B prompted, -5.5 points on RULER at 128k; Qwen3-8B prompted, -0.056 and -0.043 on location and window
+questions against the fine-tuned 1.7B). The residual errors of every reader are reading errors, and on the logs larger
+readers trade error types rather than remove them.
+- SUPPORTS: Cai et al., "Large Language Models as Tool Makers" (ICLR 2024, arXiv 2305.17126): with a GPT-4-made tool,
+  GPT-3.5 Turbo as the tool user performs on par with GPT-4 in both roles on most of six tasks (GPT-4 with CoT still
+  higher on some). Same pattern: once the tool carries the hard part, the user's size matters little.
+- SUPPORTS (the tooling effect, not size given tooling): Schick et al., Toolformer (NeurIPS 2023, arXiv 2302.04761):
+  GPT-J 6.7B with tools beats GPT-3 175B on factual, math and temporal benchmarks (not on QA).
+- QUALIFIES / CONFLICTS: Olausson et al., LINC (EMNLP 2023, arXiv 2310.15164): with the same FOL prover, GPT-4 beats
+  StarCoder+ (15.5B) on ProofWriter (abstract: StarCoder+ + LINC is 10 points above GPT-4 CoT, GPT-4 + LINC 26 above
+  it): when the language model must translate whole problems into a formal language, size matters given the tool.
+  Toolformer's own scaling section: tool use "only emerges at around 775M parameters" and improves with size. Gao et
+  al., PAL (ICML 2023): with the same interpreter, weaker code models have lower absolute accuracy (relative gain over
+  CoT kept). Our case differs in what the model must do: copy short symbols chunk by chunk (RULER) or write one event
+  per message under a fixed schema (logs), which the prompted 8B (RULER) and the fine-tuned 1.7B (logs) already do
+  at or near the ceiling; below that the size (or training) effect returns, as in LINC and PAL.
+- NO PRECEDENT FOUND for a paired, same-pipeline comparison of reader size (1.7B fine-tuned / 8B / 32B / frontier)
+  with an exact external store, on long-context needle extraction or on multi-channel operational logs.
+Sources: arxiv.org/abs/2305.17126; arxiv.org/abs/2302.04761 (ar5iv, Section 4.4 scaling); arxiv.org/abs/2310.15164;
+arxiv.org/abs/2211.10435. ChatDB (Hu et al. 2023, arXiv 2306.03901, SQL databases as symbolic memory) compares ChatGPT
+with and without the database only: no reader-size comparison.

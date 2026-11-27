@@ -1,0 +1,82 @@
+# B64 checks (b64_check.py); prereg P10
+scorer: 1218 cell accuracies and region statistics recomputed by plain loops; max |difference| 4.86e-17 PASS
+bits: 383124 logged dev / test rows; over budget 0; max (bits - budget) 0.0 PASS
+disjoint qwen8    LA: 5621 locations; string overlap 0; normalised (accents, case) 1; raw cosine >= 0.9999 0; max raw cosine 0.9945
+disjoint qwen8    L : 2818 locations; string overlap 0; normalised (accents, case) 1; raw cosine >= 0.9999 0; max raw cosine 0.9901
+disjoint qwen8    A : 2803 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9945
+disjoint b46      LA: 5621 locations; string overlap 0; normalised (accents, case) 1; raw cosine >= 0.9999 0; max raw cosine 0.9986
+disjoint b46      L : 2818 locations; string overlap 0; normalised (accents, case) 1; raw cosine >= 0.9999 0; max raw cosine 0.9986
+disjoint b46      A : 2803 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9980
+disjoint llama    LA: 5621 locations; string overlap 0; normalised (accents, case) 1; raw cosine >= 0.9999 0; max raw cosine 0.9957
+disjoint llama    L : 2818 locations; string overlap 0; normalised (accents, case) 1; raw cosine >= 0.9999 0; max raw cosine 0.9957
+disjoint llama    A : 2803 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9943
+disjoint mistral  LA: 5621 locations; string overlap 0; normalised (accents, case) 1; raw cosine >= 0.9999 0; max raw cosine 0.9913
+disjoint mistral  L : 2818 locations; string overlap 0; normalised (accents, case) 1; raw cosine >= 0.9999 0; max raw cosine 0.9913
+disjoint mistral  A : 2803 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9880
+disjoint e5       LA: 5620 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9927
+disjoint e5       L : 2817 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9927
+disjoint e5       A : 2803 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9787
+disjoint bge      LA: 5620 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9835
+disjoint bge      L : 2817 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9835
+disjoint bge      A : 2803 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9729
+disjoint minilm   LA: 5620 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9763
+disjoint minilm   L : 2817 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9763
+disjoint minilm   A : 2803 locations; string overlap 0; normalised (accents, case) 0; raw cosine >= 0.9999 0; max raw cosine 0.9560
+disjoint: PASS (string overlap and cos >= 0.9999 must be 0; normalised-string matches are reported, not barred: a different string with a different code is not the stored name)
+rederive qwen8    M=  256 V=  2 b=  4 rep= 7 whiten/LA/2/bits/tern/1.0: agreement 1.0000; N log 714 own 714; bits log 985.0 own 985.0 (budget 1024)
+rederive qwen8    M=  256 V=  2 b= 16 rep= 7 whiten/LA/4/bits/tern/1.0: agreement 1.0000; N log 5043 own 5043; bits log 4093.6 own 4093.6 (budget 4096)
+rederive qwen8    M=  256 V= 16 b=  4 rep=15 center/A/2/onehot/tern/0.5: agreement 1.0000; N log 121 own 121; bits log 1007.6 own 1007.6 (budget 1024)
+rederive qwen8    M=  256 V= 16 b= 16 rep=15 whiten/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2818 own 2818; bits log 4052.2 own 4052.2 (budget 4096)
+rederive qwen8    M= 1024 V=  2 b=  4 rep= 0 whiten/L/2/bits/cnt/1.0: agreement 1.0000; N log 2088 own 2088; bits log 4093.6 own 4093.6 (budget 4096)
+rederive qwen8    M= 1024 V=  2 b= 16 rep= 0 whiten/LA/8/bits/cnt/1.0: agreement 1.0000; N log 5621 own 5621; bits log 12760.7 own 12760.7 (budget 16384)
+rederive qwen8    M= 1024 V= 16 b=  4 rep= 1 whiten/L/1/onehot/cnt/0.5: agreement 1.0000; N log 2818 own 2818; bits log 4054.1 own 4054.1 (budget 4096)
+rederive qwen8    M= 1024 V= 16 b= 16 rep= 1 whiten/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2818 own 2818; bits log 12140.5 own 12140.5 (budget 16384)
+rederive b46      M=  256 V=  2 b=  4 rep= 1 center/A/32/onehot/tern/1.0: agreement 1.0000; N log 1033 own 1033; bits log 948.9 own 948.9 (budget 1024)
+rederive b46      M=  256 V=  2 b= 16 rep= 1 whiten/L/4/onehot/cnt/1.0: agreement 1.0000; N log 2818 own 2818; bits log 4093.7 own 4093.7 (budget 4096)
+rederive b46      M=  256 V= 16 b=  4 rep=13 center/LA/2/onehot/tern/0.5: agreement 1.0000; N log 113 own 113; bits log 1014.5 own 1014.5 (budget 1024)
+rederive b46      M=  256 V= 16 b= 16 rep=13 whiten/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2818 own 2818; bits log 4053.4 own 4053.4 (budget 4096)
+rederive b46      M= 1024 V=  2 b=  4 rep= 3 whiten/LA/2/bits/tern/1.0: agreement 1.0000; N log 2930 own 2930; bits log 3981.6 own 3981.6 (budget 4096)
+rederive b46      M= 1024 V=  2 b= 16 rep= 3 whiten/LA/16/bits/cnt/1.0: agreement 1.0000; N log 5621 own 5621; bits log 15760.2 own 15760.2 (budget 16384)
+rederive b46      M= 1024 V= 16 b=  4 rep= 3 whiten/L/1/onehot/cnt/0.5: agreement 1.0000; N log 2818 own 2818; bits log 4054.4 own 4054.4 (budget 4096)
+rederive b46      M= 1024 V= 16 b= 16 rep= 3 whiten/LA/2/onehot/cnt/1.0: agreement 1.0000; N log 5621 own 5621; bits log 14164.8 own 14164.8 (budget 16384)
+rederive llama    M=  256 V=  2 b=  4 rep=13 whiten/A/4/bits/tern/1.0: agreement 1.0000; N log 627 own 627; bits log 988.3 own 988.3 (budget 1024)
+rederive llama    M=  256 V=  2 b= 16 rep=13 whiten/LA/4/bits/tern/1.0: agreement 1.0000; N log 4776 own 4776; bits log 4028.0 own 4028.0 (budget 4096)
+rederive llama    M=  256 V= 16 b=  4 rep=17 center/A/1/onehot/tern/1.0: agreement 1.0000; N log 121 own 121; bits log 1016.4 own 1016.4 (budget 1024)
+rederive llama    M=  256 V= 16 b= 16 rep=17 whiten/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2818 own 2818; bits log 4052.2 own 4052.2 (budget 4096)
+rederive llama    M= 1024 V=  2 b=  4 rep= 1 whiten/L/2/bits/cnt/1.0: agreement 1.0000; N log 1986 own 1986; bits log 4065.8 own 4065.8 (budget 4096)
+rederive llama    M= 1024 V=  2 b= 16 rep= 1 whiten/LA/4/onehot/cnt/1.0: agreement 1.0000; N log 5621 own 5621; bits log 12801.5 own 12801.5 (budget 16384)
+rederive llama    M= 1024 V= 16 b=  4 rep= 4 whiten/L/1/onehot/cnt/0.5: agreement 1.0000; N log 2818 own 2818; bits log 4054.4 own 4054.4 (budget 4096)
+rederive llama    M= 1024 V= 16 b= 16 rep= 4 whiten/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2818 own 2818; bits log 12145.9 own 12145.9 (budget 16384)
+rederive mistral  M=  256 V=  2 b=  4 rep= 9 whiten/LA/2/bits/tern/1.0: agreement 1.0000; N log 714 own 714; bits log 984.6 own 984.6 (budget 1024)
+rederive mistral  M=  256 V=  2 b= 16 rep= 9 whiten/LA/4/bits/tern/1.0: agreement 1.0000; N log 5043 own 5043; bits log 3993.5 own 3993.5 (budget 4096)
+rederive mistral  M=  256 V= 16 b=  4 rep= 1 whiten/L/1/onehot/tern/0.5: agreement 1.0000; N log 731 own 731; bits log 1021.4 own 1021.4 (budget 1024)
+rederive mistral  M=  256 V= 16 b= 16 rep= 1 whiten/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2818 own 2818; bits log 4052.2 own 4052.2 (budget 4096)
+rederive mistral  M= 1024 V=  2 b=  4 rep= 1 whiten/A/8/bits/tern/1.0: agreement 1.0000; N log 2537 own 2537; bits log 4008.3 own 4008.3 (budget 4096)
+rederive mistral  M= 1024 V=  2 b= 16 rep= 1 whiten/LA/8/bits/cnt/1.0: agreement 1.0000; N log 5621 own 5621; bits log 12569.1 own 12569.1 (budget 16384)
+rederive mistral  M= 1024 V= 16 b=  4 rep= 2 whiten/L/1/onehot/cnt/0.5: agreement 1.0000; N log 2818 own 2818; bits log 4054.4 own 4054.4 (budget 4096)
+rederive mistral  M= 1024 V= 16 b= 16 rep= 2 whiten/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2818 own 2818; bits log 12147.2 own 12147.2 (budget 16384)
+rederive e5       M=  256 V=  2 b=  4 rep=17 whiten/L/8/bits/tern/1.0: agreement 1.0000; N log 662 own 662; bits log 1017.0 own 1017.0 (budget 1024)
+rederive e5       M=  256 V=  2 b= 16 rep=17 whiten/LA/8/bits/tern/1.0: agreement 1.0000; N log 2774 own 2774; bits log 3938.8 own 3938.8 (budget 4096)
+rederive e5       M=  256 V= 16 b=  4 rep=14 center/L/1/onehot/cnt/1.0: agreement 1.0000; N log 85 own 85; bits log 1016.4 own 1016.4 (budget 1024)
+rederive e5       M=  256 V= 16 b= 16 rep=14 center/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2817 own 2817; bits log 4054.2 own 4054.2 (budget 4096)
+rederive e5       M= 1024 V=  2 b=  4 rep= 0 whiten/LA/16/bits/tern/1.0: agreement 1.0000; N log 2628 own 2628; bits log 3895.0 own 3895.0 (budget 4096)
+rederive e5       M= 1024 V=  2 b= 16 rep= 0 whiten/LA/8/onehot/tern/1.0: agreement 1.0000; N log 5620 own 5620; bits log 11216.6 own 11216.6 (budget 16384)
+rederive e5       M= 1024 V= 16 b=  4 rep= 0 center/A/1/onehot/tern/1.0: agreement 1.0000; N log 513 own 513; bits log 4095.6 own 4095.6 (budget 4096)
+rederive e5       M= 1024 V= 16 b= 16 rep= 0 center/L/2/onehot/tern/1.0: agreement 1.0000; N log 2817 own 2817; bits log 11777.3 own 11777.3 (budget 16384)
+rederive bge      M=  256 V=  2 b=  4 rep= 1 whiten/L/64/onehot/tern/1.0: agreement 1.0000; N log 2194 own 2194; bits log 885.7 own 885.7 (budget 1024)
+rederive bge      M=  256 V=  2 b= 16 rep= 1 whiten/LA/4/bits/tern/1.0: agreement 1.0000; N log 5042 own 5042; bits log 4084.2 own 4084.2 (budget 4096)
+rederive bge      M=  256 V= 16 b=  4 rep= 2 whiten/L/1/onehot/cnt/0.5: agreement 1.0000; N log 731 own 731; bits log 1021.4 own 1021.4 (budget 1024)
+rederive bge      M=  256 V= 16 b= 16 rep= 2 whiten/L/2/onehot/cnt/1.0: agreement 1.0000; N log 2817 own 2817; bits log 4049.9 own 4049.9 (budget 4096)
+rederive bge      M= 1024 V=  2 b=  4 rep= 1 whiten/L/8/onehot/tern/1.0: agreement 1.0000; N log 2549 own 2549; bits log 3954.1 own 3954.1 (budget 4096)
+rederive bge      M= 1024 V=  2 b= 16 rep= 1 whiten/LA/32/bits/clip3/1.0: agreement 1.0000; N log 5620 own 5620; bits log 15526.8 own 15526.2 (budget 16384)
+rederive bge      M= 1024 V= 16 b=  4 rep= 0 whiten/L/1/onehot/cnt/0.5: agreement 1.0000; N log 2817 own 2817; bits log 4053.6 own 4053.6 (budget 4096)
+rederive bge      M= 1024 V= 16 b= 16 rep= 0 whiten/L/4/onehot/tern/1.0: agreement 1.0000; N log 1797 own 1797; bits log 16086.9 own 16086.9 (budget 16384)
+rederive minilm   M=  256 V=  2 b=  4 rep= 7 whiten/LA/4/bits/tern/1.0: agreement 1.0000; N log 640 own 640; bits log 1013.3 own 1013.3 (budget 1024)
+rederive minilm   M=  256 V=  2 b= 16 rep= 7 whiten/L/4/onehot/cnt/1.0: agreement 1.0000; N log 2680 own 2680; bits log 4039.4 own 4039.4 (budget 4096)
+rederive minilm   M=  256 V= 16 b=  4 rep= 2 whiten/L/1/onehot/tern/0.5: agreement 1.0000; N log 731 own 731; bits log 1021.4 own 1021.4 (budget 1024)
+rederive minilm   M=  256 V= 16 b= 16 rep= 2 whiten/L/2/onehot/tern/1.0: agreement 1.0000; N log 2817 own 2817; bits log 4013.7 own 4013.7 (budget 4096)
+rederive minilm   M= 1024 V=  2 b=  4 rep= 0 whiten/LA/4/bits/tern/1.0: agreement 1.0000; N log 2489 own 2489; bits log 3907.6 own 3907.6 (budget 4096)
+rederive minilm   M= 1024 V=  2 b= 16 rep= 0 whiten/LA/8/onehot/tern/1.0: agreement 1.0000; N log 5620 own 5620; bits log 11223.4 own 11223.4 (budget 16384)
+rederive minilm   M= 1024 V= 16 b=  4 rep= 0 whiten/A/2/onehot/tern/0.5: agreement 1.0000; N log 465 own 465; bits log 4084.5 own 4084.5 (budget 4096)
+rederive minilm   M= 1024 V= 16 b= 16 rep= 0 whiten/L/4/onehot/tern/1.0: agreement 1.0000; N log 1797 own 1797; bits log 16163.2 own 16163.2 (budget 16384)
+rederive: 56 (encoder, M, V, budget) test stores re-derived in float64 by independent code; min agreement 1.0000; N identical 56/56; bits identical (0.1 printed precision) 55/56; own bits within budget 56/56 PASS

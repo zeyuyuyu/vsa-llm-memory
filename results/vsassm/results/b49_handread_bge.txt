@@ -1,0 +1,54 @@
+# B49 hand reading, bge: R1 cells with the largest and the smallest VSA - BEST (ideal)
+
+## cell M=256 V=16 bpf=8: VSA 29.9, BEST LHI 25.7, diff +4.20, EXACT 74.1
+  only VSA right: 909 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Ernst Gerhardt Timme'                   | 'Ernst Timme'                            | 'Ernst Timme'                            | +0.867 | True
+    'Pietro Bonaparte'                       | 'Pierre Napoleon Bonaparte'              | 'Pierre Napoleon Bonaparte'              | +0.668 | True
+    'Himachal'                               | 'Himachal Pradesh'                       | 'Himachal Pradesh'                       | +0.875 | True
+    'Hieronymus Francken'                    | 'Hieronymous Francken I'                 | 'Hieronymous Francken I'                 | +0.768 | True
+    'Naked Island'                           | 'The Naked Island'                       | 'The Naked Island'                       | +0.934 | True
+    'Jalāladdīn Rūmī'                        | 'Rumi'                                   | 'Rumi'                                   | +0.638 | True
+    'Republic of Argentina'                  | 'Argentina'                              | 'Argentina'                              | +0.802 | True
+    'George, the younger Dance'              | 'George Dance the Younger'               | 'George Dance the Younger'               | +0.961 | True
+    'World'                                  | 'The World'                              | 'The World'                              | +0.783 | True
+    'Dschalaluddin Rumi'                     | 'Rumi'                                   | 'Rumi'                                   | +0.575 | True
+    mean centred cosine over all 909: +0.687; EXACT right in 0.91
+  only BEST right: 711 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Alejandro Fernández Abarca'             | 'Alejandro Fernández'                    | 'Alejandro Fernández'                    | +0.715 | True
+    'Michelle Renaud'                        | 'Michelle Renaudddd'                     | 'Michelle Renaudddd'                     | +0.854 | True
+    'Final Test'                             | 'The Final Test'                         | 'The Final Test'                         | +0.910 | True
+    'Dêmêtêr'                                | 'Demeter'                                | 'Demeter'                                | +1.000 | True
+    'H. Franck'                              | 'Hieronymous Francken I'                 | 'Hieronymous Francken I'                 | +0.418 | True
+    'Palmes de M. Schutz'                    | 'Les Palmes de M. Schutz'                | 'Les Palmes de M. Schutz'                | +0.923 | True
+    'Wildcats'                               | 'Linfield University'                    | 'KK'                                     | +0.215 | False
+    'Karl Thomas Mozart'                     | 'Karl Mozart'                            | 'Karl Mozart'                            | +0.820 | True
+    'Trace Dempsey Cyrus'                    | 'Trace Cyrus'                            | 'Trace Cyrus'                            | +0.759 | True
+    'Un prophète'                            | 'A Prophet'                              | 'A Prophet'                              | +0.616 | True
+    mean centred cosine over all 711: +0.658; EXACT right in 0.88
+
+## cell M=1024 V=16 bpf=16: VSA 26.7, BEST LHI 38.8, diff -12.08, EXACT 67.5
+  only VSA right: 490 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Un monstre à Paris'                     | 'A Monster in Paris'                     | 'A Monster in Paris'                     | +0.554 | True
+    'Region Dublin'                          | 'County Dublin'                          | 'County Dublin'                          | +0.708 | True
+    'Clemente Palma y Ramirez'               | 'Clemente Palma'                         | 'Clemente Palma'                         | +0.811 | True
+    'Viscount Brome'                         | 'Charles Cornwallis, 1st Marquess Cornwallis' | 'Adolphe-Théodore Brongniart'            | +0.309 | False
+    'AK'                                     | 'Alaska'                                 | 'Alaska'                                 | +0.594 | True
+    'bg'                                     | 'Bulgaria'                               | 'B. Monkey'                              | +0.088 | False
+    'Patrick Joseph Thomas Sheridan'         | 'Patrick Sheridan'                       | 'Patrick Sheridan'                       | +0.796 | True
+    'Tranmere Rovers Football Club'          | 'Tranmere Rovers F.C.'                   | 'Tranmere Rovers F.C.'                   | +0.911 | True
+    'Preston, Victoria'                      | 'Preston'                                | 'Preston'                                | +0.776 | True
+    'R.A. Bird'                              | 'Edward Bird'                            | 'C.R.A.Z.Y.'                             | +0.345 | False
+    mean centred cosine over all 490: +0.565; EXACT right in 0.77
+  only BEST right: 1016 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Donald Harcourt De Lue'                 | 'Donald De Lue'                          | 'Donald De Lue'                          | +0.783 | True
+    'Republic of Haiti'                      | 'Haiti'                                  | 'Haiti'                                  | +0.771 | True
+    'Aston Villa'                            | 'Aston Villa F.C.'                       | 'Aston Villa F.C.'                       | +0.875 | True
+    'Rowboat Romance'                        | 'A Rowboat Romance'                      | 'A Rowboat Romance'                      | +0.951 | True
+    'Zablati'                                | 'Záblatí'                                | 'Záblatí'                                | +1.000 | True
+    'Cote Ivoire'                            | 'Ivory Coast'                            | 'Ivory Coast'                            | +0.768 | True
+    'Resurrection of Broncho Billy'          | 'The Resurrection of Broncho Billy'      | 'The Resurrection of Broncho Billy'      | +0.977 | True
+    'Al Kuwait'                              | 'Kuwait City'                            | 'Kuwait'                                 | +0.678 | False
+    'Gwen Lucy Ffrangcon-Davies'             | 'Gwen Ffrangcon-Davies'                  | 'Gwen Ffrangcon-Davies'                  | +0.862 | True
+    'Little Piece of Heaven'                 | 'A Little Piece of Heaven'               | 'A Little Piece of Heaven'               | +0.952 | True
+    mean centred cosine over all 1016: +0.743; EXACT right in 0.90
+

@@ -1,0 +1,74 @@
+{
+ "args": {
+  "cmd": "train",
+  "task": "R",
+  "arm": "e2e_tab",
+  "split": "dev",
+  "layers": "17",
+  "layer": 17,
+  "subset": 0,
+  "bs": 16,
+  "epochs": 100,
+  "eval_every": 500,
+  "lr": 0.001,
+  "seed": 0,
+  "steps": 3000,
+  "rank": 6,
+  "reader": "",
+  "ckpt": "",
+  "out": "out/dev/R_e2e_tab_lr1e-3_s0",
+  "pred": "",
+  "noise": 0.0,
+  "noise_seed": 12345,
+  "soft_beta": 0.0,
+  "dec_init": "recon",
+  "recon_epochs": 100,
+  "limit": 0,
+  "max_new": 6,
+  "cot_max_new": 512,
+  "cot_bs": 48,
+  "shuffle_facts": 0,
+  "dev_split": "dev",
+  "dev_subset": 0,
+  "dev_limit": 0
+ },
+ "trainable_params": 524352,
+ "hist": [
+  {
+   "step": 0,
+   "dev": 0.895
+  },
+  {
+   "step": 500,
+   "dev": 0.96,
+   "loss": 0.2849712073802948
+  },
+  {
+   "step": 1000,
+   "dev": 0.99,
+   "loss": 0.00041364433127455413
+  },
+  {
+   "step": 1500,
+   "dev": 0.99,
+   "loss": 0.0012337961234152317
+  },
+  {
+   "step": 2000,
+   "dev": 0.995,
+   "loss": 0.043861132115125656
+  },
+  {
+   "step": 2500,
+   "dev": 0.98,
+   "loss": 0.00013926232350058854
+  },
+  {
+   "step": 3000,
+   "dev": 0.995,
+   "loss": 0.3287433087825775
+  }
+ ],
+ "best_dev": 0.995,
+ "best_step": 2000
+}

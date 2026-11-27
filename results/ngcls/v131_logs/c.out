@@ -1,0 +1,17 @@
+===== V-131 Part C: MuSiQue with a 32k reader, nothing truncated =====
+  rows 212 (banked 212) | hop dist {2: 181, 3: 5, 4: 26} | coverage 1.0000
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 126.71it/s]
+  reader Qwen/Qwen3-8B on cuda:0, window 31000
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  single_pass  seed 42  EM covered=0.2877  trunc=0.000  mean prompt tokens=2183  (2.9 min)
+  single_pass  seed 123  EM covered=0.2877  trunc=0.000  mean prompt tokens=2183  (2.5 min)
+  single_pass  seed 456  EM covered=0.2877  trunc=0.000  mean prompt tokens=2183  (2.5 min)
+  prompt_sup   seed 42  EM covered=0.5283  trunc=0.000  mean prompt tokens=310  (1.9 min)
+  prompt_sup   seed 123  EM covered=0.5283  trunc=0.000  mean prompt tokens=310  (1.9 min)
+  prompt_sup   seed 456  EM covered=0.5283  trunc=0.000  mean prompt tokens=310  (1.9 min)
+  prompt_ev_p150 seed 42  EM covered=0.5943  trunc=0.000  gold_kept=1.000  tokens=2029  (2.5 min)
+  prompt_ev_p150 seed 123  EM covered=0.5660  trunc=0.000  gold_kept=1.000  tokens=2024  (2.5 min)
+  prompt_ev_p150 seed 456  EM covered=0.5755  trunc=0.000  gold_kept=1.000  tokens=2029  (2.5 min)
+V131C-DONE
+V131C-WRAPPER-EXIT 0

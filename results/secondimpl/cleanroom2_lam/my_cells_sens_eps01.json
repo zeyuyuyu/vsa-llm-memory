@@ -1,0 +1,284 @@
+{
+ "qwen8": {
+  "cells": {
+   "qwen8|ideal|256|2|4": {
+    "STORE": 70.01132502831257,
+    "LAMC": 69.49037372593432,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "centred|random|1|1|percol|1.0",
+    "store_dev": 71.6991057338243,
+    "lamc_dev": 74.96054708048396,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4415
+   },
+   "qwen8|ideal|256|2|8": {
+    "STORE": 73.34088335220838,
+    "LAMC": 79.00339750849378,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|1|percol|1.0",
+    "store_dev": 75.43398211467648,
+    "lamc_dev": 80.22093634928984,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4415
+   },
+   "qwen8|ideal|256|2|16": {
+    "STORE": 78.16534541336354,
+    "LAMC": 80.97395243488108,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "centred|principal|1|1|percol|1.0",
+    "store_dev": 78.53761178327196,
+    "lamc_dev": 83.21935823250921,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4415
+   },
+   "qwen8|ideal|256|16|4": {
+    "STORE": 18.603687590636007,
+    "LAMC": 22.70561425315931,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|1.0",
+    "store_dev": 20.637785800240675,
+    "lamc_dev": 31.167268351383875,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4827
+   },
+   "qwen8|ideal|256|16|8": {
+    "STORE": 27.01470892894137,
+    "LAMC": 34.16200538636834,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|1.0",
+    "store_dev": 28.15884476534296,
+    "lamc_dev": 37.30445246690734,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4827
+   },
+   "qwen8|ideal|256|16|16": {
+    "STORE": 36.565154340169876,
+    "LAMC": 44.976175678475244,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|1.0",
+    "store_dev": 38.26714801444043,
+    "lamc_dev": 46.45006016847172,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4827
+   },
+   "qwen8|ideal|1024|2|4": {
+    "STORE": 67.92009400705052,
+    "LAMC": 69.47121034077556,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|1|percol|10.0",
+    "store_dev": 67.9245283018868,
+    "lamc_dev": 72.16981132075472,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4255
+   },
+   "qwen8|ideal|1024|2|8": {
+    "STORE": 69.42420681551117,
+    "LAMC": 72.22091656874265,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|2|1|percol|1.0",
+    "store_dev": 71.31485849056604,
+    "lamc_dev": 76.35613207547169,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4255
+   },
+   "qwen8|ideal|1024|2|16": {
+    "STORE": 70.8813160987074,
+    "LAMC": 73.01997649823737,
+    "store_cfg": "white|lin|2|1.0",
+    "lamc_cfg": "white|principal|4|1|percol|1.0",
+    "store_dev": 72.22877358490567,
+    "lamc_dev": 77.21108490566037,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4255
+   },
+   "qwen8|ideal|1024|16|4": {
+    "STORE": 18.945672191528544,
+    "LAMC": 21.4548802946593,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|percol|1.0",
+    "store_dev": 19.5141065830721,
+    "lamc_dev": 22.648902821316614,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4344
+   },
+   "qwen8|ideal|1024|16|8": {
+    "STORE": 27.048802946593003,
+    "LAMC": 30.248618784530386,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|1.0",
+    "store_dev": 26.33228840125392,
+    "lamc_dev": 31.08672936259143,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4344
+   },
+   "qwen8|ideal|1024|16|16": {
+    "STORE": 35.54327808471455,
+    "LAMC": 40.05524861878453,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|percol|1.0",
+    "store_dev": 34.29989550679206,
+    "lamc_dev": 43.83490073145246,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4344
+   }
+  },
+  "region_store_minus_lamc": {
+   "V2": -2.4061093936518625,
+   "V16": -4.98020648889896,
+   "R1": -3.693157941275412
+  }
+ },
+ "e5": {
+  "cells": {
+   "e5|ideal|256|2|4": {
+    "STORE": 58.7995469988675,
+    "LAMC": 74.2242355605889,
+    "store_cfg": "white|sign|1|0.5",
+    "lamc_cfg": "white|principal|2|1|percol|1.0",
+    "store_dev": 70.85744345081537,
+    "lamc_dev": 74.43450815360336,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4415
+   },
+   "e5|ideal|256|2|8": {
+    "STORE": 69.76217440543601,
+    "LAMC": 72.61608154020385,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|4|1|percol|10.0",
+    "store_dev": 73.43503419253025,
+    "lamc_dev": 75.1709626512362,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4415
+   },
+   "e5|ideal|256|2|16": {
+    "STORE": 70.39637599093997,
+    "LAMC": 71.48357870894677,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|random|1|1|percol|100.0",
+    "store_dev": 74.11888479747502,
+    "lamc_dev": 75.48658600736455,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4415
+   },
+   "e5|ideal|256|16|4": {
+    "STORE": 20.73751812720116,
+    "LAMC": 30.10151232649679,
+    "store_cfg": "centred|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|10.0",
+    "store_dev": 21.299638989169676,
+    "lamc_dev": 30.685920577617328,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4827
+   },
+   "e5|ideal|256|16|8": {
+    "STORE": 26.993992127615495,
+    "LAMC": 43.7538844002486,
+    "store_cfg": "centred|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|10.0",
+    "store_dev": 29.783393501805055,
+    "lamc_dev": 45.96871239470517,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4827
+   },
+   "e5|ideal|256|16|16": {
+    "STORE": 37.80816241972239,
+    "LAMC": 51.83343691733996,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|10.0",
+    "store_dev": 39.711191335740075,
+    "lamc_dev": 54.09145607701564,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4827
+   },
+   "e5|ideal|1024|2|4": {
+    "STORE": 62.09165687426557,
+    "LAMC": 63.948296122209165,
+    "store_cfg": "white|sign|1|1.0",
+    "lamc_cfg": "white|principal|2|1|percol|1.0",
+    "store_dev": 63.178066037735846,
+    "lamc_dev": 67.01061320754717,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4255
+   },
+   "e5|ideal|1024|2|8": {
+    "STORE": 63.52526439482961,
+    "LAMC": 63.948296122209165,
+    "store_cfg": "white|sign|2|1.0",
+    "lamc_cfg": "white|principal|2|1|percol|1.0",
+    "store_dev": 62.35259433962264,
+    "lamc_dev": 67.01061320754717,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4255
+   },
+   "e5|ideal|1024|2|16": {
+    "STORE": 63.572267920094006,
+    "LAMC": 63.948296122209165,
+    "store_cfg": "white|sign|1|1.0",
+    "lamc_cfg": "white|principal|2|1|percol|1.0",
+    "store_dev": 63.325471698113205,
+    "lamc_dev": 67.01061320754717,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4255
+   },
+   "e5|ideal|1024|16|4": {
+    "STORE": 19.68232044198895,
+    "LAMC": 27.18692449355433,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|10.0",
+    "store_dev": 16.901776384535005,
+    "lamc_dev": 22.152560083594565,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4344
+   },
+   "e5|ideal|1024|16|8": {
+    "STORE": 24.97697974217311,
+    "LAMC": 33.93186003683241,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|1|16|shared|1.0",
+    "store_dev": 22.230929989550678,
+    "lamc_dev": 28.970741901776385,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4344
+   },
+   "e5|ideal|1024|16|16": {
+    "STORE": 30.064456721915285,
+    "LAMC": 39.87108655616943,
+    "store_cfg": "white|lin|1|1.0",
+    "lamc_cfg": "white|principal|2|16|shared|1.0",
+    "store_dev": 26.802507836990596,
+    "lamc_dev": 36.57262277951933,
+    "n_store_cfgs": 72,
+    "n_lamc_cfgs": 288,
+    "n_test_queries": 4344
+   }
+  },
+  "region_store_minus_lamc": {
+   "V2": -3.6702495986557224,
+   "V16": -11.06921252500419,
+   "R1": -7.369731061829955
+  }
+ }
+}

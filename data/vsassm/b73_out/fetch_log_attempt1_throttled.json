@@ -1,0 +1,182 @@
+[
+ {
+  "class": "human",
+  "qid": "Q5",
+  "sample": 40000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:08+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 403: 'Too Many Reqs (1862a4b)'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q5 . bd:serviceParam bd:sample.limit 40000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "human",
+  "qid": "Q5",
+  "sample": 20000,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:09+0800",
+  "sec": 0.7,
+  "error": "<HTTPError 403: 'Too Many Reqs (1862a4b)'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q5 . bd:serviceParam bd:sample.limit 20000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "film",
+  "qid": "Q11424",
+  "sample": 25000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:09+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 403: 'Too Many Reqs (1862a4b)'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q11424 . bd:serviceParam bd:sample.limit 25000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "film",
+  "qid": "Q11424",
+  "sample": 12500,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:10+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 403: 'Too Many Reqs (1862a4b)'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q11424 . bd:serviceParam bd:sample.limit 12500 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "literary_work",
+  "qid": "Q7725634",
+  "sample": 40000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:11+0800",
+  "sec": 0.7,
+  "error": "<HTTPError 403: 'Too Many Reqs (1862a4b)'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q7725634 . bd:serviceParam bd:sample.limit 40000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "literary_work",
+  "qid": "Q7725634",
+  "sample": 20000,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:12+0800",
+  "sec": 0.7,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q7725634 . bd:serviceParam bd:sample.limit 20000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "album",
+  "qid": "Q482994",
+  "sample": 30000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:12+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q482994 . bd:serviceParam bd:sample.limit 30000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "album",
+  "qid": "Q482994",
+  "sample": 15000,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:13+0800",
+  "sec": 0.7,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q482994 . bd:serviceParam bd:sample.limit 15000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "tv_series",
+  "qid": "Q5398426",
+  "sample": 15000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:14+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q5398426 . bd:serviceParam bd:sample.limit 15000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "tv_series",
+  "qid": "Q5398426",
+  "sample": 7500,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:15+0800",
+  "sec": 0.7,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q5398426 . bd:serviceParam bd:sample.limit 7500 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "single",
+  "qid": "Q134556",
+  "sample": 15000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:16+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q134556 . bd:serviceParam bd:sample.limit 15000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "single",
+  "qid": "Q134556",
+  "sample": 7500,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:16+0800",
+  "sec": 0.8,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q134556 . bd:serviceParam bd:sample.limit 7500 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "city",
+  "qid": "Q515",
+  "sample": 15000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:17+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q515 . bd:serviceParam bd:sample.limit 15000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "city",
+  "qid": "Q515",
+  "sample": 7500,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:18+0800",
+  "sec": 0.7,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q515 . bd:serviceParam bd:sample.limit 7500 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "football_club",
+  "qid": "Q476028",
+  "sample": 20000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:19+0800",
+  "sec": 0.8,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q476028 . bd:serviceParam bd:sample.limit 20000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "football_club",
+  "qid": "Q476028",
+  "sample": 10000,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:20+0800",
+  "sec": 0.7,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q476028 . bd:serviceParam bd:sample.limit 10000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "business",
+  "qid": "Q4830453",
+  "sample": 30000,
+  "attempt": 0,
+  "start": "2026-11-23T20:22:20+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q4830453 . bd:serviceParam bd:sample.limit 30000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ },
+ {
+  "class": "business",
+  "qid": "Q4830453",
+  "sample": 15000,
+  "attempt": 1,
+  "start": "2026-11-23T20:22:21+0800",
+  "sec": 0.9,
+  "error": "<HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>",
+  "query": "SELECT ?item ?label ?alias WHERE {\n  SERVICE bd:sample { ?item wdt:P31 wd:Q4830453 . bd:serviceParam bd:sample.limit 15000 . bd:serviceParam bd:sample.sampleType \"RANDOM\" . }\n  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .\n  ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\")\n  ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\")\n}"
+ }
+]

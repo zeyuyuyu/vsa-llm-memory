@@ -1,0 +1,66 @@
+{
+ "_about": "Worked two-hop retrieval drawn in main Fig. 1b. An ILLUSTRATION computed from the algebra by make_figures.py (numpy), not an experiment: no language model is involved and the codebook rows are given exactly.",
+ "source": "conventions of the arena code: /path/to/HOME/v13.py (unit: rows of a Gaussian matrix normalized to unit length; bind = circular convolution irfft(rfft(a) * rfft(b)); unbind = irfft(rfft(ab) * conj(rfft(a))), i.e. binding with the approximate inverse) and /path/to/HOME/v37b.py (mem1 = sum bind(code(holder), code(object)); mem2 = sum bind(code(location), code(person)); the unbound vector is normalized and cleaned up by cosine against the candidate rows between the hops). Vocabulary: bAbI names. Seed and story chosen for the illustration.",
+ "seed": 0,
+ "rng": "numpy.random.RandomState(seed).standard_normal((n_symbols, d)), rows normalized; symbols in the order objects, persons, locations",
+ "d": 2048,
+ "objects": [
+  "football",
+  "apple",
+  "milk",
+  "book",
+  "keys",
+  "lamp"
+ ],
+ "persons": [
+  "Mary",
+  "John",
+  "Daniel",
+  "Sandra",
+  "Bill",
+  "Fred"
+ ],
+ "locations": [
+  "hallway",
+  "kitchen",
+  "garden",
+  "office",
+  "bedroom",
+  "park"
+ ],
+ "story": [
+  [
+   "Mary",
+   "football",
+   "hallway"
+  ],
+  [
+   "John",
+   "apple",
+   "kitchen"
+  ],
+  [
+   "Daniel",
+   "milk",
+   "garden"
+  ],
+  [
+   "Sandra",
+   "book",
+   "office"
+  ],
+  [
+   "Bill",
+   "keys",
+   "bedroom"
+  ],
+  [
+   "Fred",
+   "lamp",
+   "park"
+  ]
+ ],
+ "story_template": "{person} took the {object}. {person} went to the {location}.",
+ "question": "Where is the football?",
+ "query_object": "football"
+}

@@ -1,0 +1,10 @@
+===== V-131: the three softest points, measured (prereg 6a2a52d) =====
+
+>>> P0 validity gate (Part A reproduces V-65 within +-0.01)
+      prompt     [0.24, 0.24, 0.24] vs banked [0.2533, 0.2533, 0.2533] : False
+      prompt_ev  [0.95, 0.95, 0.95] vs banked [0.95, 0.95, 0.95] : True
+      hrr_gold   [0.97, 0.9767, 0.9767] vs banked [0.97, 0.9767, 0.9767] : True
+      per-row dumps complete (300 rows, every arm x seed): True
+
+      GATE FAILS. Per the prereg NOTHING IS READ from any part.
+V131-SCORE-DONE

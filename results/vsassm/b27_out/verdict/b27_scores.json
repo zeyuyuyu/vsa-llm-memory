@@ -1,0 +1,1590 @@
+{
+ "lf": {
+  "A_orth": {
+   "primary": false,
+   "mean": 0.5753333333333334,
+   "ci": [
+    0.5483333333333333,
+    0.602
+   ],
+   "recovery": 0.1639209225700165,
+   "verdict": "FAIL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 10,
+     "dev": 0.606,
+     "test": 0.562,
+     "k": 562,
+     "n": 1000,
+     "wilson": [
+      0.5310695678304088,
+      0.5924558967448789
+     ],
+     "pos_rate": 0.134,
+     "final_test": 0.562,
+     "best_test": 0.577,
+     "train_at_epoch": 0.9465,
+     "train_max": 0.9465,
+     "train_final": 0.9465,
+     "geom": {
+      "different": 0.11340467631816864,
+      "same": 0.5716679704996447,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.11340467631816864,
+      "same": 0.5716679704996447,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 8,
+     "dev": 0.598,
+     "test": 0.571,
+     "k": 571,
+     "n": 1000,
+     "wilson": [
+      0.540109552848234,
+      0.6013470275524984
+     ],
+     "pos_rate": 0.119,
+     "final_test": 0.567,
+     "best_test": 0.571,
+     "train_at_epoch": 0.928,
+     "train_max": 0.9445,
+     "train_final": 0.9445,
+     "geom": {
+      "different": 0.09879686683416367,
+      "same": 0.5776855270843952,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.09769400209188461,
+      "same": 0.5685038220447799,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 10,
+     "dev": 0.618,
+     "test": 0.593,
+     "k": 593,
+     "n": 1000,
+     "wilson": [
+      0.562250802021724,
+      0.6230373948412075
+     ],
+     "pos_rate": 0.153,
+     "final_test": 0.593,
+     "best_test": 0.594,
+     "train_at_epoch": 0.9535,
+     "train_max": 0.9535,
+     "train_final": 0.9535,
+     "geom": {
+      "different": 0.09190139919519424,
+      "same": 0.5655162621289491,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.09190139919519424,
+      "same": 0.5655162621289491,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "A",
+    "mode": "final",
+    "reg": "orth",
+    "lam": 100.0,
+    "tau": 0.1,
+    "qc": "index",
+    "lr": 0.001,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "A_vic": {
+   "primary": false,
+   "mean": 0.5033333333333334,
+   "ci": [
+    0.4816666666666667,
+    0.5243333333333333
+   ],
+   "recovery": -0.014003294892915807,
+   "verdict": "FAIL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 7,
+     "dev": 0.556,
+     "test": 0.498,
+     "k": 498,
+     "n": 1000,
+     "wilson": [
+      0.4670769344782838,
+      0.5289383731160618
+     ],
+     "pos_rate": 0.31,
+     "final_test": 0.488,
+     "best_test": 0.521,
+     "train_at_epoch": 0.866,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.9427534341812134,
+      "same": 0.927385675907135,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.9364663362503052,
+      "same": 0.9027555548896392,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 5,
+     "dev": 0.552,
+     "test": 0.517,
+     "k": 517,
+     "n": 1000,
+     "wilson": [
+      0.48602179171422133,
+      0.5478480937338415
+     ],
+     "pos_rate": 0.491,
+     "final_test": 0.504,
+     "best_test": 0.517,
+     "train_at_epoch": 0.8545,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.9657657146453857,
+      "same": 0.957468805462122,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.933051347732544,
+      "same": 0.8993109438568354,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 8,
+     "dev": 0.556,
+     "test": 0.495,
+     "k": 495,
+     "n": 1000,
+     "wilson": [
+      0.46408970934046934,
+      0.5259485596453947
+     ],
+     "pos_rate": 0.441,
+     "final_test": 0.49,
+     "best_test": 0.501,
+     "train_at_epoch": 0.9365,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.9354522228240967,
+      "same": 0.9159277535974979,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.9352368712425232,
+      "same": 0.9020563989877701,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "A",
+    "mode": "final",
+    "reg": "vic",
+    "lam": 0.1,
+    "tau": 0.1,
+    "qc": "index",
+    "lr": 0.001,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "A_nce": {
+   "primary": true,
+   "mean": 0.7633333333333333,
+   "ci": [
+    0.7413333333333333,
+    0.785
+   ],
+   "recovery": 0.6285008237232288,
+   "verdict": "PARTIAL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 10,
+     "dev": 0.814,
+     "test": 0.777,
+     "k": 777,
+     "n": 1000,
+     "wilson": [
+      0.7501675946610772,
+      0.8017123035220625
+     ],
+     "pos_rate": 0.311,
+     "final_test": 0.777,
+     "best_test": 0.777,
+     "train_at_epoch": 0.9475,
+     "train_max": 0.9475,
+     "train_final": 0.9475,
+     "geom": {
+      "different": 0.10142155736684799,
+      "same": 0.7166673546036084,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.10142155736684799,
+      "same": 0.7166673546036084,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 9,
+     "dev": 0.786,
+     "test": 0.744,
+     "k": 744,
+     "n": 1000,
+     "wilson": [
+      0.7160521973177114,
+      0.7700802761721302
+     ],
+     "pos_rate": 0.288,
+     "final_test": 0.766,
+     "best_test": 0.766,
+     "train_at_epoch": 0.9265,
+     "train_max": 0.932,
+     "train_final": 0.932,
+     "geom": {
+      "different": 0.07924819737672806,
+      "same": 0.7229633661607902,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.10337743163108826,
+      "same": 0.7194434163471063,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 10,
+     "dev": 0.788,
+     "test": 0.769,
+     "k": 769,
+     "n": 1000,
+     "wilson": [
+      0.7418771517803808,
+      0.7940639767801412
+     ],
+     "pos_rate": 0.311,
+     "final_test": 0.769,
+     "best_test": 0.769,
+     "train_at_epoch": 0.9415,
+     "train_max": 0.9415,
+     "train_final": 0.9415,
+     "geom": {
+      "different": 0.10271275788545609,
+      "same": 0.7150771168371042,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.10271275788545609,
+      "same": 0.7150771168371042,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "A",
+    "mode": "final",
+    "reg": "nce",
+    "lam": 100.0,
+    "tau": 0.1,
+    "qc": "index",
+    "lr": 0.001,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "B_orth": {
+   "primary": false,
+   "mean": 0.7919999999999999,
+   "ci": [
+    0.7686666666666667,
+    0.816
+   ],
+   "recovery": -0.1250000000000003,
+   "verdict": "FAIL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 1,
+     "dev": 0.828,
+     "test": 0.756,
+     "k": 378,
+     "n": 500,
+     "wilson": [
+      0.7164944353121212,
+      0.7916017600000562
+     ],
+     "pos_rate": 0.462,
+     "final_test": 0.506,
+     "best_test": 0.756,
+     "train_at_epoch": 0.991,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.11084765195846558,
+      "same": 0.773837279714644,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.025180097669363022,
+      "same": 0.5454351886486014,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 1,
+     "dev": 0.842,
+     "test": 0.798,
+     "k": 399,
+     "n": 500,
+     "wilson": [
+      0.7605963875890438,
+      0.8308593397665378
+     ],
+     "pos_rate": 0.396,
+     "final_test": 0.506,
+     "best_test": 0.798,
+     "train_at_epoch": 0.998,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.07829607278108597,
+      "same": 0.7654313235854109,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.028629552572965622,
+      "same": 0.5511178314996262,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 1,
+     "dev": 0.832,
+     "test": 0.822,
+     "k": 411,
+     "n": 500,
+     "wilson": [
+      0.7860541079213073,
+      0.853035637744791
+     ],
+     "pos_rate": 0.42,
+     "final_test": 0.506,
+     "best_test": 0.822,
+     "train_at_epoch": 0.994,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.08176156878471375,
+      "same": 0.7675516134127974,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.027954552322626114,
+      "same": 0.5495467220433057,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "B",
+    "mode": "final",
+    "reg": "orth",
+    "lam": 100.0,
+    "tau": 0.1,
+    "qc": "proj",
+    "lr": 0.0003,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "B_vic": {
+   "primary": false,
+   "mean": 0.6766666666666666,
+   "ci": [
+    0.6513333333333333,
+    0.702
+   ],
+   "recovery": -0.7610294117647058,
+   "verdict": "FAIL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 3,
+     "dev": 0.706,
+     "test": 0.7,
+     "k": 350,
+     "n": 500,
+     "wilson": [
+      0.6584314090816449,
+      0.7385187435059938
+     ],
+     "pos_rate": 0.394,
+     "final_test": 0.506,
+     "best_test": 0.7,
+     "train_at_epoch": 0.998,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.534565269947052,
+      "same": 0.78064871057868,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.3809477984905243,
+      "same": 0.6651862944165866,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 2,
+     "dev": 0.63,
+     "test": 0.596,
+     "k": 298,
+     "n": 500,
+     "wilson": [
+      0.5524145429626023,
+      0.6381215302794642
+     ],
+     "pos_rate": 0.498,
+     "final_test": 0.506,
+     "best_test": 0.652,
+     "train_at_epoch": 0.954,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.5673303604125977,
+      "same": 0.8079668027659257,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.37584707140922546,
+      "same": 0.6654180706789096,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 4,
+     "dev": 0.75,
+     "test": 0.734,
+     "k": 367,
+     "n": 500,
+     "wilson": [
+      0.6935914395923122,
+      0.7708402389352251
+     ],
+     "pos_rate": 0.476,
+     "final_test": 0.506,
+     "best_test": 0.734,
+     "train_at_epoch": 1.0,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.44130703806877136,
+      "same": 0.7308492449422678,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.3138714134693146,
+      "same": 0.6284010206659635,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "B",
+    "mode": "final",
+    "reg": "vic",
+    "lam": 100.0,
+    "tau": 0.1,
+    "qc": "proj",
+    "lr": 0.001,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "B_nce": {
+   "primary": true,
+   "mean": 0.8260000000000001,
+   "ci": [
+    0.8053333333333333,
+    0.8453499999999998
+   ],
+   "recovery": 0.06250000000000046,
+   "verdict": "FAIL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 1,
+     "dev": 0.876,
+     "test": 0.826,
+     "k": 413,
+     "n": 500,
+     "wilson": [
+      0.790317702710052,
+      0.856711046007799
+     ],
+     "pos_rate": 0.516,
+     "final_test": 0.506,
+     "best_test": 0.826,
+     "train_at_epoch": 0.992,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.10794129967689514,
+      "same": 0.7721398755908012,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.006884824484586716,
+      "same": 0.5948920604462425,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 1,
+     "dev": 0.848,
+     "test": 0.806,
+     "k": 403,
+     "n": 500,
+     "wilson": [
+      0.7690596512561212,
+      0.838274082202966
+     ],
+     "pos_rate": 0.436,
+     "final_test": 0.506,
+     "best_test": 0.806,
+     "train_at_epoch": 0.991,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.08045946061611176,
+      "same": 0.7619905523955822,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": -0.0009918399155139923,
+      "same": 0.5865934751927853,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 1,
+     "dev": 0.836,
+     "test": 0.846,
+     "k": 423,
+     "n": 500,
+     "wilson": [
+      0.8117339597150403,
+      0.8749898042615746
+     ],
+     "pos_rate": 0.508,
+     "final_test": 0.506,
+     "best_test": 0.846,
+     "train_at_epoch": 0.992,
+     "train_max": 1.0,
+     "train_final": 1.0,
+     "geom": {
+      "different": 0.07566055655479431,
+      "same": 0.7598125245422125,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.0031248328741639853,
+      "same": 0.5901978930458427,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "B",
+    "mode": "final",
+    "reg": "nce",
+    "lam": 10.0,
+    "tau": 0.1,
+    "qc": "proj",
+    "lr": 0.0003,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "C_orth": {
+   "primary": true,
+   "mean": 0.5273333333333333,
+   "ci": [
+    0.5013333333333333,
+    0.552
+   ],
+   "recovery": 0.028662420382165626,
+   "verdict": "FAIL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 6,
+     "dev": 0.576,
+     "test": 0.526,
+     "k": 263,
+     "n": 500,
+     "wilson": [
+      0.4822008460547351,
+      0.569402673781658
+     ],
+     "pos_rate": 0.516,
+     "final_test": 0.548,
+     "best_test": 0.582,
+     "train_at_epoch": 0.72,
+     "train_max": 0.75375,
+     "train_final": 0.72,
+     "geom": {
+      "different": 0.027595164254307747,
+      "same": 0.28137210341713703,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.07006576657295227,
+      "same": 0.31095627712687324,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 9,
+     "dev": 0.544,
+     "test": 0.542,
+     "k": 271,
+     "n": 500,
+     "wilson": [
+      0.4981733601090301,
+      0.5851861719343742
+     ],
+     "pos_rate": 0.396,
+     "final_test": 0.532,
+     "best_test": 0.574,
+     "train_at_epoch": 0.73625,
+     "train_max": 0.7625,
+     "train_final": 0.7625,
+     "geom": {
+      "different": 0.030803067609667778,
+      "same": 0.28319219983629107,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.040440633893013,
+      "same": 0.2934141272305472,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 6,
+     "dev": 0.544,
+     "test": 0.514,
+     "k": 257,
+     "n": 500,
+     "wilson": [
+      0.47025071185469686,
+      0.5575357988264379
+     ],
+     "pos_rate": 0.552,
+     "final_test": 0.552,
+     "best_test": 0.586,
+     "train_at_epoch": 0.68125,
+     "train_max": 0.72,
+     "train_final": 0.72,
+     "geom": {
+      "different": 0.03284566104412079,
+      "same": 0.28622394033979315,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.029116788879036903,
+      "same": 0.283905638376018,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "C",
+    "mode": "final",
+    "reg": "orth",
+    "lam": 100.0,
+    "tau": 0.1,
+    "qc": "proj",
+    "lr": 0.001,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "C_vic": {
+   "primary": false,
+   "mean": 0.504,
+   "ci": [
+    0.47866666666666663,
+    0.528
+   ],
+   "recovery": -0.027070063694267447,
+   "verdict": "FAIL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 9,
+     "dev": 0.572,
+     "test": 0.494,
+     "k": 247,
+     "n": 500,
+     "wilson": [
+      0.4503893365060508,
+      0.5377021589163201
+     ],
+     "pos_rate": 0.52,
+     "final_test": 0.494,
+     "best_test": 0.53,
+     "train_at_epoch": 0.68875,
+     "train_max": 0.74625,
+     "train_final": 0.74625,
+     "geom": {
+      "different": 0.1521584540605545,
+      "same": 0.2213058421407671,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.17911314964294434,
+      "same": 0.24319629629026168,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 5,
+     "dev": 0.526,
+     "test": 0.506,
+     "k": 253,
+     "n": 500,
+     "wilson": [
+      0.46229784108368,
+      0.5496106634939493
+     ],
+     "pos_rate": 0.448,
+     "final_test": 0.466,
+     "best_test": 0.508,
+     "train_at_epoch": 0.69125,
+     "train_max": 0.75125,
+     "train_final": 0.72,
+     "geom": {
+      "different": 0.19293609261512756,
+      "same": 0.2708992678516855,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.19912876188755035,
+      "same": 0.26799026743974536,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 8,
+     "dev": 0.536,
+     "test": 0.512,
+     "k": 256,
+     "n": 500,
+     "wilson": [
+      0.4682614535997027,
+      0.5555555555555556
+     ],
+     "pos_rate": 0.398,
+     "final_test": 0.454,
+     "best_test": 0.522,
+     "train_at_epoch": 0.66875,
+     "train_max": 0.72,
+     "train_final": 0.6975,
+     "geom": {
+      "different": 0.1505129188299179,
+      "same": 0.2209481616737321,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.17170724272727966,
+      "same": 0.23752380472918352,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "C",
+    "mode": "final",
+    "reg": "vic",
+    "lam": 100.0,
+    "tau": 0.1,
+    "qc": "index",
+    "lr": 0.0003,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "C_nce": {
+   "primary": false,
+   "mean": 0.512,
+   "ci": [
+    0.48533333333333334,
+    0.5399999999999999
+   ],
+   "recovery": -0.007961783439490363,
+   "verdict": "FAIL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 5,
+     "dev": 0.566,
+     "test": 0.516,
+     "k": 258,
+     "n": 500,
+     "wilson": [
+      0.4722406641485616,
+      0.5595153480584495
+     ],
+     "pos_rate": 0.366,
+     "final_test": 0.538,
+     "best_test": 0.538,
+     "train_at_epoch": 0.61875,
+     "train_max": 0.65625,
+     "train_final": 0.65625,
+     "geom": {
+      "different": 0.21560505032539368,
+      "same": 0.371186192855627,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.15357211232185364,
+      "same": 0.33635095770199164,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 9,
+     "dev": 0.558,
+     "test": 0.518,
+     "k": 259,
+     "n": 500,
+     "wilson": [
+      0.4742313107295171,
+      0.5614942030033705
+     ],
+     "pos_rate": 0.388,
+     "final_test": 0.52,
+     "best_test": 0.524,
+     "train_at_epoch": 0.65,
+     "train_max": 0.655,
+     "train_final": 0.65125,
+     "geom": {
+      "different": 0.11858662962913513,
+      "same": 0.3577936554308205,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.10841440409421921,
+      "same": 0.3287685515582173,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 4,
+     "dev": 0.574,
+     "test": 0.502,
+     "k": 251,
+     "n": 500,
+     "wilson": [
+      0.4583255665425368,
+      0.5456439349833396
+     ],
+     "pos_rate": 0.428,
+     "final_test": 0.514,
+     "best_test": 0.528,
+     "train_at_epoch": 0.61,
+     "train_max": 0.66625,
+     "train_final": 0.66625,
+     "geom": {
+      "different": 0.12794725596904755,
+      "same": 0.32849376036319883,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.13612382113933563,
+      "same": 0.3430149642265557,
+      "symbols": 40
+     }
+    }
+   ],
+   "config": {
+    "arena": "C",
+    "mode": "final",
+    "reg": "nce",
+    "lam": 1.0,
+    "tau": 0.1,
+    "qc": "proj",
+    "lr": 0.001,
+    "epochs": 10,
+    "feats": "/path/to/work/b27/feats",
+    "geom_every": false
+   }
+  },
+  "A_nce_ep30_exploratory": {
+   "mean": 0.7666666666666666,
+   "ci": [
+    0.7453333333333333,
+    0.7876666666666666
+   ],
+   "recovery": 0.6367380560131793,
+   "verdict": "PARTIAL",
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 12,
+     "dev": 0.82,
+     "test": 0.772,
+     "k": 772,
+     "n": 1000,
+     "wilson": [
+      0.7449845019985327,
+      0.7969336651704709
+     ],
+     "pos_rate": 0.314,
+     "final_test": 0.738,
+     "best_test": 0.777,
+     "train_at_epoch": 0.9515,
+     "train_max": 0.9845,
+     "train_final": 0.972,
+     "geom": {
+      "different": 0.10832104086875916,
+      "same": 0.7142124392092228,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.1030803918838501,
+      "same": 0.6941101719935735,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 123,
+     "epoch": 14,
+     "dev": 0.796,
+     "test": 0.764,
+     "k": 764,
+     "n": 1000,
+     "wilson": [
+      0.7367023285873138,
+      0.789277068959072
+     ],
+     "pos_rate": 0.334,
+     "final_test": 0.752,
+     "best_test": 0.77,
+     "train_at_epoch": 0.9695,
+     "train_max": 0.989,
+     "train_final": 0.9765,
+     "geom": {
+      "different": 0.0848814845085144,
+      "same": 0.7056344254563253,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.0967843309044838,
+      "same": 0.6949902820090453,
+      "symbols": 40
+     }
+    },
+    {
+     "seed": 456,
+     "epoch": 30,
+     "dev": 0.796,
+     "test": 0.764,
+     "k": 764,
+     "n": 1000,
+     "wilson": [
+      0.7367023285873138,
+      0.789277068959072
+     ],
+     "pos_rate": 0.344,
+     "final_test": 0.764,
+     "best_test": 0.772,
+     "train_at_epoch": 0.99,
+     "train_max": 0.99,
+     "train_final": 0.99,
+     "geom": {
+      "different": 0.09482887387275696,
+      "same": 0.6943188241372505,
+      "symbols": 40
+     },
+     "geom_final": {
+      "different": 0.09482887387275696,
+      "same": 0.6943188241372505,
+      "symbols": 40
+     }
+    }
+   ]
+  }
+ },
+ "lora": {
+  "A": {
+   "mean": 0.4996666666666667,
+   "ci": [
+    0.4763333333333333,
+    0.5233333333333333
+   ],
+   "margin": 0.41400000000000003,
+   "margins": [
+    0.4,
+    0.42400000000000004,
+    0.41800000000000004
+   ],
+   "verdict": "STANDS",
+   "fitted": false,
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 12,
+     "dev": 0.556,
+     "test": 0.515,
+     "k": 515,
+     "n": 1000,
+     "wilson": [
+      0.48402549947806195,
+      0.5458596935643463
+     ],
+     "pos_rate": 0.221,
+     "final_test": 0.515,
+     "best_test": 0.524,
+     "train_at_epoch": 0.5325,
+     "train_max": 0.5325,
+     "train_final": 0.5325,
+     "geom": null,
+     "geom_final": null
+    },
+    {
+     "seed": 123,
+     "epoch": 3,
+     "dev": 0.534,
+     "test": 0.489,
+     "k": 489,
+     "n": 1000,
+     "wilson": [
+      0.4581185876110968,
+      0.5199656041578039
+     ],
+     "pos_rate": 0.205,
+     "final_test": 0.508,
+     "best_test": 0.513,
+     "train_at_epoch": 0.524,
+     "train_max": 0.524,
+     "train_final": 0.5085,
+     "geom": null,
+     "geom_final": null
+    },
+    {
+     "seed": 456,
+     "epoch": 5,
+     "dev": 0.534,
+     "test": 0.495,
+     "k": 495,
+     "n": 1000,
+     "wilson": [
+      0.46408970934046934,
+      0.5259485596453947
+     ],
+     "pos_rate": 0.203,
+     "final_test": 0.503,
+     "best_test": 0.516,
+     "train_at_epoch": null,
+     "train_max": 0.534,
+     "train_final": 0.5185,
+     "geom": null,
+     "geom_final": null
+    }
+   ],
+   "config": {
+    "arena": "A",
+    "mode": "final",
+    "rank": 16,
+    "lr": 3e-05,
+    "epochs": 12,
+    "bs": 8,
+    "n_train": null,
+    "head_std": false,
+    "head_norm": "none",
+    "readout": "cls",
+    "dtype": "bf16",
+    "targets": "all",
+    "sched": "const",
+    "wd": 0.0,
+    "head_lr": null,
+    "lp_steps": 0,
+    "score_train_every": 3
+   }
+  },
+  "B": {
+   "mean": 0.878,
+   "ci": [
+    0.8593333333333334,
+    0.896
+   ],
+   "margin": 0.118,
+   "margins": [
+    0.08599999999999997,
+    0.020000000000000018,
+    0.248
+   ],
+   "verdict": "NARROWED",
+   "fitted": false,
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 11,
+     "dev": 0.926,
+     "test": 0.904,
+     "k": 452,
+     "n": 500,
+     "wilson": [
+      0.8750124461326017,
+      0.9268268620944284
+     ],
+     "pos_rate": 0.51,
+     "final_test": 0.906,
+     "best_test": 0.906,
+     "train_at_epoch": null,
+     "train_max": 0.928,
+     "train_final": 0.928,
+     "geom": null,
+     "geom_final": null
+    },
+    {
+     "seed": 123,
+     "epoch": 11,
+     "dev": 0.966,
+     "test": 0.98,
+     "k": 490,
+     "n": 500,
+     "wilson": [
+      0.9635794314459021,
+      0.9891009347644306
+     ],
+     "pos_rate": 0.51,
+     "final_test": 0.98,
+     "best_test": 0.98,
+     "train_at_epoch": null,
+     "train_max": 0.987,
+     "train_final": 0.987,
+     "geom": null,
+     "geom_final": null
+    },
+    {
+     "seed": 456,
+     "epoch": 11,
+     "dev": 0.794,
+     "test": 0.75,
+     "k": 375,
+     "n": 500,
+     "wilson": [
+      0.7102355648988187,
+      0.7859521258357297
+     ],
+     "pos_rate": 0.516,
+     "final_test": 0.764,
+     "best_test": 0.764,
+     "train_at_epoch": null,
+     "train_max": 0.777,
+     "train_final": 0.777,
+     "geom": null,
+     "geom_final": null
+    }
+   ],
+   "config": {
+    "arena": "B",
+    "mode": "final",
+    "rank": 16,
+    "lr": 3e-05,
+    "epochs": 12,
+    "bs": 8,
+    "n_train": null,
+    "head_std": false,
+    "head_norm": "none",
+    "readout": "cls",
+    "dtype": "bf16",
+    "targets": "all",
+    "sched": "cosine",
+    "wd": 0.0,
+    "head_lr": null,
+    "lp_steps": 0,
+    "score_train_every": 3
+   }
+  },
+  "C": {
+   "mean": 0.482,
+   "ci": [
+    0.4633333333333334,
+    0.5
+   ],
+   "margin": 0.45200000000000007,
+   "margins": [
+    0.45200000000000007,
+    0.4600000000000001,
+    0.44399999999999995
+   ],
+   "verdict": "STANDS",
+   "fitted": false,
+   "seeds": [
+    {
+     "seed": 42,
+     "epoch": 10,
+     "dev": 0.53,
+     "test": 0.48,
+     "k": 240,
+     "n": 500,
+     "wilson": [
+      0.43652763662029404,
+      0.523777348120942
+     ],
+     "pos_rate": 0.302,
+     "final_test": 0.468,
+     "best_test": 0.522,
+     "train_at_epoch": null,
+     "train_max": 0.54875,
+     "train_final": 0.54875,
+     "geom": null,
+     "geom_final": null
+    },
+    {
+     "seed": 123,
+     "epoch": 2,
+     "dev": 0.51,
+     "test": 0.472,
+     "k": 236,
+     "n": 500,
+     "wilson": [
+      0.4286219475993197,
+      0.5158050310384108
+     ],
+     "pos_rate": 0.99,
+     "final_test": 0.46,
+     "best_test": 0.532,
+     "train_at_epoch": null,
+     "train_max": 0.54375,
+     "train_final": 0.54375,
+     "geom": null,
+     "geom_final": null
+    },
+    {
+     "seed": 456,
+     "epoch": 5,
+     "dev": 0.53,
+     "test": 0.494,
+     "k": 247,
+     "n": 500,
+     "wilson": [
+      0.4503893365060508,
+      0.5377021589163201
+     ],
+     "pos_rate": 0.172,
+     "final_test": 0.508,
+     "best_test": 0.538,
+     "train_at_epoch": null,
+     "train_max": 0.5625,
+     "train_final": 0.5625,
+     "geom": null,
+     "geom_final": null
+    }
+   ],
+   "config": {
+    "arena": "C",
+    "mode": "final",
+    "rank": 16,
+    "lr": 3e-05,
+    "epochs": 12,
+    "bs": 8,
+    "n_train": null,
+    "head_std": false,
+    "head_norm": "none",
+    "readout": "cls",
+    "dtype": "bf16",
+    "targets": "all",
+    "sched": "cosine",
+    "wd": 0.0,
+    "head_lr": null,
+    "lp_steps": 0,
+    "score_train_every": 3
+   }
+  }
+ },
+ "g0": {
+  "a": [
+   {
+    "arena": "A",
+    "arm": "extract_then_bind",
+    "seed": 42,
+    "acc": 0.915,
+    "banked": 0.915
+   },
+   {
+    "arena": "A",
+    "arm": "extract_then_bind",
+    "seed": 123,
+    "acc": 0.913,
+    "banked": 0.913
+   },
+   {
+    "arena": "A",
+    "arm": "extract_then_bind",
+    "seed": 456,
+    "acc": 0.913,
+    "banked": 0.913
+   },
+   {
+    "arena": "A",
+    "arm": "spans",
+    "seed": 42,
+    "acc": 0.511,
+    "banked": 0.511
+   },
+   {
+    "arena": "A",
+    "arm": "spans",
+    "seed": 123,
+    "acc": 0.499,
+    "banked": 0.499
+   },
+   {
+    "arena": "A",
+    "arm": "spans",
+    "seed": 456,
+    "acc": 0.493,
+    "banked": 0.493
+   },
+   {
+    "arena": "B",
+    "arm": "parser",
+    "seed": 42,
+    "acc": 0.99,
+    "banked": 0.99
+   },
+   {
+    "arena": "B",
+    "arm": "parser",
+    "seed": 123,
+    "acc": 1.0,
+    "banked": 1.0
+   },
+   {
+    "arena": "B",
+    "arm": "parser",
+    "seed": 456,
+    "acc": 0.998,
+    "banked": 0.998
+   },
+   {
+    "arena": "B",
+    "arm": "probe_argmax",
+    "seed": 42,
+    "acc": 0.99,
+    "banked": 0.99
+   },
+   {
+    "arena": "B",
+    "arm": "probe_argmax",
+    "seed": 123,
+    "acc": 1.0,
+    "banked": 1.0
+   },
+   {
+    "arena": "B",
+    "arm": "probe_argmax",
+    "seed": 456,
+    "acc": 0.998,
+    "banked": 0.998
+   },
+   {
+    "arena": "B",
+    "arm": "spans",
+    "seed": 42,
+    "acc": 0.502,
+    "banked": 0.502
+   },
+   {
+    "arena": "B",
+    "arm": "spans",
+    "seed": 123,
+    "acc": 0.498,
+    "banked": 0.498
+   },
+   {
+    "arena": "B",
+    "arm": "spans",
+    "seed": 456,
+    "acc": 0.522,
+    "banked": 0.522
+   },
+   {
+    "arena": "C",
+    "arm": "parser",
+    "seed": 42,
+    "acc": 0.932,
+    "banked": 0.932
+   },
+   {
+    "arena": "C",
+    "arm": "parser",
+    "seed": 123,
+    "acc": 0.932,
+    "banked": 0.932
+   },
+   {
+    "arena": "C",
+    "arm": "parser",
+    "seed": 456,
+    "acc": 0.938,
+    "banked": 0.938
+   },
+   {
+    "arena": "C",
+    "arm": "probe_argmax",
+    "seed": 42,
+    "acc": 0.932,
+    "banked": 0.932
+   },
+   {
+    "arena": "C",
+    "arm": "probe_argmax",
+    "seed": 123,
+    "acc": 0.932,
+    "banked": 0.932
+   },
+   {
+    "arena": "C",
+    "arm": "probe_argmax",
+    "seed": 456,
+    "acc": 0.938,
+    "banked": 0.938
+   },
+   {
+    "arena": "C",
+    "arm": "spans",
+    "seed": 42,
+    "acc": 0.472,
+    "banked": 0.472
+   },
+   {
+    "arena": "C",
+    "arm": "spans",
+    "seed": 123,
+    "acc": 0.502,
+    "banked": 0.502
+   },
+   {
+    "arena": "C",
+    "arm": "spans",
+    "seed": 456,
+    "acc": 0.476,
+    "banked": 0.476
+   }
+  ],
+  "b": [
+   {
+    "arena": "A",
+    "seed": 42,
+    "acc": 0.511,
+    "banked": 0.511
+   },
+   {
+    "arena": "A",
+    "seed": 123,
+    "acc": 0.499,
+    "banked": 0.499
+   },
+   {
+    "arena": "A",
+    "seed": 456,
+    "acc": 0.493,
+    "banked": 0.493
+   },
+   {
+    "arena": "B",
+    "seed": 42,
+    "acc": 0.502,
+    "banked": 0.502
+   },
+   {
+    "arena": "B",
+    "seed": 123,
+    "acc": 0.498,
+    "banked": 0.498
+   },
+   {
+    "arena": "B",
+    "seed": 456,
+    "acc": 0.522,
+    "banked": 0.522
+   },
+   {
+    "arena": "C",
+    "seed": 42,
+    "acc": 0.472,
+    "banked": 0.472
+   },
+   {
+    "arena": "C",
+    "seed": 123,
+    "acc": 0.502,
+    "banked": 0.502
+   },
+   {
+    "arena": "C",
+    "seed": 456,
+    "acc": 0.476,
+    "banked": 0.476
+   }
+  ]
+ },
+ "gpu_hours": 37.340833333333336
+}

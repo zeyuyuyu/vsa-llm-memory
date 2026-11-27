@@ -1,0 +1,58 @@
+Reading of the results (written after the run):
+- Mapping. The real-valued mapping the referee asked for is the bipolar store: every FHRR phase rounded to 0 or pi gives
+  a +-1 code, binding is a sign flip, and each stored or codebook component is one differential pair of PCM devices.
+  The ideal 1-bit store reproduces B22 amendment 2 on every store (4,776 / 4,776, asserted per store).
+- With global drift compensation (one scale per array, Joshi et al.'s GDC), the store with BOTH the stored vectors and
+  the clean-up codebook in PCM crossbars reads all 4,776 probed keys exactly at every time from 60 s to 1 year, at the
+  RULER load (16 pairs per vector) and at 32, for both the 1-bit (B1) and the multi-level (ML) form. At 64 pairs per
+  vector the ideal stores already miss keys (B1 4 keys, 0.9992; ML 1 key, 0.9998) and the PCM arms stay within 0.07
+  points of them (lowest: B1-C/SC 0.9985 at 30 days; ML-SC 0.9992 at 1 year).
+- Which stage limits. At the measured parameters, with GDC, neither: the B1 store read made no bit errors at any time
+  (25 uS against a RESET device; the sign survives the 54% conductance decay of a year), and the ML store read carried
+  an rms error of 0.25-0.30 of rms(m) (B22's read-noise scale r ~ 0.3, against B22's exact range r <= 2). The clean-up
+  similarity averages device errors over 8,192 components, so they add only ~0.004 to it. Without compensation the
+  limiting stage is the clean-up for B1 (B1-S reads signs, which drift does not change; B1-C/SC fall to 99.54% at 1 h,
+  51.8% at 1 day and 0% at 30 days, because the common decay, GDC alpha 0.95 -> 0.46 from 60 s to 1 year, pulls a match
+  similarity of ~0.8 under the fixed 0.5 threshold), and both stages for ML (ML-SC: 95.4% at 1 h, 0% at 1 day). This is
+  the failure Joshi et al. report for a network without compensation (accuracy "quickly decreases down to 10% ...
+  within approximately 1000 s"), and the same one-scale-per-array calibration removes it.
+- Margin (descriptive; all device noise sources multiplied by k, 30 days, 16 per vector, GDC). B1-SC stays exact up to
+  k = 4 (0.9996) and fails at k = 8 (0.0029). Alone, the B1 store survives k = 8 (0.985, about 12% bit errors) and fails
+  at k = 16; the clean-up fails at k = 8 (0.246). A post hoc check on one store (not registered) shows why: at large k
+  the RESET devices' clamped noise adds conductance that the summed-current GDC counts as signal but the differential
+  output cancels, so GDC over-estimates the gain (true gain / GDC alpha = 0.988 at k = 1, 0.86 at k = 4, 0.58 at k = 8,
+  0.09 at k = 16) and every match similarity is scaled toward or under 0.5. The clean-up's break at k = 8 is therefore
+  the calibration rule, not the averaging; a calibration on differential reference columns would remove that bias (not
+  tested). The ML form breaks earlier and at the store read (ML-S 0.900 at k = 4, ML-C 1.000 at k = 4), in line with
+  multi-level storage being the weak point of PCM (Le Gallo & Sebastian 2020). ADC: 6 bits exact for both forms; 4 bits
+  exact for B1 and failing for ML (0.0015), because the registered full-scale tile ADC leaves ML tile outputs below one
+  step (a range set from the output distribution, as Joshi et al. do for activations, was not tested). Read noise
+  redrawn on every MVM instead of once per time point: identical (1.0000 both forms).
+
+Deviations from the pre-registration: none in conditions, metric, threshold or bars. Prediction P3 was wrong in one
+sub-item (ML-C without compensation read 81.2% at 30 days against a predicted < 80%). Times start at 60 s rather than
+1 s because the published model is defined from T1 = 55.39 s (stated in the prereg). The GDC gain-bias check above is
+post hoc and labelled so.
+
+Limits: a simulation of a published statistical model of one PCM technology (IBM's 90-nm prototype chip), not a
+hardware run; the model was fitted to data up to 1e5 s, so 30 days and 1 year are extrapolations. Not modelled: IR drop,
+stuck or defective devices (B22's failed-component conditions, up to 40% of components zeroed with no loss, bound this),
+deterministic spatial variation (Karunaratne et al. counter it by spreading each vector across the array), temperature,
+ADC nonlinearity. The energy figures are per-operation estimates from the cited papers, not a design.
+
+Literature check (conclusion -> literature):
+- Supporting. Karunaratne et al. 2020 stored binary hypervectors (d = 10,000) in PCM crossbars for associative search,
+  with on-chip accuracy comparable to software; Karunaratne et al. 2021 stored bipolar/binary high-dimensional keys in
+  more than 256,000 PCM devices for few-shot learning close to 32-bit software accuracy; Joshi et al. 2020 needed a
+  global per-array scale (GDC) to stop drift from collapsing accuracy. Our results agree on all three points.
+- Qualifying. Le Gallo & Sebastian 2020 name drift variability "arguably the most significant challenge for multi-level
+  storage in PCM"; our multi-level store is indeed the weaker form (larger read error, breaks at k = 4 where the 1-bit
+  store holds), yet at the measured parameters it still reads exactly, because a read averages 8,192 components and the
+  store tolerates read noise up to r = 2 (B22). Joshi et al. (Supplementary Fig. 6) find that a ResNet-32 with GDC
+  tolerates a drift-exponent spread up to about 0.013 over 30 s to 1 year (criterion: accuracy above 90%); our 1-bit
+  store with GDC stayed exact at k = 4 at 30 days (spread 0.017 on programmed devices, with programming and read noise
+  also x4). The time spans differ (30 days here), so this is only a rough indication that the store is at least as
+  tolerant as that network under the same compensation.
+- New relative to these precedents: they classify into at most 22 classes (or 5-way few-shot); here the clean-up has up to
+  5,993 candidates, a fixed acceptance threshold and a stop rule, and the stores were filled by a language model reading
+  a real long-context benchmark.

@@ -1,0 +1,13 @@
+# B49 predictions (prereg/B49_panel_mechanism_competitors_prereg.md, section 8)
+
+P1 (llama, mistral pass vs BEST36; bge, minilm do not): HELD {'llama': 7.1, 'mistral': 7.1, 'bge': -0.71, 'minilm': -2.12}
+P2 (2-4 encoders pass vs BEST, all LLM): FAILED; passing: []
+P3 (|VSA - LAM| <= 3 on >= 5 encoders; LAM BEST in <= 4 R1 cells): FAILED; VSA - LAM R1: {'qwen8': -3.36, 'b46': -2.77, 'llama': -2.48, 'mistral': -1.93, 'e5': -3.18, 'bge': -3.01, 'minilm': -2.84}; LAM BEST cells {'qwen8': 7, 'b46': 8, 'llama': 11, 'mistral': 8, 'e5': 8, 'bge': 5, 'minilm': 4}
+P4 (learned map raises the criterion over centred on every encoder; LHI beats IDX by >= 2 on >= 4): FAILED; criterion up: {'qwen8': True, 'e5': True, 'minilm': True, 'bge': True, 'llama': True, 'mistral': True, 'b46': True, 'qwen8_T3': True, 'e5_T2': True, 'qwen8_T1': False, 'b46_T3': True, 'bge_T2': True, 'b46_T1': False}; LHI - IDX over R1: {'qwen8': 8.11, 'b46': 6.45, 'llama': 5.71, 'mistral': 9.3, 'e5': 3.07, 'bge': 3.51, 'minilm': 1.83}
+P5 (VSA - BEST at least 1 point lower than VSA - BEST36 on average): HELD (mean gap +8.47)
+P6 (VSA-L - VSA within +-3 on every LLM): FAILED {'qwen8': -2.42, 'b46': -2.47, 'llama': -4.14, 'mistral': -3.48}
+P7 (VSA reaches U in none of 28; VSA-inf < U in all 16 LLM settings; BEST reaches U in >= 3 of 12 sentence and <= 4 of 16 LLM settings): FAILED; VSA reaches U in []; VSA-inf < U in 9 of 16 LLM settings; BEST reaches U in 10 sentence, 9 LLM settings
+P8 (mechanism, HD): FAILED [('T1 Delta > -2', True), ('T2 Delta < +2', True), ('T3 Delta <= -2, CI < 0, margin <= +3.7', False)]
+P9 (Spearman margin vs whitened PR >= 0.6): FAILED (rho -0.286)
+
+held: 2 of 9 (P10, checks: see results/b49_check.txt)

@@ -1,0 +1,80 @@
+[
+ {
+  "seed": 42,
+  "fidelity": 0.9981051634296542,
+  "probe_acc": 0.99968421459198,
+  "gated": true,
+  "armA": {
+   "init": 0.629,
+   "epochs": [
+    0.651,
+    0.671
+   ],
+   "best": 0.671,
+   "final": 0.671,
+   "trainable": 2
+  },
+  "armB": {
+   "init": 0.629,
+   "epochs": [
+    0.51,
+    0.514
+   ],
+   "best": 0.629,
+   "final": 0.514,
+   "trainable": 5244930
+  }
+ },
+ {
+  "seed": 123,
+  "fidelity": 0.9984999210484763,
+  "probe_acc": 0.9996973872184753,
+  "gated": true,
+  "armA": {
+   "init": 0.629,
+   "epochs": [
+    0.654,
+    0.672
+   ],
+   "best": 0.672,
+   "final": 0.672,
+   "trainable": 2
+  },
+  "armB": {
+   "init": 0.629,
+   "epochs": [
+    0.499,
+    0.518
+   ],
+   "best": 0.629,
+   "final": 0.518,
+   "trainable": 5244930
+  }
+ },
+ {
+  "seed": 456,
+  "fidelity": 0.9985130796357703,
+  "probe_acc": 0.994473397731781,
+  "gated": true,
+  "armA": {
+   "init": 0.633,
+   "epochs": [
+    0.657,
+    0.677
+   ],
+   "best": 0.677,
+   "final": 0.677,
+   "trainable": 2
+  },
+  "armB": {
+   "init": 0.633,
+   "epochs": [
+    0.48,
+    0.486
+   ],
+   "best": 0.633,
+   "final": 0.486,
+   "trainable": 5244930
+  }
+ }
+]

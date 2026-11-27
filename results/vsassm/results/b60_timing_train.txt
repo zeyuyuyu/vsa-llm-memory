@@ -1,0 +1,6 @@
+timing qwen8 train M=1024 V=16 center: 2016 (cfg, bpf, acct) in 41.7s; queries 960
+timing qwen8 train M=1024 V=16 whiten: 2016 (cfg, bpf, acct) in 43.3s; queries 960
+timing qwen8 train M=1024 V=2 center: 2016 (cfg, bpf, acct) in 52.2s; queries 1208
+timing qwen8 train M=1024 V=2 whiten: 2016 (cfg, bpf, acct) in 49.6s; queries 1208
+timing qwen8 train M=256 V=16 center: 2016 (cfg, bpf, acct) in 5.2s; queries 224
+timing qwen8 train M=256 V=16 whiten: 2016 (cfg, bpf, acct) in 4.4s; queries 224

@@ -1,0 +1,13 @@
+PA1: FAILED - W_T > W_R on 2/7 (>= 5), I_T above 0 on 1 (>= 4); W_P > W_R on 1 (>= 5), I_P above 0 on 0 (>= 4)
+PA2: HELD - F_P|H < 0 on 6/7 (>= 5); F_T|H >= 0 on 7/7 (>= 4)
+PA3: FAILED - "features larger (identified)" at P on 4/7 (<= 2), at T on 1/7 (<= 4); statement UNSUPPORTED (predicted UNSUPPORTED)
+PA4: HELD - Shapley write >= features at T on 5/7 (>= 4)
+PA5: HELD - LAMc leads LT on 7/7 (>= 4); |LT - LAMC| <= 2.5 on 5/7 (>= 5)
+PA6: FAILED - HP dev rows equal B60 VSAPc rows 1479/1512 (max |d| 5.29e-03); HT test stores equal B71 VSAPR 705/705 (0 differing predictions)
+PB1: HELD - label > alias recall for every arm and encoder; exceptions []
+PB2: FAILED - Delta(STORE - LAMC) > 0 on 2/7 (>= 5); Delta(STORE - NLMSC) > 0 on 0/7 (>= 5)
+PB3: FAILED - generalisation loss LAMc > store on 2/7 (>= 5)
+PC1: HELD - STORE - NLMSC72 < 0 in >= 18/20 draws on 4/4; median within 1 point on 4/4 (>= 3)
+PC2: FAILED - NLMSC72 - NLMSC medians [-0.35, 0.14, -0.29, -0.95] (in [-1.5, -0.2])
+PC3: HELD - draws with NLMSc72 leading VSAPcX (one-level): [('qwen8', 0), ('b46', 13), ('llama', 3), ('mistral', 19)] (Mistral >= 18, Qwen3-8B / Llama <= 5)
+PX: FAILED - scorer / bits / determinism pass flags and re-derivation min 0.9631760644418872

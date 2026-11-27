@@ -1,0 +1,122 @@
+
+######## V-last at k8, B = 108 (share 0.9923)
+== 131072/niah_multikey_2/44358 V-last B=107.635 design=None k8: cells 645114, cell error rate 0.1230, {}
+  rule last    failed 3/150
+    key 'inexpensive-stem' want ['4165227'] got ['1002723', '8940201', '6729878'] | best sims per j [0.04800000041723251, 0.04699999839067459, 0.0430000014603138], tags [False, False, True] | true value sim at j=0 0.047 | its shard's cells read wrong 0.127
+    key 'educated-catacomb' want ['3339376'] got ['7891913'] | best sims per j [0.04699999839067459, 0.041999999433755875, 0.04399999976158142], tags [True, True, False] | true value sim at j=0 0.044 | its shard's cells read wrong 0.122
+    key 'excited-most' want ['1331064'] got ['1954360'] | best sims per j [0.0430000014603138, 0.04100000113248825, 0.03799999877810478], tags [True, False, False] | true value sim at j=0 0.037 | its shard's cells read wrong 0.119
+
+######## V-Snt at k8, B = 108 (share 0.9933)
+== 131072/niah_multikey_2/234552 V-plain B=107.635 design=None k8: cells 644877, cell error rate 0.1229, {}
+  rule snt     failed 1/150
+    key 'dirty-pagoda' want ['3837512'] got ['2194758'] | best sims per j [0.039000000804662704, 0.0430000014603138, 0.039000000804662704], tags [False, False, False] | true value sim at j=0 0.036 | its shard's cells read wrong 0.128
+== 131072/niah_multikey_2/92134 V-plain B=107.635 design=None k8: cells 644877, cell error rate 0.1220, {}
+  rule snt     failed 3/150
+    key 'rough-catalyst' want ['7851904', '5525873'] got ['7851904'] | best sims per j [0.07100000232458115, 0.05700000002980232, 0.03700000047683716], tags [False, False, False] | true value sim at j=0 0.071 | its shard's cells read wrong 0.123
+    key 'beautiful-golf' want ['5868517'] got ['6289114'] | best sims per j [0.04399999976158142, 0.04699999839067459, 0.04600000008940697], tags [False, False, False] | true value sim at j=0 0.042 | its shard's cells read wrong 0.126
+
+######## E-LDPC at k8, B = 45 (share 0.6129)
+== 131072/niah_multikey_2/162015 E-LDPC B=45.2548 design=0.5 k8: cells 271302, cell error rate 0.1233, {'cw_nonconv': 99}
+  rule         failed 149/150
+    key 'rural-messy' want ['3149341'] got ['1739500'] | needs LDPC codewords [8, 79] of 101
+    key 'unbiased-pharmacopoeia' want ['6201627'] got ['1814826'] | needs LDPC codewords [10, 37] of 101
+    key 'momentous-mukluk' want ['4281356'] got ['6692239'] | needs LDPC codewords [9, 79] of 101
+
+######## E-BCH at k8, B = 91 (share 0.9692)
+== 131072/niah_multikey_2/162015 E-BCH B=90.5097 design=[63, 36, 5] k8: cells 542605, cell error rate 0.1223, {'cw_bound': 2755, 'cw_lib': 11, 'cw_fail': 103}
+  rule         failed 4/150
+    key 'likeable-comfort' want ['6004722'] got ['9080156'] | cw486: 7 errors + 0 erasures (2e+s=14 vs 2t=10); cw909: 1 errors + 0 erasures (2e+s=2 vs 2t=10)
+    key 'hot-box' want ['8831283'] got ['5260186'] | cw322: 3 errors + 0 erasures (2e+s=6 vs 2t=10); cw323: 3 errors + 0 erasures (2e+s=6 vs 2t=10); cw2649: 6 errors + 0 erasures (2e+s=12 vs 2t=10)
+    key 'wiry-making' want ['4103840'] got ['6786155'] | cw522: 3 errors + 0 erasures (2e+s=6 vs 2t=10); cw792: 6 errors + 0 erasures (2e+s=12 vs 2t=10); cw793: 4 errors + 0 erasures (2e+s=8 vs 2t=10)
+
+######## T-rep at k8, B = 215 (share 0.9902)
+== 131072/niah_multikey_2/162015 T-rep B=215.269 design=None k8: cells 1239384, cell error rate 0.1223, {}
+  rule         failed 3/150
+    key 'warm-capitulation' want ['2184277'] got ['1333136']
+    key 'odd-sturgeon' want ['7763062'] got ['5210325']
+    key 'cool-hydrocarb' want ['2519209'] got ['4937971']
+
+######## T-vhdd at k8, B = 76 (share 0.9897)
+== 131072/niah_multikey_2/162015 T-vhdd B=76.1093 design=0.3 k8: cells 455057, cell error rate 0.1222, {}
+  rule         failed 3/150
+    key 'bitter-larder' want ['1184787'] got ['4181480']
+    key 'optimal-naturalisation' want ['3990547'] got ['6957678', '9355546']
+    key 'steadfast-smog' want ['6001462'] got ['6259973']
+
+######## V-last at k16, B = 362 (share 0.9937)
+== 131072/niah_multikey_2/92134 V-last B=362.039 design=None k16: cells 2169290, cell error rate 0.2757, {}
+  rule last    failed 3/150
+    key 'somber-rations' want ['8338099'] got ['6243640', '2799538', '3619396'] | best sims per j [0.03999999910593033, 0.04399999976158142, 0.04500000178813934], tags [False, False, False] | true value sim at j=0 0.034 | its shard's cells read wrong 0.285
+    key 'lean-relay' want ['1935808'] got ['8144855', '3079326', '6896213'] | best sims per j [0.054999999701976776, 0.03999999910593033, 0.04800000041723251], tags [False, False, False] | true value sim at j=0 0.053 | its shard's cells read wrong 0.281
+    key 'happy-employee' want ['2416092'] got ['7617601', '9920737'] | best sims per j [0.05000000074505806, 0.03799999877810478, 0.04600000008940697], tags [False, True, True] | true value sim at j=0 0.050 | its shard's cells read wrong 0.279
+== V-Snt k16: no budget to read (N* None)
+
+######## E-LDPC at k16, B = 181 (share 0.9799)
+== 131072/niah_multikey_2/162015 E-LDPC B=181.019 design=0.25 k16: cells 1085210, cell error rate 0.2767, {'cw_nonconv': 9}
+  rule         failed 8/150
+    key 'puzzled-sousaphone' want ['6037208'] got ['6101669'] | needs LDPC codewords [16, 63] of 101
+    key 'feigned-pheasant' want ['7554402'] got ['1549500'] | needs LDPC codewords [16, 89] of 101
+    key 'terrible-bedroom' want ['8788247'] got ['7201698'] | needs LDPC codewords [16, 61, 62] of 101
+
+######## E-BCH at k16, B = 362 (share 0.9598)
+== 131072/niah_multikey_2/162015 E-BCH B=362.039 design=[63, 39, 4] k16: cells 2170421, cell error rate 0.2754, {'cw_bound': 2354, 'cw_lib': 12, 'cw_fail': 283}
+  rule         failed 16/150
+    key 'unbiased-pharmacopoeia' want ['6201627'] got ['9555831'] | cw286: 3 errors + 0 erasures (2e+s=6 vs 2t=8); cw986: 5 errors + 0 erasures (2e+s=10 vs 2t=8)
+    key 'petite-fur' want ['4627933'] got ['4627933', '8283183'] | cw192: 3 errors + 0 erasures (2e+s=6 vs 2t=8); cw556: 7 errors + 0 erasures (2e+s=14 vs 2t=8)
+    key 'bawdy-minister' want ['8676499'] got ['7282967'] | cw326: 5 errors + 0 erasures (2e+s=10 vs 2t=8); cw586: 3 errors + 0 erasures (2e+s=6 vs 2t=8)
+
+######## T-rep at k16, B = 861 (share 0.9946)
+== 131072/niah_multikey_2/162015 T-rep B=861.078 design=None k16: cells 5060818, cell error rate 0.2761, {}
+  rule         failed 4/150
+    key 'early-inhibitor' want ['8423733'] got ['9560316']
+    key 'incandescent-volunteer' want ['7506693'] got ['5650703']
+    key 'maddening-underwear' want ['8985855'] got ['8193525']
+
+######## T-vhdd at k16, B = 256 (share 0.9925)
+== 131072/niah_multikey_2/162015 T-vhdd B=256 design=0.3 k16: cells 1529662, cell error rate 0.2762, {}
+  rule         failed 4/150
+    key 'honorable-postfix' want ['1175671'] got ['9836955', '8676499']
+    key 'nonstop-revelation' want ['7685723'] got ['2128898']
+    key 'few-balloon' want ['8532482'] got ['2394542']
+
+######## V-last at lines-nat-k8, B = 128 (share 0.9908)
+== 131072/niah_multikey_2/162015 V-last B=128 design=None lines-nat-k8: cells 767322, cell error rate 0.1248, {}
+  rule last    failed 4/150
+    key 'gentle-therapy' want ['2923185'] got ['1002773'] | best sims per j [0.04100000113248825, 0.0430000014603138, 0.04100000113248825], tags [True, False, True] | true value sim at j=0 0.035 | its shard's cells read wrong 0.123
+    key 'spiritual-attic' want ['9967794'] got ['8964919'] | best sims per j [0.041999999433755875, 0.0430000014603138, 0.03999999910593033], tags [True, True, True] | true value sim at j=0 0.032 | its shard's cells read wrong 0.182
+    key 'aberrant-locality' want ['2394978'] got ['6269883', '2805275', '9855730'] | best sims per j [0.05299999937415123, 0.04600000008940697, 0.041999999433755875], tags [False, False, True] | true value sim at j=0 0.053 | its shard's cells read wrong 0.143
+
+######## V-Snt at lines-nat-k8, B = 128 (share 0.9908)
+== 131072/niah_multikey_2/44358 V-plain B=128 design=None lines-nat-k8: cells 767228, cell error rate 0.1310, {}
+  rule snt     failed 4/150
+    key 'crowded-designer' want ['9916248'] got ['4992788'] | best sims per j [0.04699999839067459, 0.04600000008940697, 0.04899999871850014], tags [False, False, False] | true value sim at j=0 0.033 | its shard's cells read wrong 0.225
+    key 'crabby-gather' want ['4992788'] got ['1574894'] | best sims per j [0.0430000014603138, 0.04100000113248825, 0.0430000014603138], tags [False, False, False] | true value sim at j=0 0.038 | its shard's cells read wrong 0.167
+    key 'womanly-round' want ['4807808'] got ['1005967'] | best sims per j [0.04699999839067459, 0.04699999839067459, 0.03999999910593033], tags [False, False, False] | true value sim at j=0 0.034 | its shard's cells read wrong 0.133
+
+######## E-LDPC at lines-nat-k8, B = 54 (share 0.6539)
+== 131072/niah_multikey_2/162015 E-LDPC B=53.8174 design=0.3333333333333333 lines-nat-k8: cells 322635, cell error rate 0.1261, {'cw_nonconv': 72}
+  rule         failed 41/150
+    key 'rural-messy' want ['3149341'] got ['8861151'] | needs LDPC codewords [8, 79] of 101
+    key 'bitter-larder' want ['1184787'] got ['8256856'] | needs LDPC codewords [2, 63] of 101
+    key 'petite-fur' want ['4627933'] got ['4089149'] | needs LDPC codewords [7, 21] of 101
+
+######## E-BCH at lines-nat-k8, B = 108 (share 0.6719)
+== 131072/niah_multikey_2/162015 E-BCH B=107.635 design=[1023, 493, 59] lines-nat-k8: cells 645270, cell error rate 0.1161, {'cw_bound': 102, 'cw_lib': 2, 'cw_fail': 106}
+  rule         failed 51/150
+    key 'unbiased-pharmacopoeia' want ['6201627'] got ['9874240'] | cw22: 93 errors + 1 erasures (2e+s=187 vs 2t=118); cw78: 116 errors + 1 erasures (2e+s=233 vs 2t=118)
+    key 'petite-fur' want ['4627933'] got ['1876552'] | cw15: 52 errors + 0 erasures (2e+s=104 vs 2t=118); cw44: 133 errors + 1 erasures (2e+s=267 vs 2t=118)
+    key 'charming-pest' want ['5162478'] got [6895] | cw6: 167 errors + 0 erasures (2e+s=334 vs 2t=118); cw65: 103 errors + 2 erasures (2e+s=208 vs 2t=118); cw66: 104 errors + 1 erasures (2e+s=209 vs 2t=118)
+
+######## T-rep at lines-nat-k8, B = 256 (share 0.6371)
+== 131072/niah_multikey_2/162015 T-rep B=256 design=None lines-nat-k8: cells 1445948, cell error rate 0.1256, {}
+  rule         failed 51/150
+    key 'cloistered-crisis' want ['5908344'] got ['7142391', '2962710']
+    key 'screeching-notepad' want ['4618644'] got ['7385128']
+    key 'evasive-flanker' want ['2468742'] got [6612]
+
+######## T-vhdd at lines-nat-k8, B = 91 (share 0.7399)
+== 131072/niah_multikey_2/162015 T-vhdd B=90.5097 design=0.3 lines-nat-k8: cells 539107, cell error rate 0.1254, {}
+  rule         failed 37/150
+    key 'chunky-fingerling' want ['9904485'] got ['6052754']
+    key 'cloistered-crisis' want ['5908344'] got ['5318809']
+    key 'bawdy-minister' want ['8676499'] got ['9563804']

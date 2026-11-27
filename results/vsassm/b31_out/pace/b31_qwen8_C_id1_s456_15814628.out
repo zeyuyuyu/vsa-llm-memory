@@ -1,0 +1,36 @@
+---------------------------------------
+Begin Slurm Prolog: Nov-18-2026 07:08:57
+Job ID:    15814628
+User ID:   <user>
+Account:   gts-nimam6
+Job name:  b31_qwen8_C_id1_s456
+Partition: gpu-a100
+QOS:       inferno
+---------------------------------------
+B31-PACE start 2026-11-18T12:08:57Z host atl1-1-01-002-28-0.pace.gatech.edu job 15814628
+NVIDIA A100-SXM4-80GB, 81920 MiB
+B31 LoRA {"n": {"train": 800, "dev": 500, "test": 500}, "max_len": {"train": 520, "dev": 520, "test": 519}, "gpu": "NVIDIA A100-SXM4-80GB"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 102.31it/s]
+  qwen8 C r8 lr1e-04 id1 sd456 ep1 loss 0.8931 train_sub 0.6700 dev 0.4920 id 0.9502 (192s)
+  qwen8 C r8 lr1e-04 id1 sd456 ep2 loss 0.7954 train_sub 0.6060 dev 0.5080 id 0.9846 (385s)
+  qwen8 C r8 lr1e-04 id1 sd456 ep3 loss 0.6479 train_sub 0.8560 dev 0.4760 id 0.9922 (577s)
+  qwen8 C r8 lr1e-04 id1 sd456 ep4 loss 0.4018 train_sub 0.9500 dev 0.4720 id 0.9958 (770s)
+  qwen8 C r8 lr1e-04 id1 sd456 ep5 loss 0.2542 train_sub 0.9940 dev 0.4760 id 0.9994 (962s)
+  qwen8 C r8 lr1e-04 id1 sd456 ep6 loss 0.0444 train_sub 1.0000 dev 0.4560 id 1.0000 (1154s)
+  qwen8 C r8 lr1e-04 id1 sd456 ep7 loss 0.0051 train_sub 1.0000 dev 0.4740 id 1.0000 (1346s)
+  qwen8 C r8 lr1e-04 id1 sd456 ep8 loss 0.0001 train_sub 1.0000 dev 0.4580 id 1.0000 (1539s)
+  TEST qwen8 C seed 456 at dev-best epoch 2: 0.4800
+B31-PACE end 2026-11-18T12:36:24Z rc=0
+---------------------------------------
+Begin Slurm Epilog: Nov-18-2026 07:36:25
+Job ID:        15814628
+User ID:       <user>
+Account:       gts-nimam6
+Job name:      b31_qwen8_C_id1_s456
+Resources:     cpu=8,gres/gpu:a100=1,mem=120G,node=1
+Rsrc Used:     cput=03:40:16,vmem=0,walltime=00:27:32,mem=1939996K,energy_used=0
+Partition:     gpu-a100
+QOS:           inferno
+Nodes:         atl1-1-01-002-28-0
+---------------------------------------

@@ -1,0 +1,11 @@
+# B53 literature check (support / conflict / gap). References from memory; NOT re-verified on the web in this session.
+- Support: a least-squares (pseudo-inverse / projection) associative memory beats the Hebbian outer-product rule when the
+  stored keys are correlated (Kohonen 1972, IEEE Trans. Computers C-21; Kohonen & Ruohonen 1973; Personnaz, Guyon &
+  Dreyfus 1986, Phys. Rev. A 34; Kanter & Sompolinsky 1987, Phys. Rev. A 35). B53's store is Hebbian; the hand reading
+  (LAM's extra wins are clear aliases lost to cross-talk) fits this account.
+- Support: bipolar MAP codes for a binary value are antipodal in the standard treatments (Gayler 2003; Kanerva 2009);
+  B49's independent random codes for V = 2 were non-standard. Capacity theory of superposed stores (Frady, Kleyko & Sommer
+  2018, Neural Computation 30) makes the read-out SNR depend on the number of dimensions that separate the codes, which is
+  the half-the-coordinates algebra B53 confirmed (B53 at b ~ B49 at 2b).
+- Gap: no published comparison of a superposed MAP store against a quantized ridge memory at equal bits on frozen LLM codes
+  that we know of; the V = 16 advantage over LAM on LLM codes is new and not explained by the papers above.

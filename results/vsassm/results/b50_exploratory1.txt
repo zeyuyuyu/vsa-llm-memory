@@ -1,0 +1,30 @@
+B50 EXPLORATORY 1: least-squares one-hot type readout (MSE-ONEHOT) as DISC's gate (cached states; composed)
+  fit: training type accuracy 1.0000, dev type accuracy 1.0000; dev scores min 0.8669 median 0.9981 max 1.0904
+  AUROC trained vs held-out (score = max output): 0.9999
+     multiplication  score q05 0.948 median 0.997 q95 1.051
+     modulo          score q05 0.941 median 0.995 q95 1.049
+     gcd             score q05 0.963 median 0.998 q95 1.029
+     lcm             score q05 0.969 median 0.998 q95 1.034
+     square_mod      score q05 0.937 median 0.997 q95 1.031
+     bitwise_and     score q05 0.935 median 0.999 q95 1.051
+     bitwise_xor     score q05 0.952 median 1.000 q95 1.040
+     bitwise_or      score q05 0.941 median 0.998 q95 1.042
+     addition        score q05 0.636 median 0.706 q95 0.766
+     division        score q05 0.387 median 0.461 q95 0.541
+  gate > 0.8 (DE25's number): tau 0.8000; open TR 0.9995 addition 0.0160 division 0.0000
+     composed TR 0.9293 (minus DISC-0.8 -0.001 [-0.002, +0.000]), HO 0.9720 (add 0.9840, div 0.9600); HO(VSA) - HO -0.007 [-0.017, +0.003]; seeds HO [0.972, 0.972, 0.972]
+  gate dev-matched (797th largest dev score): tau 0.8902; open TR 0.9950 addition 0.0000 division 0.0000
+     composed TR 0.9258 (minus DISC-0.8 -0.004 [-0.007, -0.002]), HO 0.9800 (add 1.0000, div 0.9600); HO(VSA) - HO -0.015 [-0.026, -0.006]; seeds HO [0.98, 0.98, 0.98]
+
+LIVE CHECK (the same least-squares gate run inside DISC's forward pass; full test split, seeds 0-2)
+  gate 08 (tau 0.8000): open TR 0.9995 addition 0.0160 division 0.0000; TR 0.9293 (minus DISC-0.8 -0.001 [-0.002, +0.000]), HO 0.9720; HO(VSA) - HO -0.007 [-0.017, +0.003]; seeds HO [0.972, 0.972, 0.972]
+     checks: gate re-derivation mismatches 0/7500; live vs cached gate 0/7500; composition mismatches 0/7500
+  gate dev (tau 0.8902): open TR 0.9950 addition 0.0000 division 0.0000; TR 0.9258 (minus DISC-0.8 -0.004 [-0.007, -0.002]), HO 0.9800; HO(VSA) - HO -0.015 [-0.026, -0.006]; seeds HO [0.98, 0.98, 0.98]
+     checks: gate re-derivation mismatches 0/7500; live vs cached gate 0/7500; composition mismatches 0/7500
+  second scorer: b50_out/preds/N/expl1_lsq08_s0.jsonl: n=2500 acc_main=0.9348 acc_check=0.9348 gold_mismatch=0 correct_mismatch=0
+  second scorer: b50_out/preds/N/expl1_lsq08_s1.jsonl: n=2500 acc_main=0.9432 acc_check=0.9432 gold_mismatch=0 correct_mismatch=0
+  second scorer: b50_out/preds/N/expl1_lsq08_s2.jsonl: n=2500 acc_main=0.9356 acc_check=0.9356 gold_mismatch=0 correct_mismatch=0
+  second scorer: b50_out/preds/N/expl1_lsqdev_s0.jsonl: n=2500 acc_main=0.9336 acc_check=0.9336 gold_mismatch=0 correct_mismatch=0
+  second scorer: b50_out/preds/N/expl1_lsqdev_s1.jsonl: n=2500 acc_main=0.9420 acc_check=0.9420 gold_mismatch=0 correct_mismatch=0
+  second scorer: b50_out/preds/N/expl1_lsqdev_s2.jsonl: n=2500 acc_main=0.9344 acc_check=0.9344 gold_mismatch=0 correct_mismatch=0
+  second scorer: TOTAL gold_mismatch 0 correct_mismatch 0

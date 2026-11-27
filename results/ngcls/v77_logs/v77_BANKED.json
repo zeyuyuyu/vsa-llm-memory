@@ -1,0 +1,41 @@
+{
+ "floor": 0.5153,
+ "parser": 0.934,
+ "arms": {
+  "tpr_soft": [
+   0.488,
+   0.528,
+   0.498
+  ],
+  "tpr_clean": [
+   0.536,
+   0.526,
+   0.54
+  ]
+ },
+ "diag": {
+  "tpr_soft": [
+   {
+    "offdiag_cosine": 0.5121978258845782
+   },
+   {
+    "offdiag_cosine": 0.49582632161150075
+   },
+   {
+    "offdiag_cosine": 0.7060883851484819
+   }
+  ],
+  "tpr_clean": [
+   {
+    "offdiag_cosine": 0.3939245746111629
+   },
+   {
+    "offdiag_cosine": 0.4065915859106815
+   },
+   {
+    "offdiag_cosine": 0.40914472021237763
+   }
+  ]
+ },
+ "verdict": "tpr_soft FAILS (0.5047) | tpr_clean FAILS (0.5340) | P1 soft PARTIAL or better: False | P2 soft beats clean by >= .05: False (-0.0293) | P3 off-diagonal cosine <= .30 in 3/3: False ([0.512, 0.496, 0.706]) | NEGATIVE EXTENDS to tensor-product binding with soft unbinding"
+}

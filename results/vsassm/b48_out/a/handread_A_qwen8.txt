@@ -1,0 +1,38 @@
+qwen8 arena C1, family cw (selected dev 0.562, config {"cleanup": "st", "inw": 0, "code": "inst", "lr": 0.001}), seed 42 epoch 3: wrong on 259 of 500
+failures: hop-1 clean-up wrong in 247, hop 1 right but hop 2 wrong in 12, both right in 0
+
+#0 label 0, chain 53 -> 16 -> 3, candidate 44; memory says 1 (score 0.880, threshold 0.862)
+  hop 1 winner symbol 30 (WRONG), hop 2 winner symbol 2 (WRONG)
+
+#6 label 1, chain 42 -> 21 -> 24, candidate 24; memory says 0 (score 0.859, threshold 0.862)
+  hop 1 winner symbol 53 (WRONG), hop 2 winner symbol 55 (WRONG)
+
+#7 label 0, chain 32 -> 46 -> 39, candidate 48; memory says 1 (score 0.875, threshold 0.862)
+  hop 1 winner symbol 31 (WRONG), hop 2 winner symbol 2 (WRONG)
+
+#9 label 0, chain 55 -> 4 -> 10, candidate 19; memory says 1 (score 0.895, threshold 0.862)
+  hop 1 winner symbol 28 (WRONG), hop 2 winner symbol 5 (WRONG)
+
+#11 label 0, chain 63 -> 42 -> 2, candidate 34; memory says 1 (score 0.885, threshold 0.862)
+  hop 1 winner symbol 40 (WRONG), hop 2 winner symbol 5 (WRONG)
+
+#12 label 1, chain 59 -> 63 -> 63, candidate 63; memory says 0 (score 0.860, threshold 0.862)
+  hop 1 winner symbol 47 (WRONG), hop 2 winner symbol 5 (WRONG)
+
+#13 label 0, chain 13 -> 36 -> 55, candidate 11; memory says 1 (score 0.900, threshold 0.862)
+  hop 1 winner symbol 14 (WRONG), hop 2 winner symbol 55 (right)
+
+#17 label 1, chain 15 -> 53 -> 6, candidate 6; memory says 0 (score 0.850, threshold 0.862)
+  hop 1 winner symbol 7 (WRONG), hop 2 winner symbol 1 (WRONG)
+
+#19 label 0, chain 6 -> 17 -> 34, candidate 62; memory says 1 (score 0.889, threshold 0.862)
+  hop 1 winner symbol 45 (WRONG), hop 2 winner symbol 4 (WRONG)
+
+#26 label 0, chain 55 -> 6 -> 54, candidate 0; memory says 1 (score 0.879, threshold 0.862)
+  hop 1 winner symbol 36 (WRONG), hop 2 winner symbol 4 (WRONG)
+
+#29 label 0, chain 32 -> 19 -> 52, candidate 11; memory says 1 (score 0.897, threshold 0.862)
+  hop 1 winner symbol 36 (WRONG), hop 2 winner symbol 4 (WRONG)
+
+#30 label 0, chain 48 -> 45 -> 5, candidate 17; memory says 1 (score 0.873, threshold 0.862)
+  hop 1 winner symbol 0 (WRONG), hop 2 winner symbol 5 (right)

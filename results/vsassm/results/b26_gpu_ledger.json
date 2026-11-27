@@ -1,0 +1,29 @@
+{
+ "jobs": [
+  {
+   "what": "dev re-read (aborted: GPU 0 taken by another process at launch)",
+   "host": "A800",
+   "gpu": "GPU 0",
+   "start": "2026-11-17T10:28:54Z",
+   "end": "2026-11-17T10:31:29Z",
+   "gpu_hours": 0.043
+  },
+  {
+   "what": "dev re-read (2,222 prompts)",
+   "host": "A800",
+   "gpu": "GPU 7",
+   "start": "2026-11-17T10:31:44Z",
+   "end": "2026-11-17T10:36:07Z",
+   "gpu_hours": 0.073
+  },
+  {
+   "what": "test re-read (32,839 prompts)",
+   "host": "A800",
+   "gpu": "GPU 7",
+   "start": "2026-11-17T10:36:26Z",
+   "end": "2026-11-17T11:38:10Z",
+   "gpu_hours": 1.029
+  }
+ ],
+ "note": "Wall-clock x 1 GPU from the run logs. PACE: 0 GPU-hours (two sbatch --test-only start estimates only). CPU (local, 16 cores): dev grid ~45 min x 2 workers, query side ~45 min x 3, write side ~30 min x 3, part b ~10 min x 2. No paid API."
+}

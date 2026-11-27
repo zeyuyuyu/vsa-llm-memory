@@ -1,0 +1,49 @@
+{
+ "host": "atl1-1-01-002-2-0.pace.gatech.edu",
+ "gpu": "NVIDIA L40S",
+ "config": {
+  "arm": "tfull",
+  "B": 4,
+  "seed": 0,
+  "steps": 0,
+  "bs": 32,
+  "lr": 0.0002,
+  "lora_r": 0,
+  "codes": "rand",
+  "proj": "mlp",
+  "lmt_layers": 2,
+  "eval_splits": "dev,test",
+  "eval_every": 0,
+  "eval_sub": 100,
+  "tok_budget": 24000,
+  "device": "cuda",
+  "qfirst": 0,
+  "max_new": 16,
+  "mem_lr": 0,
+  "out": "out/test_tfull_zeroshot"
+ },
+ "n_trainable_lm": 0,
+ "n_trainable_mem": 0,
+ "emb_rms": 0.03449790179729462,
+ "curve": [],
+ "train_seconds": 2.86102294921875e-06,
+ "dev": {
+  "N8_hop1": 0.043333333333333335,
+  "N8_hop2": 0.0033333333333333335,
+  "N32_hop1": 0.09666666666666666,
+  "N32_hop2": 0.0033333333333333335,
+  "N128_hop1": 0.016666666666666666,
+  "N128_hop2": 0.0
+ },
+ "dev_seconds": 177.28013467788696,
+ "test": {
+  "N8_hop1": 0.04833333333333333,
+  "N8_hop2": 0.0033333333333333335,
+  "N32_hop1": 0.12833333333333333,
+  "N32_hop2": 0.0,
+  "N128_hop1": 0.011666666666666667,
+  "N128_hop2": 0.0
+ },
+ "test_seconds": 357.97661662101746,
+ "total_seconds": 547.2851376533508
+}

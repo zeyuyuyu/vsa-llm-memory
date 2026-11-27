@@ -1,0 +1,93 @@
+# B66 (A1): first design - SDMt, two codes x two grids (prereg/B66_reconciliation_prereg.md). R1 = V 2 / 16 x
+# 4, 8, 16 bits per fact x M 256 / 1,024; ideal accounting. Points. Pipeline cells: b36_verdict.boot_region
+# (entity within store, 10,000 draws); clean-room cells: its own bootstrap (entity multinomial shared across
+# its 12 conditions, 2,000 draws). B64 grid = 504 configurations; clean grid = the clean room's 32 data-address
+# configurations (LA, a 1/4/16/64, onehot/bits, exact counts, share 1/0.5). Labels: first leads / second leads /
+# level (B60 rule).
+
+## Qwen3-8B
+| comparison (R1) | pipeline code, B64 grid | pipeline code, clean grid | clean code, B64 grid | clean code, clean grid |
+| --- | --- | --- | --- | --- |
+| first - SDMt |  -1.89 [ -2.76,  -1.00] second leads |  +1.86 [ +0.88,  +2.88] first leads |  -0.95 [ -1.81,  -0.11] second leads |  +2.44 [ +1.64,  +3.26] first leads |
+| first - best of seven |  -2.15 [ -3.04,  -1.26] second leads |  +1.57 [ +0.60,  +2.56] first leads |  -0.95 [ -1.81,  -0.11] second leads |  +2.34 [ +1.59,  +3.08] first leads |
+| final - SDMt |  +1.51 [ +0.66,  +2.36] first leads |  +5.27 [ +4.39,  +6.15] first leads |  +1.45 [ +0.62,  +2.22] first leads |  +4.84 [ +4.01,  +5.69] first leads |
+| final - best of seven |  +1.25 [ +0.43,  +2.10] first leads |  +4.97 [ +4.13,  +5.84] first leads |  +1.45 [ +0.62,  +2.22] first leads |  +4.74 [ +3.93,  +5.54] first leads |
+| first - SDMt, R1-V2 |  -1.42 [ -2.79,  -0.01] second leads |  +1.04 [ -0.62,  +2.74] level |  +0.48 [ -0.60,  +1.49] level |  +2.95 [ +1.85,  +3.93] first leads |
+| first - SDMt, R1-V16 |  -2.36 [ -3.41,  -1.33] second leads |  +2.69 [ +1.59,  +3.80] first leads |  -2.37 [ -3.56,  -1.27] second leads |  +1.94 [ +0.85,  +3.01] first leads |
+  R1 means: pipeline first 45.41, final 48.81, SDMt B64 grid 47.30, SDMt clean grid 43.54; clean first 46.17, final 48.56, SDMt B64 grid 47.12, SDMt clean grid 43.73, SDM Gaussian 35.71, best6 (orig. rule) 43.83
+  D = first - SDMt (R1): pipeline/B64 -1.89, pipeline/clean +1.86, clean/B64 -0.95, clean/clean +2.44; grid effect +3.57, code effect +0.76, interaction -0.36 -> attribution: GRID
+  clean-room re-run reproduces its original run: 108 of 108 (arm, cell) test accuracies identical (max |diff| 0.00e+00)
+  clean-room dev choices per cell (SDMt clean grid / SDMt B64 grid / best7 B64 grid):
+    256|2|4: centre/data/1/onehot/1.0 | whiten/LA/2/bits/tern/1.0 | sdmT64
+    256|2|8: whiten/data/4/bits/1.0 | whiten/LA/2/bits/tern/1.0 | sdmT64
+    256|2|16: whiten/data/4/bits/1.0 | whiten/L/8/bits/tern/1.0 | sdmT64
+    256|16|4: whiten/data/1/onehot/0.5 | whiten/LA/1/onehot/tern/0.5 | sdmT64
+    256|16|8: whiten/data/1/onehot/1.0 | whiten/LA/1/onehot/cnt/1.0 | sdmT64
+    256|16|16: whiten/data/4/onehot/0.5 | whiten/LA/2/onehot/clip3/1.0 | sdmT64
+    1024|2|4: whiten/data/4/bits/1.0 | whiten/L/2/bits/tern/1.0 | sdmT64
+    1024|2|8: whiten/data/4/bits/1.0 | whiten/LA/4/bits/tern/1.0 | sdmT64
+    1024|2|16: whiten/data/16/bits/1.0 | whiten/L/4/onehot/cnt/1.0 | sdmT64
+    1024|16|4: whiten/data/1/onehot/0.5 | whiten/L/1/onehot/cnt/0.5 | sdmT64
+    1024|16|8: whiten/data/1/onehot/1.0 | whiten/L/1/onehot/clip3/1.0 | sdmT64
+    1024|16|16: whiten/data/4/onehot/0.5 | whiten/LA/2/onehot/clip3/1.0 | sdmT64
+  pipeline dev choices per cell, ideal (SDMt clean grid / SDMt B64 grid):
+    256|2|4: whiten/LA/1/bits/cnt/1.0 | whiten/LA/2/bits/tern/1.0
+    256|2|8: whiten/LA/4/bits/cnt/0.5 | whiten/L/2/bits/tern/1.0
+    256|2|16: whiten/LA/4/bits/cnt/1.0 | whiten/LA/4/bits/tern/1.0
+    256|16|4: center/LA/1/bits/cnt/0.5 | center/A/2/onehot/tern/0.5
+    256|16|8: whiten/LA/1/onehot/cnt/1.0 | whiten/L/1/onehot/cnt/1.0
+    256|16|16: whiten/LA/1/onehot/cnt/1.0 | whiten/L/2/onehot/cnt/1.0
+    1024|2|4: whiten/LA/4/bits/cnt/1.0 | whiten/L/2/bits/cnt/1.0
+    1024|2|8: whiten/LA/4/bits/cnt/1.0 | whiten/LA/8/bits/tern/1.0
+    1024|2|16: whiten/LA/16/bits/cnt/1.0 | whiten/LA/8/bits/cnt/1.0
+    1024|16|4: whiten/LA/1/onehot/cnt/0.5 | whiten/L/1/onehot/cnt/0.5
+    1024|16|8: whiten/LA/1/onehot/cnt/1.0 | whiten/L/1/onehot/cnt/1.0
+    1024|16|16: whiten/LA/4/onehot/cnt/0.5 | whiten/L/2/onehot/cnt/1.0
+
+## Llama-3.1-8B
+| comparison (R1) | pipeline code, B64 grid | pipeline code, clean grid | clean code, B64 grid | clean code, clean grid |
+| --- | --- | --- | --- | --- |
+| first - SDMt |  -1.20 [ -2.14,  -0.26] second leads |  +2.03 [ +0.99,  +3.05] first leads |  -0.16 [ -0.99,  +0.66] level |  +2.22 [ +1.39,  +3.06] first leads |
+| first - best of seven |  -1.20 [ -2.14,  -0.26] second leads |  +2.03 [ +1.02,  +3.04] first leads |  -0.16 [ -0.99,  +0.66] level |  +2.13 [ +1.35,  +2.92] first leads |
+| final - SDMt |  +0.91 [ +0.04,  +1.76] first leads |  +4.14 [ +3.18,  +5.09] first leads |  +0.62 [ -0.33,  +1.55] level |  +3.00 [ +2.18,  +3.82] first leads |
+| final - best of seven |  +0.91 [ +0.09,  +1.75] first leads |  +4.14 [ +3.18,  +5.07] first leads |  +0.62 [ -0.33,  +1.55] level |  +2.91 [ +2.10,  +3.71] first leads |
+| first - SDMt, R1-V2 |  -0.68 [ -2.16,  +0.81] level |  +0.28 [ -1.42,  +2.03] level |  +0.73 [ -0.28,  +1.68] level |  +1.63 [ +0.47,  +2.73] first leads |
+| first - SDMt, R1-V16 |  -1.72 [ -2.88,  -0.58] second leads |  +3.78 [ +2.65,  +4.86] first leads |  -1.05 [ -2.25,  +0.15] level |  +2.82 [ +1.67,  +3.95] first leads |
+  R1 means: pipeline first 46.88, final 48.99, SDMt B64 grid 48.08, SDMt clean grid 44.85; clean first 47.74, final 48.52, SDMt B64 grid 47.90, SDMt clean grid 45.51, SDM Gaussian 35.48, best6 (orig. rule) 45.61
+  D = first - SDMt (R1): pipeline/B64 -1.20, pipeline/clean +2.03, clean/B64 -0.16, clean/clean +2.22; grid effect +2.81, code effect +0.62, interaction -0.84 -> attribution: GRID
+  clean-room re-run reproduces its original run: 108 of 108 (arm, cell) test accuracies identical (max |diff| 0.00e+00)
+  clean-room dev choices per cell (SDMt clean grid / SDMt B64 grid / best7 B64 grid):
+    256|2|4: whiten/data/1/bits/1.0 | whiten/LA/2/bits/tern/1.0 | sdmT64
+    256|2|8: whiten/data/4/bits/1.0 | whiten/LA/2/bits/tern/1.0 | sdmT64
+    256|2|16: whiten/data/4/bits/1.0 | whiten/LA/4/bits/clip3/1.0 | sdmT64
+    256|16|4: centre/data/1/onehot/1.0 | centre/L/1/onehot/clip3/1.0 | sdmT64
+    256|16|8: whiten/data/1/onehot/1.0 | whiten/LA/1/onehot/cnt/1.0 | sdmT64
+    256|16|16: whiten/data/4/onehot/0.5 | whiten/L/2/onehot/tern/1.0 | sdmT64
+    1024|2|4: whiten/data/4/bits/1.0 | whiten/L/2/bits/tern/1.0 | sdmT64
+    1024|2|8: whiten/data/4/bits/1.0 | whiten/LA/4/bits/tern/1.0 | sdmT64
+    1024|2|16: whiten/data/16/bits/1.0 | whiten/LA/8/onehot/tern/1.0 | sdmT64
+    1024|16|4: whiten/data/1/onehot/0.5 | whiten/L/1/onehot/clip3/0.5 | sdmT64
+    1024|16|8: whiten/data/1/onehot/1.0 | whiten/L/1/onehot/cnt/1.0 | sdmT64
+    1024|16|16: whiten/data/1/bits/1.0 | whiten/L/2/onehot/cnt/1.0 | sdmT64
+  pipeline dev choices per cell, ideal (SDMt clean grid / SDMt B64 grid):
+    256|2|4: whiten/LA/1/onehot/cnt/1.0 | whiten/A/4/bits/tern/1.0
+    256|2|8: whiten/LA/4/bits/cnt/1.0 | whiten/A/2/bits/cnt/1.0
+    256|2|16: whiten/LA/4/bits/cnt/1.0 | whiten/LA/4/bits/tern/1.0
+    256|16|4: center/LA/1/onehot/cnt/1.0 | center/A/1/onehot/tern/1.0
+    256|16|8: whiten/LA/1/onehot/cnt/1.0 | whiten/L/1/onehot/tern/1.0
+    256|16|16: whiten/LA/1/onehot/cnt/1.0 | whiten/L/2/onehot/cnt/1.0
+    1024|2|4: whiten/LA/1/bits/cnt/1.0 | whiten/L/2/bits/cnt/1.0
+    1024|2|8: whiten/LA/4/bits/cnt/1.0 | whiten/L/4/bits/clip3/1.0
+    1024|2|16: whiten/LA/4/onehot/cnt/1.0 | whiten/LA/4/onehot/cnt/1.0
+    1024|16|4: whiten/LA/1/onehot/cnt/0.5 | whiten/L/1/onehot/cnt/0.5
+    1024|16|8: whiten/LA/1/onehot/cnt/1.0 | whiten/L/1/onehot/cnt/1.0
+    1024|16|16: whiten/LA/4/onehot/cnt/1.0 | whiten/L/2/onehot/cnt/1.0
+
+## Pipeline code on the clean grid, all 7 encoders (R1, ideal): first - SDMTCR, first - BEST7CR, final - BEST7CR
+  Qwen3-8B        first - SDMt(clean grid) +1.86 [+0.88, +2.88] first leads; first - best7(clean) +1.57 first leads bar tie; final - best7(clean) +4.97 first leads bar passes
+  Granite-3.3-8B  first - SDMt(clean grid) +1.24 [+0.30, +2.15] first leads; first - best7(clean) +0.93 level bar tie; final - best7(clean) +2.96 first leads bar passes
+  Llama-3.1-8B    first - SDMt(clean grid) +2.03 [+0.99, +3.05] first leads; first - best7(clean) +2.03 first leads bar passes; final - best7(clean) +4.14 first leads bar passes
+  Mistral-7B      first - SDMt(clean grid) -0.63 [-1.62, +0.35] level; first - best7(clean) +2.12 first leads bar passes; final - best7(clean) +4.66 first leads bar passes
+  e5-base-v2      first - SDMt(clean grid) +1.08 [+0.14, +2.02] first leads; first - best7(clean) +0.07 level bar tie; final - best7(clean) +0.35 level bar tie
+  bge-small       first - SDMt(clean grid) -1.58 [-2.64, -0.57] second leads; first - best7(clean) -2.41 second leads bar loss; final - best7(clean) -1.13 second leads bar tie
+  MiniLM-L6       first - SDMt(clean grid) -1.90 [-2.71, -1.06] second leads; first - best7(clean) -2.71 second leads bar loss; final - best7(clean) -2.08 second leads bar loss

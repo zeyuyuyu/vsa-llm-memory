@@ -1,0 +1,102 @@
+# B49 literature check (prereg/B49_panel_mechanism_competitors_prereg.md). Done by a literature subagent (web only)
+# before any B49 memory comparison; every entry's URL was opened by the subagent; claims from abstracts where only the
+# abstract was available. Updated after the result (section 'After the result').
+
+## Q1. Anisotropy / isotropy of LLM hidden states and sentence embeddings
+- Ethayarajh 2019, How Contextual are Contextualized Word Representations?, EMNLP-IJCNLP (D19-1006): BERT, ELMo, GPT-2
+  representations anisotropic in every layer.
+- Gao et al., Representation Degeneration Problem in Training Natural Language Generation Models, ICLR 2019
+  (arXiv 1907.12009): likelihood training with tied embeddings pushes word embeddings into a narrow cone.
+- Timkey & van Schijndel 2021, All Bark and No Bite: Rogue Dimensions in Transformer Language Models Obscure
+  Representational Quality, EMNLP (2021.emnlp-main.372): 1-3 rogue dimensions dominate cosine; standardisation reveals
+  the representational quality.
+- Su et al. 2021, Whitening Sentence Representations for Better Semantics and Faster Retrieval (arXiv 2103.15316);
+  Huang et al. 2021, WhiteningBERT (arXiv 2104.01767): whitening makes sentence vectors more isotropic and improves STS.
+- Cai et al. 2021, Isotropy in the Contextual Embedding Space: Clusters and Manifolds, ICLR: globally anisotropic,
+  locally isotropic within clusters / low-dimensional manifolds.
+- Rudman et al. 2022, IsoScore, Findings of ACL (arXiv 2108.07344): common isotropy metrics unreliable. Rudman &
+  Eickhoff 2024, Stable Anisotropic Regularization, ICLR (arXiv 2305.19358): decreasing isotropy improves fine-tuned
+  performance on most tasks. Ding et al. 2022 (Insights workshop, 2022.insights-1.1): isotropy calibration gives no
+  consistent gains.
+- Razzhigaev et al. 2024, The Shape of Learning, Findings of EACL (arXiv 2311.05928): decoder anisotropy peaks in the
+  middle layers. Machina & Mercer 2024, Anisotropy is Not Inherent to Transformers, NAACL (2024.naacl-long.274).
+- Valeriani et al. 2023, The geometry of hidden representations of large transformer models, NeurIPS (arXiv 2302.00294):
+  intrinsic dimension expands then contracts across layers. Cheng et al. 2025, ICLR (arXiv 2405.15471): high-ID middle
+  phase transfers best. Tsukagoshi & Sasano 2025, Findings of ACL (arXiv 2506.01435): retrieval / STS embeddings have
+  higher ID and are more isotropic than classification / clustering embeddings.
+
+## Q2. Superposition capacity and cross-talk vs dimension and key correlation
+- Kohonen 1972, Correlation Matrix Memories, IEEE Trans. Computers C-21(4):353-359: non-orthogonal keys cause cross-talk.
+- Plate 1995, Holographic Reduced Representations, IEEE TNN 6(3):623-641: capacity roughly linear in dimension for
+  i.i.d. vectors; similarity among vectors raises the error rate; matrix memories have higher capacity per dimension.
+- Frady, Kleyko & Sommer 2018, A theory of sequence indexing and working memory in recurrent neural networks, Neural
+  Computation 30(6) (arXiv 1803.00412): cross-talk limits retrieval; a Wiener-filter (statistically optimal) readout
+  gives much higher capacity.
+- Thomas, Dasgupta & Rosing 2021, Theoretical foundations of hyperdimensional computing, JAIR 72 (arXiv 2010.07426):
+  exact decoding of bundles of size <= s needs a 1/(2s)-incoherent codebook; correlated keys lower s.
+- Clarkson, Ubaru & Yang, Capacity Analysis of Vector Symbolic Architectures (arXiv 2301.10352; JAIR 86): dimension
+  bounds; MAP linked to Johnson-Lindenstrauss sketches and Bloom filters.
+- Kleyko et al. 2023, Neural Computation (arXiv 2305.16873): interference-cancelling decoders raise the information
+  rate of the same superposition from 0.60 to 1.26 bits per dimension.
+- Neubert & Schubert 2021, CVPR (arXiv 2101.07720): mean-centring descriptors before bundling improves
+  quasi-orthogonality.
+- Gap: no paper found showing that ZCA whitening of keys raises VSA capacity.
+
+## Q3. Pseudo-inverse (least-squares) vs Hebbian associative memory
+- Kohonen & Ruohonen 1973, IEEE Trans. Computers C-22(7):701-702: pseudo-inverse recall exact for linearly independent
+  keys (pairs <= key dimension), least-squares otherwise.
+- Personnaz, Guyon & Dreyfus 1986, Phys. Rev. A 34:4217: projection rule, errorless storage and retrieval.
+- Kanter & Sompolinsky 1987, Phys. Rev. A 35:380: any linearly independent set recalled up to alpha = 1, basins shrink
+  to 0 as alpha -> 1.
+- Loewe 1998, Ann. Appl. Prob. 8(4):1216-1250: Hebbian storage of correlated patterns, capacity falls with correlation.
+- Schlag, Irie & Schmidhuber 2021, ICML (arXiv 2102.11174): additive outer-product memory has a capacity limit; the
+  delta rule fixes it at the same state size.
+- Gap: no equal-bits comparison of a pseudo-inverse matrix memory with a single VSA vector found.
+
+## Q4. Learned (supervised) binary hashing
+- Strecha, Bronstein, Bronstein & Fua 2012, LDAHash, TPAMI 34:66-78: projection = whitening by the covariance of
+  matched-pair differences, then thresholding; 64-128-bit codes.
+- Gong, Lazebnik, Gordo & Perronnin 2013, ITQ / CCA-ITQ, TPAMI 35(12): LSH too noisy at few bits; data-adapted codes
+  matter most at small code sizes; CCA-ITQ beats unsupervised variants.
+- Liu et al. 2012, Supervised Hashing with Kernels, CVPR: gains from learning from pairs.
+- Sablayrolles et al. 2017, ICASSP (arXiv 1609.06753): standard protocols overstate supervised hashing; evaluate on
+  disjoint classes (our queries are unseen entities' aliases, a disjoint-class setting).
+- Wang et al., A Survey on Learning to Hash, TPAMI (arXiv 1606.00185).
+- Gap: all evidence at 32-256 bits per item; nothing at 4-16.
+
+## Q5. Method rankings across embedding models
+- Aumueller & Ceccarello 2021, Information Systems 101 (arXiv 1907.07387): local intrinsic dimensionality drives ANN
+  difficulty.
+- Caspari et al., CoRECT (arXiv 2510.19340, preprint): compression performance varies across models.
+- Xiao (arXiv 2605.17524, single-author preprint): covariance structure governs binary-quantisation fidelity across
+  embedding models.
+- Gap: no comparison of sketches, LSH or VSA stores on LLM hidden states vs sentence encoders found.
+
+## Synthesis before the result
+(a) Cross-talk theory (Kohonen, Plate, Thomas et al., Frady et al.) ties superposition capacity to how close the keys
+are to orthogonal; more usable dimensions after whitening (larger d') should favour superposition: consistent with HD.
+Direct evidence that whitening raises VSA capacity: none found.
+(b) Classical theory predicts a pseudo-inverse / least-squares memory beats the Hebbian rule at equal state size,
+with the caveat of shrinking basins near capacity (our queries are perturbed keys).
+(c) Learned hashing should beat LSH most at short codes, but the evidence is at >= 32 bits and on seen classes.
+(d) Raw anisotropy matters mainly through rogue dimensions that distort cosine; whether isotropy helps is contested.
+
+Not verified by the subagent: Plate's 2003 book, Personnaz et al. 1985, the Hebbian alpha ~ 0.138 figure.
+
+## After the result (2026-11-20)
+- The least-squares associative memory (LAM) beats the MAP store by 1.9-3.4 points over R1 on all seven encoders, at
+  V = 2 by 5-16 points; the MAP store beats LAM at V = 16 on the LLM codes. SUPPORTS the classical result that the
+  pseudo-inverse / least-squares rule beats the Hebbian outer-product rule at equal state size (Kohonen & Ruohonen 1973;
+  Schlag et al. 2021) and Plate 1995's remark that matrix memories have higher capacity per dimension. Own analysis, no
+  precedent found: at V = 2 two independent random value codes agree on about half of the store's coordinates, so the
+  MAP read (score difference) uses about half of the stored dimensions, which a single discriminant (LAM) does not waste.
+- Learned hashing (shrinkage LDA, then the per-fact index) beats unlearned hashing by 1.8-9.3 points over R1 on every
+  encoder, on queries of entities never seen in training. SUPPORTS Gong et al. 2013 (data-adapted codes matter most at
+  short code lengths); EXTENDS the evidence to 4-16 bits per item; does not support Sablayrolles et al.'s caution that
+  supervised hashing gains vanish on unseen classes (our classes are disjoint entities; the map learns alias variation).
+- Isotropising the Qwen3-8B codes did not reduce the store's margin (Delta +4.40 vs BEST, +1.81 vs BEST36) and
+  anisotropising e5 did not create one (-1.70 / -0.11). CONFLICTS with the anisotropy account; CONSISTENT with Ding et
+  al. 2022 and Rudman & Eickhoff 2024 (isotropy itself gives no consistent gain).
+- Capping the Qwen3-8B codes at 768 dimensions kept most of the margin over B36's classical memories (+6.77 -> +5.44;
+  Granite +6.06 -> +3.86), far above e5's +0.60 at the same dimension: the LLM / sentence-encoder difference is not the
+  ambient dimension. No precedent found (gap).

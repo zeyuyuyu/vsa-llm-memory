@@ -1,0 +1,16 @@
+Using the latest cached version of the dataset since Muennighoff/babi couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /path/to/work/hf_home/datasets/Muennighoff___babi/default/0.0.0/1da25875bda08552be0dbb0ec4ee1d37c6f31667 (last modified on Mon Sep 14 16:53:44 2026).
+train 18013 task2: 900 per-task: {1: 900, 2: 900, 3: 900, 4: 900, 5: 900, 6: 900, 7: 900, 8: 900, 9: 900, 10: 900, 11: 900, 12: 900, 13: 900, 14: 900, 15: 900, 16: 900, 17: 904, 18: 905, 19: 900, 20: 904}
+validation 1987 task2: 100 per-task: {1: 100, 2: 100, 3: 100, 4: 100, 5: 100, 6: 100, 7: 100, 8: 100, 9: 100, 10: 100, 11: 100, 12: 100, 13: 100, 14: 100, 15: 100, 16: 100, 17: 96, 18: 95, 19: 100, 20: 96}
+test 20000 task2: 1000 per-task: {1: 1000, 2: 1000, 3: 1000, 4: 1000, 5: 1000, 6: 1000, 7: 1000, 8: 1000, 9: 1000, 10: 1000, 11: 1000, 12: 1000, 13: 1000, 14: 1000, 15: 1000, 16: 1000, 17: 1000, 18: 1000, 19: 1000, 20: 1000}
+{'passage': Value('string'), 'question': Value('string'), 'answer': Value('string'), 'task': Value('int64')}
+task-2 test rows 1000
+n stories (heuristic) 200 first starts [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
+starts near 500: [480, 485, 490, 495, 500, 505, 510, 515, 520]
+---- 497 'Daniel travelled to the garden.\nMary journeyed to the bathroom.\nJohn went back to the kitchen.\nJohn went back to the hallway.\nJohn travelled to the kitchen.\nMary journeyed to the office.\nMary got the ' | Where is the football? | bedroom
+---- 498 'Daniel travelled to the garden.\nMary journeyed to the bathroom.\nJohn went back to the kitchen.\nJohn went back to the hallway.\nJohn travelled to the kitchen.\nMary journeyed to the office.\nMary got the ' | Where is the milk? | hallway
+---- 499 'Daniel travelled to the garden.\nMary journeyed to the bathroom.\nJohn went back to the kitchen.\nJohn went back to the hallway.\nJohn travelled to the kitchen.\nMary journeyed to the office.\nMary got the ' | Where is the milk? | hallway
+---- 500 'Mary journeyed to the office.\nMary moved to the bedroom.\nDaniel moved to the bedroom.\nDaniel travelled to the garden.\nDaniel went to the kitchen.\nJohn journeyed to the office.\nMary went to the office.' | Where is the apple? | office
+---- 501 'Mary journeyed to the office.\nMary moved to the bedroom.\nDaniel moved to the bedroom.\nDaniel travelled to the garden.\nDaniel went to the kitchen.\nJohn journeyed to the office.\nMary went to the office.' | Where is the apple? | office
+train 900 val 100
+dup rest vs first500 0 rest vs train 0

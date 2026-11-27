@@ -1,0 +1,41 @@
+====================================================================================================
+V-135  model=/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct  depth 2 primary  N=120 per cell
+====================================================================================================
+
+  K       store     plain     cot       | gap       ptok       trunc     window
+  120     1.0000    0.9250    0.9667    |   +0.0750 1404       0.000     ok
+  250     0.9972    0.9417    0.9583    |   +0.0556 2775       0.000     ok
+  500     1.0000    0.9000    0.9083    |   +0.1000 5415       0.000     ok
+  1000    1.0000    0.7500    0.7500    |   +0.2500 10692      0.000     ok
+  2000    0.9972    0.2500    0.3500    |   +0.7472 21246      0.000     ok
+  4000    1.0000    0.0000    0.0000    |   +1.0000 42354      1.000     WINDOW-LIMITED, excluded
+
+  ---- P0 validity gate ----
+  P0(a) reproduces V-133 at K=120: store 1.0000 vs 0.9889 (True), plain 0.9250 vs 0.9067 (True)
+  P0(b) task well-formed: 720/720: True
+  P0(c) at least two untruncated cells to compare: [120, 250, 500, 1000, 2000] True
+
+  ---- P1 / P2 / P3  (largest untruncated K = 2000) ----
+  P1 store - plain at K=2000 = +0.7472  CI [+0.6667, +0.8222]  >= +.30 True  => HOLDS
+  P2 gap(2000) - gap(120)    = +0.6722  CI [+0.5806, +0.7611]  >= +.25 True  => HOLDS
+  P3 store at K=2000 = 0.9972 >= .70  => HOLDS
+
+  ---- P4 descriptive ----
+    K=120   prompt 1404 tok, 1.869 s/query | store 0.0190 s/query
+    K=250   prompt 2775 tok, 3.033 s/query | store 0.0380 s/query
+    K=500   prompt 5415 tok, 5.330 s/query | store 0.0750 s/query
+    K=1000  prompt 10692 tok, 11.340 s/query | store 0.1502 s/query
+    K=2000  prompt 21246 tok, 27.542 s/query | store 0.2996 s/query
+    K=4000  prompt 42354 tok, 175.015 s/query | store 0.5986 s/query
+
+====================================================================================================
+V-135 VERDICT: P1 HOLDS | P2 HOLDS | P3 HOLDS
+
+  Evidence VOLUME is the axis on which the algebra separates from prompting, where depth
+  (V-133) and knowledge location (V-134) were not. A fixed-capacity sharded memory holds
+  while a linearly growing context degrades.
+  BINDING SCOPE: this is one 32B reader with a 32k window. V-130 found frontier readers tie
+  or beat the store on matched evidence, and their windows are far larger, so the claim is
+  'above this reader's comfortable range', NOT 'against readers in general'.
+====================================================================================================
+V135-SCORED

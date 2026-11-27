@@ -1,0 +1,10 @@
+# B73 (equal bits) predictions (prereg Q1-Q8), scored from results/b73_verdict.json
+
+Q1 C1 confirmed: CONFIRMED -> HELD
+Q2 C2 confirmed: CONFIRMED -> HELD
+Q3 C3 NLMSC leads on >= 6 of 7: 7 of 7 -> HELD; point prediction 'confirmed': CONFIRMED -> HELD; Llama label NLMSC
+Q4 C4 NOT confirmed: CONFIRMED -> FAILED; VSAPCX leads on 0 (predicted 0) -> HELD
+Q5 two-level label = one-level in >= 90% of the (claim x encoder) R1 cases: 28 of 28 (100%) -> HELD
+Q6 VSAR - SDMT: SDMT ahead on >= 5 of 7: 5 of 7 -> HELD
+Q7 mean R1 accuracy within 10 points of PopQA (arms with a PopQA value: STORE, LAMC, NLMSC): 21 of 21; largest |difference| 6.78 (qwen8 LAMC: 59.65 vs 52.87) -> HELD
+Q8 checks: score_sent: n_region_statistics=99, max_abs_difference=1.3877787807814457e-17; bits_sent: rows=3150, over_budget=0, not_maximal=0, config_mismatch=0; same_sent: files_compared=29, files_differing=0; score_llm: n_region_statistics=132, max_abs_difference=1.0408340855860843e-17, machine=A800 box, b73_check.py md5 554769ff...; bits_llm: rows=4200, over_budget=0, not_maximal=0, config_mismatch=0; same_llm: files_compared=24, files_differing=0

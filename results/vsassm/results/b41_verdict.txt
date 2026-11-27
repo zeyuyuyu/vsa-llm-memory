@@ -1,0 +1,123 @@
+# B41 test verdict (b41_verdict.py). Cells pooled over seeds [1, 2, 3]; accuracies with 95% bootstrap CIs (queries resampled within seed).
+# ops = per-query operations; traffic = 32-bit words read; state = words carried between hops.
+
+## rho level low (rho = 0.030)
+  h = 2
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.034  0.869/4.1e+03          0.946/4.1e+03          0.946/4.3e+03          0.946/5.7e+04          | 0.928 [0.919,0.937] / 2.7e+08  -0.017 [-0.022,-0.012] TABLE/TABLE/TABLE
+            v* = VSA_END_D65536_kb4; most accurate VSA VSA_END_D65536_kb4 0.928; C-ratio 1.5e-05; recovery by D 256:0.22, 1024:0.51, 4096:0.66, 16384:0.74, 65536:0.83
+    320     0.034  0.856/4.1e+03          0.941/4.1e+03          0.941/4.3e+03          0.941/2.0e+05          | 0.923 [0.913,0.932] / 5.4e+08  -0.018 [-0.023,-0.014] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb4; most accurate VSA VSA_HOP4_D65536_kb4 0.923; C-ratio 7.7e-06; recovery by D 256:-2.85, 1024:0.08, 4096:0.48, 16384:0.64, 65536:0.78
+    3200    0.034  0.858/4.1e+03          0.948/4.1e+03          0.948/6.0e+03          0.948/1.7e+06          | 0.904 [0.894,0.915] / 5.4e+08  -0.043 [-0.051,-0.036] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb4; most accurate VSA VSA_HOP4_D65536_kb4 0.904; C-ratio 7.6e-06; recovery by D 256:-9.59, 1024:-8.32, 4096:-0.36, 16384:0.30, 65536:0.53
+    32000   0.034  0.855/4.1e+03          0.937/4.2e+03          0.937/3.4e+04          0.937/1.6e+07          | 0.851 [0.838,0.864] / 5.4e+08  -0.086 [-0.096,-0.076] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.851; C-ratio 7.6e-06; recovery by D 256:-10.41, 1024:-10.42, 4096:-10.38, 16384:-5.77, 65536:-0.04
+    100000  0.034  0.840/4.1e+03          0.904/4.4e+03          0.904/9.8e+04          0.903/5.1e+07          | 0.553 [0.536,0.572] / 5.4e+08  -0.351 [-0.368,-0.335] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.553; C-ratio 7.6e-06; recovery by D 256:-13.32, 1024:-13.32, 4096:-13.33, 16384:-13.11, 65536:-4.43
+  h = 4
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.034  0.773/4.1e+03          0.929/4.2e+03          0.929/4.5e+03          0.929/1.1e+05          | 0.903 [0.892,0.913] / 1.1e+09  -0.026 [-0.032,-0.021] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.903; C-ratio 3.8e-06; recovery by D 256:0.23, 1024:0.52, 4096:0.67, 16384:0.76, 65536:0.84
+    320     0.034  0.764/4.1e+03          0.927/4.2e+03          0.927/4.6e+03          0.927/4.0e+05          | 0.890 [0.879,0.901] / 1.1e+09  -0.037 [-0.046,-0.031] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.890; C-ratio 3.8e-06; recovery by D 256:-2.26, 1024:0.06, 4096:0.46, 16384:0.64, 65536:0.77
+    3200    0.034  0.764/4.1e+03          0.927/4.2e+03          0.927/1.4e+04          0.927/3.4e+06          | 0.852 [0.839,0.865] / 1.1e+09  -0.074 [-0.085,-0.065] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.852; C-ratio 3.8e-06; recovery by D 256:-4.68, 1024:-4.59, 4096:-0.34, 16384:0.24, 65536:0.54
+    32000   0.034  0.752/4.1e+03          0.909/4.3e+03          0.909/1.1e+05          0.909/3.3e+07          | 0.743 [0.727,0.758] / 1.1e+09  -0.167 [-0.180,-0.152] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.743; C-ratio 3.8e-06; recovery by D 256:-4.80, 1024:-4.80, 4096:-4.80, 16384:-3.83, 65536:-0.06
+    100000  0.034  0.738/4.1e+03          0.861/5.1e+03          0.860/3.1e+05          0.860/1.0e+08          | 0.320 [0.303,0.336] / 1.1e+09  -0.541 [-0.559,-0.522] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.320; C-ratio 3.8e-06; recovery by D 256:-6.08, 1024:-6.08, 4096:-6.08, 16384:-6.08, 65536:-3.38
+  h = 6
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.034  0.691/4.1e+03          0.901/4.2e+03          0.901/4.6e+03          0.901/1.5e+05          | 0.870 [0.858,0.883] / 1.6e+09  -0.034 [-0.043,-0.026] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.870; C-ratio 2.6e-06; recovery by D 256:0.19, 1024:0.51, 4096:0.67, 16384:0.77, 65536:0.86
+    320     0.034  0.682/4.1e+03          0.911/4.2e+03          0.911/4.9e+03          0.911/5.9e+05          | 0.858 [0.846,0.871] / 1.6e+09  -0.053 [-0.063,-0.045] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.858; C-ratio 2.6e-06; recovery by D 256:-1.85, 1024:0.05, 4096:0.43, 16384:0.63, 65536:0.77
+    3200    0.034  0.680/4.1e+03          0.916/4.2e+03          0.916/2.3e+04          0.915/5.0e+06          | 0.809 [0.794,0.822] / 1.6e+09  -0.107 [-0.119,-0.097] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.809; C-ratio 2.6e-06; recovery by D 256:-2.89, 1024:-2.88, 4096:-0.27, 16384:0.27, 65536:0.55
+    32000   0.034  0.665/4.1e+03          0.903/4.5e+03          0.903/1.9e+05          0.902/4.9e+07          | 0.656 [0.640,0.674] / 1.6e+09  -0.247 [-0.263,-0.231] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.656; C-ratio 2.6e-06; recovery by D 256:-2.79, 1024:-2.79, 4096:-2.80, 16384:-2.55, 65536:-0.04
+    100000  0.034  0.647/4.1e+03          0.810/6.1e+03          0.810/5.3e+05          0.809/1.5e+08          | 0.193 [0.178,0.207] / 1.6e+09  -0.617 [-0.636,-0.600] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb1; most accurate VSA VSA_HOP1_D65536_kb1 0.193; C-ratio 2.6e-06; recovery by D 256:-3.97, 1024:-3.97, 4096:-3.97, 16384:-3.97, 65536:-2.79
+
+## rho level mid (rho = 0.060)
+  h = 2
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.069  0.726/4.1e+03          0.899/4.1e+03          0.899/4.3e+03          0.899/5.7e+04          | 0.871 [0.860,0.883] / 5.4e+08  -0.028 [-0.034,-0.022] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb16; most accurate VSA VSA_HOP4_D65536_kb16 0.871; C-ratio 7.6e-06; recovery by D 256:0.28, 1024:0.54, 4096:0.68, 16384:0.78, 65536:0.85
+    320     0.071  0.734/4.1e+03          0.902/4.1e+03          0.902/4.3e+03          0.902/2.0e+05          | 0.861 [0.849,0.872] / 5.4e+08  -0.041 [-0.048,-0.034] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb4; most accurate VSA VSA_HOP4_D65536_kb4 0.861; C-ratio 7.7e-06; recovery by D 256:-1.28, 1024:0.14, 4096:0.47, 16384:0.65, 65536:0.77
+    3200    0.069  0.734/4.1e+03          0.892/4.1e+03          0.892/6.0e+03          0.892/1.7e+06          | 0.817 [0.803,0.830] / 5.4e+08  -0.075 [-0.085,-0.066] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb4; most accurate VSA VSA_HOP4_D65536_kb4 0.817; C-ratio 7.6e-06; recovery by D 256:-4.64, 1024:-3.99, 4096:-0.29, 16384:0.30, 65536:0.54
+    32000   0.069  0.724/4.1e+03          0.864/4.2e+03          0.865/3.4e+04          0.865/1.6e+07          | 0.720 [0.703,0.737] / 5.4e+08  -0.145 [-0.159,-0.132] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb16; most accurate VSA VSA_HOP1_D65536_kb16 0.720; C-ratio 7.6e-06; recovery by D 256:-5.13, 1024:-5.13, 4096:-5.11, 16384:-2.75, 65536:-0.03
+    100000  0.070  0.714/4.1e+03          0.802/4.4e+03          0.802/9.7e+04          0.802/5.1e+07          | 0.474 [0.457,0.491] / 5.4e+08  -0.328 [-0.345,-0.311] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb1; most accurate VSA VSA_HOP1_D65536_kb1 0.474; C-ratio 7.6e-06; recovery by D 256:-8.07, 1024:-8.07, 4096:-8.07, 16384:-7.97, 65536:-2.71
+  h = 4
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.069  0.568/4.1e+03          0.853/4.2e+03          0.854/4.4e+03          0.854/1.1e+05          | 0.808 [0.792,0.822] / 1.1e+09  -0.046 [-0.056,-0.039] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb16; most accurate VSA VSA_HOP4_D65536_kb16 0.808; C-ratio 3.8e-06; recovery by D 256:0.20, 1024:0.51, 4096:0.69, 16384:0.81, 65536:0.86
+    320     0.071  0.571/4.1e+03          0.855/4.2e+03          0.855/4.6e+03          0.855/4.0e+05          | 0.789 [0.774,0.803] / 1.1e+09  -0.066 [-0.077,-0.058] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.789; C-ratio 3.8e-06; recovery by D 256:-1.01, 1024:0.09, 4096:0.45, 16384:0.66, 65536:0.77
+    3200    0.069  0.589/4.1e+03          0.857/4.2e+03          0.859/1.4e+04          0.859/3.4e+06          | 0.726 [0.709,0.741] / 1.1e+09  -0.133 [-0.146,-0.121] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb4; most accurate VSA VSA_HOP4_D65536_kb4 0.726; C-ratio 3.8e-06; recovery by D 256:-2.18, 1024:-2.12, 4096:-0.28, 16384:0.24, 65536:0.51
+    32000   0.069  0.564/4.1e+03          0.829/4.4e+03          0.831/1.1e+05          0.828/3.3e+07          | 0.544 [0.527,0.562] / 1.1e+09  -0.286 [-0.303,-0.269] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.544; C-ratio 3.8e-06; recovery by D 256:-2.14, 1024:-2.14, 4096:-2.14, 16384:-1.69, 65536:-0.08
+    100000  0.070  0.540/4.1e+03          0.697/5.2e+03          0.697/3.1e+05          0.696/1.0e+08          | 0.238 [0.222,0.253] / 1.1e+09  -0.460 [-0.478,-0.443] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb1; most accurate VSA VSA_HOP1_D65536_kb1 0.238; C-ratio 3.8e-06; recovery by D 256:-3.46, 1024:-3.46, 4096:-3.46, 16384:-3.46, 65536:-1.94
+  h = 6
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.069  0.449/4.1e+03          0.813/4.2e+03          0.814/4.6e+03          0.814/1.5e+05          | 0.753 [0.737,0.768] / 1.6e+09  -0.062 [-0.074,-0.055] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb16; most accurate VSA VSA_HOP16_D65536_kb16 0.753; C-ratio 2.6e-06; recovery by D 256:0.19, 1024:0.50, 4096:0.67, 16384:0.78, 65536:0.83
+    320     0.071  0.451/4.1e+03          0.825/4.2e+03          0.827/4.9e+03          0.827/5.9e+05          | 0.729 [0.713,0.745] / 1.6e+09  -0.104 [-0.117,-0.091] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.729; C-ratio 2.6e-06; recovery by D 256:-0.76, 1024:0.06, 4096:0.41, 16384:0.63, 65536:0.74
+    3200    0.069  0.455/4.1e+03          0.820/4.2e+03          0.824/2.3e+04          0.824/5.0e+06          | 0.637 [0.620,0.654] / 1.6e+09  -0.187 [-0.202,-0.173] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb4; most accurate VSA VSA_HOP4_D65536_kb4 0.637; C-ratio 2.6e-06; recovery by D 256:-1.23, 1024:-1.23, 4096:-0.22, 16384:0.24, 65536:0.52
+    32000   0.069  0.435/4.1e+03          0.793/4.6e+03          0.794/1.9e+05          0.793/4.9e+07          | 0.412 [0.395,0.430] / 1.6e+09  -0.382 [-0.400,-0.364] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.412; C-ratio 2.6e-06; recovery by D 256:-1.21, 1024:-1.22, 4096:-1.21, 16384:-1.10, 65536:-0.06
+    100000  0.070  0.414/4.1e+03          0.623/6.2e+03          0.622/5.3e+05          0.621/1.5e+08          | 0.129 [0.117,0.141] / 1.6e+09  -0.494 [-0.513,-0.476] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb1; most accurate VSA VSA_HOP1_D65536_kb1 0.129; C-ratio 2.6e-06; recovery by D 256:-2.00, 1024:-2.00, 4096:-2.00, 16384:-2.00, 65536:-1.38
+
+## rho level high (rho = 0.200)
+  h = 2
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.261  0.295/4.1e+03          0.619/4.1e+03          0.635/4.3e+03          0.641/5.7e+04          | 0.564 [0.547,0.582] / 5.4e+08  -0.077 [-0.087,-0.067] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb16; most accurate VSA VSA_HOP4_D65536_kb16 0.564; C-ratio 7.7e-06; recovery by D 256:0.18, 1024:0.41, 4096:0.58, 16384:0.72, 65536:0.80
+    320     0.263  0.299/4.1e+03          0.621/4.1e+03          0.639/4.3e+03          0.642/2.0e+05          | 0.531 [0.512,0.551] / 5.4e+08  -0.111 [-0.122,-0.099] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb16; most accurate VSA VSA_HOP16_D65536_kb16 0.531; C-ratio 7.6e-06; recovery by D 256:-0.34, 1024:0.03, 4096:0.31, 16384:0.51, 65536:0.68
+    3200    0.260  0.280/4.1e+03          0.601/4.1e+03          0.610/6.2e+03          0.611/1.7e+06          | 0.420 [0.403,0.437] / 5.4e+08  -0.191 [-0.206,-0.177] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb16; most accurate VSA VSA_HOP4_D65536_kb16 0.420; C-ratio 7.6e-06; recovery by D 256:-0.85, 1024:-0.64, 4096:-0.19, 16384:0.16, 65536:0.42
+    32000   0.261  0.270/4.1e+03          0.516/4.3e+03          0.517/3.4e+04          0.518/1.6e+07          | 0.256 [0.240,0.273] / 5.4e+08  -0.262 [-0.279,-0.247] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.256; C-ratio 7.6e-06; recovery by D 256:-1.08, 1024:-1.08, 4096:-1.07, 16384:-0.56, 65536:-0.05
+    100000  0.262  0.250/4.1e+03          0.352/4.7e+03          0.351/9.7e+04          0.351/5.1e+07          | 0.155 [0.143,0.167] / 5.4e+08  -0.197 [-0.212,-0.183] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb1; most accurate VSA VSA_HOP1_D65536_kb1 0.155; C-ratio 7.6e-06; recovery by D 256:-2.46, 1024:-2.45, 4096:-2.45, 16384:-2.36, 65536:-0.92
+  h = 4
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.261  0.124/4.1e+03          0.557/4.2e+03          0.585/4.4e+03          0.595/1.1e+05          | 0.478 [0.460,0.496] / 1.1e+09  -0.117 [-0.130,-0.105] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb16; most accurate VSA VSA_HOP16_D65536_kb16 0.478; C-ratio 3.9e-06; recovery by D 256:0.10, 1024:0.32, 4096:0.52, 16384:0.64, 65536:0.75
+    320     0.263  0.117/4.1e+03          0.564/4.2e+03          0.591/4.6e+03          0.597/4.0e+05          | 0.407 [0.389,0.424] / 1.1e+09  -0.190 [-0.205,-0.176] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb16; most accurate VSA VSA_HOP16_D65536_kb16 0.407; C-ratio 3.8e-06; recovery by D 256:-0.16, 1024:0.00, 4096:0.24, 16384:0.44, 65536:0.60
+    3200    0.260  0.114/4.1e+03          0.546/4.2e+03          0.569/1.5e+04          0.574/3.4e+06          | 0.260 [0.245,0.277] / 1.1e+09  -0.314 [-0.331,-0.297] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb4; most accurate VSA VSA_HOP16_D65536_kb4 0.260; C-ratio 3.8e-06; recovery by D 256:-0.25, 1024:-0.24, 4096:-0.10, 16384:0.12, 65536:0.33
+    32000   0.261  0.098/4.1e+03          0.441/4.6e+03          0.440/1.1e+05          0.435/3.3e+07          | 0.083 [0.073,0.093] / 1.1e+09  -0.358 [-0.376,-0.342] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.083; C-ratio 3.8e-06; recovery by D 256:-0.29, 1024:-0.29, 4096:-0.29, 16384:-0.22, 65536:-0.04
+    100000  0.262  0.079/4.1e+03          0.196/5.7e+03          0.197/3.1e+05          0.197/1.0e+08          | 0.030 [0.024,0.036] / 1.1e+09  -0.169 [-0.183,-0.157] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.030; C-ratio 3.8e-06; recovery by D 256:-0.66, 1024:-0.67, 4096:-0.66, 16384:-0.67, 65536:-0.42
+  h = 6
+    N       err    ARGMAX acc/ops         BEAM(4,16) acc/ops     BEAM(16,inf) acc/ops   EXACT acc/ops          | VSA v* acc [CI] / ops          A-gap ops [CI]         verdict ops/traffic/state
+    32      0.261  0.047/4.1e+03          0.512/4.2e+03          0.549/4.6e+03          0.567/1.5e+05          | 0.419 [0.401,0.436] / 1.6e+09  -0.148 [-0.160,-0.135] TABLE/TABLE/TABLE
+            v* = VSA_HOP16_D65536_kb16; most accurate VSA VSA_HOP16_D65536_kb16 0.419; C-ratio 2.6e-06; recovery by D 256:0.05, 1024:0.24, 4096:0.44, 16384:0.58, 65536:0.72
+    320     0.263  0.045/4.1e+03          0.528/4.2e+03          0.566/5.0e+03          0.575/5.9e+05          | 0.298 [0.281,0.314] / 1.6e+09  -0.277 [-0.294,-0.261] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb4; most accurate VSA VSA_HOP4_D65536_kb4 0.298; C-ratio 2.6e-06; recovery by D 256:-0.07, 1024:0.01, 4096:0.17, 16384:0.35, 65536:0.52
+    3200    0.260  0.060/4.1e+03          0.528/4.2e+03          0.567/2.4e+04          0.575/5.0e+06          | 0.181 [0.167,0.195] / 1.6e+09  -0.394 [-0.412,-0.376] TABLE/TABLE/TABLE
+            v* = VSA_HOP4_D65536_kb4; most accurate VSA VSA_HOP4_D65536_kb4 0.181; C-ratio 2.6e-06; recovery by D 256:-0.11, 1024:-0.11, 4096:-0.07, 16384:0.07, 65536:0.24
+    32000   0.261  0.035/4.1e+03          0.396/4.9e+03          0.398/1.9e+05          0.391/4.9e+07          | 0.024 [0.019,0.030] / 1.6e+09  -0.374 [-0.393,-0.358] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.024; C-ratio 2.5e-06; recovery by D 256:-0.10, 1024:-0.10, 4096:-0.09, 16384:-0.09, 65536:-0.03
+    100000  0.262  0.029/4.1e+03          0.118/6.8e+03          0.117/5.3e+05          0.117/1.5e+08          | 0.005 [0.003,0.008] / 1.6e+09  -0.113 [-0.126,-0.103] TABLE/TABLE/TABLE
+            v* = VSA_HOP1_D65536_kb4; most accurate VSA VSA_HOP1_D65536_kb4 0.005; C-ratio 2.5e-06; recovery by D 256:-0.32, 1024:-0.32, 4096:-0.32, 16384:-0.32, 65536:-0.26
+
+## Primary regime (rho high, h in {4, 6}, every N): 10 cells
+  ops      VSA-WIN cells: none
+  traffic  VSA-WIN cells: none
+  state    VSA-WIN cells: none
+## All cells: VSA-WIN under ops none; traffic none; state none
+## PRIMARY VERDICT: TABLE DOMINATES

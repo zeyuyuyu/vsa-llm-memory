@@ -1,0 +1,34 @@
+11:34:57 dev map 0 center lin 648
+11:35:00 dev map 0 center sgn 648
+11:35:07 dev map 0 whiten lin 648
+11:35:09 dev map 0 whiten sgn 648
+11:35:27 dev map 1 center lin 648
+11:35:30 dev map 1 center sgn 648
+11:35:46 dev map 0 center sgn3 648
+11:35:58 dev map 1 whiten lin 648
+11:36:02 dev map 0 whiten sgn3 648
+11:36:17 dev map 2 center lin 648
+11:36:18 dev map 1 whiten sgn 648
+11:36:37 dev map 2 center sgn 648
+11:36:38 dev map 1 center sgn3 648
+11:37:12 dev map 2 whiten lin 648
+11:37:12 dev map 2 whiten sgn 648
+11:37:17 dev map 1 whiten sgn3 648
+11:37:18 dev map 3 center lin 648
+11:37:32 dev map 2 center sgn3 648
+11:37:55 dev map 3 center sgn 648
+11:38:06 dev map 3 whiten lin 648
+11:38:09 dev map 3 whiten sgn 648
+11:38:14 dev map 2 whiten sgn3 648
+11:38:30 dev map 3 center sgn3 648
+11:38:42 dev map 3 whiten sgn3 648
+map 0 choices: {'256|2|4': ['center', 'lin', 2, 1.0], '256|2|8': ['center', 'lin', 4, 1.0], '256|2|16': ['whiten', 'lin', 1, 1.0], '256|16|4': ['center', 'lin', 2, 1.0], '256|16|8': ['center', 'lin', 1, 1.0], '256|16|16': ['whiten', 'lin', 1, 1.0], '1024|2|4': ['whiten', 'lin', 1, 1.0], '1024|2|8': ['whiten', 'lin', 1, 1.0], '1024|2|16': ['whiten', 'lin', 1, 1.0], '1024|16|4': ['whiten', 'lin', 1, 1.0], '1024|16|8': ['whiten', 'lin', 1, 1.0], '1024|16|16': ['whiten', 'lin', 1, 1.0]}
+map 1 choices: {'256|2|4': ['whiten', 'lin', 2, 1.0], '256|2|8': ['whiten', 'lin', 2, 1.0], '256|2|16': ['whiten', 'lin', 2, 1.0], '256|16|4': ['whiten', 'lin', 1, 1.0], '256|16|8': ['whiten', 'lin', 1, 1.0], '256|16|16': ['whiten', 'lin', 1, 1.0], '1024|2|4': ['whiten', 'sgn', 1, 1.0], '1024|2|8': ['whiten', 'lin', 1, 1.0], '1024|2|16': ['whiten', 'sgn', 1, 1.0], '1024|16|4': ['whiten', 'lin', 1, 1.0], '1024|16|8': ['whiten', 'lin', 1, 1.0], '1024|16|16': ['whiten', 'lin', 1, 1.0]}
+map 2 choices: {'256|2|4': ['whiten', 'lin', 1, 1.0], '256|2|8': ['whiten', 'lin', 1, 1.0], '256|2|16': ['whiten', 'lin', 1, 1.0], '256|16|4': ['center', 'lin', 1, 1.0], '256|16|8': ['whiten', 'lin', 1, 1.0], '256|16|16': ['whiten', 'lin', 1, 1.0], '1024|2|4': ['whiten', 'lin', 1, 1.0], '1024|2|8': ['whiten', 'lin', 1, 1.0], '1024|2|16': ['whiten', 'lin', 1, 1.0], '1024|16|4': ['whiten', 'lin', 1, 1.0], '1024|16|8': ['whiten', 'lin', 1, 1.0], '1024|16|16': ['whiten', 'lin', 1, 1.0]}
+map 3 choices: {'256|2|4': ['center', 'lin', 1, 1.0], '256|2|8': ['whiten', 'lin', 1, 1.0], '256|2|16': ['whiten', 'lin', 1, 1.0], '256|16|4': ['center', 'lin', 1, 1.0], '256|16|8': ['center', 'lin', 1, 1.0], '256|16|16': ['whiten', 'lin', 1, 1.0], '1024|2|4': ['whiten', 'lin', 1, 1.0], '1024|2|8': ['whiten', 'lin', 1, 1.0], '1024|2|16': ['whiten', 'lin', 2, 1.0], '1024|16|4': ['whiten', 'lin', 1, 1.0], '1024|16|8': ['whiten', 'lin', 1, 1.0], '1024|16|16': ['whiten', 'lin', 1, 1.0]}
+GATE map-0 VSA choices equal B32/B36 in 12 of 12 R1 cells {'256|2|4': True, '256|2|8': True, '256|2|16': True, '256|16|4': True, '256|16|8': True, '256|16|16': True, '1024|2|4': True, '1024|2|8': True, '1024|2|16': True, '1024|16|4': True, '1024|16|8': True, '1024|16|16': True}
+11:39:07 gate0 map 0 256 2 0
+11:39:09 gate0 map 0 256 16 0
+11:39:33 gate0 map 0 1024 2 0
+11:39:35 gate0 map 0 1024 16 0
+GATE map-0 per-query agreement with B36 test predictions: {'256|2|4|VSA': 1.0, '256|2|4|BEST': 1.0, '256|2|8|VSA': 1.0, '256|2|8|BEST': 1.0, '256|2|16|VSA': 1.0, '256|2|16|BEST': 1.0, '256|16|4|VSA': 1.0, '256|16|4|BEST': 1.0, '256|16|8|VSA': 1.0, '256|16|8|BEST': 1.0, '256|16|16|VSA': 1.0, '256|16|16|BEST': 1.0, '1024|2|4|VSA': 1.0, '1024|2|4|BEST': 1.0, '1024|2|8|VSA': 1.0, '1024|2|8|BEST': 1.0, '1024|2|16|VSA': 1.0, '1024|2|16|BEST': 1.0, '1024|16|4|VSA': 1.0, '1024|16|4|BEST': 1.0, '1024|16|8|VSA': 1.0, '1024|16|8|BEST': 1.0, '1024|16|16|VSA': 1.0, '1024|16|16|BEST': 1.0}

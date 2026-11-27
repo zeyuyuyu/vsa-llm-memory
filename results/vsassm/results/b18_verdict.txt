@@ -1,0 +1,64 @@
+# B18 verdict (prereg/B18_prereg.md, amendments 1-6): BABILong official test set (RMT-team/babilong), 2026-10-22
+
+System:
+  - Reader: Qwen3-1.7B + LoRA (student, seed 0), distilled from a prompted Qwen3-8B teacher on the BABILong
+    *training* split. It reads one sentence at a time, with 3 sentences of context, and writes events.
+  - Memory: holder/place chains in a fixed-size delta-rule vector memory (per-name codes, cleanup reads). Plain logs
+    hold place history (qa3), gives (qa5), either/not (qa10) and directions (qa4).
+  - Answers: fixed rules over memory and logs.
+  - Leaderboard category: fine-tuned (like ARMT and Mamba).
+Samples:
+  - 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.
+  - qa11-qa13 exist only at 0k.
+  - 1M qa10 timed out at 4 h; it was rerun with an 8 h limit (PACE job 14256422): 25/25, 862,541 reader calls, 2.3 h.
+Metric: official BABILong rule (labels from the training split; qa11-13 use the room labels).
+
+task      0k      4k     16k     64k    128k    512k      1M
+qa1    1.000   0.990   1.000   0.990   1.000   1.000   1.000
+qa2    1.000   0.980   1.000   1.000   1.000   1.000   1.000
+qa3    0.990   0.990   1.000   1.000   1.000   1.000   1.000
+qa4    1.000   1.000   1.000   1.000   1.000   1.000   1.000
+qa5    0.990   0.930   0.960   0.990   0.990   1.000   1.000
+qa6    1.000   1.000   1.000   1.000   1.000   1.000   1.000
+qa7    0.990   0.990   0.990   1.000   1.000   1.000   1.000
+qa8    1.000   0.980   0.990   0.990   0.990   1.000   1.000
+qa9    1.000   0.980   1.000   1.000   1.000   1.000   1.000
+qa10   1.000   0.980   1.000   1.000   1.000   1.000   1.000
+qa11   0.640       -       -       -       -       -       -
+qa12   0.590       -       -       -       -       -       -
+qa13   0.460       -       -       -       -       -       -
+QA1-5   99.6    97.8    99.2    99.6    99.8   100.0   100.0
+qa1-10  99.7    98.2    99.4    99.7    99.8   100.0   100.0
+
+Leaderboard QA1-5 (0k / 4k / 16k / 64k / 128k / 512k / 1M):
+  - ARMT 137M, fine-tuned (#1): 99.3 / 98.1 / 98.1 / 97.9 / 96.9 / 95.3 / 93.4
+  - Mamba, fine-tuned: 98.5 / 98.7 / 98.5 / 97 / 92.5 / 0 / 0
+  - GPT-4-0125: 87 / 74 / 64 / 43 / 36 / 0 / 0
+  - Llama-3.1-70B: 85 / 74 / 65 / 53 / 45 / 0 / 0
+  - Frontier zero-shot references on a subset, run by us: results/b18_api_verdict.txt.
+Qwen3-8B thinking, direct (same official metric, n = 50 / 50 / 25 per task):
+  - 0k: qa1 1.0, qa2 .76, qa3 .44, qa5 .80, qa6 1.0, qa7 .52, qa8 .94, qa9 1.0, qa10 .96, qa11 1.0, qa12 .96, qa13 1.0
+  - 9-task mean: 4k ~0.65, 16k ~0.56
+
+Bars:
+  - P1 (mean over in-scope tasks >= 0.90 at every length up to 128k): FAIL at 0k, 0.888 over 12 tasks, pulled down by
+    qa11-13 (0.64 / 0.59 / 0.46). PASS at 4k-128k: 0.980 / 0.993 / 0.997 / 0.998 over 9 tasks.
+  - P2 (drop from 0k to 128k <= 0.05, 9 tasks): PASS (0.997 -> 0.998).
+  - P3 (mean >= 0.85 at the longest length): PASS. 1M, all 9 tasks: 1.000 (n = 25 per task).
+  - Prediction "qa3 and qa10 hardest": wrong; the weakest tasks are qa11-13 and qa5 at 4k-16k.
+Cause of qa11-13 (amendment 5): the fact filter's vocabulary lacked pronouns and "afterwards"/"following", so the
+student never saw labelled qa11-13 sentences. B18b (fix + retrain) has its own result; the numbers above stay as
+measured.
+
+## 10M tokens (amendment 7 + 8), 2026-10-23
+First attempt (PACE 14306363) timed out on all five tasks with no output (5 prompts per batch; amendment 8).
+Rerun with one sample at a time in sentence blocks (PACE 14327637, paid account, 5 x ~1.6 h H200); the new path was
+checked first on 1M qa3: 5/5 predictions identical to the banked run.
+Samples: the first 5 official test samples of each of qa1-qa5 at 10M (315,624-360,974 sentences per sample).
+  qa1 5/5   qa2 5/5   qa3 5/5   qa4 5/5   qa5 5/5      QA1-5 10M: 25/25 = 100.0, Wilson 95% [86.7, 100]
+Second scorer: the verbatim official babilong/metrics.py compare_answers agrees on 25/25.
+Reader calls 8.39M (about 1.68M per task), 5,642-5,825 s per task.
+Bar P5 (QA1-5 mean >= 0.95): PASS. Prediction "P5 holds": correct.
+Reference: ARMT (Rodkin et al. 2024, Table 1) at 10M: QA1 89.4, QA2 84.4, QA3 37.0, QA4 91.5, QA5 80.9; mean 76.6.
+Caveats: n = 5 per task (the interval is wide); ARMT's own paper also reports QA1 at 50M, which we did not run.
+Compute: failed attempt about 50 H200-hours; rerun about 8 H200-hours plus 0.2 for the check.

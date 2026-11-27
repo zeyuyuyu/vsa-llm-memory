@@ -1,0 +1,69 @@
+{
+ "d_fsq": 6,
+ "levels": 7,
+ "arms": {
+  "floor": [
+   0.512,
+   0.53,
+   0.504
+  ],
+  "parser": [
+   0.932,
+   0.932,
+   0.938
+  ],
+  "fsq_spans": [
+   0.56,
+   0.53,
+   0.532
+  ],
+  "fsq_inj": [
+   0.542,
+   0.52,
+   0.55
+  ]
+ },
+ "diag": {
+  "fsq_spans": [
+   {
+    "tuples_used": 46,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.22578544685007326,
+    "distinct_symbol_code_cosine": 0.8894795086472123
+   },
+   {
+    "tuples_used": 46,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.6726355201041836,
+    "distinct_symbol_code_cosine": 0.755010035611965
+   },
+   {
+    "tuples_used": 29,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.38727006348689563,
+    "distinct_symbol_code_cosine": 0.8240120601918962
+   }
+  ],
+  "fsq_inj": [
+   {
+    "tuples_used": 421,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.1437408432362038,
+    "distinct_symbol_code_cosine": 0.32387230780023946
+   },
+   {
+    "tuples_used": 659,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.16864724076184276,
+    "distinct_symbol_code_cosine": 0.2562735942941573
+   },
+   {
+    "tuples_used": 328,
+    "role_distinct_rate": 0.0,
+    "same_symbol_consistency": 0.2716913560149764,
+    "distinct_symbol_code_cosine": 0.4572479601530358
+   }
+  ]
+ },
+ "verdict": "fsq_spans: GRADED | fsq_inj: FAILS (collapse and drift excluded by construction, so the blocker is the encoder's separation under a task-only gradient)"
+}

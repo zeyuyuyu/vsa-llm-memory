@@ -1,0 +1,60 @@
+{
+ "n_sym": 10,
+ "spans_per_instance": 6.06,
+ "budgets": [
+  2,
+  10,
+  40
+ ],
+ "rows": [
+  {
+   "budget": 2,
+   "per_span": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "instance": [
+    0.78,
+    0.764,
+    0.754
+   ],
+   "per_span_mean": 1.0,
+   "instance_mean": 0.766,
+   "compound_prediction": 1.0
+  },
+  {
+   "budget": 10,
+   "per_span": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "instance": [
+    0.776,
+    0.77,
+    0.758
+   ],
+   "per_span_mean": 1.0,
+   "instance_mean": 0.7680000000000001,
+   "compound_prediction": 1.0
+  },
+  {
+   "budget": 40,
+   "per_span": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "instance": [
+    0.762,
+    0.772,
+    0.776
+   ],
+   "per_span_mean": 1.0,
+   "instance_mean": 0.77,
+   "compound_prediction": 1.0
+  }
+ ],
+ "verdict": "TRANSFER FAILS (per-span identity has saturated and the instance accuracy still misses the bar; the discrete handover does not transfer off synthetic markup, and compounding is the mechanism)"
+}

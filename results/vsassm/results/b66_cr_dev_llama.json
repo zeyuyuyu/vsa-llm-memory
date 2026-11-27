@@ -1,0 +1,1373 @@
+{
+ "cells": {
+  "1024|16|16": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     6,
+     16,
+     1,
+     4,
+     1.0
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     12,
+     "counts",
+     "sum",
+     4,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     16,
+     "raw",
+     1.0
+    ],
+    "index": [
+     "index",
+     "centre",
+     "pq16",
+     1.0
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "bits",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     4,
+     "onehot",
+     1.0
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "L",
+     2,
+     "onehot",
+     "cnt",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "bits",
+     1.0
+    ],
+    "static": [
+     "static",
+     "centre",
+     12,
+     4,
+     4,
+     1.0
+    ]
+   },
+   "choice_dev": {
+    "bloom": 12.184290868720511,
+    "cms": 14.460172078823202,
+    "fly": 18.540105467665835,
+    "index": 25.451013044684984,
+    "sdm": 31.86233694143769,
+    "sdmG": 17.069109075770193,
+    "sdmT64": 39.02303635859006,
+    "sdmTcr": 31.86233694143769,
+    "static": 13.377740771579239
+   },
+   "dev_file_md5": "8edb22ec829e2681e5d13be897ee967e",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 34.58229253399944,
+    "first": 34.94310296974743
+   }
+  },
+  "1024|16|4": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     12,
+     1,
+     1,
+     4,
+     0.5
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     12,
+     "value",
+     "vote",
+     4,
+     0.5
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     4,
+     "corr",
+     0.5
+    ],
+    "index": [
+     "index",
+     "centre",
+     "pca_asym",
+     0.125
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "onehot",
+     0.5
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     1,
+     "onehot",
+     1.0
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "L",
+     1,
+     "onehot",
+     "clip3",
+     0.5
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "onehot",
+     0.5
+    ],
+    "static": [
+     "static",
+     "centre",
+     12,
+     4,
+     4,
+     0.5
+    ]
+   },
+   "choice_dev": {
+    "bloom": 10.022586109542631,
+    "cms": 10.417843026538678,
+    "fly": 11.716544325239978,
+    "index": 16.0643704121965,
+    "sdm": 23.941276115189158,
+    "sdmG": 11.123658949745906,
+    "sdmT64": 24.22360248447205,
+    "sdmTcr": 23.941276115189158,
+    "static": 11.151891586674195
+   },
+   "dev_file_md5": "26e954d9c8f3f710ea205a3617ba0edb",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     0.5
+    ]
+   },
+   "store_dev": {
+    "final": 20.638057594579333,
+    "first": 18.492377188029362
+   }
+  },
+  "1024|16|8": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     8,
+     4,
+     3,
+     4,
+     0.5
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     6,
+     "value",
+     "vote",
+     0,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     16,
+     "corr",
+     0.5
+    ],
+    "index": [
+     "index",
+     "centre",
+     "lsh_asym",
+     0.25
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "onehot",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     4,
+     "onehot",
+     0.5
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "L",
+     1,
+     "onehot",
+     "cnt",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "onehot",
+     1.0
+    ],
+    "static": [
+     "static",
+     "centre",
+     12,
+     4,
+     4,
+     0.5
+    ]
+   },
+   "choice_dev": {
+    "bloom": 10.403458213256485,
+    "cms": 11.902017291066283,
+    "fly": 14.5821325648415,
+    "index": 20.720461095100866,
+    "sdm": 27.49279538904899,
+    "sdmG": 14.293948126801153,
+    "sdmT64": 32.47838616714697,
+    "sdmTcr": 27.49279538904899,
+    "static": 11.642651296829971
+   },
+   "dev_file_md5": "4b5de774babc559baa63110ab93e48f4",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "centre",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 27.23342939481268,
+    "first": 25.043227665706052
+   }
+  },
+  "1024|2|16": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     12,
+     4,
+     1,
+     4,
+     1.0
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     10,
+     "value",
+     "vote",
+     4,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "whiten",
+     32,
+     "corr",
+     1.0
+    ],
+    "index": [
+     "index",
+     "centre",
+     "lsh_asym",
+     1.0
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     16,
+     "bits",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     64,
+     "bits",
+     0.5
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "LA",
+     8,
+     "onehot",
+     "tern",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     16,
+     "bits",
+     1.0
+    ],
+    "static": [
+     "static",
+     "centre",
+     12,
+     4,
+     4,
+     1.0
+    ]
+   },
+   "choice_dev": {
+    "bloom": 56.57754010695187,
+    "cms": 59.25133689839572,
+    "fly": 60.13368983957219,
+    "index": 62.0855614973262,
+    "sdm": 65.98930481283422,
+    "sdmG": 60.93582887700535,
+    "sdmT64": 67.59358288770053,
+    "sdmTcr": 65.98930481283422,
+    "static": 57.967914438502675
+   },
+   "dev_file_md5": "b44b2075b6177608783575de4f8c84f6",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     2,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 69.89304812834224,
+    "first": 67.64705882352942
+   }
+  },
+  "1024|2|4": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     12,
+     4,
+     1,
+     4,
+     0.5
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     8,
+     "value",
+     "vote",
+     0,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     32,
+     "corr",
+     1.0
+    ],
+    "index": [
+     "index",
+     "centre",
+     "pca_asym",
+     0.25
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "bits",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     64,
+     "bits",
+     0.5
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "L",
+     2,
+     "bits",
+     "tern",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "bits",
+     1.0
+    ],
+    "static": [
+     "static",
+     "whiten",
+     12,
+     0,
+     4,
+     1.0
+    ]
+   },
+   "choice_dev": {
+    "bloom": 54.72636815920397,
+    "cms": 57.10919088766693,
+    "fly": 57.24011521340665,
+    "index": 57.13537575281487,
+    "sdm": 64.20528934275988,
+    "sdmG": 58.26132495417649,
+    "sdmT64": 68.60434668761457,
+    "sdmTcr": 64.20528934275988,
+    "static": 54.07174653050537
+   },
+   "dev_file_md5": "0b05fc460a62c3af5ab65e52d80ec9d1",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 68.10683424980361,
+    "first": 66.40481801518722
+   }
+  },
+  "1024|2|8": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     8,
+     16,
+     1,
+     4,
+     0.5
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     4,
+     "counts",
+     "min",
+     4,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "whiten",
+     4,
+     "corr",
+     1.0
+    ],
+    "index": [
+     "index",
+     "centre",
+     "lsh_asym",
+     1.0
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "bits",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     4,
+     "bits",
+     1.0
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "LA",
+     4,
+     "bits",
+     "tern",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "bits",
+     1.0
+    ],
+    "static": [
+     "static",
+     "whiten",
+     4,
+     4,
+     4,
+     1.0
+    ]
+   },
+   "choice_dev": {
+    "bloom": 54.77291270057112,
+    "cms": 55.80636388360076,
+    "fly": 58.44438400870274,
+    "index": 58.68914876257819,
+    "sdm": 68.96926842534675,
+    "sdmG": 59.45063910796845,
+    "sdmT64": 70.46505303236334,
+    "sdmTcr": 68.96926842534675,
+    "static": 55.72477563230894
+   },
+   "dev_file_md5": "fda2b8fbf38a082547802bf74d0fdd42",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 68.72450367147131,
+    "first": 68.23497416372042
+   }
+  },
+  "256|16|16": {
+   "best": {
+    "best6": "index",
+    "best7_64": "sdmT64",
+    "best7cr": "index"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     8,
+     4,
+     1,
+     4,
+     0.5
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     10,
+     "value",
+     "vote",
+     4,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     32,
+     "corr",
+     1.0
+    ],
+    "index": [
+     "index",
+     "centre",
+     "pq16",
+     1.0
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "onehot",
+     0.5
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     4,
+     "onehot",
+     1.0
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "L",
+     2,
+     "onehot",
+     "tern",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "onehot",
+     0.5
+    ],
+    "static": [
+     "static",
+     "centre",
+     8,
+     0,
+     4,
+     1.0
+    ]
+   },
+   "choice_dev": {
+    "bloom": 16.276477146042364,
+    "cms": 18.115942028985508,
+    "fly": 25.69676700111483,
+    "index": 36.00891861761427,
+    "sdm": 34.225195094760316,
+    "sdmG": 21.794871794871796,
+    "sdmT64": 52.39687848383501,
+    "sdmTcr": 34.225195094760316,
+    "static": 17.112597547380158
+   },
+   "dev_file_md5": "5ee8e2667f7b027d2c7dae4e3bbc7123",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 41.47157190635451,
+    "first": 41.30434782608695
+   }
+  },
+  "256|16|4": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     8,
+     1,
+     1,
+     4,
+     1.0
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     8,
+     "value",
+     "vote",
+     4,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     16,
+     "raw",
+     0.5
+    ],
+    "index": [
+     "index",
+     "centre",
+     "pq16",
+     0.25
+    ],
+    "sdm": [
+     "sdm",
+     "centre",
+     "data",
+     1,
+     "onehot",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     4,
+     "onehot",
+     1.0
+    ],
+    "sdmT64": [
+     "sdmt",
+     "centre",
+     "L",
+     1,
+     "onehot",
+     "clip3",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "centre",
+     "data",
+     1,
+     "onehot",
+     1.0
+    ],
+    "static": [
+     "static",
+     "centre",
+     8,
+     4,
+     4,
+     0.5
+    ]
+   },
+   "choice_dev": {
+    "bloom": 11.263020833333332,
+    "cms": 14.322916666666666,
+    "fly": 15.234375,
+    "index": 16.080729166666664,
+    "sdm": 24.934895833333336,
+    "sdmG": 13.932291666666666,
+    "sdmT64": 26.302083333333332,
+    "sdmTcr": 24.934895833333336,
+    "static": 12.890625
+   },
+   "dev_file_md5": "36a18ec7ef55e8b919e4441bd57e3a06",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "centre",
+     "lin",
+     2,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 25.846354166666668,
+    "first": 25.455729166666668
+   }
+  },
+  "256|16|8": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     6,
+     16,
+     3,
+     4,
+     1.0
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     4,
+     "value",
+     "vote",
+     0,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     4,
+     "corr",
+     0.5
+    ],
+    "index": [
+     "index",
+     "centre",
+     "lsh_asym",
+     0.5
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "onehot",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "whiten",
+     "gauss",
+     4,
+     "onehot",
+     1.0
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "LA",
+     1,
+     "onehot",
+     "cnt",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "onehot",
+     1.0
+    ],
+    "static": [
+     "static",
+     "centre",
+     12,
+     4,
+     4,
+     1.0
+    ]
+   },
+   "choice_dev": {
+    "bloom": 14.035087719298245,
+    "cms": 17.076023391812868,
+    "fly": 21.929824561403507,
+    "index": 26.54970760233918,
+    "sdm": 34.7953216374269,
+    "sdmG": 21.403508771929825,
+    "sdmT64": 35.08771929824561,
+    "sdmTcr": 34.7953216374269,
+    "static": 16.95906432748538
+   },
+   "dev_file_md5": "72e17dbb365007b2f87fb313774428a6",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "centre",
+     "sign",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "centre",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 25.497076023391813,
+    "first": 29.53216374269006
+   }
+  },
+  "256|2|16": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     12,
+     4,
+     1,
+     4,
+     1.0
+    ],
+    "cms": [
+     "cms",
+     "centre",
+     10,
+     "value",
+     "vote",
+     4,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     32,
+     "corr",
+     1.0
+    ],
+    "index": [
+     "index",
+     "centre",
+     "pq16",
+     1.0
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "bits",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     4,
+     "bits",
+     1.0
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "LA",
+     4,
+     "bits",
+     "clip3",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "bits",
+     1.0
+    ],
+    "static": [
+     "static",
+     "centre",
+     8,
+     0,
+     4,
+     1.0
+    ]
+   },
+   "choice_dev": {
+    "bloom": 58.948611931482574,
+    "cms": 58.889545186060246,
+    "fly": 70.76196101594802,
+    "index": 66.56822209096279,
+    "sdm": 78.02717070289427,
+    "sdmG": 64.441819255759,
+    "sdmT64": 78.26343768458358,
+    "sdmTcr": 78.02717070289427,
+    "static": 60.0708800945068
+   },
+   "dev_file_md5": "78e163bedb9c01efb7ed5b143be08226",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     2,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 76.7867690490254,
+    "first": 73.47903130537507
+   }
+  },
+  "256|2|4": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     8,
+     4,
+     1,
+     4,
+     1.0
+    ],
+    "cms": [
+     "cms",
+     "whiten",
+     8,
+     "counts",
+     "sum",
+     4,
+     0.5
+    ],
+    "fly": [
+     "fly",
+     "whiten",
+     16,
+     "corr",
+     1.0
+    ],
+    "index": [
+     "index",
+     "centre",
+     "pq16",
+     0.25
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "bits",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "centre",
+     "gauss",
+     16,
+     "bits",
+     0.5
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "LA",
+     2,
+     "bits",
+     "tern",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     1,
+     "bits",
+     1.0
+    ],
+    "static": [
+     "static",
+     "whiten",
+     8,
+     2,
+     4,
+     0.5
+    ]
+   },
+   "choice_dev": {
+    "bloom": 58.298097251585624,
+    "cms": 54.22832980972516,
+    "fly": 61.99788583509513,
+    "index": 61.36363636363637,
+    "sdm": 65.59196617336153,
+    "sdmG": 57.082452431289646,
+    "sdmT64": 71.1416490486258,
+    "sdmTcr": 65.59196617336153,
+    "static": 56.236786469344615
+   },
+   "dev_file_md5": "5387e6e0083e1b376ee06bd950d200de",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "centre",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 70.87737843551797,
+    "first": 68.34038054968288
+   }
+  },
+  "256|2|8": {
+   "best": {
+    "best6": "sdm",
+    "best7_64": "sdmT64",
+    "best7cr": "sdmTcr"
+   },
+   "choice": {
+    "bloom": [
+     "bloom",
+     "centre",
+     8,
+     16,
+     3,
+     4,
+     0.5
+    ],
+    "cms": [
+     "cms",
+     "whiten",
+     10,
+     "value",
+     "vote",
+     4,
+     1.0
+    ],
+    "fly": [
+     "fly",
+     "centre",
+     16,
+     "corr",
+     1.0
+    ],
+    "index": [
+     "index",
+     "centre",
+     "lsh_asym",
+     0.5
+    ],
+    "sdm": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "bits",
+     1.0
+    ],
+    "sdmG": [
+     "sdm",
+     "whiten",
+     "gauss",
+     64,
+     "bits",
+     0.5
+    ],
+    "sdmT64": [
+     "sdmt",
+     "whiten",
+     "LA",
+     2,
+     "bits",
+     "tern",
+     1.0
+    ],
+    "sdmTcr": [
+     "sdm",
+     "whiten",
+     "data",
+     4,
+     "bits",
+     1.0
+    ],
+    "static": [
+     "static",
+     "whiten",
+     4,
+     0,
+     4,
+     0.5
+    ]
+   },
+   "choice_dev": {
+    "bloom": 57.85265562535694,
+    "cms": 56.938892061679034,
+    "fly": 63.16390633923472,
+    "index": 61.27926898914906,
+    "sdm": 70.64534551684751,
+    "sdmG": 59.39463163906339,
+    "sdmT64": 73.90062821245003,
+    "sdmTcr": 70.64534551684751,
+    "static": 57.22444317532839
+   },
+   "dev_file_md5": "98e8507b71992a3962e31cc60a1c2dcb",
+   "n_grid": 1120,
+   "store_choice": {
+    "final": [
+     "final",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ],
+    "first": [
+     "first",
+     "whiten",
+     "lin",
+     1,
+     1.0
+    ]
+   },
+   "store_dev": {
+    "final": 77.27013135351228,
+    "first": 71.15933752141633
+   }
+  }
+ },
+ "enc": "llama"
+}

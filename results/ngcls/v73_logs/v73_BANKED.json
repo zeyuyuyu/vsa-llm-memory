@@ -1,0 +1,56 @@
+{
+ "Ks": {
+  "10": {
+   "compositional": {
+    "em": 0.9566666666666667,
+    "mean_bindings": 22.0
+   },
+   "inference": {
+    "em": 0.7433333333333333,
+    "mean_bindings": 22.0
+   }
+  },
+  "50": {
+   "compositional": {
+    "em": 0.94,
+    "mean_bindings": 102.0
+   },
+   "inference": {
+    "em": 0.75,
+    "mean_bindings": 102.0
+   }
+  },
+  "100": {
+   "compositional": {
+    "em": 0.78,
+    "mean_bindings": 202.0
+   },
+   "inference": {
+    "em": 0.4533333333333333,
+    "mean_bindings": 202.0
+   }
+  },
+  "200": {
+   "compositional": {
+    "em": 0.2,
+    "mean_bindings": 402.0
+   },
+   "inference": {
+    "em": 0.1,
+    "mean_bindings": 402.0
+   }
+  },
+  "400": {
+   "compositional": {
+    "em": 0.06333333333333334,
+    "mean_bindings": 600.0
+   },
+   "inference": {
+    "em": 0.03333333333333333,
+    "mean_bindings": 600.0
+   }
+  }
+ },
+ "d": 4096,
+ "verdict": "compositional: P1 monotone(+-.02): True [0.957, 0.94, 0.78, 0.2, 0.063] | inference: P1 monotone(+-.02): True [0.743, 0.75, 0.453, 0.1, 0.033] | P2 compositional K=400 >= .80: False (0.0633) | P3 K=50 reproduces V-72b: False (0.9400/0.7500 vs .9533/.7233)"
+}

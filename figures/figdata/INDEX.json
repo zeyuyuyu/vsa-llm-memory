@@ -1,0 +1,6337 @@
+{
+ "F1b_natural_text": [
+  {
+   "label": "bAbI1 prompting zero-shot, per seed",
+   "file": "v49_logs/v49.json",
+   "key": "d[\"cells\"][\"task1/zeroshot/all\"][\"acc\"]",
+   "value": [
+    0.792,
+    0.792,
+    0.792
+   ],
+   "manuscript": [
+    "0.792",
+    "0.792",
+    "0.792"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI1 prompting zero-shot (mean)",
+   "file": "v49_logs/v49.json",
+   "key": "mean(d[\"cells\"][\"task1/zeroshot/all\"][\"acc\"])",
+   "value": 0.7920000000000001,
+   "manuscript": "0.792",
+   "match": true
+  },
+  {
+   "label": "bAbI1 prompting four-shot, per seed",
+   "file": "v49_logs/v49.json",
+   "key": "d[\"cells\"][\"task1/fewshot/all\"][\"acc\"]",
+   "value": [
+    0.812,
+    0.758,
+    0.718
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI1 prompting four-shot (mean)",
+   "file": "v49_logs/v49.json",
+   "key": "mean(d[\"cells\"][\"task1/fewshot/all\"][\"acc\"])",
+   "value": 0.7626666666666667,
+   "manuscript": "0.763",
+   "match": true
+  },
+  {
+   "label": "bAbI1 LoRA fine-tune, per seed",
+   "file": "v50_logs/v50_task1_VOID_locoffset.json",
+   "key": "d[\"arms\"][\"lora_direct\"]",
+   "value": [
+    0.998,
+    1.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "File is named VOID because its lora_through_vsa arm (0.08 x3) was voided for a location-offset bug; the lora_direct arm is the one the manuscript quotes (0.999). No other artifact holds task-1 LoRA."
+  },
+  {
+   "label": "bAbI1 LoRA fine-tune (mean)",
+   "file": "v50_logs/v50_task1_VOID_locoffset.json",
+   "key": "mean(d[\"arms\"][\"lora_direct\"])",
+   "value": 0.9993333333333334,
+   "manuscript": "0.999",
+   "match": true
+  },
+  {
+   "label": "bAbI1 discrete handover (banked)",
+   "file": "v50_logs/v50_task1_VOID_locoffset.json",
+   "key": "d[\"banked\"][\"handover\"]",
+   "value": 1.0,
+   "manuscript": "1.000",
+   "match": true
+  },
+  {
+   "label": "bAbI1 discrete handover, per seed (v36 permuted cell)",
+   "file": "v36_logs/v36.json",
+   "key": "d[\"cells\"][0][\"chain\"]",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "manuscript": [
+    "1.000",
+    "1.000",
+    "1.000"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI1 last-token probe floor",
+   "file": "v50_logs/v50_task1_VOID_locoffset.json",
+   "key": "d[\"banked\"][\"probe\"]",
+   "value": 0.7713,
+   "manuscript": "0.771",
+   "match": true
+  },
+  {
+   "label": "bAbI1 last-token probe floor (v35 floor field)",
+   "file": "v35_logs/v35.json",
+   "key": "d[\"floor\"]",
+   "value": 0.7713,
+   "manuscript": "0.771",
+   "match": true
+  },
+  {
+   "label": "bAbI1 prompting zero-shot (banked in v50)",
+   "file": "v50_logs/v50_task1_VOID_locoffset.json",
+   "key": "d[\"banked\"][\"prompt\"]",
+   "value": 0.792,
+   "manuscript": "0.792",
+   "match": true
+  },
+  {
+   "label": "bAbI2 prompting zero-shot, per seed",
+   "file": "v49_logs/v49.json",
+   "key": "d[\"cells\"][\"task2/zeroshot/all\"][\"acc\"]",
+   "value": [
+    0.386,
+    0.386,
+    0.386
+   ],
+   "manuscript": [
+    "0.386",
+    "0.386",
+    "0.386"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI2 prompting four-shot, per seed",
+   "file": "v49_logs/v49.json",
+   "key": "d[\"cells\"][\"task2/fewshot/all\"][\"acc\"]",
+   "value": [
+    0.364,
+    0.404,
+    0.492
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI2 LoRA fine-tune, per seed",
+   "file": "v50_logs/v50_task2_BANKED.json",
+   "key": "d[\"arms\"][\"lora_direct\"]",
+   "value": [
+    0.85,
+    0.6952380952380952,
+    0.8571428571428571
+   ],
+   "manuscript": [
+    "0.850",
+    "0.695",
+    "0.857"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI2 LoRA fine-tune (mean)",
+   "file": "v50_logs/v50_task2_BANKED.json",
+   "key": "mean(d[\"arms\"][\"lora_direct\"])",
+   "value": 0.8007936507936507,
+   "manuscript": "0.801",
+   "match": true
+  },
+  {
+   "label": "bAbI2 discrete handover (banked)",
+   "file": "v50_logs/v50_task2_BANKED.json",
+   "key": "d[\"banked\"][\"handover\"]",
+   "value": 1.0,
+   "manuscript": "1.000",
+   "match": true
+  },
+  {
+   "label": "bAbI2 discrete handover, per seed",
+   "file": "v37_logs/v37b.json",
+   "key": "d[\"arms\"][\"probe_argmax\"]",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "manuscript": [
+    "1.000",
+    "1.000",
+    "1.000"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI2 through-the-loss projection (frozen), per seed",
+   "file": "v37_logs/v37b.json",
+   "key": "d[\"arms\"][\"spans\"]",
+   "value": [
+    0.49523809523809526,
+    0.5047619047619047,
+    0.5071428571428571
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI2 through-the-loss projection (frozen, mean)",
+   "file": "v37_logs/v37b.json",
+   "key": "mean(d[\"arms\"][\"spans\"])",
+   "value": 0.5023809523809524,
+   "manuscript": "0.502",
+   "match": true
+  },
+  {
+   "label": "bAbI2 through-the-loss, encoder unfrozen (LoRA through VSA), per seed",
+   "file": "v50_logs/v50_task2_BANKED.json",
+   "key": "d[\"arms\"][\"lora_through_vsa\"]",
+   "value": [
+    0.5642857142857143,
+    0.6190476190476191,
+    0.6166666666666667
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI2 through-the-loss, encoder unfrozen (mean)",
+   "file": "v50_logs/v50_task2_BANKED.json",
+   "key": "mean(d[\"arms\"][\"lora_through_vsa\"])",
+   "value": 0.6,
+   "manuscript": "0.600",
+   "match": true
+  },
+  {
+   "label": "bAbI2 mean-pool probe floor, per seed",
+   "file": "v37_logs/v37b.json",
+   "key": "d[\"arms\"][\"floor\"]",
+   "value": [
+    0.20714285714285716,
+    0.1880952380952381,
+    0.21428571428571427
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI2 mean-pool probe floor (mean)",
+   "file": "v37_logs/v37b.json",
+   "key": "d[\"floor\"]",
+   "value": 0.2031746031746032,
+   "manuscript": "0.203",
+   "match": true
+  },
+  {
+   "label": "bAbI2 last-token probe floor, per seed",
+   "file": "v48_logs/v48.json",
+   "key": "d[\"floor_last_token\"]",
+   "value": [
+    0.2523809523809524,
+    0.2357142857142857,
+    0.24761904761904763
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI2 last-token probe floor (mean)",
+   "file": "v48_logs/v48.json",
+   "key": "d[\"floor_mean\"]",
+   "value": 0.24523809523809526,
+   "manuscript": "0.245",
+   "match": true
+  },
+  {
+   "label": "bAbI2 last-token probe floor (banked in v50)",
+   "file": "v50_logs/v50_task2_BANKED.json",
+   "key": "d[\"banked\"][\"probe\"]",
+   "value": 0.2452,
+   "manuscript": "0.245",
+   "match": true
+  },
+  {
+   "label": "bAbI2 label prior (majority, eval)",
+   "file": "v48_logs/v48.json",
+   "key": "d[\"majority_eval\"]",
+   "value": 0.20476190476190476,
+   "manuscript": "0.205",
+   "match": true
+  },
+  {
+   "label": "bAbI2 LoRA fine-tune TUNED (best of 12 configs), per seed",
+   "file": "v131_logs/v131b.json",
+   "key": "best-mean config of d[\"runs\"] -> [\"accs\"]  (r16_e6_lr0.0001)",
+   "value": [
+    0.9714285714285714,
+    0.9738095238095238,
+    0.9714285714285714
+   ],
+   "manuscript": [
+    "0.9714",
+    "0.9738",
+    "0.9714"
+   ],
+   "match": true,
+   "note": "V-131 Part B. Configuration selected on the TEST set, a disclosed handicap in the comparator's favour."
+  },
+  {
+   "label": "bAbI1 frozen-state (last-token) probe, per seed (v30 arms.floor)",
+   "file": "v30_logs/v30.json",
+   "key": "d[\"arms\"][\"floor\"]",
+   "value": [
+    0.78,
+    0.782,
+    0.752
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "Seed dots of the task-1 probe bar. Same probe as the bar: v35.json's `floor` (0.7713) is the constant FLOOR = 0.7713 hard-coded in v35.py as 'banked reference points, V-30/V-33', i.e. the mean of this list."
+  },
+  {
+   "label": "bAbI1 frozen-state (last-token) probe (mean, v30 floor)",
+   "file": "v30_logs/v30.json",
+   "key": "d[\"floor\"]",
+   "value": 0.7713333333333333,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI1 handover, per seed (v35 cells[0]: family none, rate 0)",
+   "file": "v35_logs/v35.json",
+   "key": "rows(d[\"cells\"], family=\"none\")[0][\"chain\"]",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "Replaces the v36 permuted-codebook cell as the source of the task-1 handover bar (same values, 1.0 x3)."
+  },
+  {
+   "label": "bAbI1 v30 n_train / n_eval",
+   "file": "v30_logs/v30.json",
+   "key": "[d[\"n_train\"], d[\"n_eval\"]]",
+   "value": [
+    900,
+    500
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI prompting zero-shot: n per cell (task 1, task 2)",
+   "file": "v49_logs/v49.json",
+   "key": "[d[\"cells\"][\"task1/zeroshot/all\"][\"n\"], d[\"cells\"][\"task2/zeroshot/all\"][\"n\"]]",
+   "value": [
+    500,
+    500
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI2 expressible instances: n_train / n_eval",
+   "file": "v37_logs/v37b.json",
+   "key": "[d[\"n_train_expressible\"], d[\"n_eval_expressible\"]]",
+   "value": [
+    775,
+    420
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F2a_label_priors": [
+  {
+   "label": "Variable tracking: frozen-LLM probe, per seed",
+   "file": "v2_logs/v2.json",
+   "key": "[r[\"test_per_task\"][\"variable_tracking\"] for r in rows(d, arm=\"llm_only\")]",
+   "value": [
+    0.4567901234567901,
+    0.448559670781893,
+    0.48559670781893005
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Variable tracking: frozen-LLM probe (mean)",
+   "file": "v2_logs/v2.json",
+   "key": "mean([r[\"test_per_task\"][\"variable_tracking\"] for r in rows(d, arm=\"llm_only\")])",
+   "value": 0.4636488340192044,
+   "manuscript": "0.464",
+   "match": true
+  },
+  {
+   "label": "Rule priority: frozen-LLM probe, per seed",
+   "file": "v2_logs/v2.json",
+   "key": "[r[\"test_per_task\"][\"rule_priority\"] for r in rows(d, arm=\"llm_only\")]",
+   "value": [
+    0.734375,
+    0.65625,
+    0.7265625
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Rule priority: frozen-LLM probe (mean)",
+   "file": "v2_logs/v2.json",
+   "key": "mean([r[\"test_per_task\"][\"rule_priority\"] for r in rows(d, arm=\"llm_only\")])",
+   "value": 0.7057291666666666,
+   "manuscript": "0.706",
+   "match": true
+  },
+  {
+   "label": "State updates: frozen-LLM probe, per seed",
+   "file": "v2_logs/v2.json",
+   "key": "[r[\"test_per_task\"][\"state_update\"] for r in rows(d, arm=\"llm_only\")]",
+   "value": [
+    0.6549019607843137,
+    0.6666666666666666,
+    0.6549019607843137
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "State updates: frozen-LLM probe (mean)",
+   "file": "v2_logs/v2.json",
+   "key": "mean([r[\"test_per_task\"][\"state_update\"] for r in rows(d, arm=\"llm_only\")])",
+   "value": 0.6588235294117647,
+   "manuscript": "0.659",
+   "match": true
+  },
+  {
+   "label": "Entity binding: frozen-LLM probe, per seed",
+   "file": "v2_logs/v2.json",
+   "key": "[r[\"test_per_task\"][\"binding_test\"] for r in rows(d, arm=\"llm_only\")]",
+   "value": [
+    0.483739837398374,
+    0.6260162601626016,
+    0.6056910569105691
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Entity binding: frozen-LLM probe (mean)",
+   "file": "v2_logs/v2.json",
+   "key": "mean([r[\"test_per_task\"][\"binding_test\"] for r in rows(d, arm=\"llm_only\")])",
+   "value": 0.5718157181571816,
+   "manuscript": "0.573",
+   "match": false,
+   "note": "artifact .5718 rounds to .572; manuscript prints .573 (ledger 57406f1 quotes .5726). Within verify_paper3's .0015 tolerance, off by one in the last digit at manuscript precision."
+  },
+  {
+   "label": "Rule priority (rebuilt): probe per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"rule_priority\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    1.0,
+    0.9950000643730164,
+    0.999000072479248
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Rule priority (rebuilt): probe (mean)",
+   "file": "v7_logs/v7_last.json",
+   "key": "mean([a[\"test\"] for a in rows(d, arena=\"rule_priority\")[0][\"arms\"][\"probe\"]])",
+   "value": 0.9980000456174215,
+   "manuscript": "0.998",
+   "match": true
+  },
+  {
+   "label": "Rule priority (rebuilt): majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"rule_priority\")[0][\"majority\"]",
+   "value": 0.517,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "State updates (rebuilt): probe per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"state_update\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "State updates (rebuilt): probe (mean)",
+   "file": "v7_logs/v7_last.json",
+   "key": "mean([a[\"test\"] for a in rows(d, arena=\"state_update\")[0][\"arms\"][\"probe\"]])",
+   "value": 1.0,
+   "manuscript": "1.000",
+   "match": true
+  },
+  {
+   "label": "State updates (rebuilt): majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"state_update\")[0][\"majority\"]",
+   "value": 0.502,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Entity binding (rebuilt): probe per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"binding_test\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    0.9950000643730164,
+    0.9970000386238098,
+    0.9950000643730164
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Entity binding (rebuilt): probe (mean)",
+   "file": "v7_logs/v7_last.json",
+   "key": "mean([a[\"test\"] for a in rows(d, arena=\"binding_test\")[0][\"arms\"][\"probe\"]])",
+   "value": 0.9956667224566141,
+   "manuscript": "0.996",
+   "match": true
+  },
+  {
+   "label": "Entity binding (rebuilt): majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"binding_test\")[0][\"majority\"]",
+   "value": 0.503,
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "UNRESOLVED": [
+  {
+   "panel": "F2a_label_priors",
+   "label": "Variable tracking: P(label=1) on eval split",
+   "manuscript": "0.498",
+   "searched": "No JSON artifact. Only source is ngcls/ledger.md lines 7280-7287 (2026-08-19 BENCHMARK DIAGNOSIS, commit 57406f1), computed inline from run_compositional.py _gen_* over 8,000 samples; verify_paper2/3 hard-code the ledger values. Searched: grep 0.5022/0.6729/0.5871 across ngcls and hybrid_neurosymbolic *.json/*.txt/*.log (hits only in unrelated cifar/fmnist/dissect runs)."
+  },
+  {
+   "panel": "F2a_label_priors",
+   "label": "Variable tracking: majority baseline on eval split",
+   "manuscript": "0.502",
+   "searched": "Same as P(label=1): ledger-only (ngcls/ledger.md 7283-7286, 57406f1)."
+  },
+  {
+   "panel": "F2a_label_priors",
+   "label": "Rule priority: P(label=1) on eval split",
+   "manuscript": "0.327",
+   "searched": "No JSON artifact. Only source is ngcls/ledger.md lines 7280-7287 (2026-08-19 BENCHMARK DIAGNOSIS, commit 57406f1), computed inline from run_compositional.py _gen_* over 8,000 samples; verify_paper2/3 hard-code the ledger values. Searched: grep 0.5022/0.6729/0.5871 across ngcls and hybrid_neurosymbolic *.json/*.txt/*.log (hits only in unrelated cifar/fmnist/dissect runs)."
+  },
+  {
+   "panel": "F2a_label_priors",
+   "label": "Rule priority: majority baseline on eval split",
+   "manuscript": "0.673",
+   "searched": "Same as P(label=1): ledger-only (ngcls/ledger.md 7283-7286, 57406f1)."
+  },
+  {
+   "panel": "F2a_label_priors",
+   "label": "State updates: P(label=1) on eval split",
+   "manuscript": "0.342",
+   "searched": "No JSON artifact. Only source is ngcls/ledger.md lines 7280-7287 (2026-08-19 BENCHMARK DIAGNOSIS, commit 57406f1), computed inline from run_compositional.py _gen_* over 8,000 samples; verify_paper2/3 hard-code the ledger values. Searched: grep 0.5022/0.6729/0.5871 across ngcls and hybrid_neurosymbolic *.json/*.txt/*.log (hits only in unrelated cifar/fmnist/dissect runs)."
+  },
+  {
+   "panel": "F2a_label_priors",
+   "label": "State updates: majority baseline on eval split",
+   "manuscript": "0.658",
+   "searched": "Same as P(label=1): ledger-only (ngcls/ledger.md 7283-7286, 57406f1)."
+  },
+  {
+   "panel": "F2a_label_priors",
+   "label": "Entity binding: P(label=1) on eval split",
+   "manuscript": "0.513",
+   "searched": "No JSON artifact. Only source is ngcls/ledger.md lines 7280-7287 (2026-08-19 BENCHMARK DIAGNOSIS, commit 57406f1), computed inline from run_compositional.py _gen_* over 8,000 samples; verify_paper2/3 hard-code the ledger values. Searched: grep 0.5022/0.6729/0.5871 across ngcls and hybrid_neurosymbolic *.json/*.txt/*.log (hits only in unrelated cifar/fmnist/dissect runs)."
+  },
+  {
+   "panel": "F2a_label_priors",
+   "label": "Entity binding: majority baseline on eval split",
+   "manuscript": "0.513",
+   "searched": "Same as P(label=1): ledger-only (ngcls/ledger.md 7283-7286, 57406f1)."
+  },
+  {
+   "panel": "F2a_label_priors",
+   "label": "per-task majority predictor overall accuracy",
+   "manuscript": "0.5871",
+   "searched": "Ledger-only (ngcls/ledger.md line 7287)."
+  },
+  {
+   "panel": "F3d_read_by_budget",
+   "label": "fidelity saturates at 0.76",
+   "manuscript": "0.76",
+   "searched": "v21_logs/v21.json carries no fidelity field; not searched further (not in the requested panel list)."
+  }
+ ],
+ "F2b_per_arena_arms": [
+  {
+   "label": "Variable tracking: majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"variable_tracking\")[0][\"majority\"]",
+   "value": 0.512,
+   "manuscript": "0.512",
+   "match": true
+  },
+  {
+   "label": "Variable tracking: probe test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"variable_tracking\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    0.7900000214576721,
+    0.7660000324249268,
+    0.7850000262260437
+   ],
+   "manuscript": [
+    "0.790",
+    "0.766",
+    "0.785"
+   ],
+   "match": true
+  },
+  {
+   "label": "Variable tracking: mlp test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"variable_tracking\")[0][\"arms\"][\"mlp\"]]",
+   "value": [
+    0.7850000262260437,
+    0.7860000133514404,
+    0.7950000166893005
+   ],
+   "manuscript": [
+    "0.785",
+    "0.786",
+    "0.795"
+   ],
+   "match": true
+  },
+  {
+   "label": "Variable tracking: vsa test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"variable_tracking\")[0][\"arms\"][\"vsa\"]]",
+   "value": [
+    0.745,
+    0.736,
+    0.72
+   ],
+   "manuscript": [
+    "0.745",
+    "0.736",
+    "0.720"
+   ],
+   "match": true
+  },
+  {
+   "label": "Rule priority: majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"rule_priority\")[0][\"majority\"]",
+   "value": 0.517,
+   "manuscript": "0.517",
+   "match": true
+  },
+  {
+   "label": "Rule priority: probe test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"rule_priority\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    1.0,
+    0.9950000643730164,
+    0.999000072479248
+   ],
+   "manuscript": [
+    "1.000",
+    "0.995",
+    "0.999"
+   ],
+   "match": true
+  },
+  {
+   "label": "State updates: majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"state_update\")[0][\"majority\"]",
+   "value": 0.502,
+   "manuscript": "0.502",
+   "match": true
+  },
+  {
+   "label": "State updates: probe test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"state_update\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "manuscript": [
+    "1.000",
+    "1.000",
+    "1.000"
+   ],
+   "match": true
+  },
+  {
+   "label": "Entity binding: majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"binding_test\")[0][\"majority\"]",
+   "value": 0.503,
+   "manuscript": "0.503",
+   "match": true
+  },
+  {
+   "label": "Entity binding: probe test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"binding_test\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    0.9950000643730164,
+    0.9970000386238098,
+    0.9950000643730164
+   ],
+   "manuscript": [
+    "0.995",
+    "0.997",
+    "0.995"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 1: majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"babi1\")[0][\"majority\"]",
+   "value": 0.187,
+   "manuscript": "0.187",
+   "match": true
+  },
+  {
+   "label": "bAbI 1: probe test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi1\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    0.7520000338554382,
+    0.7590000629425049,
+    0.7420000433921814
+   ],
+   "manuscript": [
+    "0.752",
+    "0.759",
+    "0.742"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 1: mlp test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi1\")[0][\"arms\"][\"mlp\"]]",
+   "value": [
+    0.7510000467300415,
+    0.7250000238418579,
+    0.7210000157356262
+   ],
+   "manuscript": [
+    "0.751",
+    "0.725",
+    "0.721"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 1: vsa test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi1\")[0][\"arms\"][\"vsa\"]]",
+   "value": [
+    0.744,
+    0.78,
+    0.731
+   ],
+   "manuscript": [
+    "0.744",
+    "0.780",
+    "0.731"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 2: majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"babi2\")[0][\"majority\"]",
+   "value": 0.187,
+   "manuscript": "0.187",
+   "match": true
+  },
+  {
+   "label": "bAbI 2: probe test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi2\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    0.30300000309944153,
+    0.3240000009536743,
+    0.26200002431869507
+   ],
+   "manuscript": [
+    "0.303",
+    "0.324",
+    "0.262"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 2: mlp test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi2\")[0][\"arms\"][\"mlp\"]]",
+   "value": [
+    0.28700000047683716,
+    0.2750000059604645,
+    0.30800002813339233
+   ],
+   "manuscript": [
+    "0.287",
+    "0.275",
+    "0.308"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 2: vsa test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi2\")[0][\"arms\"][\"vsa\"]]",
+   "value": [
+    0.261,
+    0.167,
+    0.203
+   ],
+   "manuscript": [
+    "0.261",
+    "0.167",
+    "0.203"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 3: majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"babi3\")[0][\"majority\"]",
+   "value": 0.215,
+   "manuscript": "0.215",
+   "match": true
+  },
+  {
+   "label": "bAbI 3: probe test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi3\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    0.19100001454353333,
+    0.15800000727176666,
+    0.1860000044107437
+   ],
+   "manuscript": [
+    "0.191",
+    "0.158",
+    "0.186"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 16: majority",
+   "file": "v7_logs/v7_last.json",
+   "key": "rows(d, arena=\"babi16\")[0][\"majority\"]",
+   "value": 0.257,
+   "manuscript": "0.257",
+   "match": true
+  },
+  {
+   "label": "bAbI 16: probe test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi16\")[0][\"arms\"][\"probe\"]]",
+   "value": [
+    0.5460000038146973,
+    0.5330000519752502,
+    0.5550000071525574
+   ],
+   "manuscript": [
+    "0.546",
+    "0.533",
+    "0.555"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 16: mlp test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi16\")[0][\"arms\"][\"mlp\"]]",
+   "value": [
+    0.5260000228881836,
+    0.5670000314712524,
+    0.5420000553131104
+   ],
+   "manuscript": [
+    "0.526",
+    "0.567",
+    "0.542"
+   ],
+   "match": true
+  },
+  {
+   "label": "bAbI 16: vsa test per seed",
+   "file": "v7_logs/v7_last.json",
+   "key": "[a[\"test\"] for a in rows(d, arena=\"babi16\")[0][\"arms\"][\"vsa\"]]",
+   "value": [
+    0.513,
+    0.532,
+    0.526
+   ],
+   "manuscript": [
+    "0.513",
+    "0.532",
+    "0.526"
+   ],
+   "match": true
+  },
+  {
+   "label": "Variable tracking: HD reported column (raw/online) per seed",
+   "file": "v12_logs/v12.json",
+   "key": "rows(d, arena=\"variable_tracking\")[0][\"hd\"][\"raw/online\"]",
+   "value": [
+    0.629,
+    0.629,
+    0.629
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Variable tracking: HD reported column (raw/online, mean)",
+   "file": "v12_logs/v12.json",
+   "key": "mean(rows(d, arena=\"variable_tracking\")[0][\"hd\"][\"raw/online\"])",
+   "value": 0.629,
+   "manuscript": "0.629",
+   "match": true
+  },
+  {
+   "label": "Variable tracking: HD single-pass (raw/single)",
+   "file": "v12_logs/v12.json",
+   "key": "mean(rows(d, arena=\"variable_tracking\")[0][\"hd\"][\"raw/single\"])",
+   "value": 0.515,
+   "manuscript": "0.515",
+   "match": true
+  },
+  {
+   "label": "Variable tracking: v12 probe per seed",
+   "file": "v12_logs/v12.json",
+   "key": "rows(d, arena=\"variable_tracking\")[0][\"probe\"]",
+   "value": [
+    0.7870000600814819,
+    0.7660000324249268,
+    0.7850000262260437
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 1: HD reported column (raw/online) per seed",
+   "file": "v12_logs/v12.json",
+   "key": "rows(d, arena=\"babi1\")[0][\"hd\"][\"raw/online\"]",
+   "value": [
+    0.75,
+    0.75,
+    0.75
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 1: HD reported column (raw/online, mean)",
+   "file": "v12_logs/v12.json",
+   "key": "mean(rows(d, arena=\"babi1\")[0][\"hd\"][\"raw/online\"])",
+   "value": 0.75,
+   "manuscript": "0.750",
+   "match": true
+  },
+  {
+   "label": "bAbI 1: HD single-pass (raw/single)",
+   "file": "v12_logs/v12.json",
+   "key": "mean(rows(d, arena=\"babi1\")[0][\"hd\"][\"raw/single\"])",
+   "value": 0.656,
+   "manuscript": "0.656",
+   "match": true
+  },
+  {
+   "label": "bAbI 1: v12 probe per seed",
+   "file": "v12_logs/v12.json",
+   "key": "rows(d, arena=\"babi1\")[0][\"probe\"]",
+   "value": [
+    0.7520000338554382,
+    0.7590000629425049,
+    0.7420000433921814
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 2: HD reported column (raw/online) per seed",
+   "file": "v12_logs/v12.json",
+   "key": "rows(d, arena=\"babi2\")[0][\"hd\"][\"raw/online\"]",
+   "value": [
+    0.249,
+    0.249,
+    0.249
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 2: HD reported column (raw/online, mean)",
+   "file": "v12_logs/v12.json",
+   "key": "mean(rows(d, arena=\"babi2\")[0][\"hd\"][\"raw/online\"])",
+   "value": 0.249,
+   "manuscript": "0.249",
+   "match": true
+  },
+  {
+   "label": "bAbI 2: HD single-pass (raw/single)",
+   "file": "v12_logs/v12.json",
+   "key": "mean(rows(d, arena=\"babi2\")[0][\"hd\"][\"raw/single\"])",
+   "value": 0.166,
+   "manuscript": "0.166",
+   "match": true
+  },
+  {
+   "label": "bAbI 2: v12 probe per seed",
+   "file": "v12_logs/v12.json",
+   "key": "rows(d, arena=\"babi2\")[0][\"probe\"]",
+   "value": [
+    0.30300000309944153,
+    0.3240000009536743,
+    0.26200002431869507
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 16: HD reported column (raw/online) per seed",
+   "file": "v12_logs/v12.json",
+   "key": "rows(d, arena=\"babi16\")[0][\"hd\"][\"raw/online\"]",
+   "value": [
+    0.532,
+    0.532,
+    0.532
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 16: HD reported column (raw/online, mean)",
+   "file": "v12_logs/v12.json",
+   "key": "mean(rows(d, arena=\"babi16\")[0][\"hd\"][\"raw/online\"])",
+   "value": 0.532,
+   "manuscript": "0.532",
+   "match": true
+  },
+  {
+   "label": "bAbI 16: HD single-pass (raw/single)",
+   "file": "v12_logs/v12.json",
+   "key": "mean(rows(d, arena=\"babi16\")[0][\"hd\"][\"raw/single\"])",
+   "value": 0.381,
+   "manuscript": "0.381",
+   "match": true
+  },
+  {
+   "label": "bAbI 16: v12 probe per seed",
+   "file": "v12_logs/v12.json",
+   "key": "rows(d, arena=\"babi16\")[0][\"probe\"]",
+   "value": [
+    0.5460000038146973,
+    0.5330000519752502,
+    0.5550000071525574
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "HD six configurations: raw/single mean over 4 arenas",
+   "file": "v12_logs/v12.json",
+   "key": "mean([mean(r[\"hd\"][\"raw/single\"]) for r in d])",
+   "value": 0.4295,
+   "manuscript": "0.430",
+   "match": true
+  },
+  {
+   "label": "HD six configurations: raw/single per-arena means (VT, bAbI1, bAbI2, bAbI16)",
+   "file": "v12_logs/v12.json",
+   "key": "[mean(r[\"hd\"][\"raw/single\"]) for r in d]",
+   "value": [
+    0.515,
+    0.656,
+    0.166,
+    0.381
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "HD six configurations: raw/retrain mean over 4 arenas",
+   "file": "v12_logs/v12.json",
+   "key": "mean([mean(r[\"hd\"][\"raw/retrain\"]) for r in d])",
+   "value": 0.36175,
+   "manuscript": "0.362",
+   "match": true
+  },
+  {
+   "label": "HD six configurations: raw/retrain per-arena means (VT, bAbI1, bAbI2, bAbI16)",
+   "file": "v12_logs/v12.json",
+   "key": "[mean(r[\"hd\"][\"raw/retrain\"]) for r in d]",
+   "value": [
+    0.512,
+    0.381,
+    0.19400000000000003,
+    0.36000000000000004
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "HD six configurations: raw/online mean over 4 arenas",
+   "file": "v12_logs/v12.json",
+   "key": "mean([mean(r[\"hd\"][\"raw/online\"]) for r in d])",
+   "value": 0.54,
+   "manuscript": "0.540",
+   "match": true
+  },
+  {
+   "label": "HD six configurations: raw/online per-arena means (VT, bAbI1, bAbI2, bAbI16)",
+   "file": "v12_logs/v12.json",
+   "key": "[mean(r[\"hd\"][\"raw/online\"]) for r in d]",
+   "value": [
+    0.629,
+    0.75,
+    0.249,
+    0.532
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "HD six configurations: rp_sign/single mean over 4 arenas",
+   "file": "v12_logs/v12.json",
+   "key": "mean([mean(r[\"hd\"][\"rp_sign/single\"]) for r in d])",
+   "value": 0.4309166666666666,
+   "manuscript": "0.431",
+   "match": true
+  },
+  {
+   "label": "HD six configurations: rp_sign/single per-arena means (VT, bAbI1, bAbI2, bAbI16)",
+   "file": "v12_logs/v12.json",
+   "key": "[mean(r[\"hd\"][\"rp_sign/single\"]) for r in d]",
+   "value": [
+    0.5243333333333333,
+    0.6433333333333333,
+    0.17400000000000002,
+    0.38199999999999995
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "HD six configurations: rp_sign/retrain mean over 4 arenas",
+   "file": "v12_logs/v12.json",
+   "key": "mean([mean(r[\"hd\"][\"rp_sign/retrain\"]) for r in d])",
+   "value": 0.3295,
+   "manuscript": "0.330",
+   "match": true
+  },
+  {
+   "label": "HD six configurations: rp_sign/retrain per-arena means (VT, bAbI1, bAbI2, bAbI16)",
+   "file": "v12_logs/v12.json",
+   "key": "[mean(r[\"hd\"][\"rp_sign/retrain\"]) for r in d]",
+   "value": [
+    0.512,
+    0.324,
+    0.15933333333333333,
+    0.32266666666666666
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "HD six configurations: rp_sign/online mean over 4 arenas",
+   "file": "v12_logs/v12.json",
+   "key": "mean([mean(r[\"hd\"][\"rp_sign/online\"]) for r in d])",
+   "value": 0.5200833333333335,
+   "manuscript": "0.520",
+   "match": true
+  },
+  {
+   "label": "HD six configurations: rp_sign/online per-arena means (VT, bAbI1, bAbI2, bAbI16)",
+   "file": "v12_logs/v12.json",
+   "key": "[mean(r[\"hd\"][\"rp_sign/online\"]) for r in d]",
+   "value": [
+    0.5463333333333334,
+    0.7316666666666668,
+    0.271,
+    0.5313333333333333
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "HD six configurations: range of means",
+   "file": "v12_logs/v12.json",
+   "key": "[min(mean([mean(r[\"hd\"][c]) for r in d]) for c in d[0][\"hd\"]), max(mean([mean(r[\"hd\"][c]) for r in d]) for c in d[0][\"hd\"])]",
+   "value": [
+    0.3295,
+    0.54
+   ],
+   "manuscript": [
+    "0.330",
+    "0.540"
+   ],
+   "match": true
+  },
+  {
+   "label": "linear probe mean over the same 4 arenas",
+   "file": "v12_logs/v12.json",
+   "key": "mean([mean(r[\"probe\"]) for r in d])",
+   "value": 0.5928333625197411,
+   "manuscript": "0.593",
+   "match": true
+  }
+ ],
+ "F2c_pooling": [
+  {
+   "label": "Variable tracking: mean-pool probe per seed",
+   "file": "v6_logs/v6.json",
+   "key": "rows(d, arena=\"variable_tracking\")[0][\"probe\"][\"mean\"]",
+   "value": [
+    0.656000018119812,
+    0.6490000486373901,
+    0.6640000343322754
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Variable tracking: mean-pool probe (mean)",
+   "file": "v6_logs/v6.json",
+   "key": "mean(rows(d, arena=\"variable_tracking\")[0][\"probe\"][\"mean\"])",
+   "value": 0.6563333670298258,
+   "manuscript": "0.656",
+   "match": true
+  },
+  {
+   "label": "Variable tracking: last-token probe per seed",
+   "file": "v6_logs/v6.json",
+   "key": "rows(d, arena=\"variable_tracking\")[0][\"probe\"][\"last\"]",
+   "value": [
+    0.7890000343322754,
+    0.7850000262260437,
+    0.7880000472068787
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "Variable tracking: last-token probe (mean)",
+   "file": "v6_logs/v6.json",
+   "key": "mean(rows(d, arena=\"variable_tracking\")[0][\"probe\"][\"last\"])",
+   "value": 0.7873333692550659,
+   "manuscript": "0.787",
+   "match": true
+  },
+  {
+   "label": "Variable tracking: max-pool probe per seed",
+   "file": "v6_logs/v6.json",
+   "key": "rows(d, arena=\"variable_tracking\")[0][\"probe\"][\"max\"]",
+   "value": [
+    0.6930000185966492,
+    0.6970000267028809,
+    0.7100000381469727
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 1: mean-pool probe per seed",
+   "file": "v6_logs/v6.json",
+   "key": "rows(d, arena=\"babi_task1\")[0][\"probe\"][\"mean\"]",
+   "value": [
+    0.3750000298023224,
+    0.3490000069141388,
+    0.3490000069141388
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 1: mean-pool probe (mean)",
+   "file": "v6_logs/v6.json",
+   "key": "mean(rows(d, arena=\"babi_task1\")[0][\"probe\"][\"mean\"])",
+   "value": 0.3576666812102,
+   "manuscript": "0.358",
+   "match": true
+  },
+  {
+   "label": "bAbI 1: last-token probe per seed",
+   "file": "v6_logs/v6.json",
+   "key": "rows(d, arena=\"babi_task1\")[0][\"probe\"][\"last\"]",
+   "value": [
+    0.7570000290870667,
+    0.7350000143051147,
+    0.76500004529953
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 1: last-token probe (mean)",
+   "file": "v6_logs/v6.json",
+   "key": "mean(rows(d, arena=\"babi_task1\")[0][\"probe\"][\"last\"])",
+   "value": 0.7523333628972372,
+   "manuscript": "0.752",
+   "match": true
+  },
+  {
+   "label": "bAbI 1: max-pool probe per seed",
+   "file": "v6_logs/v6.json",
+   "key": "rows(d, arena=\"babi_task1\")[0][\"probe\"][\"max\"]",
+   "value": [
+    0.35100001096725464,
+    0.33000001311302185,
+    0.39400002360343933
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F2d_placement": [
+  {
+   "label": "row 0: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[0][\"floor\"]",
+   "value": 0.9362500011920929,
+   "manuscript": "0.936",
+   "match": true
+  },
+  {
+   "label": "row 0: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[0][\"floor_per_seed\"]",
+   "value": [
+    0.9424999952316284,
+    0.9300000071525574
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 0: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[0][\"hops\"], d[0][\"n_ctx\"], d[0][\"query_at_end\"]]",
+   "value": [
+    1.0,
+    16.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 1: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[1][\"floor\"]",
+   "value": 0.6537500023841858,
+   "manuscript": "0.654",
+   "match": true
+  },
+  {
+   "label": "row 1: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[1][\"floor_per_seed\"]",
+   "value": [
+    0.6324999928474426,
+    0.675000011920929
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 1: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[1][\"hops\"], d[1][\"n_ctx\"], d[1][\"query_at_end\"]]",
+   "value": [
+    1.0,
+    16.0,
+    0.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 2: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[2][\"floor\"]",
+   "value": 0.9087499976158142,
+   "manuscript": "0.909",
+   "match": true
+  },
+  {
+   "label": "row 2: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[2][\"floor_per_seed\"]",
+   "value": [
+    0.9225000143051147,
+    0.8949999809265137
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 2: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[2][\"hops\"], d[2][\"n_ctx\"], d[2][\"query_at_end\"]]",
+   "value": [
+    1.0,
+    32.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 3: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[3][\"floor\"]",
+   "value": 0.6150000095367432,
+   "manuscript": "0.615",
+   "match": true
+  },
+  {
+   "label": "row 3: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[3][\"floor_per_seed\"]",
+   "value": [
+    0.6175000071525574,
+    0.612500011920929
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 3: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[3][\"hops\"], d[3][\"n_ctx\"], d[3][\"query_at_end\"]]",
+   "value": [
+    1.0,
+    32.0,
+    0.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 4: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[4][\"floor\"]",
+   "value": 0.6587499976158142,
+   "manuscript": "0.659",
+   "match": true
+  },
+  {
+   "label": "row 4: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[4][\"floor_per_seed\"]",
+   "value": [
+    0.6349999904632568,
+    0.6825000047683716
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 4: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[4][\"hops\"], d[4][\"n_ctx\"], d[4][\"query_at_end\"]]",
+   "value": [
+    2.0,
+    16.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 5: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[5][\"floor\"]",
+   "value": 0.4987500011920929,
+   "manuscript": "0.499",
+   "match": true
+  },
+  {
+   "label": "row 5: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[5][\"floor_per_seed\"]",
+   "value": [
+    0.4975000023841858,
+    0.5
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 5: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[5][\"hops\"], d[5][\"n_ctx\"], d[5][\"query_at_end\"]]",
+   "value": [
+    2.0,
+    16.0,
+    0.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 6: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[6][\"floor\"]",
+   "value": 0.601250022649765,
+   "manuscript": "0.601",
+   "match": true
+  },
+  {
+   "label": "row 6: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[6][\"floor_per_seed\"]",
+   "value": [
+    0.6000000238418579,
+    0.6025000214576721
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 6: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[6][\"hops\"], d[6][\"n_ctx\"], d[6][\"query_at_end\"]]",
+   "value": [
+    2.0,
+    32.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 7: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[7][\"floor\"]",
+   "value": 0.4737499952316284,
+   "manuscript": "0.474",
+   "match": true
+  },
+  {
+   "label": "row 7: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[7][\"floor_per_seed\"]",
+   "value": [
+    0.47999998927116394,
+    0.4675000011920929
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 7: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[7][\"hops\"], d[7][\"n_ctx\"], d[7][\"query_at_end\"]]",
+   "value": [
+    2.0,
+    32.0,
+    0.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 8: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[8][\"floor\"]",
+   "value": 0.6587499976158142,
+   "manuscript": "0.659",
+   "match": true
+  },
+  {
+   "label": "row 8: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[8][\"floor_per_seed\"]",
+   "value": [
+    0.637499988079071,
+    0.6800000071525574
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 8: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[8][\"hops\"], d[8][\"n_ctx\"], d[8][\"query_at_end\"]]",
+   "value": [
+    3.0,
+    16.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 9: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[9][\"floor\"]",
+   "value": 0.5362499952316284,
+   "manuscript": "0.536",
+   "match": true
+  },
+  {
+   "label": "row 9: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[9][\"floor_per_seed\"]",
+   "value": [
+    0.5149999856948853,
+    0.5575000047683716
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 9: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[9][\"hops\"], d[9][\"n_ctx\"], d[9][\"query_at_end\"]]",
+   "value": [
+    3.0,
+    16.0,
+    0.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 10: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[10][\"floor\"]",
+   "value": 0.59375,
+   "manuscript": "0.594",
+   "match": true
+  },
+  {
+   "label": "row 10: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[10][\"floor_per_seed\"]",
+   "value": [
+    0.6150000095367432,
+    0.5724999904632568
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 10: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[10][\"hops\"], d[10][\"n_ctx\"], d[10][\"query_at_end\"]]",
+   "value": [
+    3.0,
+    32.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 11: floor (mean of 2 seeds)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[11][\"floor\"]",
+   "value": 0.5274999737739563,
+   "manuscript": "0.528",
+   "match": false,
+   "note": "artifact .52749997 (float32 of .5275) rounds to .527; manuscript .528 = round-half-up of .5275. Not a data discrepancy."
+  },
+  {
+   "label": "row 11: floor per seed",
+   "file": "v13_logs/floor_survey.json",
+   "key": "d[11][\"floor_per_seed\"]",
+   "value": [
+    0.5249999761581421,
+    0.5299999713897705
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "row 11: config (hops, n_ctx, query_at_end)",
+   "file": "v13_logs/floor_survey.json",
+   "key": "[d[11][\"hops\"], d[11][\"n_ctx\"], d[11][\"query_at_end\"]]",
+   "value": [
+    3.0,
+    32.0,
+    0.0
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F3a_three_arenas": [
+  {
+   "label": "A floor per seed",
+   "file": "v1_logs/frozen_llm.json",
+   "key": "accs(d)",
+   "value": [
+    0.508,
+    0.511,
+    0.508
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "A floor (mean)",
+   "file": "v1_logs/frozen_llm.json",
+   "key": "mean(accs(d))",
+   "value": 0.509,
+   "manuscript": "0.509",
+   "match": true
+  },
+  {
+   "label": "A parser per seed",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "accs(d, epsilon=0.0)",
+   "value": [
+    0.918,
+    0.919,
+    0.918
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "A parser (mean)",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "mean(accs(d, epsilon=0.0))",
+   "value": 0.9183333333333334,
+   "manuscript": "0.918",
+   "match": true
+  },
+  {
+   "label": "A relabelled per seed",
+   "file": "v4_logs/v4_consistent.json",
+   "key": "accs(d, epsilon=1.0)",
+   "value": [
+    0.867,
+    0.871,
+    0.869
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "A relabelled (mean)",
+   "file": "v4_logs/v4_consistent.json",
+   "key": "mean(accs(d, epsilon=1.0))",
+   "value": 0.8690000000000001,
+   "manuscript": "0.869",
+   "match": true
+  },
+  {
+   "label": "A through-the-loss per seed",
+   "file": "v8_logs/v8.json",
+   "key": "accs(d)",
+   "value": [
+    0.511,
+    0.499,
+    0.493
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "A through-the-loss (mean)",
+   "file": "v8_logs/v8.json",
+   "key": "mean(accs(d))",
+   "value": 0.501,
+   "manuscript": "0.501",
+   "match": true
+  },
+  {
+   "label": "A discrete handover per seed",
+   "file": "v9_logs/v9_gpu1_rerun_partial.json",
+   "key": "accs(d, arm=\"extract_then_bind\")",
+   "value": [
+    0.915,
+    0.913,
+    0.913
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "A discrete handover (mean)",
+   "file": "v9_logs/v9_gpu1_rerun_partial.json",
+   "key": "mean(accs(d, arm=\"extract_then_bind\"))",
+   "value": 0.9136666666666667,
+   "manuscript": "0.914",
+   "match": true
+  },
+  {
+   "label": "A frozen continuous projection per seed (V-9 Arm A best)",
+   "file": "runs/v9/v9.json",
+   "key": "[r[\"armA\"][\"best\"] for r in d]",
+   "value": [
+    0.671,
+    0.672,
+    0.677
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "Arm A = projection frozen, 2 trainable readout scalars (V-9, prereg 7c90962). Init (untrained scalars) .629/.629/.633. Ledger 10101: '.673 is the frozen projection WITH its two readout scalars trained'."
+  },
+  {
+   "label": "A frozen continuous projection (mean of best)",
+   "file": "runs/v9/v9.json",
+   "key": "mean([r[\"armA\"][\"best\"] for r in d])",
+   "value": 0.6733333333333333,
+   "manuscript": "0.670",
+   "match": false,
+   "note": "MISMATCH: artifact mean .6733 rounds to .673, manuscript tab:threearena prints 0.670 (its 39% recovery is consistent with .670; the artifact gives 40%)."
+  },
+  {
+   "label": "A frozen continuous projection, init per seed",
+   "file": "runs/v9/v9.json",
+   "key": "[r[\"armA\"][\"init\"] for r in d]",
+   "value": [
+    0.629,
+    0.629,
+    0.633
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "A recovery: discrete handover (%)",
+   "file": "v9_logs/v9_gpu1_rerun_partial.json",
+   "key": "100*(mean(accs(d, arm=\"extract_then_bind\")) - 0.509)/(0.918 - 0.509)",
+   "value": 98.94050529747352,
+   "manuscript": "99",
+   "match": true,
+   "note": "uses floor .509 and parser .918 from v1/v4 (literals as rounded in the table)"
+  },
+  {
+   "label": "A recovery: continuous (%)",
+   "file": "runs/v9/v9.json",
+   "key": "100*(mean([r[\"armA\"][\"best\"] for r in d]) - 0.509)/(0.918 - 0.509)",
+   "value": 40.17929910350448,
+   "manuscript": "39",
+   "match": false,
+   "note": "artifact gives 40.2%; manuscript 39% follows from the printed 0.670"
+  },
+  {
+   "label": "B floor per seed",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "accs(d, arm=\"floor\")",
+   "value": [
+    0.794,
+    0.818,
+    0.832
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "B floor (mean)",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "mean(accs(d, arm=\"floor\"))",
+   "value": 0.8146666666666667,
+   "manuscript": "0.815",
+   "match": true
+  },
+  {
+   "label": "B parser per seed",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "accs(d, arm=\"parser\")",
+   "value": [
+    0.99,
+    1.0,
+    0.998
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "B parser (mean)",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "mean(accs(d, arm=\"parser\"))",
+   "value": 0.996,
+   "manuscript": "0.996",
+   "match": true
+  },
+  {
+   "label": "B relabelled per seed",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "accs(d, arm=\"consistent\")",
+   "value": [
+    0.996,
+    0.996,
+    0.99
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "B relabelled (mean)",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "mean(accs(d, arm=\"consistent\"))",
+   "value": 0.9940000000000001,
+   "manuscript": "0.994",
+   "match": true
+  },
+  {
+   "label": "B through-the-loss per seed",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "accs(d, arm=\"spans\")",
+   "value": [
+    0.502,
+    0.498,
+    0.522
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "B through-the-loss (mean)",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "mean(accs(d, arm=\"spans\"))",
+   "value": 0.5073333333333333,
+   "manuscript": "0.507",
+   "match": true
+  },
+  {
+   "label": "B discrete handover per seed",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "accs(d, arm=\"probe_argmax\")",
+   "value": [
+    0.99,
+    1.0,
+    0.998
+   ],
+   "manuscript": [
+    "0.990",
+    "1.000",
+    "0.998"
+   ],
+   "match": true
+  },
+  {
+   "label": "B discrete handover (mean)",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "mean(accs(d, arm=\"probe_argmax\"))",
+   "value": 0.996,
+   "manuscript": "0.996",
+   "match": true
+  },
+  {
+   "label": "B frozen continuous per seed",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "accs(d, arm=\"frozen_cont\")",
+   "value": [
+    0.978,
+    0.99,
+    0.988
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "B frozen continuous (mean)",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "mean(accs(d, arm=\"frozen_cont\"))",
+   "value": 0.9853333333333333,
+   "manuscript": "0.985",
+   "match": true
+  },
+  {
+   "label": "B recovery: discrete handover (%)",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "100*(mean(accs(d, arm=\"probe_argmax\")) - mean(accs(d, arm=\"floor\")))/(mean(accs(d, arm=\"parser\")) - mean(accs(d, arm=\"floor\")))",
+   "value": 99.99999999999999,
+   "manuscript": "100",
+   "match": true
+  },
+  {
+   "label": "B recovery: continuous (%)",
+   "file": "v11_logs/v18_spanfix.json",
+   "key": "100*(mean(accs(d, arm=\"frozen_cont\")) - mean(accs(d, arm=\"floor\")))/(mean(accs(d, arm=\"parser\")) - mean(accs(d, arm=\"floor\")))",
+   "value": 94.11764705882351,
+   "manuscript": "94",
+   "match": true
+  },
+  {
+   "label": "C floor per seed",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "accs(d, arm=\"floor\")",
+   "value": [
+    0.512,
+    0.53,
+    0.504
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "C floor (mean)",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "mean(accs(d, arm=\"floor\"))",
+   "value": 0.5153333333333333,
+   "manuscript": "0.515",
+   "match": true
+  },
+  {
+   "label": "C parser per seed",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "accs(d, arm=\"parser\")",
+   "value": [
+    0.932,
+    0.932,
+    0.938
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "C parser (mean)",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "mean(accs(d, arm=\"parser\"))",
+   "value": 0.934,
+   "manuscript": "0.934",
+   "match": true
+  },
+  {
+   "label": "C relabelled per seed",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "accs(d, arm=\"consistent\")",
+   "value": [
+    0.94,
+    0.914,
+    0.934
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "C relabelled (mean)",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "mean(accs(d, arm=\"consistent\"))",
+   "value": 0.9293333333333335,
+   "manuscript": "0.929",
+   "match": true
+  },
+  {
+   "label": "C through-the-loss per seed",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "accs(d, arm=\"spans\")",
+   "value": [
+    0.472,
+    0.502,
+    0.476
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "C through-the-loss (mean)",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "mean(accs(d, arm=\"spans\"))",
+   "value": 0.48333333333333334,
+   "manuscript": "0.483",
+   "match": true
+  },
+  {
+   "label": "C discrete handover per seed",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "accs(d, arm=\"probe_argmax\")",
+   "value": [
+    0.932,
+    0.932,
+    0.938
+   ],
+   "manuscript": [
+    "0.932",
+    "0.932",
+    "0.938"
+   ],
+   "match": true
+  },
+  {
+   "label": "C discrete handover (mean)",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "mean(accs(d, arm=\"probe_argmax\"))",
+   "value": 0.934,
+   "manuscript": "0.934",
+   "match": true
+  },
+  {
+   "label": "C frozen continuous per seed",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "accs(d, arm=\"frozen_cont\")",
+   "value": [
+    0.922,
+    0.944,
+    0.906
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "C frozen continuous (mean)",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "mean(accs(d, arm=\"frozen_cont\"))",
+   "value": 0.924,
+   "manuscript": "0.924",
+   "match": true
+  },
+  {
+   "label": "C recovery: discrete handover (%)",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "100*(mean(accs(d, arm=\"probe_argmax\")) - mean(accs(d, arm=\"floor\")))/(mean(accs(d, arm=\"parser\")) - mean(accs(d, arm=\"floor\")))",
+   "value": 100.0,
+   "manuscript": "100",
+   "match": true
+  },
+  {
+   "label": "C recovery: continuous (%)",
+   "file": "v13_logs/v13_fixed.json",
+   "key": "100*(mean(accs(d, arm=\"frozen_cont\")) - mean(accs(d, arm=\"floor\")))/(mean(accs(d, arm=\"parser\")) - mean(accs(d, arm=\"floor\")))",
+   "value": 97.61146496815287,
+   "manuscript": "98",
+   "match": true
+  },
+  {
+   "label": "LoRA on B per seed",
+   "file": "v15_logs/v15.json",
+   "key": "accs(d, arena=\"B\")",
+   "value": [
+    0.98,
+    0.895,
+    0.51
+   ],
+   "manuscript": [
+    "0.980",
+    "0.895",
+    "0.510"
+   ],
+   "match": true
+  },
+  {
+   "label": "LoRA on B (mean)",
+   "file": "v15_logs/v15.json",
+   "key": "mean(accs(d, arena=\"B\"))",
+   "value": 0.7949999999999999,
+   "manuscript": "0.795",
+   "match": true
+  },
+  {
+   "label": "LoRA on C per seed",
+   "file": "v15_logs/v15.json",
+   "key": "accs(d, arena=\"C\")",
+   "value": [
+    0.515,
+    0.5175,
+    0.515
+   ],
+   "manuscript": [
+    "0.515",
+    "0.518",
+    "0.515"
+   ],
+   "match": true
+  },
+  {
+   "label": "LoRA on C (mean)",
+   "file": "v15_logs/v15.json",
+   "key": "mean(accs(d, arena=\"C\"))",
+   "value": 0.5158333333333333,
+   "manuscript": "0.516",
+   "match": true
+  },
+  {
+   "label": "LoRA on C, ten-epoch extension per seed",
+   "file": "v15b_logs/v15b.json",
+   "key": "accs(d, arena=\"C\")",
+   "value": [
+    0.5375,
+    0.52,
+    0.515
+   ],
+   "manuscript": [
+    "0.538",
+    "0.520",
+    "0.515"
+   ],
+   "match": true
+  },
+  {
+   "label": "LoRA on C, ten-epoch extension (mean)",
+   "file": "v15b_logs/v15b.json",
+   "key": "mean(accs(d, arena=\"C\"))",
+   "value": 0.5241666666666668,
+   "manuscript": "0.524",
+   "match": true
+  },
+  {
+   "label": "LoRA on A per seed",
+   "file": "v1_logs/lora.json",
+   "key": "accs(d)",
+   "value": [
+    0.493,
+    0.508,
+    0.515
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "LoRA rank 16 on arena A, V-1 run (seeds 42/123/456); was drawn as 'n/a' in v51."
+  },
+  {
+   "label": "LoRA on A (mean)",
+   "file": "v1_logs/lora.json",
+   "key": "mean(accs(d))",
+   "value": 0.5053333333333333,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "LoRA on A: seeds / trainable parameters",
+   "file": "v1_logs/lora.json",
+   "key": "[[r[\"seed\"] for r in d], d[0][\"trainable_params\"]]",
+   "value": [
+    [
+     42,
+     123,
+     456
+    ],
+    10490882
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F3b_arena_A_decomposition": [
+  {
+   "label": "hand scan (parser) per seed",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "accs(d, epsilon=0.0)",
+   "value": [
+    0.918,
+    0.919,
+    0.918
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "hand scan (parser)",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "mean(accs(d, epsilon=0.0))",
+   "value": 0.9183333333333334,
+   "manuscript": "0.918",
+   "match": true
+  },
+  {
+   "label": "consistent relabelling per seed",
+   "file": "v4_logs/v4_consistent.json",
+   "key": "accs(d, epsilon=1.0)",
+   "value": [
+    0.867,
+    0.871,
+    0.869
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "consistent relabelling",
+   "file": "v4_logs/v4_consistent.json",
+   "key": "mean(accs(d, epsilon=1.0))",
+   "value": 0.8690000000000001,
+   "manuscript": "0.869",
+   "match": true
+  },
+  {
+   "label": "10% occurrences corrupted per seed",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "accs(d, epsilon=0.1)",
+   "value": [
+    0.716,
+    0.715,
+    0.728
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "10% occurrences corrupted",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "mean(accs(d, epsilon=0.1))",
+   "value": 0.7196666666666666,
+   "manuscript": "0.720",
+   "match": true
+  },
+  {
+   "label": "supervised linear identity map per seed",
+   "file": "v4_logs/v4_extract.json",
+   "key": "[r[\"A_extract\"] for r in d]",
+   "value": [
+    0.9997627139091492,
+    0.9964404702186584,
+    0.9997457265853882
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "supervised linear identity map",
+   "file": "v4_logs/v4_extract.json",
+   "key": "mean([r[\"A_extract\"] for r in d])",
+   "value": 0.9986496369043986,
+   "manuscript": "0.9986",
+   "match": true
+  },
+  {
+   "label": "trained through the binding loss per seed",
+   "file": "v8_logs/v8.json",
+   "key": "accs(d)",
+   "value": [
+    0.511,
+    0.499,
+    0.493
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "trained through the binding loss",
+   "file": "v8_logs/v8.json",
+   "key": "mean(accs(d))",
+   "value": 0.501,
+   "manuscript": "0.501",
+   "match": true
+  },
+  {
+   "label": "raw hidden states per seed",
+   "file": "v1_logs/vsa_hidden.json",
+   "key": "accs(d)",
+   "value": [
+    0.508,
+    0.508,
+    0.499
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "raw hidden states",
+   "file": "v1_logs/vsa_hidden.json",
+   "key": "mean(accs(d))",
+   "value": 0.505,
+   "manuscript": "0.505",
+   "match": true
+  },
+  {
+   "label": "per-occurrence corruption curve: epsilons",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "sorted(set(r[\"epsilon\"] for r in d))",
+   "value": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "per-occurrence corruption curve: mean acc per epsilon",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "[mean(accs(d, epsilon=e)) for e in sorted(set(r[\"epsilon\"] for r in d))]",
+   "value": [
+    0.9183333333333334,
+    0.7196666666666666,
+    0.604,
+    0.5463333333333334,
+    0.4996666666666667,
+    0.49433333333333335,
+    0.492
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "per-occurrence corruption curve: per-seed acc per epsilon",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "[accs(d, epsilon=e) for e in sorted(set(r[\"epsilon\"] for r in d))]",
+   "value": [
+    [
+     0.918,
+     0.919,
+     0.918
+    ],
+    [
+     0.716,
+     0.715,
+     0.728
+    ],
+    [
+     0.59,
+     0.611,
+     0.611
+    ],
+    [
+     0.544,
+     0.548,
+     0.547
+    ],
+    [
+     0.495,
+     0.505,
+     0.499
+    ],
+    [
+     0.494,
+     0.496,
+     0.493
+    ],
+    [
+     0.493,
+     0.491,
+     0.492
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "consistent relabelling curve: mean acc per epsilon",
+   "file": "v4_logs/v4_consistent.json",
+   "key": "[mean(accs(d, epsilon=e)) for e in sorted(set(r[\"epsilon\"] for r in d))]",
+   "value": [
+    0.9183333333333334,
+    0.908,
+    0.903,
+    0.8846666666666666,
+    0.8776666666666667,
+    0.8653333333333334,
+    0.8690000000000001
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "consistent relabelling curve: per-seed acc per epsilon",
+   "file": "v4_logs/v4_consistent.json",
+   "key": "[accs(d, epsilon=e) for e in sorted(set(r[\"epsilon\"] for r in d))]",
+   "value": [
+    [
+     0.918,
+     0.919,
+     0.918
+    ],
+    [
+     0.907,
+     0.904,
+     0.913
+    ],
+    [
+     0.902,
+     0.907,
+     0.9
+    ],
+    [
+     0.885,
+     0.885,
+     0.884
+    ],
+    [
+     0.876,
+     0.877,
+     0.88
+    ],
+    [
+     0.869,
+     0.861,
+     0.866
+    ],
+    [
+     0.867,
+     0.871,
+     0.869
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "corruption rate at which per-occurrence arm reaches the floor 0.509 (linear interpolation)",
+   "file": "v4_logs/v4_perocc.json",
+   "key": "float(np.interp(-0.509, [-mean(accs(d, epsilon=e)) for e in sorted(set(r[\"epsilon\"] for r in d))], sorted(set(r[\"epsilon\"] for r in d))))",
+   "value": 0.4600000000000002,
+   "manuscript": "0.46",
+   "match": true,
+   "note": "floor 0.509 from v1_logs/frozen_llm.json; interpolation on the mean curve"
+  }
+ ],
+ "F3c_symbol_count_sweep": [
+  {
+   "label": "k values",
+   "file": "v14_logs/v14_fixed.json",
+   "key": "[r[\"k\"] for r in d]",
+   "value": [
+    2.0,
+    4.0,
+    8.0,
+    16.0,
+    24.0,
+    32.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "parser mean per k",
+   "file": "v14_logs/v14_fixed.json",
+   "key": "[mean(r[\"parser\"]) for r in d]",
+   "value": [
+    1.0,
+    0.9979999999999999,
+    0.9966666666666667,
+    0.972,
+    0.9506666666666667,
+    0.934
+   ],
+   "manuscript": [
+    "1.000",
+    "0.998",
+    "0.997",
+    "0.972",
+    "0.951",
+    "0.934"
+   ],
+   "match": true
+  },
+  {
+   "label": "parser per seed per k",
+   "file": "v14_logs/v14_fixed.json",
+   "key": "[r[\"parser\"] for r in d]",
+   "value": [
+    [
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     0.998,
+     0.998,
+     0.998
+    ],
+    [
+     0.994,
+     0.996,
+     1.0
+    ],
+    [
+     0.97,
+     0.972,
+     0.974
+    ],
+    [
+     0.95,
+     0.954,
+     0.948
+    ],
+    [
+     0.932,
+     0.932,
+     0.938
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "discrete handover mean per k",
+   "file": "v14_logs/v14_fixed.json",
+   "key": "[mean(r[\"probe_argmax\"]) for r in d]",
+   "value": [
+    0.9886666666666667,
+    0.9946666666666667,
+    0.9966666666666667,
+    0.972,
+    0.9506666666666667,
+    0.934
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "manuscript: handover ties the parser from k=8 (its literals 1.000/0.998/0.997/0.972/0.951/0.934 are the parser column)"
+  },
+  {
+   "label": "discrete handover per seed per k",
+   "file": "v14_logs/v14_fixed.json",
+   "key": "[r[\"probe_argmax\"] for r in d]",
+   "value": [
+    [
+     0.98,
+     0.988,
+     0.998
+    ],
+    [
+     0.996,
+     0.994,
+     0.994
+    ],
+    [
+     0.994,
+     0.996,
+     1.0
+    ],
+    [
+     0.97,
+     0.972,
+     0.974
+    ],
+    [
+     0.95,
+     0.954,
+     0.948
+    ],
+    [
+     0.932,
+     0.932,
+     0.938
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "floor mean per k",
+   "file": "v14_logs/v14_fixed.json",
+   "key": "[mean(r[\"floor\"]) for r in d]",
+   "value": [
+    0.7953333333333333,
+    0.5706666666666667,
+    0.5333333333333333,
+    0.5113333333333333,
+    0.534,
+    0.5153333333333333
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "floor per seed per k",
+   "file": "v14_logs/v14_fixed.json",
+   "key": "[r[\"floor\"] for r in d]",
+   "value": [
+    [
+     0.806,
+     0.808,
+     0.772
+    ],
+    [
+     0.576,
+     0.576,
+     0.56
+    ],
+    [
+     0.524,
+     0.542,
+     0.534
+    ],
+    [
+     0.51,
+     0.494,
+     0.53
+    ],
+    [
+     0.534,
+     0.546,
+     0.522
+    ],
+    [
+     0.512,
+     0.53,
+     0.504
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "recovery fraction R per k",
+   "file": "v14_logs/v14_fixed.json",
+   "key": "[r[\"R\"] for r in d]",
+   "value": [
+    0.9446254071661239,
+    0.9921996879875198,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F3d_read_by_budget": [
+  {
+   "label": "fit epochs",
+   "file": "v21_logs/v21.json",
+   "key": "[c[\"fit_epochs\"] for c in d[\"cells\"]]",
+   "value": [
+    0.0,
+    1.0,
+    3.0,
+    10.0,
+    30.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "continuous read: headroom recovered (%)",
+   "file": "v21_logs/v21.json",
+   "key": "[100*c[\"R_cont\"] for c in d[\"cells\"]]",
+   "value": [
+    -7.724719101123598,
+    29.634831460674167,
+    49.7191011235955,
+    67.41573033707866,
+    75.00000000000003
+   ],
+   "manuscript": [
+    "-8",
+    "30",
+    "50",
+    "67",
+    "75"
+   ],
+   "match": true
+  },
+  {
+   "label": "snapped read: headroom recovered (%)",
+   "file": "v21_logs/v21.json",
+   "key": "[100*c[\"R_pa\"] for c in d[\"cells\"]]",
+   "value": [
+    -8.426966292134827,
+    96.91011235955055,
+    97.47191011235955,
+    98.31460674157303,
+    99.01685393258425
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "snap gain (points of headroom) at the four non-degenerate budgets",
+   "file": "v21_logs/v21.json",
+   "key": "[100*c[\"gain_H\"] for c in d[\"cells\"][1:]]",
+   "value": [
+    67.27528089887637,
+    47.75280898876405,
+    30.89887640449437,
+    24.016853932584237
+   ],
+   "manuscript": [
+    "67",
+    "48",
+    "31",
+    "24"
+   ],
+   "match": true
+  },
+  {
+   "label": "snap gain at fit_epochs 0",
+   "file": "v21_logs/v21.json",
+   "key": "100*d[\"cells\"][0][\"gain_H\"]",
+   "value": -0.7022471910112293,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "continuous read per seed",
+   "file": "v21_logs/v21.json",
+   "key": "[c[\"frozen_cont\"] for c in d[\"cells\"]]",
+   "value": [
+    [
+     0.496,
+     0.458,
+     0.488
+    ],
+    [
+     0.666,
+     0.65,
+     0.658
+    ],
+    [
+     0.748,
+     0.766,
+     0.746
+    ],
+    [
+     0.828,
+     0.852,
+     0.832
+    ],
+    [
+     0.872,
+     0.868,
+     0.88
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "snapped read per seed",
+   "file": "v21_logs/v21.json",
+   "key": "[c[\"proj_argmax\"] for c in d[\"cells\"]]",
+   "value": [
+    [
+     0.488,
+     0.456,
+     0.488
+    ],
+    [
+     0.976,
+     0.974,
+     0.982
+    ],
+    [
+     0.98,
+     0.98,
+     0.98
+    ],
+    [
+     0.986,
+     0.98,
+     0.986
+    ],
+    [
+     0.988,
+     0.984,
+     0.99
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "floor per seed",
+   "file": "v21_logs/v21.json",
+   "key": "d[\"floor\"]",
+   "value": [
+    0.486,
+    0.51,
+    0.556
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "parser per seed",
+   "file": "v21_logs/v21.json",
+   "key": "d[\"parser\"]",
+   "value": [
+    0.992,
+    0.99,
+    0.994
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F3e_depth": [
+  {
+   "label": "depths",
+   "file": "v57_logs/v57.json",
+   "key": "d[\"depths\"]",
+   "value": [
+    1.0,
+    2.0,
+    3.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "probe_argmax mean per depth",
+   "file": "v57_logs/v57.json",
+   "key": "[mean(d[\"cells\"][str(k)][\"probe_argmax\"]) for k in d[\"depths\"]]",
+   "value": [
+    0.9579999999999999,
+    0.934,
+    0.88
+   ],
+   "manuscript": [
+    "0.958",
+    "0.934",
+    "0.880"
+   ],
+   "match": true
+  },
+  {
+   "label": "probe_argmax per seed per depth",
+   "file": "v57_logs/v57.json",
+   "key": "[d[\"cells\"][str(k)][\"probe_argmax\"] for k in d[\"depths\"]]",
+   "value": [
+    [
+     0.954,
+     0.96,
+     0.96
+    ],
+    [
+     0.932,
+     0.932,
+     0.938
+    ],
+    [
+     0.884,
+     0.88,
+     0.876
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "lora_direct mean per depth",
+   "file": "v57_logs/v57.json",
+   "key": "[mean(d[\"cells\"][str(k)][\"lora_direct\"]) for k in d[\"depths\"]]",
+   "value": [
+    0.5073333333333333,
+    0.5006666666666667,
+    0.5153333333333333
+   ],
+   "manuscript": [
+    "0.507",
+    "0.501",
+    "0.515"
+   ],
+   "match": true
+  },
+  {
+   "label": "lora_direct per seed per depth",
+   "file": "v57_logs/v57.json",
+   "key": "[d[\"cells\"][str(k)][\"lora_direct\"] for k in d[\"depths\"]]",
+   "value": [
+    [
+     0.52,
+     0.522,
+     0.48
+    ],
+    [
+     0.488,
+     0.54,
+     0.474
+    ],
+    [
+     0.52,
+     0.52,
+     0.506
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "parser mean per depth",
+   "file": "v57_logs/v57.json",
+   "key": "[mean(d[\"cells\"][str(k)][\"parser\"]) for k in d[\"depths\"]]",
+   "value": [
+    0.9579999999999999,
+    0.934,
+    0.88
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "parser per seed per depth",
+   "file": "v57_logs/v57.json",
+   "key": "[d[\"cells\"][str(k)][\"parser\"] for k in d[\"depths\"]]",
+   "value": [
+    [
+     0.954,
+     0.96,
+     0.96
+    ],
+    [
+     0.932,
+     0.932,
+     0.938
+    ],
+    [
+     0.884,
+     0.88,
+     0.876
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "floor mean per depth",
+   "file": "v57_logs/v57.json",
+   "key": "[mean(d[\"cells\"][str(k)][\"floor\"]) for k in d[\"depths\"]]",
+   "value": [
+    0.5406666666666667,
+    0.5153333333333333,
+    0.53
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "floor per seed per depth",
+   "file": "v57_logs/v57.json",
+   "key": "[d[\"cells\"][str(k)][\"floor\"] for k in d[\"depths\"]]",
+   "value": [
+    [
+     0.54,
+     0.528,
+     0.554
+    ],
+    [
+     0.512,
+     0.53,
+     0.504
+    ],
+    [
+     0.528,
+     0.518,
+     0.544
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F4a_seesaw": [
+  {
+   "label": "task-only / fsq_spans: separation (1 - distinct-symbol code cosine) per seed",
+   "file": "v62_logs/v62_BANKED.json",
+   "key": "[1.0 - g[\"distinct_symbol_code_cosine\"] for g in d[\"diag\"][\"fsq_spans\"]]",
+   "value": [
+    0.11052049135278774,
+    0.244989964388035,
+    0.1759879398081038
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "task-only / fsq_spans: same-symbol consistency per seed",
+   "file": "v62_logs/v62_BANKED.json",
+   "key": "[g[\"same_symbol_consistency\"] for g in d[\"diag\"][\"fsq_spans\"]]",
+   "value": [
+    0.22578544685007326,
+    0.6726355201041836,
+    0.38727006348689563
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "task-only / fsq_spans: chain accuracy per seed",
+   "file": "v62_logs/v62_BANKED.json",
+   "key": "d[\"arms\"][\"fsq_spans\"]",
+   "value": [
+    0.56,
+    0.53,
+    0.532
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "task-only / fsq_inj: separation (1 - distinct-symbol code cosine) per seed",
+   "file": "v62_logs/v62_BANKED.json",
+   "key": "[1.0 - g[\"distinct_symbol_code_cosine\"] for g in d[\"diag\"][\"fsq_inj\"]]",
+   "value": [
+    0.6761276921997605,
+    0.7437264057058427,
+    0.5427520398469642
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "task-only / fsq_inj: same-symbol consistency per seed",
+   "file": "v62_logs/v62_BANKED.json",
+   "key": "[g[\"same_symbol_consistency\"] for g in d[\"diag\"][\"fsq_inj\"]]",
+   "value": [
+    0.1437408432362038,
+    0.16864724076184276,
+    0.2716913560149764
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "task-only / fsq_inj: chain accuracy per seed",
+   "file": "v62_logs/v62_BANKED.json",
+   "key": "d[\"arms\"][\"fsq_inj\"]",
+   "value": [
+    0.542,
+    0.52,
+    0.55
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id: separation (1 - distinct-symbol code cosine) per seed",
+   "file": "v63_logs/v63_PROVISIONAL.json",
+   "key": "[1.0 - g[\"distinct_symbol_code_cosine\"] for g in d[\"diag\"][\"fsq_id\"]]",
+   "value": [
+    0.8704063654256019,
+    0.5920902846233609,
+    0.710370557617879
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id: same-symbol consistency per seed",
+   "file": "v63_logs/v63_PROVISIONAL.json",
+   "key": "[g[\"same_symbol_consistency\"] for g in d[\"diag\"][\"fsq_id\"]]",
+   "value": [
+    0.06462640403711542,
+    0.031743447826794724,
+    0.08139345596614032
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id: chain accuracy per seed",
+   "file": "v63_logs/v63_PROVISIONAL.json",
+   "key": "d[\"arms\"][\"fsq_id\"]",
+   "value": [
+    0.538,
+    0.508,
+    0.538
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id_only: separation (1 - distinct-symbol code cosine) per seed",
+   "file": "v63_logs/v63_PROVISIONAL.json",
+   "key": "[1.0 - g[\"distinct_symbol_code_cosine\"] for g in d[\"diag\"][\"fsq_id_only\"]]",
+   "value": [
+    1.0015830250187536,
+    0.9922576714665456,
+    1.0129574808580801
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id_only: same-symbol consistency per seed",
+   "file": "v63_logs/v63_PROVISIONAL.json",
+   "key": "[g[\"same_symbol_consistency\"] for g in d[\"diag\"][\"fsq_id_only\"]]",
+   "value": [
+    0.08106788214227575,
+    0.059417222855282434,
+    0.06657984698030278
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id_only: chain accuracy per seed",
+   "file": "v63_logs/v63_PROVISIONAL.json",
+   "key": "d[\"arms\"][\"fsq_id_only\"]",
+   "value": [
+    0.544,
+    0.55,
+    0.55
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id: separation (1 - distinct-symbol code cosine) per seed",
+   "file": "v63b_logs/v63b_BANKED.json",
+   "key": "[1.0 - g[\"distinct_symbol_code_cosine\"] for g in d[\"diag\"][\"fsq_id\"]]",
+   "value": [
+    0.8462433365467177,
+    0.7549899255611192,
+    0.7207143324869167
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id: same-symbol consistency per seed",
+   "file": "v63b_logs/v63b_BANKED.json",
+   "key": "[g[\"same_symbol_consistency\"] for g in d[\"diag\"][\"fsq_id\"]]",
+   "value": [
+    0.07439361875305225,
+    0.020999511639264203,
+    0.0302783656194042
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id: chain accuracy per seed",
+   "file": "v63b_logs/v63b_BANKED.json",
+   "key": "d[\"arms\"][\"fsq_id\"]",
+   "value": [
+    0.518,
+    0.548,
+    0.508
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id_only: separation (1 - distinct-symbol code cosine) per seed",
+   "file": "v63b_logs/v63b_BANKED.json",
+   "key": "[1.0 - g[\"distinct_symbol_code_cosine\"] for g in d[\"diag\"][\"fsq_id_only\"]]",
+   "value": [
+    1.0026196986642424,
+    0.9936466158144865,
+    1.013078106679712
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id_only: same-symbol consistency per seed",
+   "file": "v63b_logs/v63b_BANKED.json",
+   "key": "[g[\"same_symbol_consistency\"] for g in d[\"diag\"][\"fsq_id_only\"]]",
+   "value": [
+    0.07699820934396874,
+    0.056487058440501385,
+    0.0656031255087091
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "classification / fsq_id_only: chain accuracy per seed",
+   "file": "v63b_logs/v63b_BANKED.json",
+   "key": "d[\"arms\"][\"fsq_id_only\"]",
+   "value": [
+    0.554,
+    0.552,
+    0.552
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "equivalence / fsq_con: separation (1 - distinct-symbol code cosine) per seed",
+   "file": "v64_logs/v64_BANKED.json",
+   "key": "[1.0 - g[\"distinct_symbol_code_cosine\"] for g in d[\"diag\"][\"fsq_con\"]]",
+   "value": [
+    0.026574614348234937,
+    0.050922491320857244,
+    0.03535150755776295
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "equivalence / fsq_con: same-symbol consistency per seed",
+   "file": "v64_logs/v64_BANKED.json",
+   "key": "[g[\"same_symbol_consistency\"] for g in d[\"diag\"][\"fsq_con\"]]",
+   "value": [
+    0.5018720494872212,
+    0.5608009116067069,
+    0.5848933745726843
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "equivalence / fsq_con: chain accuracy per seed",
+   "file": "v64_logs/v64_BANKED.json",
+   "key": "d[\"arms\"][\"fsq_con\"]",
+   "value": [
+    0.522,
+    0.552,
+    0.534
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "equivalence / fsq_con_only: separation (1 - distinct-symbol code cosine) per seed",
+   "file": "v64_logs/v64_BANKED.json",
+   "key": "[1.0 - g[\"distinct_symbol_code_cosine\"] for g in d[\"diag\"][\"fsq_con_only\"]]",
+   "value": [
+    0.49635862080780446,
+    0.4891256248531173,
+    0.5150387191964763
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "equivalence / fsq_con_only: same-symbol consistency per seed",
+   "file": "v64_logs/v64_BANKED.json",
+   "key": "[g[\"same_symbol_consistency\"] for g in d[\"diag\"][\"fsq_con_only\"]]",
+   "value": [
+    0.45368712355526614,
+    0.4278040045580335,
+    0.3835259645124532
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "equivalence / fsq_con_only: chain accuracy per seed",
+   "file": "v64_logs/v64_BANKED.json",
+   "key": "d[\"arms\"][\"fsq_con_only\"]",
+   "value": [
+    0.546,
+    0.552,
+    0.556
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F4b_hashing_cosines": [
+  {
+   "label": "raw sign hash: within-symbol cosine (within instance)",
+   "file": "v39_logs/v39b.json",
+   "key": "d[\"arms\"][\"lsh_raw\"][\"same_within\"]",
+   "value": 0.5681352780431824,
+   "manuscript": "0.568",
+   "match": true
+  },
+  {
+   "label": "raw sign hash: between-symbol cosine (within instance)",
+   "file": "v39_logs/v39b.json",
+   "key": "d[\"arms\"][\"lsh_raw\"][\"diff_within\"]",
+   "value": 0.49754691983036925,
+   "manuscript": "0.498",
+   "match": true
+  },
+  {
+   "label": "subspace hash (36 comp.): within-symbol cosine",
+   "file": "v40_logs/v40.json",
+   "key": "d[\"diagnostic\"][\"pca_hash_36\"][\"same_within\"]",
+   "value": 0.2434160819923983,
+   "manuscript": "0.243",
+   "match": true
+  },
+  {
+   "label": "subspace hash (36 comp.): between-symbol cosine",
+   "file": "v40_logs/v40.json",
+   "key": "d[\"diagnostic\"][\"pca_hash_36\"][\"diff_within\"]",
+   "value": 0.09047781426523051,
+   "manuscript": "0.091",
+   "match": false,
+   "note": "artifact .0905 rounds to .090 (or .091 half-up on .0905); manuscript prints .091. Last-digit rounding, not a data discrepancy."
+  },
+  {
+   "label": "subspace hash (128 comp.): within/between cosine",
+   "file": "v40_logs/v40.json",
+   "key": "[d[\"diagnostic\"][\"pca_hash_128\"][\"same_within\"], d[\"diagnostic\"][\"pca_hash_128\"][\"diff_within\"]]",
+   "value": [
+    0.17687469633884356,
+    0.07599934024698068
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "raw sign hash: chain per seed",
+   "file": "v39_logs/v39.json",
+   "key": "d[\"arms\"][\"lsh_raw\"]",
+   "value": [
+    0.506,
+    0.514,
+    0.55
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "raw sign hash: chain (mean)",
+   "file": "v39_logs/v39.json",
+   "key": "mean(d[\"arms\"][\"lsh_raw\"])",
+   "value": 0.5233333333333333,
+   "manuscript": "0.523",
+   "match": true
+  },
+  {
+   "label": "subspace hash 36: chain per seed",
+   "file": "v40_logs/v40.json",
+   "key": "d[\"arms\"][\"pca_hash_36\"]",
+   "value": [
+    0.492,
+    0.518,
+    0.5
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "subspace hash 36: chain (mean)",
+   "file": "v40_logs/v40.json",
+   "key": "mean(d[\"arms\"][\"pca_hash_36\"])",
+   "value": 0.5033333333333333,
+   "manuscript": "0.503",
+   "match": true
+  },
+  {
+   "label": "subspace hash 128: chain per seed",
+   "file": "v40_logs/v40.json",
+   "key": "d[\"arms\"][\"pca_hash_128\"]",
+   "value": [
+    0.536,
+    0.474,
+    0.512
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "subspace hash 128: chain (mean)",
+   "file": "v40_logs/v40.json",
+   "key": "mean(d[\"arms\"][\"pca_hash_128\"])",
+   "value": 0.5073333333333333,
+   "manuscript": "0.507",
+   "match": true
+  },
+  {
+   "label": "k-means clustering: chain per seed",
+   "file": "v23_logs/v23.json",
+   "key": "d[\"clustered\"]",
+   "value": [
+    0.554,
+    0.49,
+    0.536
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "k-means clustering: chain (mean)",
+   "file": "v23_logs/v23.json",
+   "key": "d[\"clustered_mean\"]",
+   "value": 0.5266666666666667,
+   "manuscript": "0.527",
+   "match": true
+  },
+  {
+   "label": "k-means clustering: floor (mean)",
+   "file": "v23_logs/v23.json",
+   "key": "mean(d[\"arms\"][\"floor\"])",
+   "value": 0.5153333333333333,
+   "manuscript": "0.515",
+   "match": true
+  },
+  {
+   "label": "k-means clustering: eval purity per seed",
+   "file": "v23_logs/v23.json",
+   "key": "[c[\"eval_purity\"] for c in d[\"cluster\"]]",
+   "value": [
+    0.3580615384615385,
+    0.2944923076923077,
+    0.33966153846153846
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "k-means clustering: eval purity range",
+   "file": "v23_logs/v23.json",
+   "key": "[min(c[\"eval_purity\"] for c in d[\"cluster\"]), max(c[\"eval_purity\"] for c in d[\"cluster\"])]",
+   "value": [
+    0.2944923076923077,
+    0.3580615384615385
+   ],
+   "manuscript": [
+    "0.29",
+    "0.36"
+   ],
+   "match": true
+  },
+  {
+   "label": "reference: floor/parser/handover per seed (same arena)",
+   "file": "v39_logs/v39.json",
+   "key": "[d[\"arms\"][\"floor\"], d[\"arms\"][\"parser\"], d[\"arms\"][\"probe_argmax\"]]",
+   "value": [
+    [
+     0.512,
+     0.53,
+     0.504
+    ],
+    [
+     0.932,
+     0.932,
+     0.938
+    ],
+    [
+     0.932,
+     0.932,
+     0.938
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F4c_pairwise_head": [
+  {
+   "label": "pairwise head: groups recovered per seed",
+   "file": "v41_logs/v41.json",
+   "key": "[d[\"grouping\"][s][\"groups\"] for s in (\"42\",\"123\",\"456\")]",
+   "value": [
+    35.3,
+    38.553333333333335,
+    35.846666666666664
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "pairwise head: groups recovered range",
+   "file": "v41_logs/v41.json",
+   "key": "[min(d[\"grouping\"][s][\"groups\"] for s in d[\"grouping\"]), max(d[\"grouping\"][s][\"groups\"] for s in d[\"grouping\"])]",
+   "value": [
+    35.3,
+    38.553333333333335
+   ],
+   "manuscript": [
+    "35",
+    "39"
+   ],
+   "match": true
+  },
+  {
+   "label": "pairwise head: true symbols present",
+   "file": "v41_logs/v41.json",
+   "key": "d[\"grouping\"][\"42\"][\"true_symbols\"]",
+   "value": 58.086666666666666,
+   "manuscript": "58",
+   "match": true
+  },
+  {
+   "label": "pairwise head: chain per seed",
+   "file": "v41_logs/v41.json",
+   "key": "d[\"arms\"][\"group_argmax\"]",
+   "value": [
+    0.572,
+    0.598,
+    0.572
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "pairwise head: chain (mean)",
+   "file": "v41_logs/v41.json",
+   "key": "mean(d[\"arms\"][\"group_argmax\"])",
+   "value": 0.5806666666666667,
+   "manuscript": "0.581",
+   "match": true
+  },
+  {
+   "label": "pairwise head: eval pair F1 per seed",
+   "file": "v41_logs/v41.json",
+   "key": "[d[\"grouping\"][s][\"eval_pair_f1\"] for s in (\"42\",\"123\",\"456\")]",
+   "value": [
+    0.4002095983725303,
+    0.4496590108738598,
+    0.41497830362438737
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "pairwise head: eval pair F1 range",
+   "file": "v41_logs/v41.json",
+   "key": "[min(d[\"grouping\"][s][\"eval_pair_f1\"] for s in d[\"grouping\"]), max(d[\"grouping\"][s][\"eval_pair_f1\"] for s in d[\"grouping\"])]",
+   "value": [
+    0.4002095983725303,
+    0.4496590108738598
+   ],
+   "manuscript": [
+    "0.400",
+    "0.450"
+   ],
+   "match": true
+  },
+  {
+   "label": "pairwise head: train pair F1 range",
+   "file": "v41_logs/v41.json",
+   "key": "[min(d[\"matcher\"][s][\"train_pair_f1\"] for s in d[\"matcher\"]), max(d[\"matcher\"][s][\"train_pair_f1\"] for s in d[\"matcher\"])]",
+   "value": [
+    0.6301437020301819,
+    0.6499751210212708
+   ],
+   "manuscript": [
+    "0.63",
+    "0.65"
+   ],
+   "match": true
+  },
+  {
+   "label": "chain-selected head: groups recovered per seed",
+   "file": "v42_logs/v42.json",
+   "key": "[d[\"grouping\"][s][\"groups\"] for s in (\"42\",\"123\",\"456\")]",
+   "value": [
+    50.026666666666664,
+    60.85333333333333,
+    50.3
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "chain-selected head: groups recovered range",
+   "file": "v42_logs/v42.json",
+   "key": "[min(d[\"grouping\"][s][\"groups\"] for s in d[\"grouping\"]), max(d[\"grouping\"][s][\"groups\"] for s in d[\"grouping\"])]",
+   "value": [
+    50.026666666666664,
+    60.85333333333333
+   ],
+   "manuscript": [
+    "50",
+    "61"
+   ],
+   "match": true
+  },
+  {
+   "label": "chain-selected head: chain per seed",
+   "file": "v42_logs/v42.json",
+   "key": "d[\"arms\"][\"group_argmax\"]",
+   "value": [
+    0.606,
+    0.552,
+    0.59
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "chain-selected head: chain (mean)",
+   "file": "v42_logs/v42.json",
+   "key": "mean(d[\"arms\"][\"group_argmax\"])",
+   "value": 0.5826666666666666,
+   "manuscript": "0.583",
+   "match": true
+  },
+  {
+   "label": "chain-selected head: eval pair F1 per seed",
+   "file": "v42_logs/v42.json",
+   "key": "[d[\"grouping\"][s][\"eval_pair_f1\"] for s in (\"42\",\"123\",\"456\")]",
+   "value": [
+    0.46331131860624003,
+    0.48143631051989677,
+    0.47525806600935055
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "chain-selected head: eval pair F1 range",
+   "file": "v42_logs/v42.json",
+   "key": "[min(d[\"grouping\"][s][\"eval_pair_f1\"] for s in d[\"grouping\"]), max(d[\"grouping\"][s][\"eval_pair_f1\"] for s in d[\"grouping\"])]",
+   "value": [
+    0.46331131860624003,
+    0.48143631051989677
+   ],
+   "manuscript": [
+    "0.46",
+    "0.48"
+   ],
+   "match": true
+  },
+  {
+   "label": "chain-selected head: merge / split rates per seed",
+   "file": "v42_logs/v42.json",
+   "key": "[[d[\"grouping\"][s][\"merge_rate\"], d[\"grouping\"][s][\"split_rate\"]] for s in (\"42\",\"123\",\"456\")]",
+   "value": [
+    [
+     0.013203911672941574,
+     0.41405529953917053
+    ],
+    [
+     0.007586323656269399,
+     0.5111175115207374
+    ],
+    [
+     0.012559759430501697,
+     0.40858294930875577
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "reference floor (mean)",
+   "file": "v41_logs/v41.json",
+   "key": "d[\"floor\"]",
+   "value": 0.5153333333333333,
+   "manuscript": "0.515",
+   "match": true
+  }
+ ],
+ "F4d_aliasing_babi": [
+  {
+   "label": "permuted codebook: chain per seed",
+   "file": "v36_logs/v36.json",
+   "key": "rows(d[\"cells\"], cell=\"permuted\")[0][\"chain\"]",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "permuted codebook: chain (mean)",
+   "file": "v36_logs/v36.json",
+   "key": "rows(d[\"cells\"], cell=\"permuted\")[0][\"mean\"]",
+   "value": 1.0,
+   "manuscript": "1.000",
+   "match": true
+  },
+  {
+   "label": "alias names (merge-persons, rate .25): chain per seed",
+   "file": "v36_logs/v36.json",
+   "key": "rows(d[\"cells\"], cell=\"merge-persons\", rate=0.25)[0][\"chain\"]",
+   "value": [
+    0.88,
+    0.88,
+    0.88
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "alias names (merge-persons, rate .25): chain (mean)",
+   "file": "v36_logs/v36.json",
+   "key": "rows(d[\"cells\"], cell=\"merge-persons\", rate=0.25)[0][\"mean\"]",
+   "value": 0.88,
+   "manuscript": "0.880",
+   "match": true
+  },
+  {
+   "label": "alias locations (merge-locations, rate .25): chain per seed",
+   "file": "v36_logs/v36.json",
+   "key": "rows(d[\"cells\"], cell=\"merge-locations\", rate=0.25)[0][\"chain\"]",
+   "value": [
+    0.832,
+    0.486,
+    0.656
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "alias locations (merge-locations, rate .25): chain (mean)",
+   "file": "v36_logs/v36.json",
+   "key": "rows(d[\"cells\"], cell=\"merge-locations\", rate=0.25)[0][\"mean\"]",
+   "value": 0.658,
+   "manuscript": "0.658",
+   "match": true
+  },
+  {
+   "label": "all v36 cells (cell, rate, mean)",
+   "file": "v36_logs/v36.json",
+   "key": "[[c[\"cell\"], c[\"rate\"], c[\"mean\"]] for c in d[\"cells\"]]",
+   "value": [
+    [
+     "permuted",
+     0.0,
+     1.0
+    ],
+    [
+     "merge-persons",
+     0.1,
+     1.0
+    ],
+    [
+     "merge-persons",
+     0.25,
+     0.88
+    ],
+    [
+     "merge-locations",
+     0.1,
+     0.8353333333333334
+    ],
+    [
+     "merge-locations",
+     0.25,
+     0.658
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "1-in-10 occurrences corrupted (split .1): chain per seed",
+   "file": "v35_logs/v35.json",
+   "key": "rows(d[\"cells\"], family=\"split\", rate=0.1)[0][\"chain\"]",
+   "value": [
+    0.964,
+    0.956,
+    0.918
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "1-in-10 occurrences corrupted (split .1): chain (mean)",
+   "file": "v35_logs/v35.json",
+   "key": "rows(d[\"cells\"], family=\"split\", rate=0.1)[0][\"chain_mean\"]",
+   "value": 0.9460000000000001,
+   "manuscript": "0.946",
+   "match": true
+  },
+  {
+   "label": "1-in-5 occurrences corrupted (split .2): chain per seed",
+   "file": "v35_logs/v35.json",
+   "key": "rows(d[\"cells\"], family=\"split\", rate=0.2)[0][\"chain\"]",
+   "value": [
+    0.842,
+    0.818,
+    0.814
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "1-in-5 occurrences corrupted (split .2): chain (mean)",
+   "file": "v35_logs/v35.json",
+   "key": "rows(d[\"cells\"], family=\"split\", rate=0.2)[0][\"chain_mean\"]",
+   "value": 0.8246666666666665,
+   "manuscript": "0.825",
+   "match": true
+  },
+  {
+   "label": "all v35 cells (family, rate, chain_mean)",
+   "file": "v35_logs/v35.json",
+   "key": "[[c[\"family\"], c[\"rate\"], c[\"chain_mean\"]] for c in d[\"cells\"]]",
+   "value": [
+    [
+     "none",
+     0.0,
+     1.0
+    ],
+    [
+     "merge",
+     0.05,
+     1.0
+    ],
+    [
+     "merge",
+     0.1,
+     0.858
+    ],
+    [
+     "merge",
+     0.2,
+     0.71
+    ],
+    [
+     "merge",
+     0.4,
+     0.6226666666666666
+    ],
+    [
+     "split",
+     0.05,
+     0.9813333333333333
+    ],
+    [
+     "split",
+     0.1,
+     0.9460000000000001
+    ],
+    [
+     "split",
+     0.2,
+     0.8246666666666665
+    ],
+    [
+     "split",
+     0.4,
+     0.5153333333333333
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "all v35 cells: chain per seed",
+   "file": "v35_logs/v35.json",
+   "key": "[c[\"chain\"] for c in d[\"cells\"]]",
+   "value": [
+    [
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     0.706,
+     1.0,
+     0.868
+    ],
+    [
+     0.844,
+     0.568,
+     0.718
+    ],
+    [
+     0.432,
+     0.606,
+     0.83
+    ],
+    [
+     0.992,
+     0.974,
+     0.978
+    ],
+    [
+     0.964,
+     0.956,
+     0.918
+    ],
+    [
+     0.842,
+     0.818,
+     0.814
+    ],
+    [
+     0.466,
+     0.528,
+     0.552
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "bAbI 1 floor / parser",
+   "file": "v35_logs/v35.json",
+   "key": "[d[\"floor\"], d[\"parser\"]]",
+   "value": [
+    0.7713,
+    1.0
+   ],
+   "manuscript": [
+    "0.771",
+    "1.000"
+   ],
+   "match": true
+  }
+ ],
+ "F5a_2wiki_three_arms": [
+  {
+   "label": "2Wiki compositional (phi-2): prompt per seed",
+   "file": "v65_logs/v65_BANKED.json",
+   "key": "d[\"arms\"][\"prompt\"][\"covered\"]",
+   "value": [
+    0.25333333333333335,
+    0.25333333333333335,
+    0.25333333333333335
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "2Wiki compositional (phi-2): prompt (mean)",
+   "file": "v65_logs/v65_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt\"][\"covered\"])",
+   "value": 0.25333333333333335,
+   "manuscript": "0.253",
+   "match": true
+  },
+  {
+   "label": "2Wiki compositional (phi-2): gold-facts prompt (mean)",
+   "file": "v65_logs/v65_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt_ev\"][\"covered\"])",
+   "value": 0.9499999999999998,
+   "manuscript": "0.950",
+   "match": true
+  },
+  {
+   "label": "2Wiki compositional (phi-2): HRR store per seed",
+   "file": "v65_logs/v65_BANKED.json",
+   "key": "d[\"arms\"][\"hrr_gold\"][\"covered\"]",
+   "value": [
+    0.97,
+    0.9766666666666667,
+    0.9766666666666667
+   ],
+   "manuscript": [
+    "0.970",
+    "0.977",
+    "0.977"
+   ],
+   "match": true
+  },
+  {
+   "label": "2Wiki compositional (phi-2): HRR store (mean)",
+   "file": "v65_logs/v65_BANKED.json",
+   "key": "mean(d[\"arms\"][\"hrr_gold\"][\"covered\"])",
+   "value": 0.9744444444444444,
+   "manuscript": "0.974",
+   "match": true
+  },
+  {
+   "label": "2Wiki compositional (Qwen2.5-7B): prompt",
+   "file": "v67_logs/v67_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt\"][\"covered\"])",
+   "value": 0.22666666666666666,
+   "manuscript": "0.227",
+   "match": true
+  },
+  {
+   "label": "2Wiki compositional (Qwen2.5-7B): gold-facts prompt",
+   "file": "v67_logs/v67_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt_ev\"][\"covered\"])",
+   "value": 0.9533333333333334,
+   "manuscript": "0.953",
+   "match": true
+  },
+  {
+   "label": "2Wiki inference (phi-2): prompt (mean)",
+   "file": "v69_logs/v69_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt\"][\"covered\"])",
+   "value": 0.09333333333333334,
+   "manuscript": "0.093",
+   "match": true
+  },
+  {
+   "label": "2Wiki inference (phi-2): gold-facts prompt (mean)",
+   "file": "v69_logs/v69_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt_ev\"][\"covered\"])",
+   "value": 0.6833333333333332,
+   "manuscript": "0.683",
+   "match": true
+  },
+  {
+   "label": "2Wiki inference (phi-2): HRR store per seed",
+   "file": "v69_logs/v69_BANKED.json",
+   "key": "d[\"arms\"][\"hrr_gold\"][\"covered\"]",
+   "value": [
+    0.7566666666666667,
+    0.7433333333333333,
+    0.7866666666666666
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "2Wiki inference (phi-2): HRR store (mean)",
+   "file": "v69_logs/v69_BANKED.json",
+   "key": "mean(d[\"arms\"][\"hrr_gold\"][\"covered\"])",
+   "value": 0.7622222222222222,
+   "manuscript": "0.762",
+   "match": true
+  },
+  {
+   "label": "Qwen3-8B prompt at 128-fact pool (V-100)",
+   "file": "v100_logs/v100_scored.json",
+   "key": "rows(d[\"curve\"], n_facts=128)[0][\"prompt_acc\"]",
+   "value": 0.875,
+   "manuscript": "0.875",
+   "match": true
+  },
+  {
+   "label": "store at d=4096, 128 facts (V-101)",
+   "file": "v101_logs/v101_scored.json",
+   "key": "d[\"grid\"][\"4096\"][\"128\"]",
+   "value": 0.9194444444444444,
+   "manuscript": "0.919",
+   "match": true
+  },
+  {
+   "label": "2Wiki compositional (phi-2): gold-facts prompt per seed",
+   "file": "v65_logs/v65_BANKED.json",
+   "key": "d[\"arms\"][\"prompt_ev\"][\"covered\"]",
+   "value": [
+    0.95,
+    0.95,
+    0.95
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "Deterministic arm: three identical values, drawn as a bar without dots."
+  },
+  {
+   "label": "2Wiki inference (phi-2): prompt per seed",
+   "file": "v69_logs/v69_BANKED.json",
+   "key": "d[\"arms\"][\"prompt\"][\"covered\"]",
+   "value": [
+    0.09333333333333334,
+    0.09333333333333334,
+    0.09333333333333334
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "Deterministic arm: three identical values, drawn as a bar without dots."
+  },
+  {
+   "label": "2Wiki inference (phi-2): gold-facts prompt per seed",
+   "file": "v69_logs/v69_BANKED.json",
+   "key": "d[\"arms\"][\"prompt_ev\"][\"covered\"]",
+   "value": [
+    0.6833333333333333,
+    0.6833333333333333,
+    0.6833333333333333
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "Deterministic arm: three identical values, drawn as a bar without dots."
+  },
+  {
+   "label": "2Wiki compositional / inference: n instances",
+   "file": "v65_logs/v65_BANKED.json",
+   "key": "d[\"n\"]",
+   "value": 300,
+   "manuscript": null,
+   "match": null,
+   "note": "v69_BANKED.json has the same n (300)."
+  }
+ ],
+ "F5b_bulky_evidence": [
+  {
+   "label": "compositional: all facts in prompt EM",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"compositional\"][\"prompt_ev_big\"][\"em\"]",
+   "value": 0.35333333333333333,
+   "manuscript": "0.353",
+   "match": true
+  },
+  {
+   "label": "compositional: retrieved facts in prompt (hybrid) EM",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"compositional\"][\"hrr_then_prompt_big\"][\"em\"]",
+   "value": 0.9,
+   "manuscript": "0.900",
+   "match": true
+  },
+  {
+   "label": "compositional: HRR store readout EM",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"compositional\"][\"hrr_gold_big\"][\"em\"]",
+   "value": 0.9533333333333334,
+   "manuscript": "0.953",
+   "match": true
+  },
+  {
+   "label": "compositional: hallucination, all facts in prompt (%)",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "100*d[\"arms\"][\"compositional\"][\"prompt_ev_big\"][\"hallucination\"]",
+   "value": 22.0,
+   "manuscript": "22",
+   "match": true
+  },
+  {
+   "label": "compositional: hallucination, hybrid (%)",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "100*d[\"arms\"][\"compositional\"][\"hrr_then_prompt_big\"][\"hallucination\"]",
+   "value": 4.0,
+   "manuscript": "4",
+   "match": true
+  },
+  {
+   "label": "compositional: hallucination, store readout",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"compositional\"][\"hrr_gold_big\"][\"hallucination\"]",
+   "value": 0.0,
+   "manuscript": "0",
+   "match": true
+  },
+  {
+   "label": "compositional: minimal-evidence refs",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"refs\"][\"compositional\"]",
+   "value": {
+    "prompt": 0.2533,
+    "prompt_ev": 0.95,
+    "hrr_gold": 0.9744
+   },
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "inference: all facts in prompt EM",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"inference\"][\"prompt_ev_big\"][\"em\"]",
+   "value": 0.006666666666666667,
+   "manuscript": "0.007",
+   "match": true
+  },
+  {
+   "label": "inference: retrieved facts in prompt (hybrid) EM",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"inference\"][\"hrr_then_prompt_big\"][\"em\"]",
+   "value": 0.5166666666666667,
+   "manuscript": "0.517",
+   "match": true
+  },
+  {
+   "label": "inference: HRR store readout EM",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"inference\"][\"hrr_gold_big\"][\"em\"]",
+   "value": 0.7233333333333334,
+   "manuscript": "0.723",
+   "match": true
+  },
+  {
+   "label": "inference: hallucination, all facts in prompt (%)",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "100*d[\"arms\"][\"inference\"][\"prompt_ev_big\"][\"hallucination\"]",
+   "value": 77.33333333333333,
+   "manuscript": "77",
+   "match": true
+  },
+  {
+   "label": "inference: hallucination, hybrid (%)",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "100*d[\"arms\"][\"inference\"][\"hrr_then_prompt_big\"][\"hallucination\"]",
+   "value": 2.3333333333333335,
+   "manuscript": "2",
+   "match": true
+  },
+  {
+   "label": "inference: hallucination, store readout",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"inference\"][\"hrr_gold_big\"][\"hallucination\"]",
+   "value": 0.0,
+   "manuscript": "0",
+   "match": true
+  },
+  {
+   "label": "inference: minimal-evidence refs",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"refs\"][\"inference\"]",
+   "value": {
+    "prompt": 0.0933,
+    "prompt_ev": 0.6833,
+    "hrr_gold": 0.7622
+   },
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "compositional: all facts in prompt, share of prompts truncated",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"compositional\"][\"prompt_ev_big\"][\"trunc_rate\"]",
+   "value": 0.0,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "inference: all facts in prompt, share of prompts truncated",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"inference\"][\"prompt_ev_big\"][\"trunc_rate\"]",
+   "value": 0.8266666666666667,
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F5b_musique": [
+  {
+   "label": "MuSiQue: n instances",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"n\"]",
+   "value": 212,
+   "manuscript": "212",
+   "match": true
+  },
+  {
+   "label": "MuSiQue: prompt per seed",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"arms\"][\"prompt\"][\"covered\"]",
+   "value": [
+    0.1650943396226415,
+    0.1650943396226415,
+    0.1650943396226415
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue: prompt (mean)",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt\"][\"covered\"])",
+   "value": 0.1650943396226415,
+   "manuscript": "0.165",
+   "match": true
+  },
+  {
+   "label": "MuSiQue: supporting-paragraph prompt (mean)",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt_sup\"][\"covered\"])",
+   "value": 0.4009433962264151,
+   "manuscript": "0.401",
+   "match": true
+  },
+  {
+   "label": "MuSiQue: gold-triples prompt +0 per seed",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"arms\"][\"prompt_ev_p0\"][\"covered\"]",
+   "value": [
+    0.9009433962264151,
+    0.9009433962264151,
+    0.8962264150943396
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue: gold-triples prompt +0 (mean)",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt_ev_p0\"][\"covered\"])",
+   "value": 0.89937106918239,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue: HRR store +0 per seed",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"arms\"][\"hrr_gold_p0\"][\"covered\"]",
+   "value": [
+    0.9386792452830188,
+    0.9481132075471698,
+    0.9575471698113207
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue: HRR store +0 (mean)",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "mean(d[\"arms\"][\"hrr_gold_p0\"][\"covered\"])",
+   "value": 0.9481132075471699,
+   "manuscript": "0.948",
+   "match": true
+  },
+  {
+   "label": "MuSiQue: gold-triples prompt +50 per seed",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"arms\"][\"prompt_ev_p50\"][\"covered\"]",
+   "value": [
+    0.3490566037735849,
+    0.33962264150943394,
+    0.35377358490566035
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue: HRR store +50 per seed",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"arms\"][\"hrr_gold_p50\"][\"covered\"]",
+   "value": [
+    0.9150943396226415,
+    0.9386792452830188,
+    0.9433962264150944
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue: gold-triples prompt +150 per seed",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"arms\"][\"prompt_ev_p150\"][\"covered\"]",
+   "value": [
+    0.15566037735849056,
+    0.22641509433962265,
+    0.1792452830188679
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue: gold-triples prompt +150 (mean)",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "mean(d[\"arms\"][\"prompt_ev_p150\"][\"covered\"])",
+   "value": 0.1871069182389937,
+   "manuscript": "0.187",
+   "match": true
+  },
+  {
+   "label": "MuSiQue: HRR store +150 per seed",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"arms\"][\"hrr_gold_p150\"][\"covered\"]",
+   "value": [
+    0.6792452830188679,
+    0.6650943396226415,
+    0.6226415094339622
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue: HRR store +150 (mean)",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "mean(d[\"arms\"][\"hrr_gold_p150\"][\"covered\"])",
+   "value": 0.6556603773584905,
+   "manuscript": "0.656",
+   "match": true
+  },
+  {
+   "label": "MuSiQue: excluded rate (%), 1 - kept",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "100*(1 - d[\"excl_rate\"])",
+   "value": 8.771203971865948,
+   "manuscript": "8.8",
+   "match": true,
+   "note": "manuscript keeps 8.8% of instances; excl_rate .9123 is the excluded fraction"
+  },
+  {
+   "label": "MuSiQue: hop distribution",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "d[\"hop_dist\"]",
+   "value": {
+    "2": 181,
+    "3": 5,
+    "4": 26
+   },
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue by hop: store EM at +0/+50/+150 per hop (2,3,4)",
+   "file": "v79_logs/v79a_BANKED.json",
+   "key": "{p: [d[\"by_hop\"][p][\"cells\"][h][\"em\"] for h in (\"2\",\"3\",\"4\")] for p in (\"p0\",\"p50\",\"p150\")}",
+   "value": {
+    "p0": [
+     0.9521178637200737,
+     0.6666666666666666,
+     0.9743589743589743
+    ],
+    "p50": [
+     0.9373848987108656,
+     0.6,
+     0.9615384615384616
+    ],
+    "p150": [
+     0.6298342541436464,
+     0.5333333333333333,
+     0.8589743589743589
+    ]
+   },
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue by hop: overall per pool",
+   "file": "v79_logs/v79a_BANKED.json",
+   "key": "[d[\"by_hop\"][p][\"overall\"] for p in (\"p0\",\"p50\",\"p150\")]",
+   "value": [
+    0.9481132075471698,
+    0.9323899371069182,
+    0.6556603773584906
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue by hop: distractors sharing a gold relation per pool",
+   "file": "v79_logs/v79a_BANKED.json",
+   "key": "[d[\"collisions\"][p][\"mean_distractors_sharing_a_gold_relation\"] for p in (\"p0\",\"p50\",\"p150\")]",
+   "value": [
+    0.0,
+    5.639937106918239,
+    16.573899371069185
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue (Qwen3-8B, 31k-token window, v131c): single pass per seed",
+   "file": "v131_logs/v131c.json",
+   "key": "d[\"arms\"][\"single_pass\"][\"covered\"]",
+   "value": [
+    0.28773584905660377,
+    0.28773584905660377,
+    0.28773584905660377
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "Deterministic arm: three identical values, drawn as a bar without dots."
+  },
+  {
+   "label": "MuSiQue (Qwen3-8B, 31k-token window, v131c): gold-triples prompt +150 per seed",
+   "file": "v131_logs/v131c.json",
+   "key": "d[\"arms\"][\"prompt_ev_p150\"][\"covered\"]",
+   "value": [
+    0.5943396226415094,
+    0.5660377358490566,
+    0.5754716981132075
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue (Qwen3-8B, v131c): share of prompts truncated, single pass / +150",
+   "file": "v131_logs/v131c.json",
+   "key": "[mean(d[\"diag\"][\"single_pass_trunc\"]), mean(d[\"diag\"][\"prompt_ev_p150_trunc\"])]",
+   "value": [
+    0.0,
+    0.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue (Qwen3-8B, v131c): n / max_len / model",
+   "file": "v131_logs/v131c.json",
+   "key": "[d[\"n\"], d[\"config\"][\"max_len\"], d[\"config\"][\"model\"]]",
+   "value": [
+    212,
+    31000,
+    "Qwen/Qwen3-8B"
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "MuSiQue (phi-2, v79): share of prompts truncated, passages / +0 / +50 / +150",
+   "file": "v79_logs/v79_BANKED.json",
+   "key": "[mean(d[\"diag\"][\"prompt_trunc\"]), mean(d[\"diag\"][\"prompt_ev_p0_trunc\"]), mean(d[\"diag\"][\"prompt_ev_p50_trunc\"]), mean(d[\"diag\"][\"prompt_ev_p150_trunc\"])]",
+   "value": [
+    0.8867924528301887,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "F5c_capacity": [
+  {
+   "label": "v73 K values",
+   "file": "v73_logs/v73_BANKED.json",
+   "key": "[int(k) for k in d[\"Ks\"]]",
+   "value": [
+    10.0,
+    50.0,
+    100.0,
+    200.0,
+    400.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v73 compositional: mean bindings per K",
+   "file": "v73_logs/v73_BANKED.json",
+   "key": "[d[\"Ks\"][k][\"compositional\"][\"mean_bindings\"] for k in d[\"Ks\"]]",
+   "value": [
+    22.0,
+    102.0,
+    202.0,
+    402.0,
+    600.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v73 compositional: EM per K",
+   "file": "v73_logs/v73_BANKED.json",
+   "key": "[d[\"Ks\"][k][\"compositional\"][\"em\"] for k in d[\"Ks\"]]",
+   "value": [
+    0.9566666666666667,
+    0.94,
+    0.78,
+    0.2,
+    0.06333333333333334
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v73 inference: EM per K",
+   "file": "v73_logs/v73_BANKED.json",
+   "key": "[d[\"Ks\"][k][\"inference\"][\"em\"] for k in d[\"Ks\"]]",
+   "value": [
+    0.7433333333333333,
+    0.75,
+    0.4533333333333333,
+    0.1,
+    0.03333333333333333
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v73 compositional EM at K=100",
+   "file": "v73_logs/v73_BANKED.json",
+   "key": "d[\"Ks\"][\"100\"][\"compositional\"][\"em\"]",
+   "value": 0.78,
+   "manuscript": "0.780",
+   "match": true
+  },
+  {
+   "label": "v73 compositional EM at K=400",
+   "file": "v73_logs/v73_BANKED.json",
+   "key": "d[\"Ks\"][\"400\"][\"compositional\"][\"em\"]",
+   "value": 0.06333333333333334,
+   "manuscript": "0.063",
+   "match": true
+  },
+  {
+   "label": "v73 d",
+   "file": "v73_logs/v73_BANKED.json",
+   "key": "d[\"d\"]",
+   "value": 4096,
+   "manuscript": "4096",
+   "match": true
+  },
+  {
+   "label": "v101 dims",
+   "file": "v101_logs/v101_scored.json",
+   "key": "[int(k) for k in d[\"grid\"]]",
+   "value": [
+    512.0,
+    1024.0,
+    2048.0,
+    4096.0,
+    8192.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v101 ks",
+   "file": "v101_logs/v101_scored.json",
+   "key": "[int(k) for k in d[\"grid\"][\"512\"]]",
+   "value": [
+    32.0,
+    64.0,
+    128.0,
+    256.0,
+    512.0,
+    1024.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v101 grid acc[d][k]",
+   "file": "v101_logs/v101_scored.json",
+   "key": "{dd: [d[\"grid\"][dd][k] for k in d[\"grid\"][dd]] for dd in d[\"grid\"]}",
+   "value": {
+    "512": [
+     0.8444444444444444,
+     0.4055555555555556,
+     0.09166666666666667,
+     0.0,
+     0.005555555555555556,
+     0.002777777777777778
+    ],
+    "1024": [
+     0.9250000000000002,
+     0.7944444444444444,
+     0.30833333333333335,
+     0.041666666666666664,
+     0.008333333333333333,
+     0.002777777777777778
+    ],
+    "2048": [
+     0.9333333333333332,
+     0.9333333333333332,
+     0.7277777777777779,
+     0.21944444444444447,
+     0.03888888888888889,
+     0.008333333333333333
+    ],
+    "4096": [
+     0.9333333333333332,
+     0.9333333333333332,
+     0.9194444444444444,
+     0.7277777777777779,
+     0.1416666666666667,
+     0.04722222222222222
+    ],
+    "8192": [
+     0.9361111111111112,
+     0.9333333333333332,
+     0.9361111111111112,
+     0.9111111111111111,
+     0.6027777777777779,
+     0.25277777777777777
+    ]
+   },
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v101 k* at .70 for d=512..4096",
+   "file": "v101_logs/v101_scored.json",
+   "key": "[d[\"kstar\"][k] for k in (\"512\",\"1024\",\"2048\",\"4096\")]",
+   "value": [
+    32.0,
+    64.0,
+    128.0,
+    256.0
+   ],
+   "manuscript": [
+    "32",
+    "64",
+    "128",
+    "256"
+   ],
+   "match": true
+  },
+  {
+   "label": "v101 k* at d=8192",
+   "file": "v101_logs/v101_scored.json",
+   "key": "d[\"kstar\"][\"8192\"]",
+   "value": 256,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "constant-ratio readout d=512,k=32",
+   "file": "v101_logs/v101_scored.json",
+   "key": "d[\"grid\"][\"512\"][\"32\"]",
+   "value": 0.8444444444444444,
+   "manuscript": "0.844",
+   "match": true
+  },
+  {
+   "label": "constant-ratio readout d=8192,k=512",
+   "file": "v101_logs/v101_scored.json",
+   "key": "d[\"grid\"][\"8192\"][\"512\"]",
+   "value": 0.6027777777777779,
+   "manuscript": "0.603",
+   "match": true
+  },
+  {
+   "label": "3-way at d=4096/128 facts: store",
+   "file": "v101_logs/v101_scored.json",
+   "key": "d[\"grid\"][\"4096\"][\"128\"]",
+   "value": 0.9194444444444444,
+   "manuscript": "0.919",
+   "match": true
+  },
+  {
+   "label": "3-way at 128 facts: Qwen3-8B prompt",
+   "file": "v100_logs/v100_scored.json",
+   "key": "rows(d[\"curve\"], n_facts=128)[0][\"prompt_acc\"]",
+   "value": 0.875,
+   "manuscript": "0.875",
+   "match": true
+  },
+  {
+   "label": "3-way: phi-2 prompt on 102-152-fact pool (inference)",
+   "file": "v72b_logs/v72b_BANKED.json",
+   "key": "d[\"arms\"][\"inference\"][\"prompt_ev_big\"][\"em\"]",
+   "value": 0.006666666666666667,
+   "manuscript": "0.007",
+   "match": true
+  }
+ ],
+ "F5d_sharding_cost": [
+  {
+   "label": "v102 grid keys",
+   "file": "v102_logs/v102_scored.json",
+   "key": "list(d[\"grid\"].keys())",
+   "value": [
+    "d2048_K128_S1",
+    "d2048_K128_S2",
+    "d2048_K128_S4",
+    "d2048_K128_S8",
+    "d2048_K128_S16",
+    "d2048_K256_S1",
+    "d2048_K256_S2",
+    "d2048_K256_S4",
+    "d2048_K256_S8",
+    "d2048_K256_S16",
+    "d2048_K512_S1",
+    "d2048_K512_S2",
+    "d2048_K512_S4",
+    "d2048_K512_S8",
+    "d2048_K512_S16",
+    "d2048_K1024_S1",
+    "d2048_K1024_S2",
+    "d2048_K1024_S4",
+    "d2048_K1024_S8",
+    "d2048_K1024_S16",
+    "d4096_K128_S1",
+    "d4096_K128_S2",
+    "d4096_K128_S4",
+    "d4096_K128_S8",
+    "d4096_K128_S16",
+    "d4096_K256_S1",
+    "d4096_K256_S2",
+    "d4096_K256_S4",
+    "d4096_K256_S8",
+    "d4096_K256_S16",
+    "d4096_K512_S1",
+    "d4096_K512_S2",
+    "d4096_K512_S4",
+    "d4096_K512_S8",
+    "d4096_K512_S16",
+    "d4096_K1024_S1",
+    "d4096_K1024_S2",
+    "d4096_K1024_S4",
+    "d4096_K1024_S8",
+    "d4096_K1024_S16"
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "K=512 d=2048 S=1 per seed",
+   "file": "v102_logs/v102_scored.json",
+   "key": "d[\"grid\"][\"d2048_K512_S1\"]",
+   "value": [
+    0.05,
+    0.041666666666666664,
+    0.025
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "K=512 d=2048 S=1 (mean)",
+   "file": "v102_logs/v102_scored.json",
+   "key": "mean(d[\"grid\"][\"d2048_K512_S1\"])",
+   "value": 0.03888888888888889,
+   "manuscript": "0.039",
+   "match": true
+  },
+  {
+   "label": "K=512 d=2048 S=8 per seed",
+   "file": "v102_logs/v102_scored.json",
+   "key": "d[\"grid\"][\"d2048_K512_S8\"]",
+   "value": [
+    0.9166666666666666,
+    0.925,
+    0.9166666666666666
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "K=512 d=2048 S=8 (mean)",
+   "file": "v102_logs/v102_scored.json",
+   "key": "mean(d[\"grid\"][\"d2048_K512_S8\"])",
+   "value": 0.9194444444444444,
+   "manuscript": "0.919",
+   "match": true
+  },
+  {
+   "label": "K=512 d=2048: mean per S (1,2,4,8,16)",
+   "file": "v102_logs/v102_scored.json",
+   "key": "[mean(d[\"grid\"][\"d2048_K512_S%d\" % s]) for s in (1,2,4,8,16)]",
+   "value": [
+    0.03888888888888889,
+    0.18888888888888888,
+    0.6472222222222223,
+    0.9194444444444444,
+    0.9222222222222222
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "all cells mean",
+   "file": "v102_logs/v102_scored.json",
+   "key": "{k: mean(v) for k, v in d[\"grid\"].items()}",
+   "value": {
+    "d2048_K128_S1": 0.7277777777777779,
+    "d2048_K128_S2": 0.9194444444444446,
+    "d2048_K128_S4": 0.9277777777777777,
+    "d2048_K128_S8": 0.9305555555555557,
+    "d2048_K128_S16": 0.9277777777777777,
+    "d2048_K256_S1": 0.21944444444444447,
+    "d2048_K256_S2": 0.6638888888888889,
+    "d2048_K256_S4": 0.9055555555555556,
+    "d2048_K256_S8": 0.9250000000000002,
+    "d2048_K256_S16": 0.9250000000000002,
+    "d2048_K512_S1": 0.03888888888888889,
+    "d2048_K512_S2": 0.18888888888888888,
+    "d2048_K512_S4": 0.6472222222222223,
+    "d2048_K512_S8": 0.9194444444444444,
+    "d2048_K512_S16": 0.9222222222222222,
+    "d2048_K1024_S1": 0.008333333333333333,
+    "d2048_K1024_S2": 0.044444444444444446,
+    "d2048_K1024_S4": 0.25555555555555554,
+    "d2048_K1024_S8": 0.7222222222222222,
+    "d2048_K1024_S16": 0.9083333333333333,
+    "d4096_K128_S1": 0.9194444444444444,
+    "d4096_K128_S2": 0.9250000000000002,
+    "d4096_K128_S4": 0.9277777777777777,
+    "d4096_K128_S8": 0.9277777777777777,
+    "d4096_K128_S16": 0.9277777777777777,
+    "d4096_K256_S1": 0.7277777777777779,
+    "d4096_K256_S2": 0.9194444444444444,
+    "d4096_K256_S4": 0.9333333333333332,
+    "d4096_K256_S8": 0.9333333333333332,
+    "d4096_K256_S16": 0.9333333333333332,
+    "d4096_K512_S1": 0.1416666666666667,
+    "d4096_K512_S2": 0.6444444444444445,
+    "d4096_K512_S4": 0.8861111111111111,
+    "d4096_K512_S8": 0.9083333333333333,
+    "d4096_K512_S16": 0.9138888888888889,
+    "d4096_K1024_S1": 0.04722222222222222,
+    "d4096_K1024_S2": 0.25,
+    "d4096_K1024_S4": 0.7416666666666667,
+    "d4096_K1024_S8": 0.9055555555555556,
+    "d4096_K1024_S16": 0.8972222222222223
+   },
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "cross-shard cost: |K1024 S16 - K512 S8| (both 64 facts/shard)",
+   "file": "v102_logs/v102_scored.json",
+   "key": "abs(mean(d[\"grid\"][\"d2048_K1024_S16\"]) - mean(d[\"grid\"][\"d2048_K512_S8\"]))",
+   "value": 0.011111111111111072,
+   "manuscript": "0.01",
+   "match": true,
+   "note": "manuscript literal is the phrase 'cross-shard selection costs about a point' (line 407), encoded here as 0.01; verify_paper_capacity bounds it at <= .02. The v102 verdict string quotes .0139 for its P3 (different pair)."
+  },
+  {
+   "label": "V-100 curve: n_facts",
+   "file": "v100_logs/v100_scored.json",
+   "key": "[r[\"n_facts\"] for r in d[\"curve\"]]",
+   "value": [
+    8.0,
+    16.0,
+    32.0,
+    64.0,
+    128.0,
+    256.0,
+    512.0
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "V-100 curve: prompt acc (Qwen3-8B)",
+   "file": "v100_logs/v100_scored.json",
+   "key": "[r[\"prompt_acc\"] for r in d[\"curve\"]]",
+   "value": [
+    0.9416666666666667,
+    0.925,
+    0.9,
+    0.925,
+    0.875,
+    0.7416666666666667,
+    0.5916666666666667
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "V-100 curve: store acc (d=2048)",
+   "file": "v100_logs/v100_scored.json",
+   "key": "[r[\"store_acc\"] for r in d[\"curve\"]]",
+   "value": [
+    0.9333333333333333,
+    0.9333333333333333,
+    0.9333333333333333,
+    0.925,
+    0.7416666666666667,
+    0.24166666666666667,
+    0.016666666666666666
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "V-100 curve: prompt tokens",
+   "file": "v100_logs/v100_scored.json",
+   "key": "[r[\"prompt_tokens\"] for r in d[\"curve\"]]",
+   "value": [
+    246.54166666666666,
+    361.475,
+    596.65,
+    1042.8833333333334,
+    1965.6,
+    3793.475,
+    7475.016666666666
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "V-100 curve: prompt latency (s)",
+   "file": "v100_logs/v100_scored.json",
+   "key": "[r[\"prompt_latency_s\"] for r in d[\"curve\"]]",
+   "value": [
+    0.36852837006251016,
+    0.3659147540728251,
+    0.3719687024752299,
+    0.38360639015833536,
+    0.41290996273358666,
+    0.47965566913286845,
+    0.6337291220823924
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "V-100 curve: store latency (s)",
+   "file": "v100_logs/v100_scored.json",
+   "key": "[r[\"store_latency_s\"] for r in d[\"curve\"]]",
+   "value": [
+    0.025640382369359335,
+    0.0019639889399210614,
+    0.003137977917989095,
+    0.005468604962031046,
+    0.010090941190719604,
+    0.01928913394610087,
+    0.03771169781684876
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "V-100 latency ratio prompt/store per scale",
+   "file": "v100_logs/v100_scored.json",
+   "key": "[r[\"prompt_latency_s\"]/r[\"store_latency_s\"] for r in d[\"curve\"]]",
+   "value": [
+    14.37296701561313,
+    186.3120237772481,
+    118.53770555326213,
+    70.14702887148454,
+    40.91887515044979,
+    24.866625452089135,
+    16.804576796307913
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "The manuscript contains NO latency literal (line 600: 'we did not profile wall-clock overhead'); the '1/70th' in the request is not in main_npj.tex. Ratios here range 14x-186x; verdict string quotes 186x at the 16-fact crossover."
+  },
+  {
+   "label": "all cells per seed",
+   "file": "v102_logs/v102_scored.json",
+   "key": "d[\"grid\"]",
+   "value": {
+    "d2048_K128_S1": [
+     0.7,
+     0.775,
+     0.7083333333333334
+    ],
+    "d2048_K128_S2": [
+     0.925,
+     0.9083333333333333,
+     0.925
+    ],
+    "d2048_K128_S4": [
+     0.925,
+     0.925,
+     0.9333333333333333
+    ],
+    "d2048_K128_S8": [
+     0.9333333333333333,
+     0.925,
+     0.9333333333333333
+    ],
+    "d2048_K128_S16": [
+     0.925,
+     0.925,
+     0.9333333333333333
+    ],
+    "d2048_K256_S1": [
+     0.225,
+     0.25833333333333336,
+     0.175
+    ],
+    "d2048_K256_S2": [
+     0.675,
+     0.725,
+     0.5916666666666667
+    ],
+    "d2048_K256_S4": [
+     0.9083333333333333,
+     0.9,
+     0.9083333333333333
+    ],
+    "d2048_K256_S8": [
+     0.925,
+     0.9166666666666666,
+     0.9333333333333333
+    ],
+    "d2048_K256_S16": [
+     0.925,
+     0.925,
+     0.925
+    ],
+    "d2048_K512_S1": [
+     0.05,
+     0.041666666666666664,
+     0.025
+    ],
+    "d2048_K512_S2": [
+     0.14166666666666666,
+     0.23333333333333334,
+     0.19166666666666668
+    ],
+    "d2048_K512_S4": [
+     0.6583333333333333,
+     0.5916666666666667,
+     0.6916666666666667
+    ],
+    "d2048_K512_S8": [
+     0.9166666666666666,
+     0.925,
+     0.9166666666666666
+    ],
+    "d2048_K512_S16": [
+     0.925,
+     0.925,
+     0.9166666666666666
+    ],
+    "d2048_K1024_S1": [
+     0.016666666666666666,
+     0.008333333333333333,
+     0.0
+    ],
+    "d2048_K1024_S2": [
+     0.041666666666666664,
+     0.03333333333333333,
+     0.058333333333333334
+    ],
+    "d2048_K1024_S4": [
+     0.2916666666666667,
+     0.24166666666666667,
+     0.23333333333333334
+    ],
+    "d2048_K1024_S8": [
+     0.7,
+     0.7416666666666667,
+     0.725
+    ],
+    "d2048_K1024_S16": [
+     0.925,
+     0.9,
+     0.9
+    ],
+    "d4096_K128_S1": [
+     0.9166666666666666,
+     0.9083333333333333,
+     0.9333333333333333
+    ],
+    "d4096_K128_S2": [
+     0.925,
+     0.9166666666666666,
+     0.9333333333333333
+    ],
+    "d4096_K128_S4": [
+     0.925,
+     0.925,
+     0.9333333333333333
+    ],
+    "d4096_K128_S8": [
+     0.925,
+     0.925,
+     0.9333333333333333
+    ],
+    "d4096_K128_S16": [
+     0.925,
+     0.925,
+     0.9333333333333333
+    ],
+    "d4096_K256_S1": [
+     0.7666666666666667,
+     0.7083333333333334,
+     0.7083333333333334
+    ],
+    "d4096_K256_S2": [
+     0.9166666666666666,
+     0.9166666666666666,
+     0.925
+    ],
+    "d4096_K256_S4": [
+     0.9333333333333333,
+     0.9333333333333333,
+     0.9333333333333333
+    ],
+    "d4096_K256_S8": [
+     0.9333333333333333,
+     0.9333333333333333,
+     0.9333333333333333
+    ],
+    "d4096_K256_S16": [
+     0.9333333333333333,
+     0.9333333333333333,
+     0.9333333333333333
+    ],
+    "d4096_K512_S1": [
+     0.15833333333333333,
+     0.15,
+     0.11666666666666667
+    ],
+    "d4096_K512_S2": [
+     0.6583333333333333,
+     0.6833333333333333,
+     0.5916666666666667
+    ],
+    "d4096_K512_S4": [
+     0.8833333333333333,
+     0.8916666666666667,
+     0.8833333333333333
+    ],
+    "d4096_K512_S8": [
+     0.8916666666666667,
+     0.9166666666666666,
+     0.9166666666666666
+    ],
+    "d4096_K512_S16": [
+     0.9083333333333333,
+     0.9166666666666666,
+     0.9166666666666666
+    ],
+    "d4096_K1024_S1": [
+     0.025,
+     0.08333333333333333,
+     0.03333333333333333
+    ],
+    "d4096_K1024_S2": [
+     0.25,
+     0.25833333333333336,
+     0.24166666666666667
+    ],
+    "d4096_K1024_S4": [
+     0.7416666666666667,
+     0.75,
+     0.7333333333333333
+    ],
+    "d4096_K1024_S8": [
+     0.925,
+     0.9,
+     0.8916666666666667
+    ],
+    "d4096_K1024_S16": [
+     0.9,
+     0.9,
+     0.8916666666666667
+    ]
+   },
+   "manuscript": null,
+   "match": null,
+   "note": "The cells keyed K1024 hold at most 800 facts: pooled() runs out of gold triples at 400 instances x 2."
+  }
+ ],
+ "F4e_crosstalk_geometry": [
+  {
+   "label": "cross-talk threshold (largest still clearing .615)",
+   "file": "v95_logs/v95_scored.json",
+   "key": "d[\"threshold_crosstalk\"]",
+   "value": 0.0989002212882042,
+   "manuscript": "0.099",
+   "match": true
+  },
+  {
+   "label": "v95 curve: target c",
+   "file": "v95_logs/v95_scored.json",
+   "key": "[c[\"target_c\"] for c in d[\"curve\"]]",
+   "value": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v95 curve: measured cross-talk",
+   "file": "v95_logs/v95_scored.json",
+   "key": "[c[\"crosstalk\"] for c in d[\"curve\"]]",
+   "value": [
+    0.00014959036949827956,
+    0.04921026900410652,
+    0.0989002212882042,
+    0.19863510628541312,
+    0.29861300190289813,
+    0.39873236417770386,
+    0.49893919626871747,
+    0.5991944869359335,
+    0.6994648377100626,
+    0.7997179826100668,
+    0.8999172647794088
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v95 curve: acc (mean)",
+   "file": "v95_logs/v95_scored.json",
+   "key": "[c[\"acc\"] for c in d[\"curve\"]]",
+   "value": [
+    0.9244444568951925,
+    0.9177777965863546,
+    0.9033333460489908,
+    0.6044444441795349,
+    0.49888888001441956,
+    0.49888888001441956,
+    0.49888888001441956,
+    0.49888888001441956,
+    0.49888888001441956,
+    0.49888888001441956,
+    0.49888888001441956
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v95 curve: acc per seed",
+   "file": "v95_logs/v95_scored.json",
+   "key": "[c[\"acc_per_seed\"] for c in d[\"curve\"]]",
+   "value": [
+    [
+     0.925000011920929,
+     0.92166668176651,
+     0.9266666769981384
+    ],
+    [
+     0.9066666960716248,
+     0.9266666769981384,
+     0.9200000166893005
+    ],
+    [
+     0.8916666507720947,
+     0.9083333611488342,
+     0.9100000262260437
+    ],
+    [
+     0.6050000190734863,
+     0.57833331823349,
+     0.6299999952316284
+    ],
+    [
+     0.5116666555404663,
+     0.5249999761581421,
+     0.46000000834465027
+    ],
+    [
+     0.5116666555404663,
+     0.5249999761581421,
+     0.46000000834465027
+    ],
+    [
+     0.5116666555404663,
+     0.5249999761581421,
+     0.46000000834465027
+    ],
+    [
+     0.5116666555404663,
+     0.5249999761581421,
+     0.46000000834465027
+    ],
+    [
+     0.5116666555404663,
+     0.5249999761581421,
+     0.46000000834465027
+    ],
+    [
+     0.5116666555404663,
+     0.5249999761581421,
+     0.46000000834465027
+    ],
+    [
+     0.5116666555404663,
+     0.5249999761581421,
+     0.46000000834465027
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v95 acc at cross-talk .099",
+   "file": "v95_logs/v95_scored.json",
+   "key": "rows(d[\"curve\"], target_c=0.1)[0][\"acc\"]",
+   "value": 0.9033333460489908,
+   "manuscript": "0.903",
+   "match": true
+  },
+  {
+   "label": "v95 acc at cross-talk .199",
+   "file": "v95_logs/v95_scored.json",
+   "key": "rows(d[\"curve\"], target_c=0.2)[0][\"acc\"]",
+   "value": 0.6044444441795349,
+   "manuscript": "0.604",
+   "match": true
+  },
+  {
+   "label": "classifier logits (continuous) cross-talk",
+   "file": "geometry_banked.json",
+   "key": "d[\"crosstalk_probe_logits\"]",
+   "value": 0.390402615070343,
+   "manuscript": "0.3904",
+   "match": true
+  },
+  {
+   "label": "discrete arg-max lookup cross-talk",
+   "file": "geometry_banked.json",
+   "key": "d[\"crosstalk_discrete\"]",
+   "value": 0.00013155033229850233,
+   "manuscript": "0.0001",
+   "match": true
+  },
+  {
+   "label": "raw states cross-talk / codebook cross-talk / probe accuracy",
+   "file": "geometry_banked.json",
+   "key": "[d[\"crosstalk_raw_states\"], d[\"crosstalk_codebook\"], d[\"probe_accuracy\"]]",
+   "value": [
+    0.9148662090301514,
+    0.00013061519712209702,
+    0.9999608993530273
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "fitted frozen-continuous projection (3 epochs): cross-talk",
+   "file": "crosstalk_audit2.json",
+   "key": "d[\"fit3\"][\"crosstalk\"]",
+   "value": 0.031536682246553385,
+   "manuscript": "0.032",
+   "match": true
+  },
+  {
+   "label": "fitted frozen-continuous projection (3 epochs): cross-talk per seed",
+   "file": "crosstalk_audit2.json",
+   "key": "d[\"fit3\"][\"xt_seeds\"]",
+   "value": [
+    0.025025063765963588,
+    0.04412189171745036,
+    0.02546309125624621
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "fitted frozen-continuous projection (3 epochs): acc / per seed",
+   "file": "crosstalk_audit2.json",
+   "key": "[d[\"fit3\"][\"acc\"], d[\"fit3\"][\"acc_seeds\"]]",
+   "value": [
+    0.9316666722297668,
+    [
+     0.9233333468437195,
+     0.9383333325386047,
+     0.9333333373069763
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "binding-loss projection (0 fit epochs): cross-talk",
+   "file": "crosstalk_audit2.json",
+   "key": "d[\"fit0\"][\"crosstalk\"]",
+   "value": 0.6987163659599093,
+   "manuscript": "0.699",
+   "match": true,
+   "note": "v52: MISLABELLED. crosstalk_audit2 fit0 is the frozen_cont arm with zero fitting epochs, an UNTRAINED random projection, not an arm trained through the binding loss (FIGURE_audit_v51.md, Fig. 2b finding 1). The trained arm is in v165_logs/v165.json. Label kept so that older scripts still resolve; not plotted in v52."
+  },
+  {
+   "label": "binding-loss projection (0 fit epochs): acc / per seed",
+   "file": "crosstalk_audit2.json",
+   "key": "[d[\"fit0\"][\"acc\"], d[\"fit0\"][\"acc_seeds\"]]",
+   "value": [
+    0.5011111199855804,
+    [
+     0.4883333444595337,
+     0.4749999940395355,
+     0.5400000214576721
+    ]
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "v52: MISLABELLED, see the cross-talk entry. Accuracy of the untrained projection under the untrained (fixed) readout."
+  },
+  {
+   "label": "v163 curve: target c",
+   "file": "v163_logs/v163.json",
+   "key": "[c[\"target_c\"] for c in d[\"curve\"]]",
+   "value": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v163 curve: measured cross-talk (mean of 3 codebook seeds)",
+   "file": "v163_logs/v163.json",
+   "key": "[c[\"crosstalk_mean\"] for c in d[\"curve\"]]",
+   "value": [
+    0.00014959025793359615,
+    0.04921026900410652,
+    0.0989002212882042,
+    0.14872662723064423,
+    0.19863509138425192,
+    0.2486018588145574,
+    0.29861300190289813,
+    0.34865887959798175,
+    0.3987323542435964,
+    0.49893918633461,
+    0.5991944670677185,
+    0.6994648178418478,
+    0.7997179826100668,
+    0.8999171853065491
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v163 curve: measured cross-talk per seed",
+   "file": "v163_logs/v163.json",
+   "key": "[c[\"crosstalk\"] for c in d[\"curve\"]]",
+   "value": [
+    [
+     0.00013061509525869042,
+     0.0003610173298511654,
+     -4.2861651309067383e-05
+    ],
+    [
+     0.04977203533053398,
+     0.050192009657621384,
+     0.0476667620241642
+    ],
+    [
+     0.09963589161634445,
+     0.10011415183544159,
+     0.09695062041282654
+    ],
+    [
+     0.14955458045005798,
+     0.1500607132911682,
+     0.14656458795070648
+    ],
+    [
+     0.19950871169567108,
+     0.20002374053001404,
+     0.19637282192707062
+    ],
+    [
+     0.24948938190937042,
+     0.24999931454658508,
+     0.24631687998771667
+    ],
+    [
+     0.29949086904525757,
+     0.29998499155044556,
+     0.29636314511299133
+    ],
+    [
+     0.3495089113712311,
+     0.3499786853790283,
+     0.3464890420436859
+    ],
+    [
+     0.3995402455329895,
+     0.3999788165092468,
+     0.39667800068855286
+    ],
+    [
+     0.49963104724884033,
+     0.499992698431015,
+     0.4971938133239746
+    ],
+    [
+     0.5997422337532043,
+     0.6000159978866577,
+     0.5978251695632935
+    ],
+    [
+     0.6998547911643982,
+     0.7000386118888855,
+     0.6985010504722595
+    ],
+    [
+     0.7999500036239624,
+     0.8000510334968567,
+     0.7991529107093811
+    ],
+    [
+     0.9000080823898315,
+     0.9000426530838013,
+     0.8997008204460144
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v163 curve: acc under the fitted rule (mean)",
+   "file": "v163_logs/v163.json",
+   "key": "[c[\"fitted_mean\"] for c in d[\"curve\"]]",
+   "value": [
+    0.9222222222222222,
+    0.9166666666666666,
+    0.9022222222222221,
+    0.8316666666666667,
+    0.7016666666666667,
+    0.62,
+    0.5705555555555555,
+    0.5461111111111111,
+    0.5355555555555556,
+    0.5322222222222223,
+    0.5311111111111111,
+    0.5205555555555555,
+    0.5044444444444444,
+    0.5255555555555556
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v163 curve: acc under the fitted rule per seed",
+   "file": "v163_logs/v163.json",
+   "key": "[c[\"fitted\"] for c in d[\"curve\"]]",
+   "value": [
+    [
+     0.9183333333333333,
+     0.9216666666666666,
+     0.9266666666666666
+    ],
+    [
+     0.9033333333333333,
+     0.9266666666666666,
+     0.92
+    ],
+    [
+     0.8883333333333333,
+     0.9083333333333333,
+     0.91
+    ],
+    [
+     0.8233333333333334,
+     0.8333333333333334,
+     0.8383333333333334
+    ],
+    [
+     0.6916666666666667,
+     0.6883333333333334,
+     0.725
+    ],
+    [
+     0.6116666666666667,
+     0.5866666666666667,
+     0.6616666666666666
+    ],
+    [
+     0.57,
+     0.5366666666666666,
+     0.605
+    ],
+    [
+     0.5416666666666666,
+     0.5066666666666667,
+     0.59
+    ],
+    [
+     0.5283333333333333,
+     0.5016666666666667,
+     0.5766666666666667
+    ],
+    [
+     0.5066666666666667,
+     0.5166666666666667,
+     0.5733333333333334
+    ],
+    [
+     0.5333333333333333,
+     0.5,
+     0.56
+    ],
+    [
+     0.51,
+     0.49666666666666665,
+     0.555
+    ],
+    [
+     0.4866666666666667,
+     0.5083333333333333,
+     0.5183333333333333
+    ],
+    [
+     0.5116666666666667,
+     0.5233333333333333,
+     0.5416666666666666
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v163 tolerance under the fitted rule (largest tested cross-talk clearing .615)",
+   "file": "v163_logs/v163_scored.json",
+   "key": "d[\"tolerance\"]",
+   "value": 0.2486018588145574,
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v165 projection before training: different-symbol cosine per seed",
+   "file": "v165_logs/v165.json",
+   "key": "[s[\"init\"][\"different\"] for s in d[\"seeds\"]]",
+   "value": [
+    0.7204259690565941,
+    0.7138714912992258,
+    0.7188225894020154
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v165 projection before training: acc per seed (fitted threshold)",
+   "file": "v165_logs/v165.json",
+   "key": "[s[\"init\"][\"acc\"] for s in d[\"seeds\"]]",
+   "value": [
+    0.514,
+    0.5,
+    0.534
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v165 projection trained through the binding loss: different-symbol cosine per seed (final epoch)",
+   "file": "v165_logs/v165.json",
+   "key": "[s[\"epochs\"][-1][\"different\"] for s in d[\"seeds\"]]",
+   "value": [
+    0.9879103341927895,
+    0.9894992642677747,
+    0.9878066407564359
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v165 projection trained through the binding loss: acc_best per seed",
+   "file": "v165_logs/v165.json",
+   "key": "[s[\"acc_best\"] for s in d[\"seeds\"]]",
+   "value": [
+    0.472,
+    0.502,
+    0.476
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v165 means: different init / different trained / acc_best",
+   "file": "v165_logs/v165.json",
+   "key": "[d[\"different_init_mean\"], d[\"different_trained_mean\"], d[\"acc_best_mean\"]]",
+   "value": [
+    0.7177066832526117,
+    0.9884054130723333,
+    0.48333333333333334
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v165 seeds / gates G0, B1, B2",
+   "file": "v165_logs/v165.json",
+   "key": "[[s[\"seed\"] for s in d[\"seeds\"]], d[\"G0\"], d[\"B1\"], d[\"B2\"]]",
+   "value": [
+    [
+     42,
+     123,
+     456
+    ],
+    true,
+    true,
+    true
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "fitted frozen-continuous projection (3 epochs): acc per seed",
+   "file": "crosstalk_audit2.json",
+   "key": "d[\"fit3\"][\"acc_seeds\"]",
+   "value": [
+    0.9233333468437195,
+    0.9383333325386047,
+    0.9333333373069763
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "untrained random projection (frozen_cont arm, 0 fit epochs; crosstalk_audit2 fit0): cross-talk",
+   "file": "crosstalk_audit2.json",
+   "key": "d[\"fit0\"][\"crosstalk\"]",
+   "value": 0.6987163659599093,
+   "manuscript": null,
+   "match": null,
+   "note": "Correctly labelled duplicate of 'binding-loss projection (0 fit epochs): cross-talk'. Not plotted in v52: the V-165 before-training point replaces it."
+  }
+ ],
+ "FS_capacity_v151": [
+  {
+   "label": "v151 dims",
+   "file": "v151_logs/v151.json",
+   "key": "[int(x) for x in d[\"config\"][\"dims\"]]",
+   "value": [
+    512,
+    1024,
+    2048,
+    4096
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v151 ks",
+   "file": "v151_logs/v151.json",
+   "key": "[int(x) for x in d[\"config\"][\"ks\"]]",
+   "value": [
+    8,
+    11,
+    16,
+    23,
+    32,
+    45,
+    64,
+    91,
+    128,
+    181,
+    256,
+    362,
+    512,
+    724,
+    1024
+   ],
+   "manuscript": null,
+   "match": null,
+   "note": "The largest grid value, 1024, is a request: the pool holds at most 800 facts (400 instances x 2 gold triples)."
+  },
+  {
+   "label": "v151 models",
+   "file": "v151_logs/v151.json",
+   "key": "d[\"config\"][\"models\"]",
+   "value": [
+    "HRR",
+    "MAP",
+    "BSC",
+    "FHRR"
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v151 n instances per cell / capacity seeds",
+   "file": "v151_logs/v151.json",
+   "key": "[d[\"config\"][\"n\"], d[\"config\"][\"cap_seeds\"]]",
+   "value": [
+    200,
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "v151 readout[model][d] per k",
+   "file": "v151_logs/v151.json",
+   "key": "{m: {dd: [d[\"capacity\"][m][dd][str(k)] for k in d[\"config\"][\"ks\"]] for dd in d[\"capacity\"][m]} for m in d[\"config\"][\"models\"]}",
+   "value": {
+    "HRR": {
+     "512": [
+      0.945,
+      0.9466666666666667,
+      0.9366666666666666,
+      0.9100000000000001,
+      0.8449999999999999,
+      0.6583333333333333,
+      0.4033333333333333,
+      0.1683333333333333,
+      0.085,
+      0.028333333333333335,
+      0.006666666666666667,
+      0.01,
+      0.005,
+      0.0,
+      0.0016666666666666668
+     ],
+     "1024": [
+      0.945,
+      0.9433333333333334,
+      0.9416666666666665,
+      0.9433333333333334,
+      0.935,
+      0.9049999999999999,
+      0.7916666666666666,
+      0.555,
+      0.30333333333333334,
+      0.12000000000000001,
+      0.04666666666666667,
+      0.018333333333333337,
+      0.006666666666666667,
+      0.0033333333333333335,
+      0.0033333333333333335
+     ],
+     "2048": [
+      0.945,
+      0.94,
+      0.945,
+      0.94,
+      0.9383333333333334,
+      0.94,
+      0.9383333333333334,
+      0.9016666666666667,
+      0.7433333333333333,
+      0.515,
+      0.245,
+      0.12166666666666666,
+      0.04,
+      0.008333333333333333,
+      0.006666666666666667
+     ],
+     "4096": [
+      0.9466666666666667,
+      0.945,
+      0.945,
+      0.9383333333333334,
+      0.94,
+      0.9416666666666665,
+      0.9383333333333334,
+      0.935,
+      0.9283333333333333,
+      0.8850000000000001,
+      0.7316666666666666,
+      0.40166666666666667,
+      0.15833333333333333,
+      0.05333333333333334,
+      0.03166666666666667
+     ]
+    },
+    "MAP": {
+     "512": [
+      0.9433333333333334,
+      0.9466666666666667,
+      0.9416666666666665,
+      0.9316666666666666,
+      0.855,
+      0.6833333333333332,
+      0.425,
+      0.22666666666666668,
+      0.09166666666666667,
+      0.024999999999999998,
+      0.01,
+      0.005,
+      0.0016666666666666668,
+      0.0033333333333333335,
+      0.0016666666666666668
+     ],
+     "1024": [
+      0.9533333333333333,
+      0.9466666666666667,
+      0.945,
+      0.9416666666666665,
+      0.94,
+      0.9266666666666666,
+      0.8466666666666667,
+      0.6083333333333333,
+      0.3116666666666667,
+      0.14333333333333334,
+      0.056666666666666664,
+      0.015,
+      0.013333333333333334,
+      0.005,
+      0.005
+     ],
+     "2048": [
+      0.9516666666666667,
+      0.9483333333333333,
+      0.94,
+      0.94,
+      0.9383333333333334,
+      0.94,
+      0.94,
+      0.8983333333333333,
+      0.7683333333333334,
+      0.48333333333333334,
+      0.27499999999999997,
+      0.07833333333333332,
+      0.04666666666666667,
+      0.01,
+      0.006666666666666667
+     ],
+     "4096": [
+      0.9516666666666667,
+      0.9416666666666665,
+      0.9466666666666667,
+      0.9416666666666665,
+      0.9383333333333334,
+      0.9433333333333334,
+      0.9383333333333334,
+      0.94,
+      0.9383333333333334,
+      0.895,
+      0.68,
+      0.37999999999999995,
+      0.18166666666666664,
+      0.06166666666666667,
+      0.04833333333333334
+     ]
+    },
+    "BSC": {
+     "512": [
+      0.945,
+      0.9433333333333334,
+      0.9316666666666666,
+      0.8700000000000001,
+      0.6383333333333333,
+      0.45,
+      0.19666666666666668,
+      0.09499999999999999,
+      0.03166666666666667,
+      0.018333333333333333,
+      0.0016666666666666668,
+      0.0016666666666666668,
+      0.0016666666666666668,
+      0.0,
+      0.0
+     ],
+     "1024": [
+      0.9466666666666667,
+      0.9433333333333332,
+      0.9433333333333332,
+      0.9499999999999998,
+      0.9133333333333334,
+      0.8249999999999998,
+      0.5916666666666667,
+      0.32666666666666666,
+      0.12833333333333333,
+      0.04666666666666667,
+      0.02,
+      0.008333333333333333,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "2048": [
+      0.9416666666666665,
+      0.9433333333333332,
+      0.945,
+      0.9366666666666666,
+      0.9416666666666668,
+      0.94,
+      0.9083333333333333,
+      0.7399999999999999,
+      0.48500000000000004,
+      0.2283333333333333,
+      0.09000000000000001,
+      0.01833333333333333,
+      0.011666666666666667,
+      0.0016666666666666668,
+      0.0016666666666666668
+     ],
+     "4096": [
+      0.945,
+      0.945,
+      0.9416666666666665,
+      0.9416666666666665,
+      0.9366666666666666,
+      0.9433333333333332,
+      0.9383333333333334,
+      0.93,
+      0.8733333333333334,
+      0.6883333333333334,
+      0.3933333333333333,
+      0.16833333333333333,
+      0.04666666666666667,
+      0.016666666666666666,
+      0.011666666666666667
+     ]
+    },
+    "FHRR": {
+     "512": [
+      0.94,
+      0.9500000000000001,
+      0.9416666666666665,
+      0.9383333333333334,
+      0.94,
+      0.9250000000000002,
+      0.84,
+      0.6149999999999999,
+      0.3666666666666667,
+      0.14500000000000002,
+      0.056666666666666664,
+      0.01833333333333333,
+      0.011666666666666667,
+      0.0016666666666666668,
+      0.0016666666666666668
+     ],
+     "1024": [
+      0.9483333333333333,
+      0.9433333333333332,
+      0.9433333333333334,
+      0.9383333333333334,
+      0.94,
+      0.9416666666666665,
+      0.9383333333333334,
+      0.8983333333333334,
+      0.7533333333333333,
+      0.5416666666666666,
+      0.245,
+      0.085,
+      0.025000000000000005,
+      0.005,
+      0.0033333333333333335
+     ],
+     "2048": [
+      0.9466666666666667,
+      0.945,
+      0.9416666666666665,
+      0.94,
+      0.94,
+      0.9416666666666665,
+      0.9383333333333334,
+      0.94,
+      0.9316666666666668,
+      0.8566666666666666,
+      0.6883333333333334,
+      0.385,
+      0.16666666666666666,
+      0.051666666666666666,
+      0.041666666666666664
+     ],
+     "4096": [
+      0.9433333333333332,
+      0.9433333333333332,
+      0.9416666666666665,
+      0.9400000000000001,
+      0.9383333333333334,
+      0.94,
+      0.94,
+      0.9383333333333334,
+      0.9383333333333334,
+      0.9366666666666666,
+      0.9283333333333333,
+      0.8466666666666667,
+      0.6283333333333333,
+      0.3116666666666667,
+      0.22666666666666666
+     ]
+    }
+   },
+   "manuscript": null,
+   "match": null,
+   "note": "Mean over 200 instances x 3 capacity seeds; per-seed values are not banked."
+  }
+ ],
+ "F6b_clutrr": [
+  {
+   "label": "ours: n per k (k = 2..10)",
+   "file": "r1_logs/ours_by_k.json",
+   "key": "[d[\"by_k\"][str(k)][\"n\"] for k in range(2, 11)]",
+   "value": [
+    38,
+    105,
+    190,
+    174,
+    107,
+    144,
+    150,
+    119,
+    119
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "ours: correct per k (k = 2..10)",
+   "file": "r1_logs/ours_by_k.json",
+   "key": "[d[\"by_k\"][str(k)][\"correct\"] for k in range(2, 11)]",
+   "value": [
+    36,
+    70,
+    153,
+    136,
+    84,
+    98,
+    94,
+    77,
+    74
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "ours: accuracy per k (k = 2..10)",
+   "file": "r1_logs/ours_by_k.json",
+   "key": "[d[\"by_k\"][str(k)][\"correct\"] / d[\"by_k\"][str(k)][\"n\"] for k in range(2, 11)]",
+   "value": [
+    0.9473684210526315,
+    0.6666666666666666,
+    0.8052631578947368,
+    0.7816091954022989,
+    0.7850467289719626,
+    0.6805555555555556,
+    0.6266666666666667,
+    0.6470588235294118,
+    0.6218487394957983
+   ],
+   "manuscript": null,
+   "match": null
+  },
+  {
+   "label": "ours: overall accuracy",
+   "file": "r1_logs/ours_by_k.json",
+   "key": "d[\"correct\"] / d[\"n_rows\"]",
+   "value": 0.7172774869109948,
+   "manuscript": null,
+   "match": null
+  }
+ ],
+ "_meta": {
+  "built": "2026-09-02",
+  "roots": {
+   "D": "/path/to/work/ngcls",
+   "B": "/path/to/work/sync_h20/rewardbench_experiment/zeyu/hybrid_neurosymbolic"
+  },
+  "file_roots": {
+   "v1_logs/frozen_llm.json": "B",
+   "v1_logs/vsa_hidden.json": "B",
+   "v1_logs/vsa_parser.json": "B",
+   "v2_logs/v2.json": "B",
+   "v4_logs/v4_perocc.json": "B",
+   "v4_logs/v4_consistent.json": "B",
+   "v4_logs/v4_extract.json": "B",
+   "v8_logs/v8.json": "B",
+   "v9_logs/v9_gpu1_rerun_partial.json": "B",
+   "v11_logs/v18_spanfix.json": "B",
+   "runs/v9/v9.json": "D",
+   "runs/v9/v9.log": "D",
+   "v6_logs/v6.json": "D",
+   "v7_logs/v7_last.json": "D",
+   "v12_logs/v12.json": "D",
+   "v13_logs/floor_survey.json": "D",
+   "v13_logs/v13_fixed.json": "D",
+   "v14_logs/v14_fixed.json": "D",
+   "v15_logs/v15.json": "D",
+   "v15b_logs/v15b.json": "D",
+   "v21_logs/v21.json": "D",
+   "v23_logs/v23.json": "D",
+   "v35_logs/v35.json": "D",
+   "v36_logs/v36.json": "D",
+   "v37_logs/v37b.json": "D",
+   "v39_logs/v39.json": "D",
+   "v39_logs/v39b.json": "D",
+   "v40_logs/v40.json": "D",
+   "v41_logs/v41.json": "D",
+   "v42_logs/v42.json": "D",
+   "v48_logs/v48.json": "D",
+   "v49_logs/v49.json": "D",
+   "v50_logs/v50_task2_BANKED.json": "D",
+   "v50_logs/v50_task1_VOID_locoffset.json": "D",
+   "v57_logs/v57.json": "D",
+   "v62_logs/v62_BANKED.json": "D",
+   "v63_logs/v63_PROVISIONAL.json": "D",
+   "v63b_logs/v63b_BANKED.json": "D",
+   "v64_logs/v64_BANKED.json": "D",
+   "v65_logs/v65_BANKED.json": "D",
+   "v67_logs/v67_BANKED.json": "D",
+   "v69_logs/v69_BANKED.json": "D",
+   "v72b_logs/v72b_BANKED.json": "D",
+   "v73_logs/v73_BANKED.json": "D",
+   "v79_logs/v79_BANKED.json": "D",
+   "v79_logs/v79a_BANKED.json": "D",
+   "v95_logs/v95_scored.json": "D",
+   "v100_logs/v100_scored.json": "D",
+   "v101_logs/v101_scored.json": "D",
+   "v102_logs/v102_scored.json": "D",
+   "crosstalk_audit2.json": "D",
+   "geometry_banked.json": "D"
+  },
+  "key_semantics": "python expression evaluated with d = json.load(file); helpers: mean(xs), np, rows(list, **eq_filters), accs(list, **eq_filters) -> [r['acc']]",
+  "match_rule": "value rounded to the manuscript literal's decimal places equals the literal (lists element-wise); null manuscript = per-seed/support data with no literal",
+  "manuscript": "/path/to/paper_v54/main_npj.tex",
+  "v52_addenda": "entries added by add_index_v52.py (2026-11-11); listed in INDEX_ADDENDA_v52.md"
+ }
+}

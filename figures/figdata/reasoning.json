@@ -1,0 +1,211 @@
+{
+ "_about": "Main Fig. 7 (reasoning over the stored state); built by tools/build_newfigs.py",
+ "trace": {
+  "log": "biobank-402-2",
+  "site": "Biobank, specimen chain of custody",
+  "question": "FRZ-02 has defrosted. Which specimens are affected?",
+  "qtype": "freezer_down",
+  "target": "FRZ-02",
+  "pred": [
+   "S-26-01006",
+   "S-26-03464"
+  ],
+  "gold": [
+   "S-26-01006",
+   "S-26-03464"
+  ],
+  "system_of_record_answer": [
+   "S-26-01006",
+   "S-26-01099",
+   "S-26-02582",
+   "S-26-02594",
+   "S-26-03806",
+   "S-26-03893"
+  ],
+  "sor_place": {
+   "S-26-01006": "CB-020",
+   "S-26-03464": "PCR bench"
+  },
+  "hops": {
+   "S-26-01006": [
+    {
+     "x": "S-26-01006",
+     "rel": "in",
+     "y": "CB-020",
+     "line": 140,
+     "src": "lims",
+     "kind": "struct",
+     "who": null,
+     "time": "03:21",
+     "text": "2026-10-14 03:19:04 | kwong | TRANSFER | S-26-01006 | CB-010/A4 -> CB-020/G8"
+    },
+    {
+     "x": "CB-020",
+     "rel": "in",
+     "y": "R-07",
+     "line": 195,
+     "src": "lims",
+     "kind": "struct",
+     "who": null,
+     "time": "09:46",
+     "text": "2026-10-14 09:43:30 | mchen | STORE    | CB-020 | R-07/slot 7"
+    },
+    {
+     "x": "R-07",
+     "rel": "in",
+     "y": "FRZ-02",
+     "line": 2,
+     "src": "lims",
+     "kind": "struct",
+     "who": null,
+     "time": "08:23",
+     "text": "2026-10-14 08:18:41 | kwong | LOCATE   | R-07 | in FRZ-02"
+    }
+   ],
+   "S-26-03464": [
+    {
+     "x": "S-26-03464",
+     "rel": "in",
+     "y": "CB-020",
+     "line": 194,
+     "src": "bench",
+     "kind": "human",
+     "who": "Jorge Alvarez",
+     "time": "09:36",
+     "text": "Pulled 3464 and stuck it in CB-020."
+    },
+    {
+     "x": "CB-020",
+     "rel": "in",
+     "y": "R-07",
+     "line": 195,
+     "src": "lims",
+     "kind": "struct",
+     "who": null,
+     "time": "09:46",
+     "text": "2026-10-14 09:43:30 | mchen | STORE    | CB-020 | R-07/slot 7"
+    },
+    {
+     "x": "R-07",
+     "rel": "in",
+     "y": "FRZ-02",
+     "line": 2,
+     "src": "lims",
+     "kind": "struct",
+     "who": null,
+     "time": "08:23",
+     "text": "2026-10-14 08:18:41 | kwong | LOCATE   | R-07 | in FRZ-02"
+    }
+   ]
+  },
+  "source": "vsassm/nsr/out/held/nsr1_nsr1_arm1.jsonl (biobank-402-2, FRZ-02); log lines from vsassm/nsr/data/biobank_nsr1.jsonl; gold and the system-of-record answer from nsr1_score.gold on the truth and sor states"
+ },
+ "read_true": [
+  {
+   "id": "clutrr",
+   "label": "CLUTRR",
+   "read": {
+    "value": 0.717,
+    "source": "results.tex: 'This system reached an accuracy of $71.7\\%$'"
+   },
+   "true": {
+    "value": 0.975,
+    "source": "results.tex / appendix.tex: memory given the gold relations answers 97.5% of the 1,146 test stories"
+   },
+   "read_label": "relations written by Qwen3-8B",
+   "true_label": "gold relations"
+  },
+  {
+   "id": "impact",
+   "label": "impact questions",
+   "read": {
+    "value": 0.93,
+    "source": "results/nsr1_verdict.txt: '| 1  RM state + VSA rule memory (rules from 1 worked trace)  | 0.930 | 0.875     | 0.833   | 0.975 | 0.950 |'"
+   },
+   "true": {
+    "value": 1.0,
+    "source": "results/nsr1_verdict.txt: '| sanity: truth + graph query                                | 1.000 |'"
+   },
+   "read_label": "state read from the log",
+   "true_label": "true state"
+  },
+  {
+   "id": "window",
+   "label": "past-window questions",
+   "read": {
+    "value": 0.874,
+    "source": "results/nsr3_verdict.txt: history engine 0.874"
+   },
+   "true": {
+    "value": 1.0,
+    "source": "results/nsr3_verdict.txt: truth history 1.000"
+   },
+   "read_label": "history read from the log",
+   "true_label": "true history"
+  }
+ ],
+ "llm_state": {
+  "log": {
+   "value": 0.278,
+   "source": "results/nsr1_verdict.txt (Qwen3-32B over the log, forced): '# (vendored at 707351b; reproduces test2's 40 logs exactly) by Qwen3-32B (rev 9216db57, sha256-verified) on the A800 box.'"
+  },
+  "state": {
+   "value": 0.826,
+   "source": "results/nsr1_verdict.txt: '| 3b Qwen3-32B thinking over the RM state as sentences       | 0.826 | 0.850     | 0.833   | 0.713 | 0.925 |'"
+  },
+  "ours": {
+   "value": 0.93,
+   "source": "results/nsr1_verdict.txt: '| 1  RM state + VSA rule memory (rules from 1 worked trace)  | 0.930 | 0.875     | 0.833   | 0.975 | 0.950 |'"
+  },
+  "n": 230
+ },
+ "selective": {
+  "coverage": [
+   0.1,
+   0.15,
+   0.2,
+   0.25,
+   0.3,
+   0.35,
+   0.4,
+   0.45,
+   0.5,
+   0.55,
+   0.6,
+   0.65,
+   0.7,
+   0.75,
+   0.8,
+   0.85,
+   0.9,
+   0.95,
+   1.0
+  ],
+  "accuracy": [
+   0.9565217391304348,
+   0.9411764705882353,
+   0.9565217391304348,
+   0.9655172413793104,
+   0.9565217391304348,
+   0.9625,
+   0.9565217391304348,
+   0.9615384615384616,
+   0.9652173913043478,
+   0.968503937007874,
+   0.9492753623188406,
+   0.9533333333333334,
+   0.9565217391304348,
+   0.9593023255813954,
+   0.9510869565217391,
+   0.9336734693877551,
+   0.9227053140096618,
+   0.9220183486238532,
+   0.9173913043478261
+  ],
+  "n": 230,
+  "wrong": 19,
+  "auroc": 0.7047892242454478,
+  "all_answers": 0.9173913043478261,
+  "source": "computed from vsassm/nsr/out/nsr2_nsr2_records.jsonl (conf.min_rel) with nsr2_score.selective and nsr1_score.gold; endpoints asserted equal to nsr/out/nsr2_score_nsr2.json (acc_det, min_rel sel@70, auroc)"
+ }
+}

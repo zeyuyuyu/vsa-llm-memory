@@ -1,0 +1,55 @@
+# B30b: what the paper can now say (applying the prereg's "What the paper may say" rules to results/b30b_verdict.txt)
+
+## (a) Qwen3-32B over the whole log, Qwen3's recommended decoding
+Registered readings: A1 (was the baseline handicapped?) location "inconclusive", impact "inconclusive", window "no
+material handicap"; A2 "system ahead by >= 0.20" on all three sets; A3 (150 unambiguous impact questions) the same.
+Rule applied: no set reads "handicap material", so the published numbers may stay, with the new ones beside them, and
+the text says the recommended decoding does not change the comparison; "beats Qwen3-32B" stands on all three sets.
+
+Numbers (accuracy; paired difference with 95% cluster-bootstrap interval over the 40 logs):
+- Location (414): published 0.543; S32 R1 0.592 (+0.048 [-0.002, +0.099]); R2 0.531; mean of the two seeds 0.562
+  (+0.018 [-0.018, +0.053]). System 0.959: lead over R1 +0.367 [+0.300, +0.434], over the two-seed mean +0.397
+  [+0.341, +0.453].
+- Impact (230): published 0.278; S32 R1 0.300 (+0.022 [-0.036, +0.076]); R2 0.274; mean 0.287. System 0.930: lead
+  over R1 +0.630 [+0.558, +0.702]. Without the 80 ambiguous home questions (150): published 0.273, R1 0.313
+  (+0.040 [-0.029, +0.104]), system 0.907, lead +0.593 [+0.503, +0.693].
+- Window (460): published 0.202; S32 R1 0.193 (-0.009 [-0.042, +0.023]); R2 0.196; mean 0.195. System 0.874: lead
+  over R1 +0.680 [+0.611, +0.749].
+- Engine control (G-E, the original greedy 8,192 runner re-run on vLLM): 0.296 / 0.183 on impact / window (gate
+  passes, |d| <= 0.03), 0.548 on location (published 0.543 on HF): the engine moves nothing.
+- The 32,768 budget was used and ended the loops (runs forced: published 21 / 48 / 73, S32 R1 0 / 1 / 3), but the
+  questions the published run lost to the 8,192 limit stay wrong (S32 R1 right on 5 of 48 impact and 2 of 73 window
+  ones). Seed spread is large on location (R2 - R1 -0.060 [-0.115, -0.007]).
+Suggested sentence (Methods / Table 1 note): "Run with Qwen3's recommended thinking-mode sampling (temperature 0.6,
+top-p 0.95, top-k 20) and a 32,768-token reasoning budget instead of greedy decoding with 8,192 tokens, Qwen3-32B
+scores 0.592 / 0.300 / 0.193 on the location, impact and window questions (two-seed means 0.562 / 0.287 / 0.195;
+greedy 0.543 / 0.278 / 0.202); no difference excludes zero, and our system's lead stays at +0.37 / +0.63 / +0.68
+(lower 95% bounds +0.30 / +0.56 / +0.61). On the 150 impact questions without the ambiguous home wording it is
+0.313 against our 0.907."
+
+## (b) BABILong notepad (the same reader's events as text)
+Registered readings: NB1 and NB2 "memory adds"; the conservative rule (every arm of a size) "memory adds" for 8B and
+for 1.7B, at 128k, 512k and 1M. G-B passed at all three lengths (re-run memory = banked B18 on 500/500, 125/125,
+125/125), and a plain-dict tracker reproduces every memory answer.
+Numbers (QA1-5; memory 99.8 at 128k, 100.0 at 512k and 1M; difference in points, exact McNemar p; in every arm the
+discordant pairs all favour the memory except one sample):
+- 128k (n = 500): Qwen3-8B thinking 78.6 (+21.2, p = 2.5e-32; qa3 43, qa5 69), Qwen3-1.7B thinking 59.8 (+40.0,
+  p = 1.2e-60), Qwen3-8B without thinking 58.6, Qwen3-1.7B without thinking 34.2; the reader itself as answerer 45.4 /
+  25.2 (it answers with event lists: a format failure).
+- 512k (n = 125): 8B thinking 83.2 (+16.8, p = 9.5e-7), 1.7B thinking 56.8 (+43.2).
+- 1M (n = 125): 8B thinking 77.6 (+22.4, p = 7.5e-9), 1.7B thinking 57.6 (+42.4).
+- Notepads are short (median 13 lines at 128k, 27 at 1M); the errors are reasoning over a changing state (qa2 carried
+  objects, qa3 "before", qa4 inverse relations) and the recency convention on qa5 (listing every receiver). Counting
+  "several names including the right one" as right (post hoc) lifts 8B at 128k only to 85.4.
+Suggested sentence (Results, beside the B23 baseline): "Given exactly the events our reader extracted, written as a
+notepad of short sentences, Qwen3-8B answers 78.6% of the QA1-5 questions at 128k (83.2% at 512k, 77.6% at 1M) and
+Qwen3-1.7B 59.8%, against the memory's 99.8-100% on the same events (P < 1e-6 at every length): the extraction alone
+does not carry the result; the rules over the exact store do."
+
+## Caveats to state
+- One extra seed only; location's seed spread (0.06) is as large as the decoding effect, so the S32 numbers carry
+  sampling noise of that size (the two-seed mean is the steadier figure).
+- The notepad arms are open 1.7B / 8B models; frontier models reading the raw text reach 96.8 / 97.6 at 128k on the
+  first 25 per task (B18 references), so the notepad result is about small and mid-size models.
+- Part (a) on vLLM 0.11 with NCCL all-reduce (custom all-reduce and NCCL P2P fail on these PCIe A800s); the engine
+  control shows this does not move the greedy numbers.

@@ -1,0 +1,9 @@
+score: 1176 cell differences re-scored by plain loops; max |difference| from the verdict 0.00e+00; R1 regions max |difference| 3.47e-18
+bits: 4900 (store, cell) configurations; over budget 0; not maximal (d + 1 fits) 0; logged q / stored share inconsistent with the chosen configuration 0
+rederive bge: float64 numpy re-implementation (own Hadamard codes, own quantizer) on 28 test stores x cells, 15819 queries: agreement 0.9988; worst cell 0.9809
+rederive minilm: float64 numpy re-implementation (own Hadamard codes, own quantizer) on 28 test stores x cells, 15819 queries: agreement 0.9991; worst cell 0.9933
+rederive e5: float64 numpy re-implementation (own Hadamard codes, own quantizer) on 28 test stores x cells, 15819 queries: agreement 0.9975; worst cell 0.9746
+rederive mistral: float64 numpy re-implementation (own Hadamard codes, own quantizer) on 28 test stores x cells, 15819 queries: agreement 0.9995; worst cell 0.9753
+rederive qwen8: float64 numpy re-implementation (own Hadamard codes, own quantizer) on 28 test stores x cells, 15819 queries: agreement 1.0000; worst cell 1.0000
+rederive b46: float64 numpy re-implementation (own Hadamard codes, own quantizer) on 28 test stores x cells, 15819 queries: agreement 1.0000; worst cell 1.0000
+rederive llama: float64 numpy re-implementation (own Hadamard codes, own quantizer) on 28 test stores x cells, 15819 queries: agreement 0.9994; worst cell 0.9909

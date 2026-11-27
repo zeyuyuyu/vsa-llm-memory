@@ -1,0 +1,50 @@
+# B72 sample-reading material (prereg: Qwen3-8B and e5-base-v2; the R1 cell with the largest |OPTR - STORE|)
+
+## qwen8: cell M=256 V=16 8 bits/fact; acc OPTR 26.30 vs STORE 22.67; OPTR format ['center', 'lin', 1] (f, alpha) [1.0, 1.0]
+### only OPTR right (581 queries in the cell); first 10: (alias | label | gold | OPTR | STORE)
+  Guinea-Conakry | Guinea | 1 | 1 | 5
+  Republic of Guinea | Guinea | 1 | 1 | 14
+  Elena Alexandra Apostoleanu | Inna | 13 | 13 | 10
+  Dark Corner | The Dark Corner | 1 | 1 | 0
+  Bukan pasar malam | It's Not an All Night Fair | 0 | 0 | 5
+  Tranmere Rovers Football Club | Tranmere Rovers F.C. | 2 | 2 | 7
+  Tranmere Rovers FC | Tranmere Rovers F.C. | 2 | 2 | 7
+  Tranmere Rovers | Tranmere Rovers F.C. | 2 | 2 | 7
+  Liz Nicole Abrams | Liz | 10 | 10 | 5
+  Jeanne III | Jeanne d'Albret | 11 | 11 | 14
+### only STORE right (410 queries in the cell); first 10: (alias | label | gold | OPTR | STORE)
+  Mexico City, Mexico | Mexico City | 6 | 1 | 6
+  La bella addormentata nel bosco | La bella dormente nel bosco | 11 | 2 | 11
+  Ultima chance | L'ultima chance | 12 | 13 | 12
+  Heart of Me | The Heart of Me | 1 | 9 | 1
+  Wa Special Region 2 | Wa State | 15 | 6 | 15
+  Mr. Clutch | Jerry West | 0 | 8 | 0
+  Mark Thomas Vande Hei | Mark T. Vande Hei | 11 | 15 | 11
+  Simon van het Reve | Gerard Reve | 9 | 12 | 9
+  Richard Michael Hawtin | Richie Hawtin | 15 | 9 | 15
+  Salisbury, Rhodesia | Harare | 6 | 14 | 6
+
+## e5: cell M=1024 V=16 16 bits/fact; acc OPTR 35.02 vs STORE 29.53; OPTR format ['whiten', 'lin', 1] (f, alpha) [1.0, 1.0]
+### only OPTR right (555 queries in the cell); first 10: (alias | label | gold | OPTR | STORE)
+  lr | Liberia | 11 | 11 | 15
+  Super | The Super | 9 | 9 | 1
+  SLE | Sierra Leone | 3 | 3 | 15
+  CK1 | Crusader Kings | 1 | 1 | 10
+  Yōko Ono | Yoko Ono | 14 | 14 | 8
+  Claim | The Claim | 8 | 8 | 10
+  Professionals | The Professionals | 3 | 3 | 2
+  Jacob Duyck | Jacob Duck | 7 | 7 | 5
+  Jacob Duick | Jacob Duck | 7 | 7 | 5
+  Ducq | Jacob Duck | 7 | 7 | 14
+### only STORE right (316 queries in the cell); first 10: (alias | label | gold | OPTR | STORE)
+  killer chess | antichess | 11 | 6 | 11
+  Pope Marcellus II | Marcellus II | 14 | 13 | 14
+  pape Marcel II | Marcellus II | 14 | 4 | 14
+  Marcello Cervini | Marcellus II | 14 | 1 | 14
+  Francis Mairs Huntington Wilson | Huntington Wilson | 12 | 3 | 12
+  Under solen | Under the Sun | 13 | 11 | 13
+  Angela Yuka Maxwell | Angela Maxwell | 9 | 0 | 9
+  Korotkov Vladimir Viktorovich | Vladimir Korotkov | 13 | 0 | 13
+  L. Duck | Jacob Duck | 7 | 10 | 7
+  a. j. duck | Jacob Duck | 7 | 4 | 7
+

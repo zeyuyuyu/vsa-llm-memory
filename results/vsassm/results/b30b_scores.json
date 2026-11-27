@@ -1,0 +1,1344 @@
+{
+ "a": {
+  "where": {
+   "n": 414,
+   "system": 0.9589,
+   "arms": {
+    "published (greedy, 8,192)": {
+     "forced": 0.5435,
+     "strict": 0.5314,
+     "missing": 0
+    },
+    "G-E re-run (greedy, 8,192, vLLM)": {
+     "forced": 0.5483,
+     "strict": 0.5362,
+     "missing": 0
+    },
+    "S32 R1": {
+     "forced": 0.5918,
+     "strict": 0.5918,
+     "missing": 0,
+     "runs": {
+      "n": 414,
+      "forced": 0,
+      "continued": 0,
+      "no_close_stop": 0,
+      "think_mean": 2991,
+      "think_median": 2119,
+      "think_max": 13535,
+      "gen_tokens": 1248283,
+      "past_40960": 0
+     }
+    },
+    "S32 R2": {
+     "forced": 0.5314,
+     "strict": 0.5314,
+     "missing": 0,
+     "runs": {
+      "n": 414,
+      "forced": 2,
+      "continued": 0,
+      "no_close_stop": 0,
+      "think_mean": 2960,
+      "think_median": 2188,
+      "think_max": 32768,
+      "gen_tokens": 1238943,
+      "past_40960": 2
+     }
+    }
+   },
+   "comparisons": {
+    "D1  S32 R1 - published": {
+     "d": 0.0483,
+     "ci": [
+      -0.0024,
+      0.0988
+     ],
+     "ci_strat": [
+      0.0,
+      0.0986
+     ]
+    },
+    "D2  system - S32 R1": {
+     "d": 0.3671,
+     "ci": [
+      0.2998,
+      0.4341
+     ],
+     "ci_strat": [
+      0.3221,
+      0.4146
+     ]
+    },
+    "D1e S32 R1 - G-E re-run (same engine)": {
+     "d": 0.0435,
+     "ci": [
+      -0.0048,
+      0.0918
+     ],
+     "ci_strat": [
+      -0.0048,
+      0.0913
+     ]
+    },
+    "S32 R2 - S32 R1 (seed spread)": {
+     "d": -0.0604,
+     "ci": [
+      -0.1151,
+      -0.0072
+     ],
+     "ci_strat": [
+      -0.1154,
+      -0.0073
+     ]
+    },
+    "system - S32 R2": {
+     "d": 0.4275,
+     "ci": [
+      0.3711,
+      0.4834
+     ],
+     "ci_strat": [
+      0.3874,
+      0.4665
+     ]
+    },
+    "system - mean(R1, R2)": {
+     "d": 0.3973,
+     "ci": [
+      0.3411,
+      0.4527
+     ],
+     "ci_strat": [
+      0.363,
+      0.4313
+     ]
+    },
+    "mean(R1, R2) - published": {
+     "d": 0.0181,
+     "ci": [
+      -0.0179,
+      0.053
+     ],
+     "ci_strat": [
+      -0.0158,
+      0.0517
+     ]
+    },
+    "G-E re-run - published (engine)": {
+     "d": 0.0048,
+     "ci": [
+      -0.0337,
+      0.0447
+     ],
+     "ci_strat": [
+      -0.0319,
+      0.0433
+     ]
+    },
+    "system - published (as in the paper)": {
+     "d": 0.4155,
+     "ci": [
+      0.3548,
+      0.4768
+     ],
+     "ci_strat": [
+      0.3735,
+      0.4565
+     ]
+    }
+   },
+   "A1": "inconclusive",
+   "A2": "system ahead by >= 0.20"
+  },
+  "impact": {
+   "n": 230,
+   "system": 0.9304,
+   "arms": {
+    "published (greedy, 8,192)": {
+     "forced": 0.2783,
+     "strict": 0.2652,
+     "missing": 0
+    },
+    "G-E re-run (greedy, 8,192, vLLM)": {
+     "forced": 0.2957,
+     "strict": 0.2957,
+     "missing": 0
+    },
+    "S32 R1": {
+     "forced": 0.3,
+     "strict": 0.3,
+     "missing": 0,
+     "runs": {
+      "n": 230,
+      "forced": 1,
+      "continued": 0,
+      "no_close_stop": 0,
+      "think_mean": 4666,
+      "think_median": 3046,
+      "think_max": 32768,
+      "gen_tokens": 1077751,
+      "past_40960": 1
+     }
+    },
+    "S32 R2": {
+     "forced": 0.2739,
+     "strict": 0.2739,
+     "missing": 0,
+     "runs": {
+      "n": 230,
+      "forced": 2,
+      "continued": 0,
+      "no_close_stop": 0,
+      "think_mean": 4959,
+      "think_median": 3226,
+      "think_max": 32768,
+      "gen_tokens": 1145219,
+      "past_40960": 1
+     }
+    }
+   },
+   "comparisons": {
+    "D1  S32 R1 - published": {
+     "d": 0.0217,
+     "ci": [
+      -0.0362,
+      0.0762
+     ],
+     "ci_strat": [
+      -0.0348,
+      0.0739
+     ]
+    },
+    "D2  system - S32 R1": {
+     "d": 0.6304,
+     "ci": [
+      0.5578,
+      0.702
+     ],
+     "ci_strat": [
+      0.5696,
+      0.687
+     ]
+    },
+    "D1e S32 R1 - G-E re-run (same engine)": {
+     "d": 0.0043,
+     "ci": [
+      -0.0429,
+      0.0515
+     ],
+     "ci_strat": [
+      -0.0391,
+      0.0478
+     ]
+    },
+    "S32 R2 - S32 R1 (seed spread)": {
+     "d": -0.0261,
+     "ci": [
+      -0.0714,
+      0.0202
+     ],
+     "ci_strat": [
+      -0.0696,
+      0.0217
+     ]
+    },
+    "system - S32 R2": {
+     "d": 0.6565,
+     "ci": [
+      0.5823,
+      0.7331
+     ],
+     "ci_strat": [
+      0.5957,
+      0.7174
+     ]
+    },
+    "system - mean(R1, R2)": {
+     "d": 0.6435,
+     "ci": [
+      0.5739,
+      0.7137
+     ],
+     "ci_strat": [
+      0.5848,
+      0.6978
+     ]
+    },
+    "mean(R1, R2) - published": {
+     "d": 0.0087,
+     "ci": [
+      -0.0468,
+      0.0581
+     ],
+     "ci_strat": [
+      -0.0435,
+      0.0565
+     ]
+    },
+    "G-E re-run - published (engine)": {
+     "d": 0.0174,
+     "ci": [
+      -0.0294,
+      0.0628
+     ],
+     "ci_strat": [
+      -0.0304,
+      0.0609
+     ]
+    },
+    "system - published (as in the paper)": {
+     "d": 0.6522,
+     "ci": [
+      0.572,
+      0.7296
+     ],
+     "ci_strat": [
+      0.5739,
+      0.7217
+     ]
+    }
+   },
+   "A1": "inconclusive",
+   "A2": "system ahead by >= 0.20",
+   "G-E": {
+    "d": 0.0174,
+    "pass": true,
+    "same_answer": 113
+   },
+   "excl_ambiguous": {
+    "n": 150,
+    "system": 0.9067,
+    "published (greedy, 8,192)": 0.2733,
+    "G-E re-run (greedy, 8,192, vLLM)": 0.28,
+    "S32 R1": 0.3133,
+    "S32 R2": 0.28,
+    "D1x S32 R1 - published": {
+     "d": 0.04,
+     "ci": [
+      -0.0288,
+      0.1037
+     ]
+    },
+    "D2x system - S32 R1": {
+     "d": 0.5933,
+     "ci": [
+      0.503,
+      0.6933
+     ]
+    }
+   },
+   "A3": "system ahead by >= 0.20"
+  },
+  "window": {
+   "n": 460,
+   "system": 0.8739,
+   "arms": {
+    "published (greedy, 8,192)": {
+     "forced": 0.2022,
+     "strict": 0.1935,
+     "missing": 0
+    },
+    "G-E re-run (greedy, 8,192, vLLM)": {
+     "forced": 0.1826,
+     "strict": 0.1739,
+     "missing": 0
+    },
+    "S32 R1": {
+     "forced": 0.1935,
+     "strict": 0.1935,
+     "missing": 0,
+     "runs": {
+      "n": 460,
+      "forced": 3,
+      "continued": 0,
+      "no_close_stop": 0,
+      "think_mean": 4534,
+      "think_median": 3062,
+      "think_max": 32768,
+      "gen_tokens": 2098717,
+      "past_40960": 3
+     }
+    },
+    "S32 R2": {
+     "forced": 0.1957,
+     "strict": 0.1935,
+     "missing": 0,
+     "runs": {
+      "n": 460,
+      "forced": 2,
+      "continued": 0,
+      "no_close_stop": 0,
+      "think_mean": 4667,
+      "think_median": 3257,
+      "think_max": 32768,
+      "gen_tokens": 2159371,
+      "past_40960": 1
+     }
+    }
+   },
+   "comparisons": {
+    "D1  S32 R1 - published": {
+     "d": -0.0087,
+     "ci": [
+      -0.0424,
+      0.0225
+     ],
+     "ci_strat": [
+      -0.0435,
+      0.0217
+     ]
+    },
+    "D2  system - S32 R1": {
+     "d": 0.6804,
+     "ci": [
+      0.6109,
+      0.7488
+     ],
+     "ci_strat": [
+      0.6174,
+      0.7435
+     ]
+    },
+    "D1e S32 R1 - G-E re-run (same engine)": {
+     "d": 0.0109,
+     "ci": [
+      -0.029,
+      0.0504
+     ],
+     "ci_strat": [
+      -0.0283,
+      0.0478
+     ]
+    },
+    "S32 R2 - S32 R1 (seed spread)": {
+     "d": 0.0022,
+     "ci": [
+      -0.0252,
+      0.0323
+     ],
+     "ci_strat": [
+      -0.0239,
+      0.0304
+     ]
+    },
+    "system - S32 R2": {
+     "d": 0.6783,
+     "ci": [
+      0.6062,
+      0.7467
+     ],
+     "ci_strat": [
+      0.6152,
+      0.737
+     ]
+    },
+    "system - mean(R1, R2)": {
+     "d": 0.6793,
+     "ci": [
+      0.6104,
+      0.7457
+     ],
+     "ci_strat": [
+      0.6174,
+      0.7391
+     ]
+    },
+    "mean(R1, R2) - published": {
+     "d": -0.0076,
+     "ci": [
+      -0.0351,
+      0.0176
+     ],
+     "ci_strat": [
+      -0.0348,
+      0.0185
+     ]
+    },
+    "G-E re-run - published (engine)": {
+     "d": -0.0196,
+     "ci": [
+      -0.0603,
+      0.0177
+     ],
+     "ci_strat": [
+      -0.0565,
+      0.0174
+     ]
+    },
+    "system - published (as in the paper)": {
+     "d": 0.6717,
+     "ci": [
+      0.6013,
+      0.74
+     ],
+     "ci_strat": [
+      0.6109,
+      0.7304
+     ]
+    }
+   },
+   "A1": "no material handicap",
+   "A2": "system ahead by >= 0.20",
+   "G-E": {
+    "d": -0.0196,
+    "pass": true,
+    "same_answer": 251
+   }
+  }
+ },
+ "b": {
+  "128k": {
+   "n": 500,
+   "G-B": {
+    "same_pred": 500,
+    "memory": 99.8,
+    "banked": 99.8,
+    "pass": true
+   },
+   "notepad_lines": {
+    "median": 13,
+    "p90": 48,
+    "max": 152
+   },
+   "memory": 99.8,
+   "arms": {
+    "q8T": {
+     "acc": 78.6,
+     "acc_official": 78.6,
+     "wilson95": [
+      74.8,
+      82.0
+     ],
+     "d": 21.2,
+     "memory_only": 106,
+     "arm_only": 0,
+     "p": 2.465190328815662e-32,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 99.0,
+      "qa2": 90.0,
+      "qa3": 43.0,
+      "qa4": 92.0,
+      "qa5": 69.0
+     },
+     "hit_limit": 4
+    },
+    "q17T": {
+     "acc": 59.8,
+     "acc_official": 59.8,
+     "wilson95": [
+      55.4,
+      64.0
+     ],
+     "d": 40.0,
+     "memory_only": 200,
+     "arm_only": 0,
+     "p": 1.2446030555722283e-60,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 95.0,
+      "qa2": 43.0,
+      "qa3": 22.0,
+      "qa4": 66.0,
+      "qa5": 73.0
+     },
+     "hit_limit": 2
+    },
+    "rdT": {
+     "acc": 45.4,
+     "acc_official": 45.4,
+     "wilson95": [
+      41.1,
+      49.8
+     ],
+     "d": 54.4,
+     "memory_only": 272,
+     "arm_only": 0,
+     "p": 2.635549485807631e-82,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 95.0,
+      "qa2": 3.0,
+      "qa3": 3.0,
+      "qa4": 59.0,
+      "qa5": 67.0
+     },
+     "hit_limit": 5
+    },
+    "q8N": {
+     "acc": 58.6,
+     "acc_official": 58.6,
+     "wilson95": [
+      54.2,
+      62.8
+     ],
+     "d": 41.2,
+     "memory_only": 206,
+     "arm_only": 0,
+     "p": 1.9446922743316068e-62,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 89.0,
+      "qa2": 48.0,
+      "qa3": 24.0,
+      "qa4": 62.0,
+      "qa5": 70.0
+     },
+     "hit_limit": 0
+    },
+    "q17N": {
+     "acc": 34.2,
+     "acc_official": 34.2,
+     "wilson95": [
+      30.2,
+      38.5
+     ],
+     "d": 65.6,
+     "memory_only": 329,
+     "arm_only": 1,
+     "p": 3.026630612115464e-97,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 55.0,
+      "qa2": 29.0,
+      "qa3": 10.0,
+      "qa4": 21.0,
+      "qa5": 56.0
+     },
+     "hit_limit": 0
+    },
+    "rdN": {
+     "acc": 25.2,
+     "acc_official": 25.2,
+     "wilson95": [
+      21.6,
+      29.2
+     ],
+     "d": 74.6,
+     "memory_only": 373,
+     "arm_only": 0,
+     "p": 1.03954097656449e-112,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 56.0,
+      "qa2": 3.0,
+      "qa3": 1.0,
+      "qa4": 7.0,
+      "qa5": 59.0
+     },
+     "hit_limit": 0
+    }
+   },
+   "conservative_8B": {
+    "arms": [
+     "q8T",
+     "q8N"
+    ],
+    "complete": true,
+    "verdict": "memory adds",
+    "best": "q8T"
+   },
+   "conservative_1.7B": {
+    "arms": [
+     "q17T",
+     "q17N",
+     "rdT",
+     "rdN"
+    ],
+    "complete": true,
+    "verdict": "memory adds",
+    "best": "q17T"
+   }
+  },
+  "512k": {
+   "n": 125,
+   "G-B": {
+    "same_pred": 125,
+    "memory": 100.0,
+    "banked": 100.0,
+    "pass": true
+   },
+   "notepad_lines": {
+    "median": 18,
+    "p90": 56,
+    "max": 171
+   },
+   "memory": 100.0,
+   "arms": {
+    "q8T": {
+     "acc": 83.2,
+     "acc_official": 83.2,
+     "wilson95": [
+      75.7,
+      88.7
+     ],
+     "d": 16.8,
+     "memory_only": 21,
+     "arm_only": 0,
+     "p": 9.5367431640625e-07,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 100.0,
+      "qa2": 100.0,
+      "qa3": 48.0,
+      "qa4": 92.0,
+      "qa5": 76.0
+     },
+     "hit_limit": 1
+    },
+    "q17T": {
+     "acc": 56.8,
+     "acc_official": 56.8,
+     "wilson95": [
+      48.0,
+      65.2
+     ],
+     "d": 43.2,
+     "memory_only": 54,
+     "arm_only": 0,
+     "p": 1.1102230246251565e-16,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 88.0,
+      "qa2": 28.0,
+      "qa3": 24.0,
+      "qa4": 68.0,
+      "qa5": 76.0
+     },
+     "hit_limit": 2
+    },
+    "rdT": {
+     "acc": 43.2,
+     "acc_official": 43.2,
+     "wilson95": [
+      34.8,
+      52.0
+     ],
+     "d": 56.8,
+     "memory_only": 71,
+     "arm_only": 0,
+     "p": 8.470329472543003e-22,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 84.0,
+      "qa2": 0.0,
+      "qa3": 0.0,
+      "qa4": 60.0,
+      "qa5": 72.0
+     },
+     "hit_limit": 0
+    },
+    "q8N": {
+     "acc": 66.4,
+     "acc_official": 66.4,
+     "wilson95": [
+      57.7,
+      74.1
+     ],
+     "d": 33.6,
+     "memory_only": 42,
+     "arm_only": 0,
+     "p": 4.547473508864641e-13,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 84.0,
+      "qa2": 72.0,
+      "qa3": 32.0,
+      "qa4": 72.0,
+      "qa5": 72.0
+     },
+     "hit_limit": 0
+    },
+    "q17N": {
+     "acc": 37.6,
+     "acc_official": 37.6,
+     "wilson95": [
+      29.6,
+      46.3
+     ],
+     "d": 62.4,
+     "memory_only": 78,
+     "arm_only": 0,
+     "p": 6.617444900424222e-24,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 44.0,
+      "qa2": 28.0,
+      "qa3": 12.0,
+      "qa4": 36.0,
+      "qa5": 68.0
+     },
+     "hit_limit": 0
+    },
+    "rdN": {
+     "acc": 25.6,
+     "acc_official": 25.6,
+     "wilson95": [
+      18.8,
+      33.9
+     ],
+     "d": 74.4,
+     "memory_only": 93,
+     "arm_only": 0,
+     "p": 2.0194839173657902e-28,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 36.0,
+      "qa2": 4.0,
+      "qa3": 0.0,
+      "qa4": 16.0,
+      "qa5": 72.0
+     },
+     "hit_limit": 0
+    }
+   },
+   "conservative_8B": {
+    "arms": [
+     "q8T",
+     "q8N"
+    ],
+    "complete": true,
+    "verdict": "memory adds",
+    "best": "q8T"
+   },
+   "conservative_1.7B": {
+    "arms": [
+     "q17T",
+     "q17N",
+     "rdT",
+     "rdN"
+    ],
+    "complete": true,
+    "verdict": "memory adds",
+    "best": "q17T"
+   }
+  },
+  "1M": {
+   "n": 125,
+   "G-B": {
+    "same_pred": 125,
+    "memory": 100.0,
+    "banked": 100.0,
+    "pass": true
+   },
+   "notepad_lines": {
+    "median": 27,
+    "p90": 69,
+    "max": 170
+   },
+   "memory": 100.0,
+   "arms": {
+    "q8T": {
+     "acc": 77.6,
+     "acc_official": 77.6,
+     "wilson95": [
+      69.5,
+      84.0
+     ],
+     "d": 22.4,
+     "memory_only": 28,
+     "arm_only": 0,
+     "p": 7.450580596923828e-09,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 100.0,
+      "qa2": 76.0,
+      "qa3": 48.0,
+      "qa4": 88.0,
+      "qa5": 76.0
+     },
+     "hit_limit": 3
+    },
+    "q17T": {
+     "acc": 57.6,
+     "acc_official": 57.6,
+     "wilson95": [
+      48.8,
+      65.9
+     ],
+     "d": 42.4,
+     "memory_only": 53,
+     "arm_only": 0,
+     "p": 2.220446049250313e-16,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 84.0,
+      "qa2": 28.0,
+      "qa3": 20.0,
+      "qa4": 76.0,
+      "qa5": 80.0
+     },
+     "hit_limit": 1
+    },
+    "rdT": {
+     "acc": 46.4,
+     "acc_official": 46.4,
+     "wilson95": [
+      37.9,
+      55.1
+     ],
+     "d": 53.6,
+     "memory_only": 67,
+     "arm_only": 0,
+     "p": 1.3552527156068805e-20,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 88.0,
+      "qa2": 0.0,
+      "qa3": 4.0,
+      "qa4": 64.0,
+      "qa5": 76.0
+     },
+     "hit_limit": 1
+    },
+    "q8N": {
+     "acc": 61.6,
+     "acc_official": 61.6,
+     "wilson95": [
+      52.8,
+      69.7
+     ],
+     "d": 38.4,
+     "memory_only": 48,
+     "arm_only": 0,
+     "p": 7.105427357601002e-15,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 84.0,
+      "qa2": 52.0,
+      "qa3": 28.0,
+      "qa4": 72.0,
+      "qa5": 72.0
+     },
+     "hit_limit": 0
+    },
+    "q17N": {
+     "acc": 36.8,
+     "acc_official": 36.8,
+     "wilson95": [
+      28.9,
+      45.5
+     ],
+     "d": 63.2,
+     "memory_only": 79,
+     "arm_only": 0,
+     "p": 3.308722450212111e-24,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 56.0,
+      "qa2": 20.0,
+      "qa3": 20.0,
+      "qa4": 28.0,
+      "qa5": 60.0
+     },
+     "hit_limit": 0
+    },
+    "rdN": {
+     "acc": 32.0,
+     "acc_official": 32.0,
+     "wilson95": [
+      24.5,
+      40.6
+     ],
+     "d": 68.0,
+     "memory_only": 85,
+     "arm_only": 0,
+     "p": 5.169878828456423e-26,
+     "reading": "memory adds",
+     "per_task": {
+      "qa1": 48.0,
+      "qa2": 0.0,
+      "qa3": 4.0,
+      "qa4": 36.0,
+      "qa5": 72.0
+     },
+     "hit_limit": 0
+    }
+   },
+   "conservative_8B": {
+    "arms": [
+     "q8T",
+     "q8N"
+    ],
+    "complete": true,
+    "verdict": "memory adds",
+    "best": "q8T"
+   },
+   "conservative_1.7B": {
+    "arms": [
+     "q17T",
+     "q17N",
+     "rdT",
+     "rdN"
+    ],
+    "complete": true,
+    "verdict": "memory adds",
+    "best": "q17T"
+   }
+  }
+ },
+ "NB1": "memory adds",
+ "NB2": "memory adds",
+ "predictions": [
+  {
+   "text": "G-E passes on impact and window with >= 80% identical parsed answers (pass: [True, True]; identical 113/230, 251/460)",
+   "held": false
+  },
+  {
+   "text": "location under vLLM greedy within 0.05 of the published HF number (d = 0.0048)",
+   "held": true
+  },
+  {
+   "text": "S32 R1 where in [0.55, 0.68] (got 0.5918)",
+   "held": true
+  },
+  {
+   "text": "S32 R1 impact in [0.28, 0.4] (got 0.3)",
+   "held": true
+  },
+  {
+   "text": "S32 R1 window in [0.2, 0.32] (got 0.1935)",
+   "held": false
+  },
+  {
+   "text": "S32 R1 impact on the 150 unambiguous questions about 0.32 (+-0.05; got 0.3133)",
+   "held": true
+  },
+  {
+   "text": "D1 in [0, +0.10] on every set (got {'where': 0.0483, 'impact': 0.0217, 'window': -0.0087})",
+   "held": false
+  },
+  {
+   "text": "A1 'handicap material' on at most one set (got ['inconclusive', 'inconclusive', 'no material handicap'])",
+   "held": true
+  },
+  {
+   "text": "A2 'system ahead by >= 0.20' on all three sets and A3 too (got ['system ahead by >= 0.20', 'system ahead by >= 0.20', 'system ahead by >= 0.20', 'system ahead by >= 0.20'])",
+   "held": true
+  },
+  {
+   "text": "runs forced at the 32,768 budget <= 5% per set (got where 0/414, impact 1/230, window 3/460)",
+   "held": true
+  },
+  {
+   "text": "runs past position 40,960 <= 2% per set (got where 0/414, impact 1/230, window 3/460)",
+   "held": true
+  },
+  {
+   "text": "R2 within 0.03 of R1 on every set (got {'where': -0.0604, 'impact': -0.0261, 'window': 0.0022})",
+   "held": false
+  },
+  {
+   "text": "G-B passes at every length run (128k True, 512k True, 1M True)",
+   "held": true
+  },
+  {
+   "text": "notepads at 128k: median <= 100 lines (got 13)",
+   "held": true
+  },
+  {
+   "text": "q8T at 128k in [85, 98] (got 78.6)",
+   "held": false
+  },
+  {
+   "text": "qa3 is q8T's weakest task at 128k (per task {'qa1': 99.0, 'qa2': 90.0, 'qa3': 43.0, 'qa4': 92.0, 'qa5': 69.0})",
+   "held": true
+  },
+  {
+   "text": "NB1 'memory adds' (got memory adds)",
+   "held": true
+  },
+  {
+   "text": "q17T at 128k in [60, 92] (got 59.8)",
+   "held": false
+  },
+  {
+   "text": "NB2 'memory adds' (got memory adds)",
+   "held": true
+  },
+  {
+   "text": "every N arm >= 5 points below the T arm of the same model (q8T 78.6 vs q8N 58.6, q17T 59.8 vs q17N 34.2, rdT 45.4 vs rdN 25.2)",
+   "held": true
+  },
+  {
+   "text": "conservative rule 'memory adds' for both sizes at 128k (got ['memory adds', 'memory adds'])",
+   "held": true
+  },
+  {
+   "text": "q8T at 512k at least 2 points below its 128k score (got 83.2 vs 78.6)",
+   "held": false
+  },
+  {
+   "text": "q8T at 1M at least 2 points below its 128k score (got 77.6 vs 78.6)",
+   "held": false
+  }
+ ],
+ "gpu_hours": 20.41,
+ "gpu_jobs": [
+  [
+   "dev_merge",
+   "5",
+   0.0,
+   "rc=0"
+  ],
+  [
+   "dev_hf",
+   "5",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "dev_gen32",
+   "6,7",
+   0.07,
+   "rc=1"
+  ],
+  [
+   "dev_vllm",
+   "5",
+   0.02,
+   "rc=1"
+  ],
+  [
+   "dev_gen17",
+   "5",
+   0.02,
+   "rc=0"
+  ],
+  [
+   "dev_vllm2",
+   "6",
+   0.02,
+   "rc=0"
+  ],
+  [
+   "GE_impact_a",
+   "0,1",
+   0.07,
+   "rc=1"
+  ],
+  [
+   "GE_window_a",
+   "0,1",
+   0.04,
+   "rc=killed_compute_note_1"
+  ],
+  [
+   "BR_read",
+   "7",
+   0.1,
+   "rc=0"
+  ],
+  [
+   "dev_gen32b",
+   "4,5",
+   0.62,
+   "rc=0"
+  ],
+  [
+   "GE_impact_b",
+   "2,6",
+   0.48,
+   "rc=0"
+  ],
+  [
+   "GE_impact_a2",
+   "0,1",
+   0.74,
+   "rc=0"
+  ],
+  [
+   "NP_128k_q8T",
+   "7",
+   0.24,
+   "rc=0"
+  ],
+  [
+   "GE_impact_f",
+   "0,1",
+   0.22,
+   "rc=0"
+  ],
+  [
+   "NP_128k_q17T",
+   "7",
+   0.09,
+   "rc=0"
+  ],
+  [
+   "GE_window_b",
+   "4,5",
+   0.85,
+   "rc=0"
+  ],
+  [
+   "NP_128k_rdT",
+   "0",
+   0.16,
+   "rc=0"
+  ],
+  [
+   "NP_128k_q8N",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "NP_128k_q17N",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "NP_128k_rdN",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "GE_window_a",
+   "2,6",
+   1.17,
+   "rc=0"
+  ],
+  [
+   "NP_512k_q8T",
+   "0",
+   0.15,
+   "rc=0"
+  ],
+  [
+   "GE_window_f",
+   "1,2",
+   0.26,
+   "rc=0"
+  ],
+  [
+   "NP_512k_q17T",
+   "0",
+   0.08,
+   "rc=0"
+  ],
+  [
+   "NP_512k_rdT",
+   "0",
+   0.07,
+   "rc=0"
+  ],
+  [
+   "NP_512k_q8N",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "NP_512k_q17N",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "NP_512k_rdN",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "NP_1M_q8T",
+   "0",
+   0.19,
+   "rc=0"
+  ],
+  [
+   "NP_1M_q17T",
+   "0",
+   0.07,
+   "rc=0"
+  ],
+  [
+   "NP_1M_rdT",
+   "0",
+   0.07,
+   "rc=0"
+  ],
+  [
+   "NP_1M_q8N",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "NP_1M_q17N",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "NP_1M_rdN",
+   "0",
+   0.01,
+   "rc=0"
+  ],
+  [
+   "GE_where_a",
+   "6,7",
+   1.08,
+   "rc=0"
+  ],
+  [
+   "GE_where_b",
+   "0,6",
+   0.37,
+   "rc=0"
+  ],
+  [
+   "S32_r1_where",
+   "4,5",
+   1.54,
+   "rc=0"
+  ],
+  [
+   "GE_where_f",
+   "0,6",
+   0.1,
+   "rc=0"
+  ],
+  [
+   "S32_r2_where",
+   "4,5",
+   1.8,
+   "rc=0"
+  ],
+  [
+   "S32_r1_iw",
+   "1,2",
+   4.63,
+   "rc=0"
+  ],
+  [
+   "GE_where_a",
+   "1,2",
+   0.0,
+   "rc=0"
+  ],
+  [
+   "GE_where_b",
+   "1,2",
+   0.0,
+   "rc=0"
+  ],
+  [
+   "GE_where_f",
+   "1,2",
+   0.0,
+   "rc=0"
+  ],
+  [
+   "S32_r2_iw",
+   "0,6",
+   4.97,
+   "rc=0"
+  ]
+ ]
+}

@@ -1,0 +1,15 @@
+B74 checks
+
+scorer: {"max_diff": 2.0816681711721685e-17, "n": 1722, "path_max": 2.7755575615628914e-17, "fail": [], "pass": true}
+bits: {"fx_rows": 12168, "fx_over": 0, "fx_notmax": 0, "fx_rule": 0, "nl_rows": 4650, "nl_over": 0, "nl_notmax": 0, "nl_formula": 0, "pass": true}
+repro: {"hp_dev": [1479, 1512, 0.005291005291005291], "ht_test": [705, 705, 0]}
+determ: {"n": 56, "same": 56, "diff": [], "pass": true}
+rederive (agreement with the logged predictions, bar 0.99): HP 22/24 (min 0.9666); HT 22/24 (min 0.9665); LAMC-label 24/24 (min 0.9990); LP 22/24 (min 0.9632); LT 22/24 (min 0.9878); STORE-label 24/24 (min 0.9990)
+  below bar: e5 {'arm': 'HT', 'cell': '1024|2|16', 'agree': 0.9878172588832488, 'acc_own': 0.5725888324873096, 'acc_log': 0.5685279187817259}
+  below bar: minilm {'arm': 'LT', 'cell': '1024|2|4', 'agree': 0.9878172588832488, 'acc_own': 0.5715736040609137, 'acc_log': 0.5715736040609137}
+  below bar: minilm {'arm': 'HT', 'cell': '1024|2|16', 'agree': 0.966497461928934, 'acc_own': 0.6467005076142132, 'acc_log': 0.6436548223350254}
+  below bar: minilm {'arm': 'LT', 'cell': '1024|2|16', 'agree': 0.9898477157360406, 'acc_own': 0.650761421319797, 'acc_log': 0.650761421319797}
+  below bar: minilm {'arm': 'HP', 'cell': '1024|16|4', 'agree': 0.9666283084004603, 'acc_own': 0.09666283084004602, 'acc_log': 0.10126582278481013}
+  below bar: minilm {'arm': 'LP', 'cell': '1024|16|4', 'agree': 0.9631760644418872, 'acc_own': 0.10701956271576525, 'acc_log': 0.11277330264672036}
+  below bar: minilm {'arm': 'HP', 'cell': '1024|16|16', 'agree': 0.9666283084004603, 'acc_own': 0.09666283084004602, 'acc_log': 0.10126582278481013}
+  below bar: minilm {'arm': 'LP', 'cell': '1024|16|16', 'agree': 0.9631760644418872, 'acc_own': 0.10701956271576525, 'acc_log': 0.11277330264672036}

@@ -1,0 +1,45 @@
+# B40 hand-read of test errors (seed 0; 20 errors per arm sampled with b40_handread.py, rng 4041; raw listing in
+# results/b40_handread_raw.txt). Classes: READ (the module decoded a wrong symbol), GATE (held-out type: gate open with
+# a wrong type, or closed and the frozen LLM wrong), WRITE (module answer right, the LLM said something else),
+# COMPUTE (no module: the LLM's own answer is wrong), FORMAT/TRUNCATION (CoT without a parsable final answer).
+
+TASK N
+- VSA (218 errors of 2,500): 16 READ, 2 WRITE, 2 GATE.
+  - 14 of the 16 READ errors are a digit read as 0: e.g. 860 -> 800, 54 -> 50, 278 -> 8, 605 -> 5, 400 -> 0. DE25's
+    clean-up writes 0 whenever the best digit similarity is below 0.5. The other 2 are substitutions (752 -> 742,
+    199 -> 299).
+  - Both WRITE errors are 4-digit OR answers (1023 -> 1029, 1023 -> 1025). These answers are two tokens; the
+    write-back steers only the first.
+  - GATE errors: one addition item opened the gate (type similarity 0.803, just over 0.8) and was computed as OR; one
+    division item had the gate closed and the frozen LLM answered 167 instead of 166.
+- DISC (468 errors): 14 GATE, 5 WRITE, 1 READ.
+  - GATE: 12 addition and 2 division items, gate open with probability 0.83-1.00. The 8-way softmax names a trained
+    type (OR for addition, multiplication for division), and the module injects that type's answer.
+  - WRITE: module answer right, the LLM said a nearby number (100 -> 200, 550 -> 530, 927 -> 923), including two 4-digit
+    OR answers.
+  - Over all seed-0 VSA/DISC disagreements on the 2,500 items: VSA wrong because its module was wrong 141 times,
+    module right but the LLM wrong 6 times. DISC: module wrong 342 times (mostly held-out types with the gate open),
+    module right but the LLM wrong 55 times. On the trained types (all seeds), the module answer is right on 0.908 of
+    items for VSA and 0.964 for DISC; the final answers are 0.898 and 0.930. So VSA loses 1.0 point in the write-back
+    and DISC 3.4. DISC's write-back was still improving at step 1,000 on dev (0.922 -> 0.941).
+- LORA, LORA-1L, BASE (20 each): all COMPUTE; the answers are plausible-looking but wrong numbers.
+- COT: arithmetic slips inside the chain, e.g. 903 x 612 = 553,556, or a wrong GCD remainder sequence. Over the whole
+  test set, 517 of 2,500 CoT outputs reach 512 tokens without "Final Answer". These are mostly bitwise items (AND 144,
+  OR 185, XOR 76) stuck in bit-by-bit loops, as in DE25's Appendix F. Only 21 of the 517 are scored correct, through
+  the last-integer fallback.
+
+TASK R
+- VSA (3 errors of 2,000): all WRITE. Every read is right and the walked answer is right; the LLM named another place
+  from the story (depth 4-5).
+- DISC (8 errors): all WRITE. Every read is right and the walked answer is right. The LLM said another place 5 times,
+  a container 2 times ('bottle', 'case') and a person once ('Anna').
+- LORA (54 errors, 20 read): all name another place present in the story; 17 of the 20 are large instances at depth
+  3-5.
+- COT (398 errors): the typical failure stops at an intermediate container ("Final Answer: The box"/"The pot"),
+  i.e. answers the first hop. 85 of 2,000 outputs have no "Final Answer"; 37 of these are scored correct through the
+  last-place-word fallback (lenient to CoT).
+- BASE (1,174 errors): names a place of another person or the first place mentioned (depth >= 3).
+
+Checks: the second scorer agrees with every file (0 gold and 0 correctness mismatches over 133 files;
+results/b40_check.txt). The CoT fallback rules are shared in intent by both scorers (they agree), and they lean toward
+CoT. A stricter CoT score would only widen the module arms' lead.

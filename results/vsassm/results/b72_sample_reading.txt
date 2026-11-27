@@ -1,0 +1,28 @@
+# B72 sample reading by the AI-assisted process (material: results/b72_sample_material.txt)
+
+Pre-registered sample: Qwen3-8B and e5-base-v2, the R1 cell with the largest |OPTR - STORE|; 10 queries that only the
+optimal-format store (OPTR) answers right and 10 that only the Hebbian store (STORE) answers right.
+
+Qwen3-8B, M = 256, V = 16, 8 bits per fact (format: centre, linear features, q = 1; OPTR wrote all facts, alpha = 1):
+OPTR 26.30% vs STORE 22.67% of the cell's queries. 581 queries only OPTR answers right, 410 only the store: the gain of
+about 3.6 points is the difference of two large sets (each about 8-12% of the cell's queries change between the two
+reads), not a systematic class of queries. The OPTR-only set is dominated by close copies of the label (Guinea-Conakry /
+Republic of Guinea -> Guinea, three variants of Tranmere Rovers F.C., Dark Corner -> The Dark Corner, Jeanne III ->
+Jeanne d'Albret) whose value the Hebbian bundle loses to cross-talk; the three Tranmere aliases share one entity and
+move together, which is why the intervals resample entities, not queries. The store-only set is of the same kind
+(Mexico City, Mexico; Heart of Me; Mr. Clutch -> Jerry West; Salisbury, Rhodesia -> Harare): with sixteen values and
+eight bits per fact both reads are near the noise floor for many entities, and each wins a different subset.
+
+e5-base-v2, M = 1,024, V = 16, 16 bits per fact (whiten, linear, q = 1; all facts, alpha = 1): OPTR 35.02% vs STORE
+29.53%; 555 only OPTR right, 316 only the store. OPTR-only: abbreviations and codes (lr -> Liberia, SLE -> Sierra Leone,
+CK1 -> Crusader Kings), dropped articles (Super / Claim / Professionals -> The ...), spelling variants (Jacob Duyck /
+Duick / Ducq -> Jacob Duck). Store-only: paraphrases and other-language forms (killer chess -> antichess, pape Marcel II
+and Marcello Cervini -> Marcellus II, Under solen -> Under the Sun) and two further variants of Jacob Duck (L. Duck,
+a. j. duck): the same entity's aliases are split between the two memories, as expected when both store one vector and
+differ only in how its numbers were written.
+
+No scoring artefact seen: the gold values are the stores' own value assignments (the same qgold arrays as every
+other arm, asserted equal at load), and every listed query is an unseen alias of a stored label. Reading: at the same features, codes, dimension,
+quantizer and read, the least-squares write mainly recovers near-copy aliases that the Hebbian bundle confuses through
+cross-talk between stored keys; it does not create a new kind of correct answer. (Observation by the AI-assisted process
+on 40 listed queries; not a statistic.)

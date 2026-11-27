@@ -1,0 +1,84 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 126.52it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  fs-nothink std test 32/500 acc 1.0000 (24s)
+  fs-nothink std test 64/500 acc 1.0000 (47s)
+  fs-nothink std test 96/500 acc 1.0000 (71s)
+  fs-nothink std test 128/500 acc 1.0000 (94s)
+  fs-nothink std test 160/500 acc 1.0000 (122s)
+  fs-nothink std test 192/500 acc 1.0000 (146s)
+  fs-nothink std test 224/500 acc 1.0000 (170s)
+  fs-nothink std test 256/500 acc 1.0000 (193s)
+  fs-nothink std test 288/500 acc 1.0000 (217s)
+  fs-nothink std test 320/500 acc 1.0000 (241s)
+  fs-nothink std test 352/500 acc 1.0000 (265s)
+  fs-nothink std test 384/500 acc 1.0000 (289s)
+  fs-nothink std test 416/500 acc 1.0000 (313s)
+  fs-nothink std test 448/500 acc 1.0000 (337s)
+  fs-nothink std test 480/500 acc 1.0000 (361s)
+  fs-nothink std test 500/500 acc 1.0000 (377s)
+COT fs-nothink std test acc 1.0000 unparsed 0.000 hit_limit 0.000 mean_new 67
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 128.69it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  zs-nothink std test 32/500 acc 0.9688 (79s)
+  zs-nothink std test 64/500 acc 0.9531 (169s)
+  zs-nothink std test 96/500 acc 0.9479 (253s)
+  zs-nothink std test 128/500 acc 0.9297 (431s)
+  zs-nothink std test 160/500 acc 0.9187 (512s)
+  zs-nothink std test 192/500 acc 0.9219 (593s)
+  zs-nothink std test 224/500 acc 0.9241 (707s)
+  zs-nothink std test 256/500 acc 0.9258 (782s)
+  zs-nothink std test 288/500 acc 0.9306 (862s)
+  zs-nothink std test 320/500 acc 0.9313 (962s)
+  zs-nothink std test 352/500 acc 0.9347 (1042s)
+  zs-nothink std test 384/500 acc 0.9323 (1131s)
+  zs-nothink std test 416/500 acc 0.9279 (1239s)
+  zs-nothink std test 448/500 acc 0.9330 (1331s)
+  zs-nothink std test 480/500 acc 0.9333 (1418s)
+  zs-nothink std test 500/500 acc 0.9340 (1479s)
+COT zs-nothink std test acc 0.9340 unparsed 0.000 hit_limit 0.000 mean_new 524
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 129.38it/s]
+  zs-think std test 24/500 acc 1.0000 (651s)
+  zs-think std test 48/500 acc 1.0000 (1076s)
+  zs-think std test 72/500 acc 1.0000 (1514s)
+  zs-think std test 96/500 acc 1.0000 (2175s)
+  zs-think std test 120/500 acc 1.0000 (2937s)
+  zs-think std test 144/500 acc 0.9931 (5038s)
+  zs-think std test 168/500 acc 0.9940 (5822s)
+  zs-think std test 192/500 acc 0.9948 (7166s)
+  zs-think std test 216/500 acc 0.9954 (7728s)
+  zs-think std test 240/500 acc 0.9958 (8444s)
+  zs-think std test 264/500 acc 0.9962 (8925s)
+  zs-think std test 288/500 acc 0.9965 (9712s)
+  zs-think std test 312/500 acc 0.9968 (11171s)
+  zs-think std test 336/500 acc 0.9970 (12134s)
+  zs-think std test 360/500 acc 0.9972 (12711s)
+  zs-think std test 384/500 acc 0.9974 (14047s)
+  zs-think std test 408/500 acc 0.9975 (15516s)
+  zs-think std test 432/500 acc 0.9977 (16461s)
+  zs-think std test 456/500 acc 0.9956 (17241s)
+  zs-think std test 480/500 acc 0.9938 (18204s)
+  zs-think std test 500/500 acc 0.9940 (18606s)
+COT zs-think std test acc 0.9940 unparsed 0.002 hit_limit 0.002 mean_new 2000
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 128.33it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  fs-nothink ho test 32/500 acc 1.0000 (24s)
+  fs-nothink ho test 64/500 acc 1.0000 (48s)
+  fs-nothink ho test 96/500 acc 1.0000 (72s)
+  fs-nothink ho test 128/500 acc 1.0000 (96s)
+  fs-nothink ho test 160/500 acc 1.0000 (120s)
+  fs-nothink ho test 192/500 acc 1.0000 (144s)
+  fs-nothink ho test 224/500 acc 1.0000 (168s)
+  fs-nothink ho test 256/500 acc 1.0000 (192s)
+  fs-nothink ho test 288/500 acc 1.0000 (216s)
+  fs-nothink ho test 320/500 acc 1.0000 (240s)
+  fs-nothink ho test 352/500 acc 1.0000 (264s)
+  fs-nothink ho test 384/500 acc 1.0000 (289s)
+  fs-nothink ho test 416/500 acc 1.0000 (313s)
+  fs-nothink ho test 448/500 acc 1.0000 (337s)
+  fs-nothink ho test 480/500 acc 1.0000 (361s)
+  fs-nothink ho test 500/500 acc 1.0000 (376s)
+COT fs-nothink ho test acc 1.0000 unparsed 0.000 hit_limit 0.000 mean_new 68

@@ -1,0 +1,65 @@
+# B57 hand reading: per encoder the R1 cell (ideal) where |VSAP - VSAS| is largest; 10 queries only VSAP answers
+# right and 10 only VSAS answers right (alias -> stored label, gold value). Notes at the end.
+
+## qwen8: M = 1024, V = 16, 16 bits per fact; VSAP - VSAS = -14.12 points; VSAP [4096, 4, 1024, 'whiten', 'plin', 'PLM']
+### only VSAP right: 412 queries; 10 drawn
+  'Juve' -> 'Juventus F.C.' gold 4 VSAP 4 VSAS 8
+  'John Sigismund Vasa' -> 'John Sigismund, Crown Prince of Poland' gold 9 VSAP 9 VSAS 2
+  'Eesti' -> 'Estonia' gold 5 VSAP 5 VSAS 2
+  'Stefan the Firstcrowned' -> 'Stefan the First-Crowned' gold 14 VSAP 14 VSAS 7
+  'Bruce James Crowder' -> 'Bruce Crowder' gold 1 VSAP 1 VSAS 4
+  'Metroid 3' -> 'Super Metroid' gold 9 VSAP 9 VSAS 10
+  'Suomi' -> 'Finland' gold 11 VSAP 11 VSAS 12
+  'Bale-Ville' -> 'Basel-Stadt' gold 1 VSAP 1 VSAS 6
+  'The Capitol City' -> 'Sacramento' gold 9 VSAP 9 VSAS 15
+  "de' Medici, il Grande, Grand Duke Of Tuscany Cosimo I" -> "Cosimo I de' Medici, Grand Duke of Tuscany" gold 5 VSAP 5 VSAS 11
+### only VSAS right: 1027 queries; 10 drawn
+  'Marshall, Minnesota' -> 'Marshall' gold 0 VSAP 12 VSAS 0
+  'Day the Fish Came Out' -> 'The Day the Fish Came Out' gold 2 VSAP 6 VSAS 2
+  'Jaloliddin Rumiy' -> 'Rumi' gold 2 VSAP 7 VSAS 2
+  'Barrie George Aitchison' -> 'Barrie Aitchison' gold 4 VSAP 3 VSAS 4
+  'Endre Balint' -> 'Endre Bálint' gold 10 VSAP 6 VSAS 10
+  'El Monte, California' -> 'El Monte' gold 9 VSAP 0 VSAS 9
+  'State of Bahia' -> 'Bahia' gold 5 VSAP 13 VSAS 5
+  'Richard John Grayson tapia' -> 'Dick Grayson' gold 3 VSAP 14 VSAS 3
+  'Persona 1' -> 'Revelations: Persona' gold 1 VSAP 0 VSAS 1
+  'Johann Heinrich Ross' -> 'Johann Heinrich Roos' gold 0 VSAP 13 VSAS 0
+
+## e5: M = 1024, V = 16, 16 bits per fact; VSAP - VSAS = -21.31 points; VSAP [768, 4, 1024, 'center', 'plin', 'PLM']
+### only VSAP right: 240 queries; 10 drawn
+  'Junior (film)' -> 'Junior' gold 13 VSAP 13 VSAS 14
+  'The Return from Abroad' -> 'Die Heimkehr aus der Fremde' gold 11 VSAP 11 VSAS 1
+  'Sheffield United Football Club' -> 'Sheffield United F.C.' gold 13 VSAP 13 VSAS 0
+  'Marshall, Minnesota' -> 'Marshall' gold 0 VSAP 0 VSAS 3
+  'Hit' -> 'Schlager' gold 0 VSAP 0 VSAS 10
+  'SHC' -> 'Spring Hill College' gold 14 VSAP 14 VSAS 11
+  'Murray, New York' -> 'Murray' gold 1 VSAP 1 VSAS 7
+  'Vancouver Caps FC' -> 'Vancouver Whitecaps FC' gold 6 VSAP 6 VSAS 3
+  'RN' -> 'Royal Navy' gold 0 VSAP 0 VSAS 10
+  'Hood County, Texas' -> 'Hood County' gold 0 VSAP 0 VSAS 7
+### only VSAS right: 1168 queries; 10 drawn
+  'Jaclyn Nesheiwat Stapp' -> 'Jaclyn Stapp' gold 10 VSAP 12 VSAS 10
+  'Sutton, New South Wales, Australia' -> 'Sutton' gold 11 VSAP 14 VSAS 11
+  'Dschelaleddin Rumi' -> 'Rumi' gold 2 VSAP 0 VSAS 2
+  'Yinreng' -> 'Yunreng' gold 11 VSAP 12 VSAS 11
+  'Western Canada Hockey League' -> 'Western Hockey League' gold 14 VSAP 6 VSAS 14
+  'Chalmers Jack Mackenzie' -> 'Jack Mackenzie' gold 2 VSAP 14 VSAS 2
+  'Brokedown Melody' -> 'A Brokedown Melody' gold 10 VSAP 9 VSAS 10
+  'E05' -> 'European route E5' gold 1 VSAP 0 VSAS 1
+  'REC Thandalam' -> 'Rajalakshmi Engineering College' gold 0 VSAP 3 VSAS 0
+  'Eyalet of Egypt' -> 'Egypt Eyalet' gold 8 VSAP 7 VSAS 8
+
+## Notes (by me, after reading the 40 queries above)
+
+- Both selected cells are V = 16 at 16 bits per fact, where VSAP falls far behind the random-feature store (qwen8
+  -14.1, e5 -21.3 points). The "only VSAS right" lists are full of near-copies of the label that VSAP misreads: 'Day the
+  Fish Came Out', 'Endre Balint', 'Johann Heinrich Ross', 'Barrie George Aitchison', 'State of Bahia' (qwen8); 'A
+  Brokedown Melody', 'Egypt Eyalet', 'Jack Mackenzie', 'Western Hockey League' (e5). These are the queries any working
+  store should answer, so the failure is in the read, not in hard aliases. That fits the mechanism stated in the
+  pre-registration (Q2): with Hadamard value codes the score of a value is a signed sum over 16 residue classes of
+  coordinates, and on principal coordinates each class sees a fixed 1/16 of the principal directions (every 16th),
+  so each of the 16 sign decisions is made from a small, fixed slice of the key; random features give every class
+  d / 16 projections of the whole key.
+- The "only VSAP right" lists also contain near-copies ('Stefan the Firstcrowned', 'Bruce James Crowder', 'Sheffield
+  United Football Club', 'Vancouver Caps FC'), so VSAP is not broken, only weaker at V = 16.
+- No sign of a scoring artifact: gold values, predictions and labels are consistent.

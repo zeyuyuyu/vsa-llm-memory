@@ -1,0 +1,37 @@
+# B58 checks (prereg/B58_protected_store_prereg.md; reduced samples per compute note 5)
+
+1. Second scorer by plain loops (b58_check.py scorer): 10 test cells (P-LDPC and P-BCH, one per store family,
+   i.i.d. only - damage not run), re-decoded without the shard cache or censoring (P-BCH through b38_eq.bch_decode_stream)
+   and read by explicit loops over keys, positions and values; exactness from the stores' own pairs: 0 differing.
+     131072/niah_multikey_2/92134     P-BCH  b=76.1093  R=None   B=91      e05  run failed 3, second 3, same True
+     131072/niah_multikey_3/149429    P-BCH  b=107.6347 R=None   B=128     k8   run failed 1, second 1, same True
+     131072/niah_multivalue/576613    P-BCH  b=107.6347 R=None   B=152     e05  run failed 0, second 0, same True
+     131072/vt/3                      P-BCH  b=90.5097  R=None   B=108     k2   run failed 0, second 0, same True
+     32768/niah_multikey_2/90453      P-BCH  b=107.6347 R=None   B=128     k8   run failed 2, second 2, same True
+     131072/niah_multikey_2/259411    P-LDPC b=90.5097  R=0.25   B=861     k16  run failed 2, second 2, same True
+     131072/niah_multikey_3/101663    P-LDPC b=76.1093  R=0.9    B=108     k2   run failed 1, second 1, same True
+     131072/niah_multivalue/515292    P-LDPC b=90.5097  R=0.25   B=724     k16  run failed 1, second 1, same True
+     131072/vt/2                      P-LDPC b=90.5097  R=0.25   B=724     k16  run failed 1, second 1, same True
+     32768/niah_multikey_2/42249      P-LDPC b=76.1093  R=0.9    B=108     k1   run failed 1, second 1, same True
+
+2. Bit and cell accounting (b58_check.py bits), every test evaluation (2041): cells over budget 0; information bits over
+   floor(b n) 0; share of the budget used: min 1.0000, median 1.0000 (the copies fill the budget exactly).
+
+3. N* recomputed by a separately written rule (ascending scan) from the pooled counts: 14 (variant, condition), 0 mismatches.
+
+4. Decoder agreement.
+   - Batched OWN (b58_bp.sp_decode_batch, the decoder of P-LDPC and of the re-score) vs b38_check._sp_decode: 1988 / 1988 synthetic
+     words bit-identical; two B38 E-LDPC test cells' decoded streams identical to b38_eq's B38_LDPC_OWN path.
+   - The numba port (b58_bp.NbDecoder) vs _sp_decode: 1581 / 1988 words identical (registered Q11 bar >= 99.9%: FAILED; it was
+     therefore not used); on c1's 1,007 codewords 989 identical.
+   - PKG vs OWN on every word of 2 P-LDPC i.i.d. test cells (k16, b = 128, R = 9/10, 10 copies): info bits identical on 20 / 368
+     words. These are words where belief propagation does not converge for either decoder: on the first cell (184 words) both
+     decode 0 words, with 12,938 (OWN) and 13,016 (PKG) wrong information bits against 13,041 before decoding; so the
+     disagreement is in the final hard decisions of failed words, not in what is decoded. On a converging P-LDPC cell
+     (b = 90.5, R = 1/4, 1,448 cells per pair, k16; 130 words) both decode all 130.
+   - P-BCH words (1 test cell, (63, 36, 5)): the bounded-distance shortcut (2e + s <= 2t -> corrected) was confirmed by galois
+     on 893 / 893 words; overloaded words, galois vs our decoder: 400 / 400 identical.
+   - Part (c) itself (c1, c2, emulation): results/b58_verdict.txt, part (c).
+
+Q11 (checks): second scorer 0 differences - held; 0 over budget - held; numba port >= 99.9% - FAILED (not used; the
+batched decoder used instead is bit-identical); BCH shortcut correct on every word it covers - held. Q11 overall: failed in part.

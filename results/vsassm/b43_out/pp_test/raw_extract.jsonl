@@ -1,0 +1,373 @@
+{"id": "37:1", "text": "{\"events\": [[\"destroy\", \"plant; animal\"], [\"create\", \"soft tissues\", \"watery environment\"], [\"create\", \"bones\", \"watery environment\"]]}", "gen_tokens": 36, "prompt_tokens": 510}
+{"id": "37:2", "text": "{\"events\": [[\"move\", \"plant; animal\", \"watery environment\", \"mud and silt\"]]}", "gen_tokens": 25, "prompt_tokens": 515}
+{"id": "37:3", "text": "{\"events\": [[\"destroy\", \"soft tissues\"], [\"create\", \"bones\", \"watery environment\"]]}", "gen_tokens": 23, "prompt_tokens": 527}
+{"id": "37:4", "text": "{\"events\": [[\"create\", \"rock\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 540}
+{"id": "37:5", "text": "{\"events\": [[\"destroy\", \"bones\"], [\"create\", \"mineral\", \"rock\"]]}", "gen_tokens": 21, "prompt_tokens": 552}
+{"id": "37:6", "text": "{\"events\": [[\"create\", \"fossils\", \"rock\"]]}", "gen_tokens": 16, "prompt_tokens": 558}
+{"id": "38:1", "text": "{\"events\": [[\"destroy\", \"animal; body\"], [\"move\", \"animal; body\", \"surface\", \"ground\"]]}", "gen_tokens": 27, "prompt_tokens": 503}
+{"id": "38:2", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 507}
+{"id": "38:3", "text": "{\"events\": [[\"move\", \"body\", \"surface\", \"sandy or wet place\"]]}", "gen_tokens": 21, "prompt_tokens": 517}
+{"id": "38:4", "text": "{\"events\": [[\"create\", \"soil\", \"around the body\"]]}", "gen_tokens": 17, "prompt_tokens": 524}
+{"id": "38:5", "text": "{\"events\": [[\"create\", \"rock\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 532}
+{"id": "38:6", "text": "{\"events\": [[\"create\", \"fossil\", \"surface\"]]}", "gen_tokens": 15, "prompt_tokens": 539}
+{"id": "38:7", "text": "{\"events\": [[\"move\", \"fossil\", \"surface\", \"surface\"]]}", "gen_tokens": 18, "prompt_tokens": 546}
+{"id": "67:1", "text": "{\"events\": [[\"destroy\", \"plants; dead plants\"]]}", "gen_tokens": 14, "prompt_tokens": 493}
+{"id": "67:2", "text": "{\"events\": [[\"move\", \"dead plants\", \"surface\", \"swamps\"], [\"create\", \"peat\", \"swamps\"]]}", "gen_tokens": 29, "prompt_tokens": 499}
+{"id": "67:3", "text": "{\"events\": [[\"move\", \"dead plants\", \"swamps\", \"bottom of the swamps\"]]}", "gen_tokens": 23, "prompt_tokens": 511}
+{"id": "67:4", "text": "{\"events\": [[\"move\", \"dead plants\", \"swamps\", \"swamps\"], [\"move\", \"plants; dead plants\", \"swamps\", \"swamps\"]]}", "gen_tokens": 37, "prompt_tokens": 521}
+{"id": "67:5", "text": "{\"events\": [[\"create\", \"peat\", \"swamp\"]]}", "gen_tokens": 15, "prompt_tokens": 530}
+{"id": "67:6", "text": "{\"events\": [[\"move\", \"peat\", \"swamp\", \"underneath sediment\"]]}", "gen_tokens": 20, "prompt_tokens": 537}
+{"id": "67:7", "text": "{\"events\": [[\"destroy\", \"peat\"]]}", "gen_tokens": 11, "prompt_tokens": 545}
+{"id": "67:8", "text": "{\"events\": [[\"destroy\", \"dead plants\"], [\"create\", \"peat\", \"swamp\"]]}", "gen_tokens": 22, "prompt_tokens": 555}
+{"id": "67:9", "text": "{\"events\": [[\"destroy\", \"peat\"], [\"create\", \"coal\", \"surface\"]]}\n\n**Explanation:**  \n- \"The peat turns into coal after a long time\" implies that **peat is destroyed** (converted into coal) and **coal is created** in the **surface** (as it's the location where the transformation occurs).", "gen_tokens": 71, "prompt_tokens": 566}
+{"id": "68:1", "text": "{\"events\": [[\"destroy\", \"plants; trees\"]]}", "gen_tokens": 13, "prompt_tokens": 517}
+{"id": "68:2", "text": "{\"events\": [[\"move\", \"plant and tree remains\", \"surface\", \"bottom of steamy, swampy areas\"]]}", "gen_tokens": 27, "prompt_tokens": 531}
+{"id": "68:3", "text": "{\"events\": [[\"move\", \"plant and tree remains\", \"steamy, swampy areas\", \"bottom of steamy, swampy areas\"]]}", "gen_tokens": 32, "prompt_tokens": 538}
+{"id": "68:4", "text": "{\"events\": [[\"create\", \"peat; burial peat\", \"swampy areas\"]]}", "gen_tokens": 21, "prompt_tokens": 550}
+{"id": "68:5", "text": "{\"events\": [[\"move\", \"peat; burial peat\", \"steamy, swampy areas\", \"buried\"]]}", "gen_tokens": 27, "prompt_tokens": 569}
+{"id": "68:6", "text": "{\"events\": [[\"destroy\", \"water\"], [\"move\", \"peat\", \"surface\", \"buried\"]]}", "gen_tokens": 24, "prompt_tokens": 584}
+{"id": "68:7", "text": "{\"events\": [[\"destroy\", \"peat; burial peat\"], [\"create\", \"coal\", \"surface\"]]}\n\n**Explanation:**  \n- \"Peat; burial peat\" is destroyed as it is transformed into coal.  \n- \"Coal\" is created as a result of the process described in the sentence.  \n- The location is \"surface\" because the transformation is implied to occur under pressure and heat, likely at the surface level of the Earth's crust.", "gen_tokens": 95, "prompt_tokens": 597}
+{"id": "69:1", "text": "{\"events\": [[\"destroy\", \"plants;trees\"]]}", "gen_tokens": 13, "prompt_tokens": 512}
+{"id": "69:2", "text": "{\"events\": [[\"move\", \"plants;trees\", \"unknown\", \"bottom of swamps\"], [\"create\", \"peat\", \"bottom of swamps\"]]}", "gen_tokens": 34, "prompt_tokens": 522}
+{"id": "69:3", "text": "{\"events\": [[\"create\", \"peat\", \"bottom of swamps\"]]}", "gen_tokens": 17, "prompt_tokens": 532}
+{"id": "69:4", "text": "{\"events\": [[\"move\", \"peat\", \"bottom of swamps\", \"covered by sand and clay\"], [\"move\", \"sand\", \"?\", \"peat\"], [\"move\", \"clay\", \"?\", \"peat\"]]}", "gen_tokens": 47, "prompt_tokens": 540}
+{"id": "69:5", "text": "{\"events\": [[\"create\", \"sedimentary rocks\", \"bottom of swamps\"]]}", "gen_tokens": 19, "prompt_tokens": 549}
+{"id": "69:6", "text": "{\"events\": [[\"destroy\", \"water\"], [\"move\", \"peat\", \"bottom of swamps\", \"under sedimentary rocks\"]]}", "gen_tokens": 29, "prompt_tokens": 564}
+{"id": "69:7", "text": "{\"events\": [[\"destroy\", \"peat\"], [\"create\", \"coal\", \"surface\"]]}\n\n**Explanation:**  \n- \"Heat changes the material into coal\" implies that **peat** is being transformed or consumed, so it is **destroyed**.  \n- The result of this transformation is **coal**, which is created in the **surface** (as implied by the context of the process).", "gen_tokens": 81, "prompt_tokens": 571}
+{"id": "70:1", "text": "{\"events\": [[\"create\", \"rain\", \"?\"]]}", "gen_tokens": 13, "prompt_tokens": 498}
+{"id": "70:2", "text": "{\"events\": [[\"create\", \"water\", \"sky\"], [\"move\", \"water\", \"sky\", \"surface\"], [\"move\", \"water\", \"surface\", \"river or lake\"], [\"move\", \"water\", \"river or lake\", \"water levels\"]]}", "gen_tokens": 55, "prompt_tokens": 505}
+{"id": "70:3", "text": "{\"events\": [[\"create\", \"water\", \"ground\"], [\"move\", \"water\", \"ground\", \"surface\"]]}", "gen_tokens": 26, "prompt_tokens": 512}
+{"id": "70:4", "text": "{\"events\": [[\"move\", \"water\", \"ground\", \"streets\"]]}", "gen_tokens": 18, "prompt_tokens": 516}
+{"id": "70:5", "text": "{\"events\": [[\"move\", \"water\", \"ground\", \"houses\"]]}", "gen_tokens": 17, "prompt_tokens": 521}
+{"id": "70:6", "text": "{\"events\": [[\"destroy\", \"rain\"], [\"destroy\", \"water\"]]}", "gen_tokens": 17, "prompt_tokens": 530}
+{"id": "70:7", "text": "{\"events\": [[\"move\", \"water\", \"ground\", \"streams\"]]}", "gen_tokens": 17, "prompt_tokens": 535}
+{"id": "70:8", "text": "{\"events\": [[\"destroy\", \"water\"], [\"create\", \"rain\", \"?\"]]}", "gen_tokens": 19, "prompt_tokens": 543}
+{"id": "99:1", "text": "{\"events\": [[\"create\", \"rain clouds\", \"sky\"]]}", "gen_tokens": 15, "prompt_tokens": 506}
+{"id": "99:2", "text": "{\"events\": [[\"move\", \"rain clouds\", \"sky\", \"mountains or wind\"]]}", "gen_tokens": 21, "prompt_tokens": 514}
+{"id": "99:3", "text": "{\"events\": [[\"destroy\", \"rain clouds\"], [\"create\", \"rain\", \"sky\"]]}", "gen_tokens": 21, "prompt_tokens": 521}
+{"id": "99:4", "text": "{\"events\": [[\"destroy\", \"rain\"]]}", "gen_tokens": 11, "prompt_tokens": 539}
+{"id": "99:5", "text": "{\"events\": [[\"destroy\", \"rain\"]]}", "gen_tokens": 11, "prompt_tokens": 555}
+{"id": "99:6", "text": "{\"events\": [[\"create\", \"a very different ecosystem\", \"desert\"]]}", "gen_tokens": 18, "prompt_tokens": 567}
+{"id": "99:7", "text": "{\"events\": [[\"destroy\", \"a very different ecosystem\"], [\"create\", \"desert\", \"surface\"]]}", "gen_tokens": 24, "prompt_tokens": 577}
+{"id": "152:1", "text": "{\"events\": [[\"create\", \"water vapor ; lifted vapor ; vapor\", \"atmosphere\"], [\"create\", \"solid ; cloud droplets\", \"atmosphere\"]]}", "gen_tokens": 37, "prompt_tokens": 501}
+{"id": "152:2", "text": "{\"events\": [[\"move\", \"water vapor ; lifted vapor ; vapor\", \"atmosphere\", \"higher altitude\"]]}", "gen_tokens": 26, "prompt_tokens": 504}
+{"id": "152:3", "text": "{\"events\": [[\"destroy\", \"water vapor ; lifted vapor ; vapor\"], [\"create\", \"solid ; cloud droplets\", \"atmosphere\"]]}", "gen_tokens": 32, "prompt_tokens": 513}
+{"id": "152:4", "text": "{\"events\": [[\"destroy\", \"vapor\"], [\"create\", \"solid\", \"surface\"]]}", "gen_tokens": 21, "prompt_tokens": 519}
+{"id": "152:5", "text": "{\"events\": [[\"destroy\", \"vapor\"], [\"create\", \"solid ; cloud droplets\", \"cloud\"]]}", "gen_tokens": 25, "prompt_tokens": 527}
+{"id": "152:6", "text": "{\"events\": [[\"move\", \"cloud droplets\", \"sky\", \"ground\"]]}", "gen_tokens": 19, "prompt_tokens": 535}
+{"id": "249:1", "text": "{\"events\": [[\"destroy\", \"rocks ; smaller pieces\"], [\"create\", \"smaller pieces\", \"?\"]]}", "gen_tokens": 25, "prompt_tokens": 514}
+{"id": "249:2", "text": "{\"events\": [[\"destroy\", \"rocks ; smaller pieces\"], [\"create\", \"smaller pieces\", \"?\"]]}", "gen_tokens": 25, "prompt_tokens": 516}
+{"id": "249:3", "text": "{\"events\": [[\"create\", \"smaller pieces\", \"surface\"]]}", "gen_tokens": 16, "prompt_tokens": 523}
+{"id": "249:4", "text": "{\"events\": [[\"create\", \"oxygen\", \"rocks ; smaller pieces\"]]}", "gen_tokens": 19, "prompt_tokens": 537}
+{"id": "249:5", "text": "{\"events\": [[\"create\", \"new types of rocks ; new substance ; certain types of rocks\", \"surface\"]]}", "gen_tokens": 25, "prompt_tokens": 544}
+{"id": "249:6", "text": "{\"events\": [[\"create\", \"new types of rocks ; new substance ; certain types of rocks\", \"surface\"]]}", "gen_tokens": 25, "prompt_tokens": 550}
+{"id": "249:7", "text": "{\"events\": [[\"create\", \"carbon dioxide\", \"surface\"]]}", "gen_tokens": 15, "prompt_tokens": 564}
+{"id": "249:8", "text": "{\"events\": [[\"create\", \"a solution\", \"surface\"]]}", "gen_tokens": 15, "prompt_tokens": 577}
+{"id": "310:1", "text": "{\"events\": [[\"create\", \"blood\", \"right side of your heart\"]]}", "gen_tokens": 18, "prompt_tokens": 498}
+{"id": "310:2", "text": "{\"events\": [[\"move\", \"blood\", \"right side of your heart\", \"lungs\"]]}", "gen_tokens": 22, "prompt_tokens": 501}
+{"id": "310:3", "text": "{\"events\": [[\"destroy\", \"carbon dioxide\"]]}", "gen_tokens": 12, "prompt_tokens": 509}
+{"id": "310:4", "text": "{\"events\": [[\"create\", \"oxygen\", \"lungs\"]]}", "gen_tokens": 16, "prompt_tokens": 516}
+{"id": "310:5", "text": "{\"events\": [[\"move\", \"blood\", \"right side of your heart\", \"left side of your heart\"]]}", "gen_tokens": 25, "prompt_tokens": 525}
+{"id": "310:6", "text": "{\"events\": [[\"move\", \"blood\", \"left side of your heart\", \"body\"]]}", "gen_tokens": 21, "prompt_tokens": 532}
+{"id": "400:1", "text": "{\"events\": [[\"create\", \"energy\", \"?\"], [\"create\", \"electricity\", \"?\"]]}", "gen_tokens": 22, "prompt_tokens": 495}
+{"id": "400:2", "text": "{\"events\": [[\"move\", \"energy\", \"unknown\", \"sun\"], [\"create\", \"electricity\", \"sun\"]]}", "gen_tokens": 27, "prompt_tokens": 502}
+{"id": "400:3", "text": "{\"events\": [[\"create\", \"energy\", \"sun\"], [\"create\", \"electricity\", \"sun\"]]}}", "gen_tokens": 24, "prompt_tokens": 509}
+{"id": "400:4", "text": "{\"events\": [[\"create\", \"energy\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 514}
+{"id": "400:5", "text": "{\"events\": [[\"create\", \"electricity\", \"surface\"]]}", "gen_tokens": 15, "prompt_tokens": 521}
+{"id": "401:1", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 502}
+{"id": "401:2", "text": "{\"events\": [[\"create\", \"sunlight\", \"sky\"], [\"create\", \"direct current\", \"panels\"], [\"create\", \"alternating current\", \"panels\"]]}", "gen_tokens": 36, "prompt_tokens": 505}
+{"id": "401:3", "text": "{\"events\": [[\"move\", \"sunlight\", \"outside\", \"top half of the solar panel\"]]}", "gen_tokens": 23, "prompt_tokens": 517}
+{"id": "401:4", "text": "{\"events\": [[\"move\", \"sunlight\", \"top half of the solar panel\", \"bottom half of the solar panel\"]]}", "gen_tokens": 28, "prompt_tokens": 529}
+{"id": "401:5", "text": "{\"events\": [[\"create\", \"direct current\", \"top half of the solar panel\"]]}", "gen_tokens": 20, "prompt_tokens": 545}
+{"id": "401:6", "text": "{\"events\": [[\"create\", \"alternating current\", \"location of inverter\"]]}", "gen_tokens": 19, "prompt_tokens": 559}
+{"id": "401:7", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 572}
+{"id": "409:1", "text": "{\"events\": [[\"create\", \"image\", \"eyes\"], [\"create\", \"electrical impulses\", \"eyes\"]]}", "gen_tokens": 25, "prompt_tokens": 491}
+{"id": "409:2", "text": "{\"events\": [[\"move\", \"light\", \"eyes\", \"vitreous humor\"]]}", "gen_tokens": 20, "prompt_tokens": 499}
+{"id": "409:3", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 510}
+{"id": "409:4", "text": "{\"events\": [[\"create\", \"image\", \"retina\"], [\"create\", \"electrical impulses\", \"retina\"]]}", "gen_tokens": 27, "prompt_tokens": 516}
+{"id": "409:5", "text": "{\"events\": [[\"transform\", \"image\", \"retina\", \"electrical impulses\"]]}", "gen_tokens": 20, "prompt_tokens": 525}
+{"id": "409:6", "text": "{\"events\": [[\"move\", \"electrical impulses\", \"retina\", \"optic nerve\"]]}", "gen_tokens": 21, "prompt_tokens": 536}
+{"id": "409:7", "text": "{\"events\": [[\"destroy\", \"electrical impulses\"], [\"create\", \"image\", \"brain\"]]}", "gen_tokens": 22, "prompt_tokens": 544}
+{"id": "410:1", "text": "{\"events\": [[\"create\", \"light\", \"eye\"], [\"create\", \"electric signal\", \"eye\"]]}", "gen_tokens": 24, "prompt_tokens": 493}
+{"id": "410:2", "text": "{\"events\": [[\"move\", \"light\", \"cornea\", \"iris\"]]}", "gen_tokens": 18, "prompt_tokens": 496}
+{"id": "410:3", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 514}
+{"id": "410:4", "text": "{\"events\": [[\"create\", \"electric signal\", \"retina\"], [\"move\", \"light\", \"iris\", \"retina\"]]}", "gen_tokens": 29, "prompt_tokens": 528}
+{"id": "410:5", "text": "{\"events\": [[\"move\", \"electric signal\", \"retina\", \"brain\"]]}", "gen_tokens": 19, "prompt_tokens": 535}
+{"id": "410:6", "text": "{\"events\": [[\"destroy\", \"electric signal\"], [\"create\", \"image\", \"brain\"]]}", "gen_tokens": 21, "prompt_tokens": 548}
+{"id": "411:1", "text": "{\"events\": [[\"create\", \"light\", \"eye\"], [\"create\", \"electrochemical signals\", \"retina\"]]}", "gen_tokens": 27, "prompt_tokens": 514}
+{"id": "411:2", "text": "{\"events\": [[\"create\", \"electrochemical signals\", \"retina\"], [\"destroy\", \"light\"]]}", "gen_tokens": 24, "prompt_tokens": 529}
+{"id": "411:3", "text": "{\"events\": [[\"create\", \"cones\", \"retina\"]]}", "gen_tokens": 16, "prompt_tokens": 532}
+{"id": "411:4", "text": "{\"events\": [[\"move\", \"electrochemical signals\", \"retina\", \"second layer of the retina\"], [\"move\", \"electrochemical signals\", \"second layer of the retina\", \"third layer of the retina\"]]}", "gen_tokens": 48, "prompt_tokens": 563}
+{"id": "411:5", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 594}
+{"id": "411:6", "text": "{\"events\": [[\"move\", \"electrochemical signals\", \"retina\", \"thalamus\"], [\"move\", \"electrochemical signals\", \"thalamus\", \"cerebral cortex\"]]}", "gen_tokens": 43, "prompt_tokens": 610}
+{"id": "411:7", "text": "{\"events\": [[\"move\", \"electrochemical signals\", \"retina\", \"brainstem\"], [\"move\", \"light\", \"retina\", \"brainstem\"]]}", "gen_tokens": 36, "prompt_tokens": 640}
+{"id": "411:8", "text": "{\"events\": [[\"move\", \"electrochemical signals\", \"retina\", \"thalamus\"]]}", "gen_tokens": 23, "prompt_tokens": 677}
+{"id": "429:1", "text": "{\"events\": [[\"create\", \"nitrogen\", \"atmosphere\"]]}", "gen_tokens": 17, "prompt_tokens": 509}
+{"id": "429:2", "text": "{\"events\": [[\"create\", \"fixed nitrogen; usable nitrogen\", \"soil\"]]}", "gen_tokens": 19, "prompt_tokens": 516}
+{"id": "429:3", "text": "{\"events\": [[\"create\", \"fixed nitrogen; usable nitrogen\", \"soil\"]]}", "gen_tokens": 19, "prompt_tokens": 525}
+{"id": "429:4", "text": "{\"events\": [[\"create\", \"fixed nitrogen; usable nitrogen\", \"soil\"], [\"move\", \"fixed nitrogen; usable nitrogen\", \"soil\", \"plants\"]]}", "gen_tokens": 36, "prompt_tokens": 534}
+{"id": "429:5", "text": "{\"events\": [[\"move\", \"usable nitrogen\", \"plants\", \"animals\"]]}", "gen_tokens": 18, "prompt_tokens": 539}
+{"id": "429:6", "text": "{\"events\": [[\"create\", \"waste\", \"surface\"]]}", "gen_tokens": 15, "prompt_tokens": 543}
+{"id": "429:7", "text": "{\"events\": [[\"destroy\", \"plants\"]]}", "gen_tokens": 11, "prompt_tokens": 548}
+{"id": "429:8", "text": "{\"events\": [[\"move\", \"fixed nitrogen; usable nitrogen\", \"surface\", \"soil\"]]}", "gen_tokens": 22, "prompt_tokens": 557}
+{"id": "429:9", "text": "{\"events\": [[\"create\", \"gas-based form\", \"soil\"]]}", "gen_tokens": 17, "prompt_tokens": 568}
+{"id": "429:10", "text": "{\"events\": [[\"move\", \"gas-based form\", \"soil\", \"atmosphere\"]]}", "gen_tokens": 22, "prompt_tokens": 578}
+{"id": "460:1", "text": "{\"events\": [[\"create\", \"carbon\", \"living things\"]]}", "gen_tokens": 15, "prompt_tokens": 513}
+{"id": "460:2", "text": "{\"events\": [[\"destroy\", \"living things ; remains of living things\"]]}", "gen_tokens": 17, "prompt_tokens": 514}
+{"id": "460:3", "text": "{\"events\": [[\"move\", \"remains of living things\", \"surface\", \"underground\"]]}", "gen_tokens": 22, "prompt_tokens": 524}
+{"id": "460:4", "text": "{\"events\": [[\"move\", \"remains of living things\", \"surface\", \"underground\"]]}", "gen_tokens": 22, "prompt_tokens": 541}
+{"id": "460:5", "text": "{\"events\": [[\"create\", \"carbon-based mixture\", \"underground\"]]}", "gen_tokens": 17, "prompt_tokens": 552}
+{"id": "460:6", "text": "{\"events\": [[\"create\", \"energy\", \"surface\"], [\"create\", \"power\", \"surface\"]]}", "gen_tokens": 23, "prompt_tokens": 559}
+{"id": "460:7", "text": "{\"events\": [[\"move\", \"carbon-based mixture\", \"underground\", \"surface\"]]}", "gen_tokens": 20, "prompt_tokens": 572}
+{"id": "460:8", "text": "{\"events\": [[\"destroy\", \"fossil fuel\"], [\"create\", \"energy\", \"surface\"]]}", "gen_tokens": 22, "prompt_tokens": 580}
+{"id": "460:9", "text": "{\"events\": [[\"destroy\", \"fossil fuel\"], [\"create\", \"energy\", \"surface\"]]}", "gen_tokens": 22, "prompt_tokens": 593}
+{"id": "460:10", "text": "{\"events\": [[\"create\", \"power\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 602}
+{"id": "463:1", "text": "{\"events\": [[\"create\", \"raindrops\", \"ground\"], [\"move\", \"raindrops\", \"ground\", \"cloud\"]]}", "gen_tokens": 28, "prompt_tokens": 503}
+{"id": "463:2", "text": "{\"events\": [[\"destroy\", \"raindrops\"], [\"create\", \"ice particle\", \"cloud\"]]}", "gen_tokens": 22, "prompt_tokens": 512}
+{"id": "463:3", "text": "{\"events\": [[\"create\", \"ice particle\", \"cloud\"]]}", "gen_tokens": 15, "prompt_tokens": 528}
+{"id": "463:4", "text": "{\"events\": [[\"create\", \"ice particle\", \"cloud\"], [\"move\", \"raindrops\", \"cloud\", \"cloud\"], [\"move\", \"ice particle\", \"cloud\", \"cloud\"]]}", "gen_tokens": 41, "prompt_tokens": 545}
+{"id": "463:5", "text": "{\"events\": [[\"move\", \"hailstone\", \"cloud\", \"earth\"]]}", "gen_tokens": 19, "prompt_tokens": 573}
+{"id": "465:1", "text": "{\"events\": [[\"move\", \"water\", \"surface\", \"atmosphere\"]]}", "gen_tokens": 19, "prompt_tokens": 495}
+{"id": "465:2", "text": "{\"events\": [[\"destroy\", \"water\"], [\"create\", \"hail\", \"?\"]]}", "gen_tokens": 20, "prompt_tokens": 496}
+{"id": "465:3", "text": "{\"events\": [[\"move\", \"water\", \"winds that are moving upward\", \"surface\"]]}", "gen_tokens": 22, "prompt_tokens": 502}
+{"id": "465:4", "text": "{\"events\": [[\"destroy\", \"water\"], [\"create\", \"hail\", \"surface\"]]}", "gen_tokens": 21, "prompt_tokens": 516}
+{"id": "465:5", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 524}
+{"id": "465:6", "text": "{\"events\": [[\"destroy\", \"hail\"], [\"create\", \"water\", \"surface\"]]}\n\n**Explanation:**  \n- \"The hail becomes too large to be pushed up by the wind\" implies that the hail is no longer being carried upward, so it is destroyed (falling down or being released).  \n- Since hail is destroyed, the water (which was part of the hail) is now free to fall, so it is created in the surface.", "gen_tokens": 94, "prompt_tokens": 537}
+{"id": "465:7", "text": "{\"events\": [[\"move\", \"hail\", \"cloud\", \"ground\"]]}", "gen_tokens": 18, "prompt_tokens": 545}
+{"id": "502:1", "text": "{\"events\": [[\"create\", \"energy\", \"combustion chamber\"]]}", "gen_tokens": 17, "prompt_tokens": 521}
+{"id": "502:2", "text": "{\"events\": [[\"move\", \"energy\", \"combustion chamber\", \"pistons\"], [\"create\", \"piston motion\", \"pistons\"]]}", "gen_tokens": 35, "prompt_tokens": 534}
+{"id": "502:3", "text": "{\"events\": [[\"move\", \"piston motion\", \"pistons\", \"crankshaft\"], [\"create\", \"rotary motion\", \"car\"]]}", "gen_tokens": 34, "prompt_tokens": 550}
+{"id": "502:4", "text": "{\"events\": [[\"move\", \"rotary motion\", \"crankshaft and axle\", \"wheels\"], [\"move\", \"piston motion\", \"combustion chamber\", \"crankshaft and axle\"]]}", "gen_tokens": 45, "prompt_tokens": 556}
+{"id": "502:5", "text": "{\"events\": [[\"move\", \"car\", \"stationary\", \"forward\"]]}", "gen_tokens": 18, "prompt_tokens": 561}
+{"id": "503:1", "text": "{\"events\": [[\"create\", \"gasoline;gas\", \"car\"]]}", "gen_tokens": 17, "prompt_tokens": 514}
+{"id": "503:2", "text": "{\"events\": [[\"create\", \"spark\", \"car\"], [\"create\", \"battery\", \"car\"], [\"create\", \"piston\", \"car\"], [\"create\", \"crankshaft\", \"car\"], [\"create\", \"wheel\", \"car\"]]}", "gen_tokens": 53, "prompt_tokens": 520}
+{"id": "503:3", "text": "{\"events\": [[\"create\", \"spark\", \"car\"]]}\n\n**Explanation:**  \nThe sentence \"The car's battery produces a spark (electricity)\" implies that the spark is created as a result of the battery's action. The spark is a new participant introduced in this sentence, and it is created within the car. No other participants are directly affected by this sentence.", "gen_tokens": 76, "prompt_tokens": 531}
+{"id": "503:4", "text": "{\"events\": [[\"destroy\", \"spark\"], [\"create\", \"gasoline;gas\", \"engine\"]]}", "gen_tokens": 23, "prompt_tokens": 538}
+{"id": "503:5", "text": "{\"events\": [[\"destroy\", \"gasoline;gas\"], [\"create\", \"heat\", \"piston\"]]}", "gen_tokens": 24, "prompt_tokens": 547}
+{"id": "503:6", "text": "{\"events\": [[\"move\", \"gasoline;gas\", \"engine\", \"piston\"], [\"move\", \"air\", \"engine\", \"piston\"], [\"destroy\", \"spark\"], [\"create\", \"piston movement\", \"piston\"]]}", "gen_tokens": 52, "prompt_tokens": 557}
+{"id": "503:7", "text": "{\"events\": [[\"move\", \"piston\", \"cylinder\", \"crankshaft\"], [\"move\", \"piston\", \"cylinder\", \"crankshaft\"], [\"move\", \"piston\", \"cylinder\", \"crankshaft\"], [\"move\", \"piston\", \"cylinder\", \"crankshaft\"], [\"move\", \"piston\", \"cylinder\", \"crankshaft\"], [\"move\", \"piston\", \"cylinder\", \"crankshaft\"], [\"move\", \"piston\", \"cylinder\", \"crankshaft\"]]}", "gen_tokens": 117, "prompt_tokens": 568}
+{"id": "503:8", "text": "{\"events\": [[\"move\", \"crankshaft\", \"engine\", \"car\"], [\"move\", \"wheel\", \"car\", \"ground\"]]}", "gen_tokens": 31, "prompt_tokens": 587}
+{"id": "503:9", "text": "{\"events\": [[\"move\", \"wheels\", \"crankshaft\", \"surface\"], [\"move\", \"car's body\", \"crankshaft\", \"surface\"]]}", "gen_tokens": 36, "prompt_tokens": 597}
+{"id": "533:1", "text": "{\"events\": [[\"create\", \"seed\", \"tree\"]]}", "gen_tokens": 14, "prompt_tokens": 504}
+{"id": "533:2", "text": "{\"events\": [[\"create\", \"sprouts\", \"soil\"]]}", "gen_tokens": 16, "prompt_tokens": 508}
+{"id": "533:3", "text": "{\"events\": [[\"create\", \"seedling\", \"soil\"]]}", "gen_tokens": 16, "prompt_tokens": 521}
+{"id": "533:4", "text": "{\"events\": [[\"destroy\", \"seedling\"], [\"create\", \"sapling\", \"surface\"]]}", "gen_tokens": 22, "prompt_tokens": 534}
+{"id": "533:5", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 550}
+{"id": "533:6", "text": "{\"events\": [[\"destroy\", \"tree\"], [\"create\", \"tree\", \"?\"]]}", "gen_tokens": 19, "prompt_tokens": 559}
+{"id": "533:7", "text": "{\"events\": [[\"destroy\", \"tree\"], [\"create\", \"rot and decay\", \"surface\"]]}", "gen_tokens": 22, "prompt_tokens": 567}
+{"id": "534:1", "text": "{\"events\": [[\"create\", \"seed\", \"?\"]]}", "gen_tokens": 13, "prompt_tokens": 498}
+{"id": "534:2", "text": "{\"events\": [[\"destroy\", \"seed\"], [\"create\", \"small tree ; tree\", \"surface\"]]}", "gen_tokens": 23, "prompt_tokens": 502}
+{"id": "534:3", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 510}
+{"id": "534:4", "text": "{\"events\": [[\"create\", \"fruit\", \"surface\"]]}\n\n**Explanation:**  \nThe sentence \"Some trees bear fruit\" implies that fruit is created as a result of the trees. Since \"small tree ; tree\" is already a participant (and likely refers to the same entity), the creation of \"fruit\" occurs in the \"surface\" location (as fruit is typically produced on the surface of a plant). No other participants are directly affected by this sentence.", "gen_tokens": 94, "prompt_tokens": 515}
+{"id": "534:5", "text": "{\"events\": [[\"create\", \"flowers\", \"surface\"]]}\n\n**Explanation:**  \nThe sentence \"Flowers.\" implies the creation of \"flowers\" in the current location, which is assumed to be \"surface\" unless otherwise specified. No other participants are affected by this sentence.", "gen_tokens": 57, "prompt_tokens": 517}
+{"id": "534:6", "text": "{\"events\": [[\"destroy\", \"small tree ; tree\"]]}", "gen_tokens": 14, "prompt_tokens": 525}
+{"id": "534:7", "text": "{\"events\": [[\"destroy\", \"small tree ; tree\"]]}", "gen_tokens": 14, "prompt_tokens": 528}
+{"id": "582:1", "text": "{\"events\": [[\"move\", \"warm, moist air\", \"south\", \"north\"]]}", "gen_tokens": 20, "prompt_tokens": 522}
+{"id": "582:2", "text": "{\"events\": [[\"move\", \"cool, dry air\", \"north\", \"south\"]]}", "gen_tokens": 20, "prompt_tokens": 529}
+{"id": "582:3", "text": "{\"events\": [[\"move\", \"warm, moist air\", \"south\", \"north\"], [\"move\", \"cool, dry air\", \"north\", \"south\"]]}", "gen_tokens": 35, "prompt_tokens": 534}
+{"id": "582:4", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 549}
+{"id": "582:5", "text": "{\"events\": [[\"create\", \"wind\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 563}
+{"id": "582:6", "text": "{\"events\": [[\"create\", \"updraft\", \"surface\"]]}", "gen_tokens": 15, "prompt_tokens": 568}
+{"id": "582:7", "text": "{\"events\": [[\"create\", \"circular patterns\", \"updraft\"]]}", "gen_tokens": 17, "prompt_tokens": 579}
+{"id": "582:8", "text": "{\"events\": [[\"create\", \"tornado\", \"updraft\"]]}", "gen_tokens": 16, "prompt_tokens": 584}
+{"id": "583:1", "text": "{\"events\": [[\"create\", \"warm, humd low-presure air\", \"ground\"], [\"create\", \"updraft\", \"ground\"], [\"create\", \"dry, cold high-pressure air\", \"ground\"], [\"create\", \"rotation\", \"ground\"], [\"create\", \"funnel; tornado\", \"ground\"]]}", "gen_tokens": 66, "prompt_tokens": 517}
+{"id": "583:2", "text": "{\"events\": [[\"create\", \"updraft\", \"low-pressure air\"]]}", "gen_tokens": 17, "prompt_tokens": 520}
+{"id": "583:3", "text": "{\"events\": [[\"destroy\", \"dry, cold high-pressure air\"], [\"create\", \"rotation\", \"surface\"], [\"create\", \"funnel; tornado\", \"surface\"]]}", "gen_tokens": 37, "prompt_tokens": 530}
+{"id": "583:4", "text": "{\"events\": [[\"create\", \"rotation\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 536}
+{"id": "583:5", "text": "{\"events\": [[\"create\", \"funnel; tornado\", \"surface\"]]}", "gen_tokens": 17, "prompt_tokens": 546}
+{"id": "583:6", "text": "{\"events\": [[\"move\", \"funnel; tornado\", \"cloud\", \"ground\"]]}", "gen_tokens": 20, "prompt_tokens": 551}
+{"id": "600:1", "text": "{\"events\": [[\"create\", \"energy\", \"air\"], [\"destroy\", \"petrol; fuel\"], [\"create\", \"hot gas\", \"air\"]]}", "gen_tokens": 33, "prompt_tokens": 505}
+{"id": "600:2", "text": "{\"events\": [[\"destroy\", \"air\"], [\"destroy\", \"petrol; fuel\"], [\"create\", \"hot gas\", \"engine\"], [\"create\", \"energy\", \"engine\"]]}", "gen_tokens": 39, "prompt_tokens": 513}
+{"id": "600:3", "text": "{\"events\": [[\"move\", \"hot gas\", \"engine\", \"pistons\"]]}", "gen_tokens": 20, "prompt_tokens": 523}
+{"id": "600:4", "text": "{\"events\": [[\"create\", \"energy\", \"crankshaft\"]]}", "gen_tokens": 16, "prompt_tokens": 531}
+{"id": "600:5", "text": "{\"events\": [[\"move\", \"energy\", \"crankshaft\", \"gears\"]]}", "gen_tokens": 20, "prompt_tokens": 538}
+{"id": "600:6", "text": "{\"events\": [[\"move\", \"energy\", \"crankshaft\", \"gears\"], [\"move\", \"crankshaft\", \"gears\", \"wheels\"], [\"create\", \"motion\", \"wheels\"]]}", "gen_tokens": 46, "prompt_tokens": 545}
+{"id": "653:1", "text": "{\"events\": [[\"create\", \"seed\", \"?\"]]}", "gen_tokens": 13, "prompt_tokens": 499}
+{"id": "653:2", "text": "{\"events\": [[\"create\", \"seedling\", \"soil\"]]}", "gen_tokens": 16, "prompt_tokens": 502}
+{"id": "653:3", "text": "{\"events\": [[\"create\", \"tree\", \"soil\"]]}", "gen_tokens": 15, "prompt_tokens": 508}
+{"id": "653:4", "text": "{\"events\": [[\"create\", \"flower\", \"tree\"]]}}", "gen_tokens": 14, "prompt_tokens": 513}
+{"id": "653:5", "text": "{\"events\": [[\"destroy\", \"flower\"], [\"create\", \"fruit\", \"surface\"]]}", "gen_tokens": 20, "prompt_tokens": 518}
+{"id": "653:6", "text": "{\"events\": [[\"create\", \"seeds\", \"fruit\"]]}", "gen_tokens": 15, "prompt_tokens": 526}
+{"id": "654:1", "text": "{\"events\": [[\"create\", \"seedling\", \"ground\"]]}", "gen_tokens": 15, "prompt_tokens": 504}
+{"id": "654:2", "text": "{\"events\": [[\"create\", \"root system\", \"ground\"], [\"move\", \"seedling\", \"ground\", \"ground\"], [\"destroy\", \"seedling\"], [\"create\", \"tree\", \"ground\"]]}", "gen_tokens": 44, "prompt_tokens": 513}
+{"id": "654:3", "text": "{\"events\": [[\"move\", \"root system\", \"ground\", \"tree\"], [\"create\", \"material for new growth\", \"tree\"]]}", "gen_tokens": 30, "prompt_tokens": 526}
+{"id": "654:4", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 542}
+{"id": "654:5", "text": "{\"events\": [[\"destroy\", \"seedling\"], [\"create\", \"tree\", \"ground\"]]}", "gen_tokens": 21, "prompt_tokens": 546}
+{"id": "654:6", "text": "{\"events\": [[\"destroy\", \"tree\"], [\"create\", \"material for new growth\", \"ground\"]]}", "gen_tokens": 23, "prompt_tokens": 565}
+{"id": "659:1", "text": "{\"events\": [[\"create\", \"ammonium\", \"?\"]]}", "gen_tokens": 15, "prompt_tokens": 508}
+{"id": "659:2", "text": "{\"events\": [[\"create\", \"nitrates\", \"soil\"], [\"destroy\", \"ammonium\"], [\"move\", \"ammonium\", \"soil\", \"soil\"]]}", "gen_tokens": 41, "prompt_tokens": 523}
+{"id": "659:3", "text": "{\"events\": [[\"move\", \"nitrates\", \"soil\", \"roots\"], [\"create\", \"extra nitrogen\", \"roots\"]]}", "gen_tokens": 30, "prompt_tokens": 538}
+{"id": "659:4", "text": "{\"events\": [[\"destroy\", \"nitrogen; nitrates\"], [\"destroy\", \"ammonium\"], [\"create\", \"nitrogen; nitrates\", \"soil\"]]}", "gen_tokens": 39, "prompt_tokens": 555}
+{"id": "659:5", "text": "{\"events\": [[\"move\", \"extra nitrogen\", \"soil\", \"air\"]]}", "gen_tokens": 19, "prompt_tokens": 569}
+{"id": "659:6", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 577}
+{"id": "660:1", "text": "{\"events\": [[\"create\", \"organic nitrogen\", \"soil\"], [\"destroy\", \"atmospheric nitrogen\"], [\"move\", \"atmospheric nitrogen\", \"soil\", \"soil\"]]}", "gen_tokens": 42, "prompt_tokens": 524}
+{"id": "660:2", "text": "{\"events\": [[\"move\", \"organic nitrogen\", \"soil\", \"plants\"], [\"destroy\", \"organic nitrogen\"], [\"create\", \"plants\", \"soil\"]]}", "gen_tokens": 36, "prompt_tokens": 532}
+{"id": "660:3", "text": "{\"events\": [[\"move\", \"organic nitrogen\", \"soil\", \"animals\"]]}", "gen_tokens": 19, "prompt_tokens": 537}
+{"id": "660:4", "text": "{\"events\": [[\"destroy\", \"plants\"], [\"destroy\", \"animals\"]]}", "gen_tokens": 17, "prompt_tokens": 542}
+{"id": "660:5", "text": "{\"events\": [[\"create\", \"wastes\", \"surface\"]]}", "gen_tokens": 15, "prompt_tokens": 547}
+{"id": "660:6", "text": "{\"events\": [[\"convert\", \"organic nitrogen\", \"ammonium\"]]}", "gen_tokens": 17, "prompt_tokens": 556}
+{"id": "660:7", "text": "{\"events\": [[\"convert\", \"ammonium\", \"nitrate\"]]}", "gen_tokens": 17, "prompt_tokens": 567}
+{"id": "660:8", "text": "{\"events\": [[\"destroy\", \"nitrate\"], [\"create\", \"nitrogen gas\", \"soil\"]]}}", "gen_tokens": 24, "prompt_tokens": 576}
+{"id": "660:9", "text": "{\"events\": [[\"move\", \"nitrogen gas\", \"soil\", \"atmosphere\"]]}", "gen_tokens": 22, "prompt_tokens": 586}
+{"id": "661:1", "text": "{\"events\": [[\"create\", \"ammonium\", \"?\"]]}", "gen_tokens": 15, "prompt_tokens": 522}
+{"id": "661:2", "text": "{\"events\": [[\"destroy\", \"ammonium\"], [\"create\", \"nitrates\", \"soil\"]]}\n\n**Explanation:**  \n- \"Ammonium\" is destroyed (converted into nitrates).  \n- \"Nitrates\" are created in the \"soil\" (implied by the context of bacterial activity in soil).", "gen_tokens": 71, "prompt_tokens": 538}
+{"id": "661:3", "text": "{\"events\": [[\"create\", \"nitrates\", \"surface\"], [\"move\", \"nitrates\", \"surface\", \"plants\"]]}", "gen_tokens": 30, "prompt_tokens": 549}
+{"id": "661:4", "text": "{\"events\": [[\"create\", \"plant\", \"soil\"]]}", "gen_tokens": 15, "prompt_tokens": 558}
+{"id": "661:5", "text": "{\"events\": [[\"move\", \"nitrates\", \"soil\", \"plant\"], [\"create\", \"amino acids\", \"plant\"], [\"create\", \"nucleic acids\", \"plant\"], [\"create\", \"chlorophyll\", \"plant\"]]}", "gen_tokens": 54, "prompt_tokens": 588}
+{"id": "661:6", "text": "{\"events\": [[\"create\", \"ammonium\", \"soil\"]]}", "gen_tokens": 17, "prompt_tokens": 599}
+{"id": "661:7", "text": "{\"events\": [[\"destroy\", \"plant\"], [\"destroy\", \"animal\"], [\"create\", \"ammonium\", \"soil\"]]}", "gen_tokens": 29, "prompt_tokens": 629}
+{"id": "661:8", "text": "{\"events\": [[\"move\", \"nitrates\", \"soil\", \"air\"], [\"destroy\", \"nitrates\"], [\"create\", \"nitrogen\", \"air\"]]}", "gen_tokens": 38, "prompt_tokens": 647}
+{"id": "661:9", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 658}
+{"id": "695:1", "text": "{\"events\": [[\"create\", \"vapor; steam; water vapor\", \"rivers or lakes or the ocean\"]]}", "gen_tokens": 26, "prompt_tokens": 531}
+{"id": "695:2", "text": "{\"events\": [[\"move\", \"water\", \"rivers or lakes or the ocean\", \"air\"], [\"move\", \"vapor; steam; water vapor\", \"rivers or lakes or the ocean\", \"air\"]]}", "gen_tokens": 47, "prompt_tokens": 546}
+{"id": "695:3", "text": "{\"events\": [[\"move\", \"water vapor; steam; water vapor\", \"surface\", \"air\"], [\"destroy\", \"water vapor; steam; water vapor\"], [\"create\", \"clouds\", \"air\"]]}\n\n**Explanation:**\n- \"Water vapor in the air gets cold\" implies the vapor is moving from the surface (where it was originally) to the air (where it is now), but since it's already in the air, this is more about cooling and changing state.\n- \"Changes back into liquid\" implies the vapor is being destroyed (used up) as it condenses.\n- \"Forming clouds\" implies the creation of \"clouds\" in the air.", "gen_tokens": 140, "prompt_tokens": 568}
+{"id": "695:4", "text": "{\"events\": [[\"create\", \"rain\", \"air\"], [\"create\", \"hail\", \"air\"], [\"create\", \"sleet\", \"air\"], [\"create\", \"snow\", \"air\"]]}", "gen_tokens": 43, "prompt_tokens": 586}
+{"id": "695:5", "text": "{\"events\": [[\"move\", \"water vapor; steam; water vapor\", \"air\", \"earth\"], [\"create\", \"rain\", \"earth\"], [\"create\", \"hail\", \"earth\"], [\"create\", \"sleet\", \"earth\"], [\"create\", \"snow\", \"earth\"]]}", "gen_tokens": 61, "prompt_tokens": 605}
+{"id": "695:6", "text": "{\"events\": [[\"move\", \"water\", \"earth\", \"ground water\"]]}", "gen_tokens": 18, "prompt_tokens": 635}
+{"id": "695:7", "text": "{\"events\": [[\"move\", \"water\", \"land\", \"oceans, lakes, or rivers\"]]}", "gen_tokens": 23, "prompt_tokens": 653}
+{"id": "696:1", "text": "{\"events\": [[\"create\", \"water vapor\", \"air\"]]}", "gen_tokens": 15, "prompt_tokens": 501}
+{"id": "696:2", "text": "{\"events\": [[\"destroy\", \"water vapor\"], [\"create\", \"water droplets\", \"air\"]]}", "gen_tokens": 23, "prompt_tokens": 515}
+{"id": "696:3", "text": "{\"events\": [[\"move\", \"water droplets\", \"air\", \"cloud\"]]}", "gen_tokens": 19, "prompt_tokens": 525}
+{"id": "696:4", "text": "{\"events\": [[\"move\", \"water droplets\", \"air\", \"cloud\"], [\"create\", \"cloud\", \"air\"]]}", "gen_tokens": 28, "prompt_tokens": 534}
+{"id": "696:5", "text": "{\"events\": [[\"destroy\", \"water vapor\"], [\"create\", \"water droplets\", \"cloud\"], [\"move\", \"water droplets\", \"air\", \"cloud\"], [\"create\", \"cloud\", \"air\"], [\"destroy\", \"water droplets\"], [\"create\", \"cloud\", \"cloud\"]]}", "gen_tokens": 63, "prompt_tokens": 540}
+{"id": "696:6", "text": "{\"events\": [[\"create\", \"rain\", \"cloud\"]]}", "gen_tokens": 14, "prompt_tokens": 544}
+{"id": "697:1", "text": "{\"events\": [[\"create\", \"water\", \"bodies of water\"]]}", "gen_tokens": 17, "prompt_tokens": 498}
+{"id": "697:2", "text": "{\"events\": [[\"move\", \"water\", \"bodies of water\", \"air\"], [\"create\", \"clouds\", \"air\"]]}", "gen_tokens": 30, "prompt_tokens": 502}
+{"id": "697:3", "text": "{\"events\": [[\"move\", \"clouds\", \"?\", \"surface\"]]}", "gen_tokens": 17, "prompt_tokens": 510}
+{"id": "697:4", "text": "{\"events\": [[\"destroy\", \"clouds\"]]}", "gen_tokens": 12, "prompt_tokens": 523}
+{"id": "697:5", "text": "{\"events\": [[\"move\", \"clouds\", \"above areas\", \"areas below the clouds\"], [\"create\", \"rain\", \"areas below the clouds\"]]}", "gen_tokens": 34, "prompt_tokens": 533}
+{"id": "1031:1", "text": "{\"events\": [[\"destroy\", \"plant or animal\"], [\"create\", \"sediment\", \"mud or soil\"]]}", "gen_tokens": 26, "prompt_tokens": 507}
+{"id": "1031:2", "text": "{\"events\": [[\"destroy\", \"plant or animal\"], [\"create\", \"bones\", \"mud or soil\"]]}", "gen_tokens": 25, "prompt_tokens": 511}
+{"id": "1031:3", "text": "{\"events\": [[\"move\", \"bones\", \"surface\", \"mud or soil\"], [\"create\", \"sediment\", \"mud or soil\"]]}", "gen_tokens": 33, "prompt_tokens": 520}
+{"id": "1031:4", "text": "{\"events\": [[\"create\", \"rock\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 525}
+{"id": "1031:5", "text": "{\"events\": [[\"destroy\", \"rock\"], [\"create\", \"fossil\", \"surface\"]]}", "gen_tokens": 21, "prompt_tokens": 531}
+{"id": "1032:1", "text": "{\"events\": [[\"destroy\", \"animals\"], [\"destroy\", \"plants\"], [\"create\", \"bones and hard tissues ; remains\", \"wet environment\"]]}", "gen_tokens": 33, "prompt_tokens": 511}
+{"id": "1032:2", "text": "{\"events\": [[\"move\", \"animals\", \"wet environment\", \"mud\"], [\"move\", \"plants\", \"wet environment\", \"mud\"]]}", "gen_tokens": 35, "prompt_tokens": 518}
+{"id": "1032:3", "text": "{\"events\": [[\"destroy\", \"animals\"], [\"destroy\", \"plants\"], [\"destroy\", \"bones and hard tissues ; remains\"], [\"destroy\", \"sediment\"], [\"destroy\", \"rock\"]]}", "gen_tokens": 41, "prompt_tokens": 523}
+{"id": "1032:4", "text": "{\"events\": [[\"create\", \"bones and hard tissues ; remains\", \"wet environment\"]]}", "gen_tokens": 21, "prompt_tokens": 529}
+{"id": "1032:5", "text": "{\"events\": [[\"move\", \"sediment\", \"wet environment\", \"surface\"], [\"move\", \"bones and hard tissues ; remains\", \"wet environment\", \"surface\"]]}", "gen_tokens": 39, "prompt_tokens": 542}
+{"id": "1032:6", "text": "{\"events\": [[\"create\", \"rock\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 549}
+{"id": "1033:1", "text": "{\"events\": [[\"destroy\", \"animal\"]]}", "gen_tokens": 11, "prompt_tokens": 496}
+{"id": "1033:2", "text": "{\"events\": [[\"move\", \"animal\", \"surface\", \"mud\"], [\"create\", \"skeleton\", \"mud\"]]}", "gen_tokens": 29, "prompt_tokens": 501}
+{"id": "1033:3", "text": "{\"events\": [[\"destroy\", \"animal\"]]}", "gen_tokens": 11, "prompt_tokens": 512}
+{"id": "1033:4", "text": "{\"events\": [[\"create\", \"rock\", \"mud\"], [\"move\", \"skeleton\", \"mud\", \"mud\"]]}", "gen_tokens": 30, "prompt_tokens": 521}
+{"id": "1033:5", "text": "{\"events\": [[\"destroy\", \"skeleton\"]]}", "gen_tokens": 12, "prompt_tokens": 526}
+{"id": "1033:6", "text": "{\"events\": [[\"create\", \"mold\", \"mud\"]]}", "gen_tokens": 16, "prompt_tokens": 538}
+{"id": "1145:1", "text": "{\"events\": [[\"create\", \"red giant star\", \"?\"]]}", "gen_tokens": 15, "prompt_tokens": 508}
+{"id": "1145:2", "text": "{\"events\": [[\"destroy\", \"hydrogen fuel\"], [\"destroy\", \"hydrogen atoms\"], [\"create\", \"helium atoms\", \"red giant star\"]]}", "gen_tokens": 34, "prompt_tokens": 516}
+{"id": "1145:3", "text": "{\"events\": [[\"destroy\", \"hydrogen atoms\"], [\"create\", \"helium atoms\", \"?\"]]}", "gen_tokens": 23, "prompt_tokens": 527}
+{"id": "1145:4", "text": "{\"events\": [[\"create\", \"helium atoms\", \"red giant star\"]]}", "gen_tokens": 18, "prompt_tokens": 538}
+{"id": "1145:5", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 550}
+{"id": "1146:1", "text": "{\"events\": [[\"create\", \"star\", \"space\"]]}", "gen_tokens": 14, "prompt_tokens": 512}
+{"id": "1146:2", "text": "{\"events\": [[\"destroy\", \"hydrogen fuel\"]]}", "gen_tokens": 13, "prompt_tokens": 517}
+{"id": "1146:3", "text": "{\"events\": [[\"destroy\", \"hydrogen\"], [\"create\", \"helium\", \"space\"]]}}", "gen_tokens": 22, "prompt_tokens": 525}
+{"id": "1146:4", "text": "{\"events\": [[\"destroy\", \"energy\"]]}", "gen_tokens": 11, "prompt_tokens": 537}
+{"id": "1146:5", "text": "{\"events\": [[\"destroy\", \"energy\"], [\"create\", \"red giant star\", \"core\"]]}\n\n**Explanation:**  \n- \"Energy\" is destroyed because the sentence states there is no longer energy to keep the star from collapsing.  \n- \"Red giant star\" is created in the core as gravity takes over, leading to the star's collapse and subsequent formation of a red giant.", "gen_tokens": 79, "prompt_tokens": 541}
+{"id": "1146:6", "text": "{\"events\": [[\"move\", \"star\", \"space\", \"star\"]]}", "gen_tokens": 17, "prompt_tokens": 548}
+{"id": "1146:7", "text": "{\"events\": [[\"create\", \"carbon atoms\", \"star\"]]}", "gen_tokens": 15, "prompt_tokens": 558}
+{"id": "1146:8", "text": "{\"events\": [[\"move\", \"star\", \"space\", \"space\"], [\"destroy\", \"hydrogen fuel\"], [\"destroy\", \"hydrogen\"], [\"create\", \"red giant star\", \"space\"]]}", "gen_tokens": 43, "prompt_tokens": 569}
+{"id": "1146:9", "text": "{\"events\": [[\"move\", \"star\", \"space\", \"much larger than it was\"]]}", "gen_tokens": 21, "prompt_tokens": 578}
+{"id": "1146:10", "text": "{\"events\": [[\"create\", \"red giant star\", \"space\"]]}", "gen_tokens": 16, "prompt_tokens": 585}
+{"id": "1147:1", "text": "{\"events\": [[\"create\", \"helium atoms\", \"star\"], [\"destroy\", \"hydrogen atoms\", \"star\"]]}}", "gen_tokens": 27, "prompt_tokens": 521}
+{"id": "1147:2", "text": "{\"events\": [[\"destroy\", \"hydrogen\"], [\"create\", \"helium\", \"?\"]]}", "gen_tokens": 21, "prompt_tokens": 529}
+{"id": "1147:3", "text": "{\"events\": [[\"destroy\", \"hydrogen atoms\"], [\"destroy\", \"hydrogen\"], [\"create\", \"carbon atoms\", \"?\"]]}", "gen_tokens": 29, "prompt_tokens": 535}
+{"id": "1147:4", "text": "{\"events\": [[\"create\", \"carbon atoms\", \"star\"]]}", "gen_tokens": 15, "prompt_tokens": 545}
+{"id": "1147:5", "text": "{\"events\": [[\"move\", \"star\", \"core\", \"surface\"]]}", "gen_tokens": 17, "prompt_tokens": 555}
+{"id": "1147:6", "text": "{\"events\": [[\"create\", \"red giant star\", \"surface\"]]}", "gen_tokens": 16, "prompt_tokens": 563}
+{"id": "1188:1", "text": "{\"events\": [[\"create\", \"comet\", \"outer space\"]]}", "gen_tokens": 16, "prompt_tokens": 495}
+{"id": "1188:2", "text": "{\"events\": [[\"move\", \"comet\", \"outer space\", \"planet\"]]}", "gen_tokens": 19, "prompt_tokens": 500}
+{"id": "1188:3", "text": "{\"events\": [[\"move\", \"comet\", \"outer space\", \"planet's atmosphere\"]]}", "gen_tokens": 21, "prompt_tokens": 508}
+{"id": "1188:4", "text": "{\"events\": [[\"destroy\", \"comet\"], [\"create\", \"hole; crater\", \"planet's atmosphere\"]]}", "gen_tokens": 25, "prompt_tokens": 515}
+{"id": "1188:5", "text": "{\"events\": [[\"create\", \"hole; crater\", \"planet\"]]}}", "gen_tokens": 16, "prompt_tokens": 527}
+{"id": "1189:1", "text": "{\"events\": [[\"create\", \"chunks of rock\", \"meteorites\"]]}", "gen_tokens": 17, "prompt_tokens": 497}
+{"id": "1189:2", "text": "{\"events\": [[\"move\", \"chunks of rock\", \"meteorites\", \"atmosphere\"]]}", "gen_tokens": 22, "prompt_tokens": 501}
+{"id": "1189:3", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 511}
+{"id": "1189:4", "text": "{\"events\": [[\"move\", \"chunks of rock\", \"atmosphere\", \"earth\"], [\"destroy\", \"chunks of rock\"], [\"create\", \"crater\", \"earth\"]]}", "gen_tokens": 39, "prompt_tokens": 522}
+{"id": "1189:5", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 536}
+{"id": "1189:6", "text": "{\"events\": [[\"move\", \"chunks of rock\", \"atmosphere\", \"earth\"], [\"create\", \"crater\", \"earth\"]]}", "gen_tokens": 31, "prompt_tokens": 549}
+{"id": "1190:1", "text": "{\"events\": [[\"create\", \"deoxygenated blood\", \"body\"], [\"create\", \"deoxygenated blood\", \"body\"]]}", "gen_tokens": 29, "prompt_tokens": 503}
+{"id": "1190:2", "text": "{\"events\": [[\"move\", \"deoxygenated blood\", \"veins\", \"right atrium\"], [\"move\", \"oxygenated blood\", \"veins\", \"right atrium\"]]}", "gen_tokens": 41, "prompt_tokens": 508}
+{"id": "1190:3", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 518}
+{"id": "1190:4", "text": "{\"events\": [[\"move\", \"blood\", \"right atrium\", \"right ventricle\"]]}", "gen_tokens": 22, "prompt_tokens": 528}
+{"id": "1190:5", "text": "{\"events\": [[\"move\", \"blood\", \"right ventricle\", \"lungs\"]]}", "gen_tokens": 21, "prompt_tokens": 539}
+{"id": "1190:6", "text": "{\"events\": [[\"create\", \"oxygen\", \"lungs\"], [\"move\", \"deoxygenated blood\", \"right ventricle\", \"lungs\"]]}", "gen_tokens": 35, "prompt_tokens": 547}
+{"id": "1190:7", "text": "{\"events\": [[\"move\", \"oxygenated blood\", \"lungs\", \"left atrium\"]]}", "gen_tokens": 23, "prompt_tokens": 556}
+{"id": "1190:8", "text": "{\"events\": [[\"move\", \"blood\", \"right ventricle\", \"left atrium\"]]}", "gen_tokens": 22, "prompt_tokens": 565}
+{"id": "1190:9", "text": "{\"events\": [[\"move\", \"oxygenated blood\", \"left ventricle\", \"rest of the body\"], [\"move\", \"deoxygenated blood\", \"right ventricle\", \"rest of the body\"]]}", "gen_tokens": 47, "prompt_tokens": 580}
+{"id": "1190:10", "text": "{\"events\": [[\"create\", \"deoxygenated blood\", \"body\"], [\"move\", \"deoxygenated blood\", \"rest of the body\", \"heart\"]]}", "gen_tokens": 35, "prompt_tokens": 591}
+{"id": "1240:1", "text": "{\"events\": [[\"move\", \"Air\", \"outside\", \"evaporator's coils\"]]}", "gen_tokens": 21, "prompt_tokens": 511}
+{"id": "1240:2", "text": "{\"events\": [[\"destroy\", \"Heat\"], [\"create\", \"Refrigerent Gas\", \"coils\"]]}", "gen_tokens": 25, "prompt_tokens": 518}
+{"id": "1240:3", "text": "{\"events\": [[\"destroy\", \"Refrigerent Liquid\"], [\"create\", \"Refrigerent Gas\", \"evaporator's coils\"]]}", "gen_tokens": 32, "prompt_tokens": 529}
+{"id": "1240:4", "text": "{\"events\": [[\"move\", \"Refrigerent Gas\", \"evaporator's coils\", \"compressor\"], [\"create\", \"Refrigerent Gas\", \"compressor\"]]}", "gen_tokens": 40, "prompt_tokens": 540}
+{"id": "1240:5", "text": "{\"events\": [[\"move\", \"Refrigerent Gas\", \"evaporator's coils\", \"condenser\"]]}", "gen_tokens": 26, "prompt_tokens": 553}
+{"id": "1240:6", "text": "{\"events\": [[\"move\", \"Refrigerent Gas\", \"condenser\", \"condenser\"], [\"destroy\", \"Refrigerent Gas\"], [\"create\", \"Refrigerent Liquid\", \"condenser\"]]}", "gen_tokens": 47, "prompt_tokens": 567}
+{"id": "1240:7", "text": "{\"events\": [[\"destroy\", \"Heat\"]]}", "gen_tokens": 11, "prompt_tokens": 577}
+{"id": "1240:8", "text": "{\"events\": [[\"move\", \"Liquid\", \"condenser\", \"evaporator\"]]}", "gen_tokens": 20, "prompt_tokens": 587}
+{"id": "725:1", "text": "{\"events\": [[\"create\", \"soft tissues\", \"watery environment\"], [\"create\", \"sediment\", \"watery environment\"], [\"create\", \"rock\", \"watery environment\"], [\"destroy\", \"plant; animal\"], [\"move\", \"plant; animal\", \"watery environment\", \"buried in mud and silt\"]]}", "gen_tokens": 70, "prompt_tokens": 531}
+{"id": "725:2", "text": "{\"events\": [[\"destroy\", \"soft tissues\"], [\"destroy\", \"plant; animal\"], [\"create\", \"bones\", \"watery environment\"]]}", "gen_tokens": 31, "prompt_tokens": 541}
+{"id": "725:3", "text": "{\"events\": [[\"create\", \"rock\", \"surface\"], [\"move\", \"sediment\", \"surface\", \"surface\"]]}", "gen_tokens": 27, "prompt_tokens": 554}
+{"id": "725:4", "text": "{\"events\": [[\"destroy\", \"bones\"], [\"create\", \"minerals\", \"surface\"]]}", "gen_tokens": 21, "prompt_tokens": 582}
+{"id": "725:5", "text": "{\"events\": [[\"destroy\", \"bones\"], [\"create\", \"stone replica; fossil\", \"surface\"]]}", "gen_tokens": 23, "prompt_tokens": 595}
+{"id": "725:6", "text": "{\"events\": [[\"create\", \"stone replica; fossil\", \"surface\"]]}", "gen_tokens": 17, "prompt_tokens": 611}
+{"id": "726:1", "text": "{\"events\": [[\"create\", \"animal\", \"surface\"]]}", "gen_tokens": 14, "prompt_tokens": 505}
+{"id": "726:2", "text": "{\"events\": [[\"destroy\", \"animal\"]]}", "gen_tokens": 11, "prompt_tokens": 508}
+{"id": "726:3", "text": "{\"events\": [[\"destroy\", \"animal\"]]}", "gen_tokens": 11, "prompt_tokens": 512}
+{"id": "726:4", "text": "{\"events\": [[\"move\", \"animal's skeleton\", \"surface\", \"bottom of an ocean\"]]}", "gen_tokens": 22, "prompt_tokens": 524}
+{"id": "726:5", "text": "{\"events\": [[\"move\", \"animal's skeleton\", \"ocean\", \"bottom of ocean\"], [\"move\", \"mud; sand\", \"bottom of ocean\", \"bottom of ocean\"], [\"create\", \"rock\", \"bottom of ocean\"]]}", "gen_tokens": 52, "prompt_tokens": 531}
+{"id": "726:6", "text": "{\"events\": [[\"move\", \"mud; sand\", \"bottom of an ocean\", \"bottom of an ocean\"], [\"move\", \"mud; sand\", \"bottom of an ocean\", \"bottom of an ocean\"]]}", "gen_tokens": 47, "prompt_tokens": 540}
+{"id": "726:7", "text": "{\"events\": [[\"move\", \"mud; sand\", \"bottom of an ocean\", \"bottom of an ocean\"], [\"move\", \"rock\", \"bottom of an ocean\", \"bottom of an ocean\"]]}", "gen_tokens": 44, "prompt_tokens": 552}
+{"id": "726:8", "text": "{\"events\": [[\"destroy\", \"mud; sand\"], [\"create\", \"rock\", \"bottom of an ocean\"]]}", "gen_tokens": 26, "prompt_tokens": 560}
+{"id": "726:9", "text": "{\"events\": [[\"destroy\", \"animal's skeleton\"]]}", "gen_tokens": 13, "prompt_tokens": 568}
+{"id": "726:10", "text": "{\"events\": [[\"create\", \"hole\", \"rock\"]]}", "gen_tokens": 14, "prompt_tokens": 582}
+{"id": "727:1", "text": "{\"events\": [[\"destroy\", \"animal\"], [\"create\", \"soft tissues\", \"animal\"], [\"create\", \"bones\", \"animal\"]]}", "gen_tokens": 30, "prompt_tokens": 510}
+{"id": "727:2", "text": "{\"events\": [[\"move\", \"animal\", \"surface\", \"watery environment\"], [\"move\", \"soft tissues\", \"surface\", \"watery environment\"], [\"move\", \"bones\", \"surface\", \"watery environment\"], [\"move\", \"mud; silt\", \"surface\", \"watery environment\"], [\"move\", \"rock\", \"surface\", \"watery environment\"], [\"move\", \"minerals\", \"surface\", \"watery environment\"]]}", "gen_tokens": 95, "prompt_tokens": 516}
+{"id": "727:3", "text": "{\"events\": [[\"destroy\", \"soft tissues\"]]}", "gen_tokens": 12, "prompt_tokens": 523}
+{"id": "727:4", "text": "{\"events\": [[\"destroy\", \"soft tissues\"], [\"create\", \"bones\", \"watery environment\"]]}", "gen_tokens": 23, "prompt_tokens": 529}
+{"id": "727:5", "text": "{\"events\": [[\"move\", \"mud; silt\", \"?\", \"bones\"], [\"create\", \"rock\", \"bones\"]]}", "gen_tokens": 29, "prompt_tokens": 541}
+{"id": "727:6", "text": "{\"events\": [[\"destroy\", \"mud; silt\"], [\"create\", \"rock\", \"surface\"]]}", "gen_tokens": 24, "prompt_tokens": 550}
+{"id": "727:7", "text": "{\"events\": [[\"destroy\", \"bones\"]]}", "gen_tokens": 11, "prompt_tokens": 555}
+{"id": "727:8", "text": "{\"events\": [[\"create\", \"minerals\", \"rock\"]]}", "gen_tokens": 15, "prompt_tokens": 560}
+{"id": "727:9", "text": "{\"events\": [[\"destroy\", \"soft tissues\"], [\"destroy\", \"bones\"], [\"create\", \"fossil\", \"rock\"]]}", "gen_tokens": 28, "prompt_tokens": 565}
+{"id": "727:10", "text": "{\"events\": [[\"create\", \"fossil\", \"surface\"]]}", "gen_tokens": 15, "prompt_tokens": 570}
+{"id": "791:1", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 494}
+{"id": "791:2", "text": "{\"events\": [[\"create\", \"DC electricity\", \"solar cells\"], [\"create\", \"AC electricity\", \"solar cells\"]]}", "gen_tokens": 29, "prompt_tokens": 500}
+{"id": "791:3", "text": "{\"events\": [[\"create\", \"DC electricity\", \"sunlight\"]]}", "gen_tokens": 16, "prompt_tokens": 511}
+{"id": "791:4", "text": "{\"events\": [[\"move\", \"DC electricity\", \"solar cells\", \"inverter\"], [\"create\", \"AC electricity\", \"inverter\"]]}", "gen_tokens": 32, "prompt_tokens": 525}
+{"id": "791:5", "text": "{\"events\": [[\"move\", \"DC electricity\", \"inverter\", \"home\"], [\"move\", \"AC electricity\", \"inverter\", \"home\"]]}", "gen_tokens": 33, "prompt_tokens": 536}
+{"id": "791:6", "text": "{\"events\": [[\"move\", \"AC electricity\", \"home\", \"main power grid\"], [\"move\", \"DC electricity\", \"solar cells\", \"main power grid\"]]}", "gen_tokens": 37, "prompt_tokens": 549}
+{"id": "896:1", "text": "{\"events\": [[\"create\", \"oxygen-depleted blood ; blood\", \"right atrium\"]]}", "gen_tokens": 22, "prompt_tokens": 508}
+{"id": "896:2", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 510}
+{"id": "896:3", "text": "{\"events\": [[\"move\", \"oxygen-depleted blood ; blood\", \"right atrium\", \"right ventricle\"]]}", "gen_tokens": 28, "prompt_tokens": 531}
+{"id": "896:4", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 546}
+{"id": "896:5", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 552}
+{"id": "896:6", "text": "{\"events\": [[\"move\", \"oxygen-depleted blood ; blood\", \"heart\", \"pulmonary artery\"], [\"move\", \"oxygen-depleted blood ; blood\", \"pulmonary artery\", \"lungs\"]]}", "gen_tokens": 48, "prompt_tokens": 571}
+{"id": "896:7", "text": "{\"events\": [[\"create\", \"oxygenated blood ; blood\", \"lungs\"]]}", "gen_tokens": 20, "prompt_tokens": 578}
+{"id": "896:8", "text": "{\"events\": [[\"move\", \"oxygenated blood ; blood\", \"pulmonary artery\", \"left atrium\"]]}", "gen_tokens": 27, "prompt_tokens": 589}
+{"id": "896:9", "text": "{\"events\": [[\"move\", \"oxygenated blood ; blood\", \"left atrium\", \"body\"]]}", "gen_tokens": 24, "prompt_tokens": 600}
+{"id": "903:1", "text": "{\"events\": [[\"move\", \"visible light; light\", \"?\", \"inside the camera\"], [\"create\", \"image\", \"inside the camera\"]]}", "gen_tokens": 32, "prompt_tokens": 498}
+{"id": "903:2", "text": "{\"events\": [[\"move\", \"visible light; light\", \"lens\", \"retina\"]]}", "gen_tokens": 22, "prompt_tokens": 502}
+{"id": "903:3", "text": "{\"events\": [[\"absorb\", \"light\", \"retina\", \"photoreceptor cells\"]]}", "gen_tokens": 22, "prompt_tokens": 512}
+{"id": "903:4", "text": "{\"events\": [[\"create\", \"chemical energy\", \"retina\"]]}", "gen_tokens": 16, "prompt_tokens": 519}
+{"id": "903:5", "text": "{\"events\": [[\"create\", \"image\", \"brain\"]]}", "gen_tokens": 14, "prompt_tokens": 531}
+{"id": "904:1", "text": "{\"events\": [[\"create\", \"small image\", \"retina's rods and cones\"]]}", "gen_tokens": 20, "prompt_tokens": 511}
+{"id": "904:2", "text": "{\"events\": [[\"move\", \"light\", \"lens\", \"retina's rods and cones\"], [\"create\", \"small image\", \"retina's rods and cones\"]]}", "gen_tokens": 38, "prompt_tokens": 514}
+{"id": "904:3", "text": "{\"events\": [[\"convert\", \"retina's rods and cones\", \"small image\", \"electrical pulses\"]]}", "gen_tokens": 25, "prompt_tokens": 526}
+{"id": "904:4", "text": "{\"events\": [[\"move\", \"electrical pulses\", \"retina's rods and cones\", \"optic nerve\"]]}", "gen_tokens": 25, "prompt_tokens": 537}
+{"id": "904:5", "text": "{\"events\": [[\"create\", \"lateral geniculate nucleus\", \"brain\"], [\"create\", \"visual cortex\", \"brain\"]]}", "gen_tokens": 29, "prompt_tokens": 553}
+{"id": "927:1", "text": "{\"events\": [[\"create\", \"rain\", \"?\"]]}", "gen_tokens": 13, "prompt_tokens": 509}
+{"id": "927:2", "text": "{\"events\": [[\"move\", \"rain water; water\", \"air\", \"land\"]]}", "gen_tokens": 20, "prompt_tokens": 519}
+{"id": "927:3", "text": "{\"events\": [[\"destroy\", \"rain water; water\"], [\"create\", \"rain water; water\", \"ground\"]]}", "gen_tokens": 26, "prompt_tokens": 531}
+{"id": "927:4", "text": "{\"events\": [[\"move\", \"rain water; water\", \"ground\", \"above the ground\"]]}", "gen_tokens": 22, "prompt_tokens": 544}
+{"id": "927:5", "text": "{\"events\": [[\"move\", \"rain water; water\", \"ground\", \"surface\"], [\"destroy\", \"land\"], [\"destroy\", \"plants\"], [\"destroy\", \"trees\"]]}", "gen_tokens": 38, "prompt_tokens": 556}
+{"id": "927:6", "text": "{\"events\": [[\"destroy\", \"land\"], [\"destroy\", \"plants\"], [\"destroy\", \"trees\"]]}", "gen_tokens": 23, "prompt_tokens": 563}
+{"id": "932:1", "text": "{\"events\": [[\"move\", \"water\", \"?\", \"rocks\"]]}", "gen_tokens": 17, "prompt_tokens": 498}
+{"id": "932:2", "text": "{\"events\": [[\"create\", \"chemicals\", \"water\"]]}", "gen_tokens": 15, "prompt_tokens": 502}
+{"id": "932:3", "text": "{\"events\": [[\"destroy\", \"chemicals\"], [\"destroy\", \"rocks\"], [\"create\", \"oxygen\", \"surface\"]]}", "gen_tokens": 29, "prompt_tokens": 508}
+{"id": "932:4", "text": "{\"events\": [[\"destroy\", \"rocks\"], [\"create\", \"different kind of rock\", \"location?\"]]}", "gen_tokens": 25, "prompt_tokens": 517}
+{"id": "932:5", "text": "{\"events\": [[\"move\", \"oxygen\", \"air\", \"rocks\"]]}", "gen_tokens": 19, "prompt_tokens": 525}
+{"id": "932:6", "text": "{\"events\": [[\"destroy\", \"rocks\"], [\"create\", \"different kind of rock\", \"location?\"]]}", "gen_tokens": 25, "prompt_tokens": 534}
+{"id": "933:1", "text": "{\"events\": [[\"create\", \"water\", \"?\"], [\"create\", \"carbon dioxide\", \"?\"]]}", "gen_tokens": 22, "prompt_tokens": 501}
+{"id": "933:2", "text": "{\"events\": [[\"change\", \"water\", \"carbon dioxide\", \"acidic\"]]}", "gen_tokens": 19, "prompt_tokens": 503}
+{"id": "933:3", "text": "{\"events\": [[\"move\", \"water\", \"surface\", \"mineral based material\"]]}", "gen_tokens": 20, "prompt_tokens": 514}
+{"id": "933:4", "text": "{\"events\": [[\"destroy\", \"water\"], [\"destroy\", \"carbon dioxide\"], [\"create\", \"rock\", \"surface\"]]}", "gen_tokens": 27, "prompt_tokens": 526}
+{"id": "933:5", "text": "{\"events\": []}", "gen_tokens": 6, "prompt_tokens": 532}

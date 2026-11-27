@@ -1,0 +1,23 @@
+B54 predictions (prereg/B54_mlc_cells_prereg.md, stamped before the test) against the test run (results/b54_verdict.txt)
+
+P1 H1-MLC at each memory's best b: TABLE WIN at 30 d and 1 d, Delta <= -4 at every k.
+   30 d Delta -6 / -6 / -5 / -5 / -4 / -5; 1 d -7 / -6 / -6 / -4 / -3 / -5 (k1 ... k32). Labels TABLE WIN at both
+   times, but 1 d k16 is -3 (binary rows, B52 (c): VSA 304 vs E-LDPC 181) -> FAILED (margin, not label).
+P2 H1-MLC at b = 2 and b = 3 separately: TABLE WIN, Delta <= -3 at every k: 30 d b2 -8/-6/-5/-4/-4/-8, b3
+   -6/-5/-5/-5/-7/-6; 1 d b2 -8/-6/-5/-5/-3/-5, b3 -7/-6/-5/-3/-4/-3 -> HELD.
+P3 MLC >= 2 steps below binary at k1 for every memory (both times): 4-6 steps for all five; at k8, k16, k32 (30 d)
+   no MLC N* >= 2 steps below binary (best MLC is 0 to 7 steps above) -> HELD.
+P4 VSA store's overhead smallest of five memories at k8 / k16, b = 1, 2, 3, best b, both times (16 cases):
+   smallest in 15, tied in 1 (30 d k16 b = 3: V-last 38.05x = E-LDPC 38.05x) -> FAILED (15 + 1 tie of 16).
+P5 k1 30 d: V-last b = 3 >= 4 steps below b = 1 (27 vs 76: 6 steps), packed design at k1 for b = 2, 3 -> HELD.
+P6 test N* within +-2 steps of dev N* (V-last, E-LDPC, E-BCH, T-vhdd, every MLC condition dev reached): 0 misses -> HELD.
+P7 checks: device re-read 0 / 27 flagged; demapper 24 / 24 conditions identical on every bit; second scorer 2,868 /
+   2,868 keys agree for each of the 5 arms; N* recomputed 0 mismatches of 136 curves; closed form T-rep 0 / 70 flagged,
+   E-BCH 25 / 74 flagged with 23 above the closed form but 2 BELOW (m3-k8-1d, B = 2,435 and 2,896: sim 92.4 / 99.0
+   vs closed 100.0) -> FAILED (the "every E-BCH flag above" part).
+   Cause (not tested further): the tables' contents are not whitened; with 3 bits per cell a stored bit's error rate
+   depends on the other bits in its cell, so at high noise the skewed contents make errors data-dependent and
+   asymmetric, which a binomial at the mean rate does not capture. The registered expectation that the skew only
+   favours the tables is therefore wrong at high noise; it does not touch any N* that decides a bar (at k8+ every
+   table's best b is 1).
+5 of 7 held.

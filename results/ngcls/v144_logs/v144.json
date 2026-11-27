@@ -1,0 +1,80 @@
+{
+ "prereg": "v144_prereg.md",
+ "model": "/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct",
+ "imported_sha256_16": {
+  "v135.py": "29bb1271739234ae",
+  "v133_task.py": "b4093d12857a4633",
+  "v133a.py": "1f07683c880ea941"
+ },
+ "depth": 2,
+ "n_train": 100,
+ "n_eval": 120,
+ "epochs": 3,
+ "rank": 16,
+ "lr": 0.0001,
+ "banked_V135_plain": {
+  "120": 0.925,
+  "250": 0.9417,
+  "500": 0.9,
+  "1000": 0.75,
+  "2000": 0.25
+ },
+ "banked_V135_store": {
+  "120": 1.0,
+  "250": 0.9972,
+  "500": 1.0,
+  "1000": 1.0,
+  "2000": 0.9972
+ },
+ "K": {
+  "120": {
+   "prompt_tokens": 1361,
+   "lora": {
+    "42": {
+     "em": 0.975,
+     "first_loss": 1.1172372061573146,
+     "final_loss": 0.06534629164199131,
+     "converged": true
+    }
+   },
+   "plain_same_harness": 0.0,
+   "lora_mean_all": 0.975,
+   "lora_mean_converged": 0.975,
+   "minutes": 15.186187410354615
+  },
+  "1000": {
+   "prompt_tokens": 10625,
+   "lora": {
+    "42": {
+     "em": 0.825,
+     "first_loss": 2.138502146410656,
+     "final_loss": 0.08397292340995306,
+     "converged": true
+    }
+   },
+   "plain_same_harness": 0.0,
+   "lora_mean_all": 0.825,
+   "lora_mean_converged": 0.825,
+   "minutes": 93.19312239090601
+  },
+  "2000": {
+   "prompt_tokens": 21128,
+   "lora": {
+    "42": {
+     "em": 0.9166666666666666,
+     "first_loss": 2.538392624220287,
+     "final_loss": 0.02666177675351573,
+     "converged": true
+    }
+   },
+   "plain_same_harness": 0.0,
+   "lora_mean_all": 0.9166666666666666,
+   "lora_mean_converged": 0.9166666666666666,
+   "minutes": 203.17512182394663
+  }
+ },
+ "verdict": {
+  "all-seed": "REFUTED: the fine-tune rescues it (within 10 points of the store)",
+  "converged-only": "REFUTED: the fine-tune rescues it (within 10 points of the store)"
+ }
+}

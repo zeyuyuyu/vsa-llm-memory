@@ -1,0 +1,72 @@
+B47 FT {"n": {"train": 8000, "dev": 500}, "max_len": {"train": 492, "dev": 490}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.32s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.53s/it]
+Traceback (most recent call last):
+  File "/data1/path/to/work/b47/b47_ft.py", line 366, in <module>
+    main()
+  File "/data1/path/to/work/b47/b47_ft.py", line 352, in main
+    rec, code = run(a, tok, D_, a.device)
+  File "/data1/path/to/work/b47/b47_ft.py", line 172, in run
+    m = build(a, tok).to(dev)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1174, in to
+    return self._apply(convert)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 805, in _apply
+    param_applied = fn(param)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1160, in convert
+    return t.to(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 500.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 189.19 MiB is free. Process 3827618 has 68.78 GiB memory in use. Including non-PyTorch memory, this process has 10.27 GiB memory in use. Of the allocated memory 9.87 GiB is allocated by PyTorch, and 555.50 KiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+B47 FT {"n": {"train": 800, "dev": 500}, "max_len": {"train": 490, "dev": 490}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.21s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.55s/it]
+Traceback (most recent call last):
+  File "/data1/path/to/work/b47/b47_ft.py", line 366, in <module>
+    main()
+  File "/data1/path/to/work/b47/b47_ft.py", line 350, in main
+    rec, code = L.run(scratch_args(a), tok, D_, a.device)
+  File "/data1/path/to/work/b47/b44_lora.py", line 247, in run
+    loss = m.loss(b, dev)
+  File "/data1/path/to/work/b47/b44_lora.py", line 120, in loss
+    h = inner.model(input_ids=ids.to(dev), attention_mask=am.to(dev)).last_hidden_state
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/transformers/models/phi/modeling_phi.py", line 401, in forward
+    layer_outputs = decoder_layer(
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/transformers/models/phi/modeling_phi.py", line 249, in forward
+    feed_forward_hidden_states = self.resid_dropout(self.mlp(hidden_states))
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/transformers/models/phi/modeling_phi.py", line 206, in forward
+    hidden_states = self.fc2(hidden_states)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/peft/tuners/lora/layer.py", line 771, in forward
+    result = result + lora_B(lora_A(dropout(x))) * scaling
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/modules/dropout.py", line 59, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/path/to/HOME/miniconda3/envs/dino_wm/lib/python3.9/site-packages/torch/nn/functional.py", line 1295, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 78.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 3.19 MiB is free. Process 3827618 has 68.78 GiB memory in use. Including non-PyTorch memory, this process has 10.45 GiB memory in use. Of the allocated memory 9.92 GiB is allocated by PyTorch, and 36.59 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

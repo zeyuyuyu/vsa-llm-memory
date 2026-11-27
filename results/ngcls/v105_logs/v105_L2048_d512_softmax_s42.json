@@ -1,0 +1,20 @@
+{
+ "max_len": 2048,
+ "d": 512,
+ "majority": 0.141,
+ "seq_len_mean": 497.5,
+ "arms": {
+  "softmax": [
+   0.293
+  ]
+ },
+ "log": [
+  {
+   "arm": "softmax",
+   "seed": 42,
+   "epoch_sec": 617.2,
+   "peak_gb": 36.6,
+   "recovered_from_log": "v105_12722931_18.out"
+  }
+ ]
+}

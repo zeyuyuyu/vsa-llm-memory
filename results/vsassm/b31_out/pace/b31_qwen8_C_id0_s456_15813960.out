@@ -1,0 +1,36 @@
+---------------------------------------
+Begin Slurm Prolog: Nov-18-2026 06:29:53
+Job ID:    15813960
+User ID:   <user>
+Account:   gts-nimam6
+Job name:  b31_qwen8_C_id0_s456
+Partition: gpu-h200
+QOS:       inferno
+---------------------------------------
+B31-PACE start 2026-11-18T11:29:53Z host atl1-1-03-019-2-0.pace.gatech.edu job 15813960
+NVIDIA H200, 143771 MiB
+B31 LoRA {"n": {"train": 800, "dev": 500, "test": 500}, "max_len": {"train": 520, "dev": 520, "test": 519}, "gpu": "NVIDIA H200"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.55s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:04,  1.59s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:04<00:03,  1.51s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:05<00:01,  1.46s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:06<00:00,  1.20s/it]
+  qwen8 C r8 lr3e-04 id0 sd456 ep1 loss 0.9391 train_sub 0.5060 dev 0.5020 (98s)
+  qwen8 C r8 lr3e-04 id0 sd456 ep2 loss 0.9792 train_sub 0.6680 dev 0.4840 (195s)
+  qwen8 C r8 lr3e-04 id0 sd456 ep3 loss 0.8279 train_sub 0.6940 dev 0.4980 (293s)
+  qwen8 C r8 lr3e-04 id0 sd456 ep4 loss 0.7020 train_sub 0.7640 dev 0.5000 (390s)
+  qwen8 C r8 lr3e-04 id0 sd456 ep5 loss 0.4276 train_sub 0.9740 dev 0.6100 (488s)
+  qwen8 C r8 lr3e-04 id0 sd456 ep6 loss 0.1344 train_sub 0.9920 dev 0.6780 (585s)
+  qwen8 C r8 lr3e-04 id0 sd456 ep7 loss 0.0295 train_sub 1.0000 dev 0.6520 (683s)
+  qwen8 C r8 lr3e-04 id0 sd456 ep8 loss 0.0001 train_sub 1.0000 dev 0.6300 (780s)
+  TEST qwen8 C seed 456 at dev-best epoch 6: 0.6580
+B31-PACE end 2026-11-18T11:44:39Z rc=0
+---------------------------------------
+Begin Slurm Epilog: Nov-18-2026 06:44:40
+Job ID:        15813960
+User ID:       <user>
+Account:       gts-nimam6
+Job name:      b31_qwen8_C_id0_s456
+Resources:     cpu=8,gres/gpu:h200=1,mem=120G,node=1
+Rsrc Used:     cput=01:58:24,vmem=0,walltime=00:14:48,mem=14345556K,energy_used=0
+Partition:     gpu-h200
+QOS:           inferno
+Nodes:         atl1-1-03-019-2-0
+---------------------------------------

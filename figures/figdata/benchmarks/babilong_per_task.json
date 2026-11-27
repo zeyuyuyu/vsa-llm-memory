@@ -1,0 +1,317 @@
+{
+ "_about": "BABILong accuracy per task (QA1-QA5, per cent) at one million and ten million tokens, ours against ARMT; main Fig. 2b (figs/fig2_benchmarks.pdf). Built by program on 2026-11-11 (scratch builder build_pertask.py); make_figures.py re-checks every `line` and `text` against `file` when the file is present.",
+ "tasks": [
+  {
+   "id": "qa1",
+   "label": "QA1",
+   "name": "single supporting fact"
+  },
+  {
+   "id": "qa2",
+   "label": "QA2",
+   "name": "two supporting facts"
+  },
+  {
+   "id": "qa3",
+   "label": "QA3",
+   "name": "three supporting facts"
+  },
+  {
+   "id": "qa4",
+   "label": "QA4",
+   "name": "two-argument relations"
+  },
+  {
+   "id": "qa5",
+   "label": "QA5",
+   "name": "three-argument relations"
+  }
+ ],
+ "lengths": [
+  "1M",
+  "10M"
+ ],
+ "ours": {
+  "label": "ours (fine-tuned 1.7B reader + memory)",
+  "colour_key": "ours",
+  "values": {
+   "1M": {
+    "qa1": {
+     "value": 100.0,
+     "text": "1.000",
+     "n": 25,
+     "correct": 25,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 17,
+     "line": "qa1    1.000   0.990   1.000   0.990   1.000   1.000   1.000",
+     "column": "1M",
+     "source": "vsassm/results/b18_verdict.txt line 17, per-task table row 'qa1', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')"
+    },
+    "qa2": {
+     "value": 100.0,
+     "text": "1.000",
+     "n": 25,
+     "correct": 25,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 18,
+     "line": "qa2    1.000   0.980   1.000   1.000   1.000   1.000   1.000",
+     "column": "1M",
+     "source": "vsassm/results/b18_verdict.txt line 18, per-task table row 'qa2', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')"
+    },
+    "qa3": {
+     "value": 100.0,
+     "text": "1.000",
+     "n": 25,
+     "correct": 25,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 19,
+     "line": "qa3    0.990   0.990   1.000   1.000   1.000   1.000   1.000",
+     "column": "1M",
+     "source": "vsassm/results/b18_verdict.txt line 19, per-task table row 'qa3', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')"
+    },
+    "qa4": {
+     "value": 100.0,
+     "text": "1.000",
+     "n": 25,
+     "correct": 25,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 20,
+     "line": "qa4    1.000   1.000   1.000   1.000   1.000   1.000   1.000",
+     "column": "1M",
+     "source": "vsassm/results/b18_verdict.txt line 20, per-task table row 'qa4', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')"
+    },
+    "qa5": {
+     "value": 100.0,
+     "text": "1.000",
+     "n": 25,
+     "correct": 25,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 21,
+     "line": "qa5    0.990   0.930   0.960   0.990   0.990   1.000   1.000",
+     "column": "1M",
+     "source": "vsassm/results/b18_verdict.txt line 21, per-task table row 'qa5', column 1M (fraction 1.000; n = 25 per task: line 11 '- 100 per task at 0k / 4k / 16k / 64k / 128k; 25 per task at 512k / 1M.')"
+    }
+   },
+   "10M": {
+    "qa1": {
+     "value": 100.0,
+     "text": "qa1 5/5",
+     "n": 5,
+     "correct": 5,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 58,
+     "line": "  qa1 5/5   qa2 5/5   qa3 5/5   qa4 5/5   qa5 5/5      QA1-5 10M: 25/25 = 100.0, Wilson 95% [86.7, 100]",
+     "source": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa1 5/5'"
+    },
+    "qa2": {
+     "value": 100.0,
+     "text": "qa2 5/5",
+     "n": 5,
+     "correct": 5,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 58,
+     "line": "  qa1 5/5   qa2 5/5   qa3 5/5   qa4 5/5   qa5 5/5      QA1-5 10M: 25/25 = 100.0, Wilson 95% [86.7, 100]",
+     "source": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa2 5/5'"
+    },
+    "qa3": {
+     "value": 100.0,
+     "text": "qa3 5/5",
+     "n": 5,
+     "correct": 5,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 58,
+     "line": "  qa1 5/5   qa2 5/5   qa3 5/5   qa4 5/5   qa5 5/5      QA1-5 10M: 25/25 = 100.0, Wilson 95% [86.7, 100]",
+     "source": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa3 5/5'"
+    },
+    "qa4": {
+     "value": 100.0,
+     "text": "qa4 5/5",
+     "n": 5,
+     "correct": 5,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 58,
+     "line": "  qa1 5/5   qa2 5/5   qa3 5/5   qa4 5/5   qa5 5/5      QA1-5 10M: 25/25 = 100.0, Wilson 95% [86.7, 100]",
+     "source": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa4 5/5'"
+    },
+    "qa5": {
+     "value": 100.0,
+     "text": "qa5 5/5",
+     "n": 5,
+     "correct": 5,
+     "file": "../results/vsassm/results/b18_verdict.txt",
+     "line_no": 58,
+     "line": "  qa1 5/5   qa2 5/5   qa3 5/5   qa4 5/5   qa5 5/5      QA1-5 10M: 25/25 = 100.0, Wilson 95% [86.7, 100]",
+     "source": "vsassm/results/b18_verdict.txt line 58 ('## 10M tokens' section): 'qa5 5/5'"
+    }
+   }
+  },
+  "note": "Qwen3-1.7B + LoRA reader fine-tuned on the BABILong training split plus the memory; official test set; 1M: the first 25 of 100 questions per task; 10M: the first 5 per task"
+ },
+ "armt": {
+  "label": "ARMT 145M, fine-tuned",
+  "colour_key": "armt",
+  "values": {
+   "1M": {
+    "qa1": {
+     "value": 98.5,
+     "sd": 1.0,
+     "text": "98.5±1.0",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 10,
+     "line": " ARMT (145M)                             100±0.0    99.9±0.2    99.3±0.9    98.5±1.0    89.4±8.1    49,6±40.4 (79,9*)",
+     "column": "1M",
+     "section": "QA1 – SINGLE SUPPORTING FACT",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA1 – SINGLE SUPPORTING FACT', row 'ARMT (145M)', column 1M: 98.5±1.0 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 10"
+    },
+    "qa2": {
+     "value": 99.4,
+     "sd": 0.3,
+     "text": "99.4±0.3",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 16,
+     "line": " ARMT (145M)                             100±0.0    99.8±0.2    99.4±0.3    99.4±0.3    84.4±4.0    -",
+     "column": "1M",
+     "section": "QA2 – TWO SUPPORTING FACTS",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA2 – TWO SUPPORTING FACTS', row 'ARMT (145M)', column 1M: 99.4±0.3 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 16"
+    },
+    "qa3": {
+     "value": 72.1,
+     "sd": 14.2,
+     "text": "72.1±14.2",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 22,
+     "line": " ARMT (145M)                             90.4±2.2   86.0±4.8    79.7±10.8   72.1±14.2   37.0±10.3   -",
+     "column": "1M",
+     "section": "QA3 – THREE SUPPORTING FACTS",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA3 – THREE SUPPORTING FACTS', row 'ARMT (145M)', column 1M: 72.1±14.2 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 22"
+    },
+    "qa4": {
+     "value": 99.8,
+     "sd": 0.3,
+     "text": "99.8±0.3",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 28,
+     "line": " ARMT (145M)                             100±0.1    100±0.1     99.9±0.2    99.8±0.3    91.5±1.7    -",
+     "column": "1M",
+     "section": "QA4 – TWO ARG RELATIONS",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA4 – TWO ARG RELATIONS', row 'ARMT (145M)', column 1M: 99.8±0.3 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 28"
+    },
+    "qa5": {
+     "value": 97.3,
+     "sd": 0.6,
+     "text": "97.3±0.6",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 34,
+     "line": " ARMT (145M)                             99.0±0.3   98.7±0.4    98.4±0.3    97.3±0.6    80.9±7.6    -",
+     "column": "1M",
+     "section": "QA5 – THREE ARG RELATIONS",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA5 – THREE ARG RELATIONS', row 'ARMT (145M)', column 1M: 97.3±0.6 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 34"
+    }
+   },
+   "10M": {
+    "qa1": {
+     "value": 89.4,
+     "sd": 8.1,
+     "text": "89.4±8.1",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 10,
+     "line": " ARMT (145M)                             100±0.0    99.9±0.2    99.3±0.9    98.5±1.0    89.4±8.1    49,6±40.4 (79,9*)",
+     "column": "10M",
+     "section": "QA1 – SINGLE SUPPORTING FACT",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA1 – SINGLE SUPPORTING FACT', row 'ARMT (145M)', column 10M: 89.4±8.1 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 10"
+    },
+    "qa2": {
+     "value": 84.4,
+     "sd": 4.0,
+     "text": "84.4±4.0",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 16,
+     "line": " ARMT (145M)                             100±0.0    99.8±0.2    99.4±0.3    99.4±0.3    84.4±4.0    -",
+     "column": "10M",
+     "section": "QA2 – TWO SUPPORTING FACTS",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA2 – TWO SUPPORTING FACTS', row 'ARMT (145M)', column 10M: 84.4±4.0 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 16"
+    },
+    "qa3": {
+     "value": 37.0,
+     "sd": 10.3,
+     "text": "37.0±10.3",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 22,
+     "line": " ARMT (145M)                             90.4±2.2   86.0±4.8    79.7±10.8   72.1±14.2   37.0±10.3   -",
+     "column": "10M",
+     "section": "QA3 – THREE SUPPORTING FACTS",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA3 – THREE SUPPORTING FACTS', row 'ARMT (145M)', column 10M: 37.0±10.3 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 22"
+    },
+    "qa4": {
+     "value": 91.5,
+     "sd": 1.7,
+     "text": "91.5±1.7",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 28,
+     "line": " ARMT (145M)                             100±0.1    100±0.1     99.9±0.2    99.8±0.3    91.5±1.7    -",
+     "column": "10M",
+     "section": "QA4 – TWO ARG RELATIONS",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA4 – TWO ARG RELATIONS', row 'ARMT (145M)', column 10M: 91.5±1.7 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 28"
+    },
+    "qa5": {
+     "value": 80.9,
+     "sd": 7.6,
+     "text": "80.9±7.6",
+     "file": "figdata/benchmarks/armt_table1_arxiv2407.04841.txt",
+     "line_no": 34,
+     "line": " ARMT (145M)                             99.0±0.3   98.7±0.4    98.4±0.3    97.3±0.6    80.9±7.6    -",
+     "column": "10M",
+     "section": "QA5 – THREE ARG RELATIONS",
+     "source": "Rodkin et al., Associative Recurrent Memory Transformer, arXiv:2407.04841, Table 1, section 'QA5 – THREE ARG RELATIONS', row 'ARMT (145M)', column 10M: 80.9±7.6 (mean ± s.d. of 3 runs); text layer of the arXiv PDF, figdata/benchmarks/armt_table1_arxiv2407.04841.txt line 34"
+    }
+   }
+  },
+  "paper": {
+   "citation": "Rodkin, Kuratov, Bulatov, Burtsev. Associative Recurrent Memory Transformer. arXiv:2407.04841 (ICML 2024 Next Generation of Sequence Modeling Architectures Workshop)",
+   "pdf_url": "https://arxiv.org/pdf/2407.04841",
+   "pdf_md5": "01f8bef5ef96841fdd3acd96bc9dce2e",
+   "pdf_created": "2025-02-17",
+   "downloaded": "2026-11-11",
+   "page": 10,
+   "table_caption": "Table 1: Exact match metric on QA1-5 Babilong subsets. Each column corresponds to some constant context length. Context includes both noise sentences and facts. * The 50M exact-match on QA1 is measured on 1 best model. ARMT rows are 3 runs averaged. Mamba rows are 2 runs averaged. The metric is marked bold if its ±std interval intersects the ±std interval of the best model."
+  },
+  "note": "published numbers, not rerun; means of 3 runs; the s.d. is recorded but not drawn"
+ },
+ "cross_checks": {
+  "b18_quote_10M": {
+   "values": [
+    89.4,
+    84.4,
+    37.0,
+    91.5,
+    80.9
+   ],
+   "file": "../results/vsassm/results/b18_verdict.txt",
+   "line_no": 62,
+   "line": "Reference: ARMT (Rodkin et al. 2024, Table 1) at 10M: QA1 89.4, QA2 84.4, QA3 37.0, QA4 91.5, QA5 80.9; mean 76.6.",
+   "source": "vsassm/results/b18_verdict.txt line 62 quotes the same Table 1 row at 10M"
+  },
+  "leaderboard": {
+   "file": "figdata/benchmarks/babilong_leaderboard_v0_results.csv",
+   "origin": "Hugging Face space RMT-team/babilong, data/leaderboard-v0_results.csv, space sha 90b74f9eed89b0bd385594ad23fbd9dad7000b8d (lastModified 2026-06-01); copied from the session scratch file lb/lb.csv",
+   "row": "~ ARMT (137M) fine-tune",
+   "cells_1M": {
+    "qa1": "99",
+    "qa2": "99",
+    "qa3": "72",
+    "qa4": "100",
+    "qa5": "93.4",
+    "avg": "93.4"
+   },
+   "cells_10M": {
+    "qa1": "89",
+    "qa2": "84",
+    "qa3": "37",
+    "qa4": "92",
+    "qa5": "76.6",
+    "avg": "76.6"
+   },
+   "defect": "the leaderboard's ARMT qa5 row equals its avg row from 4k onward (4k 98.1 ... 1M 93.4, 10M 76.6), so its qa5 cells at 1M and 10M are the QA1-5 mean, not QA5; the paper's Table 1 gives QA5 = 97.3 (1M) and 80.9 (10M), and with those the mean of the five tasks reproduces the leaderboard's avg (93.4, 76.6)"
+  }
+ }
+}

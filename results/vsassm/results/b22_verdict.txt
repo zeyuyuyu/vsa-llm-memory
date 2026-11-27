@@ -1,0 +1,49 @@
+# B22 verdict (prereg/B22_hardware_robustness_prereg.md + amendments 1-2): the RULER vector stores under hardware-like
+# precision, read noise and failed components, 2026-11-14
+
+Stores: 50 real B21 stores rebuilt from the saved pairs (first 10 samples of niah_multikey_2 at 128k and 32k,
+niah_multikey_3 at 128k, niah_multivalue at 128k, vt at 128k; up to 5,995 pairs in 375 vectors). 4,776 probed keys
+(up to 150 per store). A key is exact if the store returns the table's values in order. Threshold fixed at 0.5.
+Float baseline reproduces B21's own store (asserted) and reads 4776 / 4776.
+
+Registered conditions (results/b22_robust.json, b22_run.log):
+  precision b = 2, 3, 4, 6, 8 bits:          4776 / 4776 exact at every b
+  precision b = 1 (registered quantizer):    4648 / 4776 = 0.9732 (20 of 50 stores fully exact)
+     | 8 pairs per vector                    4723 / 4776 = 0.9889
+     | 4 pairs per vector                    4554 / 4776 = 0.9535
+     | d = 16384                             4762 / 4776 = 0.9971
+  read noise r = 0.25, 0.5, 1, 2:            4776 / 4776 exact at every r (and every trade at r = 2)
+  failed components p = 0.05 ... 0.3:        4776 / 4776 exact at every p (and every trade at p = 0.3)
+  b = 2 trades:                              exact
+Bars:
+  - H1 (b = 4 reads >= 99.5% exactly): PASS, 100%.
+  - H2 (r = 0.5 reads >= 99.5% exactly): PASS, 100%.
+  - H3 (every default condition below 99.5% is restored to >= 99.5% by one trade): PASS; the only such condition is
+    b = 1, and d = 16384 restores 99.71%.
+Predictions: b >= 3, r <= 0.5, p <= 0.1 indistinguishable from float: held. b = 1 between 90% and 99.5%: held (97.3%).
+b = 2 >= 99.5%: held (100%). r = 2 and p = 0.3 below 99.5%: WRONG (both 100%): the store is more robust than predicted.
+
+Amendment 1 (added levels, descriptive, results/b22_robust_ext.json):
+  read noise r = 3: 0.9914; r = 4: 0.7385; r = 6: 0.0976; r = 8: 0.0523
+  failed components p = 0.4: 1.0000; p = 0.5: 0.4889; p = 0.6: 0.0002; p = 0.7: 0.0000
+  The failure cliff at p = 0.5 is the fixed threshold: zeroing a fraction p of the components scales the signal by
+  1 - p, which reaches the threshold of 0.5 at p = 0.5 whatever the load.
+
+Amendment 2 (post hoc; the registered 1-bit quantizer maps the all-zero imaginary part and the frequent ties of
+even-sized +-1 sums to +1, which is why 4 pairs per vector read worse than 16). Usual bipolar 1-bit store: real part
+only, sign, random ties (results/b22_robust_bip.json):
+  16 per vector 4776 / 4776; 8 per vector 4776 / 4776; 4 per vector 4776 / 4776; d = 16384 4776 / 4776.
+Sanity check that the 1-bit path constrains the store (three 128k multikey_2 stores of ~5,990 pairs, 150 keys each):
+  64 pairs per vector 150/150 in all three; 128 per vector 115, 124, 117 / 150; 256 per vector 0 / 150.
+  So a store of single bits holds 64 but not 128 pairs per vector at d = 8,192 with about 6,000 candidates; the
+  RULER load (mean 15.5, at most 38) is well inside it.
+
+Literature check: bipolar / binary hyperdimensional representations are robust to component failures and noise
+(Kanerva 2009; Kleyko et al. 2022 survey), and in-memory phase-change hardware has run associative search on
+binarized hypervectors (Karunaratne et al. 2020) -- consistent (supporting). Our addition is that the stores of a
+real benchmark, filled by a language model, stay exact under these conditions.
+
+Amendment 1 trades at the first added level below 99.5% (results/b22_robust_ext_trades.json):
+  read noise r = 3 (0.9914): 8 per vector 0.9998; 4 per vector 1.0000; d = 16384 1.0000 -> restored.
+  failed components p = 0.5 (0.4889): 8 per vector 0.5025; 4 per vector 0.5132; d = 16384 0.5121 -> not restored,
+  as expected from the threshold: the signal is 1 - p = 0.5 whatever the load or the length.

@@ -1,0 +1,35 @@
+# B58 sample reading by the AI-assisted process (not independent): failed probed keys of the protected store one grid step below its test N*, with the cause read from the decoded bits and the similarities.
+== P-LDPC k8 B=152 (N* 181): share 0.9412, 7 stores with failures
+  131072/niah_multikey_3/43865 key 'cf96b101-8faa-4434-9dc2-0220c7ab9664' (design b=76 0.5): want ['43d01968-229a-4808-8e4f-11b7d57f3a28'] got ['99a7b165-63b3-4667-887d-2f19e0098285', '1bf23b21-6f60-45d4-b33b-eb8dbf3561af'] | decoded-bit errors in its shard 1025 of 8072 | j=0 similarity true value 0.039, best other 0.033 (true value still best)
+  131072/niah_multikey_3/43865 key '8253556c-b063-4c61-973f-111b3a5d7688' (design b=76 0.5): want ['a45605dd-ebb5-4dcc-a0ef-ae978ad346dd'] got ['aae14cfa-ec07-418d-bc07-0bfde21e3928'] | decoded-bit errors in its shard 1025 of 8072 | j=0 similarity true value 0.037, best other 0.038 (another value wins)
+  32768/niah_multikey_2/42249 key 'cuddly-stepson' (design b=76 0.5): want ['2197665'] got ['7867903'] | decoded-bit errors in its shard 975 of 7975 | j=0 similarity true value 0.036, best other 0.039 (another value wins)
+  32768/niah_multikey_2/42249 key 'stormy-spill' (design b=76 0.5): want ['2313659'] got ['7674593', '4974981'] | decoded-bit errors in its shard 964 of 7975 | j=0 similarity true value 0.024, best other 0.036 (another value wins)
+== P-LDPC k16 B=609 (N* 724): share 0.9851, 27 stores with failures
+  131072/niah_multikey_2/234552 key 'proud-incentive' (design b=108 0.9): want ['7915983'] got ['4014875', '4813464'] | decoded-bit errors in its shard 1096 of 8163 | j=0 similarity true value 0.038, best other 0.036 (true value still best)
+  131072/niah_multikey_2/162015 key 'cagey-goat' (design b=108 0.9): want ['2013775'] got ['6991629'] | decoded-bit errors in its shard 1090 of 8167 | j=0 similarity true value 0.042, best other 0.042 (another value wins)
+== P-LDPC lines-nat-k8 B=181 (N* 215): share 0.9946, 20 stores with failures
+  131072/niah_multikey_2/162015 key 'fine-theater' (design b=128 0.75): want ['2219915'] got ['6205314'] | decoded-bit errors in its shard 1036 of 8163 | j=0 similarity true value 0.033, best other 0.041 (another value wins)
+  131072/niah_multikey_2/339871 key 'huge-disposal' (design b=128 0.75): want ['1406192'] got ['8685524', '5365570'] | decoded-bit errors in its shard 943 of 8157 | j=0 similarity true value 0.044, best other 0.049 (another value wins)
+== P-BCH k8 B=108 (N* 304): share 0.9595, 24 stores with failures
+  131072/niah_multikey_2/95106 key 'noisy-attendance' (design b=91 1): want ['9529707'] got ['1628710', '3210858'] | decoded-bit errors in its shard 1111 of 8091 | j=0 similarity true value 0.035, best other 0.039 (another value wins)
+  131072/niah_multikey_2/95106 key 'exultant-reorganisation' (design b=91 1): want ['9746854'] got ['8980158'] | decoded-bit errors in its shard 1097 of 8091 | j=0 similarity true value 0.045, best other 0.047 (another value wins)
+  131072/niah_multikey_2/350510 key 'shy-talent' (design b=91 1): want ['7193080'] got ['1768251'] | decoded-bit errors in its shard 1082 of 8090 | j=0 similarity true value 0.037, best other 0.043 (another value wins)
+  131072/niah_multikey_2/350510 key 'hungry-brush' (design b=91 1): want ['5838121'] got ['2449589'] | decoded-bit errors in its shard 1123 of 8090 | j=0 similarity true value 0.025, best other 0.042 (another value wins)
+P-BCH k16: no uncensored budget below N*
+== P-BCH lines-nat-k8 B=609 (N* 724): share 0.9937, 16 stores with failures
+  131072/niah_multikey_3/189443 key '56fffaf5-dae5-412f-ab29-d4e936a9306a' (design b=91 38): want ['ce4ac16b-f77a-4276-9a37-43f340f8ff2d'] got ['e2d439d3-10b6-429a-990e-e42022917f97', '04a31851-4ad2-490e-9e50-c6365a70a188'] | decoded-bit errors in its shard 684 of 8088 | j=0 similarity true value 0.045, best other 0.033 (true value still best)
+  32768/niah_multikey_2/2699 key 'highfalutin-soap' (design b=91 38): want ['5485638'] got ['1459100'] | decoded-bit errors in its shard 720 of 7948 | j=0 similarity true value 0.041, best other 0.041 (another value wins)
+
+# Notes (B59; AI-assisted reading of the keys above, not independent)
+# - The "N*" in the headers above is b58_check.sample's own recomputation from the B59-run test files only (the B58
+#   evaluations reused by B59 are not in those files), so it can differ from the verdict's N* (e.g. P-BCH k8: header
+#   304, verdict 152). The verdict (results/b59_store_verdict.txt) is authoritative; every cell read here lies below the
+#   verdict's N* of its family (P-LDPC k8 152 < 181; P-LDPC k16 609 < 724; P-LDPC lines-nat-k8 181 < 215; P-BCH k8
+#   108 < 152; P-BCH lines-nat-k8 609 < 724).
+# - Cause, the same in all 16 keys: the key's shard was not decoded (residual decoded-bit errors 684-1,123 of
+#   7,948-8,167 bits, 8-14%, i.e. the code failed and passed on the channel's errors), and the store's read of those
+#   noisy bits lost by a small similarity margin (true value 0.024-0.045 against best other 0.033-0.049; in 4 keys the
+#   true value still led at position 0 and a later position / the LAST tag failed). The protected store fails exactly
+#   where its code fails; where the code decodes, the read is the store's noise-free read. That is why coding cannot
+#   beat the uncoded store: the uncoded store spends the same cells on more information bits per pair (lower
+#   cross-talk) and tolerates the residual errors itself.

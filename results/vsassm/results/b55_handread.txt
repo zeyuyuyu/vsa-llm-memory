@@ -1,0 +1,29 @@
+# B55 hand-read (sample drawn by b55_verdict.py, fixed seed; raw records in results/b55_handread_raw.txt). Seed 0.
+# For each item I read the gold (type, x, y), each module's decoded read and answer, its gate, and what the LLM wrote.
+# Classes: READ = a decoded operand / entity is wrong; WRITE = the module's answer is right but the LLM wrote something
+# else; GATE = the gate closed and the frozen LLM's own answer was wrong.
+
+Task N, rho 0 (12 of the 139 trained-type items where N-ARG and N-DISC disagree)
+- N-ARG right, N-DISC wrong (10): DISC READ 5 (1488 x 639->649; 846 y 498->598; 714 y 213->203; 170 y 449->459;
+  1938 y 270->260), DISC WRITE 5 (222 module 780, wrote 880; 1912 886 -> 786; 1907 1023 -> 1022; 56 100 -> 200;
+  1940 misread y 29->39 but the answer 319 is unchanged, wrote 309). In two of these the thresholded read also fails by
+  zeroing a weak digit (846 y -> 98; 56 y -> 0), which is what the argmax read repairs.
+- N-ARG wrong, N-DISC right (2): 1550 READ (y 199 -> 299, same misread under the threshold); 1101 GATE (type
+  similarity 0.785 < 0.8, the frozen LLM wrote 729 for 716).
+- Reading: at noise 0 the argmax VSA module's edge over DISC comes from fewer operand misreads AND from DISC's
+  write-back not being followed (5 of 10), i.e. partly from the write-back parametrisation, not only from the read.
+
+Task N, rho 0.25 (12 of 629 disagreements)
+- N-ARG wrong, N-DISC right (11): all READ, one or two operand digits read as a neighbouring wrong digit (364, 195,
+  1490, 1683, 1332, 779, 1845, 1049, 1605, 1376, 1144); in every case the thresholded read misreads the same item (often
+  also zeroing a digit). Type read and gate were right in all 11; the LLM wrote the module's (wrong) answer each time.
+- N-ARG right, N-DISC wrong (1): 1157 DISC READ (y 260 -> 250).
+- Reading: under read noise the VSA module's losses are read errors of the digit clean-up, with or without the
+  threshold; nothing in the write-back or the gate.
+
+Task R, rho 2 (12 of 877 disagreements; all R-ARG wrong, R-DISC right)
+- All 12 READ: at least one mention read wrongly (per-item read-ok fraction 0.76-0.95), so the walk follows a wrong
+  edge and ends in a wrong room with the gate open (hops 1-6). In 2 items (707, 971) the LLM also did not write the
+  module's (already wrong) room. DISC read every mention right in all 12.
+- Reading: once mentions are cleaned up, the task-R VSA module fails only where its per-mention read fails; DISC's
+  classifier read survives that noise level.

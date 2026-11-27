@@ -1,0 +1,8 @@
+# B73 equal-cell checks (prereg/B73_cells_prereg.md; b73_cells_check.py)
+Plain-loop scorer: 9450 result rows; exact count = n - |failed| on every row (0 mismatches); pooled N* recomputed by plain loops for 21 (memory, k) + 6 static / insert minima: 0 differences of 27.
+Cells audit: 8739 feasible rows, 0 over floor(B x n_pairs), 0 off the grid, 0 with budget != floor(B x n_pairs); 711 rows infeasible (design does not fit the store at that budget; not counted, B38 / B69's convention).
+Frozen-design audit: 0 rows with a design other than results/b73_cells_frozen.json's at their (condition, budget); code MD5 equal to the frozen table: True.
+Determinism re-run: 92 of 1830 jobs (seed 'b73cells-det', every memory: {'T-rep': 4, 'E-BCH': 7, 'O-LDPC': 27, 'U': 15, 'E-LDPC': 10, 'H-SBC': 18, 'O-BCH': 11}), 496 store evaluations re-run from scratch: 496 identical (failed-key lists and cell counts), 0 missing, 0 differing.
+Leakage / independence: 91977 fresh key strings, 92056 fresh value strings; exact matches with any key or value string of ruler_test, dev, b69_sweep_dev, b69_sweep_test: ruler_test 0 keys / 0 values, dev 0 keys / 0 values, b69_sweep_dev 0 keys / 0 values, b69_sweep_test 0 keys / 0 values.
+  after lower-casing and removing non-alphanumerics (secondary): ruler_test 1 / 1, dev 1 / 0, b69_sweep_dev 2 / 0, b69_sweep_test 7 / 3 (independent draws of common word pairs, e.g. ['crazyhedge', 'doubtfuldivorce']; codes are generated from exact strings).
+Lost cuckoo insertions: none on any fresh store (results/b73_cells_verdict.json 'lost').

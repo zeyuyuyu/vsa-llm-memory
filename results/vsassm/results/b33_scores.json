@@ -1,0 +1,1163 @@
+{
+ "gates": {
+  "G-DIST": false,
+  "G-FRESH": true,
+  "G0": true,
+  "G1": true,
+  "G2": true,
+  "G3/r16_e6_lr0.0001": true,
+  "G3/r8_e2_lr0.0001": false,
+  "blocking_all_pass": true
+ },
+ "sets": {
+  "fresh": {
+   "arms": {
+    "memory naming head, comm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, perm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, roles, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, rtag, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, shift, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, comm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, perm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, roles, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, rtag, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, shift, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, comm, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory naming head, perm, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory naming head, roles, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory naming head, rtag, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory naming head, shift, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory exact rows, comm, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory exact rows, perm, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory exact rows, roles, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory exact rows, rtag, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "memory exact rows, shift, published parse": {
+     "per_seed": [
+      0.863,
+      0.863,
+      0.863
+     ],
+     "mean": 0.863,
+     "ci_story_boot": [
+      0.837,
+      0.888
+     ]
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.968,
+      0.965,
+      0.96
+     ],
+     "mean": 0.9643333333333334,
+     "ci_story_boot": [
+      0.9536666666666667,
+      0.9743333333333334
+     ]
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.983,
+      0.956,
+      0.963
+     ],
+     "mean": 0.9673333333333334,
+     "ci_story_boot": [
+      0.9563333333333334,
+      0.9773333333333334
+     ]
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.824,
+      0.677,
+      0.808
+     ],
+     "mean": 0.7696666666666667,
+     "ci_story_boot": [
+      0.7416583333333334,
+      0.7973333333333333
+     ]
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.881,
+      0.914,
+      0.79
+     ],
+     "mean": 0.8616666666666667,
+     "ci_story_boot": [
+      0.8406666666666667,
+      0.8823333333333333
+     ]
+    },
+    "prompting (V-49 zero-shot)": {
+     "per_seed": [
+      0.357
+     ],
+     "mean": 0.357,
+     "ci_story_boot": [
+      0.318,
+      0.395
+     ]
+    },
+    "_memory_errors": []
+   },
+   "contrasts": {
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.03200000000000003,
+      0.03500000000000003,
+      0.040000000000000036
+     ],
+     "mean": 0.0356666666666667,
+     "ci": [
+      0.025666666666666615,
+      0.04633333333333334
+     ],
+     "reading": "MEMORY AHEAD, BELOW THE TEN-POINT BAR"
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.017000000000000015,
+      0.04400000000000004,
+      0.03700000000000003
+     ],
+     "mean": 0.0326666666666667,
+     "ci": [
+      0.022666666666666613,
+      0.04366666666666663
+     ],
+     "reading": "NO CLEAR DIFFERENCE"
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.17600000000000005,
+      0.32299999999999995,
+      0.19199999999999995
+     ],
+     "mean": 0.2303333333333333,
+     "ci": [
+      0.20266666666666666,
+      0.2583416666666665
+     ],
+     "reading": "MEMORY LEADS"
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.119,
+      0.08599999999999997,
+      0.20999999999999996
+     ],
+     "mean": 0.1383333333333333,
+     "ci": [
+      0.1176666666666667,
+      0.15933333333333333
+     ],
+     "reading": "MEMORY AHEAD, BELOW THE TEN-POINT BAR"
+    },
+    "prompting (V-49 zero-shot)": {
+     "per_seed": [
+      0.643,
+      0.643,
+      0.643
+     ],
+     "mean": 0.643,
+     "ci": [
+      0.605,
+      0.6819999999999999
+     ],
+     "reading": ""
+    }
+   }
+  },
+  "hfrest": {
+   "arms": {
+    "memory naming head, comm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, perm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, roles, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, rtag, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, shift, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, comm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, perm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, roles, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, rtag, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, shift, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, comm, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory naming head, perm, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory naming head, roles, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory naming head, rtag, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory naming head, shift, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory exact rows, comm, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory exact rows, perm, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory exact rows, roles, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory exact rows, rtag, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "memory exact rows, shift, published parse": {
+     "per_seed": [
+      0.874,
+      0.874,
+      0.874
+     ],
+     "mean": 0.874,
+     "ci_story_boot": [
+      0.84,
+      0.906
+     ]
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.966,
+      0.974,
+      0.97
+     ],
+     "mean": 0.97,
+     "ci_story_boot": [
+      0.96,
+      0.9793333333333333
+     ]
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.974,
+      0.966,
+      0.996
+     ],
+     "mean": 0.9786666666666667,
+     "ci_story_boot": [
+      0.9706666666666667,
+      0.986
+     ]
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.838,
+      0.712,
+      0.858
+     ],
+     "mean": 0.8026666666666666,
+     "ci_story_boot": [
+      0.7666666666666667,
+      0.836
+     ]
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.88,
+      0.94,
+      0.836
+     ],
+     "mean": 0.8853333333333333,
+     "ci_story_boot": [
+      0.86,
+      0.9093333333333333
+     ]
+    },
+    "prompting (V-49 zero-shot)": {
+     "per_seed": [
+      0.376
+     ],
+     "mean": 0.376,
+     "ci_story_boot": [
+      0.324,
+      0.428
+     ]
+    },
+    "_memory_errors": []
+   },
+   "contrasts": {
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.03400000000000003,
+      0.026000000000000023,
+      0.030000000000000027
+     ],
+     "mean": 0.030000000000000027,
+     "ci": [
+      0.020666666666666722,
+      0.040000000000000036
+     ],
+     "reading": "MEMORY AHEAD, BELOW THE TEN-POINT BAR"
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.026000000000000023,
+      0.03400000000000003,
+      0.0040000000000000036
+     ],
+     "mean": 0.021333333333333353,
+     "ci": [
+      0.014000000000000012,
+      0.029333333333333322
+     ],
+     "reading": "NO CLEAR DIFFERENCE"
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.16200000000000003,
+      0.28800000000000003,
+      0.14200000000000002
+     ],
+     "mean": 0.19733333333333336,
+     "ci": [
+      0.16400000000000003,
+      0.23333333333333328
+     ],
+     "reading": "MEMORY LEADS"
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.12,
+      0.06000000000000005,
+      0.16400000000000003
+     ],
+     "mean": 0.1146666666666667,
+     "ci": [
+      0.09066666666666667,
+      0.14
+     ],
+     "reading": "MEMORY AHEAD, BELOW THE TEN-POINT BAR"
+    },
+    "prompting (V-49 zero-shot)": {
+     "per_seed": [
+      0.624,
+      0.624,
+      0.624
+     ],
+     "mean": 0.624,
+     "ci": [
+      0.5720000000000001,
+      0.6759999999999999
+     ],
+     "reading": ""
+    }
+   }
+  },
+  "orig500": {
+   "arms": {
+    "memory naming head, comm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, perm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, roles, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, rtag, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, shift, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, comm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, perm, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, roles, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, rtag, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory exact rows, shift, corrected parse": {
+     "per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 1.0,
+     "ci_story_boot": [
+      1.0,
+      1.0
+     ]
+    },
+    "memory naming head, comm, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory naming head, perm, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory naming head, roles, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory naming head, rtag, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory naming head, shift, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory exact rows, comm, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory exact rows, perm, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory exact rows, roles, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory exact rows, rtag, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "memory exact rows, shift, published parse": {
+     "per_seed": [
+      0.84,
+      0.84,
+      0.84
+     ],
+     "mean": 0.84,
+     "ci_story_boot": [
+      0.796,
+      0.882
+     ]
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.972,
+      0.978,
+      0.966
+     ],
+     "mean": 0.972,
+     "ci_story_boot": [
+      0.9606666666666667,
+      0.982
+     ]
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.984,
+      0.978,
+      0.982
+     ],
+     "mean": 0.9813333333333333,
+     "ci_story_boot": [
+      0.9706666666666667,
+      0.99
+     ]
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.864,
+      0.696,
+      0.858
+     ],
+     "mean": 0.806,
+     "ci_story_boot": [
+      0.776,
+      0.8346666666666667
+     ]
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.882,
+      0.938,
+      0.818
+     ],
+     "mean": 0.8793333333333333,
+     "ci_story_boot": [
+      0.85265,
+      0.904
+     ]
+    },
+    "prompting (V-49 zero-shot)": {
+     "per_seed": [
+      0.386
+     ],
+     "mean": 0.386,
+     "ci_story_boot": [
+      0.332,
+      0.44
+     ]
+    },
+    "_memory_errors": []
+   },
+   "contrasts": {
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.028000000000000025,
+      0.02200000000000002,
+      0.03400000000000003
+     ],
+     "mean": 0.028000000000000025,
+     "ci": [
+      0.018000000000000016,
+      0.03933333333333333
+     ],
+     "reading": "MEMORY AHEAD, BELOW THE TEN-POINT BAR"
+    },
+    "fine-tune best of twelve (r16, 6 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.016000000000000014,
+      0.02200000000000002,
+      0.018000000000000016
+     ],
+     "mean": 0.018666666666666682,
+     "ci": [
+      0.010000000000000009,
+      0.029333333333333322
+     ],
+     "reading": "NO CLEAR DIFFERENCE"
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on 775 (as published)": {
+     "per_seed": [
+      0.136,
+      0.30400000000000005,
+      0.14200000000000002
+     ],
+     "mean": 0.19400000000000003,
+     "ci": [
+      0.16533333333333333,
+      0.22399999999999998
+     ],
+     "reading": "MEMORY LEADS"
+    },
+    "fine-tune first configuration (r8, 2 ep, 1e-4), trained on all 900": {
+     "per_seed": [
+      0.118,
+      0.062000000000000055,
+      0.18200000000000005
+     ],
+     "mean": 0.1206666666666667,
+     "ci": [
+      0.09599999999999997,
+      0.14734999999999973
+     ],
+     "reading": "MEMORY AHEAD, BELOW THE TEN-POINT BAR"
+    },
+    "prompting (V-49 zero-shot)": {
+     "per_seed": [
+      0.614,
+      0.614,
+      0.614
+     ],
+     "mean": 0.614,
+     "ci": [
+      0.56,
+      0.6679999999999999
+     ],
+     "reading": ""
+    }
+   }
+  }
+ },
+ "bars": {
+  "fresh": {
+   "B1": true,
+   "B2": true,
+   "B3": "MEMORY AHEAD, BELOW THE TEN-POINT BAR",
+   "B4": "MEMORY LEADS"
+  },
+  "hfrest": {
+   "B1": true,
+   "B2": true,
+   "B3": "MEMORY AHEAD, BELOW THE TEN-POINT BAR",
+   "B4": "MEMORY LEADS"
+  },
+  "combined": {
+   "B1": "CONFIRMED",
+   "B2": "CONFIRMED",
+   "B3": "MEMORY AHEAD, BELOW THE TEN-POINT BAR",
+   "B4": "MEMORY LEADS"
+  },
+  "shift_flag": false
+ },
+ "predictions": {
+  "P1 blocking gates G-FRESH, G0, G1, G2 pass (G-DIST failed before registration, disclosed)": true,
+  "P2 G3: both fine-tune reruns within 0.03 of B28 per seed": false,
+  "P3 memory on fresh >= 0.995 in every seed (1.000/1.000/1.000)": true,
+  "P4 exact rows equal the naming head on fresh within 0.002 per seed": true,
+  "P5 published parse on fresh: mean in [0.78, 0.90] (0.863)": true,
+  "P6 best of twelve on fresh: mean in [0.93, 0.99] (0.964)": true,
+  "P7 first configuration on fresh: mean in [0.72, 0.90] (0.770)": true,
+  "P8 prompting on fresh in [0.30, 0.46] (0.357)": true,
+  "P9 B1 and B2 CONFIRMED (hold on fresh and on hfrest)": true,
+  "P10 B3 reading = MEMORY AHEAD, BELOW THE TEN-POINT BAR on both sets": true,
+  "P11 B4 reading = MEMORY LEADS on both sets": true,
+  "P12 no distribution-shift flag": true,
+  "P13 hfrest: memory >= 0.98 every seed, memory - prompting >= 0.40 every seed, B3 reading as on fresh": true,
+  "P14 best of twelve trained on all 900 >= trained on the 775 on fresh (mean)": true,
+  "P15 total GPU-hours <= 4 (1.75)": true
+ },
+ "gpu_hours": 1.7486111111111111
+}

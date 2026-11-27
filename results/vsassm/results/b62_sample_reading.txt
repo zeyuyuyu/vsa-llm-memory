@@ -1,0 +1,126 @@
+# B62 sample reading by the AI-assisted process (not independent, not a hand reading): Qwen3-8B and e5-base-v2, the R1
+# cell with the lowest STORE - NLMSc and the cell with the highest; 10 queries only NLMSc answers right and 10 only the
+# store answers right, drawn with seed 62 (rep, alias, stored label, gold value, store answer, NLMSc answer, LAMc
+# answer). Material: results/b62_sample_material.txt (b62_check.py sample). Notes at the end.
+
+## qwen8 (lowest STORE - NLMSc cell) M=256 V=16 bpf=8: STORE - NLMSc -5.71; NLMSc cfg ['flat', 'V', 'whiten', 'pca', 0.5, 'avg', 1] p=126; only NLMSc right 875, only store right 606
+  only NLMSc right: (rep, alias, stored label, gold, store answer, NLMSc answer, LAMc answer)
+    (4, 'WE ARE X', 'X Japan', 4, 3, 4, 13)
+    (9, "People's Republic of Czechoslovakia", 'Czechoslovakia', 15, 11, 15, 15)
+    (11, 'F. Floris', 'Frans Floris I', 10, 7, 10, 10)
+    (5, 'John Stuart Parsons', 'John Parsons', 6, 9, 6, 8)
+    (15, 'York City', 'York City F.C.', 13, 5, 13, 13)
+    (13, 'Norwegen\u200f', 'Norway', 12, 4, 12, 12)
+    (14, 'Ferran Sor', 'Fernando Sor', 1, 2, 1, 1)
+    (12, 'Vacation (2015 film)', 'Vacation', 1, 0, 1, 4)
+    (2, 'gen. Rosa di Tivoli John Heinrich Roos', 'Johann Heinrich Roos', 5, 15, 5, 13)
+    (15, 'City of Durand', 'Durand', 13, 2, 13, 2)
+  only store right: (rep, alias, stored label, gold, store answer, NLMSc answer, LAMc answer)
+    (4, 'Marstetten', 'Märstetten', 1, 1, 2, 1)
+    (0, 'Joseph Edward Abercrombie', 'Joe Abercrombie', 15, 15, 0, 0)
+    (5, 'Matrimoni', 'Marriages', 2, 2, 9, 2)
+    (9, 'Yoshida Yugo', 'Yugo Yoshida', 4, 4, 14, 4)
+    (4, 'Yamanobe', 'Princess Yamanobe', 15, 15, 0, 7)
+    (5, 'Citta violenta', 'Città violenta', 15, 15, 12, 15)
+    (16, 'Holy Cross Voivodeship', 'Świętokrzyskie Voivodeship', 1, 1, 15, 8)
+    (10, 'Eesti', 'Estonia', 11, 11, 2, 11)
+    (6, 'Meta Department', 'Meta', 14, 14, 1, 14)
+    (5, 'Independent State of Viet Nam', 'State of Vietnam', 12, 12, 3, 1)
+## qwen8 (highest STORE - NLMSc cell) M=1024 V=16 bpf=4: STORE - NLMSc +2.23; NLMSc cfg ['col', 'V', 'whiten', 'pca', 0.25, 'avg', 1] p=224; only NLMSc right 565, only store right 662
+  only NLMSc right: (rep, alias, stored label, gold, store answer, NLMSc answer, LAMc answer)
+    (1, 'Love Love Love (Glee)', 'Love Love Love', 15, 2, 15, 15)
+    (2, 'Yoshida Yugo', 'Yugo Yoshida', 8, 14, 8, 3)
+    (2, 'Dominion of New Zealand', 'New Zealand', 1, 12, 1, 6)
+    (1, 'André Racicot, Jr.', 'André Racicot', 10, 15, 10, 3)
+    (4, 'Thing from Another World', 'The Thing from Another World', 11, 7, 11, 11)
+    (3, 'Celje city municipality', 'City Municipality of Celje', 7, 4, 7, 8)
+    (3, 'Dude: The Highway Life', 'Dude', 3, 1, 3, 3)
+    (2, 'Emperador de Mexico Maximiliano', 'Maximilian I of Mexico', 11, 12, 11, 0)
+    (0, 'Kathleen Annie Pannonica Rothschild', 'Pannonica de Koenigswarter', 8, 11, 8, 1)
+    (3, 'Worst Years of Our Lives', 'The Worst Years of Our Lives', 7, 10, 7, 7)
+  only store right: (rep, alias, stored label, gold, store answer, NLMSc answer, LAMc answer)
+    (1, 'JFC', 'Juventus F.C.', 4, 4, 5, 8)
+    (0, 'Preston, Victoria, Australia', 'Preston', 15, 15, 13, 5)
+    (1, 'el Conqueridor Jaume I', 'James I of Aragon', 12, 12, 7, 7)
+    (2, 'Quebec, Canada', 'Quebec', 12, 12, 4, 12)
+    (1, 'Ōtomo Ryūzaburō', 'Ryūzaburō Ōtomo', 3, 3, 0, 7)
+    (1, 'Campaign', 'The Campaign', 12, 12, 5, 6)
+    (4, 'Gushri Khan', 'Güshi Khan', 9, 9, 11, 6)
+    (2, 'Battement de cœur', 'Beating Heart', 13, 13, 14, 14)
+    (1, 'Sean Leslie Flynn', 'Sean Flynn', 7, 7, 15, 7)
+    (1, 'Fifth Wheel', 'The Fifth Wheel', 7, 7, 11, 1)
+## e5 (lowest STORE - NLMSc cell) M=1024 V=16 bpf=16: STORE - NLMSc -7.83; NLMSc cfg ['col', 'V', 'whiten', 'pca', 0.1, 'last', 2] p=521; only NLMSc right 635, only store right 294
+  only NLMSc right: (rep, alias, stored label, gold, store answer, NLMSc answer, LAMc answer)
+    (1, "Alceste, ou le Triomphe d'Alcide", 'Alceste', 15, 0, 15, 15)
+    (2, 'Runner', 'The Runner', 3, 13, 3, 13)
+    (2, 'The Highway', 'The Big Road', 5, 0, 5, 6)
+    (1, 'Pierre, South Dakota', 'Pierre', 3, 7, 3, 3)
+    (4, 'Nero Claudius Drusus Germanicus Caesar', 'Nero', 0, 12, 0, 0)
+    (3, 'Dêmêtêr', 'Demeter', 15, 9, 15, 15)
+    (3, 'Mukhtar Badirkhanovich Mukhtarov', 'Mukhtar Mukhtarov', 13, 2, 13, 13)
+    (3, 'Côte Divoire', 'Ivory Coast', 6, 0, 6, 3)
+    (0, 'Boutheina Jabnoun Marai', 'Boutheina Jabnoun', 8, 5, 8, 8)
+    (4, 'Prophet', 'A Prophet', 1, 6, 1, 1)
+  only store right: (rep, alias, stored label, gold, store answer, NLMSc answer, LAMc answer)
+    (1, 'Marathon', 'Saint-Étienne-de-Saint-Geoirs', 6, 6, 5, 12)
+    (0, 'City of Prague', 'Prague', 12, 12, 0, 12)
+    (1, 'Rey de Aragon Jaime I', 'James I of Aragon', 12, 12, 9, 9)
+    (2, 'Jeanne III', "Jeanne d'Albret", 4, 4, 8, 8)
+    (0, 'Seljuq Sultanate', 'Sultanate of Rum', 9, 9, 10, 10)
+    (4, 'REC Chennai', 'Rajalakshmi Engineering College', 0, 0, 12, 1)
+    (4, 'République de Guinée', 'Guinea', 3, 3, 6, 6)
+    (2, 'Yaaba', 'Grandmother', 0, 0, 11, 11)
+    (1, 'R.A. Bird', 'Edward Bird', 9, 9, 10, 10)
+    (1, 'Ein Bericht für eine Akademie', 'A Report to an Academy', 2, 2, 12, 13)
+## e5 (highest STORE - NLMSc cell) M=1024 V=2 bpf=16: STORE - NLMSc +1.75; NLMSc cfg ['col', 'V-1', 'whiten', 'rp', 0.25, 'last', 1] p=16320; only NLMSc right 903, only store right 982
+  only NLMSc right: (rep, alias, stored label, gold, store answer, NLMSc answer, LAMc answer)
+    (1, 'Republic of Ghana', 'Ghana', 0, 1, 0, 0)
+    (2, 'HI', 'Hotel Indonesia', 0, 1, 0, 1)
+    (2, 'Eiríkr', 'Eric Anundsson', 0, 1, 0, 0)
+    (1, 'Judith Salian', 'Judith of Swabia', 1, 0, 1, 1)
+    (4, 'Madison', 'James Madison', 0, 1, 0, 0)
+    (3, 'Wiesen, Bavaria', 'Wiesen', 0, 1, 0, 0)
+    (3, 'St. James the Great', 'St. James the Elder, Apostle', 1, 0, 1, 1)
+    (2, 'Dzongsar Jamyang Khyentse Rinpoche', 'The Cup', 1, 0, 1, 1)
+    (0, 'Tales of Middle Earth', "Tales of Maj'Eyal", 0, 1, 0, 0)
+    (3, 'S. Pinakapani', 'Sripada Pinakapani', 1, 0, 1, 1)
+  only store right: (rep, alias, stored label, gold, store answer, NLMSc answer, LAMc answer)
+    (0, 'Janos Ferencsik', 'János Ferencsik', 1, 1, 0, 0)
+    (0, 'Province of Cagayan', 'Cagayan', 0, 0, 1, 1)
+    (1, 'co. Dublin', 'County Dublin', 0, 0, 1, 1)
+    (2, 'Imitation Game', 'The Imitation Game', 1, 1, 0, 0)
+    (0, 'King of England and Scotland James I', 'James VI and I', 0, 0, 1, 1)
+    (1, 'Ala.', 'Alabama', 0, 0, 1, 1)
+    (4, 'People of Rome', 'Gente di Roma', 1, 1, 0, 0)
+    (2, 'Edward, King of Portugal', 'Edward I of Portugal', 1, 1, 0, 0)
+    (1, 'Rodzilla', 'Dennis Rodman', 1, 1, 0, 0)
+    (1, 'Robert Minor', 'Robert Crannell Minor', 0, 0, 1, 1)
+
+## Notes (AI-assisted reading; the labels and aliases were read, no external lookup)
+
+1. No scoring artefact seen: every sampled alias is a name of its stored label (abbreviations, other languages, added
+   or dropped articles, full or partial names), as in B60's material; the plain-loop scorer checks the counts.
+2. The lowest cells (Qwen3-8B M = 256 V = 16 8 bits per fact, -5.71; e5 M = 1,024 V = 16 16 bits per fact, -7.83) are
+   sixteen-value cells, as in B60. The queries only NLMSc reads are mostly near-copies of the label ('Runner' / 'The
+   Runner', 'Norwegen' / 'Norway', 'York City' / 'York City F.C.', 'Prophet' / 'A Prophet'), which the store misreads
+   through cross-talk; LAMc gives the same answer as NLMSc in 5 of 10 (Qwen3-8B) and 7 of 10 (e5). Among the queries
+   only the store reads, LAMc reads 6 of 10 correctly on Qwen3-8B (losses of the online write itself: the batch
+   solve would have read them) and 1 of 10 on e5, where NLMSc and LAMc give the same wrong answer in 6 of 10 (e.g.
+   'Seljuq Sultanate' / Sultanate of Rum, 'Jeanne III' / Jeanne d'Albret, 'Yaaba' / Grandmother: distant aliases,
+   errors of the least-squares solution rather than of the online write).
+3. The highest cells are where the store is ahead of NLMSc in one condition: Qwen3-8B M = 1,024 V = 16 4 bits per fact
+   (+2.23; NLMSc there wrote only p = 224 features for 1,024 facts and chose the Polyak average) and e5 M = 1,024 V = 2
+   16 bits per fact (+1.75; NLMSc on 16,320 random features). In both, the two sets of single-arm successes are of the
+   same kind (near-copies and abbreviations on both sides), consistent with noise between two memories of similar
+   accuracy in that cell rather than a class of query that one write handles and the other does not.
+4. Write position (analysis only, disclosed after the test; b62_pos.py): accuracy on the first / middle
+   / last third of facts in write order, pooled over the R1 cells, test stores:
+     Qwen3-8B V = 2   STORE 72.4 / 70.7 / 70.2  LAMc 75.7 / 75.7 / 73.7  NLMSc 73.1 / 74.4 / 73.7  RLSc 75.0 / 75.2 / 74.3
+     Qwen3-8B V = 16  STORE 26.3 / 29.6 / 24.6  LAMc 30.3 / 32.7 / 30.3  NLMSc 29.6 / 30.0 / 25.3  RLSc 27.1 / 31.7 / 32.1
+     e5 V = 2         STORE 65.5 / 67.5 / 64.6  LAMc 69.6 / 71.1 / 66.3  NLMSc 66.6 / 70.0 / 65.8  RLSc 69.5 / 71.2 / 66.7
+     e5 V = 16        STORE 28.2 / 28.5 / 25.2  LAMc 36.8 / 37.0 / 38.4  NLMSc 29.5 / 32.8 / 35.6  RLSc 35.3 / 36.8 / 39.2
+   On e5 at V = 16 the one-pass delta rule reads late-written facts better than early ones (29.5 -> 35.6), the recency
+   expected of a constant-step online write with fewer features than facts; on Qwen3-8B at V = 16 it does not (several
+   cells chose the Polyak average, which weights early updates more). The batch solve is flat in position by
+   construction (LAMc), RLSc slightly recency-weighted where dev chose forgetting (beta < 1). The store's last third is
+   lower because in some cells it stores only the first share of the write order (B53's stored-share option).

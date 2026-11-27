@@ -1,0 +1,284 @@
+[
+ {
+  "sid": "32768/niah_multikey_2/15719",
+  "arm": "SBC",
+  "lam": 0.5,
+  "B": 608.8740428813932,
+  "cond": "k32",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   12,
+   12
+  ],
+  "sic_n": [
+   11,
+   11
+  ]
+ },
+ {
+  "sid": "32768/niah_multikey_2/2699",
+  "arm": "SBC",
+  "lam": 0.5,
+  "B": 128.0,
+  "cond": "lines-nat-k8",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   0,
+   0
+  ],
+  "sic_n": [
+   0,
+   0
+  ]
+ },
+ {
+  "sid": "131072/niah_multikey_3/149429",
+  "arm": "SBC",
+  "lam": 0.5,
+  "B": 22.627416997969522,
+  "cond": "k8",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   105,
+   105
+  ],
+  "sic_n": [
+   103,
+   103
+  ]
+ },
+ {
+  "sid": "131072/niah_multikey_3/54695",
+  "arm": "SBC",
+  "lam": 0.7,
+  "B": 11.313708498984761,
+  "cond": "lines-nat-k8",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   150,
+   150
+  ],
+  "sic_n": [
+   150,
+   150
+  ]
+ },
+ {
+  "sid": "131072/niah_multivalue/542863",
+  "arm": "SBC",
+  "lam": 0.7,
+  "B": 26.908685288118864,
+  "cond": "e05",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   0,
+   0
+  ],
+  "sic_n": [
+   0,
+   0
+  ]
+ },
+ {
+  "sid": "131072/niah_multivalue/542863",
+  "arm": "SBC",
+  "lam": 0.5,
+  "B": 38.05462768008707,
+  "cond": "lines-nat-k8",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   0,
+   0
+  ],
+  "sic_n": [
+   0,
+   0
+  ]
+ },
+ {
+  "sid": "131072/vt/8",
+  "arm": "SBC",
+  "lam": 0.5,
+  "B": 22.627416997969522,
+  "cond": "k1",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   0,
+   0
+  ],
+  "sic_n": [
+   0,
+   0
+  ]
+ },
+ {
+  "sid": "131072/vt/2",
+  "arm": "SBC",
+  "lam": 0.7,
+  "B": 11.313708498984761,
+  "cond": "lines-nat-k4",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   3,
+   3
+  ],
+  "sic_n": [
+   2,
+   2
+  ]
+ },
+ {
+  "sid": "131072/niah_multikey_2/350510",
+  "arm": "SBC",
+  "lam": 0.35,
+  "B": 181.01933598375618,
+  "cond": "k8",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   0,
+   0
+  ],
+  "sic_n": [
+   0,
+   0
+  ]
+ },
+ {
+  "sid": "32768/niah_multikey_2/50928",
+  "arm": "SBC",
+  "lam": 0.5,
+  "B": 90.50966799187809,
+  "cond": "clust-nat-k8",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   3,
+   3
+  ],
+  "sic_n": [
+   1,
+   1
+  ]
+ },
+ {
+  "sid": "131072/niah_multikey_3/118763",
+  "arm": "SBC",
+  "lam": 0.5,
+  "B": 9.513656920021768,
+  "cond": "k2",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   150,
+   150
+  ],
+  "sic_n": [
+   150,
+   150
+  ]
+ },
+ {
+  "sid": "131072/niah_multikey_3/43865",
+  "arm": "SBC",
+  "lam": 0.5,
+  "B": 8.0,
+  "cond": "lines-nat-k4",
+  "sbc_same": true,
+  "sic_same": true,
+  "sbc_n": [
+   150,
+   150
+  ],
+  "sic_n": [
+   150,
+   150
+  ]
+ },
+ {
+  "sid": "131072/niah_multikey_2/170650",
+  "arm": "HAD",
+  "lam": null,
+  "B": 2435.4961715255727,
+  "cond": "k32",
+  "keys": 31,
+  "had_same": true,
+  "had_n": [
+   2,
+   2
+  ]
+ },
+ {
+  "sid": "131072/niah_multikey_3/43865",
+  "arm": "HAD",
+  "lam": null,
+  "B": 2896.309375740099,
+  "cond": "k32",
+  "keys": 30,
+  "had_same": true,
+  "had_n": [
+   0,
+   0
+  ]
+ },
+ {
+  "sid": "131072/niah_multivalue/611663",
+  "arm": "HAD",
+  "lam": null,
+  "B": 76.10925536017415,
+  "cond": "k8",
+  "keys": 18,
+  "had_same": true,
+  "had_n": [
+   0,
+   0
+  ]
+ },
+ {
+  "sid": "131072/vt/9",
+  "arm": "HAD",
+  "lam": null,
+  "B": 362.03867196751236,
+  "cond": "k16",
+  "keys": 10,
+  "had_same": true,
+  "had_n": [
+   0,
+   0
+  ]
+ },
+ {
+  "sid": "32768/niah_multikey_2/50928",
+  "arm": "HAD",
+  "lam": null,
+  "B": 38.05462768008707,
+  "cond": "k2",
+  "keys": 36,
+  "had_same": true,
+  "had_n": [
+   10,
+   10
+  ]
+ },
+ {
+  "sid": "131072/niah_multikey_3/189443",
+  "arm": "HAD",
+  "lam": null,
+  "B": 90.50966799187809,
+  "cond": "k1",
+  "keys": 30,
+  "had_same": true,
+  "had_n": [
+   0,
+   0
+  ]
+ }
+]

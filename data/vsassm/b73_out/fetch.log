@@ -1,0 +1,19 @@
+fail human 40000 <HTTPError 403: 'Too Many Reqs (1862a4b)'>
+fail human 20000 <HTTPError 403: 'Too Many Reqs (1862a4b)'>
+fail film 25000 <HTTPError 403: 'Too Many Reqs (1862a4b)'>
+fail film 12500 <HTTPError 403: 'Too Many Reqs (1862a4b)'>
+fail literary_work 40000 <HTTPError 403: 'Too Many Reqs (1862a4b)'>
+fail literary_work 20000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail album 30000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail album 15000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail tv_series 15000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail tv_series 7500 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail single 15000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail single 7500 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail city 15000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail city 7500 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail football_club 20000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail football_club 10000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail business 30000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+fail business 15000 <HTTPError 429: 'Too many requests - contact noc@wikimedia.org for a less disruptive approach'>
+rc=0

@@ -1,0 +1,59 @@
+{
+ "floor_ref": 0.5153333333333333,
+ "parser_ref": 0.934,
+ "arms": {
+  "fsq_both": [
+   0.528,
+   0.538,
+   0.514
+  ],
+  "fsq_both_only": [
+   0.546,
+   0.534,
+   0.57
+  ]
+ },
+ "diag": {
+  "fsq_both": [
+   {
+    "tuples_used": 3239,
+    "role_distinct_rate": 0.9566666666666667,
+    "same_symbol_consistency": 0.032069021650659287,
+    "distinct_symbol_code_cosine": 0.39028336278200837
+   },
+   {
+    "tuples_used": 3759,
+    "role_distinct_rate": 0.8733333333333333,
+    "same_symbol_consistency": 0.01774377340061859,
+    "distinct_symbol_code_cosine": 0.36164961145732
+   },
+   {
+    "tuples_used": 3575,
+    "role_distinct_rate": 0.99,
+    "same_symbol_consistency": 0.026045905909164904,
+    "distinct_symbol_code_cosine": 0.3590560278976681
+   }
+  ],
+  "fsq_both_only": [
+   {
+    "tuples_used": 3075,
+    "role_distinct_rate": 0.9966666666666667,
+    "same_symbol_consistency": 0.10857887025883119,
+    "distinct_symbol_code_cosine": -0.005974195381988668
+   },
+   {
+    "tuples_used": 3269,
+    "role_distinct_rate": 0.9933333333333333,
+    "same_symbol_consistency": 0.07537034022464593,
+    "distinct_symbol_code_cosine": 0.01024370721667246
+   },
+   {
+    "tuples_used": 3596,
+    "role_distinct_rate": 0.9133333333333333,
+    "same_symbol_consistency": 0.08481198111671821,
+    "distinct_symbol_code_cosine": -0.011339089457739007
+   }
+  ]
+ },
+ "verdict": "fsq_both: FAILS (joint objective does not lift accuracy either) | fsq_both_only: GRADED"
+}

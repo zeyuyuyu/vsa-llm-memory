@@ -1,0 +1,35 @@
+===== V-127: MuSiQue 2-hop audit (prereg PREREG_HASH; scorer frozen pre-data) =====
+rows 300 | undecidable 0 (reported, never judged) | paragraph sha f8ff99b5329837e4da096ec2 | sentence sha cabb6de9587df870598828da
+undecidable reasons: {}
+calibration: 40 rows / 80 facts per granularity, annotator='AGENT (Claude, this session) — read all 40 contexts at BOTH granularities in v127_calibration_contexts.json before any judge output existed; per prereg 66bf24d this is AGENT annotation, NOT human annotation. A human pass by the user or the co-author remains available and would supersede it.' (AGENT annotation, per prereg)
+calibration draw, DESCRIPTIVE: paragraph hop2 absent 10/40, sentence hop2 absent 9/40
+V-125 reference (2Wiki): hop2 ABSENT 83/287 = 0.2892, judge deepseek/deepseek-v4-flash, calibration 0.938
+
+--- judge gates ---
+  deepseek/deepseek-v4-flash|sentence            complete True (300/300) | calibration pooled 72/80 = 0.900 -> USABLE
+  deepseek/deepseek-v4-flash|paragraph           complete False (291/300) | calibration pooled 68/76 = 0.895 -> EXCLUDED
+
+>>> P0 validity gate: 1 of 2 judge arms usable : True
+
+  granularity paragraph  NO usable judge arm -- not read.
+
+  granularity sentence   judges 1 | resolved 300 | UNRESOLVED 0
+    hop1 ABSENT 57 (0.1900) | hop2 ABSENT 91 (0.3033) [0.2533, 0.3567]
+    ANSWERABLE 168/300 = 0.5600
+    per-hop judge verdicts: {'hop1': {'STATED': 216, 'ENTAILED': 27, 'ABSENT': 57}, 'hop2': {'ABSENT': 91, 'STATED': 177, 'ENTAILED': 32}}
+
+>>> P1 (PRIMARY, paragraph granularity; bar: hop-2 not-answerable rate < 0.15)
+      not computable
+>>> P1b (SECONDARY, sentence granularity; same bar)
+      rate 0.3033  -> False
+
+>>> P3 (descriptive, no bar): contrast with V-125's 2Wiki rate
+      2Wiki  0.2892 [0.2369, 0.3415]  (banked, V-125)
+      2Wiki - MuSiQue(sentence)  -0.0137 [-0.0862, +0.0584]
+
+--- readings, as registered ---
+  A granularity is missing, so the provenance claim is NOT evaluated.
+  deviations in force: no provider pinning and no spend meter on this gateway (prereg); calls
+  used 300 of cap 900; spend is NOT observable.
+  scoping: the store is not re-measured; nothing here bears on acquisition or on the npj paper.
+V127-SCORE-DONE

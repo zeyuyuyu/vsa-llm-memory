@@ -1,0 +1,40 @@
+B28 literature check (after the verdict; prereg "Checks from other angles"). Searched 2026-11-17 ~20:00-20:50 UTC.
+
+Finding: SUPPORTS. The commutativity of HRR binding, the ambiguity it causes, and the remedy B28 measured
+(permute one argument before binding) are textbook, stated by the inventors of the two algebras. No novelty can be
+claimed for the remedy; B28 only measures what it does on bAbI tasks 4 and 15 and in arena C. No precedent was found
+for that measurement on bAbI.
+
+1. Plate, T. A. (1995). Holographic reduced representations. IEEE Trans. Neural Networks 6(3), 623-641
+   (doi 10.1109/72.377968). Read in the scanned original (OCR of pp. 9, 11-12):
+   - Sec. VIII-G "Noncommutative Variants and Analogs of Convolution": "The commutativity of convolution can cause
+     ambiguity in the representations of some structures. If this is a problem, noncommutative variants of
+     circular convolution can be computed by permuting the elements of the argument vectors in either the spatial
+     or frequency domain. The permutations applied to right and left vectors must be different. The resulting
+     operation is neither commutative nor associative, but is bilinear and has an easily computed approximate
+     inverse." This is B28's perm encoding (identity on the key, a random permutation on the value).
+   - p. 9: commutativity "means that Pr(E|H) cannot be distinguished from Pr(H|E) in the blending clean-up
+     memory. This drawback could be overcome by using one of the noncommutative variants of circular convolution
+     (Section VIII-G)" -- the same failure as tasks 4 and 15, named by Plate.
+   - Sec. VIII-F: convolution by a fixed vector is a circulant matrix. A cyclic shift is a circulant permutation,
+     so it commutes with convolution; this is why B28's shift control reproduces comm question for question
+     (derived; Plate's "must be different" condition is necessary, not sufficient -- no source found that says
+     a cyclic shift fails under HRR, so this point is our derivation, consistent with Sec. VIII-F).
+2. Kanerva, P. (2009). Hyperdimensional computing. Cognitive Computation 1, 139-159. "Representing Pairs with
+   Vector Multiplication": XOR binding "both commutes ... and is its own inverse ... This can be avoided with a
+   slightly different multiplication that neither commutes nor is a self-inverse. As with sequences, we can
+   encode the order of the operands by permuting one of them before combining them", C = PA XOR B.
+   "Representing Sequences by Permuting Sums": order is labelled with permutations (S = PD + E).
+3. Schlegel, Neubert, Protzel (2022). A comparison of vector symbolic architectures. Artif. Intell. Rev.
+   (arXiv 2001.11797): HRR circular convolution "is commutative as well as associative"; VTB and MBAT bindings are
+   "neither commutative nor associative"; permutations are "important, e.g., to quote information" (citing
+   Gayler's MAP) and were deliberately left out of their comparison.
+4. Gosmann and Eliasmith (2019). Vector-derived transformation binding. Neural Computation 31(5), 849-869: a
+   non-commutative binding proposed as an alternative to HRR (abstract and documentation checked; full text not
+   read). Not tested in B28 (needs a square dimension; 2048 is not one).
+5. Gayler (2003), Multiply-Add-Permute: permutation as the third MAP operation ("quote"/protect); cited via
+   Schlegel et al.; original not re-read.
+
+What this licenses: "standard remedy (Plate 1995, Sec. VIII-G; Kanerva 2009)". What it does not: any claim that
+the remedy is ours, or that role vectors in general fail -- B28's rtag control is role vectors BOUND INTO the pair
+by convolution, not Plate's additive role-filler frames (agent (*) a + patient (*) b), which were not tested.

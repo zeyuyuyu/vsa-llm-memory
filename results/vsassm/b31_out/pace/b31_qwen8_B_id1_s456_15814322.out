@@ -1,0 +1,36 @@
+---------------------------------------
+Begin Slurm Prolog: Nov-18-2026 06:47:41
+Job ID:    15814322
+User ID:   <user>
+Account:   gts-nimam6
+Job name:  b31_qwen8_B_id1_s456
+Partition: gpu-h200
+QOS:       inferno
+---------------------------------------
+B31-PACE start 2026-11-18T11:47:41Z host atl1-1-02-012-2-0.pace.gatech.edu job 15814322
+NVIDIA H200, 143771 MiB
+B31 LoRA {"n": {"train": 1000, "dev": 500, "test": 500}, "max_len": {"train": 576, "dev": 573, "test": 570}, "gpu": "NVIDIA H200"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:01,  2.08it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.45it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.31it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.18it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.58it/s]
+  qwen8 B r8 lr1e-04 id1 sd456 ep1 loss 0.1600 train_sub 0.9880 dev 0.9940 id 1.0000 (313s)
+  qwen8 B r8 lr1e-04 id1 sd456 ep2 loss 0.1215 train_sub 1.0000 dev 1.0000 id 1.0000 (634s)
+  qwen8 B r8 lr1e-04 id1 sd456 ep3 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (956s)
+  qwen8 B r8 lr1e-04 id1 sd456 ep4 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (1277s)
+  qwen8 B r8 lr1e-04 id1 sd456 ep5 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (1595s)
+  qwen8 B r8 lr1e-04 id1 sd456 ep6 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (1913s)
+  qwen8 B r8 lr1e-04 id1 sd456 ep7 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (2234s)
+  qwen8 B r8 lr1e-04 id1 sd456 ep8 loss 0.0000 train_sub 1.0000 dev 1.0000 id 1.0000 (2553s)
+  TEST qwen8 B seed 456 at dev-best epoch 2: 1.0000
+B31-PACE end 2026-11-18T12:33:33Z rc=0
+---------------------------------------
+Begin Slurm Epilog: Nov-18-2026 07:33:34
+Job ID:        15814322
+User ID:       <user>
+Account:       gts-nimam6
+Job name:      b31_qwen8_B_id1_s456
+Resources:     cpu=8,gres/gpu:h200=1,mem=120G,node=1
+Rsrc Used:     cput=06:07:52,vmem=0,walltime=00:45:59,mem=15537412K,energy_used=0
+Partition:     gpu-h200
+QOS:           inferno
+Nodes:         atl1-1-02-012-2-0
+---------------------------------------

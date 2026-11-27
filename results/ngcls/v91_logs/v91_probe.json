@@ -1,0 +1,44 @@
+{
+ "prereg": "6400e89",
+ "acc": {
+  "equiv": [
+   0.49000000953674316
+  ]
+ },
+ "sep": {
+  "equiv": [
+   0.07649406233147993
+  ]
+ },
+ "log": [
+  {
+   "arm": "equiv",
+   "seed": 0,
+   "epoch": 1,
+   "loss": 6.521960296630859,
+   "separation": 0.003928504355318996
+  },
+  {
+   "arm": "equiv",
+   "seed": 0,
+   "epoch": 2,
+   "loss": 5.572568922042847,
+   "separation": 0.006234527767241538
+  },
+  {
+   "arm": "equiv",
+   "seed": 0,
+   "epoch": 3,
+   "loss": 5.296906442642212,
+   "separation": 0.015339177339463661
+  },
+  {
+   "arm": "equiv",
+   "seed": 0,
+   "epoch": 4,
+   "loss": 4.950028781890869,
+   "separation": 0.07649406233147993
+  }
+ ],
+ "verdict": "P1 gate: True ; P2 best regularised arm 'equiv' separation 0.0765 >= .10: False ; P3 not evaluable: the projection arm was not run in this invocation. ; THE LITERATURE'S NAMED REMEDY DOES NOT TRANSFER: neither variance-covariance regularisation nor a coherence penalty lifts separation above .10 here. A negative about a proposed-but-untested agenda, reported as such."
+}

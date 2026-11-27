@@ -1,0 +1,18 @@
+direct ruler 4096 niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multivalue,niah_multiquery 100 b19_test/direct
+direct ruler 4096 vt,cwe,fwe 100 b19_test/direct
+direct ruler 4096 qa_1,qa_2 100 b19_test/direct
+direct ruler 8192 niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multivalue,niah_multiquery 100 b19_test/direct
+direct ruler 8192 vt,cwe,fwe 100 b19_test/direct
+direct ruler 8192 qa_1,qa_2 100 b19_test/direct
+direct ruler 16384 niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multivalue,niah_multiquery 100 b19_test/direct
+direct ruler 16384 vt,cwe,fwe 100 b19_test/direct
+direct ruler 16384 qa_1,qa_2 100 b19_test/direct
+direct ruler 32768 niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multivalue,niah_multiquery 100 b19_test/direct
+direct ruler 32768 vt,cwe,fwe 100 b19_test/direct
+direct ruler 32768 qa_1,qa_2 100 b19_test/direct
+direct ruler 65536 niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multivalue,niah_multiquery 100 b19_test/direct --yarn
+direct ruler 65536 vt,cwe,fwe 100 b19_test/direct --yarn
+direct ruler 65536 qa_1,qa_2 100 b19_test/direct --yarn
+direct ruler 131072 niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multivalue,niah_multiquery 100 b19_test/direct --yarn
+direct ruler 131072 vt,cwe,fwe 100 b19_test/direct --yarn
+direct ruler 131072 qa_1,qa_2 100 b19_test/direct --yarn

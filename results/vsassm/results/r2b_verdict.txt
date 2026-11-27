@@ -1,0 +1,24 @@
+# R2b verdict (prereg/R2b_prereg.md): the R2 reader trained with long stories built from the train split, 2026-10-24
+Training + validation PACE 14352560 (timed out at 3 h after validation, before test); test PACE 14358038 (test only,
+same models, nothing changed between the two jobs). Paid account, about 3.1 H200-hours.
+
+Validation (k = 2, 3): reader + memory 0.995 / 0.952 (gold-fact ceiling 1.000 / 0.952); direct 0.996 / 0.998.
+Test (1,146 stories):
+  k            2      3      4      5      6      7      8      9      10     all
+  A reader+mem 0.947  0.771  0.484  0.379  0.234  0.229  0.153  0.143  0.160  0.342   (R2: 0.216)
+  B direct     0.974  0.952  0.432  0.310  0.178  0.153  0.073  0.160  0.235  0.325   (R2: 0.358)
+P1 FAIL (0.342 < 0.85). P2 FAIL. P3 FAIL (A - B on k >= 7 = +0.01).
+Predictions: recall at k = 10 >= .80: wrong (.66); P1 "at risk": failed; P3 "holds": wrong.
+
+Reader facts against the gold edges (test), recall / precision:
+  R2b:  k2 .93/.93  k4 .79/.84  k6 .67/.75  k8 .61/.72  k10 .66/.78
+  R2:   k2 .96/.96  k4 .68/.81  k6 .48/.67  k8 .38/.57  k10 .38/.58
+  R1 prompted Qwen3-8B, thinking (no training): k2 .95/.92  k4 .92/.90  k6 .92/.86  k8 .85/.86  k10 .89/.86
+  -> end-to-end accuracy needs every edge of a k-edge chain; at ~.75 per edge a 10-edge chain rarely survives.
+Reading the R2b errors: compound sentences that attach two relations to one person ("Rick went to the market with his
+mother Sharon and his brother Oliver" -> Oliver read as Sharon's brother) and missed first sentences. Longer
+concatenated training stories fixed the length effect only partly (recall .38 -> .66 at k = 10); the test stories'
+sentences are more complex than the training stories', and a 1.7B reader trained on the simple ones does not read the
+complex ones. The prompted 8B reader with thinking keeps recall near .9 at every length.
+Conclusion: a small fine-tuned reader is not the way to close the CLUTRR gap; the reported CLUTRR result stays R1's
+(prompted Qwen3-8B reader, 0.717). The memory is not the limit (gold facts 0.973).

@@ -1,0 +1,10 @@
+===== V-137c: store at the high-volume cells (no language model) =====
+  K=4000  S=63   store 1.0000
+  K=8000  S=125  store 1.0000
+
+===== V-137c: clean re-measure (retries=6, timeout=900s, workers=2) =====
+  zai-org/glm-5.3                K=4000   completed 40/40 (empty 0.000) | acc on completed 0.9750 | acc counting empties wrong 0.9750 | 5.1 min
+  zai-org/glm-5.3                K=8000   completed 40/40 (empty 0.000) | acc on completed 0.9750 | acc counting empties wrong 0.9750 | 13.1 min
+  TOTAL 100 calls, 6.24M prompt tokens
+V137C-DONE
+V137C-WRAPPER-EXIT 0

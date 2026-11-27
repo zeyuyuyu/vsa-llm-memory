@@ -1,0 +1,55 @@
+{
+ "args": {
+  "cmd": "reader",
+  "task": "N",
+  "arm": "vsa",
+  "split": "dev",
+  "layers": "17",
+  "layer": 20,
+  "subset": 0,
+  "bs": 16,
+  "epochs": 100,
+  "eval_every": 100,
+  "lr": 0.001,
+  "seed": 0,
+  "steps": 1000,
+  "rank": 6,
+  "reader": "",
+  "ckpt": "",
+  "out": "out/rd/N_vsa_e100_s0",
+  "pred": "",
+  "noise": 0.0,
+  "noise_seed": 12345,
+  "soft_beta": 0.0,
+  "dec_init": "recon",
+  "recon_epochs": 100,
+  "limit": 0,
+  "max_new": 6,
+  "cot_max_new": 512,
+  "cot_bs": 48,
+  "shuffle_facts": 0,
+  "dev_split": "dev",
+  "dev_subset": 0,
+  "dev_limit": 0
+ },
+ "hist": [
+  {
+   "exact": 0.8650000095367432,
+   "op": 1.0,
+   "x": 0.9300000071525574,
+   "y": 0.9237499833106995,
+   "digit_err": 0.028125000186264515,
+   "epoch": 100,
+   "loss": 0.018659651279449463
+  }
+ ],
+ "final": {
+  "exact": 0.8650000095367432,
+  "op": 1.0,
+  "x": 0.9300000071525574,
+  "y": 0.9237499833106995,
+  "digit_err": 0.028125000186264515,
+  "epoch": 100,
+  "loss": 0.018659651279449463
+ }
+}

@@ -1,0 +1,47 @@
+===== V-130: structured plain text at scale vs the store, frontier readers =====
+  rows from rows400.json
+  K=8     prompts built, 120 usable rows, sha 953266d11b2586305617bae6
+  K=64    prompts built, 120 usable rows, sha e20de0bd3f7af99a86945fcc
+  K=100   prompts built, 120 usable rows, sha 56239201d1ed328315e04bd6
+  K=128   prompts built, 120 usable rows, sha 58df79a38504a4a3e1ad75ce
+  K=512   prompts built, 120 usable rows, sha c1d3e4a3855441fb518b4919
+  K=1024  prompts built, 120 usable rows, sha ede7ba27819c55b7c2e6da53
+  [store] K=8     S=1   acc 0.9361 seeds [0.9333, 0.9417, 0.9333] (0.0017s)
+  [store] K=64    S=1   acc 0.9333 seeds [0.9333, 0.9333, 0.9333] (0.0068s)
+  [store] K=100   S=2   acc 0.9250 seeds [0.9333, 0.925, 0.9167] (0.0108s)
+  [store] K=128   S=2   acc 0.9194 seeds [0.925, 0.9083, 0.925] (0.0137s)
+  [store] K=512   S=8   acc 0.9194 seeds [0.9167, 0.925, 0.9167] (0.0538s)
+  [store] K=1024  S=16  acc 0.9083 seeds [0.925, 0.9, 0.9] (0.0860s)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:03,  1.07it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.06it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:03<00:02,  1.03s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.05it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.39it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.20it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  [Qwen/Qwen3-8B] K=8     acc 0.9500 (254 tok, 0.541s) n=120
+  [Qwen/Qwen3-8B] K=64    acc 0.9083 (1050 tok, 0.606s) n=120
+  [Qwen/Qwen3-8B] K=100   acc 0.8250 (1570 tok, 0.654s) n=120
+  [Qwen/Qwen3-8B] K=128   acc 0.8500 (1973 tok, 0.699s) n=120
+  [Qwen/Qwen3-8B] K=512   acc 0.5750 (7482 tok, 1.273s) n=120
+  [Qwen/Qwen3-8B] K=1024  acc 0.5417 (11612 tok, 1.877s) n=120
+  --- reader deepseek/deepseek-v4-flash
+  [deepseek/deepseek-v4-flash] K=8     acc 0.9750 scored 120/120 (250 tok, 3.20s, 1.2 min)
+  [deepseek/deepseek-v4-flash] K=64    acc 0.9667 scored 120/120 (1019 tok, 3.38s, 1.1 min)
+  [deepseek/deepseek-v4-flash] K=100   acc 0.9750 scored 120/120 (1520 tok, 3.30s, 1.1 min)
+  [deepseek/deepseek-v4-flash] K=128   acc 0.9667 scored 120/120 (1907 tok, 3.86s, 1.3 min)
+  [deepseek/deepseek-v4-flash] K=512   acc 0.9750 scored 120/120 (7220 tok, 3.93s, 1.4 min)
+  [deepseek/deepseek-v4-flash] K=1024  acc 0.9500 scored 120/120 (11200 tok, 4.69s, 1.7 min)
+  --- reader zai-org/glm-5.3
+  [zai-org/glm-5.3] K=8     acc 1.0000 scored 120/120 (257 tok, 3.33s, 1.2 min)
+  [zai-org/glm-5.3] K=64    acc 1.0000 scored 120/120 (1041 tok, 3.08s, 1.1 min)
+  [zai-org/glm-5.3] K=100   acc 1.0000 scored 120/120 (1554 tok, 3.14s, 1.1 min)
+  [zai-org/glm-5.3] K=128   acc 0.9917 scored 120/120 (1949 tok, 3.57s, 1.2 min)
+  [zai-org/glm-5.3] K=512   acc 0.9917 scored 120/120 (7374 tok, 3.83s, 1.3 min)
+  [zai-org/glm-5.3] K=1024  acc 1.0000 scored 120/120 (11439 tok, 4.03s, 1.4 min)
+  --- reader moonshotai/kimi-k3
+  [moonshotai/kimi-k3] K=8     acc 1.0000 scored 120/120 (271 tok, 5.50s, 2.3 min)
+  [moonshotai/kimi-k3] K=64    acc 1.0000 scored 120/120 (1061 tok, 5.20s, 1.8 min)
+  [moonshotai/kimi-k3] K=100   acc 1.0000 scored 120/120 (1576 tok, 4.55s, 1.5 min)
+  [moonshotai/kimi-k3] K=128   acc 0.9917 scored 120/120 (1973 tok, 4.16s, 1.7 min)
+  [moonshotai/kimi-k3] K=512   acc 1.0000 scored 120/120 (7431 tok, 5.86s, 3.0 min)
+  [moonshotai/kimi-k3] K=1024  acc 1.0000 scored 120/120 (11521 tok, 7.13s, 2.4 min)
+  calls used 2160 / cap 2600 (spend NOT observable on this gateway)
+V130-MEASURE-DONE
+V130-WRAPPER-EXIT 0

@@ -1,0 +1,22 @@
+# B18b verdict (prereg/B18b_prereg.md): qa11-qa13 vocabulary fix, 2026-10-22
+
+Training set: B18's 46,724 examples; 1,356 replaced; 5,400 re-labelled bAbI-original qa11-13 examples; 50,768 total.
+Student: Qwen3-1.7B + LoRA, seed 0, same recipe. Test: official RMT-team/babilong, n = 100 per task; official metric.
+PACE job 14269290, 47 min.
+
+task           B18 student   B18b student
+qa11 (0k)        0.64          0.78
+qa12 (0k)        0.59          1.00
+qa13 (0k)        0.46          0.86
+qa1-10 0k        99.7          99.5
+qa1-10 4k        98.2          98.2
+QA1-5 0k / 4k    99.6 / 97.8   99.2 / 97.8
+
+Bars:
+  - P1 (each of qa11-13 >= 0.90): FAIL. qa12 passes; qa11 (0.78) and qa13 (0.86) do not.
+  - P2 (qa1-qa10 within 0.01 of B18 at 0k and 4k): PASS (-0.002, 0.000).
+  - Prediction "qa12 at risk": wrong. qa12 is the only one at 1.00; the pronoun tasks remain below the bar.
+Consequence (as pre-registered): the product reader is NOT replaced; B18's numbers stay the quoted ones.
+The fix is a large, measured improvement on qa11-13, but it is reported as such and not substituted into the B18 table.
+Next step (not run): read the qa11 / qa13 errors on the training split (pronouns resolved to the wrong person?) before
+any further change.

@@ -1,0 +1,28 @@
+# B46 checks (second angle; prereg/B46_second_llm_family_prereg.md, "Checks"); B36's and B32's checkers, unchanged except
+# for the encoder list / code-file table substituted by b46_check.py (each substitution asserted)
+
+0. Wrapper validation before the B46 run (commit 517da37): b46_verdict.py on B36's own Qwen3-8B dumps renamed 'b46'
+   reproduced B36's Qwen3-8B cells, regions and rates exactly (208 of 208), and B36's e5 rows (208 of 208); the checker
+   wrapper reproduced B36's scorer (0 difference; store-level CI +5.88 to +7.80) and bits audit (0 of 9,800 over).
+   In the B46 verdict the e5 rows recomputed by the wrapper again equal B36's (208 of 208).
+1. Independent scorer (b36_check.py score): 112 cells (2 accountings x 56) re-scored from the merged dumps; largest
+   |difference| from the verdict 0.00e+00. Store-level bootstrap (stores resampled, coarser) for R1 VSA - BEST:
+   ideal +6.06 [+5.23, +6.90] (verdict cluster CI [+5.04, +7.10]); real +8.19 [+7.30, +9.07]. Same conclusion.
+2. Bits audit (b36_check.py bits): 9,800 configurations (every new-family prediction on every test store, every budget
+   and accounting; the VSA dimension rule and the index key bits re-derived from the written rules): 0 over budget;
+   largest used / budget among the new families 1.0000.
+3. Independent re-derivation of the new families (b36_check.py rederive; 10% of test stores, >= 1 per (M, V); every
+   chosen configuration at every budget under ideal accounting and at 4 and 16 bits per fact under real accounting):
+   SF 1.00000 (38,543 query-predictions), CM 1.00000, BF 1.00000, FBF 1.00000 (49,311 each), SDM 0.99968 (49,311;
+   activations at the float32 threshold); re-derived accuracy equals the logged accuracy for SF, CM, BF, FBF and differs
+   by +0.002 points for SDM. 24 partial SF tables skipped, as registered. All >= the registered 99% / 98%.
+4. Independent re-derivation of the VSA and the index (b32_check.py rederive; ~10% of test stores, 4-64 bits per fact):
+   VSA lin 17,960 / 17,960 = 1.0000 (accuracy identical); index LSH 1.0000, PCA-sign 1.0000; PQ8 0.5947 (2,954 /
+   4,967; accuracy logged 30.34, re-fitted 29.03). As in B32, the iterative PQ fit does not reproduce bit for bit when
+   the checker fits it again; the logged PQ8 index is the stronger of the two, so this cannot have favoured the VSA.
+5. Recipe check (prereg): b46_embed.py on Qwen3-8B layer 9 reproduces B32's codes bit for bit for 99.09% of strings;
+   criterion 0.7035 = B32's.
+6. Hand reading: results/b46_handread.txt (samples) and results/b46_handread_notes.txt (my reading): the R1 win is made
+   of real aliases resolved by graded similarity (10 of 10 read have the right exact nearest label; median whitened
+   cosine 0.45); 4 of 10 sketch-only wins are chance hits at V = 2 (cosine ~0, wrong exact neighbour); in R2 the index
+   wins on near-duplicates (median cosine 0.67). Same pattern as B36 on Qwen3-8B.

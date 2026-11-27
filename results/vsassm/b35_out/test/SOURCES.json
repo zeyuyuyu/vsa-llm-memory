@@ -1,0 +1,212 @@
+{
+ "sources": {
+  "test_lmt_B1_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_lmt_B1_s1": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_lmt_B2_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_lmt_B2_s1": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_lmt_B4_s0": {
+   "scored": "box",
+   "copies": [
+    "box"
+   ]
+  },
+  "test_lmt_B4_s1": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_lmt_B8_s0": {
+   "scored": "box",
+   "copies": [
+    "box"
+   ]
+  },
+  "test_lmt_B8_s1": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_tfull_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_tfull_zeroshot": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_ttrunc_B1_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_ttrunc_B2_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_ttrunc_B4_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_ttrunc_B8_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_vsa_B1_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_vsa_B1_s1": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_vsa_B2_s0": {
+   "scored": "pace",
+   "copies": [
+    "box",
+    "pace"
+   ]
+  },
+  "test_vsa_B2_s1": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_vsa_B4_s0": {
+   "scored": "box",
+   "copies": [
+    "box"
+   ]
+  },
+  "test_vsa_B4_s1": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_vsa_B8_s0": {
+   "scored": "box",
+   "copies": [
+    "box"
+   ]
+  },
+  "test_vsa_B8_s1": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_vsaq_B1_s0": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_vsaq_B2_s0": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_vsaq_B4_s0": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  },
+  "test_vsaq_B8_s0": {
+   "scored": "pace",
+   "copies": [
+    "pace"
+   ]
+  }
+ },
+ "reproducibility": {
+  "test_lmt_B1_s0": {
+   "max_cell_diff": 0.0050000000000000044,
+   "same_correctness": 0.9841666666666666
+  },
+  "test_lmt_B2_s0": {
+   "max_cell_diff": 0.010000000000000002,
+   "same_correctness": 0.9816666666666667
+  },
+  "test_tfull_s0": {
+   "max_cell_diff": 0.0033333333333332993,
+   "same_correctness": 0.9988888888888889
+  },
+  "test_tfull_zeroshot": {
+   "max_cell_diff": 0.023333333333333338,
+   "same_correctness": 0.9638888888888889
+  },
+  "test_ttrunc_B1_s0": {
+   "max_cell_diff": 0.011666666666666665,
+   "same_correctness": 0.9736111111111111
+  },
+  "test_ttrunc_B2_s0": {
+   "max_cell_diff": 0.01666666666666667,
+   "same_correctness": 0.97
+  },
+  "test_ttrunc_B4_s0": {
+   "max_cell_diff": 0.01666666666666667,
+   "same_correctness": 0.9722222222222222
+  },
+  "test_ttrunc_B8_s0": {
+   "max_cell_diff": 0.015000000000000013,
+   "same_correctness": 0.9541666666666667
+  },
+  "test_vsa_B1_s0": {
+   "max_cell_diff": 0.011666666666666669,
+   "same_correctness": 0.9855555555555555
+  },
+  "test_vsa_B2_s0": {
+   "max_cell_diff": 0.015,
+   "same_correctness": 0.9836111111111111
+  }
+ }
+}

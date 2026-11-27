@@ -1,0 +1,63 @@
+length task   n  reader events  story facts (F1)  beyond story  story names max  bound on codes per sample
+0k     qa1   100            578               578             0                4       5
+0k     qa2   100           1606              1604             2                7      10
+0k     qa3   100           5396              5410             0                7       8
+0k     qa4   100            200               200             0                0       1
+0k     qa5   100           1898              1866            32                7      40
+4k     qa1   100            576               578             0                4       5
+4k     qa2   100           1607              1604             3                7      11
+4k     qa3   100           5281              5294             0                7       8
+4k     qa4   100            204               200             4                0       5
+4k     qa5   100           1853              1846             7                7      15
+16k    qa1   100            613               578            35                4      40
+16k    qa2   100           1633              1604            29                7      37
+16k    qa3   100           5347              5294            53                7      61
+16k    qa4   100            237               200            37                0      38
+16k    qa5   100           1870              1846            24                7      32
+64k    qa1   100            685               578           107                4     112
+64k    qa2   100           1709              1604           105                7     113
+64k    qa3   100           5401              5294           107                7     115
+64k    qa4   100            286               200            86                0      87
+64k    qa5   100           1942              1846            96                7     104
+128k   qa1   100            791               578           213                4     218
+128k   qa2   100           1797              1604           193                7     201
+128k   qa3   100           5498              5294           204                7     212
+128k   qa4   100            392               200           192                0     193
+128k   qa5   100           2035              1846           189                7     197
+512k   qa1    25            251               138           113                4     118
+512k   qa2    25            589               416           173                7     181
+512k   qa3    25           1681              1454           227                7     235
+512k   qa4    25            255                50           205                0     206
+512k   qa5    25            686               444           242                7     250
+1M     qa1    25            422               138           284                4     289  (> 256)
+1M     qa2    25            817               416           401                7     409  (> 256)
+1M     qa3    25           1891              1454           437                7     445  (> 256)
+1M     qa4    25            450                50           400                0     401  (> 256)
+1M     qa5    25            809               444           365                7     373  (> 256)
+10M, per sample (b18_10M):
+10M    qa1 sample 0: reader events 148, story facts   4, story names 3, bound 148; events alone <= 255, so under the cap without assumption
+10M    qa1 sample 1: reader events 143, story facts   4, story names 3, bound 143; events alone <= 255, so under the cap without assumption
+10M    qa1 sample 2: reader events 128, story facts  10, story names 3, bound 122; events alone <= 255, so under the cap without assumption
+10M    qa1 sample 3: reader events 125, story facts  10, story names 4, bound 120; events alone <= 255, so under the cap without assumption
+10M    qa1 sample 4: reader events 184, story facts   2, story names 2, bound 185; events alone <= 255, so under the cap without assumption
+10M    qa2 sample 0: reader events 175, story facts  16, story names 6, bound 166; events alone <= 255, so under the cap without assumption
+10M    qa2 sample 1: reader events 204, story facts  16, story names 7, bound 196; events alone <= 255, so under the cap without assumption
+10M    qa2 sample 2: reader events 171, story facts  14, story names 6, bound 164; events alone <= 255, so under the cap without assumption
+10M    qa2 sample 3: reader events 145, story facts  14, story names 6, bound 138; events alone <= 255, so under the cap without assumption
+10M    qa2 sample 4: reader events 124, story facts  10, story names 5, bound 120; events alone <= 255, so under the cap without assumption
+10M    qa3 sample 0: reader events 260, story facts  94, story names 7, bound 174
+10M    qa3 sample 1: reader events 291, story facts 144, story names 7, bound 155
+10M    qa3 sample 2: reader events 168, story facts  36, story names 7, bound 140; events alone <= 255, so under the cap without assumption
+10M    qa3 sample 3: reader events 208, story facts  76, story names 7, bound 140; events alone <= 255, so under the cap without assumption
+10M    qa3 sample 4: reader events 237, story facts  64, story names 7, bound 181; events alone <= 255, so under the cap without assumption
+10M    qa4 sample 0: reader events 140, story facts   2, story names 0, bound 139; events alone <= 255, so under the cap without assumption
+10M    qa4 sample 1: reader events 177, story facts   2, story names 0, bound 176; events alone <= 255, so under the cap without assumption
+10M    qa4 sample 2: reader events 180, story facts   2, story names 0, bound 179; events alone <= 255, so under the cap without assumption
+10M    qa4 sample 3: reader events 134, story facts   2, story names 0, bound 133; events alone <= 255, so under the cap without assumption
+10M    qa4 sample 4: reader events 154, story facts   2, story names 0, bound 153; events alone <= 255, so under the cap without assumption
+10M    qa5 sample 0: reader events 186, story facts  30, story names 7, bound 164; events alone <= 255, so under the cap without assumption
+10M    qa5 sample 1: reader events 184, story facts   8, story names 4, bound 181; events alone <= 255, so under the cap without assumption
+10M    qa5 sample 2: reader events 149, story facts  12, story names 4, bound 142; events alone <= 255, so under the cap without assumption
+10M    qa5 sample 3: reader events 213, story facts  10, story names 5, bound 209; events alone <= 255, so under the cap without assumption
+10M    qa5 sample 4: reader events 147, story facts   6, story names 3, bound 145; events alone <= 255, so under the cap without assumption
+largest bound over all lengths: 445

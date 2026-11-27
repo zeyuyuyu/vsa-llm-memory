@@ -1,0 +1,25 @@
+{'train': 16000, 'dev': 800, 'test': 2000} max answer 1023
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 149.09it/s]
+prompt len 95.809 answer tok lens [0, 15576, 424]
+cached states 82.3702290058136 s
+/data0/path/to/HOME/cr3_fp/cr3_fp.py:442: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  float((c & gate).float().mean()), float(loss))
+  vec lr=0.001 ep=30 train_mse=0.00047 dev module-correct&gate=0.9712
+  vec lr=0.001 ep=100 train_mse=0.00048 dev module-correct&gate=0.9750
+  vec lr=0.001 ep=300 train_mse=0.00051 dev module-correct&gate=0.9862
+  vec lr=0.001 ep=1000 train_mse=0.00064 dev module-correct&gate=0.9787
+  vec lr=0.0001 ep=30 train_mse=0.00070 dev module-correct&gate=0.8900
+  vec lr=0.0001 ep=100 train_mse=0.00030 dev module-correct&gate=0.9775
+  vec lr=0.0001 ep=300 train_mse=0.00016 dev module-correct&gate=0.9937
+  vec lr=0.0001 ep=1000 train_mse=0.00012 dev module-correct&gate=0.9925
+VEC selected lr/ep/dev (0.0001, 300, 0.9937499761581421)
+  disc lr=0.001 ep=30 train_loss=0.0265 dev module-correct&gate=1.0000
+  disc lr=0.001 ep=100 train_loss=0.0030 dev module-correct&gate=1.0000
+  disc lr=0.001 ep=300 train_loss=0.0001 dev module-correct&gate=1.0000
+  disc lr=0.0001 ep=30 train_loss=0.7716 dev module-correct&gate=0.9950
+  disc lr=0.0001 ep=100 train_loss=0.0898 dev module-correct&gate=1.0000
+  disc lr=0.0001 ep=300 train_loss=0.0034 dev module-correct&gate=1.0000
+DISC selected lr/ep/dev (0.001, 30, 1.0)
+prep done

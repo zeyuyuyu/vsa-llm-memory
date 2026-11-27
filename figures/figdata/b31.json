@@ -1,0 +1,1681 @@
+{
+ "_about": "B31 (prereg vsassm/prereg/B31_encoder_equalised_baselines_prereg.md): the coupling on frozen Phi-2 and Qwen3-8B with equalised baselines; test accuracy per seed at each seed's dev-selected epoch. Verbatim verdict lines.",
+ "arms": {
+  "no encoder|A|exact symbols + dictionary": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "no encoder|A|exact symbols + VSA (perm)": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.996-1.000], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "no encoder|A|exact symbols + VSA (comm)": {
+   "mean": 0.999,
+   "seeds": [
+    {
+     "value": 0.997,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.999 [0.998-1.000]  seeds 0.997 [0.991-0.999], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "0.997"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.999 [0.998-1.000]  seeds 0.997 [0.991-0.999], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.999 [0.998-1.000]  seeds 0.997 [0.991-0.999], 1.000 [0.996-1.000], 1.000 [0.996-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "Phi-2|A|naming head + VSA (perm, named)": {
+   "mean": 0.978,
+   "seeds": [
+    {
+     "value": 0.969,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 0.978 [0.970-0.985]  seeds 0.969 [0.956-0.978], 0.985 [0.975-0.991], 0.979 [0.968-0.986]",
+     "text": "0.969"
+    },
+    {
+     "value": 0.985,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 0.978 [0.970-0.985]  seeds 0.969 [0.956-0.978], 0.985 [0.975-0.991], 0.979 [0.968-0.986]",
+     "text": "0.985"
+    },
+    {
+     "value": 0.979,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 0.978 [0.970-0.985]  seeds 0.969 [0.956-0.978], 0.985 [0.975-0.991], 0.979 [0.968-0.986]",
+     "text": "0.979"
+    }
+   ]
+  },
+  "Phi-2|A|naming head + VSA (perm, query/cand by index)": {
+   "mean": 0.996,
+   "seeds": [
+    {
+     "value": 0.995,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 0.996 [0.992-0.999]  seeds 0.995 [0.988-0.998], 0.997 [0.991-0.999], 0.996 [0.990-0.998]",
+     "text": "0.995"
+    },
+    {
+     "value": 0.997,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 0.996 [0.992-0.999]  seeds 0.995 [0.988-0.998], 0.997 [0.991-0.999], 0.996 [0.990-0.998]",
+     "text": "0.997"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 0.996 [0.992-0.999]  seeds 0.995 [0.988-0.998], 0.997 [0.991-0.999], 0.996 [0.990-0.998]",
+     "text": "0.996"
+    }
+   ]
+  },
+  "Phi-2|A|naming head + VSA (comm, named)": {
+   "mean": 0.977,
+   "seeds": [
+    {
+     "value": 0.966,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.977 [0.969-0.984]  seeds 0.966 [0.953-0.976], 0.984 [0.974-0.990], 0.980 [0.969-0.987]",
+     "text": "0.966"
+    },
+    {
+     "value": 0.984,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.977 [0.969-0.984]  seeds 0.966 [0.953-0.976], 0.984 [0.974-0.990], 0.980 [0.969-0.987]",
+     "text": "0.984"
+    },
+    {
+     "value": 0.98,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.977 [0.969-0.984]  seeds 0.966 [0.953-0.976], 0.984 [0.974-0.990], 0.980 [0.969-0.987]",
+     "text": "0.980"
+    }
+   ]
+  },
+  "Phi-2|A|naming head read without snapping (perm)": {
+   "mean": 0.887,
+   "seeds": [
+    {
+     "value": 0.887,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.887 [0.873-0.902]  seeds 0.887 [0.866-0.905], 0.888 [0.867-0.906], 0.887 [0.866-0.905]",
+     "text": "0.887"
+    },
+    {
+     "value": 0.888,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.887 [0.873-0.902]  seeds 0.887 [0.866-0.905], 0.888 [0.867-0.906], 0.887 [0.866-0.905]",
+     "text": "0.888"
+    },
+    {
+     "value": 0.887,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.887 [0.873-0.902]  seeds 0.887 [0.866-0.905], 0.888 [0.867-0.906], 0.887 [0.866-0.905]",
+     "text": "0.887"
+    }
+   ]
+  },
+  "Phi-2|A|binding-loss map (perm, named)": {
+   "mean": 0.462,
+   "seeds": [
+    {
+     "value": 0.463,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.462 [0.438-0.486]  seeds 0.463 [0.432-0.494], 0.481 [0.450-0.512], 0.443 [0.412-0.474]",
+     "text": "0.463"
+    },
+    {
+     "value": 0.481,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.462 [0.438-0.486]  seeds 0.463 [0.432-0.494], 0.481 [0.450-0.512], 0.443 [0.412-0.474]",
+     "text": "0.481"
+    },
+    {
+     "value": 0.443,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.462 [0.438-0.486]  seeds 0.463 [0.432-0.494], 0.481 [0.450-0.512], 0.443 [0.412-0.474]",
+     "text": "0.443"
+    }
+   ]
+  },
+  "Phi-2|A|binding-loss map, published form (comm, index)": {
+   "mean": 0.507,
+   "seeds": [
+    {
+     "value": 0.52,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.507 [0.488-0.526]  seeds 0.520 [0.489-0.551], 0.515 [0.484-0.546], 0.486 [0.455-0.517]",
+     "text": "0.520"
+    },
+    {
+     "value": 0.515,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.507 [0.488-0.526]  seeds 0.520 [0.489-0.551], 0.515 [0.484-0.546], 0.486 [0.455-0.517]",
+     "text": "0.515"
+    },
+    {
+     "value": 0.486,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.507 [0.488-0.526]  seeds 0.520 [0.489-0.551], 0.515 [0.484-0.546], 0.486 [0.455-0.517]",
+     "text": "0.486"
+    }
+   ]
+  },
+  "Phi-2|A|label-free InfoNCE map (perm, named)": {
+   "mean": 0.619,
+   "seeds": [
+    {
+     "value": 0.599,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.619 [0.599-0.639]  seeds 0.599 [0.568-0.629], 0.673 [0.643-0.701], 0.586 [0.555-0.616]",
+     "text": "0.599"
+    },
+    {
+     "value": 0.673,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.619 [0.599-0.639]  seeds 0.599 [0.568-0.629], 0.673 [0.643-0.701], 0.586 [0.555-0.616]",
+     "text": "0.673"
+    },
+    {
+     "value": 0.586,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.619 [0.599-0.639]  seeds 0.599 [0.568-0.629], 0.673 [0.643-0.701], 0.586 [0.555-0.616]",
+     "text": "0.586"
+    }
+   ]
+  },
+  "Phi-2|A|equalised probe": {
+   "mean": 0.485,
+   "seeds": [
+    {
+     "value": 0.485,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.485 [0.454-0.516]  seeds 0.485 [0.454-0.516], 0.485 [0.454-0.516], 0.485 [0.454-0.516]",
+     "text": "0.485"
+    },
+    {
+     "value": 0.485,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.485 [0.454-0.516]  seeds 0.485 [0.454-0.516], 0.485 [0.454-0.516], 0.485 [0.454-0.516]",
+     "text": "0.485"
+    },
+    {
+     "value": 0.485,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.485 [0.454-0.516]  seeds 0.485 [0.454-0.516], 0.485 [0.454-0.516], 0.485 [0.454-0.516]",
+     "text": "0.485"
+    }
+   ]
+  },
+  "Phi-2|A|equalised LoRA": {
+   "mean": 0.486,
+   "seeds": [
+    {
+     "value": 0.48,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.486 [0.459-0.513]  seeds 0.480 [0.449-0.511], 0.493 [0.462-0.524], 0.485 [0.454-0.516]",
+     "text": "0.480"
+    },
+    {
+     "value": 0.493,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.486 [0.459-0.513]  seeds 0.480 [0.449-0.511], 0.493 [0.462-0.524], 0.485 [0.454-0.516]",
+     "text": "0.493"
+    },
+    {
+     "value": 0.485,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.486 [0.459-0.513]  seeds 0.480 [0.449-0.511], 0.493 [0.462-0.524], 0.485 [0.454-0.516]",
+     "text": "0.485"
+    }
+   ]
+  },
+  "Phi-2|A|LoRA + identity auxiliary loss": {
+   "mean": 0.478,
+   "seeds": [
+    {
+     "value": 0.463,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.478 [0.455-0.500]  seeds 0.463 [0.432-0.494], 0.468 [0.437-0.499], 0.502 [0.471-0.533]",
+     "text": "0.463"
+    },
+    {
+     "value": 0.468,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.478 [0.455-0.500]  seeds 0.463 [0.432-0.494], 0.468 [0.437-0.499], 0.502 [0.471-0.533]",
+     "text": "0.468"
+    },
+    {
+     "value": 0.502,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.478 [0.455-0.500]  seeds 0.463 [0.432-0.494], 0.468 [0.437-0.499], 0.502 [0.471-0.533]",
+     "text": "0.502"
+    }
+   ]
+  },
+  "Qwen3-8B|A|naming head + VSA (perm, named)": {
+   "mean": 0.751,
+   "seeds": [
+    {
+     "value": 0.745,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.751 [0.730-0.773]  seeds 0.745 [0.717-0.771], 0.746 [0.718-0.772], 0.762 [0.735-0.787]",
+     "text": "0.745"
+    },
+    {
+     "value": 0.746,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.751 [0.730-0.773]  seeds 0.745 [0.717-0.771], 0.746 [0.718-0.772], 0.762 [0.735-0.787]",
+     "text": "0.746"
+    },
+    {
+     "value": 0.762,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.751 [0.730-0.773]  seeds 0.745 [0.717-0.771], 0.746 [0.718-0.772], 0.762 [0.735-0.787]",
+     "text": "0.762"
+    }
+   ]
+  },
+  "Qwen3-8B|A|naming head + VSA (perm, query/cand by index)": {
+   "mean": 0.927,
+   "seeds": [
+    {
+     "value": 0.923,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.927 [0.914-0.939]  seeds 0.923 [0.905-0.938], 0.932 [0.915-0.946], 0.926 [0.908-0.941]",
+     "text": "0.923"
+    },
+    {
+     "value": 0.932,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.927 [0.914-0.939]  seeds 0.923 [0.905-0.938], 0.932 [0.915-0.946], 0.926 [0.908-0.941]",
+     "text": "0.932"
+    },
+    {
+     "value": 0.926,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.927 [0.914-0.939]  seeds 0.923 [0.905-0.938], 0.932 [0.915-0.946], 0.926 [0.908-0.941]",
+     "text": "0.926"
+    }
+   ]
+  },
+  "Qwen3-8B|A|naming head + VSA (comm, named)": {
+   "mean": 0.752,
+   "seeds": [
+    {
+     "value": 0.747,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.752 [0.730-0.773]  seeds 0.747 [0.719-0.773], 0.749 [0.721-0.775], 0.759 [0.732-0.784]",
+     "text": "0.747"
+    },
+    {
+     "value": 0.749,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.752 [0.730-0.773]  seeds 0.747 [0.719-0.773], 0.749 [0.721-0.775], 0.759 [0.732-0.784]",
+     "text": "0.749"
+    },
+    {
+     "value": 0.759,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.752 [0.730-0.773]  seeds 0.747 [0.719-0.773], 0.749 [0.721-0.775], 0.759 [0.732-0.784]",
+     "text": "0.759"
+    }
+   ]
+  },
+  "Qwen3-8B|A|naming head read without snapping (perm)": {
+   "mean": 0.578,
+   "seeds": [
+    {
+     "value": 0.579,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.578 [0.554-0.602]  seeds 0.579 [0.548-0.609], 0.590 [0.559-0.620], 0.566 [0.535-0.596]",
+     "text": "0.579"
+    },
+    {
+     "value": 0.59,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.578 [0.554-0.602]  seeds 0.579 [0.548-0.609], 0.590 [0.559-0.620], 0.566 [0.535-0.596]",
+     "text": "0.590"
+    },
+    {
+     "value": 0.566,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.578 [0.554-0.602]  seeds 0.579 [0.548-0.609], 0.590 [0.559-0.620], 0.566 [0.535-0.596]",
+     "text": "0.566"
+    }
+   ]
+  },
+  "Qwen3-8B|A|binding-loss map (perm, named)": {
+   "mean": 0.491,
+   "seeds": [
+    {
+     "value": 0.489,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.491 [0.468-0.514]  seeds 0.489 [0.458-0.520], 0.497 [0.466-0.528], 0.488 [0.457-0.519]",
+     "text": "0.489"
+    },
+    {
+     "value": 0.497,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.491 [0.468-0.514]  seeds 0.489 [0.458-0.520], 0.497 [0.466-0.528], 0.488 [0.457-0.519]",
+     "text": "0.497"
+    },
+    {
+     "value": 0.488,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.491 [0.468-0.514]  seeds 0.489 [0.458-0.520], 0.497 [0.466-0.528], 0.488 [0.457-0.519]",
+     "text": "0.488"
+    }
+   ]
+  },
+  "Qwen3-8B|A|binding-loss map, published form (comm, index)": {
+   "mean": 0.504,
+   "seeds": [
+    {
+     "value": 0.489,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.504 [0.482-0.526]  seeds 0.489 [0.458-0.520], 0.520 [0.489-0.551], 0.504 [0.473-0.535]",
+     "text": "0.489"
+    },
+    {
+     "value": 0.52,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.504 [0.482-0.526]  seeds 0.489 [0.458-0.520], 0.520 [0.489-0.551], 0.504 [0.473-0.535]",
+     "text": "0.520"
+    },
+    {
+     "value": 0.504,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.504 [0.482-0.526]  seeds 0.489 [0.458-0.520], 0.520 [0.489-0.551], 0.504 [0.473-0.535]",
+     "text": "0.504"
+    }
+   ]
+  },
+  "Qwen3-8B|A|label-free InfoNCE map (perm, named)": {
+   "mean": 0.501,
+   "seeds": [
+    {
+     "value": 0.509,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.501 [0.481-0.521]  seeds 0.509 [0.478-0.540], 0.506 [0.475-0.537], 0.488 [0.457-0.519]",
+     "text": "0.509"
+    },
+    {
+     "value": 0.506,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.501 [0.481-0.521]  seeds 0.509 [0.478-0.540], 0.506 [0.475-0.537], 0.488 [0.457-0.519]",
+     "text": "0.506"
+    },
+    {
+     "value": 0.488,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.501 [0.481-0.521]  seeds 0.509 [0.478-0.540], 0.506 [0.475-0.537], 0.488 [0.457-0.519]",
+     "text": "0.488"
+    }
+   ]
+  },
+  "Qwen3-8B|A|equalised probe": {
+   "mean": 0.492,
+   "seeds": [
+    {
+     "value": 0.492,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.492 [0.461-0.523]  seeds 0.492 [0.461-0.523], 0.492 [0.461-0.523], 0.492 [0.461-0.523]",
+     "text": "0.492"
+    },
+    {
+     "value": 0.492,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.492 [0.461-0.523]  seeds 0.492 [0.461-0.523], 0.492 [0.461-0.523], 0.492 [0.461-0.523]",
+     "text": "0.492"
+    },
+    {
+     "value": 0.492,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.492 [0.461-0.523]  seeds 0.492 [0.461-0.523], 0.492 [0.461-0.523], 0.492 [0.461-0.523]",
+     "text": "0.492"
+    }
+   ]
+  },
+  "Qwen3-8B|A|equalised LoRA": {
+   "mean": 0.998,
+   "seeds": [
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.998 [0.996-0.999]  seeds 0.998 [0.993-0.999], 0.997 [0.991-0.999], 0.999 [0.994-1.000]",
+     "text": "0.998"
+    },
+    {
+     "value": 0.997,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.998 [0.996-0.999]  seeds 0.998 [0.993-0.999], 0.997 [0.991-0.999], 0.999 [0.994-1.000]",
+     "text": "0.997"
+    },
+    {
+     "value": 0.999,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.998 [0.996-0.999]  seeds 0.998 [0.993-0.999], 0.997 [0.991-0.999], 0.999 [0.994-1.000]",
+     "text": "0.999"
+    }
+   ]
+  },
+  "Qwen3-8B|A|LoRA + identity auxiliary loss": {
+   "mean": 0.996,
+   "seeds": [
+    {
+     "value": 0.999,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.996 [0.994-0.999]  seeds 0.999 [0.994-1.000], 0.994 [0.987-0.997], 0.996 [0.990-0.998]",
+     "text": "0.999"
+    },
+    {
+     "value": 0.994,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.996 [0.994-0.999]  seeds 0.999 [0.994-1.000], 0.994 [0.987-0.997], 0.996 [0.990-0.998]",
+     "text": "0.994"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.996 [0.994-0.999]  seeds 0.999 [0.994-1.000], 0.994 [0.987-0.997], 0.996 [0.990-0.998]",
+     "text": "0.996"
+    }
+   ]
+  },
+  "no encoder|B|exact symbols + dictionary": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "no encoder|B|exact symbols + VSA (perm)": {
+   "mean": 0.997,
+   "seeds": [
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 0.997 [0.993-0.999]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.998 [0.989-1.000]",
+     "text": "0.996"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 0.997 [0.993-0.999]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.998 [0.989-1.000]",
+     "text": "0.996"
+    },
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 0.997 [0.993-0.999]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.998 [0.989-1.000]",
+     "text": "0.998"
+    }
+   ]
+  },
+  "no encoder|B|exact symbols + VSA (comm)": {
+   "mean": 0.996,
+   "seeds": [
+    {
+     "value": 0.99,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.996 [0.993-0.999]  seeds 0.990 [0.977-0.996], 1.000 [0.992-1.000], 0.998 [0.989-1.000]",
+     "text": "0.990"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.996 [0.993-0.999]  seeds 0.990 [0.977-0.996], 1.000 [0.992-1.000], 0.998 [0.989-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.996 [0.993-0.999]  seeds 0.990 [0.977-0.996], 1.000 [0.992-1.000], 0.998 [0.989-1.000]",
+     "text": "0.998"
+    }
+   ]
+  },
+  "Phi-2|B|naming head + VSA (perm, named)": {
+   "mean": 0.996,
+   "seeds": [
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 0.996 [0.993-0.999]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 0.996 [0.993-0.999]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 0.996 [0.993-0.999]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    }
+   ]
+  },
+  "Phi-2|B|naming head + VSA (perm, query/cand by index)": {
+   "mean": 0.995,
+   "seeds": [
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 0.995 [0.991-0.999]  seeds 0.996 [0.986-0.999], 0.994 [0.983-0.998], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    },
+    {
+     "value": 0.994,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 0.995 [0.991-0.999]  seeds 0.996 [0.986-0.999], 0.994 [0.983-0.998], 0.996 [0.986-0.999]",
+     "text": "0.994"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 0.995 [0.991-0.999]  seeds 0.996 [0.986-0.999], 0.994 [0.983-0.998], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    }
+   ]
+  },
+  "Phi-2|B|naming head + VSA (comm, named)": {
+   "mean": 0.995,
+   "seeds": [
+    {
+     "value": 0.99,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.995 [0.991-0.999]  seeds 0.990 [0.977-0.996], 1.000 [0.992-1.000], 0.996 [0.986-0.999]",
+     "text": "0.990"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.995 [0.991-0.999]  seeds 0.990 [0.977-0.996], 1.000 [0.992-1.000], 0.996 [0.986-0.999]",
+     "text": "1.000"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.995 [0.991-0.999]  seeds 0.990 [0.977-0.996], 1.000 [0.992-1.000], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    }
+   ]
+  },
+  "Phi-2|B|naming head read without snapping (perm)": {
+   "mean": 0.887,
+   "seeds": [
+    {
+     "value": 0.884,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.887 [0.867-0.905]  seeds 0.884 [0.853-0.909], 0.886 [0.855-0.911], 0.890 [0.860-0.915]",
+     "text": "0.884"
+    },
+    {
+     "value": 0.886,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.887 [0.867-0.905]  seeds 0.884 [0.853-0.909], 0.886 [0.855-0.911], 0.890 [0.860-0.915]",
+     "text": "0.886"
+    },
+    {
+     "value": 0.89,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.887 [0.867-0.905]  seeds 0.884 [0.853-0.909], 0.886 [0.855-0.911], 0.890 [0.860-0.915]",
+     "text": "0.890"
+    }
+   ]
+  },
+  "Phi-2|B|binding-loss map (perm, named)": {
+   "mean": 0.961,
+   "seeds": [
+    {
+     "value": 0.954,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.961 [0.945-0.975]  seeds 0.954 [0.932-0.969], 0.962 [0.941-0.976], 0.966 [0.946-0.979]",
+     "text": "0.954"
+    },
+    {
+     "value": 0.962,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.961 [0.945-0.975]  seeds 0.954 [0.932-0.969], 0.962 [0.941-0.976], 0.966 [0.946-0.979]",
+     "text": "0.962"
+    },
+    {
+     "value": 0.966,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.961 [0.945-0.975]  seeds 0.954 [0.932-0.969], 0.962 [0.941-0.976], 0.966 [0.946-0.979]",
+     "text": "0.966"
+    }
+   ]
+  },
+  "Phi-2|B|binding-loss map, published form (comm, index)": {
+   "mean": 0.502,
+   "seeds": [
+    {
+     "value": 0.502,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.502 [0.475-0.528]  seeds 0.502 [0.458-0.546], 0.496 [0.452-0.540], 0.508 [0.464-0.552]",
+     "text": "0.502"
+    },
+    {
+     "value": 0.496,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.502 [0.475-0.528]  seeds 0.502 [0.458-0.546], 0.496 [0.452-0.540], 0.508 [0.464-0.552]",
+     "text": "0.496"
+    },
+    {
+     "value": 0.508,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.502 [0.475-0.528]  seeds 0.502 [0.458-0.546], 0.496 [0.452-0.540], 0.508 [0.464-0.552]",
+     "text": "0.508"
+    }
+   ]
+  },
+  "Phi-2|B|label-free InfoNCE map (perm, named)": {
+   "mean": 0.951,
+   "seeds": [
+    {
+     "value": 0.946,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.951 [0.934-0.967]  seeds 0.946 [0.923-0.963], 0.952 [0.930-0.968], 0.956 [0.934-0.971]",
+     "text": "0.946"
+    },
+    {
+     "value": 0.952,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.951 [0.934-0.967]  seeds 0.946 [0.923-0.963], 0.952 [0.930-0.968], 0.956 [0.934-0.971]",
+     "text": "0.952"
+    },
+    {
+     "value": 0.956,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.951 [0.934-0.967]  seeds 0.946 [0.923-0.963], 0.952 [0.930-0.968], 0.956 [0.934-0.971]",
+     "text": "0.956"
+    }
+   ]
+  },
+  "Phi-2|B|equalised probe": {
+   "mean": 0.956,
+   "seeds": [
+    {
+     "value": 0.956,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.956 [0.938-0.974]  seeds 0.956 [0.934-0.971], 0.956 [0.934-0.971], 0.956 [0.934-0.971]",
+     "text": "0.956"
+    },
+    {
+     "value": 0.956,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.956 [0.938-0.974]  seeds 0.956 [0.934-0.971], 0.956 [0.934-0.971], 0.956 [0.934-0.971]",
+     "text": "0.956"
+    },
+    {
+     "value": 0.956,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.956 [0.938-0.974]  seeds 0.956 [0.934-0.971], 0.956 [0.934-0.971], 0.956 [0.934-0.971]",
+     "text": "0.956"
+    }
+   ]
+  },
+  "Phi-2|B|equalised LoRA": {
+   "mean": 0.993,
+   "seeds": [
+    {
+     "value": 0.99,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.993 [0.988-0.997]  seeds 0.990 [0.977-0.996], 0.998 [0.989-1.000], 0.992 [0.980-0.997]",
+     "text": "0.990"
+    },
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.993 [0.988-0.997]  seeds 0.990 [0.977-0.996], 0.998 [0.989-1.000], 0.992 [0.980-0.997]",
+     "text": "0.998"
+    },
+    {
+     "value": 0.992,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.993 [0.988-0.997]  seeds 0.990 [0.977-0.996], 0.998 [0.989-1.000], 0.992 [0.980-0.997]",
+     "text": "0.992"
+    }
+   ]
+  },
+  "Phi-2|B|LoRA + identity auxiliary loss": {
+   "mean": 0.989,
+   "seeds": [
+    {
+     "value": 0.992,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.989 [0.981-0.997]  seeds 0.992 [0.980-0.997], 0.984 [0.969-0.992], 0.992 [0.980-0.997]",
+     "text": "0.992"
+    },
+    {
+     "value": 0.984,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.989 [0.981-0.997]  seeds 0.992 [0.980-0.997], 0.984 [0.969-0.992], 0.992 [0.980-0.997]",
+     "text": "0.984"
+    },
+    {
+     "value": 0.992,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.989 [0.981-0.997]  seeds 0.992 [0.980-0.997], 0.984 [0.969-0.992], 0.992 [0.980-0.997]",
+     "text": "0.992"
+    }
+   ]
+  },
+  "Qwen3-8B|B|naming head + VSA (perm, named)": {
+   "mean": 0.796,
+   "seeds": [
+    {
+     "value": 0.794,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.796 [0.764-0.826]  seeds 0.794 [0.756-0.827], 0.810 [0.773-0.842], 0.784 [0.746-0.818]",
+     "text": "0.794"
+    },
+    {
+     "value": 0.81,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.796 [0.764-0.826]  seeds 0.794 [0.756-0.827], 0.810 [0.773-0.842], 0.784 [0.746-0.818]",
+     "text": "0.810"
+    },
+    {
+     "value": 0.784,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.796 [0.764-0.826]  seeds 0.794 [0.756-0.827], 0.810 [0.773-0.842], 0.784 [0.746-0.818]",
+     "text": "0.784"
+    }
+   ]
+  },
+  "Qwen3-8B|B|naming head + VSA (perm, query/cand by index)": {
+   "mean": 0.98,
+   "seeds": [
+    {
+     "value": 0.974,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.980 [0.970-0.989]  seeds 0.974 [0.956-0.985], 0.982 [0.966-0.991], 0.984 [0.969-0.992]",
+     "text": "0.974"
+    },
+    {
+     "value": 0.982,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.980 [0.970-0.989]  seeds 0.974 [0.956-0.985], 0.982 [0.966-0.991], 0.984 [0.969-0.992]",
+     "text": "0.982"
+    },
+    {
+     "value": 0.984,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.980 [0.970-0.989]  seeds 0.974 [0.956-0.985], 0.982 [0.966-0.991], 0.984 [0.969-0.992]",
+     "text": "0.984"
+    }
+   ]
+  },
+  "Qwen3-8B|B|naming head + VSA (comm, named)": {
+   "mean": 0.799,
+   "seeds": [
+    {
+     "value": 0.796,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.799 [0.768-0.829]  seeds 0.796 [0.758-0.829], 0.816 [0.780-0.848], 0.784 [0.746-0.818]",
+     "text": "0.796"
+    },
+    {
+     "value": 0.816,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.799 [0.768-0.829]  seeds 0.796 [0.758-0.829], 0.816 [0.780-0.848], 0.784 [0.746-0.818]",
+     "text": "0.816"
+    },
+    {
+     "value": 0.784,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.799 [0.768-0.829]  seeds 0.796 [0.758-0.829], 0.816 [0.780-0.848], 0.784 [0.746-0.818]",
+     "text": "0.784"
+    }
+   ]
+  },
+  "Qwen3-8B|B|naming head read without snapping (perm)": {
+   "mean": 0.662,
+   "seeds": [
+    {
+     "value": 0.658,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.662 [0.629-0.695]  seeds 0.658 [0.615-0.698], 0.648 [0.605-0.689], 0.680 [0.638-0.719]",
+     "text": "0.658"
+    },
+    {
+     "value": 0.648,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.662 [0.629-0.695]  seeds 0.658 [0.615-0.698], 0.648 [0.605-0.689], 0.680 [0.638-0.719]",
+     "text": "0.648"
+    },
+    {
+     "value": 0.68,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.662 [0.629-0.695]  seeds 0.658 [0.615-0.698], 0.648 [0.605-0.689], 0.680 [0.638-0.719]",
+     "text": "0.680"
+    }
+   ]
+  },
+  "Qwen3-8B|B|binding-loss map (perm, named)": {
+   "mean": 0.996,
+   "seeds": [
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.996 [0.991-1.000]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.996 [0.991-1.000]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.996 [0.991-1.000]  seeds 0.996 [0.986-0.999], 0.996 [0.986-0.999], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    }
+   ]
+  },
+  "Qwen3-8B|B|binding-loss map, published form (comm, index)": {
+   "mean": 0.512,
+   "seeds": [
+    {
+     "value": 0.524,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.512 [0.485-0.539]  seeds 0.524 [0.480-0.567], 0.492 [0.448-0.536], 0.520 [0.476-0.563]",
+     "text": "0.524"
+    },
+    {
+     "value": 0.492,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.512 [0.485-0.539]  seeds 0.524 [0.480-0.567], 0.492 [0.448-0.536], 0.520 [0.476-0.563]",
+     "text": "0.492"
+    },
+    {
+     "value": 0.52,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.512 [0.485-0.539]  seeds 0.524 [0.480-0.567], 0.492 [0.448-0.536], 0.520 [0.476-0.563]",
+     "text": "0.520"
+    }
+   ]
+  },
+  "Qwen3-8B|B|label-free InfoNCE map (perm, named)": {
+   "mean": 0.997,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.997 [0.992-1.000]  seeds 1.000 [0.992-1.000], 0.994 [0.983-0.998], 0.996 [0.986-0.999]",
+     "text": "1.000"
+    },
+    {
+     "value": 0.994,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.997 [0.992-1.000]  seeds 1.000 [0.992-1.000], 0.994 [0.983-0.998], 0.996 [0.986-0.999]",
+     "text": "0.994"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.997 [0.992-1.000]  seeds 1.000 [0.992-1.000], 0.994 [0.983-0.998], 0.996 [0.986-0.999]",
+     "text": "0.996"
+    }
+   ]
+  },
+  "Qwen3-8B|B|equalised probe": {
+   "mean": 0.994,
+   "seeds": [
+    {
+     "value": 0.994,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.994 [0.986-1.000]  seeds 0.994 [0.983-0.998], 0.994 [0.983-0.998], 0.994 [0.983-0.998]",
+     "text": "0.994"
+    },
+    {
+     "value": 0.994,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.994 [0.986-1.000]  seeds 0.994 [0.983-0.998], 0.994 [0.983-0.998], 0.994 [0.983-0.998]",
+     "text": "0.994"
+    },
+    {
+     "value": 0.994,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.994 [0.986-1.000]  seeds 0.994 [0.983-0.998], 0.994 [0.983-0.998], 0.994 [0.983-0.998]",
+     "text": "0.994"
+    }
+   ]
+  },
+  "Qwen3-8B|B|equalised LoRA": {
+   "mean": 0.999,
+   "seeds": [
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.999 [0.997-1.000]  seeds 0.996 [0.986-0.999], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "0.996"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.999 [0.997-1.000]  seeds 0.996 [0.986-0.999], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.999 [0.997-1.000]  seeds 0.996 [0.986-0.999], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "Qwen3-8B|B|LoRA + identity auxiliary loss": {
+   "mean": 0.999,
+   "seeds": [
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.999 [0.997-1.000]  seeds 0.998 [0.989-1.000], 0.998 [0.989-1.000], 1.000 [0.992-1.000]",
+     "text": "0.998"
+    },
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.999 [0.997-1.000]  seeds 0.998 [0.989-1.000], 0.998 [0.989-1.000], 1.000 [0.992-1.000]",
+     "text": "0.998"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.999 [0.997-1.000]  seeds 0.998 [0.989-1.000], 0.998 [0.989-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "no encoder|C|exact symbols + dictionary": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + dictionary                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "no encoder|C|exact symbols + VSA (perm)": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (perm)                           mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "no encoder|C|exact symbols + VSA (comm)": {
+   "mean": 0.934,
+   "seeds": [
+    {
+     "value": 0.932,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.934 [0.917-0.950]  seeds 0.932 [0.906-0.951], 0.932 [0.906-0.951], 0.938 [0.913-0.956]",
+     "text": "0.932"
+    },
+    {
+     "value": 0.932,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.934 [0.917-0.950]  seeds 0.932 [0.906-0.951], 0.932 [0.906-0.951], 0.938 [0.913-0.956]",
+     "text": "0.932"
+    },
+    {
+     "value": 0.938,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    no encoder exact symbols + VSA (comm)                           mean 0.934 [0.917-0.950]  seeds 0.932 [0.906-0.951], 0.932 [0.906-0.951], 0.938 [0.913-0.956]",
+     "text": "0.938"
+    }
+   ]
+  },
+  "Phi-2|C|naming head + VSA (perm, named)": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, named)                      mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "Phi-2|C|naming head + VSA (perm, query/cand by index)": {
+   "mean": 1.0,
+   "seeds": [
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (perm, query/cand by index)        mean 1.000 [1.000-1.000]  seeds 1.000 [0.992-1.000], 1.000 [0.992-1.000], 1.000 [0.992-1.000]",
+     "text": "1.000"
+    }
+   ]
+  },
+  "Phi-2|C|naming head + VSA (comm, named)": {
+   "mean": 0.934,
+   "seeds": [
+    {
+     "value": 0.932,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.934 [0.917-0.950]  seeds 0.932 [0.906-0.951], 0.932 [0.906-0.951], 0.938 [0.913-0.956]",
+     "text": "0.932"
+    },
+    {
+     "value": 0.932,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.934 [0.917-0.950]  seeds 0.932 [0.906-0.951], 0.932 [0.906-0.951], 0.938 [0.913-0.956]",
+     "text": "0.932"
+    },
+    {
+     "value": 0.938,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head + VSA (comm, named)                      mean 0.934 [0.917-0.950]  seeds 0.932 [0.906-0.951], 0.932 [0.906-0.951], 0.938 [0.913-0.956]",
+     "text": "0.938"
+    }
+   ]
+  },
+  "Phi-2|C|naming head read without snapping (perm)": {
+   "mean": 0.987,
+   "seeds": [
+    {
+     "value": 0.984,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.987 [0.979-0.993]  seeds 0.984 [0.969-0.992], 0.996 [0.986-0.999], 0.980 [0.964-0.989]",
+     "text": "0.984"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.987 [0.979-0.993]  seeds 0.984 [0.969-0.992], 0.996 [0.986-0.999], 0.980 [0.964-0.989]",
+     "text": "0.996"
+    },
+    {
+     "value": 0.98,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     naming head read without snapping (perm)             mean 0.987 [0.979-0.993]  seeds 0.984 [0.969-0.992], 0.996 [0.986-0.999], 0.980 [0.964-0.989]",
+     "text": "0.980"
+    }
+   ]
+  },
+  "Phi-2|C|binding-loss map (perm, named)": {
+   "mean": 0.468,
+   "seeds": [
+    {
+     "value": 0.46,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.468 [0.433-0.503]  seeds 0.460 [0.417-0.504], 0.474 [0.431-0.518], 0.470 [0.427-0.514]",
+     "text": "0.460"
+    },
+    {
+     "value": 0.474,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.468 [0.433-0.503]  seeds 0.460 [0.417-0.504], 0.474 [0.431-0.518], 0.470 [0.427-0.514]",
+     "text": "0.474"
+    },
+    {
+     "value": 0.47,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map (perm, named)                       mean 0.468 [0.433-0.503]  seeds 0.460 [0.417-0.504], 0.474 [0.431-0.518], 0.470 [0.427-0.514]",
+     "text": "0.470"
+    }
+   ]
+  },
+  "Phi-2|C|binding-loss map, published form (comm, index)": {
+   "mean": 0.481,
+   "seeds": [
+    {
+     "value": 0.47,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.481 [0.443-0.519]  seeds 0.470 [0.427-0.514], 0.502 [0.458-0.546], 0.472 [0.429-0.516]",
+     "text": "0.470"
+    },
+    {
+     "value": 0.502,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.481 [0.443-0.519]  seeds 0.470 [0.427-0.514], 0.502 [0.458-0.546], 0.472 [0.429-0.516]",
+     "text": "0.502"
+    },
+    {
+     "value": 0.472,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     binding-loss map, published form (comm, index)       mean 0.481 [0.443-0.519]  seeds 0.470 [0.427-0.514], 0.502 [0.458-0.546], 0.472 [0.429-0.516]",
+     "text": "0.472"
+    }
+   ]
+  },
+  "Phi-2|C|label-free InfoNCE map (perm, named)": {
+   "mean": 0.499,
+   "seeds": [
+    {
+     "value": 0.478,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.499 [0.474-0.526]  seeds 0.478 [0.435-0.522], 0.514 [0.470-0.558], 0.506 [0.462-0.550]",
+     "text": "0.478"
+    },
+    {
+     "value": 0.514,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.499 [0.474-0.526]  seeds 0.478 [0.435-0.522], 0.514 [0.470-0.558], 0.506 [0.462-0.550]",
+     "text": "0.514"
+    },
+    {
+     "value": 0.506,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     label-free InfoNCE map (perm, named)                 mean 0.499 [0.474-0.526]  seeds 0.478 [0.435-0.522], 0.514 [0.470-0.558], 0.506 [0.462-0.550]",
+     "text": "0.506"
+    }
+   ]
+  },
+  "Phi-2|C|equalised probe": {
+   "mean": 0.472,
+   "seeds": [
+    {
+     "value": 0.472,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.472 [0.430-0.516]  seeds 0.472 [0.429-0.516], 0.472 [0.429-0.516], 0.472 [0.429-0.516]",
+     "text": "0.472"
+    },
+    {
+     "value": 0.472,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.472 [0.430-0.516]  seeds 0.472 [0.429-0.516], 0.472 [0.429-0.516], 0.472 [0.429-0.516]",
+     "text": "0.472"
+    },
+    {
+     "value": 0.472,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised probe                                      mean 0.472 [0.430-0.516]  seeds 0.472 [0.429-0.516], 0.472 [0.429-0.516], 0.472 [0.429-0.516]",
+     "text": "0.472"
+    }
+   ]
+  },
+  "Phi-2|C|equalised LoRA": {
+   "mean": 0.467,
+   "seeds": [
+    {
+     "value": 0.474,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.467 [0.441-0.494]  seeds 0.474 [0.431-0.518], 0.462 [0.419-0.506], 0.466 [0.423-0.510]",
+     "text": "0.474"
+    },
+    {
+     "value": 0.462,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.467 [0.441-0.494]  seeds 0.474 [0.431-0.518], 0.462 [0.419-0.506], 0.466 [0.423-0.510]",
+     "text": "0.462"
+    },
+    {
+     "value": 0.466,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     equalised LoRA                                       mean 0.467 [0.441-0.494]  seeds 0.474 [0.431-0.518], 0.462 [0.419-0.506], 0.466 [0.423-0.510]",
+     "text": "0.466"
+    }
+   ]
+  },
+  "Phi-2|C|LoRA + identity auxiliary loss": {
+   "mean": 0.466,
+   "seeds": [
+    {
+     "value": 0.462,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.466 [0.434-0.497]  seeds 0.462 [0.419-0.506], 0.486 [0.442-0.530], 0.450 [0.407-0.494]",
+     "text": "0.462"
+    },
+    {
+     "value": 0.486,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.466 [0.434-0.497]  seeds 0.462 [0.419-0.506], 0.486 [0.442-0.530], 0.450 [0.407-0.494]",
+     "text": "0.486"
+    },
+    {
+     "value": 0.45,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Phi-2     LoRA + identity auxiliary loss                       mean 0.466 [0.434-0.497]  seeds 0.462 [0.419-0.506], 0.486 [0.442-0.530], 0.450 [0.407-0.494]",
+     "text": "0.450"
+    }
+   ]
+  },
+  "Qwen3-8B|C|naming head + VSA (perm, named)": {
+   "mean": 0.983,
+   "seeds": [
+    {
+     "value": 0.982,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.983 [0.975-0.991]  seeds 0.982 [0.966-0.991], 0.990 [0.977-0.996], 0.978 [0.961-0.988]",
+     "text": "0.982"
+    },
+    {
+     "value": 0.99,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.983 [0.975-0.991]  seeds 0.982 [0.966-0.991], 0.990 [0.977-0.996], 0.978 [0.961-0.988]",
+     "text": "0.990"
+    },
+    {
+     "value": 0.978,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, named)                      mean 0.983 [0.975-0.991]  seeds 0.982 [0.966-0.991], 0.990 [0.977-0.996], 0.978 [0.961-0.988]",
+     "text": "0.978"
+    }
+   ]
+  },
+  "Qwen3-8B|C|naming head + VSA (perm, query/cand by index)": {
+   "mean": 0.995,
+   "seeds": [
+    {
+     "value": 0.994,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.995 [0.991-0.998]  seeds 0.994 [0.983-0.998], 0.998 [0.989-1.000], 0.992 [0.980-0.997]",
+     "text": "0.994"
+    },
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.995 [0.991-0.998]  seeds 0.994 [0.983-0.998], 0.998 [0.989-1.000], 0.992 [0.980-0.997]",
+     "text": "0.998"
+    },
+    {
+     "value": 0.992,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (perm, query/cand by index)        mean 0.995 [0.991-0.998]  seeds 0.994 [0.983-0.998], 0.998 [0.989-1.000], 0.992 [0.980-0.997]",
+     "text": "0.992"
+    }
+   ]
+  },
+  "Qwen3-8B|C|naming head + VSA (comm, named)": {
+   "mean": 0.917,
+   "seeds": [
+    {
+     "value": 0.914,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.917 [0.897-0.936]  seeds 0.914 [0.886-0.936], 0.920 [0.893-0.941], 0.918 [0.891-0.939]",
+     "text": "0.914"
+    },
+    {
+     "value": 0.92,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.917 [0.897-0.936]  seeds 0.914 [0.886-0.936], 0.920 [0.893-0.941], 0.918 [0.891-0.939]",
+     "text": "0.920"
+    },
+    {
+     "value": 0.918,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head + VSA (comm, named)                      mean 0.917 [0.897-0.936]  seeds 0.914 [0.886-0.936], 0.920 [0.893-0.941], 0.918 [0.891-0.939]",
+     "text": "0.918"
+    }
+   ]
+  },
+  "Qwen3-8B|C|naming head read without snapping (perm)": {
+   "mean": 0.733,
+   "seeds": [
+    {
+     "value": 0.742,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.733 [0.702-0.764]  seeds 0.742 [0.702-0.778], 0.738 [0.698-0.775], 0.720 [0.679-0.758]",
+     "text": "0.742"
+    },
+    {
+     "value": 0.738,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.733 [0.702-0.764]  seeds 0.742 [0.702-0.778], 0.738 [0.698-0.775], 0.720 [0.679-0.758]",
+     "text": "0.738"
+    },
+    {
+     "value": 0.72,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  naming head read without snapping (perm)             mean 0.733 [0.702-0.764]  seeds 0.742 [0.702-0.778], 0.738 [0.698-0.775], 0.720 [0.679-0.758]",
+     "text": "0.720"
+    }
+   ]
+  },
+  "Qwen3-8B|C|binding-loss map (perm, named)": {
+   "mean": 0.479,
+   "seeds": [
+    {
+     "value": 0.462,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.479 [0.441-0.519]  seeds 0.462 [0.419-0.506], 0.484 [0.440-0.528], 0.490 [0.446-0.534]",
+     "text": "0.462"
+    },
+    {
+     "value": 0.484,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.479 [0.441-0.519]  seeds 0.462 [0.419-0.506], 0.484 [0.440-0.528], 0.490 [0.446-0.534]",
+     "text": "0.484"
+    },
+    {
+     "value": 0.49,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map (perm, named)                       mean 0.479 [0.441-0.519]  seeds 0.462 [0.419-0.506], 0.484 [0.440-0.528], 0.490 [0.446-0.534]",
+     "text": "0.490"
+    }
+   ]
+  },
+  "Qwen3-8B|C|binding-loss map, published form (comm, index)": {
+   "mean": 0.475,
+   "seeds": [
+    {
+     "value": 0.484,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.475 [0.435-0.515]  seeds 0.484 [0.440-0.528], 0.474 [0.431-0.518], 0.466 [0.423-0.510]",
+     "text": "0.484"
+    },
+    {
+     "value": 0.474,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.475 [0.435-0.515]  seeds 0.484 [0.440-0.528], 0.474 [0.431-0.518], 0.466 [0.423-0.510]",
+     "text": "0.474"
+    },
+    {
+     "value": 0.466,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  binding-loss map, published form (comm, index)       mean 0.475 [0.435-0.515]  seeds 0.484 [0.440-0.528], 0.474 [0.431-0.518], 0.466 [0.423-0.510]",
+     "text": "0.466"
+    }
+   ]
+  },
+  "Qwen3-8B|C|label-free InfoNCE map (perm, named)": {
+   "mean": 0.543,
+   "seeds": [
+    {
+     "value": 0.586,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.543 [0.515-0.570]  seeds 0.586 [0.542-0.628], 0.538 [0.494-0.581], 0.504 [0.460-0.548]",
+     "text": "0.586"
+    },
+    {
+     "value": 0.538,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.543 [0.515-0.570]  seeds 0.586 [0.542-0.628], 0.538 [0.494-0.581], 0.504 [0.460-0.548]",
+     "text": "0.538"
+    },
+    {
+     "value": 0.504,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  label-free InfoNCE map (perm, named)                 mean 0.543 [0.515-0.570]  seeds 0.586 [0.542-0.628], 0.538 [0.494-0.581], 0.504 [0.460-0.548]",
+     "text": "0.504"
+    }
+   ]
+  },
+  "Qwen3-8B|C|equalised probe": {
+   "mean": 0.512,
+   "seeds": [
+    {
+     "value": 0.512,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.512 [0.468-0.556]  seeds 0.512 [0.468-0.556], 0.512 [0.468-0.556], 0.512 [0.468-0.556]",
+     "text": "0.512"
+    },
+    {
+     "value": 0.512,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.512 [0.468-0.556]  seeds 0.512 [0.468-0.556], 0.512 [0.468-0.556], 0.512 [0.468-0.556]",
+     "text": "0.512"
+    },
+    {
+     "value": 0.512,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised probe                                      mean 0.512 [0.468-0.556]  seeds 0.512 [0.468-0.556], 0.512 [0.468-0.556], 0.512 [0.468-0.556]",
+     "text": "0.512"
+    }
+   ]
+  },
+  "Qwen3-8B|C|equalised LoRA": {
+   "mean": 0.631,
+   "seeds": [
+    {
+     "value": 0.538,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.631 [0.600-0.663]  seeds 0.538 [0.494-0.581], 0.698 [0.656-0.737], 0.658 [0.615-0.698]",
+     "text": "0.538"
+    },
+    {
+     "value": 0.698,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.631 [0.600-0.663]  seeds 0.538 [0.494-0.581], 0.698 [0.656-0.737], 0.658 [0.615-0.698]",
+     "text": "0.698"
+    },
+    {
+     "value": 0.658,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  equalised LoRA                                       mean 0.631 [0.600-0.663]  seeds 0.538 [0.494-0.581], 0.698 [0.656-0.737], 0.658 [0.615-0.698]",
+     "text": "0.658"
+    }
+   ]
+  },
+  "Qwen3-8B|C|LoRA + identity auxiliary loss": {
+   "mean": 0.503,
+   "seeds": [
+    {
+     "value": 0.504,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.503 [0.470-0.535]  seeds 0.504 [0.460-0.548], 0.524 [0.480-0.567], 0.480 [0.437-0.524]",
+     "text": "0.504"
+    },
+    {
+     "value": 0.524,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.503 [0.470-0.535]  seeds 0.504 [0.460-0.548], 0.524 [0.480-0.567], 0.480 [0.437-0.524]",
+     "text": "0.524"
+    },
+    {
+     "value": 0.48,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "    Qwen3-8B  LoRA + identity auxiliary loss                       mean 0.503 [0.470-0.535]  seeds 0.504 [0.460-0.548], 0.524 [0.480-0.567], 0.480 [0.437-0.524]",
+     "text": "0.480"
+    }
+   ]
+  }
+ },
+ "explore1": {
+  "A": {
+   "layer": 9,
+   "mean": {
+    "value": 0.997,
+    "file": "../results/vsassm/results/b31_verdict.txt",
+    "line": "  arena A layer  9: dev 0.998 | test named 0.997 [0.994-1.000] (seeds 0.997/0.997/0.998), index 1.000; mentions named correctly 0.999/0.999/0.999   <- selected on dev",
+    "text": "0.997"
+   },
+   "seeds": [
+    {
+     "value": 0.997,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena A layer  9: dev 0.998 | test named 0.997 [0.994-1.000] (seeds 0.997/0.997/0.998), index 1.000; mentions named correctly 0.999/0.999/0.999   <- selected on dev",
+     "text": "0.997"
+    },
+    {
+     "value": 0.997,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena A layer  9: dev 0.998 | test named 0.997 [0.994-1.000] (seeds 0.997/0.997/0.998), index 1.000; mentions named correctly 0.999/0.999/0.999   <- selected on dev",
+     "text": "0.997"
+    },
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena A layer  9: dev 0.998 | test named 0.997 [0.994-1.000] (seeds 0.997/0.997/0.998), index 1.000; mentions named correctly 0.999/0.999/0.999   <- selected on dev",
+     "text": "0.998"
+    }
+   ]
+  },
+  "B": {
+   "layer": 9,
+   "mean": {
+    "value": 0.997,
+    "file": "../results/vsassm/results/b31_verdict.txt",
+    "line": "  arena B layer  9: dev 0.997 | test named 0.997 [0.993-0.999] (seeds 0.996/0.996/0.998), index 0.997; mentions named correctly 1.000/1.000/1.000   <- selected on dev",
+    "text": "0.997"
+   },
+   "seeds": [
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena B layer  9: dev 0.997 | test named 0.997 [0.993-0.999] (seeds 0.996/0.996/0.998), index 0.997; mentions named correctly 1.000/1.000/1.000   <- selected on dev",
+     "text": "0.996"
+    },
+    {
+     "value": 0.996,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena B layer  9: dev 0.997 | test named 0.997 [0.993-0.999] (seeds 0.996/0.996/0.998), index 0.997; mentions named correctly 1.000/1.000/1.000   <- selected on dev",
+     "text": "0.996"
+    },
+    {
+     "value": 0.998,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena B layer  9: dev 0.997 | test named 0.997 [0.993-0.999] (seeds 0.996/0.996/0.998), index 0.997; mentions named correctly 1.000/1.000/1.000   <- selected on dev",
+     "text": "0.998"
+    }
+   ]
+  },
+  "C": {
+   "layer": 27,
+   "mean": {
+    "value": 0.998,
+    "file": "../results/vsassm/results/b31_verdict.txt",
+    "line": "  arena C layer 27: dev 1.000 | test named 0.998 [0.995-1.000] (seeds 0.994/1.000/1.000), index 0.998; mentions named correctly 0.998/1.000/1.000   <- selected on dev",
+    "text": "0.998"
+   },
+   "seeds": [
+    {
+     "value": 0.994,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena C layer 27: dev 1.000 | test named 0.998 [0.995-1.000] (seeds 0.994/1.000/1.000), index 0.998; mentions named correctly 0.998/1.000/1.000   <- selected on dev",
+     "text": "0.994"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena C layer 27: dev 1.000 | test named 0.998 [0.995-1.000] (seeds 0.994/1.000/1.000), index 0.998; mentions named correctly 0.998/1.000/1.000   <- selected on dev",
+     "text": "1.000"
+    },
+    {
+     "value": 1.0,
+     "file": "../results/vsassm/results/b31_verdict.txt",
+     "line": "  arena C layer 27: dev 1.000 | test named 0.998 [0.995-1.000] (seeds 0.994/1.000/1.000), index 0.998; mentions named correctly 0.998/1.000/1.000   <- selected on dev",
+     "text": "1.000"
+    }
+   ]
+  }
+ }
+}

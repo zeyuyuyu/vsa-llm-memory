@@ -1,0 +1,62 @@
+# B66 part (B) checks (b66_lsfc.py check)
+
+(1) plain-loop scorer: 1050 values (cell accuracies of LSFR / LSFP / LSFX / STORE / LAMC and region point statistics of the pairs without VSAPC), max |difference| 1.39e-17 (PASS)
+(2) bits audit: 113064 dev + test rows; logged bits != own formula 0; over budget 0; not maximal 0 (PASS)
+(3) float64 re-derivation (own features from the map's seeds, own dual ridge, own quantizer, own read), test rep 0, ideal, LSFR:
+    qwen8 M=256 V=2 b=4 whiten:lin ['col', 'V-1', 0.1, 1] p=992: agreement 1.0000
+    qwen8 M=256 V=2 b=16 whiten:lin ['col', 'V-1', 0.1, 1] p=4064: agreement 1.0000
+    qwen8 M=256 V=16 b=4 whiten:lin ['flat', 'V-1', 10.0, 2] p=34: agreement 1.0000
+    qwen8 M=256 V=16 b=16 whiten:lin ['flat', 'V', 1.0, 1] p=254: agreement 1.0000
+    qwen8 M=1024 V=2 b=4 whiten:lin ['col', 'V-1', 1.0, 1] p=4064: agreement 1.0000
+    qwen8 M=1024 V=2 b=16 whiten:lin ['col', 'V-1', 1.0, 2] p=8572: agreement 1.0000
+    qwen8 M=1024 V=16 b=4 whiten:lin ['flat', 'V', 1.0, 1] p=254: agreement 1.0000
+    qwen8 M=1024 V=16 b=16 whiten:lin ['flat', 'V', 1.0, 1] p=1020: agreement 1.0000
+    b46 M=256 V=2 b=4 whiten:lin ['col', 'V-1', 100.0, 1] p=992: agreement 1.0000
+    b46 M=256 V=2 b=16 whiten:lin ['col', 'V-1', 10.0, 1] p=4064: agreement 1.0000
+    b46 M=256 V=16 b=4 center:lin ['flat', 'V', 1.0, 1] p=62: agreement 1.0000
+    b46 M=256 V=16 b=16 center:lin ['flat', 'V', 1.0, 1] p=254: agreement 1.0000
+    b46 M=1024 V=2 b=4 whiten:lin ['col', 'V-1', 10.0, 1] p=4064: agreement 1.0000
+    b46 M=1024 V=2 b=16 whiten:lin ['col', 'V-1', 1.0, 1] p=16320: agreement 1.0000
+    b46 M=1024 V=16 b=4 whiten:lin ['flat', 'V', 1.0, 1] p=254: agreement 1.0000
+    b46 M=1024 V=16 b=16 whiten:lin ['col', 'V', 1.0, 1] p=992: agreement 1.0000
+    llama M=256 V=2 b=4 center:lin ['col', 'V-1', 0.1, 1] p=992: agreement 1.0000
+    llama M=256 V=2 b=16 whiten:lin ['col', 'V-1', 0.1, 1] p=4064: agreement 1.0000
+    llama M=256 V=16 b=4 whiten:lin ['flat', 'V', 100.0, 1] p=62: agreement 1.0000
+    llama M=256 V=16 b=16 whiten:lin ['flat', 'V', 10.0, 1] p=254: agreement 1.0000
+    llama M=1024 V=2 b=4 whiten:lin ['col', 'V-1', 0.1, 2] p=2134: agreement 1.0000
+    llama M=1024 V=2 b=16 whiten:lin ['col', 'V-1', 0.1, 1] p=16320: agreement 1.0000
+    llama M=1024 V=16 b=4 whiten:lin ['flat', 'V', 100.0, 1] p=254: agreement 1.0000
+    llama M=1024 V=16 b=16 whiten:lin ['col', 'V', 1.0, 1] p=992: agreement 1.0000
+    mistral M=256 V=2 b=4 whiten:sgn ['col', 'V-1', 1.0, 1] p=992: agreement 1.0000
+    mistral M=256 V=2 b=16 whiten:lin ['col', 'V-1', 0.01, 1] p=4064: agreement 1.0000
+    mistral M=256 V=16 b=4 whiten:lin ['flat', 'V', 1.0, 1] p=62: agreement 1.0000
+    mistral M=256 V=16 b=16 whiten:lin ['flat', 'V', 10.0, 1] p=254: agreement 1.0000
+    mistral M=1024 V=2 b=4 whiten:lin ['col', 'V-1', 0.1, 1] p=4064: agreement 1.0000
+    mistral M=1024 V=2 b=16 whiten:lin ['col', 'V-1', 0.0001, 2] p=8572: agreement 1.0000
+    mistral M=1024 V=16 b=4 whiten:lin ['flat', 'V', 10.0, 1] p=254: agreement 1.0000
+    mistral M=1024 V=16 b=16 whiten:lin ['flat', 'V', 10.0, 1] p=1020: agreement 1.0000
+    e5 M=256 V=2 b=4 whiten:sgn ['col', 'V-1', 1.0, 1] p=992: agreement 1.0000
+    e5 M=256 V=2 b=16 whiten:lin ['col', 'V-1', 1.0, 1] p=4064: agreement 1.0000
+    e5 M=256 V=16 b=4 center:lin ['flat', 'V', 10.0, 1] p=62: agreement 1.0000
+    e5 M=256 V=16 b=16 whiten:lin ['flat', 'V', 1.0, 1] p=254: agreement 1.0000
+    e5 M=1024 V=2 b=4 whiten:lin ['col', 'V-1', 10.0, 2] p=2134: agreement 1.0000
+    e5 M=1024 V=2 b=16 center:sgn3 ['col', 'V-1', 1.0, 1] p=16320: agreement 0.9949
+    e5 M=1024 V=16 b=4 whiten:lin ['flat', 'V', 10.0, 1] p=254: agreement 1.0000
+    e5 M=1024 V=16 b=16 whiten:lin ['flat', 'V', 1.0, 1] p=1020: agreement 1.0000
+    bge M=256 V=2 b=4 whiten:lin ['col', 'V-1', 0.1, 1] p=992: agreement 1.0000
+    bge M=256 V=2 b=16 whiten:lin ['col', 'V-1', 1.0, 2] p=2134: agreement 1.0000
+    bge M=256 V=16 b=4 whiten:lin ['flat', 'V', 10.0, 1] p=62: agreement 1.0000
+    bge M=256 V=16 b=16 whiten:lin ['flat', 'V', 1.0, 1] p=254: agreement 1.0000
+    bge M=1024 V=2 b=4 center:sgn ['col', 'V-1', 10.0, 2] p=2134: agreement 0.9970
+    bge M=1024 V=2 b=16 center:sgn3 ['col', 'V-1', 0.0001, 1] p=16320: agreement 1.0000
+    bge M=1024 V=16 b=4 whiten:lin ['flat', 'V', 10.0, 1] p=254: agreement 1.0000
+    bge M=1024 V=16 b=16 whiten:lin ['flat', 'V', 1.0, 1] p=1020: agreement 1.0000
+    minilm M=256 V=2 b=4 whiten:sgn ['col', 'V-1', 1.0, 1] p=992: agreement 1.0000
+    minilm M=256 V=2 b=16 whiten:sgn ['col', 'V-1', 0.1, 1] p=4064: agreement 1.0000
+    minilm M=256 V=16 b=4 center:lin ['flat', 'V', 0.01, 2] p=32: agreement 1.0000
+    minilm M=256 V=16 b=16 whiten:lin ['flat', 'V', 10.0, 1] p=254: agreement 1.0000
+    minilm M=1024 V=2 b=4 center:sgn3 ['flat', 'V', 0.1, 1] p=2032: agreement 1.0000
+    minilm M=1024 V=2 b=16 center:sgn3 ['col', 'V-1', 1.0, 1] p=16320: agreement 1.0000
+    minilm M=1024 V=16 b=4 whiten:lin ['flat', 'V', 10.0, 1] p=254: agreement 1.0000
+    minilm M=1024 V=16 b=16 whiten:lin ['flat', 'V', 1.0, 1] p=1020: agreement 1.0000
+    min agreement 0.9949 (PASS; bar >= 0.99)

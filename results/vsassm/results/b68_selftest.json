@@ -1,0 +1,920 @@
+{
+ "phi2L0_A": {
+  "forms": 832,
+  "distinct_vectors": 752,
+  "forms_with_several_vectors": 0,
+  "forms_sharing_a_vector": 160,
+  "collision_examples": [
+   [
+    "X",
+    10
+   ],
+   [
+    "X",
+    11
+   ],
+   [
+    "X",
+    12
+   ],
+   [
+    "X",
+    13
+   ],
+   [
+    "X",
+    14
+   ],
+   [
+    "X",
+    15
+   ],
+   [
+    "X",
+    26
+   ],
+   [
+    "X",
+    27
+   ]
+  ],
+  "geom_centred_same_form": 1.0,
+  "geom_centred_different_forms": 0.3311535998367932,
+  "hash_reader_train_acc": 0.9915,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.671875,
+    "secs": 0.6
+   },
+   "dkvb": {
+    "train_rows_acc": 0.984375,
+    "secs": 1.9
+   },
+   "gumbel": {
+    "train_rows_acc": 0.640625,
+    "secs": 0.3
+   },
+   "st": {
+    "train_rows_acc": 0.640625,
+    "secs": 0.3
+   },
+   "cw": {
+    "train_rows_acc": 0.875,
+    "secs": 0.4
+   },
+   "bind": {
+    "train_rows_acc": 0.875,
+    "secs": 0.6
+   },
+   "name": {
+    "train_rows_acc": 0.65625,
+    "train_rows_naming": 0.1589604616165161
+   }
+  }
+ },
+ "phi2L0_B": {
+  "forms": 320,
+  "distinct_vectors": 290,
+  "forms_with_several_vectors": 0,
+  "forms_sharing_a_vector": 60,
+  "collision_examples": [
+   [
+    "F",
+    10
+   ],
+   [
+    "F",
+    11
+   ],
+   [
+    "F",
+    12
+   ],
+   [
+    "F",
+    13
+   ],
+   [
+    "F",
+    14
+   ],
+   [
+    "F",
+    15
+   ],
+   [
+    "F",
+    16
+   ],
+   [
+    "F",
+    17
+   ]
+  ],
+  "geom_centred_same_form": 1.0,
+  "geom_centred_different_forms": 0.03740063770419173,
+  "hash_reader_train_acc": 0.998,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.953125,
+    "secs": 0.5
+   },
+   "dkvb": {
+    "train_rows_acc": 1.0,
+    "secs": 2.0
+   },
+   "gumbel": {
+    "train_rows_acc": 0.78125,
+    "secs": 0.3
+   },
+   "st": {
+    "train_rows_acc": 0.875,
+    "secs": 0.2
+   },
+   "cw": {
+    "train_rows_acc": 0.625,
+    "secs": 0.3
+   },
+   "bind": {
+    "train_rows_acc": 0.921875,
+    "secs": 0.4
+   },
+   "name": {
+    "train_rows_acc": 1.0,
+    "train_rows_naming": 0.8945913314819336
+   }
+  }
+ },
+ "phi2L0_C": {
+  "forms": 128,
+  "distinct_vectors": 98,
+  "forms_with_several_vectors": 0,
+  "forms_sharing_a_vector": 60,
+  "collision_examples": [
+   [
+    "F",
+    10
+   ],
+   [
+    "F",
+    11
+   ],
+   [
+    "F",
+    12
+   ],
+   [
+    "F",
+    13
+   ],
+   [
+    "F",
+    14
+   ],
+   [
+    "F",
+    15
+   ],
+   [
+    "F",
+    16
+   ],
+   [
+    "F",
+    17
+   ]
+  ],
+  "geom_centred_same_form": 1.0,
+  "geom_centred_different_forms": 0.008882818853100376,
+  "hash_reader_train_acc": 0.52,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.609375,
+    "secs": 0.5
+   },
+   "dkvb": {
+    "train_rows_acc": 0.96875,
+    "secs": 0.8
+   },
+   "gumbel": {
+    "train_rows_acc": 0.578125,
+    "secs": 0.5
+   },
+   "st": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.6
+   },
+   "cw": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.8
+   },
+   "bind": {
+    "train_rows_acc": 0.75,
+    "secs": 1.2
+   },
+   "name": {
+    "train_rows_acc": 0.65625,
+    "train_rows_naming": 0.6724759340286255
+   }
+  }
+ },
+ "phi2L2_A": {
+  "forms": 832,
+  "distinct_vectors": 193950,
+  "forms_with_several_vectors": 832,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.8428180955088295,
+  "geom_centred_different_forms": 0.4121930596140816,
+  "hash_reader_train_acc": 0.5205,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.734375,
+    "secs": 0.7
+   },
+   "dkvb": {
+    "train_rows_acc": 0.984375,
+    "secs": 2.4
+   },
+   "gumbel": {
+    "train_rows_acc": 0.640625,
+    "secs": 0.4
+   },
+   "st": {
+    "train_rows_acc": 0.640625,
+    "secs": 0.5
+   },
+   "cw": {
+    "train_rows_acc": 0.8125,
+    "secs": 0.5
+   },
+   "bind": {
+    "train_rows_acc": 0.8125,
+    "secs": 0.7
+   },
+   "name": {
+    "train_rows_acc": 0.65625,
+    "train_rows_naming": 0.13871173560619354
+   }
+  }
+ },
+ "phi2L2_B": {
+  "forms": 320,
+  "distinct_vectors": 129021,
+  "forms_with_several_vectors": 320,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.9740242324910497,
+  "geom_centred_different_forms": 0.18125818525966925,
+  "hash_reader_train_acc": 0.526,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.625,
+    "secs": 1.0
+   },
+   "dkvb": {
+    "train_rows_acc": 1.0,
+    "secs": 2.9
+   },
+   "gumbel": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.4
+   },
+   "st": {
+    "train_rows_acc": 0.625,
+    "secs": 0.4
+   },
+   "cw": {
+    "train_rows_acc": 0.765625,
+    "secs": 0.4
+   },
+   "bind": {
+    "train_rows_acc": 0.703125,
+    "secs": 0.6
+   },
+   "name": {
+    "train_rows_acc": 1.0,
+    "train_rows_naming": 0.8822115659713745
+   }
+  }
+ },
+ "phi2L2_C": {
+  "forms": 128,
+  "distinct_vectors": 103197,
+  "forms_with_several_vectors": 128,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.8917810690627651,
+  "geom_centred_different_forms": 0.1715390882236472,
+  "hash_reader_train_acc": 0.525,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.5
+   },
+   "dkvb": {
+    "train_rows_acc": 0.9375,
+    "secs": 0.8
+   },
+   "gumbel": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.5
+   },
+   "st": {
+    "train_rows_acc": 0.578125,
+    "secs": 0.6
+   },
+   "cw": {
+    "train_rows_acc": 0.609375,
+    "secs": 0.7
+   },
+   "bind": {
+    "train_rows_acc": 0.59375,
+    "secs": 1.0
+   },
+   "name": {
+    "train_rows_acc": 0.65625,
+    "train_rows_naming": 0.7564904093742371
+   }
+  }
+ },
+ "phi2L4_A": {
+  "forms": 832,
+  "distinct_vectors": 193950,
+  "forms_with_several_vectors": 832,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.7993411191005936,
+  "geom_centred_different_forms": 0.40021717118508027,
+  "hash_reader_train_acc": 0.5205,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.6875,
+    "secs": 0.8
+   },
+   "dkvb": {
+    "train_rows_acc": 0.890625,
+    "secs": 4.8
+   },
+   "gumbel": {
+    "train_rows_acc": 0.671875,
+    "secs": 0.6
+   },
+   "st": {
+    "train_rows_acc": 0.671875,
+    "secs": 0.4
+   },
+   "cw": {
+    "train_rows_acc": 0.71875,
+    "secs": 0.4
+   },
+   "bind": {
+    "train_rows_acc": 0.8125,
+    "secs": 0.6
+   },
+   "name": {
+    "train_rows_acc": 0.65625,
+    "train_rows_naming": 0.14126275479793549
+   }
+  }
+ },
+ "phi2L4_B": {
+  "forms": 320,
+  "distinct_vectors": 129021,
+  "forms_with_several_vectors": 320,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.9499769417311409,
+  "geom_centred_different_forms": 0.19269807402457173,
+  "hash_reader_train_acc": 0.526,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.4375,
+    "secs": 0.6
+   },
+   "dkvb": {
+    "train_rows_acc": 1.0,
+    "secs": 1.8
+   },
+   "gumbel": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.3
+   },
+   "st": {
+    "train_rows_acc": 0.640625,
+    "secs": 0.3
+   },
+   "cw": {
+    "train_rows_acc": 0.734375,
+    "secs": 0.4
+   },
+   "bind": {
+    "train_rows_acc": 0.578125,
+    "secs": 0.5
+   },
+   "name": {
+    "train_rows_acc": 1.0,
+    "train_rows_naming": 0.8746394515037537
+   }
+  }
+ },
+ "phi2L4_C": {
+  "forms": 128,
+  "distinct_vectors": 103197,
+  "forms_with_several_vectors": 128,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.8430121466929018,
+  "geom_centred_different_forms": 0.18253146494209777,
+  "hash_reader_train_acc": 0.525,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.5
+   },
+   "dkvb": {
+    "train_rows_acc": 0.921875,
+    "secs": 0.7
+   },
+   "gumbel": {
+    "train_rows_acc": 0.609375,
+    "secs": 0.4
+   },
+   "st": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.3
+   },
+   "cw": {
+    "train_rows_acc": 0.65625,
+    "secs": 0.5
+   },
+   "bind": {
+    "train_rows_acc": 0.703125,
+    "secs": 0.7
+   },
+   "name": {
+    "train_rows_acc": 0.765625,
+    "train_rows_naming": 0.8262019157409668
+   }
+  }
+ },
+ "qwen8L0_A": {
+  "forms": 832,
+  "distinct_vectors": 597,
+  "forms_with_several_vectors": 0,
+  "forms_sharing_a_vector": 454,
+  "collision_examples": [
+   [
+    "F",
+    1
+   ],
+   [
+    "F",
+    2
+   ],
+   [
+    "F",
+    3
+   ],
+   [
+    "F",
+    4
+   ],
+   [
+    "F",
+    5
+   ],
+   [
+    "F",
+    6
+   ],
+   [
+    "F",
+    7
+   ],
+   [
+    "F",
+    8
+   ]
+  ],
+  "geom_centred_same_form": 1.0,
+  "geom_centred_different_forms": 0.39631962859603065,
+  "hash_reader_train_acc": 0.9895,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.640625,
+    "secs": 2.3
+   },
+   "dkvb": {
+    "train_rows_acc": 0.953125,
+    "secs": 11.6
+   },
+   "gumbel": {
+    "train_rows_acc": 0.703125,
+    "secs": 0.9
+   },
+   "st": {
+    "train_rows_acc": 0.6875,
+    "secs": 0.9
+   },
+   "cw": {
+    "train_rows_acc": 0.6875,
+    "secs": 1.0
+   },
+   "bind": {
+    "train_rows_acc": 0.65625,
+    "secs": 1.0
+   },
+   "name": {
+    "train_rows_acc": 0.65625,
+    "train_rows_naming": 0.08673469722270966
+   }
+  }
+ },
+ "qwen8L0_B": {
+  "forms": 320,
+  "distinct_vectors": 166,
+  "forms_with_several_vectors": 0,
+  "forms_sharing_a_vector": 262,
+  "collision_examples": [
+   [
+    "F",
+    0
+   ],
+   [
+    "F",
+    1
+   ],
+   [
+    "F",
+    2
+   ],
+   [
+    "F",
+    3
+   ],
+   [
+    "F",
+    4
+   ],
+   [
+    "F",
+    5
+   ],
+   [
+    "F",
+    6
+   ],
+   [
+    "F",
+    7
+   ]
+  ],
+  "geom_centred_same_form": 1.0,
+  "geom_centred_different_forms": 0.02484962276642445,
+  "hash_reader_train_acc": 0.994,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.4375,
+    "secs": 0.8
+   },
+   "dkvb": {
+    "train_rows_acc": 1.0,
+    "secs": 2.1
+   },
+   "gumbel": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.4
+   },
+   "st": {
+    "train_rows_acc": 0.734375,
+    "secs": 0.4
+   },
+   "cw": {
+    "train_rows_acc": 0.640625,
+    "secs": 0.4
+   },
+   "bind": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.5
+   },
+   "name": {
+    "train_rows_acc": 0.953125,
+    "train_rows_naming": 0.4810096025466919
+   }
+  }
+ },
+ "qwen8L0_C": {
+  "forms": 128,
+  "distinct_vectors": 73,
+  "forms_with_several_vectors": 0,
+  "forms_sharing_a_vector": 89,
+  "collision_examples": [
+   [
+    "F",
+    0
+   ],
+   [
+    "F",
+    1
+   ],
+   [
+    "F",
+    2
+   ],
+   [
+    "F",
+    3
+   ],
+   [
+    "F",
+    4
+   ],
+   [
+    "F",
+    5
+   ],
+   [
+    "F",
+    10
+   ],
+   [
+    "F",
+    11
+   ]
+  ],
+  "geom_centred_same_form": 1.0,
+  "geom_centred_different_forms": 0.030653168978894318,
+  "hash_reader_train_acc": 0.52,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.5
+   },
+   "dkvb": {
+    "train_rows_acc": 0.9375,
+    "secs": 0.8
+   },
+   "gumbel": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.5
+   },
+   "st": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.6
+   },
+   "cw": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.7
+   },
+   "bind": {
+    "train_rows_acc": 0.5625,
+    "secs": 1.1
+   },
+   "name": {
+    "train_rows_acc": 0.640625,
+    "train_rows_naming": 0.34843748807907104
+   }
+  }
+ },
+ "qwen8L2_A": {
+  "forms": 832,
+  "distinct_vectors": 193994,
+  "forms_with_several_vectors": 832,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.864246228716568,
+  "geom_centred_different_forms": 0.46818394599777313,
+  "hash_reader_train_acc": 0.51,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.640625,
+    "secs": 0.9
+   },
+   "dkvb": {
+    "train_rows_acc": 0.984375,
+    "secs": 2.8
+   },
+   "gumbel": {
+    "train_rows_acc": 0.734375,
+    "secs": 0.4
+   },
+   "st": {
+    "train_rows_acc": 0.640625,
+    "secs": 0.4
+   },
+   "cw": {
+    "train_rows_acc": 0.703125,
+    "secs": 0.5
+   },
+   "bind": {
+    "train_rows_acc": 0.65625,
+    "secs": 0.7
+   },
+   "name": {
+    "train_rows_acc": 0.65625,
+    "train_rows_naming": 0.019610969349741936
+   }
+  }
+ },
+ "qwen8L2_B": {
+  "forms": 320,
+  "distinct_vectors": 129034,
+  "forms_with_several_vectors": 320,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.9366901331611072,
+  "geom_centred_different_forms": 0.3533295070522969,
+  "hash_reader_train_acc": 0.514,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.4375,
+    "secs": 0.6
+   },
+   "dkvb": {
+    "train_rows_acc": 1.0,
+    "secs": 2.0
+   },
+   "gumbel": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.3
+   },
+   "st": {
+    "train_rows_acc": 0.578125,
+    "secs": 0.3
+   },
+   "cw": {
+    "train_rows_acc": 0.703125,
+    "secs": 0.4
+   },
+   "bind": {
+    "train_rows_acc": 0.609375,
+    "secs": 0.6
+   },
+   "name": {
+    "train_rows_acc": 0.875,
+    "train_rows_naming": 0.5247595906257629
+   }
+  }
+ },
+ "qwen8L2_C": {
+  "forms": 128,
+  "distinct_vectors": 103209,
+  "forms_with_several_vectors": 128,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.7930654690709811,
+  "geom_centred_different_forms": 0.30396143695489325,
+  "hash_reader_train_acc": 0.52625,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.6
+   },
+   "dkvb": {
+    "train_rows_acc": 0.90625,
+    "secs": 0.7
+   },
+   "gumbel": {
+    "train_rows_acc": 0.578125,
+    "secs": 0.5
+   },
+   "st": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.5
+   },
+   "cw": {
+    "train_rows_acc": 0.59375,
+    "secs": 0.6
+   },
+   "bind": {
+    "train_rows_acc": 0.625,
+    "secs": 0.8
+   },
+   "name": {
+    "train_rows_acc": 0.609375,
+    "train_rows_naming": 0.37524038553237915
+   }
+  }
+ },
+ "qwen8L4_A": {
+  "forms": 832,
+  "distinct_vectors": 194010,
+  "forms_with_several_vectors": 832,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.7214182888151269,
+  "geom_centred_different_forms": 0.4528455811115417,
+  "hash_reader_train_acc": 0.513,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.640625,
+    "secs": 8.4
+   },
+   "dkvb": {
+    "train_rows_acc": 0.921875,
+    "secs": 14.8
+   },
+   "gumbel": {
+    "train_rows_acc": 0.71875,
+    "secs": 1.0
+   },
+   "st": {
+    "train_rows_acc": 0.6875,
+    "secs": 0.6
+   },
+   "cw": {
+    "train_rows_acc": 0.703125,
+    "secs": 1.0
+   },
+   "bind": {
+    "train_rows_acc": 0.734375,
+    "secs": 1.6
+   },
+   "name": {
+    "train_rows_acc": 0.65625,
+    "train_rows_naming": 0.017219386994838715
+   }
+  }
+ },
+ "qwen8L4_B": {
+  "forms": 320,
+  "distinct_vectors": 129042,
+  "forms_with_several_vectors": 320,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.8070512975464121,
+  "geom_centred_different_forms": 0.33268362224953496,
+  "hash_reader_train_acc": 0.508,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.4375,
+    "secs": 1.9
+   },
+   "dkvb": {
+    "train_rows_acc": 1.0,
+    "secs": 6.8
+   },
+   "gumbel": {
+    "train_rows_acc": 0.546875,
+    "secs": 0.9
+   },
+   "st": {
+    "train_rows_acc": 0.578125,
+    "secs": 0.6
+   },
+   "cw": {
+    "train_rows_acc": 0.6875,
+    "secs": 1.1
+   },
+   "bind": {
+    "train_rows_acc": 0.71875,
+    "secs": 1.7
+   },
+   "name": {
+    "train_rows_acc": 0.71875,
+    "train_rows_naming": 0.4837740361690521
+   }
+  }
+ },
+ "qwen8L4_C": {
+  "forms": 128,
+  "distinct_vectors": 103218,
+  "forms_with_several_vectors": 128,
+  "forms_sharing_a_vector": 0,
+  "collision_examples": [],
+  "geom_centred_same_form": 0.6826897051073779,
+  "geom_centred_different_forms": 0.2930900344306983,
+  "hash_reader_train_acc": 0.5225,
+  "smoke": {
+   "vq": {
+    "train_rows_acc": 0.5625,
+    "secs": 1.4
+   },
+   "dkvb": {
+    "train_rows_acc": 0.796875,
+    "secs": 3.2
+   },
+   "gumbel": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.7
+   },
+   "st": {
+    "train_rows_acc": 0.5625,
+    "secs": 0.5
+   },
+   "cw": {
+    "train_rows_acc": 0.609375,
+    "secs": 0.6
+   },
+   "bind": {
+    "train_rows_acc": 0.71875,
+    "secs": 0.8
+   },
+   "name": {
+    "train_rows_acc": 0.59375,
+    "train_rows_naming": 0.4042067229747772
+   }
+  }
+ }
+}

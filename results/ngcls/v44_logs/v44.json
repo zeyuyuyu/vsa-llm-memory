@@ -1,0 +1,33 @@
+{
+ "depths": [
+  2,
+  3,
+  4
+ ],
+ "banked_from": "v43_logs/v43.json",
+ "cells": {
+  "2": {
+   "floor_same": [
+    0.498,
+    0.5,
+    0.526
+   ]
+  },
+  "3": {
+   "floor_same": [
+    0.554,
+    0.442,
+    0.436
+   ]
+  },
+  "4": {
+   "floor_same": [
+    0.466,
+    0.518,
+    0.556
+   ]
+  }
+ },
+ "admission_d3": 0.38266666666666665,
+ "verdict": "CONTRAST IS ABOUT THE TASK, NOT TRANSFER (same-depth floor within 0.05 of the transferred probe 3/3; the arena is not solvable from pooled states at depth 3 regardless of training depth; the manuscript reports extrapolation with this caveat and NO contrast claim)"
+}

@@ -1,0 +1,6 @@
+check qwen8 A {"final_vs_b31": 0.0, "L0_vs_b52_lookup": 2.9802322387695312e-08, "n_hidden_states": 37}
+check qwen8 C {"final_vs_b31": 0.0, "L0_vs_b52_lookup": 0.0, "n_hidden_states": 37}
+check qwen8 B {"final_vs_b31": 0.0, "L0_vs_b52_lookup": null, "n_hidden_states": 37}
+check phi2 C {"final_vs_b31": 0.0, "L0_vs_embed_lookup": 0.0, "n_hidden_states": 33}
+check phi2 A {"final_vs_b31": 0.0, "L0_vs_embed_lookup": 0.0, "n_hidden_states": 33}
+check phi2 B {"final_vs_b31": 0.0, "L0_vs_embed_lookup": 0.0, "n_hidden_states": 33}

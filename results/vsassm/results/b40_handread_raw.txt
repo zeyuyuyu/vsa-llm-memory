@@ -1,0 +1,514 @@
+===== N vsa: 218 errors of 2500; showing 20
+  N-test-5: What is 860 times 10 mod 1000?
+     gold=600 out='0' pred='0' module={'op': 'multiplication', 'op_s': 1.074, 'x': 800, 'y': 10, 'ans': 0, 'gate': True}
+  N-test-16: What is 100 times 54 mod 1000?
+     gold=400 out='0' pred='0' module={'op': 'multiplication', 'op_s': 1.033, 'x': 100, 'y': 50, 'ans': 0, 'gate': True}
+  N-test-755: What is the LCM of 278 and 125 mod 1000?
+     gold=750 out='0' pred='0' module={'op': 'lcm', 'op_s': 0.928, 'x': 8, 'y': 125, 'ans': 0, 'gate': True}
+  N-test-782: What is the LCM of 842 and 470 mod 1000?
+     gold=870 out='410' pred='410' module={'op': 'lcm', 'op_s': 0.937, 'x': 842, 'y': 400, 'ans': 400, 'gate': True}
+  N-test-788: What is the LCM of 626 and 460 mod 1000?
+     gold=980 out='290' pred='290' module={'op': 'lcm', 'op_s': 0.96, 'x': 626, 'y': 400, 'ans': 200, 'gate': True}
+  N-test-794: What is the LCM of 817 and 700 mod 1000?
+     gold=900 out='0' pred='0' module={'op': 'lcm', 'op_s': 0.922, 'x': 817, 'y': 0, 'ans': 0, 'gate': True}
+  N-test-875: What is the LCM of 749 and 81 mod 1000?
+     gold=669 out='749' pred='749' module={'op': 'lcm', 'op_s': 0.932, 'x': 749, 'y': 1, 'ans': 749, 'gate': True}
+  N-test-888: What is the LCM of 859 and 811 mod 1000?
+     gold=649 out='59' pred='59' module={'op': 'lcm', 'op_s': 0.977, 'x': 859, 'y': 801, 'ans': 59, 'gate': True}
+  N-test-895: What is the LCM of 495 and 400 mod 1000?
+     gold=600 out='0' pred='0' module={'op': 'lcm', 'op_s': 0.866, 'x': 495, 'y': 0, 'ans': 0, 'gate': True}
+  N-test-906: What is the LCM of 856 and 454 mod 1000?
+     gold=312 out='950' pred='950' module={'op': 'lcm', 'op_s': 0.932, 'x': 850, 'y': 454, 'ans': 950, 'gate': True}
+  N-test-911: What is the LCM of 272 and 20 mod 1000?
+     gold=360 out='540' pred='540' module={'op': 'lcm', 'op_s': 0.942, 'x': 270, 'y': 20, 'ans': 540, 'gate': True}
+  N-test-1058: What is 946^2 mod 605?
+     gold=121 out='1' pred='1' module={'op': 'square_mod', 'op_s': 1.049, 'x': 946, 'y': 5, 'ans': 1, 'gate': True}
+  N-test-1132: What is 675^2 mod 437?
+     gold=271 out='101' pred='101' module={'op': 'square_mod', 'op_s': 0.833, 'x': 670, 'y': 437, 'ans': 101, 'gate': True}
+  N-test-1609: What is 775 XOR 752?
+     gold=503 out='481' pred='481' module={'op': 'bitwise_xor', 'op_s': 0.947, 'x': 775, 'y': 742, 'ans': 481, 'gate': True}
+  N-test-1682: What is 953 XOR 299?
+     gold=658 out='986' pred='986' module={'op': 'bitwise_xor', 'op_s': 0.959, 'x': 953, 'y': 99, 'ans': 986, 'gate': True}
+  N-test-1795: What is 975 OR 434?
+     gold=1023 out='1029' pred='1029' module={'op': 'bitwise_or', 'op_s': 1.029, 'x': 975, 'y': 434, 'ans': 1023, 'gate': True}
+  N-test-1922: What is 958 OR 847?
+     gold=1023 out='1025' pred='1025' module={'op': 'bitwise_or', 'op_s': 1.05, 'x': 958, 'y': 847, 'ans': 1023, 'gate': True}
+  N-test-1933: What is 223 OR 199?
+     gold=223 out='511' pred='511' module={'op': 'bitwise_or', 'op_s': 1.014, 'x': 223, 'y': 299, 'ans': 511, 'gate': True}
+  N-test-2018: What is 837 plus 627?
+     gold=1464 out='887' pred='887' module={'op': 'bitwise_or', 'op_s': 0.803, 'x': 837, 'y': 627, 'ans': 887, 'gate': True}
+  N-test-2354: What is 667 // 4?
+     gold=166 out='167' pred='167' module={'op': 'modulo', 'op_s': 0.377, 'x': 667, 'y': 204, 'ans': 55, 'gate': False}
+===== N disc: 468 errors of 2500; showing 20
+  N-test-56: What is 790 times 90 mod 1000?
+     gold=100 out='200' pred='200' module={'op': 'multiplication', 'op_p': 1.0, 'x': 790, 'y': 90, 'ans': 100, 'gate': True}
+  N-test-120: What is 786 times 675 mod 1000?
+     gold=550 out='530' pred='530' module={'op': 'multiplication', 'op_p': 1.0, 'x': 786, 'y': 675, 'ans': 550, 'gate': True}
+  N-test-1316: What is 376 AND 230?
+     gold=96 out='88' pred='88' module={'op': 'bitwise_and', 'op_p': 1.0, 'x': 376, 'y': 220, 'ans': 88, 'gate': True}
+  N-test-1822: What is 653 OR 502?
+     gold=1023 out='1025' pred='1025' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 653, 'y': 502, 'ans': 1023, 'gate': True}
+  N-test-1889: What is 916 OR 241?
+     gold=1013 out='1017' pred='1017' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 916, 'y': 241, 'ans': 1013, 'gate': True}
+  N-test-1908: What is 927 OR 796?
+     gold=927 out='923' pred='923' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 927, 'y': 796, 'ans': 927, 'gate': True}
+  N-test-2018: What is 837 plus 627?
+     gold=1464 out='887' pred='887' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 837, 'y': 627, 'ans': 887, 'gate': True}
+  N-test-2019: What is 875 plus 251?
+     gold=1126 out='1016' pred='1016' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 875, 'y': 251, 'ans': 1019, 'gate': True}
+  N-test-2074: What is 757 plus 210?
+     gold=967 out='759' pred='759' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 757, 'y': 210, 'ans': 759, 'gate': True}
+  N-test-2114: What is 577 plus 405?
+     gold=982 out='981' pred='981' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 577, 'y': 405, 'ans': 981, 'gate': True}
+  N-test-2172: What is 666 plus 336?
+     gold=1002 out='986' pred='986' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 666, 'y': 336, 'ans': 986, 'gate': True}
+  N-test-2177: What is 759 plus 514?
+     gold=1273 out='759 + 514 = ' pred='759' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 759, 'y': 514, 'ans': 759, 'gate': True}
+  N-test-2178: What is 479 plus 285?
+     gold=764 out='469' pred='469' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 479, 'y': 285, 'ans': 479, 'gate': True}
+  N-test-2179: What is 769 plus 521?
+     gold=1290 out='777' pred='777' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 769, 'y': 521, 'ans': 777, 'gate': True}
+  N-test-2210: What is 768 plus 640?
+     gold=1408 out='896' pred='896' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 768, 'y': 640, 'ans': 896, 'gate': True}
+  N-test-2218: What is 886 plus 432?
+     gold=1318 out='1018' pred='1018' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 886, 'y': 432, 'ans': 1014, 'gate': True}
+  N-test-2221: What is 496 plus 231?
+     gold=727 out='503' pred='503' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 496, 'y': 231, 'ans': 503, 'gate': True}
+  N-test-2243: What is 874 plus 458?
+     gold=1332 out='1000' pred='1000' module={'op': 'bitwise_or', 'op_p': 1.0, 'x': 874, 'y': 458, 'ans': 1002, 'gate': True}
+  N-test-2269: What is 693 // 41?
+     gold=16 out='33' pred='33' module={'op': 'multiplication', 'op_p': 0.925, 'x': 693, 'y': 41, 'ans': 413, 'gate': True}
+  N-test-2329: What is 757 // 540?
+     gold=1 out='2' pred='2' module={'op': 'multiplication', 'op_p': 0.825, 'x': 758, 'y': 33, 'ans': 14, 'gate': True}
+===== N lora: 1492 errors of 2500; showing 20
+  N-test-39: What is 874 times 398 mod 1000?
+     gold=852 out='612' pred='612' module=None
+  N-test-63: What is 340 times 303 mod 1000?
+     gold=20 out='780' pred='780' module=None
+  N-test-225: What is 957 times 637 mod 1000?
+     gold=609 out='809' pred='809' module=None
+  N-test-755: What is the LCM of 278 and 125 mod 1000?
+     gold=750 out='250' pred='250' module=None
+  N-test-818: What is the LCM of 391 and 64 mod 1000?
+     gold=24 out='784' pred='784' module=None
+  N-test-946: What is the LCM of 686 and 110 mod 1000?
+     gold=730 out='970' pred='970' module=None
+  N-test-966: What is the LCM of 581 and 551 mod 1000?
+     gold=131 out='837' pred='837' module=None
+  N-test-1010: What is 466^2 mod 110?
+     gold=16 out='106' pred='106' module=None
+  N-test-1037: What is 723^2 mod 179?
+     gold=49 out='154' pred='154' module=None
+  N-test-1225: What is 731^2 mod 179?
+     gold=46 out='172' pred='172' module=None
+  N-test-1237: What is 430^2 mod 85?
+     gold=25 out='15' pred='15' module=None
+  N-test-1393: What is 710 AND 611?
+     gold=578 out='574' pred='574' module=None
+  N-test-1400: What is 661 AND 645?
+     gold=645 out='641' pred='641' module=None
+  N-test-1496: What is 692 AND 589?
+     gold=516 out='584' pred='584' module=None
+  N-test-1626: What is 660 XOR 403?
+     gold=775 out='871' pred='871' module=None
+  N-test-1658: What is 926 XOR 286?
+     gold=640 out='660' pred='660' module=None
+  N-test-1661: What is 864 XOR 521?
+     gold=361 out='681' pred='681' module=None
+  N-test-1822: What is 653 OR 502?
+     gold=1023 out='655' pred='655' module=None
+  N-test-1990: What is 528 OR 483?
+     gold=1011 out='1023' pred='1023' module=None
+  N-test-2223: What is 943 plus 260?
+     gold=1203 out='335' pred='335' module=None
+===== N lora1l: 1782 errors of 2500; showing 20
+  N-test-38: What is 470 times 139 mod 1000?
+     gold=330 out='770' pred='770' module=None
+  N-test-61: What is 924 times 660 mod 1000?
+     gold=840 out='160' pred='160' module=None
+  N-test-149: What is 517 times 486 mod 1000?
+     gold=262 out='12' pred='12' module=None
+  N-test-623: What is the GCD of 832 and 234?
+     gold=26 out='4' pred='4' module=None
+  N-test-663: What is the GCD of 825 and 220?
+     gold=55 out='5' pred='5' module=None
+  N-test-1018: What is 425^2 mod 330?
+     gold=115 out='25' pred='25' module=None
+  N-test-1144: What is 615^2 mod 407?
+     gold=122 out='1' pred='1' module=None
+  N-test-1290: What is 669 AND 432?
+     gold=144 out='0' pred='0' module=None
+  N-test-1433: What is 699 AND 519?
+     gold=515 out='519' pred='519' module=None
+  N-test-1443: What is 213 AND 154?
+     gold=144 out='2' pred='2' module=None
+  N-test-1589: What is 809 XOR 338?
+     gold=635 out='485' pred='485' module=None
+  N-test-1739: What is 491 XOR 227?
+     gold=264 out='364' pred='364' module=None
+  N-test-1850: What is 818 OR 190?
+     gold=958 out='1018' pred='1018' module=None
+  N-test-1947: What is 943 OR 246?
+     gold=1023 out='943' pred='943' module=None
+  N-test-1978: What is 873 OR 760?
+     gold=1017 out='1023' pred='1023' module=None
+  N-test-1995: What is 451 OR 169?
+     gold=491 out='451' pred='451' module=None
+  N-test-2073: What is 678 plus 83?
+     gold=761 out='767' pred='767' module=None
+  N-test-2149: What is 870 plus 394?
+     gold=1264 out='890' pred='890' module=None
+  N-test-2282: What is 530 // 18?
+     gold=29 out='10' pred='10' module=None
+  N-test-2483: What is 389 // 36?
+     gold=10 out='11' pred='11' module=None
+===== N base: 1624 errors of 2500; showing 20
+  N-test-117: What is 202 times 45 mod 1000?
+     gold=90 out='910' pred='910' module=None
+  N-test-134: What is 925 times 276 mod 1000?
+     gold=300 out='255' pred='255' module=None
+  N-test-179: What is 752 times 720 mod 1000?
+     gold=440 out='541' pred='541' module=None
+  N-test-367: What is 611 mod 249?
+     gold=113 out='162' pred='162' module=None
+  N-test-443: What is 666 mod 132?
+     gold=6 out='66' pred='66' module=None
+  N-test-510: What is the GCD of 478 and 182?
+     gold=2 out='14' pred='14' module=None
+  N-test-524: What is the GCD of 921 and 9?
+     gold=3 out='9' pred='9' module=None
+  N-test-852: What is the LCM of 823 and 199 mod 1000?
+     gold=777 out='823' pred='823' module=None
+  N-test-902: What is the LCM of 648 and 457 mod 1000?
+     gold=136 out='648' pred='648' module=None
+  N-test-916: What is the LCM of 870 and 635 mod 1000?
+     gold=490 out='890' pred='890' module=None
+  N-test-977: What is the LCM of 503 and 243 mod 1000?
+     gold=229 out='243' pred='243' module=None
+  N-test-1100: What is 910^2 mod 710?
+     gold=240 out='0' pred='0' module=None
+  N-test-1178: What is 214^2 mod 37?
+     gold=27 out='1' pred='1' module=None
+  N-test-1294: What is 809 AND 125?
+     gold=41 out='125' pred='125' module=None
+  N-test-1425: What is 728 AND 495?
+     gold=200 out='360' pred='360' module=None
+  N-test-1449: What is 714 AND 340?
+     gold=64 out='340' pred='340' module=None
+  N-test-1458: What is 949 AND 464?
+     gold=400 out='432' pred='432' module=None
+  N-test-1508: What is 781 XOR 607?
+     gold=338 out='170' pred='170' module=None
+  N-test-1892: What is 150 OR 144?
+     gold=150 out='294' pred='294' module=None
+  N-test-1991: What is 925 OR 790?
+     gold=927 out='1715' pred='1715' module=None
+===== N cot: 1510 errors of 2500; showing 20
+  N-test-153: What is 426 times 201 mod 1000?
+     gold=626 out=' 866\n\n**Step 3: Take the remainder as the final answer**\n\nSince we are looking for the result modulo 1000, the remainder is the final answer.\n\nFinal Answer: 866' pred='866' module=None
+  N-test-559: What is the GCD of 725 and 253?
+     gold=1 out='inder of 0\n\n**Step 4:** Since the remainder is 0, the divisor (219) is the GCD of 725 and 253.\n\nTherefore, the GCD of 725 and 253 is 219.\n\n**Final Answer: 219**' pred='219' module=None
+  N-test-717: What is the GCD of 616 and 140?
+     gold=28 out='and find the remainder.\n\n8 ÷ 4 = 2 with a remainder of 0\n\nSince the remainder is now 0, the GCD is the last non-zero remainder, which is 4.\n\n**Final Answer: 4**' pred='4' module=None
+  N-test-770: What is the LCM of 990 and 736 mod 1000?
+     gold=320 out='an divide the LCM by 1000 and take the remainder:\n\n3643200 ÷ 1000 = 3643 with a remainder of 200\n\nSo, the LCM of 990 and 736 mod 1000 is:\n\n**Final Answer: 200**' pred='200' module=None
+  N-test-782: What is the LCM of 842 and 470 mod 1000?
+     gold=870 out='s, we divide the LCM by 1000 and take the remainder.\n\n94010 ÷ 1000 = 94 with a remainder of 10\n\nSo, the LCM of 842 and 470 mod 1000 is 10.\n\n**Final Answer: 10**' pred='10' module=None
+  N-test-881: What is the LCM of 984 and 455 mod 1000?
+     gold=720 out='s a multiple of both 984 and 455 mod 1000.\n\n984 mod 1000 = 984\n455 mod 1000 = 455\n\n920 is indeed a multiple of both 984 and 455 mod 1000.\n\n**Final Answer: 920**' pred='920' module=None
+  N-test-903: What is the LCM of 487 and 190 mod 1000?
+     gold=530 out='ind the LCM mod 1000, we divide the LCM by 1000 and take the remainder.\n\n46570 mod 1000 = 470\n\nTherefore, the LCM of 487 and 190 mod 1000 is:\n\nFinal Answer: 470' pred='470' module=None
+  N-test-1015: What is 81^2 mod 63?
+     gold=9 out='mod 63\nTo do this, we can divide 324 by 63 and find the remainder. 324 divided by 63 is 5 with a remainder of 21.\n\nTherefore, 324 mod 63 = 21.\n\nFinal Answer: 21' pred='21' module=None
+  N-test-1127: What is 478^2 mod 374?
+     gold=344 out='at (a mod n) mod n = a mod n. So, we can divide 10816 by 374 and take the remainder.\n\n10816 / 374 = 28 remainder 304\n\nSo, 10816 mod 374 = 304\n\nFinal Answer: 304' pred='304' module=None
+  N-test-1151: What is 887^2 mod 308?
+     gold=137 out='roperty that (a mod n) mod n = a mod n. So, we can divide 73,761 by 308 and find the remainder.\n\n73,761 = 308 * 240 + 1\n\nSo, 73,761 mod 308 = 1\n\nFinal Answer: 1' pred='1' module=None
+  N-test-1259: What is 708 AND 251?
+     gold=192 out=" = 0\n\nThe result of the bitwise AND operation is: 11100001\n\nNow, let's convert this binary number back to decimal:\n\n11100001 in decimal = 249\n\nFinal Answer: 249" pred='249' module=None
+  N-test-1261: What is 265 AND 201?
+     gold=9 out='(from 265) and 1 (from 201). Since 0 AND 1 = 0, the tenth bit of the result is 0.\n11. Compare the eleventh bits: 1 (from 265) and 0 (from 201). Since 1 AND 0 = ' pred='0' module=None
+  N-test-1311: What is 147 AND 86?
+     gold=18 out='1 (10010011) and 1 (1010110). Since 1 AND 1 = 1, the tenth bit of the result is 1.\n11. Compare the eleventh bits: 1 (10010011) and 0 (1010110). Since 1 AND 0 = ' pred='0' module=None
+  N-test-1430: What is 984 AND 581?
+     gold=576 out='Decimal = (bit12 × 2^12) + (bit11 × 2^11) +... + (bit1 × 2^1) + (bit0 × 2^0)\n\nSince all the bits are 0, the decimal equivalent is:\n\nDecimal = 0\n\nFinal Answer: 0' pred='0' module=None
+  N-test-1552: What is 187 XOR 10?
+     gold=177 out="hat's not correct. Let's recheck the result again.\n\nBit position 7: 1 (2^7 = 128)\nBit position 6: 0 (2^6 = 64)\nBit position 5: 1 (2^5 = 32)\nBit position 4: 1 (2" pred='2' module=None
+  N-test-1614: What is 514 XOR 493?
+     gold=1007 out='^2) + (1 × 2^1) + (1 × 2^0)\n= (1 × 128) + (1 × 64) + (0 × 32) + (0 × 16) + (1 × 8) + (0 × 4) + (1 × 2) + (1 × 1)\n= 128 + 64 + 8 + 2 + 1\n= 203\n\nFinal Answer: 203' pred='203' module=None
+  N-test-1647: What is 124 XOR 42?
+     gold=86 out='lt back to decimal:\n\n1000001 in binary = 1 × 2^6 + 0 × 2^5 + 0 × 2^4 + 0 × 2^3 + 0 × 2^2 + 0 × 2^1 + 1 × 2^0\n= 64 + 0 + 0 + 0 + 0 + 0 + 1\n= 65\n\nFinal Answer: 65' pred='65' module=None
+  N-test-1703: What is 948 XOR 573?
+     gold=393 out=' The next bits are 0 and 0. Since they are the same, the result is 0.\n16. The next bits are 0 and 0. Since they are the same, the result is 0.\n17. The next bits' pred='17' module=None
+  N-test-1848: What is 606 OR 261?
+     gold=863 out='position (starting from 0 for the rightmost bit):\n   1 × 2^12 = 4096\n   1 × 2^11 = 2048\n   0 × 2^10 = 0\n   1 × 2^9 = 512\n   0 × 2^8 = 0\n   1 × 2^7 = 128\n   1 × ' pred='1' module=None
+  N-test-1891: What is 724 OR 669?
+     gold=733 out='leventh rightmost bit of 724 is 1 and the eleventh rightmost bit of 669 is 1. The result of the OR operation is 1.\n12. The twelfth rightmost bit of 724 is 0 and' pred='0' module=None
+===== N VSA-vs-DISC disagreements (seed 0): 544
+   sources: {'vsa_wrong_read': 141, 'vsa_right_read_llm_wrong': 6, 'disc_wrong_read': 342, 'disc_right_read_llm_wrong': 55}
+  N-test-0: What is 951 times 63 mod 1000?
+     gold=913 out='913' pred='913' module={'op': 'multiplication', 'op_s': 1.023, 'x': 951, 'y': 63, 'ans': 913, 'gate': True}
+     DISC: 813 {'op': 'multiplication', 'op_p': 1.0, 'x': 951, 'y': 63, 'ans': 913, 'gate': True}
+  N-test-4: What is 794 times 669 mod 1000?
+     gold=186 out='186' pred='186' module={'op': 'multiplication', 'op_s': 0.997, 'x': 794, 'y': 669, 'ans': 186, 'gate': True}
+     DISC: 236 {'op': 'multiplication', 'op_p': 1.0, 'x': 794, 'y': 669, 'ans': 186, 'gate': True}
+  N-test-5: What is 860 times 10 mod 1000?
+     gold=600 out='0' pred='0' module={'op': 'multiplication', 'op_s': 1.074, 'x': 800, 'y': 10, 'ans': 0, 'gate': True}
+     DISC: 600 {'op': 'multiplication', 'op_p': 1.0, 'x': 860, 'y': 10, 'ans': 600, 'gate': True}
+  N-test-18: What is 975 times 892 mod 1000?
+     gold=700 out='950' pred='950' module={'op': 'multiplication', 'op_s': 1.05, 'x': 975, 'y': 2, 'ans': 950, 'gate': True}
+     DISC: 700 {'op': 'multiplication', 'op_p': 1.0, 'x': 975, 'y': 892, 'ans': 700, 'gate': True}
+  N-test-26: What is 915 times 200 mod 1000?
+     gold=0 out='10' pred='10' module={'op': 'multiplication', 'op_s': 1.042, 'x': 915, 'y': 200, 'ans': 0, 'gate': True}
+     DISC: 0 {'op': 'multiplication', 'op_p': 1.0, 'x': 915, 'y': 200, 'ans': 0, 'gate': True}
+  N-test-30: What is 583 times 323 mod 1000?
+     gold=309 out='309' pred='309' module={'op': 'multiplication', 'op_s': 1.067, 'x': 583, 'y': 323, 'ans': 309, 'gate': True}
+     DISC: 199 {'op': 'multiplication', 'op_p': 1.0, 'x': 583, 'y': 323, 'ans': 309, 'gate': True}
+  N-test-46: What is 709 times 331 mod 1000?
+     gold=679 out='679' pred='679' module={'op': 'multiplication', 'op_s': 1.037, 'x': 709, 'y': 331, 'ans': 679, 'gate': True}
+     DISC: 579 {'op': 'multiplication', 'op_p': 1.0, 'x': 709, 'y': 331, 'ans': 679, 'gate': True}
+  N-test-47: What is 503 times 147 mod 1000?
+     gold=941 out='741' pred='741' module={'op': 'multiplication', 'op_s': 0.998, 'x': 503, 'y': 147, 'ans': 941, 'gate': True}
+     DISC: 941 {'op': 'multiplication', 'op_p': 1.0, 'x': 503, 'y': 147, 'ans': 941, 'gate': True}
+  N-test-49: What is 554 times 153 mod 1000?
+     gold=762 out='762' pred='762' module={'op': 'multiplication', 'op_s': 1.027, 'x': 554, 'y': 153, 'ans': 762, 'gate': True}
+     DISC: 766 {'op': 'multiplication', 'op_p': 1.0, 'x': 554, 'y': 153, 'ans': 762, 'gate': True}
+  N-test-53: What is 761 times 688 mod 1000?
+     gold=568 out='688' pred='688' module={'op': 'multiplication', 'op_s': 1.056, 'x': 761, 'y': 608, 'ans': 688, 'gate': True}
+     DISC: 568 {'op': 'multiplication', 'op_p': 1.0, 'x': 761, 'y': 688, 'ans': 568, 'gate': True}
+  N-test-55: What is 399 times 111 mod 1000?
+     gold=289 out='289' pred='289' module={'op': 'multiplication', 'op_s': 0.979, 'x': 399, 'y': 111, 'ans': 289, 'gate': True}
+     DISC: 28989 {'op': 'multiplication', 'op_p': 1.0, 'x': 399, 'y': 111, 'ans': 289, 'gate': True}
+  N-test-64: What is 634 times 526 mod 1000?
+     gold=484 out='484' pred='484' module={'op': 'multiplication', 'op_s': 1.064, 'x': 634, 'y': 526, 'ans': 484, 'gate': True}
+     DISC: 384 {'op': 'multiplication', 'op_p': 1.0, 'x': 634, 'y': 526, 'ans': 484, 'gate': True}
+  N-test-81: What is 856 times 460 mod 1000?
+     gold=760 out='760' pred='760' module={'op': 'multiplication', 'op_s': 1.089, 'x': 856, 'y': 460, 'ans': 760, 'gate': True}
+     DISC: 200 {'op': 'multiplication', 'op_p': 1.0, 'x': 856, 'y': 450, 'ans': 200, 'gate': True}
+  N-test-99: What is 367 times 300 mod 1000?
+     gold=100 out='0' pred='0' module={'op': 'multiplication', 'op_s': 1.056, 'x': 367, 'y': 0, 'ans': 0, 'gate': True}
+     DISC: 100 {'op': 'multiplication', 'op_p': 1.0, 'x': 367, 'y': 300, 'ans': 100, 'gate': True}
+  N-test-100: What is 731 times 162 mod 1000?
+     gold=422 out='562' pred='562' module={'op': 'multiplication', 'op_s': 1.038, 'x': 731, 'y': 102, 'ans': 562, 'gate': True}
+     DISC: 422 {'op': 'multiplication', 'op_p': 1.0, 'x': 731, 'y': 162, 'ans': 422, 'gate': True}
+  N-test-106: What is 445 times 113 mod 1000?
+     gold=285 out='285' pred='285' module={'op': 'multiplication', 'op_s': 1.086, 'x': 445, 'y': 113, 'ans': 285, 'gate': True}
+     DISC: 295 {'op': 'multiplication', 'op_p': 1.0, 'x': 445, 'y': 113, 'ans': 285, 'gate': True}
+  N-test-108: What is 419 times 2 mod 1000?
+     gold=838 out='858' pred='858' module={'op': 'multiplication', 'op_s': 1.068, 'x': 429, 'y': 2, 'ans': 858, 'gate': True}
+     DISC: 838 {'op': 'multiplication', 'op_p': 1.0, 'x': 419, 'y': 2, 'ans': 838, 'gate': True}
+  N-test-114: What is 790 times 70 mod 1000?
+     gold=300 out='300' pred='300' module={'op': 'multiplication', 'op_s': 1.056, 'x': 790, 'y': 70, 'ans': 300, 'gate': True}
+     DISC: 400 {'op': 'multiplication', 'op_p': 1.0, 'x': 790, 'y': 70, 'ans': 300, 'gate': True}
+  N-test-117: What is 202 times 45 mod 1000?
+     gold=90 out='90' pred='90' module={'op': 'multiplication', 'op_s': 0.989, 'x': 2, 'y': 45, 'ans': 90, 'gate': True}
+     DISC: 590 {'op': 'multiplication', 'op_p': 1.0, 'x': 902, 'y': 45, 'ans': 590, 'gate': True}
+  N-test-120: What is 786 times 675 mod 1000?
+     gold=550 out='550' pred='550' module={'op': 'multiplication', 'op_s': 1.114, 'x': 786, 'y': 675, 'ans': 550, 'gate': True}
+     DISC: 530 {'op': 'multiplication', 'op_p': 1.0, 'x': 786, 'y': 675, 'ans': 550, 'gate': True}
+  N-test-131: What is 21 times 1 mod 1000?
+     gold=21 out='221' pred='221' module={'op': 'multiplication', 'op_s': 1.011, 'x': 221, 'y': 1, 'ans': 221, 'gate': True}
+     DISC: 21 {'op': 'multiplication', 'op_p': 0.999, 'x': 21, 'y': 1, 'ans': 21, 'gate': True}
+  N-test-154: What is 491 times 235 mod 1000?
+     gold=385 out='385' pred='385' module={'op': 'multiplication', 'op_s': 1.013, 'x': 491, 'y': 235, 'ans': 385, 'gate': True}
+     DISC: 285 {'op': 'multiplication', 'op_p': 1.0, 'x': 491, 'y': 235, 'ans': 385, 'gate': True}
+  N-test-158: What is 568 times 99 mod 1000?
+     gold=232 out='232' pred='232' module={'op': 'multiplication', 'op_s': 0.994, 'x': 568, 'y': 99, 'ans': 232, 'gate': True}
+     DISC: 32 {'op': 'multiplication', 'op_p': 1.0, 'x': 568, 'y': 199, 'ans': 32, 'gate': True}
+  N-test-167: What is 125 times 55 mod 1000?
+     gold=875 out='875' pred='875' module={'op': 'multiplication', 'op_s': 1.039, 'x': 125, 'y': 55, 'ans': 875, 'gate': True}
+     DISC: 775 {'op': 'multiplication', 'op_p': 1.0, 'x': 125, 'y': 55, 'ans': 875, 'gate': True}
+  N-test-169: What is 555 times 269 mod 1000?
+     gold=295 out='995' pred='995' module={'op': 'multiplication', 'op_s': 1.022, 'x': 555, 'y': 209, 'ans': 995, 'gate': True}
+     DISC: 295 {'op': 'multiplication', 'op_p': 1.0, 'x': 555, 'y': 269, 'ans': 295, 'gate': True}
+  N-test-170: What is 502 times 449 mod 1000?
+     gold=398 out='398' pred='398' module={'op': 'multiplication', 'op_s': 1.104, 'x': 502, 'y': 449, 'ans': 398, 'gate': True}
+     DISC: 418 {'op': 'multiplication', 'op_p': 1.0, 'x': 502, 'y': 459, 'ans': 418, 'gate': True}
+  N-test-176: What is 588 times 309 mod 1000?
+     gold=692 out='692' pred='692' module={'op': 'multiplication', 'op_s': 0.965, 'x': 588, 'y': 309, 'ans': 692, 'gate': True}
+     DISC: 792 {'op': 'multiplication', 'op_p': 1.0, 'x': 588, 'y': 309, 'ans': 692, 'gate': True}
+  N-test-192: What is 542 times 470 mod 1000?
+     gold=740 out='800' pred='800' module={'op': 'multiplication', 'op_s': 1.045, 'x': 542, 'y': 400, 'ans': 800, 'gate': True}
+     DISC: 740 {'op': 'multiplication', 'op_p': 1.0, 'x': 542, 'y': 470, 'ans': 740, 'gate': True}
+  N-test-204: What is 336 times 20 mod 1000?
+     gold=720 out='360' pred='360' module={'op': 'multiplication', 'op_s': 1.081, 'x': 336, 'y': 10, 'ans': 360, 'gate': True}
+     DISC: 720 {'op': 'multiplication', 'op_p': 1.0, 'x': 336, 'y': 20, 'ans': 720, 'gate': True}
+  N-test-205: What is 666 times 150 mod 1000?
+     gold=900 out='900' pred='900' module={'op': 'multiplication', 'op_s': 1.135, 'x': 666, 'y': 150, 'ans': 900, 'gate': True}
+     DISC: 240 {'op': 'multiplication', 'op_p': 1.0, 'x': 666, 'y': 140, 'ans': 240, 'gate': True}
+===== R vsa: 3 errors of 2000; showing 3
+  R-test-779: The drawer is in the wallet. The bucket is in the wallet. The case is in the bucket. David is in the school. Julia is in the school. Emma has the chest. Sandra is in the church. The purse is in the wallet. Emma is in the park. Emma has the wallet. | Where is the case? (depth 4, small)
+     gold=park out='school' pred='school' module={'ans': 'park', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-788: Lucy is in the hall. The bowl is in the cup. The drawer is in the bowl. Mary is in the church. Daniel has the cup. The bag is in the bowl. Lucy has the chest. Daniel has the purse. Emma is in the hall. Daniel is in the park. | Where is the bag? (depth 4, small)
+     gold=park out='hall' pred='hall' module={'ans': 'park', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-971: Paul is in the church. Alice is in the church. The sack is in the wallet. The bowl is in the wallet. The jar is in the sack. The pot is in the wallet. Alice has the wallet. Peter is in the church. Daniel is in the library. The bag is in the jar. | Where is the bag? (depth 5, small)
+     gold=church out='library' pred='library' module={'ans': 'church', 'hops': 5, 'gate': True, 'reads_ok': 1.0}
+===== R disc: 8 errors of 2000; showing 8
+  R-test-316: John has the folder. The tin is in the folder. Anna has the bucket. James has the cup. Anna has the box. Frank is in the library. Anna is in the library. James is in the school. The drawer is in the folder. John is in the library. | Where is the bucket? (depth 2, small)
+     gold=library out='Anna' pred='anna' module={'ans': 'library', 'hops': 2, 'gate': True, 'reads_ok': 1.0}
+  R-test-716: John has the jar. Daniel is in the farm. The bottle is in the jar. The crate is in the bottle. Michael has the purse. Mary is in the lobby. The folder is in the bottle. John is in the studio. Mary has the tin. Michael is in the lobby. | Where is the folder? (depth 4, small)
+     gold=studio out='bottle' pred='bottle' module={'ans': 'studio', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-788: Lucy is in the hall. The bowl is in the cup. The drawer is in the bowl. Mary is in the church. Daniel has the cup. The bag is in the bowl. Lucy has the chest. Daniel has the purse. Emma is in the hall. Daniel is in the park. | Where is the bag? (depth 4, small)
+     gold=park out='hall' pred='hall' module={'ans': 'park', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-810: Alice has the bottle. The chest is in the bottle. Alice is in the hall. John is in the farm. The box is in the case. John has the basket. Anna is in the church. John has the envelope. Sandra is in the church. The case is in the chest. | Where is the box? (depth 5, small)
+     gold=hall out='case' pred='case' module={'ans': 'hall', 'hops': 5, 'gate': True, 'reads_ok': 1.0}
+  R-test-1320: The folder is in the chest. The crate is in the case. The sack is in the chest. Michael has the case. The cup is in the chest. The pot is in the cup. Daniel is in the hall. Mary is in the farm. Sarah is in the park. Michael is in the hall. Laura is in the hotel. Mary has the purse. Michael has the bowl. Sandra is in the park. Anna is in the hall. Alice has the chest. The basket is in the pouch. Alice is in the park. Daniel has the wallet. Alice has the pouch. | Where is the chest? (depth 2, large)
+     gold=park out='hall' pred='hall' module={'ans': 'park', 'hops': 2, 'gate': True, 'reads_ok': 1.0}
+  R-test-1600: Anna is in the farm. Mark is in the school. Emma is in the farm. Laura is in the studio. John is in the farm. The drawer is in the bowl. Alice is in the studio. The crate is in the cup. The jar is in the cup. The bowl is in the cup. The sack is in the drawer. David has the box. Peter is in the studio. David is in the school. The bag is in the cup. Anna has the purse. Anna has the pot. Laura has the cup. Anna has the tin. Emma has the bottle. | Where is the drawer? (depth 4, large)
+     gold=studio out='school' pred='school' module={'ans': 'studio', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-1715: Lucy is in the school. The crate is in the envelope. The chest is in the crate. Julia is in the school. Julia has the folder. The case is in the envelope. The pouch is in the case. James has the box. The envelope is in the box. Sarah is in the lobby. Daniel has the drawer. Lucy has the wallet. The cup is in the folder. Anna is in the school. Daniel is in the church. Mark is in the school. The bottle is in the box. The purse is in the pouch. Alice is in the church. James is in the library. | Where is the crate? (depth 4, large)
+     gold=library out='school' pred='school' module={'ans': 'library', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-1872: Frank is in the farm. Paul has the bottle. Julia is in the library. The pouch is in the basket. The bag is in the cup. The folder is in the chest. Laura has the envelope. The chest is in the crate. Sarah is in the park. Laura is in the church. Paul is in the church. The drawer is in the crate. Anna is in the farm. Michael is in the library. David has the crate. Frank has the jar. David is in the church. The cup is in the chest. The case is in the folder. The basket is in the drawer. | Where is the case? (depth 5, large)
+     gold=church out='library' pred='library' module={'ans': 'church', 'hops': 5, 'gate': True, 'reads_ok': 1.0}
+===== R lora: 54 errors of 2000; showing 20
+  R-test-989: The chest is in the pouch. Julia has the sack. The pot is in the jar. Julia has the cup. The pouch is in the pot. Emma is in the park. Julia is in the hotel. John has the jar. John is in the park. Mark is in the hall. | Where is the chest? (depth 5, small)
+     gold=park out='hotel' pred='hotel' module=None
+  R-test-1744: The bottle is in the folder. The pot is in the cup. Michael is in the church. The drawer is in the bowl. Kate is in the church. The bowl is in the cup. Frank is in the church. The bucket is in the basket. Julia is in the hall. Sarah is in the hall. The tin is in the wallet. The wallet is in the drawer. Sarah has the pouch. The folder is in the pouch. David is in the farm. The bag is in the pot. The basket is in the pot. John is in the park. Daniel is in the hall. David has the cup. | Where is the drawer? (depth 4, large)
+     gold=farm out='hall' pred='hall' module=None
+  R-test-1749: Laura is in the hall. James is in the school. Laura has the purse. Kate has the pot. Anna has the case. Kate has the cup. Sandra is in the hall. The jar is in the basket. Anna is in the school. Mark is in the farm. The folder is in the basket. Henry has the bowl. Laura has the crate. The basket is in the pot. Kate is in the farm. The bottle is in the folder. The chest is in the crate. Henry is in the hotel. Michael is in the hotel. Anna has the pouch. | Where is the folder? (depth 4, large)
+     gold=farm out='hall' pred='hall' module=None
+  R-test-1760: Henry is in the school. Sarah has the wallet. The pot is in the chest. Mary is in the park. The purse is in the cup. The basket is in the sack. Kate is in the park. Daniel has the cup. Alice is in the church. The bucket is in the basket. Daniel has the pouch. The box is in the sack. Laura is in the church. Sarah is in the church. The chest is in the basket. Emma is in the school. Henry has the tin. The sack is in the drawer. Daniel is in the school. Alice has the drawer. | Where is the basket? (depth 4, large)
+     gold=church out='school' pred='school' module=None
+  R-test-1779: Henry has the case. Peter has the pouch. Alice has the drawer. Anna is in the park. Lucy has the bowl. Laura is in the farm. Emma is in the office. Julia is in the farm. Henry has the crate. The bottle is in the chest. The jar is in the bottle. Lucy is in the office. Peter has the folder. Alice is in the office. Peter is in the park. Laura has the basket. Henry is in the office. The envelope is in the bottle. Anna has the tin. Anna has the chest. | Where is the jar? (depth 4, large)
+     gold=park out='office' pred='office' module=None
+  R-test-1807: John is in the library. Emma is in the lobby. Lucy has the tin. Frank is in the lobby. The bag is in the wallet. Henry is in the lobby. The case is in the bag. The drawer is in the cup. Daniel has the cup. Alice has the chest. Lucy is in the church. The wallet is in the bottle. The basket is in the case. David is in the library. The box is in the wallet. Daniel is in the library. Lucy has the bottle. Alice is in the library. The bucket is in the case. The pot is in the bag. | Where is the case? (depth 5, large)
+     gold=church out='lobby' pred='lobby' module=None
+  R-test-1812: The bucket is in the basket. Mark is in the office. The sack is in the bucket. Kate is in the office. The bag is in the basket. Frank has the bottle. James is in the lobby. The envelope is in the bag. Frank is in the office. Emma is in the park. The basket is in the tin. Sandra has the box. Sandra is in the hall. Paul is in the park. Paul has the tin. The chest is in the box. James has the folder. Kate has the purse. Daniel is in the park. The wallet is in the basket. | Where is the sack? (depth 5, large)
+     gold=park out='office' pred='office' module=None
+  R-test-1817: The box is in the bucket. The pouch is in the box. Kate has the basket. Laura has the case. The drawer is in the bag. Daniel is in the park. Emma has the wallet. Lucy is in the park. Michael is in the church. Lucy has the bag. Emma has the purse. The envelope is in the bucket. Emma is in the studio. Michael has the sack. Kate is in the church. Daniel has the bottle. Laura is in the school. The bucket is in the bag. Anna is in the church. Mark is in the school. | Where is the pouch? (depth 5, large)
+     gold=park out='studio' pred='studio' module=None
+  R-test-1826: The jar is in the box. The tin is in the cup. Kate has the chest. The bottle is in the bag. The box is in the bag. Sarah is in the church. The crate is in the jar. Kate is in the park. Henry is in the school. David has the envelope. The sack is in the box. David is in the office. Mark is in the school. The folder is in the envelope. Frank has the bag. The cup is in the box. Frank is in the office. The bowl is in the folder. Paul is in the office. Julia is in the office. | Where is the crate? (depth 5, large)
+     gold=office out='park' pred='park' module=None
+  R-test-1827: David is in the office. The case is in the sack. Emma has the wallet. Lucy is in the church. Henry is in the office. David has the purse. Kate is in the office. Laura is in the library. Julia is in the library. The bowl is in the drawer. The tin is in the wallet. The drawer is in the sack. Sandra is in the hotel. Julia has the crate. The cup is in the sack. Kate has the pouch. Emma is in the library. Julia has the jar. Lucy has the pot. The sack is in the jar. | Where is the bowl? (depth 5, large)
+     gold=library out='office' pred='office' module=None
+  R-test-1829: The envelope is in the crate. The pouch is in the crate. Michael has the basket. The drawer is in the chest. David is in the church. Alice is in the hotel. The crate is in the pot. The bag is in the basket. Alice has the pot. The bowl is in the case. The sack is in the cup. The case is in the chest. Peter is in the church. The cup is in the crate. Michael is in the studio. Emma is in the studio. Anna is in the library. Michael has the chest. Sandra is in the library. John is in the hotel. | Where is the sack? (depth 5, large)
+     gold=hotel out='studio' pred='studio' module=None
+  R-test-1831: Peter is in the farm. The wallet is in the basket. The basket is in the case. Mark has the bowl. Mark is in the office. Kate is in the hall. Sandra has the tin. The case is in the folder. Kate has the pot. Emma is in the hall. The cup is in the folder. Alice is in the studio. Lucy has the folder. David is in the hall. Lucy is in the hall. Alice has the jar. The pouch is in the drawer. The bag is in the tin. Sandra is in the office. The drawer is in the tin. | Where is the wallet? (depth 5, large)
+     gold=hall out='office' pred='office' module=None
+  R-test-1860: The box is in the case. Michael has the chest. The cup is in the purse. Julia is in the studio. Michael is in the lobby. Michael has the drawer. The bag is in the sack. The case is in the bucket. Peter has the bottle. Henry has the crate. David is in the studio. John is in the lobby. Peter is in the hall. Emma is in the school. Sandra is in the lobby. The purse is in the box. Henry is in the studio. Peter has the bucket. The pouch is in the bottle. The sack is in the case. | Where is the purse? (depth 5, large)
+     gold=hall out='lobby' pred='lobby' module=None
+  R-test-1880: Anna is in the farm. Mark is in the lobby. Mary is in the hotel. Laura is in the office. The cup is in the box. The envelope is in the drawer. The bucket is in the sack. The drawer is in the cup. Laura has the crate. The box is in the purse. Julia is in the hotel. Frank has the pot. Emma has the purse. The case is in the drawer. The sack is in the drawer. Emma is in the hotel. Daniel is in the hotel. Anna has the bottle. Frank is in the lobby. The tin is in the drawer. | Where is the drawer? (depth 5, large)
+     gold=hotel out='farm' pred='farm' module=None
+  R-test-1915: Sandra is in the school. Laura has the bag. Laura is in the school. Michael is in the school. Kate has the pot. Julia is in the park. James is in the studio. The envelope is in the wallet. The crate is in the purse. The cup is in the drawer. The wallet is in the cup. Kate is in the park. The purse is in the bag. Mark is in the park. The drawer is in the bucket. The box is in the pot. The bucket is in the bag. Laura has the chest. Lucy is in the studio. The case is in the envelope. | Where is the cup? (depth 5, large)
+     gold=school out='park' pred='park' module=None
+  R-test-1947: The pouch is in the tin. Julia is in the hall. Anna is in the hall. Michael is in the farm. Henry has the purse. Frank is in the school. Henry is in the hotel. The tin is in the bottle. The wallet is in the envelope. James is in the hotel. The chest is in the crate. The sack is in the envelope. The envelope is in the bottle. Frank has the basket. Sandra is in the hotel. Daniel is in the hall. Michael has the crate. The drawer is in the chest. Julia has the bowl. The bottle is in the chest. | Where is the envelope? (depth 5, large)
+     gold=farm out='hall' pred='hall' module=None
+  R-test-1948: Lucy is in the studio. Michael has the folder. Lucy has the basket. Michael is in the lobby. Lucy has the jar. Mark is in the lobby. The bucket is in the folder. The wallet is in the pouch. The pouch is in the envelope. The purse is in the wallet. David has the envelope. David has the box. Paul is in the lobby. The bowl is in the box. David is in the library. The bottle is in the box. James is in the hall. Frank is in the lobby. Lucy has the sack. Henry is in the lobby. | Where is the purse? (depth 5, large)
+     gold=library out='lobby' pred='lobby' module=None
+  R-test-1951: Alice has the envelope. The wallet is in the case. The drawer is in the wallet. Mark has the purse. The pouch is in the bowl. The sack is in the wallet. Julia is in the library. Peter is in the library. The case is in the folder. Sandra has the jar. Julia has the bucket. The bottle is in the wallet. Mark is in the church. Daniel is in the farm. Kate is in the library. Sandra has the folder. The bowl is in the case. Alice is in the church. Frank is in the school. Sandra is in the school. | Where is the sack? (depth 5, large)
+     gold=school out='church' pred='church' module=None
+  R-test-1971: The bowl is in the pot. The pot is in the wallet. Frank has the box. Frank is in the park. Mark has the bottle. The wallet is in the crate. Emma is in the hotel. Mark is in the park. The cup is in the pot. Peter is in the lobby. Mary is in the park. The purse is in the wallet. The bag is in the crate. Sarah is in the hotel. Lucy is in the library. The basket is in the wallet. The pouch is in the cup. Julia is in the lobby. Lucy has the bucket. Lucy has the crate. | Where is the cup? (depth 5, large)
+     gold=library out='hotel' pred='hotel' module=None
+  R-test-1994: The purse is in the box. The pot is in the box. The sack is in the folder. David is in the office. Sarah has the bag. Alice is in the school. Julia is in the school. The box is in the basket. The drawer is in the purse. The pouch is in the basket. The basket is in the cup. Laura is in the library. Sarah is in the school. Emma is in the school. Michael is in the office. Mary is in the school. Sarah has the cup. The chest is in the tin. The folder is in the box. Mary has the tin. | Where is the pot? (depth 5, large)
+     gold=school out='office' pred='office' module=None
+===== R base: 1174 errors of 2000; showing 20
+  R-test-428: The chest is in the bucket. James has the bucket. Sandra is in the hall. James is in the farm. Sandra has the crate. Emma is in the hotel. The box is in the chest. Mary is in the farm. The sack is in the box. The drawer is in the bucket. | Where is the chest? (depth 3, small)
+     gold=farm out='bucket' pred='bucket' module=None
+  R-test-459: Emma is in the library. Frank has the jar. The crate is in the purse. Emma has the purse. Sandra is in the farm. The pouch is in the purse. Frank is in the hotel. Frank has the tin. Peter is in the church. Emma has the folder. | Where is the crate? (depth 3, small)
+     gold=library out='purse' pred='purse' module=None
+  R-test-516: Michael is in the farm. The drawer is in the case. Lucy is in the office. Michael has the jar. Mary is in the hotel. The bucket is in the case. Michael has the basket. Lucy has the case. Paul is in the hotel. Mary has the bowl. | Where is the drawer? (depth 3, small)
+     gold=office out='case' pred='case' module=None
+  R-test-550: The purse is in the wallet. Kate is in the farm. Michael is in the farm. The cup is in the purse. The tin is in the envelope. The bottle is in the wallet. Daniel is in the hall. Daniel has the wallet. Henry is in the library. Henry has the envelope. | Where is the purse? (depth 3, small)
+     gold=hall out='wallet' pred='wallet' module=None
+  R-test-610: The crate is in the bottle. Mark is in the school. James is in the school. Frank has the cup. Mark has the drawer. The wallet is in the bottle. The bottle is in the drawer. Frank is in the lobby. Michael is in the lobby. The chest is in the bottle. | Where is the chest? (depth 4, small)
+     gold=school out='bottle' pred='bottle' module=None
+  R-test-625: Mark is in the farm. Henry is in the farm. The purse is in the sack. Kate is in the office. Henry has the envelope. Emma is in the church. The crate is in the bottle. Henry has the bottle. The sack is in the bottle. The basket is in the bottle. | Where is the purse? (depth 4, small)
+     gold=farm out='sack' pred='sack' module=None
+  R-test-701: The bag is in the drawer. Kate has the case. The drawer is in the cup. Daniel is in the school. Mary is in the hall. Lucy is in the hall. The pouch is in the cup. The pot is in the bag. Lucy has the cup. Kate is in the hall. | Where is the bag? (depth 4, small)
+     gold=hall out='drawer' pred='drawer' module=None
+  R-test-785: James has the bowl. The bag is in the bottle. Michael is in the farm. Lucy is in the studio. The bottle is in the bowl. The sack is in the bottle. The case is in the bottle. Paul is in the studio. The folder is in the bag. James is in the library. | Where is the sack? (depth 4, small)
+     gold=library out='bottle' pred='bottle' module=None
+  R-test-829: Mark has the sack. Emma has the pouch. The bottle is in the basket. The purse is in the sack. Emma is in the school. Julia is in the church. Laura is in the lobby. The basket is in the purse. Mark is in the school. Mark has the bowl. | Where is the bottle? (depth 5, small)
+     gold=school out='purse' pred='purse' module=None
+  R-test-945: Lucy is in the farm. Mary is in the hotel. Paul is in the church. The crate is in the envelope. The bag is in the box. Daniel is in the farm. Lucy has the envelope. The folder is in the crate. The box is in the folder. Paul has the chest. | Where is the box? (depth 5, small)
+     gold=farm out='folder' pred='folder' module=None
+  R-test-961: Henry is in the church. Lucy is in the church. James has the bowl. James has the sack. The folder is in the sack. The wallet is in the folder. Michael is in the school. Michael has the jar. James is in the lobby. The crate is in the wallet. | Where is the crate? (depth 5, small)
+     gold=lobby out='wallet' pred='wallet' module=None
+  R-test-991: Henry is in the school. The drawer is in the wallet. David has the envelope. The wallet is in the case. James has the folder. James is in the school. Peter is in the hall. David has the sack. The case is in the envelope. David is in the lobby. | Where is the drawer? (depth 5, small)
+     gold=lobby out='envelope' pred='envelope' module=None
+  R-test-1410: The case is in the drawer. Emma is in the library. Laura is in the office. John has the bucket. The bottle is in the case. The cup is in the drawer. Frank is in the office. Michael has the jar. The envelope is in the bucket. The folder is in the case. Sandra is in the office. Mark is in the church. Emma has the box. Daniel has the sack. The bag is in the case. The pot is in the bucket. Michael is in the office. John is in the office. The drawer is in the bucket. Daniel is in the library. | Where is the drawer? (depth 3, large)
+     gold=office out='bucket' pred='bucket' module=None
+  R-test-1514: Anna is in the library. Anna has the box. Paul has the bottle. The tin is in the case. Mark has the chest. Mark has the case. Paul is in the lobby. Daniel is in the lobby. Frank is in the church. Sandra is in the library. The drawer is in the case. David has the bucket. The pot is in the bucket. David is in the library. Henry is in the lobby. Paul has the jar. The basket is in the case. Mark is in the church. The bowl is in the basket. Sandra has the envelope. | Where is the drawer? (depth 3, large)
+     gold=church out='case' pred='case' module=None
+  R-test-1533: Frank has the pouch. Mary has the folder. Alice has the jar. The crate is in the wallet. Michael is in the park. The box is in the cup. Mary is in the library. The wallet is in the cup. Emma is in the park. Alice has the bag. The envelope is in the drawer. Frank is in the park. Alice has the tin. Kate is in the library. Sandra has the cup. Alice is in the library. James is in the church. The bowl is in the wallet. Sandra is in the park. Frank has the drawer. | Where is the wallet? (depth 3, large)
+     gold=park out='cup' pred='cup' module=None
+  R-test-1783: Kate is in the school. Lucy is in the studio. John has the bag. Mark has the tin. Sandra has the folder. Julia has the bowl. The case is in the envelope. Peter is in the office. Sandra is in the office. Henry is in the office. The wallet is in the box. John is in the library. The pot is in the bottle. Julia is in the studio. Mark is in the library. Mark has the cup. The drawer is in the pot. The box is in the tin. The envelope is in the box. The bottle is in the tin. | Where is the envelope? (depth 4, large)
+     gold=library out='box' pred='box' module=None
+  R-test-1808: Sandra is in the park. The bottle is in the case. John has the crate. David is in the lobby. Peter is in the lobby. The pot is in the envelope. David has the pouch. The bucket is in the chest. Anna is in the park. Anna has the envelope. The bowl is in the chest. James has the case. The folder is in the cup. James has the purse. The chest is in the folder. Mary is in the office. Mary has the cup. James is in the park. John is in the church. Paul is in the church. | Where is the bowl? (depth 5, large)
+     gold=office out='chest' pred='chest' module=None
+  R-test-1879: Sarah has the cup. The jar is in the pot. Henry is in the church. The sack is in the pot. The purse is in the pouch. Anna has the bottle. Anna has the case. Henry has the tin. Frank is in the church. Daniel is in the church. Emma is in the hotel. Michael has the drawer. The pot is in the crate. David is in the park. The crate is in the pouch. Anna is in the church. Sarah is in the park. The pouch is in the cup. The wallet is in the crate. Michael is in the farm. | Where is the pot? (depth 5, large)
+     gold=park out='crate' pred='crate' module=None
+  R-test-1886: The crate is in the envelope. Lucy is in the library. The jar is in the bucket. Paul is in the lobby. Emma is in the lobby. James is in the lobby. The drawer is in the bag. The bucket is in the envelope. Daniel is in the lobby. Kate is in the hotel. Paul has the tin. The folder is in the wallet. Mark is in the church. Kate has the wallet. The purse is in the pouch. Emma has the envelope. The bag is in the bucket. Sarah has the bowl. Sarah is in the library. The pouch is in the jar. | Where is the drawer? (depth 5, large)
+     gold=lobby out='bag' pred='bag' module=None
+  R-test-1959: Peter has the cup. Mary has the envelope. Henry has the wallet. The drawer is in the box. Henry is in the office. Mary is in the office. The folder is in the case. The chest is in the crate. Emma is in the lobby. The pot is in the folder. Peter is in the office. Michael is in the office. Sarah has the bowl. The case is in the purse. Laura is in the office. Sarah is in the office. David is in the lobby. The crate is in the purse. The box is in the case. Michael has the purse. | Where is the pot? (depth 5, large)
+     gold=office out='folder' pred='folder' module=None
+===== R cot: 398 errors of 2000; showing 20
+  R-test-516: Michael is in the farm. The drawer is in the case. Lucy is in the office. Michael has the jar. Mary is in the hotel. The bucket is in the case. Michael has the basket. Lucy has the case. Paul is in the hotel. Mary has the bowl. | Where is the drawer? (depth 3, small)
+     gold=office out='this statement provides a direct answer to the question.\n\nTherefore, based on the given information, the drawer is located in the case.\n\nFinal Answer: The case.' pred='' module=None
+  R-test-738: Kate is in the farm. Alice is in the park. Alice has the bowl. The wallet is in the drawer. James is in the farm. Michael is in the office. The folder is in the wallet. The bottle is in the drawer. Alice has the crate. James has the drawer. | Where is the folder? (depth 4, small)
+     gold=farm out='the drawer, and the folder is in the wallet, it means the folder is in the drawer. (This is the final conclusion based on the clues.)\n\nFinal Answer: The drawer.' pred='' module=None
+  R-test-833: The box is in the basket. Anna has the drawer. Paul is in the office. Paul has the envelope. Anna is in the hall. Sandra is in the office. Paul has the pot. Julia is in the school. The basket is in the drawer. The sack is in the box. | Where is the sack? (depth 5, small)
+     gold=hall out="y have, as they are not relevant to finding the sack's location.\n\nTherefore, based on the direct clue in Step 1, the sack is in the box.\n\nFinal Answer: The box." pred='' module=None
+  R-test-993: The crate is in the cup. The envelope is in the basket. Kate is in the school. Daniel is in the hotel. John is in the hotel. James is in the church. The basket is in the crate. Kate has the purse. Kate has the cup. The folder is in the basket. | Where is the folder? (depth 5, small)
+     gold=school out='of the basket. But since the folder is in the basket, and the basket is in the crate, we can conclude that the folder is in the crate.\n\nFinal Answer: The crate.' pred='' module=None
+  R-test-1204: The cup is in the pouch. The basket is in the jar. Daniel is in the studio. Anna has the pot. Peter is in the school. Daniel has the jar. Sarah has the case. Kate has the tin. Frank has the purse. Anna is in the studio. Michael has the crate. Sarah is in the church. James is in the hall. The pouch is in the sack. Frank is in the hall. Michael is in the hall. Sarah has the sack. Sarah has the chest. Kate is in the hall. Sarah has the bottle. | Where is the sack? (depth 2, large)
+     gold=church out="e sack.\n\nStep 15: We know that Michael is in the hall, but this doesn't seem to be related to the pouch or the sack.\n\nStep 16: We know that Kate is in the hall," pred='hall' module=None
+  R-test-1386: The tin is in the wallet. Peter has the purse. The wallet is in the chest. Mary is in the church. Henry has the bucket. Henry is in the school. The bowl is in the sack. Sarah is in the lobby. Lucy is in the lobby. Henry has the case. Sarah has the crate. Emma is in the office. Sarah has the chest. The sack is in the tin. Peter is in the church. Alice is in the office. Emma has the box. The bottle is in the envelope. James has the envelope. James is in the church. | Where is the chest? (depth 2, large)
+     gold=lobby out='ah has the chest, but it doesn\'t tell us where the chest is. We need to find another sentence that connects Sarah to a location.\n\nLet\'s go back to sentence 8: "' pred='church' module=None
+  R-test-1465: Sandra has the pot. The purse is in the sack. Frank is in the hotel. Alice is in the hotel. The case is in the envelope. Kate is in the school. Alice has the pouch. The bucket is in the bottle. Sandra is in the school. The envelope is in the bottle. Kate has the sack. Sarah is in the library. The folder is in the box. The crate is in the envelope. The bottle is in the box. Emma is in the library. Anna is in the hotel. Lucy is in the lobby. The basket is in the bucket. Lucy has the box. | Where is the bottle? (depth 3, large)
+     gold=lobby out="bottle is in the box. (This statement directly tells us where the bottle is. It's inside the box.)\n\nTherefore, the bottle is in the box.\n\nFinal Answer: The box." pred='' module=None
+  R-test-1471: The drawer is in the crate. Michael has the case. Daniel has the crate. The cup is in the case. The basket is in the jar. Michael has the bag. Sandra is in the hall. Emma is in the hotel. Sarah has the bottle. Anna is in the hall. The purse is in the jar. The folder is in the basket. Michael is in the hall. Sarah is in the hotel. Paul is in the hall. Sandra has the jar. Daniel is in the hotel. Alice is in the hall. The chest is in the jar. Sandra has the box. | Where is the basket? (depth 3, large)
+     gold=hall out=". But we can look for any statement that might be related to the basket's location.\n\n11. The basket is not mentioned to be in the crate, case, or jar, so we can" pred='hotel' module=None
+  R-test-1613: The tin is in the chest. Mark is in the library. Peter is in the school. Alice is in the library. The purse is in the chest. The bottle is in the chest. The case is in the bowl. Peter has the crate. The wallet is in the bucket. Mark has the basket. James is in the office. Anna is in the office. James has the bucket. Peter has the bowl. Peter has the pouch. The chest is in the basket. Emma is in the library. Paul is in the hall. Julia is in the office. The box is in the bottle. | Where is the purse? (depth 4, large)
+     gold=library out=" tells us the location of the purse.)\n\nSince we have found the location of the purse, we don't need to analyze any further statements.\n\nFinal Answer: The chest." pred='' module=None
+  R-test-1659: The cup is in the chest. Laura has the tin. Lucy is in the farm. The purse is in the basket. Julia has the chest. The bowl is in the pot. Laura has the basket. Julia is in the church. The box is in the bag. Sarah has the drawer. Emma is in the farm. David has the bag. Laura is in the lobby. Daniel is in the studio. David is in the church. Sandra is in the lobby. The pot is in the envelope. Sarah is in the lobby. The sack is in the purse. The envelope is in the basket. | Where is the pot? (depth 4, large)
+     gold=lobby out=' 3: The pot is in the envelope. (This statement directly tells us the location of the pot.)\n\nTherefore, the pot is in the envelope.\n\nFinal Answer: The envelope.' pred='' module=None
+  R-test-1668: Lucy is in the farm. The box is in the purse. Frank is in the school. Mark is in the church. The pouch is in the sack. The bowl is in the sack. David is in the farm. Julia is in the hall. Lucy has the sack. The basket is in the sack. James is in the school. Lucy has the purse. The envelope is in the sack. Sandra is in the school. Daniel is in the farm. The pot is in the bowl. James has the bucket. The jar is in the pouch. The crate is in the bag. The bag is in the sack. | Where is the jar? (depth 4, large)
+     gold=farm out='s directly tells us the location of the jar.\n\nStep 3: Since the pouch is in the sack, we can conclude that the jar is also in the sack.\n\nFinal Answer: The sack.' pred='' module=None
+  R-test-1694: Daniel is in the hall. The sack is in the envelope. Anna is in the park. The crate is in the box. The drawer is in the box. Michael is in the hall. Laura is in the hall. Frank is in the studio. Lucy is in the library. Kate is in the park. The folder is in the drawer. Daniel has the bowl. Daniel has the box. The bag is in the box. Laura has the chest. Kate has the purse. The pouch is in the folder. Sarah is in the studio. The tin is in the envelope. The envelope is in the drawer. | Where is the envelope? (depth 4, large)
+     gold=hall out=' envelope.)\n\nSince we have a direct statement about the location of the envelope, we can conclude that the envelope is in the drawer.\n\nFinal Answer: The drawer.' pred='' module=None
+  R-test-1708: Julia has the bucket. The purse is in the case. Laura is in the studio. Michael has the jar. Lucy has the basket. Anna is in the church. Michael is in the office. Emma is in the school. Henry has the tin. The envelope is in the bag. The drawer is in the pouch. Emma has the case. Henry is in the school. Peter is in the school. The folder is in the pouch. The pouch is in the purse. Laura has the wallet. Lucy is in the school. The bag is in the purse. Julia is in the studio. | Where is the bag? (depth 4, large)
+     gold=school out='lls us that the bag is located inside the purse.)\n\nFrom these two sentences, we can conclude that the bag is located inside the purse.\n\nFinal Answer: The purse.' pred='' module=None
+  R-test-1727: The pot is in the jar. Paul is in the hotel. The jar is in the chest. The pouch is in the drawer. Sarah has the bag. The wallet is in the sack. The sack is in the tin. The tin is in the drawer. Julia is in the hotel. Emma has the drawer. Frank is in the farm. Mary is in the school. Emma is in the school. Michael is in the hotel. The envelope is in the wallet. Sandra is in the school. Julia has the cup. Sarah is in the hotel. Paul has the purse. Sarah has the chest. | Where is the sack? (depth 4, large)
+     gold=school out='s located.)\n\nStep 3: Since the tin is in the drawer, and the sack is in the tin, we can conclude that the sack is also in the drawer.\n\nFinal Answer: The drawer.' pred='' module=None
+  R-test-1836: Kate is in the studio. The tin is in the envelope. The crate is in the pouch. The jar is in the tin. Julia is in the studio. The pot is in the bowl. Emma is in the lobby. Kate has the envelope. Lucy has the bowl. Daniel has the case. The folder is in the tin. Daniel is in the lobby. The basket is in the jar. The bag is in the folder. Lucy has the wallet. The pouch is in the jar. Alice is in the park. Peter is in the farm. Lucy is in the park. Paul is in the park. | Where is the pouch? (depth 5, large)
+     gold=studio out='h, not the container that holds it. Therefore, the final answer is the location where the pouch is currently situated, which is the jar.\n\nFinal Answer: The jar.' pred='lobby' module=None
+  R-test-1839: Sarah is in the church. Sarah has the tin. Sarah has the cup. Paul has the case. The bottle is in the wallet. The jar is in the bowl. Peter has the purse. Emma is in the church. Frank is in the office. Frank has the bag. Peter is in the church. Emma has the basket. The wallet is in the bowl. Julia has the pot. The box is in the pot. Michael is in the lobby. Paul is in the church. Lucy is in the hall. Julia is in the office. The bowl is in the box. | Where is the wallet? (depth 5, large)
+     gold=office out='e location of the wallet, which is in the bowl.)\n\nFrom these two pieces of information, we can conclude that the wallet is in the bowl.\n\nFinal Answer: The bowl.' pred='' module=None
+  R-test-1909: Mary is in the park. Frank is in the lobby. Daniel is in the school. The pot is in the case. The drawer is in the case. The case is in the folder. Laura is in the office. The folder is in the bowl. Sandra is in the office. The purse is in the bowl. Kate is in the school. Sarah has the bowl. Peter is in the school. Sandra has the cup. Laura has the envelope. The tin is in the folder. The bag is in the case. The bottle is in the purse. The wallet is in the pot. Sarah is in the lobby. | Where is the pot? (depth 5, large)
+     gold=lobby out='t, as it is not relevant to determining the location of the pot.\n\nStep 4: The only relevant information is that the pot is in the case.\n\nFinal Answer: The park.' pred='park' module=None
+  R-test-1915: Sandra is in the school. Laura has the bag. Laura is in the school. Michael is in the school. Kate has the pot. Julia is in the park. James is in the studio. The envelope is in the wallet. The crate is in the purse. The cup is in the drawer. The wallet is in the cup. Kate is in the park. The purse is in the bag. Mark is in the park. The drawer is in the bucket. The box is in the pot. The bucket is in the bag. Laura has the chest. Lucy is in the studio. The case is in the envelope. | Where is the cup? (depth 5, large)
+     gold=school out='cup is in the bag or that it has been moved to a different location.\n\nBased on the given information, the cup is still in the drawer.\n\nFinal Answer: The drawer.' pred='' module=None
+  R-test-1921: Sarah is in the school. The case is in the wallet. Laura has the jar. The basket is in the folder. Frank is in the lobby. Henry has the wallet. The drawer is in the folder. The bucket is in the case. Julia is in the school. The box is in the wallet. Emma is in the lobby. The pouch is in the basket. The purse is in the basket. Henry is in the hotel. John has the crate. Laura is in the lobby. The folder is in the wallet. Michael is in the school. The chest is in the pouch. John is in the hotel. | Where is the purse? (depth 5, large)
+     gold=hotel out='\n\nStep 6: Since the basket is in the lobby with Laura, and the purse is in the basket, we can conclude that the purse is in the lobby.\n\nFinal Answer: The lobby.' pred='lobby' module=None
+  R-test-1931: The bottle is in the purse. Daniel is in the park. Kate is in the park. The case is in the folder. Henry has the drawer. Peter has the pouch. The bucket is in the bowl. Henry has the chest. Henry is in the lobby. Peter is in the lobby. Julia is in the farm. Henry has the purse. The folder is in the bowl. The bowl is in the jar. The cup is in the purse. Peter has the wallet. Sandra is in the farm. Mary is in the hotel. The jar is in the purse. Anna is in the hotel. | Where is the folder? (depth 5, large)
+     gold=lobby out='the bowl, and the bowl is in the jar, and the jar is in the purse, we can conclude that the folder is ultimately located in the purse.\n\nFinal Answer: The purse.' pred='' module=None
+===== R VSA-vs-DISC disagreements (seed 0): 9
+   sources: {'vsa_wrong_read': 0, 'vsa_right_read_llm_wrong': 2, 'disc_wrong_read': 0, 'disc_right_read_llm_wrong': 7}
+  R-test-316: John has the folder. The tin is in the folder. Anna has the bucket. James has the cup. Anna has the box. Frank is in the library. Anna is in the library. James is in the school. The drawer is in the folder. John is in the library. | Where is the bucket? (depth 2, small)
+     gold=library out='library' pred='library' module={'ans': 'library', 'hops': 2, 'gate': True, 'reads_ok': 1.0}
+     DISC: anna {'ans': 'library', 'hops': 2, 'gate': True, 'reads_ok': 1.0}
+  R-test-716: John has the jar. Daniel is in the farm. The bottle is in the jar. The crate is in the bottle. Michael has the purse. Mary is in the lobby. The folder is in the bottle. John is in the studio. Mary has the tin. Michael is in the lobby. | Where is the folder? (depth 4, small)
+     gold=studio out='studio' pred='studio' module={'ans': 'studio', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+     DISC: bottle {'ans': 'studio', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-779: The drawer is in the wallet. The bucket is in the wallet. The case is in the bucket. David is in the school. Julia is in the school. Emma has the chest. Sandra is in the church. The purse is in the wallet. Emma is in the park. Emma has the wallet. | Where is the case? (depth 4, small)
+     gold=park out='school' pred='school' module={'ans': 'park', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+     DISC: park {'ans': 'park', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-810: Alice has the bottle. The chest is in the bottle. Alice is in the hall. John is in the farm. The box is in the case. John has the basket. Anna is in the church. John has the envelope. Sandra is in the church. The case is in the chest. | Where is the box? (depth 5, small)
+     gold=hall out='hall' pred='hall' module={'ans': 'hall', 'hops': 5, 'gate': True, 'reads_ok': 1.0}
+     DISC: case {'ans': 'hall', 'hops': 5, 'gate': True, 'reads_ok': 1.0}
+  R-test-971: Paul is in the church. Alice is in the church. The sack is in the wallet. The bowl is in the wallet. The jar is in the sack. The pot is in the wallet. Alice has the wallet. Peter is in the church. Daniel is in the library. The bag is in the jar. | Where is the bag? (depth 5, small)
+     gold=church out='library' pred='library' module={'ans': 'church', 'hops': 5, 'gate': True, 'reads_ok': 1.0}
+     DISC: church {'ans': 'church', 'hops': 5, 'gate': True, 'reads_ok': 1.0}
+  R-test-1320: The folder is in the chest. The crate is in the case. The sack is in the chest. Michael has the case. The cup is in the chest. The pot is in the cup. Daniel is in the hall. Mary is in the farm. Sarah is in the park. Michael is in the hall. Laura is in the hotel. Mary has the purse. Michael has the bowl. Sandra is in the park. Anna is in the hall. Alice has the chest. The basket is in the pouch. Alice is in the park. Daniel has the wallet. Alice has the pouch. | Where is the chest? (depth 2, large)
+     gold=park out='park' pred='park' module={'ans': 'park', 'hops': 2, 'gate': True, 'reads_ok': 1.0}
+     DISC: hall {'ans': 'park', 'hops': 2, 'gate': True, 'reads_ok': 1.0}
+  R-test-1600: Anna is in the farm. Mark is in the school. Emma is in the farm. Laura is in the studio. John is in the farm. The drawer is in the bowl. Alice is in the studio. The crate is in the cup. The jar is in the cup. The bowl is in the cup. The sack is in the drawer. David has the box. Peter is in the studio. David is in the school. The bag is in the cup. Anna has the purse. Anna has the pot. Laura has the cup. Anna has the tin. Emma has the bottle. | Where is the drawer? (depth 4, large)
+     gold=studio out='studio' pred='studio' module={'ans': 'studio', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+     DISC: school {'ans': 'studio', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-1715: Lucy is in the school. The crate is in the envelope. The chest is in the crate. Julia is in the school. Julia has the folder. The case is in the envelope. The pouch is in the case. James has the box. The envelope is in the box. Sarah is in the lobby. Daniel has the drawer. Lucy has the wallet. The cup is in the folder. Anna is in the school. Daniel is in the church. Mark is in the school. The bottle is in the box. The purse is in the pouch. Alice is in the church. James is in the library. | Where is the crate? (depth 4, large)
+     gold=library out='library' pred='library' module={'ans': 'library', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+     DISC: school {'ans': 'library', 'hops': 4, 'gate': True, 'reads_ok': 1.0}
+  R-test-1872: Frank is in the farm. Paul has the bottle. Julia is in the library. The pouch is in the basket. The bag is in the cup. The folder is in the chest. Laura has the envelope. The chest is in the crate. Sarah is in the park. Laura is in the church. Paul is in the church. The drawer is in the crate. Anna is in the farm. Michael is in the library. David has the crate. Frank has the jar. David is in the church. The cup is in the chest. The case is in the folder. The basket is in the drawer. | Where is the case? (depth 5, large)
+     gold=church out='church' pred='church' module={'ans': 'church', 'hops': 5, 'gate': True, 'reads_ok': 1.0}
+     DISC: library {'ans': 'church', 'hops': 5, 'gate': True, 'reads_ok': 1.0}

@@ -1,0 +1,43 @@
+===== V-123: provider-pinned replication of V-119 =====
+  prompt tokens 197733 | sha256 73f148e065b1073c1d430806
+  pin qwen/qwen3-8b                -> Alibaba        quant=unknown  (of 1 endpoints)
+  pin z-ai/glm-5                   -> StreamLake     quant=fp8      (of 10 endpoints)
+  pin deepseek/deepseek-v4-flash   -> DigitalOcean   quant=unknown  (of 15 endpoints)
+
+  model                      rep   acc      em_hit    form_miss  hop2_miss  hop1_miss  honoured
+  qwen3-8b                   1     0.4800   144       24.0%      28.0%      0.0%       True    
+  qwen3-8b                   2     0.4933   148       24.7%      25.7%      0.3%       True    
+  glm-5                      1     0.2200   66        8.7%       69.3%      0.0%       True    
+  glm-5                      2     0.2400   72        7.7%       67.7%      0.7%       True    
+  deepseek-v4-flash          1     0.5267   158       24.7%      0.0%       22.7%      True    
+  deepseek-v4-flash          2     0.5033   151       25.7%      1.0%       23.0%      True    
+
+  cost: per-call field $0.9540 | ACCOUNT METER $0.9499
+
+  >>> P0 validity gate: the pin was honoured on every run : True
+  >>> P1 replication under pinning (bar: agreement >= .95 for EVERY model):
+      qwen3-8b                   agreement 0.9400 (V-119 0.9567, delta -0.0167) | identical answer 0.8900 : False
+      glm-5                      agreement 0.8100 (V-119 0.8167, delta -0.0067) | identical answer 0.7933 : False
+      deepseek-v4-flash          agreement 0.8967 (V-119 0.8800, delta +0.0167) | identical answer 0.8233 : False
+      P1 overall : False
+  >>> P2 glm-5's profile is the MODEL: hop2_miss 0.685 >= .45 (True) and >= .20 above both others {'qwen3-8b': 0.268, 'deepseek-v4-flash': 0.005} (True) : True
+  >>> P3 accuracy stable under pinning (bar: |acc - V119| <= .03):
+      qwen3-8b                   pinned 0.4867 vs V-119 0.4800  delta +0.0067 : True
+      glm-5                      pinned 0.2300 vs V-119 0.2800  delta -0.0500 : False
+      deepseek-v4-flash          pinned 0.5150 vs V-119 0.4650  delta +0.0500 : False
+      P3 overall : False
+  >>> P4 (descriptive, no bar): table above; pinned providers and quantizations in the header; agreement deltas against V-119 in P1.
+
+  --- readings, as registered ---
+  REPORTED FIRST -- P1 FAILED, and this is the heavier outcome. Non-replication is NOT routing:
+  with a single pinned provider the same rows still disagree between identical temperature-0 runs, so
+  the cause is server-side nondeterminism (batching, MoE expert routing, speculative decoding).
+  Consequence: NO API-based measurement of ours can support per-row claims at this precision, and that
+  restricts what any ladder run this way may conclude -- V-108's included.
+  P2 holds: glm-5 errs differently in KIND and it is the model, not the plumbing. The statement in
+  correction 2637759 stands, now with a pinned measurement behind it.
+  P3 FAILS: pinned and unpinned numbers are not interchangeable, so V-108's ten-rung ladder cannot be
+  quoted at all until it is re-run pinned end to end.
+  scoping: single_pass arm only; nothing about the store (.974, no model) or acquisition. Nothing enters
+  the 9/16 submission.
+V123-SCORE-DONE

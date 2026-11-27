@@ -1,0 +1,98 @@
+{
+ "prereg": "c884c50",
+ "reader": "/path/to/work/ms_cache/Qwen/Qwen2___5-32B-Instruct",
+ "n_eval": 60,
+ "Ks": [
+  120,
+  500,
+  1000,
+  2000,
+  4000,
+  8000
+ ],
+ "cells": {
+  "120": {
+   "store_acc": 1.0,
+   "store_sec": 0.018286727534400093,
+   "store_sec_amortised": 0.01785033941268921,
+   "shards": 2,
+   "reader_acc": 0.9166666666666666,
+   "reader_sec": 5.166598459084828,
+   "prompt_tokens": 1368.5166666666667,
+   "completion_tokens": 76.76666666666667,
+   "trunc": 0.0
+  },
+  "500": {
+   "store_acc": 1.0,
+   "store_sec": 0.07317364083396065,
+   "store_sec_amortised": 0.07324550151824952,
+   "shards": 8,
+   "reader_acc": 0.8666666666666667,
+   "reader_sec": 6.83517253001531,
+   "prompt_tokens": 5381.75,
+   "completion_tokens": 67.36666666666666,
+   "trunc": 0.0
+  },
+  "1000": {
+   "store_acc": 1.0,
+   "store_sec": 0.1483534203635322,
+   "store_sec_amortised": 0.14650193452835084,
+   "shards": 16,
+   "reader_acc": 0.7833333333333333,
+   "reader_sec": 10.417787412802378,
+   "prompt_tokens": 10663.833333333334,
+   "completion_tokens": 70.78333333333333,
+   "trunc": 0.0
+  },
+  "2000": {
+   "store_acc": 1.0,
+   "store_sec": 0.29606517950693767,
+   "store_sec_amortised": 0.2919478893280029,
+   "shards": 32,
+   "reader_acc": 0.36666666666666664,
+   "reader_sec": 18.12304481267929,
+   "prompt_tokens": 21217.816666666666,
+   "completion_tokens": 73.78333333333333,
+   "trunc": 0.0
+  },
+  "4000": {
+   "store_acc": 1.0,
+   "store_sec": 0.5902260038587781,
+   "store_sec_amortised": 0.5829877138137818,
+   "shards": 63,
+   "reader_acc": NaN,
+   "reader_sec": NaN,
+   "prompt_tokens": 0.0,
+   "completion_tokens": 0.0,
+   "trunc": 1.0,
+   "note": "beyond the reader's 32k window; store only"
+  },
+  "8000": {
+   "store_acc": 1.0,
+   "store_sec": 1.1636297318670485,
+   "store_sec_amortised": 1.1614980578422547,
+   "shards": 125,
+   "reader_acc": NaN,
+   "reader_sec": NaN,
+   "prompt_tokens": 0.0,
+   "completion_tokens": 0.0,
+   "trunc": 1.0,
+   "note": "beyond the reader's 32k window; store only"
+  }
+ },
+ "frontier": {
+  "120": {
+   "prompt_tokens": 1440.075
+  },
+  "2000": {
+   "prompt_tokens": 21093.5
+  },
+  "4000": {
+   "prompt_tokens": 41995.225
+  },
+  "8000": {
+   "prompt_tokens": 83815.925
+  }
+ },
+ "frontier_model": "moonshotai/kimi-k3 (V-137, no new calls)"
+}

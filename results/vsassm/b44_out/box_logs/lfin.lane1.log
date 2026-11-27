@@ -1,0 +1,159 @@
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 520}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 145.35it/s]
+  cls qwen8 std n800 r8 lr3e-04 sd123 step 100/800 (ep 1.00) loss 1.9849 train_sub 0.5180 dev 0.5060 (214s)
+  cls qwen8 std n800 r8 lr3e-04 sd123 step 200/800 (ep 2.00) loss 0.7732 train_sub 0.5880 dev 0.5140 (430s)
+  cls qwen8 std n800 r8 lr3e-04 sd123 step 300/800 (ep 3.00) loss 1.7687 train_sub 0.5760 dev 0.5240 (646s)
+  cls qwen8 std n800 r8 lr3e-04 sd123 step 400/800 (ep 4.00) loss 0.3427 train_sub 0.8280 dev 0.5080 (862s)
+  cls qwen8 std n800 r8 lr3e-04 sd123 step 500/800 (ep 5.00) loss 0.2153 train_sub 0.9620 dev 0.5620 (1078s)
+  cls qwen8 std n800 r8 lr3e-04 sd123 step 600/800 (ep 6.00) loss 0.0002 train_sub 0.9920 dev 0.5700 (1294s)
+  cls qwen8 std n800 r8 lr3e-04 sd123 step 700/800 (ep 7.00) loss 0.0004 train_sub 1.0000 dev 0.5340 (1511s)
+  cls qwen8 std n800 r8 lr3e-04 sd123 step 800/800 (ep 8.00) loss 0.0009 train_sub 1.0000 dev 0.5360 (1727s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 131.32it/s]
+  TEST cls qwen8 std n800 r8 lr3e-04 sd123: test 0.5460 (dev recheck 0.5700, logged 0.5700)
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 520}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 147.27it/s]
+  cls qwen8 std n800 r8 lr3e-04 sd456 step 100/800 (ep 1.00) loss 1.7000 train_sub 0.5260 dev 0.5100 (217s)
+  cls qwen8 std n800 r8 lr3e-04 sd456 step 200/800 (ep 2.00) loss 0.4723 train_sub 0.6140 dev 0.5400 (433s)
+  cls qwen8 std n800 r8 lr3e-04 sd456 step 300/800 (ep 3.00) loss 0.7483 train_sub 0.7340 dev 0.5100 (649s)
+  cls qwen8 std n800 r8 lr3e-04 sd456 step 400/800 (ep 4.00) loss 1.0779 train_sub 0.8600 dev 0.6520 (864s)
+  cls qwen8 std n800 r8 lr3e-04 sd456 step 500/800 (ep 5.00) loss 0.1542 train_sub 0.9120 dev 0.7480 (1080s)
+  cls qwen8 std n800 r8 lr3e-04 sd456 step 600/800 (ep 6.00) loss 0.0029 train_sub 0.9960 dev 0.6740 (1295s)
+  cls qwen8 std n800 r8 lr3e-04 sd456 step 700/800 (ep 7.00) loss 0.0023 train_sub 1.0000 dev 0.7100 (1511s)
+  cls qwen8 std n800 r8 lr3e-04 sd456 step 800/800 (ep 8.00) loss 0.0000 train_sub 1.0000 dev 0.7200 (1726s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 144.15it/s]
+  TEST cls qwen8 std n800 r8 lr3e-04 sd456: test 0.7620 (dev recheck 0.7480, logged 0.7480)
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 520}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 131.58it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 std n800 r8 lr1e-04 sd123 step 100/800 (ep 1.00) loss 0.0001 train_sub 0.9880 dev 0.9800 bridge 0.998 unparsed 0.000 (261s)
+  scratch qwen8 std n800 r8 lr1e-04 sd123 step 200/800 (ep 2.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 1.000 unparsed 0.000 (521s)
+  scratch qwen8 std n800 r8 lr1e-04 sd123 step 300/800 (ep 3.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 1.000 unparsed 0.000 (781s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 129.80it/s]
+  TEST scratch qwen8 std n800 r8 lr1e-04 sd123: test 0.9980 (dev recheck 0.9980, logged 0.9980)
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 520}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 134.60it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 std n800 r8 lr1e-04 sd456 step 100/800 (ep 1.00) loss 0.0000 train_sub 0.9940 dev 0.9880 bridge 0.996 unparsed 0.000 (260s)
+  scratch qwen8 std n800 r8 lr1e-04 sd456 step 200/800 (ep 2.00) loss 0.0000 train_sub 0.9960 dev 0.9960 bridge 1.000 unparsed 0.000 (523s)
+  scratch qwen8 std n800 r8 lr1e-04 sd456 step 300/800 (ep 3.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 1.000 unparsed 0.000 (786s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 131.73it/s]
+  TEST scratch qwen8 std n800 r8 lr1e-04 sd456: test 1.0000 (dev recheck 0.9980, logged 0.9980)
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 131.50it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 ho n800 r8 lr1e-04 sd42 step 100/800 (ep 1.00) loss 0.0782 train_sub 0.9980 dev 0.9980 bridge 0.990 unparsed 0.000 (259s)
+  scratch qwen8 ho n800 r8 lr1e-04 sd42 step 200/800 (ep 2.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 0.998 unparsed 0.000 (519s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 131.46it/s]
+  TEST scratch qwen8 ho n800 r8 lr1e-04 sd42: test 0.9980 (dev recheck 0.9980, logged 0.9980)
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 125.74it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 ho n800 r8 lr1e-04 sd123 step 100/800 (ep 1.00) loss 0.0500 train_sub 0.9480 dev 0.9480 bridge 0.976 unparsed 0.000 (265s)
+  scratch qwen8 ho n800 r8 lr1e-04 sd123 step 200/800 (ep 2.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 0.994 unparsed 0.000 (524s)
+  scratch qwen8 ho n800 r8 lr1e-04 sd123 step 300/800 (ep 3.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 0.992 unparsed 0.000 (783s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 135.50it/s]
+  TEST scratch qwen8 ho n800 r8 lr1e-04 sd123: test 1.0000 (dev recheck 0.9980, logged 0.9980)
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 133.86it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  scratch qwen8 ho n800 r8 lr1e-04 sd456 step 100/800 (ep 1.00) loss 0.1297 train_sub 0.8800 dev 0.8580 bridge 0.990 unparsed 0.000 (258s)
+  scratch qwen8 ho n800 r8 lr1e-04 sd456 step 200/800 (ep 2.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 1.000 unparsed 0.000 (518s)
+  scratch qwen8 ho n800 r8 lr1e-04 sd456 step 300/800 (ep 3.00) loss 0.0000 train_sub 1.0000 dev 0.9980 bridge 1.000 unparsed 0.000 (777s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 130.03it/s]
+  TEST scratch qwen8 ho n800 r8 lr1e-04 sd456: test 1.0000 (dev recheck 0.9980, logged 0.9980)
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 146.21it/s]
+  cls qwen8 ho n800 r8 lr1e-04 sd123 step 100/800 (ep 1.00) loss 0.6715 train_sub 0.6520 dev 0.5180 (215s)
+  cls qwen8 ho n800 r8 lr1e-04 sd123 step 200/800 (ep 2.00) loss 0.8988 train_sub 0.7540 dev 0.4980 (431s)
+  cls qwen8 ho n800 r8 lr1e-04 sd123 step 300/800 (ep 3.00) loss 0.7602 train_sub 0.6960 dev 0.4800 (647s)
+  cls qwen8 ho n800 r8 lr1e-04 sd123 step 400/800 (ep 4.00) loss 0.4472 train_sub 0.9580 dev 0.4800 (863s)
+  cls qwen8 ho n800 r8 lr1e-04 sd123 step 500/800 (ep 5.00) loss 0.0594 train_sub 0.9880 dev 0.5320 (1079s)
+  cls qwen8 ho n800 r8 lr1e-04 sd123 step 600/800 (ep 6.00) loss 0.0763 train_sub 1.0000 dev 0.5100 (1296s)
+  cls qwen8 ho n800 r8 lr1e-04 sd123 step 700/800 (ep 7.00) loss 0.0000 train_sub 1.0000 dev 0.5280 (1512s)
+  cls qwen8 ho n800 r8 lr1e-04 sd123 step 800/800 (ep 8.00) loss 0.0000 train_sub 1.0000 dev 0.5240 (1728s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 128.39it/s]
+  TEST cls qwen8 ho n800 r8 lr1e-04 sd123: test 0.5100 (dev recheck 0.5320, logged 0.5320)
+B44 LoRA {"n": {"train": 800, "dev": 500}, "max_len": {"train": 520, "dev": 519}, "gpu": "NVIDIA A800 80GB PCIe"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 146.44it/s]
+  cls qwen8 ho n800 r8 lr1e-04 sd456 step 100/800 (ep 1.00) loss 0.5011 train_sub 0.6800 dev 0.4940 (440s)
+  cls qwen8 ho n800 r8 lr1e-04 sd456 step 200/800 (ep 2.00) loss 1.4317 train_sub 0.6460 dev 0.5040 (879s)
+  cls qwen8 ho n800 r8 lr1e-04 sd456 step 300/800 (ep 3.00) loss 0.5381 train_sub 0.8600 dev 0.4880 (1320s)
+  cls qwen8 ho n800 r8 lr1e-04 sd456 step 400/800 (ep 4.00) loss 0.2745 train_sub 0.9640 dev 0.4960 (1725s)
+  cls qwen8 ho n800 r8 lr1e-04 sd456 step 500/800 (ep 5.00) loss 0.0122 train_sub 0.9920 dev 0.4960 (1941s)
+  cls qwen8 ho n800 r8 lr1e-04 sd456 step 600/800 (ep 6.00) loss 0.0000 train_sub 1.0000 dev 0.5020 (2156s)
+  cls qwen8 ho n800 r8 lr1e-04 sd456 step 700/800 (ep 7.00) loss 0.0000 train_sub 1.0000 dev 0.5020 (2372s)
+  cls qwen8 ho n800 r8 lr1e-04 sd456 step 800/800 (ep 8.00) loss 0.0000 train_sub 1.0000 dev 0.5000 (2588s)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 144.77it/s]
+  TEST cls qwen8 ho n800 r8 lr1e-04 sd456: test 0.5160 (dev recheck 0.5040, logged 0.5040)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 134.40it/s]
+  TEST cls qwen8 ho n8000 r8 lr1e-04 sd42: test 0.8100 (dev recheck 0.8040, logged 0.8040)
+  probe std:80000 last logistic 0 dev 0.5620 @1100
+  probe std:80000 last logistic 0.0001 dev 0.5620 @1300
+  probe std:80000 last logistic 0.001 dev 0.5600 @1250
+  probe std:80000 last logistic 0.01 dev 0.5700 @250
+  probe std:80000 last logistic 0.1 dev 0.5160 @50
+  probe std:80000 last logistic 1 dev 0.5360 @200
+  probe std:80000 last mlp 0.0001 dev 0.5660 @50
+  probe std:80000 last mlp 0.01 dev 0.5680 @50
+  probe std:80000 last mlp 0.1 dev 0.5660 @50
+  probe std:80000 eq logistic 0 dev 0.5560 @1250
+  probe std:80000 eq logistic 0.0001 dev 0.5520 @350
+  probe std:80000 eq logistic 0.001 dev 0.5520 @350
+  probe std:80000 eq logistic 0.01 dev 0.5500 @1000
+  probe std:80000 eq logistic 0.1 dev 0.5600 @1050
+  probe std:80000 eq logistic 1 dev 0.5560 @1350
+  probe std:80000 eq mlp 0.0001 dev 0.5520 @200
+  probe std:80000 eq mlp 0.01 dev 0.5500 @550
+  probe std:80000 eq mlp 0.1 dev 0.5440 @550
+  probe std:80000 eqx logistic 0 dev 0.5500 @750
+  probe std:80000 eqx logistic 0.0001 dev 0.5580 @750
+  probe std:80000 eqx logistic 0.001 dev 0.5680 @1450
+  probe std:80000 eqx logistic 0.01 dev 0.5600 @1650
+  probe std:80000 eqx logistic 0.1 dev 0.5540 @1950
+  probe std:80000 eqx logistic 1 dev 0.5600 @1300
+  probe std:80000 eqx mlp 0.0001 dev 0.5560 @50
+  probe std:80000 eqx mlp 0.01 dev 0.5540 @50
+  probe std:80000 eqx mlp 0.1 dev 0.5680 @700
+  TEST probe std:80000 seed 42 0.5020
+  TEST probe std:80000 seed 123 0.5020
+  TEST probe std:80000 seed 456 0.5020
+  probe ho:80000 last logistic 0 dev 0.5540 @850
+  probe ho:80000 last logistic 0.0001 dev 0.5780 @1350
+  probe ho:80000 last logistic 0.001 dev 0.5440 @1550
+  probe ho:80000 last logistic 0.01 dev 0.5680 @400
+  probe ho:80000 last logistic 0.1 dev 0.5500 @100
+  probe ho:80000 last logistic 1 dev 0.5100 @350
+  probe ho:80000 last mlp 0.0001 dev 0.5620 @200
+  probe ho:80000 last mlp 0.01 dev 0.5620 @200
+  probe ho:80000 last mlp 0.1 dev 0.5640 @200
+  probe ho:80000 eq logistic 0 dev 0.5860 @1400
+  probe ho:80000 eq logistic 0.0001 dev 0.5700 @1700
+  probe ho:80000 eq logistic 0.001 dev 0.5900 @1750
+  probe ho:80000 eq logistic 0.01 dev 0.5880 @1650
+  probe ho:80000 eq logistic 0.1 dev 0.5620 @600
+  probe ho:80000 eq logistic 1 dev 0.5620 @1400
+  probe ho:80000 eq mlp 0.0001 dev 0.5460 @150
+  probe ho:80000 eq mlp 0.01 dev 0.5380 @600
+  probe ho:80000 eq mlp 0.1 dev 0.5540 @450
+  probe ho:80000 eqx logistic 0 dev 0.5660 @1100
+  probe ho:80000 eqx logistic 0.0001 dev 0.5660 @1100
+  probe ho:80000 eqx logistic 0.001 dev 0.5740 @1250
+  probe ho:80000 eqx logistic 0.01 dev 0.5620 @1200
+  probe ho:80000 eqx logistic 0.1 dev 0.5540 @1000
+  probe ho:80000 eqx logistic 1 dev 0.5440 @250
+  probe ho:80000 eqx mlp 0.0001 dev 0.5280 @450
+  probe ho:80000 eqx mlp 0.01 dev 0.5380 @250
+  probe ho:80000 eqx mlp 0.1 dev 0.5240 @500
+  TEST probe ho:80000 seed 42 0.5380
+  TEST probe ho:80000 seed 123 0.5380
+  TEST probe ho:80000 seed 456 0.5380

@@ -1,0 +1,90 @@
+2 calls in 1 sites (0 done); ledger 0.00 USD of 180.0
+Traceback (most recent call last):
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpx/_transports/default.py", line 127, in __iter__
+    for part in self._httpcore_stream:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 407, in __iter__
+    raise exc from None
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 403, in __iter__
+    for part in self._stream:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 342, in __iter__
+    raise exc
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 334, in __iter__
+    for chunk in self._connection._receive_response_body(**kwargs):
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 203, in _receive_response_body
+    event = self._receive_event(timeout=timeout)
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 213, in _receive_event
+    with map_exceptions({h11.RemoteProtocolError: RemoteProtocolError}):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/path/to/vsassm/nsr/nsr_claude.py", line 161, in <module>
+    main()
+  File "/path/to/vsassm/nsr/nsr_claude.py", line 155, in main
+    list(ex.map(site, by.values()))
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/path/to/vsassm/nsr/nsr_claude.py", line 152, in site
+    list(ex.map(one, ps[1:]))
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/path/to/vsassm/nsr/nsr_claude.py", line 131, in one
+    r = call(client, a.model, p["prompt"], a.max_tokens, a.effort)
+  File "/path/to/vsassm/nsr/nsr_claude.py", line 67, in call
+    m = s.get_final_message()
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/lib/streaming/_messages.py", line 93, in get_final_message
+    self.until_done()
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/lib/streaming/_messages.py", line 120, in until_done
+    consume_sync_iterator(self)
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/_utils/_streams.py", line 6, in consume_sync_iterator
+    for _ in iterator:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/lib/streaming/_messages.py", line 67, in __iter__
+    for item in self._iterator:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/lib/streaming/_messages.py", line 129, in __stream__
+    for sse_event in self._raw_stream:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/_streaming.py", line 71, in __iter__
+    for item in self._iterator:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/_streaming.py", line 84, in __stream__
+    for sse in iterator:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/_streaming.py", line 75, in _iter_events
+    yield from self._decoder.iter_bytes(self.response.iter_bytes())
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/_streaming.py", line 360, in iter_bytes
+    for chunk in self._iter_chunks(iterator):
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/anthropic/_streaming.py", line 371, in _iter_chunks
+    for chunk in iterator:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpx/_models.py", line 897, in iter_bytes
+    for raw_bytes in self.iter_raw():
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpx/_models.py", line 951, in iter_raw
+    for raw_stream_bytes in self.stream:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpx/_client.py", line 153, in __iter__
+    for chunk in self._stream:
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpx/_transports/default.py", line 126, in __iter__
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/path/to/HOME/.local/lib/python3.10/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)

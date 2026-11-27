@@ -1,0 +1,49 @@
+{
+ "n_sym": 64,
+ "hops": 2,
+ "seeds": [
+  {
+   "seed": 42,
+   "acc": 0.876,
+   "structural": {
+    "auroc": 0.5470982471645308,
+    "sel50": 0.884,
+    "sel70": 0.8885714285714286
+   },
+   "trained": {
+    "auroc": 0.4966305788775961,
+    "sel50": 0.884,
+    "sel70": 0.8714285714285714
+   }
+  },
+  {
+   "seed": 123,
+   "acc": 0.864,
+   "structural": {
+    "auroc": 0.5937840413943355,
+    "sel50": 0.904,
+    "sel70": 0.88
+   },
+   "trained": {
+    "auroc": 0.49598311546840956,
+    "sel50": 0.864,
+    "sel70": 0.8571428571428571
+   }
+  },
+  {
+   "seed": 456,
+   "acc": 0.876,
+   "structural": {
+    "auroc": 0.49930033878332597,
+    "sel50": 0.864,
+    "sel70": 0.8771428571428571
+   },
+   "trained": {
+    "auroc": 0.44787523935778467,
+    "sel50": 0.852,
+    "sel70": 0.8657142857142858
+   }
+  }
+ ],
+ "verdict": "NO USABLE SIGNAL (neither confidence reaches 0.70 AUROC; selective prediction on this task is not worth having and no hallucination claim follows, whichever signal 'wins')"
+}

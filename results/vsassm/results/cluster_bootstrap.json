@@ -1,0 +1,413 @@
+[
+ {
+  "label": "1  impact 1-day: ours vs GPT-6.1 Sol direct",
+  "set": "impact1",
+  "arm_a": "arm1",
+  "arm_b": "arm3_gptD_strict",
+  "n": 230,
+  "clusters": 40,
+  "cluster_size_min_max": [
+   3,
+   8
+  ],
+  "acc_a": 0.9304,
+  "acc_b": 0.9522,
+  "paper_acc": [
+   0.93,
+   0.952
+  ],
+  "reproduced": true,
+  "diff": -0.0217,
+  "q_ci": [
+   -0.061,
+   0.022
+  ],
+  "paper_q_ci": [
+   -0.061,
+   0.022
+  ],
+  "cluster_ci": [
+   -0.073,
+   0.025
+  ],
+  "strat_cluster_ci": [
+   -0.07,
+   0.026
+  ],
+  "q_excl0": false,
+  "cl_excl0": false,
+  "st_excl0": false
+ },
+ {
+  "label": "1x impact 1-day: ours vs Opus 5.5 normalised",
+  "set": "impact1",
+  "arm_a": "arm1",
+  "arm_b": "arm3n_opusr_strict",
+  "n": 230,
+  "clusters": 40,
+  "cluster_size_min_max": [
+   3,
+   8
+  ],
+  "acc_a": 0.9304,
+  "acc_b": 0.9348,
+  "paper_acc": [
+   0.93,
+   0.935
+  ],
+  "reproduced": true,
+  "diff": -0.0043,
+  "q_ci": [
+   -0.048,
+   0.039
+  ],
+  "paper_q_ci": null,
+  "cluster_ci": [
+   -0.057,
+   0.043
+  ],
+  "strat_cluster_ci": [
+   -0.057,
+   0.043
+  ],
+  "q_excl0": false,
+  "cl_excl0": false,
+  "st_excl0": false
+ },
+ {
+  "label": "2  window 1-day: ours vs GPT-6.1 Sol direct",
+  "set": "window1",
+  "arm_a": "history",
+  "arm_b": "gptD_strict",
+  "n": 460,
+  "clusters": 40,
+  "cluster_size_min_max": [
+   6,
+   16
+  ],
+  "acc_a": 0.8739,
+  "acc_b": 0.9043,
+  "paper_acc": [
+   0.874,
+   0.904
+  ],
+  "reproduced": true,
+  "diff": -0.0304,
+  "q_ci": [
+   -0.067,
+   0.007
+  ],
+  "paper_q_ci": [
+   -0.067,
+   0.007
+  ],
+  "cluster_ci": [
+   -0.09,
+   0.026
+  ],
+  "strat_cluster_ci": [
+   -0.083,
+   0.022
+  ],
+  "q_excl0": false,
+  "cl_excl0": false,
+  "st_excl0": false
+ },
+ {
+  "label": "2b window 1-day: ours vs Opus 5.5 normalised",
+  "set": "window1",
+  "arm_a": "history",
+  "arm_b": "opusrnn_strict",
+  "n": 460,
+  "clusters": 40,
+  "cluster_size_min_max": [
+   6,
+   16
+  ],
+  "acc_a": 0.8739,
+  "acc_b": 0.8783,
+  "paper_acc": [
+   0.874,
+   0.878
+  ],
+  "reproduced": true,
+  "diff": -0.0043,
+  "q_ci": [
+   -0.046,
+   0.035
+  ],
+  "paper_q_ci": [
+   -0.046,
+   0.035
+  ],
+  "cluster_ci": [
+   -0.064,
+   0.053
+  ],
+  "strat_cluster_ci": [
+   -0.059,
+   0.05
+  ],
+  "q_excl0": false,
+  "cl_excl0": false,
+  "st_excl0": false
+ },
+ {
+  "label": "3a impact 4-day: ours vs GPT-6.1 Sol direct",
+  "set": "K4",
+  "arm_a": "pipeline",
+  "arm_b": "direct",
+  "n": 161,
+  "clusters": 28,
+  "cluster_size_min_max": [
+   3,
+   8
+  ],
+  "acc_a": 0.8012,
+  "acc_b": 0.9255,
+  "paper_acc": [
+   0.801,
+   0.925
+  ],
+  "reproduced": true,
+  "diff": -0.1242,
+  "q_ci": [
+   -0.186,
+   -0.062
+  ],
+  "paper_q_ci": [
+   -0.186,
+   -0.062
+  ],
+  "cluster_ci": [
+   -0.225,
+   -0.039
+  ],
+  "strat_cluster_ci": [
+   -0.205,
+   -0.05
+  ],
+  "q_excl0": true,
+  "cl_excl0": true,
+  "st_excl0": true
+ },
+ {
+  "label": "3b impact 8-day: ours vs GPT-6.1 Sol direct",
+  "set": "K8",
+  "arm_a": "pipeline",
+  "arm_b": "direct",
+  "n": 69,
+  "clusters": 12,
+  "cluster_size_min_max": [
+   3,
+   8
+  ],
+  "acc_a": 0.7101,
+  "acc_b": 0.8551,
+  "paper_acc": [
+   0.71,
+   0.855
+  ],
+  "reproduced": true,
+  "diff": -0.1449,
+  "q_ci": [
+   -0.261,
+   -0.043
+  ],
+  "paper_q_ci": [
+   -0.261,
+   -0.043
+  ],
+  "cluster_ci": [
+   -0.321,
+   -0.012
+  ],
+  "strat_cluster_ci": [
+   -0.217,
+   -0.072
+  ],
+  "q_excl0": true,
+  "cl_excl0": true,
+  "st_excl0": true
+ },
+ {
+  "label": "3x impact 4-day: ours vs Opus 5.5 normalised",
+  "set": "K4",
+  "arm_a": "pipeline",
+  "arm_b": "opusn",
+  "n": 161,
+  "clusters": 28,
+  "cluster_size_min_max": [
+   3,
+   8
+  ],
+  "acc_a": 0.8012,
+  "acc_b": 0.8447,
+  "paper_acc": [
+   0.801,
+   0.845
+  ],
+  "reproduced": true,
+  "diff": -0.0435,
+  "q_ci": [
+   -0.112,
+   0.019
+  ],
+  "paper_q_ci": null,
+  "cluster_ci": [
+   -0.142,
+   0.048
+  ],
+  "strat_cluster_ci": [
+   -0.13,
+   0.043
+  ],
+  "q_excl0": false,
+  "cl_excl0": false,
+  "st_excl0": false
+ },
+ {
+  "label": "3y impact 8-day: ours vs Opus 5.5 normalised",
+  "set": "K8",
+  "arm_a": "pipeline",
+  "arm_b": "opusn",
+  "n": 69,
+  "clusters": 12,
+  "cluster_size_min_max": [
+   3,
+   8
+  ],
+  "acc_a": 0.7101,
+  "acc_b": 0.7536,
+  "paper_acc": [
+   0.71,
+   0.754
+  ],
+  "reproduced": true,
+  "diff": -0.0435,
+  "q_ci": [
+   -0.13,
+   0.043
+  ],
+  "paper_q_ci": null,
+  "cluster_ci": [
+   -0.159,
+   0.062
+  ],
+  "strat_cluster_ci": [
+   -0.116,
+   0.029
+  ],
+  "q_excl0": false,
+  "cl_excl0": false,
+  "st_excl0": false
+ },
+ {
+  "label": "4a location 1-day: ours vs Qwen3-32B (forced)",
+  "set": "loc",
+  "arm_a": "rm",
+  "arm_b": "qwen3-32b",
+  "n": 414,
+  "clusters": 40,
+  "cluster_size_min_max": [
+   8,
+   12
+  ],
+  "acc_a": 0.9589,
+  "acc_b": 0.5435,
+  "paper_acc": [
+   0.959,
+   0.543
+  ],
+  "reproduced": true,
+  "diff": 0.4155,
+  "q_ci": [
+   0.365,
+   0.466
+  ],
+  "paper_q_ci": null,
+  "cluster_ci": [
+   0.355,
+   0.477
+  ],
+  "strat_cluster_ci": [
+   0.373,
+   0.457
+  ],
+  "q_excl0": true,
+  "cl_excl0": true,
+  "st_excl0": true
+ },
+ {
+  "label": "4b impact 1-day: ours vs Qwen3-32B (forced)",
+  "set": "impact1",
+  "arm_a": "arm1",
+  "arm_b": "arm3_qwen3-32b_forced",
+  "n": 230,
+  "clusters": 40,
+  "cluster_size_min_max": [
+   3,
+   8
+  ],
+  "acc_a": 0.9304,
+  "acc_b": 0.2783,
+  "paper_acc": [
+   0.93,
+   0.278
+  ],
+  "reproduced": true,
+  "diff": 0.6522,
+  "q_ci": [
+   0.587,
+   0.713
+  ],
+  "paper_q_ci": null,
+  "cluster_ci": [
+   0.572,
+   0.73
+  ],
+  "strat_cluster_ci": [
+   0.574,
+   0.722
+  ],
+  "q_excl0": true,
+  "cl_excl0": true,
+  "st_excl0": true
+ },
+ {
+  "label": "4c window 1-day: ours vs Qwen3-32B (forced)",
+  "set": "window1",
+  "arm_a": "history",
+  "arm_b": "llm_qwen3-32b_forced",
+  "n": 460,
+  "clusters": 40,
+  "cluster_size_min_max": [
+   6,
+   16
+  ],
+  "acc_a": 0.8739,
+  "acc_b": 0.2022,
+  "paper_acc": [
+   0.874,
+   0.202
+  ],
+  "reproduced": true,
+  "diff": 0.6717,
+  "q_ci": [
+   0.628,
+   0.715
+  ],
+  "paper_q_ci": null,
+  "cluster_ci": [
+   0.601,
+   0.74
+  ],
+  "strat_cluster_ci": [
+   0.611,
+   0.73
+  ],
+  "q_excl0": true,
+  "cl_excl0": true,
+  "st_excl0": true
+ }
+]

@@ -1,0 +1,26 @@
+{
+ "n_sym": 10,
+ "hops": 2,
+ "n_ctx": 8,
+ "arms": {
+  "floor": [
+   0.52,
+   0.512,
+   0.522
+  ],
+  "parser": [
+   0.926,
+   0.906,
+   0.914
+  ],
+  "spans": [
+   0.538,
+   0.542,
+   0.524
+  ]
+ },
+ "floor": 0.518,
+ "parser": 0.9153333333333333,
+ "headroom": 0.3973333333333333,
+ "verdict": "NOT SYMBOL COUNT (it still fails at ten symbols; vocabulary size is eliminated and the natural-text result stays open with one fewer candidate)"
+}

@@ -1,0 +1,530 @@
+# B38 verdict (prereg/B38_ecc_equal_cells_prereg.md): cells per stored pair needed for >= 99.5% exact reads
+# of the probed keys, VSA store vs error-corrected tables, every stored bit on simulated PCM cells
+
+Stores 50, probed keys 4776 (T-rep rows at B = 512, k1).
+
+Table 1: N* = the smallest budget (cells per stored pair, every stored bit counted) with >= 99.5% of probed
+keys read exactly at that budget and every larger one evaluated; i.i.d. cell errors at the device model's
+30-day bit-error rate x k (e05: 5% control). '>4096' = not reached on the grid.
+                 k1       k2       k4      e05       k8      k16      k32
+  eps        0.0000   0.0001   0.0208   0.0500   0.1226   0.2760   0.3744
+  V-pub         108      108      108      152      861    >4096    >4096
+  V-Snt          91       91      108      108      128    >4096    >4096
+  V-am           91       91      108      108      152      609     2896
+  V-last         76       76       76       91      128      431     1722
+  V-cb          431      431      512      724     1448    >4096    >4096
+  T-rep          19       23       91      128      256     1024     3444
+  T-vhdd         32       32       38       54       91      304     1024
+  E-BCH          19       19       27       38      108      431     1722
+  E-LDPC         23       23       27       38       54      215      724
+  E-CAM          45       45       64       91      256     1024     3444
+  capacity     13.5     13.6     15.9     19.0     29.3     90.3    294.6   (directory-free table at BSC capacity, max over stores)
+
+Bars (Delta = grid steps of the best non-HD table's N* minus the best VSA read's N*; one step = 2^(1/4) = 19%;
+'VSA fewer cells' if Delta >= +2, 'table fewer cells' if Delta <= -2, 'tie' if |Delta| <= 1)
+  H1 (primary; k1..k32): TABLE WIN
+    k1   best VSA V-last     76 | best table E-BCH      19 | Delta -8 -> table fewer cells
+    k2   best VSA V-last     76 | best table E-BCH      19 | Delta -8 -> table fewer cells
+    k4   best VSA V-last     76 | best table E-BCH      27 | Delta -6 -> table fewer cells
+    e05  best VSA V-last     91 | best table E-BCH      38 | Delta -5 -> table fewer cells
+    k8   best VSA V-Snt     128 | best table E-LDPC     54 | Delta -5 -> table fewer cells
+    k16  best VSA V-last    431 | best table E-LDPC    215 | Delta -4 -> table fewer cells
+    k32  best VSA V-last   1722 | best table E-LDPC    724 | Delta -5 -> table fewer cells
+  H1cb (VSA with its codebook on the cells, counted): TABLE WIN
+    k1   V-cb    431 | best table E-BCH      19 | Delta -18 -> table fewer cells
+    k2   V-cb    431 | best table E-BCH      19 | Delta -18 -> table fewer cells
+    k4   V-cb    512 | best table E-BCH      27 | Delta -17 -> table fewer cells
+    e05  V-cb    724 | best table E-BCH      38 | Delta -17 -> table fewer cells
+    k8   V-cb   1448 | best table E-LDPC     54 | Delta -19 -> table fewer cells
+    k16  V-cb  >4096 | best table E-LDPC    215 | Delta -18 -> table fewer cells
+    k32  V-cb  >4096 | best table E-LDPC    724 | Delta -11 -> table fewer cells
+  H2 (best VSA vs the HD table T-vhdd): TABLE WIN
+    k1   best VSA V-last     76 | T-vhdd     32 | Delta -5 -> table fewer cells
+    k2   best VSA V-last     76 | T-vhdd     32 | Delta -5 -> table fewer cells
+    k4   best VSA V-last     76 | T-vhdd     38 | Delta -4 -> table fewer cells
+    e05  best VSA V-last     91 | T-vhdd     54 | Delta -3 -> table fewer cells
+    k8   best VSA V-Snt     128 | T-vhdd     91 | Delta -2 -> table fewer cells
+    k16  best VSA V-last    431 | T-vhdd    304 | Delta -2 -> table fewer cells
+    k32  best VSA V-last   1722 | T-vhdd   1024 | Delta -3 -> table fewer cells
+
+Table 2: N* under localized damage (each damaged cell reads a fixed random sign; f = 2 eps of the matched
+i.i.d. condition, so the overall cell-error rate matches). il = random interleaver over the array; nat = natural
+layout (vectors / codewords / copies contiguous); known = locations given to every reader (erasures).
+  condition                V-pub   V-Snt    V-am  V-last    V-cb   T-rep  T-vhdd   E-BCH  E-LDPC   E-CAM  | Delta(VSA vs table)
+  lines-il-k4                108     108      91      76     512      91      45      27      27      64  | -6 table fewer cells
+  lines-il-e05               181     108     108      91     724     128      54      91      45      91  | -4 table fewer cells
+  lines-il-k8               1448     152     152     128    1448     256      91     128      76     256  | -3 table fewer cells
+  lines-il-k16             >4096   >4096     724     431   >4096    1024     304     431     215    1024  | -4 table fewer cells
+  lines-nat-k4               128      91     108      76    1218   >4096     512     181   >4096     304  | +5 VSA fewer cells
+  lines-nat-e05              181     108     108      91    1448   >4096     861     431   >4096     724  | +9 VSA fewer cells
+  lines-nat-k8             >4096     152     181     152    3444   >4096    1218    2896   >4096   >4096  | +17 VSA fewer cells
+  lines-nat-k16            >4096   >4096     724     512   >4096   >4096    2896   >4096   >4096   >4096  | +13 VSA fewer cells
+  clust-il-k4                108     108      91      76     512      91      38      27      27      64  | -6 table fewer cells
+  clust-il-e05               152     108     108      91     724     128      54      54      38      91  | -5 table fewer cells
+  clust-il-k8               1024     128     152     128    1448     256      91     128      64     256  | -4 table fewer cells
+  clust-il-k16             >4096   >4096     609     431   >4096    1024     304     512     304    1024  | -2 table fewer cells
+  clust-nat-k4               128      91      91      76     512     724      91     215     512     512  | +6 VSA fewer cells
+  clust-nat-e05              181     108     128      91     861    1024     128     512     724    1024  | +10 VSA fewer cells
+  clust-nat-k8             >4096     152     181     152    2435    1722     215    1024    1024    2435  | +11 VSA fewer cells
+  clust-nat-k16            >4096   >4096     861     724   >4096   >4096    1448    2896    2435   >4096  | +7 VSA fewer cells
+  contig-il-k4               108     108     108      76     512      91      38      27      27      64  | -6 table fewer cells
+  contig-il-e05              181     108     108      91     724     128      54      38      38      91  | -5 table fewer cells
+  contig-il-k8               861     128     181     128    1218     256      91     108      54     256  | -5 table fewer cells
+  contig-il-k16            >4096   >4096     512     431   >4096    1024     304     431     215    1024  | -4 table fewer cells
+  contig-nat-k4            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie
+  contig-nat-e05           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie
+  contig-nat-k8            >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie
+  contig-nat-k16           >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096   >4096  | +0 tie
+  lines-il-known-k4          108     108      91      76     512      54      32      27      23      54  | -7 table fewer cells
+  lines-il-known-e05         108     108      91      76     512      76      38      45      27      91  | -6 table fewer cells
+  lines-il-known-k8          152     152     108     108     861     108      45      76      38     152  | -6 table fewer cells
+  lines-il-known-k16         256     256     215     181    2435     256      91     152     128     304  | -2 table fewer cells
+  H3 (interleaved, unknown locations): TABLE WIN
+  H4 (natural layout, unknown locations): VSA WIN
+  H5 (known locations, lines, interleaved): TABLE WIN
+
+  Position independence (|N*(damage) - N*(matched i.i.d.)| <= 1 grid step), per variant: share of damage
+  conditions that pass, interleaved / natural:
+    V-pub    il 11/12   nat 7/12
+    V-Snt    il 12/12   nat 9/12
+    V-am     il 12/12   nat 7/12
+    V-last   il 12/12   nat 7/12
+    V-cb     il 12/12   nat 5/12
+    T-rep    il 12/12   nat 0/12
+    T-vhdd   il 12/12   nat 0/12
+    E-BCH    il 10/12   nat 0/12
+    E-LDPC   il 10/12   nat 0/12
+    E-CAM    il 12/12   nat 0/12
+
+Table 3: share of probed keys read exactly at equal cells, B = 512 cells per pair (B34's budget), designs
+chosen for each condition
+  condition                V-pub   V-Snt    V-am  V-last    V-cb   T-rep  T-vhdd   E-BCH  E-LDPC   E-CAM
+  k1                      100.00  100.00  100.00  100.00   99.90  100.00  100.00  100.00  100.00  100.00
+  k2                      100.00  100.00  100.00  100.00   99.90  100.00  100.00  100.00  100.00  100.00
+  k4                      100.00  100.00  100.00  100.00   99.56  100.00  100.00  100.00  100.00  100.00
+  e05                     100.00  100.00  100.00  100.00   98.81  100.00  100.00  100.00  100.00  100.00
+  k8                       98.43  100.00   99.90  100.00   84.95  100.00  100.00  100.00  100.00  100.00
+  k16                       0.08   98.70   99.48   99.96   16.56   92.32  100.00  100.00  100.00   67.82
+  k32                       0.00   79.67   68.89   76.78    0.50   17.61   83.96   12.10   65.45    3.50
+  lines-il-k4             100.00  100.00  100.00  100.00   99.56  100.00  100.00  100.00  100.00  100.00
+  lines-il-e05            100.00  100.00  100.00  100.00   98.60  100.00  100.00  100.00  100.00  100.00
+  lines-il-k8              98.51  100.00   99.73  100.00   85.34  100.00  100.00  100.00  100.00  100.00
+  lines-il-k16              0.25   98.81   99.52   99.94   16.00   92.69  100.00  100.00  100.00   66.23
+  lines-nat-k4            100.00  100.00  100.00  100.00   95.94   91.10   99.83  100.00   95.14   99.96
+  lines-nat-e05            99.98  100.00  100.00  100.00   90.28   79.94   99.14   99.96   83.73   99.25
+  lines-nat-k8             94.41   99.96   99.85  100.00   75.15   54.38   94.01   84.48   59.61   80.63
+  lines-nat-k16             1.68   98.62   99.12   99.71   30.17   18.43   65.37   24.64   33.50   40.03
+  clust-il-k4             100.00  100.00  100.00  100.00   99.66  100.00  100.00  100.00  100.00  100.00
+  clust-il-e05            100.00  100.00  100.00  100.00   98.93  100.00  100.00  100.00  100.00  100.00
+  clust-il-k8              98.43   99.85   99.81  100.00   85.03  100.00  100.00  100.00  100.00  100.00
+  clust-il-k16              0.19   98.72   99.43   99.96   15.28   91.54   99.98   99.79   99.79   64.59
+  clust-nat-k4            100.00  100.00  100.00  100.00   99.64   98.95  100.00  100.00   99.98   99.79
+  clust-nat-e05            99.96  100.00  100.00  100.00   98.01   94.62  100.00   99.90   98.74   94.68
+  clust-nat-k8             91.69   99.90   99.81  100.00   82.04   68.89  100.00   55.40   85.05   34.13
+  clust-nat-k16             3.73   98.12   98.07   99.10   19.43   11.08   94.89    2.74   35.28    3.89
+  contig-il-k4            100.00  100.00  100.00  100.00   99.66  100.00  100.00  100.00  100.00  100.00
+  contig-il-e05           100.00  100.00  100.00  100.00   98.93  100.00  100.00  100.00  100.00  100.00
+  contig-il-k8             98.58  100.00   99.85  100.00   84.95  100.00  100.00  100.00  100.00  100.00
+  contig-il-k16             0.15   98.72   99.56   99.98   16.46   92.63  100.00  100.00  100.00   65.81
+  contig-nat-k4            95.31   95.98   95.67   95.96   92.15   90.20   91.88   90.75   89.68   96.11
+  contig-nat-e05           89.45   90.18   89.72   90.14   80.34   76.26   78.89   78.04   76.61   90.60
+  contig-nat-k8            74.20   76.53   76.55   76.76   52.18   51.59   50.57   53.69   51.09   74.71
+  contig-nat-k16           43.53   47.49   47.99   48.24    8.84   18.97   17.00   19.83   19.51   44.95
+  lines-il-known-k4       100.00  100.00  100.00  100.00   99.77  100.00  100.00  100.00  100.00  100.00
+  lines-il-known-e05      100.00  100.00  100.00  100.00   99.56  100.00  100.00  100.00  100.00  100.00
+  lines-il-known-k8       100.00  100.00   99.87  100.00   97.84  100.00  100.00  100.00  100.00  100.00
+  lines-il-known-k16      100.00  100.00   99.73  100.00   65.64  100.00  100.00  100.00  100.00  100.00
+
+  Equal cells at the best VSA read's own N* (each arm's share at that budget):
+    k1   B = 76: V-pub 96.92; V-Snt 97.34; V-am 99.33; V-last 99.87; V-cb 54.52; T-rep 100.00; T-vhdd 100.00; E-BCH 100.00; E-LDPC 100.00; E-CAM 100.00
+    k2   B = 76: V-pub 96.98; V-Snt 97.38; V-am 99.35; V-last 99.85; V-cb 54.48; T-rep 100.00; T-vhdd 100.00; E-BCH 100.00; E-LDPC 100.00; E-CAM 100.00
+    k4   B = 76: V-pub 96.73; V-Snt 97.38; V-am 99.18; V-last 99.75; V-cb 49.94; T-rep 98.70; T-vhdd 100.00; E-BCH 100.00; E-LDPC 100.00; E-CAM 100.00
+    e05  B = 91: V-pub 97.61; V-Snt 99.41; V-am 99.16; V-last 99.81; V-cb 48.87; T-rep 96.94; T-vhdd 100.00; E-BCH 100.00; E-LDPC 100.00; E-CAM 99.85
+    k8   B = 128: V-pub 86.93; V-Snt 99.64; V-am 99.02; V-last 99.79; V-cb 38.32; T-rep 90.05; T-vhdd 100.00; E-BCH 100.00; E-LDPC 100.00; E-CAM 64.13
+    k16  B = 431: V-pub 0.15; V-Snt 98.68; V-am 99.12; V-last 99.79; V-cb 12.31; T-rep 84.88; T-vhdd 100.00; E-BCH 99.54; E-LDPC 100.00; E-CAM 47.84
+    k32  B = 1722: V-pub 0.00; V-Snt 98.49; V-am 98.89; V-last 99.56; V-cb 3.02; T-rep 91.37; T-vhdd 100.00; E-BCH 100.00; E-LDPC 100.00; E-CAM 62.60
+
+Table 3b (M2b): equal cells where the memories are under-provisioned (i.i.d.): at each budget from 8 grid steps
+below the best table's N* up to it, the best VSA read's share minus the best non-HD table's share (points);
+'V' = VSA reads >= 5 points more, 'T' = table >= 5 more, '.' = within 5
+    k1   8:+8V 10:+10V 11:+15V 13:+21V 16:-34T 19:-55T
+    k2   8:+8V 10:+10V 11:+15V 13:+21V 16:-34T 19:-55T
+    k4   8:+8V 10:+9V 11:+13V 13:+18V 16:-15T 19:-41T 23:-45T 27:-38T
+    e05  10:+9V 11:+11V 13:+15V 16:+5. 19:+3. 23:-9T 27:-26T 32:-30T 38:-22T
+    k8   13:+10V 16:+10V 19:+16V 23:+20V 27:+21V 32:+23V 38:+27V 45:+5V 54:-23T
+    k16  54:+18V 64:+26V 76:+34V 91:+43V 108:+50V 128:+57V 152:+12V 181:-12T 215:-8T
+    k32  181:+23V 215:+30V 256:+38V 304:+45V 362:+53V 431:+59V 512:+14V 609:-9T 724:-9T
+  H7 (under-provisioned, budgets below the best table's N*): VSA reads more at 37, table at 10, within 5 at 2
+
+Table 4 (M3): graceful degradation at equal cells, B_g = 128 cells per pair, every design fixed for k8
+  condition            V-pub   V-Snt    V-am  V-last    V-cb   T-rep  T-vhdd   E-BCH  E-LDPC   E-CAM  | best VSA - best table
+  k8                   86.93   99.64   99.02   99.79   38.32   90.05  100.00  100.00  100.00   64.13  | -0.21 tie
+  e16                  67.96   98.89   96.82   98.70   24.06   74.18   99.96   91.88  100.00   35.49  | -1.11 tie
+  e20                  40.45   94.70   89.95   94.83   11.31   52.07   98.91   21.63   99.41   16.48  | -4.59 small
+  e24                  16.71   85.26   74.92   84.02    4.54   28.14   91.37    9.30   98.35    7.01  | -13.09 table ahead
+  k16                   5.28   69.81   55.03   65.75    2.26   12.44   70.37    3.48   12.63    3.39  | +57.18 VSA ahead
+  e32                   0.67   43.34   29.02   37.54    0.94    3.81   29.29    1.01    3.77    1.15  | +39.53 VSA ahead
+  k32                   0.06   14.68    9.25   12.29    0.23    0.86    3.66    0.25    0.31    0.31  | +13.82 VSA ahead
+  lines-nat-k8         84.19   99.08   98.18   99.08   40.41   68.82   73.81   70.98   41.46   80.95  | +18.13 VSA ahead
+  lines-nat-e16        64.61   97.49   95.18   97.07   32.81   58.94   64.49   53.92   39.89   67.94  | +29.54 VSA ahead
+  lines-nat-e20        39.89   92.46   86.66   91.37   25.25   47.05   56.05   36.20   43.24   49.16  | +43.30 VSA ahead
+  lines-nat-e24        18.68   80.80   71.00   78.96   16.86   36.10   47.40   21.92   41.08   31.51  | +39.72 VSA ahead
+  lines-nat-k16         8.33   65.16   52.62   61.75    9.48   25.23   39.20   12.50   23.79   18.76  | +39.93 VSA ahead
+  lines-nat-e32         2.43   42.46   29.61   38.21    4.06   13.94   29.69    6.03    4.31    9.09  | +28.52 VSA ahead
+  lines-nat-k32         0.10   16.98   10.20   13.38    1.03    4.27   16.67    1.44    0.73    2.76  | +12.71 VSA ahead
+  contig-nat-k8        76.59   78.18   77.81   78.18   39.76   56.26   56.83   56.72   58.52   74.77  | +3.41 small
+  contig-nat-e16       68.01   71.08   70.79   71.27   30.72   42.50   44.12   42.78   43.97   67.15  | +4.12 small
+  contig-nat-e20       58.77   63.21   63.30   63.94   23.05   30.55   31.05   30.80   31.43   59.21  | +4.73 small
+  contig-nat-e24       49.71   55.15   55.32   56.03   15.77   21.71   20.77   21.84   23.85   50.90  | +5.13 VSA ahead
+  contig-nat-k16       42.57   48.16   48.30   49.14    9.63   14.47   13.53   14.51   15.83   44.41  | +4.73 small
+  contig-nat-e32       34.38   39.78   39.55   40.33    4.98    8.73    7.52    9.02   10.15   35.55  | +4.77 small
+  contig-nat-k32       23.68   28.06   27.32   28.06    1.51    2.58    2.78    2.62    2.81   24.90  | +3.16 small
+  H6 (graceful degradation beyond the design point): VSA ahead at 11, table ahead at 1, tie at 1 of 20
+
+Predictions (prereg; mechanical check, reporting only)
+  P1 H1 TABLE WIN, Delta <= -3 at every k, best table / VSA identities: TABLE WIN; Delta {'k1': -8, 'k2': -8, 'k4': -6, 'k8': -5, 'k16': -4, 'k32': -5}; best tables {'k1': ['E-BCH', 'T-rep'], 'k2': ['E-BCH'], 'k4': ['E-BCH', 'E-LDPC'], 'k8': ['E-LDPC'], 'k16': ['E-LDPC'], 'k32': ['E-LDPC']}; best VSA {'k1': ['V-last'], 'k2': ['V-last'], 'k4': ['V-last'], 'k8': ['V-Snt', 'V-last'], 'k16': ['V-last'], 'k32': ['V-last']} -> HELD
+  P2 test N* within 2 steps of dev (V-last, E-LDPC, E-BCH, T-vhdd); VSA >= 3x best table at k1: misses none; k1 ratio 4.00 -> HELD
+  P3 V-cb >= 8 steps above the best table at every k; not reached at k16, k32: {'k1': 18, 'k2': 18, 'k4': 17, 'k8': 19, 'k16': 18, 'k32': 11} -> HELD
+  P4 H2: T-vhdd fewer cells, Delta <= -1 everywhere, <= -2 at >= 4 of 6: {'k1': -5, 'k2': -5, 'k4': -4, 'k8': -2, 'k16': -2, 'k32': -3} -> HELD
+  P5 H3 TABLE WIN; position-independent in >= 10 of 12 interleaved conditions: TABLE WIN; {'V-last': 12, 'E-LDPC': 10, 'E-BCH': 10, 'T-rep': 12, 'T-vhdd': 12} -> HELD
+  P6 H4 VSA WIN; V-last within 2 steps (lines/clust nat, k4/e05/k8); every table >= 4 steps worse: VSA WIN; V-last ok 6/6; table exceptions none -> HELD
+  P7 contig-nat: no arm reaches 99.5%; V-last within 3 points of 1-f at 512 and >= coded tables: none reached True; contig-nat-k4 V-last 96.0 vs 1-f 95.8; contig-nat-e05 V-last 90.1 vs 1-f 90.0; contig-nat-k8 V-last 76.8 vs 1-f 75.5; contig-nat-k16 V-last 48.2 vs 1-f 44.8 -> FAILED
+  P8 H5 TABLE WIN: TABLE WIN -> HELD
+  P9 M3: E-LDPC ahead >= 5 at 0.20, 0.24; VSA ahead >= 20 at 0.276, 0.32; lines-nat VSA ahead at every eps; H6 VSA ahead >= 8 of 20: False True True True (VSA ahead 11) -> FAILED
+  P10 H7: VSA reads more at >= 2/3 of under-provisioned budgets, table at <= 1/4: V 37, T 10, within 2 of 49 -> HELD
+  8 of 10 held (P11, the checks, in the check sections below)
+
+Store-cluster bootstrap (2,000 resamples of the stores) of Delta (grid steps, best table - best VSA), 95% CI:
+    k4   [-6, -6]
+    k8   [-5, -4]
+    k16  [-4, -3]
+    k32  [-6, -5]
+
+Design parameters at N* (the store with the most pairs):
+    k4   V-last  B=76 {"S": 56, "d": 8147, "load": null}
+    k4   E-BCH   B=27 {"n": 1023, "k": 658, "t": 39, "ncw": 157, "rho": 1.004545822513653, "L": 103282}
+    k4   E-LDPC  B=27 {"R": 0.6666666666666666, "K": 1023, "ncw": 101, "rho": 1.0407951275533247, "L": 103282}
+    k4   T-rep   B=91 {"arm": "T-v", "W": 90, "R": 6007, "B": 1199, "db": 16, "lam": 5, "r": 5, "cells": 516410}
+    k4   T-vhdd  B=38 {"arm": "T-vhdd", "W": 38, "R": 6007, "B": 1199, "db": 16, "hb": 8, "lam": 5, "wb": 28, "wv": 26, "cells": 223326}
+    k8   V-last  B=128 {"S": 94, "d": 8163, "load": null}
+    k8   E-BCH   B=108 {"n": 1023, "k": 553, "t": 52, "ncw": 187, "rho": 3.3753373925051786, "L": 103282}
+    k8   E-LDPC  B=54 {"R": 0.3333333333333333, "K": 1023, "ncw": 101, "rho": 1.0409998451253195, "L": 103282}
+    k8   T-rep   B=256 {"arm": "T-v", "W": 256, "R": 6007, "B": 1199, "db": 16, "lam": 5, "r": 14, "cells": 1445948}
+    k8   T-vhdd  B=91 {"arm": "T-vhdd", "W": 90, "R": 6007, "B": 1199, "db": 16, "hb": 8, "lam": 5, "wb": 67, "wv": 63, "cells": 539107}
+    k16  V-last  B=431 {"S": 316, "d": 8167, "load": null}
+    k16  E-BCH   B=431 {"n": 1023, "k": 618, "t": 44, "ncw": 168, "rho": 15.065671659214813, "L": 103282}
+    k16  E-LDPC  B=215 {"R": 0.3333333333333333, "K": 1023, "ncw": 101, "rho": 4.163999380501278, "L": 103282}
+    k16  T-rep   B=1024 {"arm": "T-v", "W": 1024, "R": 6007, "B": 1199, "db": 16, "lam": 5, "r": 59, "cells": 6093638}
+    k16  T-vhdd  B=304 {"arm": "T-vhdd", "W": 304, "R": 6007, "B": 1199, "db": 16, "hb": 8, "lam": 5, "wb": 228, "wv": 212, "cells": 1820228}
+    k32  V-last  B=1722 {"S": 1261, "d": 8187, "load": null}
+    k32  E-BCH   B=1722 {"n": 1023, "k": 578, "t": 48, "ncw": 179, "rho": 56.43649999726682, "L": 103282}
+    k32  E-LDPC  B=724 {"R": 0.25, "K": 1023, "ncw": 101, "rho": 10.504131871429228, "L": 103282}
+    k32  T-rep   B=3444 {"arm": "T-v", "W": 3444, "R": 6007, "B": 1199, "db": 16, "lam": 5, "r": 199, "cells": 20553118}
+    k32  T-vhdd  B=1024 {"arm": "T-vhdd", "W": 1024, "R": 6007, "B": 1199, "db": 16, "hb": 8, "lam": 5, "wb": 768, "wv": 715, "cells": 6136669}
+
+== check file results/b38_check_closed.json
+  closed form: 953 cells, 108 flagged (|sim - cf| > max(1 point, 4 SE)); largest |diff| 60.68
+    flagged {"arm": "E-BCH", "rule": "", "B": 1024.0, "cond": "k32", "sim": 82.97738693467336, "cf": 65.37769112477511, "diff": 17.59969580989826, "se": 0.6294231178020858, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 107.63474115247546, "cond": "k16", "sim": 3.5175879396984926, "cf": 0.9979931955879504, "diff": 2.5195947441105417, "se": 0.12533718194248053, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 11.313708498984761, "cond": "e05", "sim": 64.85507246376811, "cf": 22.62760218121857, "diff": 42.22747028254954, "se": 2.2599962085308545, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 11.313708498984761, "cond": "k4", "sim": 93.47826086956522, "cf": 82.05082440571748, "diff": 11.427436463847739, "se": 2.0873964230826316, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 1217.7480857627863, "cond": "k32", "sim": 94.17922948073702, "cf": 87.94791072114742, "diff": 6.231318759589601, "se": 0.43709410671981147, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 128.0, "cond": "k16", "sim": 9.128978224455611, "cf": 2.2954674351660938, "diff": 6.833510789289518, "se": 0.17534992609820318, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 13.454342644059432, "cond": "e05", "sim": 79.71014492753623, "cf": 52.723593239459284, "diff": 26.98655168807695, "se": 2.774459429023584, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 13.454342644059432, "cond": "k8", "sim": 26.08695652173913, "cf": 1.9929722004292105, "diff": 24.093984321309918, "se": 0.7923201313290235, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 1448.1546878700494, "cond": "k32", "sim": 99.2462311557789, "cf": 97.86325013468509, "diff": 1.3829810210938012, "se": 0.20404286513009176, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 152.2185107203483, "cond": "k16", "sim": 14.489112227805695, "cf": 5.406465484091748, "diff": 9.082646743713948, "se": 0.2590889393660214, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 16.0, "cond": "e05", "sim": 28.021978021978022, "cf": 8.330297435623098, "diff": 19.691680586354924, "se": 0.28984725357628893, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 16.0, "cond": "k4", "sim": 66.36141636141636, "cf": 37.102928356568306, "diff": 29.25848800484805, "se": 0.7645755308932517, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 16.0, "cond": "k8", "sim": 5.0366300366300365, "cf": 0.35583350736977604, "diff": 4.6807965292602605, "se": 0.09810730184444204, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 181.01933598375618, "cond": "k16", "sim": 29.04103852596315, "cf": 12.119319953616847, "diff": 16.9217185723463, "se": 0.38952919620286314, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 19.027313840043536, "cond": "e05", "sim": 31.930485762144052, "cf": 11.197486241717465, "diff": 20.73299952042659, "se": 0.3381303839231007, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 19.027313840043536, "cond": "k4", "sim": 82.07705192629815, "cf": 64.6285210285095, "diff": 17.44853089778866, "se": 0.5248166340887076, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 19.027313840043536, "cond": "k8", "sim": 3.2872696817420435, "cf": 0.5600846679911823, "diff": 2.727185013750861, "se": 0.09902956823145301, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 215.2694823049509, "cond": "k16", "sim": 48.65996649916248, "cf": 24.796915966784013, "diff": 23.863050532378466, "se": 0.5515226463620069, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 22.627416997969522, "cond": "e05", "sim": 52.09380234505863, "cf": 29.171605977799157, "diff": 22.92219636725947, "se": 0.5592065664941913, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 22.627416997969522, "cond": "k4", "sim": 96.37772194304857, "cf": 91.34232663214195, "diff": 5.0353953109066225, "se": 0.3602655648603605, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 22.627416997969522, "cond": "k8", "sim": 4.983249581239531, "cf": 0.8163747046516852, "diff": 4.166874876587846, "se": 0.11875956412930247, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 256.0, "cond": "k16", "sim": 68.1323283082077, "cf": 43.101571075392734, "diff": 25.030757232814974, "se": 0.6531542683112124, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 256.0, "cond": "k32", "sim": 1.2772194304857623, "cf": 0.10529603977647044, "diff": 1.1719233907092916, "se": 0.04472731466068352, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 26.908685288118864, "cond": "e05", "sim": 78.72696817420436, "cf": 60.41952396296639, "diff": 18.307444211237975, "se": 0.608959409060538, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 26.908685288118864, "cond": "k8", "sim": 11.243718592964823, "cf": 2.2452917308011293, "diff": 8.998426862163695, "se": 0.19720301669364176, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 304.4370214406966, "cond": "k16", "sim": 81.74204355108878, "cf": 66.76302805698, "diff": 14.979015494108776, "se": 0.6246038006847388, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 304.4370214406966, "cond": "k32", "sim": 1.9053601340033501, "cf": 0.2831701896584359, "diff": 1.6221899443449141, "se": 0.0712942666593799, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 32.0, "cond": "e05", "sim": 95.05862646566165, "cf": 90.81332848335668, "diff": 4.245297982304964, "se": 0.38070971018866767, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 32.0, "cond": "k8", "sim": 19.367671691792296, "cf": 5.5304217758667535, "diff": 13.837249915925543, "se": 0.3042993343729674, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 362.03867196751236, "cond": "k16", "sim": 95.97989949748744, "cf": 90.4120434420039, "diff": 5.567856055483521, "se": 0.38483826323774534, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 362.03867196751236, "cond": "k32", "sim": 4.271356783919598, "cf": 0.7928354886166928, "diff": 3.4785212953029054, "se": 0.1131004584410005, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 38.05462768008707, "cond": "k8", "sim": 26.884422110552762, "cf": 14.239162081908713, "diff": 12.64526002864405, "se": 0.4354238836771624, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 430.5389646099018, "cond": "k32", "sim": 6.532663316582915, "cf": 1.9257359417053594, "diff": 4.606927374877555, "se": 0.16098621684901604, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 45.254833995939045, "cond": "k8", "sim": 32.99832495812395, "cf": 15.917864322529171, "diff": 17.080460635594783, "se": 0.45424326095131556, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 512.0, "cond": "k32", "sim": 12.10217755443886, "cf": 4.658787891848908, "diff": 7.4433896625899525, "se": 0.24155681155498104, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 53.81737057623773, "cond": "k8", "sim": 44.15829145728643, "cf": 21.6192789684357, "diff": 22.53901248885073, "se": 0.5175220663763027, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 608.8740428813932, "cond": "k32", "sim": 21.1892797319933, "cf": 10.185695363431092, "diff": 11.003584368562208, "se": 0.3570983147642898, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 64.0, "cond": "k8", "sim": 72.571189279732, "cf": 59.34689149390486, "diff": 13.224297785827133, "se": 0.5790900130378528, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 724.0773439350247, "cond": "k32", "sim": 39.719430485762146, "cf": 20.46464452416402, "diff": 19.254785961598127, "se": 0.5013741518825838, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 76.10925536017415, "cond": "k16", "sim": 1.968174204355109, "cf": 0.14237606853050266, "diff": 1.8257981358246063, "se": 0.051965129269434654, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 76.10925536017415, "cond": "k8", "sim": 92.90201005025126, "cf": 84.03469436754573, "diff": 8.867315682705536, "se": 0.5191379753580598, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 861.0779292198037, "cond": "k32", "sim": 63.505025125628144, "cf": 40.800718243127974, "diff": 22.704306882500163, "se": 0.6405693601953064, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 9.513656920021768, "cond": "e05", "sim": 44.96124031007752, "cf": 9.652825732379565, "diff": 35.308414577697945, "se": 1.610866242119699, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 9.513656920021768, "cond": "k4", "sim": 76.74418604651163, "cf": 45.32411066739242, "diff": 31.42007537911921, "se": 2.4093973037427916, "flag": true}
+    flagged {"arm": "E-BCH", "rule": "", "B": 90.50966799187809, "cond": "k16", "sim": 2.847571189279732, "cf": 0.4124801365972991, "diff": 2.4350910526824325, "se": 0.08359318588250184, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 1024.0, "cond": "k32", "sim": 18.969849246231156, "cf": 5.442483403395797, "diff": 13.527365842835358, "se": 0.2043496748368014, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 107.63474115247546, "cond": "k16", "sim": 1.256281407035176, "cf": 0.10068654762658377, "diff": 1.155594859408592, "se": 0.04484644292130473, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 107.63474115247546, "cond": "k8", "sim": 49.0787269681742, "cf": 23.452377475887786, "diff": 25.62634949228642, "se": 0.5345357632255973, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 1217.7480857627863, "cond": "k32", "sim": 28.119765494137354, "cf": 10.38043143066744, "diff": 17.739334063469915, "se": 0.3219577643833923, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 128.0, "cond": "k16", "sim": 2.8894472361809047, "cf": 0.18129931891820125, "diff": 2.7081479172627034, "se": 0.05822786636240629, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 128.0, "cond": "k8", "sim": 64.13316582914572, "cf": 34.71249028250465, "diff": 29.42067554664107, "se": 0.6271488319357867, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 13.454342644059432, "cond": "e05", "sim": 77.77777777777777, "cf": 17.10153058985366, "diff": 60.67624718792412, "se": 12.447942034012767, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 13.454342644059432, "cond": "k8", "sim": 55.55555555555556, "cf": 0.3078345717299733, "diff": 55.24772098382559, "se": 1.8462152334662365, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 1448.1546878700494, "cond": "k32", "sim": 41.9179229480737, "cf": 17.811955944419296, "diff": 24.105967003654403, "se": 0.44611143381688995, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 152.2185107203483, "cond": "k16", "sim": 4.564489112227806, "cf": 0.588691102933401, "diff": 3.9757980092944045, "se": 0.10175542797423139, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 152.2185107203483, "cond": "k8", "sim": 83.43802345058627, "cf": 63.15235265178309, "diff": 20.285670798803167, "se": 0.6047212575901574, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 16.0, "cond": "e05", "sim": 68.26923076923077, "cf": 11.264864800592786, "diff": 57.004365968637984, "se": 2.7096695830847084, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 16.0, "cond": "k4", "sim": 92.3076923076923, "cf": 52.22195170596353, "diff": 40.08574060172878, "se": 4.2418690167583994, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 16.0, "cond": "k8", "sim": 34.61538461538461, "cf": 0.5454249404763688, "diff": 34.06995967490825, "se": 0.7060489406591285, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 1722.1558584396073, "cond": "k32", "sim": 62.60469011725293, "cf": 29.62574223827509, "diff": 32.97894787897784, "se": 0.5753907670457902, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 181.01933598375618, "cond": "k16", "sim": 6.323283082077052, "cf": 1.8984824095208035, "diff": 4.424800672556248, "se": 0.16373657242685227, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 181.01933598375618, "cond": "k8", "sim": 95.56113902847571, "cf": 86.71779459769661, "diff": 8.843344430779112, "se": 0.4762209062447212, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 19.027313840043536, "cond": "e05", "sim": 61.594202898550726, "cf": 26.06192482064639, "diff": 35.53227807790433, "se": 2.310164667978811, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 19.027313840043536, "cond": "k4", "sim": 86.95652173913044, "cf": 69.59059210324511, "diff": 17.365929635885326, "se": 2.427105866753434, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 19.027313840043536, "cond": "k8", "sim": 30.07246376811594, "cf": 1.2182933364980522, "diff": 28.85417043161789, "se": 0.6484564646021309, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 2048.0, "cond": "k32", "sim": 78.09882747068677, "cf": 51.873420295059525, "diff": 26.225407175627243, "se": 0.6602949174708248, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 215.2694823049509, "cond": "k16", "sim": 9.505862646566165, "cf": 2.7118066495831985, "diff": 6.794055996982966, "se": 0.1714725645454277, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 215.2694823049509, "cond": "k8", "sim": 98.80653266331659, "cf": 96.74387085728395, "diff": 2.062661806032633, "se": 0.2477547440362648, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 22.627416997969522, "cond": "e05", "sim": 79.34782608695652, "cf": 46.54422648596347, "diff": 32.80359960099305, "se": 2.6847661212366147, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 22.627416997969522, "cond": "k8", "sim": 23.91304347826087, "cf": 3.2780282764820257, "diff": 20.635015201778845, "se": 1.0269894925174197, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 2435.4961715255727, "cond": "k32", "sim": 90.2428810720268, "cf": 74.3298805779706, "diff": 15.913000494056211, "se": 0.5903490628973883, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 256.0, "cond": "k16", "sim": 13.986599664991624, "cf": 3.980206092121705, "diff": 10.006393572869921, "se": 0.18231958535728882, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 26.908685288118864, "cond": "e05", "sim": 90.57971014492753, "cf": 75.42920558645274, "diff": 15.150504558474791, "se": 2.4888523807406493, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 26.908685288118864, "cond": "k8", "sim": 34.78260869565217, "cf": 7.965081612739765, "diff": 26.817527082912406, "se": 1.5629303497488622, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 2896.309375740099, "cond": "k32", "sim": 97.04773869346734, "cf": 91.85734896693894, "diff": 5.190389726528388, "se": 0.3704770417820068, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 304.4370214406966, "cond": "k16", "sim": 22.278056951423785, "cf": 6.909331942246036, "diff": 15.368725009177748, "se": 0.23956413081738648, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 304.4370214406966, "cond": "k32", "sim": 1.2144053601340032, "cf": 0.11972320447877939, "diff": 1.094682155655224, "se": 0.04933613055890717, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 32.0, "cond": "e05", "sim": 98.91304347826087, "cf": 89.37671141143981, "diff": 9.536332066821057, "se": 1.799217614724707, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 32.0, "cond": "k8", "sim": 49.63768115942029, "cf": 14.952988846242402, "diff": 34.68469231317789, "se": 2.03758675888889, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 362.03867196751236, "cond": "k16", "sim": 32.20268006700167, "cf": 9.13759840667542, "diff": 23.065081660326257, "se": 0.28079149164030154, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 362.03867196751236, "cond": "k32", "sim": 1.4028475711892798, "cf": 0.12210026082965872, "diff": 1.280747310359621, "se": 0.0496728982768013, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 38.05462768008707, "cond": "e05", "sim": 53.02197802197802, "cf": 15.778892928776523, "diff": 37.2430850932015, "se": 0.4505205624947426, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 38.05462768008707, "cond": "k4", "sim": 82.2954822954823, "cf": 50.92872161864412, "diff": 31.36676067683817, "se": 0.8038881246602505, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 38.05462768008707, "cond": "k8", "sim": 14.865689865689866, "cf": 1.9799081864890287, "diff": 12.885781679200838, "se": 0.20328575293500978, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 430.5389646099018, "cond": "k16", "sim": 47.84338358458962, "cf": 18.844372538323935, "diff": 28.999011046265686, "se": 0.46512369980639856, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 430.5389646099018, "cond": "k32", "sim": 1.9891122278056952, "cf": 0.4244815142784692, "diff": 1.5646307135272262, "se": 0.08963337011771942, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 45.254833995939045, "cond": "e05", "sim": 54.731993299832496, "cf": 21.079047346802653, "diff": 33.65294595302984, "se": 0.4867043401521908, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 45.254833995939045, "cond": "k4", "sim": 90.85008375209381, "cf": 75.93001122168873, "diff": 14.920072530405063, "se": 0.4635740257915823, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 45.254833995939045, "cond": "k8", "sim": 14.510050251256281, "cf": 1.9503763923665587, "diff": 12.559673858889722, "se": 0.165771391209525, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 512.0, "cond": "k16", "sim": 67.81825795644892, "cf": 36.41422995021359, "diff": 31.404028006235325, "se": 0.618594989557996, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 512.0, "cond": "k32", "sim": 3.496649916247906, "cf": 0.5826614399174002, "diff": 2.9139884763305055, "se": 0.10265078259206095, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 53.81737057623773, "cond": "e05", "sim": 73.70184254606365, "cf": 50.11773786717628, "diff": 23.58410467888737, "se": 0.6171738778793493, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 53.81737057623773, "cond": "k4", "sim": 98.59715242881072, "cf": 95.95546544229792, "diff": 2.6416869865128034, "se": 0.26811656346057877, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 53.81737057623773, "cond": "k8", "sim": 18.82328308207705, "cf": 4.254275399791697, "diff": 14.569007682285354, "se": 0.23116438564470027, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 608.8740428813932, "cond": "k16", "sim": 81.03015075376885, "cf": 54.79120572606574, "diff": 26.238945027703103, "se": 0.6606786271052227, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 608.8740428813932, "cond": "k32", "sim": 4.8785594639865995, "cf": 1.3007726515673712, "diff": 3.5777868124192285, "se": 0.14083367592080676, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 64.0, "cond": "e05", "sim": 87.64656616415411, "cf": 69.71672586996998, "diff": 17.929840294184125, "se": 0.5879125557873014, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 64.0, "cond": "k8", "sim": 25.041876046901173, "cf": 8.881700063755066, "diff": 16.160175983146107, "se": 0.2900395797711363, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 724.0773439350247, "cond": "k16", "sim": 90.95477386934674, "cf": 76.36980771000194, "diff": 14.5849661593448, "se": 0.5693201508266322, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 724.0773439350247, "cond": "k32", "sim": 7.809882747068677, "cf": 2.505577455106869, "diff": 5.304305291961809, "se": 0.17083195114233907, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 76.10925536017415, "cond": "e05", "sim": 96.90117252931323, "cf": 92.92645391237343, "diff": 3.974718616939794, "se": 0.34520759762355313, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 76.10925536017415, "cond": "k8", "sim": 36.222780569514235, "cf": 11.558522442361442, "diff": 24.6642581271528, "se": 0.3636610944212877, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 861.0779292198037, "cond": "k16", "sim": 97.55025125628141, "cf": 93.81452559922876, "diff": 3.735725657052655, "se": 0.3244147411790483, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 861.0779292198037, "cond": "k32", "sim": 12.39530988274707, "cf": 3.969243598519392, "diff": 8.426066284227677, "se": 0.19635183752221944, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 90.50966799187809, "cond": "k16", "sim": 1.109715242881072, "cf": 0.10658445282919918, "diff": 1.003130790051873, "se": 0.04657671501089652, "flag": true}
+    flagged {"arm": "E-CAM", "rule": "", "B": 90.50966799187809, "cond": "k8", "sim": 45.540201005025125, "cf": 19.032178333563213, "diff": 26.508022671461916, "se": 0.4906444883847645, "flag": true}
+    flagged {"arm": "T-rep", "rule": "", "B": 11.313708498984761, "cond": "e05", "sim": 36.95652173913044, "cf": 49.24255365166584, "diff": -12.286031912535401, "se": 2.924444289574891, "flag": true}
+    flagged {"arm": "T-rep", "rule": "", "B": 11.313708498984761, "cond": "k4", "sim": 59.42028985507246, "cf": 74.02620304172073, "diff": -14.605913186648266, "se": 2.581191922295492, "flag": true}
+
+== check file results/b38_check_device.json
+    {"arm": "E-BCH", "B": 256.0, "cond": "k16", "bernoulli": 42.4, "device": 40.33333333333333, "diff": -2.0666666666666664, "se": 1.7979239056117953, "flip_rate": 0.2758912797391675, "flag": false}
+    {"arm": "E-BCH", "B": 256.0, "cond": "k8", "bernoulli": 100.0, "device": 100.0, "diff": 0.0, "se": 9.999999999999999e-05, "flip_rate": 0.12262007084197199, "flag": false}
+    {"arm": "E-CAM", "B": 256.0, "cond": "k16", "bernoulli": 6.066666666666666, "device": 5.866666666666666, "diff": -0.20000000000000018, "se": 0.864912755180587, "flip_rate": 0.2760977965434292, "flag": false}
+    {"arm": "E-CAM", "B": 256.0, "cond": "k8", "bernoulli": 99.73333333333333, "device": 99.93333333333332, "diff": 0.20000000000000018, "se": 0.14890215529619566, "flip_rate": 0.12268124200126809, "flag": false}
+    {"arm": "E-LDPC", "B": 256.0, "cond": "k16", "bernoulli": 100.0, "device": 100.0, "diff": 0.0, "se": 9.999999999999999e-05, "flip_rate": 0.2760594509204003, "flag": false}
+    {"arm": "E-LDPC", "B": 256.0, "cond": "k8", "bernoulli": 100.0, "device": 100.0, "diff": 0.0, "se": 9.999999999999999e-05, "flip_rate": 0.12246712100268194, "flag": false}
+    {"arm": "T-rep", "B": 256.0, "cond": "k16", "bernoulli": 33.800000000000004, "device": 32.13333333333333, "diff": -1.6666666666666663, "se": 1.7162638146513143, "flip_rate": 0.2760683212587038, "flag": false}
+    {"arm": "T-rep", "B": 256.0, "cond": "k8", "bernoulli": 99.13333333333333, "device": 99.4, "diff": 0.2666666666666706, "se": 0.31150768375280463, "flip_rate": 0.12263900678562364, "flag": false}
+    {"arm": "T-vhdd", "B": 256.0, "cond": "k16", "bernoulli": 98.13333333333333, "device": 98.4, "diff": 0.2666666666666706, "se": 0.4765306721308524, "flip_rate": 0.2760576678870918, "flag": false}
+    {"arm": "T-vhdd", "B": 256.0, "cond": "k8", "bernoulli": 100.0, "device": 100.0, "diff": 0.0, "se": 9.999999999999999e-05, "flip_rate": 0.1226162515028055, "flag": false}
+    {"arm": "V-cb", "B": 256.0, "cond": "k16", "bernoulli": 2.1999999999999997, "device": 1.866666666666667, "diff": -0.33333333333333304, "se": 0.5153265775035104, "flip_rate": 0.27589809749125754, "flag": false}
+    {"arm": "V-cb", "B": 256.0, "cond": "k8", "bernoulli": 53.266666666666666, "device": 51.93333333333333, "diff": -1.3333333333333308, "se": 1.8231092691902497, "flip_rate": 0.12248499434052573, "flag": false}
+    {"arm": "V-last", "B": 256.0, "cond": "k16", "bernoulli": 93.33333333333333, "device": 94.33333333333334, "diff": 1.0000000000000009, "se": 0.878171501009447, "flip_rate": 0.2760880481445133, "flag": false}
+    {"arm": "V-last", "B": 256.0, "cond": "k8", "bernoulli": 100.0, "device": 100.0, "diff": 0.0, "se": 9.999999999999999e-05, "flip_rate": 0.12259153365588371, "flag": false}
+    {"arm": "V-plain", "B": 256.0, "cond": "k16", "bernoulli": 95.0, "device": 95.0, "diff": 0.0, "se": 0.7958224257542218, "flip_rate": 0.2760845999712361, "flag": false}
+    {"arm": "V-plain", "B": 256.0, "cond": "k8", "bernoulli": 100.0, "device": 100.0, "diff": 0.0, "se": 9.999999999999999e-05, "flip_rate": 0.1226540801869896, "flag": false}
+
+== check file results/b38_check_decoders.txt
+BCH 131072/niah_multikey_2/95106 B=152.219 lines-nat-k8 (n,k,t)=[1023, 578, 48]: words 177
+BCH 131072/niah_multikey_2/44358 B=256 k16 (n,k,t)=[63, 30, 6]: words 3403
+LDPC 131072/niah_multikey_2/92134 B=181.019 k16 R=0.25: words 101
+BCH 131072/niah_multikey_2/350510 B=90.5097 k8 (n,k,t)=[63, 36, 5]: words 2836
+BCH 131072/niah_multikey_2/259411 B=128 lines-nat-k8 (n,k,t)=[1023, 413, 76]: words 250
+BCH 131072/niah_multikey_2/170650 B=256 k16 (n,k,t)=[63, 30, 6]: words 3403
+BCH 131072/niah_multikey_2/162015 B=512 lines-nat-k8 (n,k,t)=[1023, 433, 74]: words 239
+BCH 131072/niah_multikey_2/339871 B=76.1093 lines-nat-k8 (n,k,t)=[63, 16, 11]: words 6456
+BCH 131072/niah_multikey_2/162015 B=128 lines-nat-k8 (n,k,t)=[1023, 413, 76]: words 251
+BCH 131072/niah_multikey_2/180562 B=90.5097 lines-nat-k8 (n,k,t)=[63, 36, 5]: words 2861
+BCH 131072/niah_multikey_2/44358 B=53.8174 lines-nat-k8 (n,k,t)=[63, 24, 7]: words 4254
+BCH 131072/niah_multikey_2/180562 B=362.039 k16 (n,k,t)=[63, 39, 4]: words 2641
+totals: {"bch_codes": 11, "bch_generator_same": 11, "bch_encode_same": 26771, "bch_words": 26771, "bch_agree": 26771, "bch_overloaded": 6239, "bch_overloaded_agree": 6239, "bch_bound_words": 20532, "bch_bound_lib_correct": 20532, "bch_bound_own_correct": 20532, "ldpc_words": 101, "ldpc_info_agree": 101, "ldpc_lib_correct": 97, "ldpc_own_correct": 97}
+
+
+== check file results/b38_check_decoders_ldpc.txt
+LDPC 131072/niah_multikey_2/92134 B=64 lines-nat-k8 R=0.5: words 101
+LDPC 131072/niah_multikey_2/234552 B=512 lines-nat-k8 R=0.6666666666666666: words 101
+LDPC 131072/niah_multikey_2/339871 B=181.019 k16 R=0.25: words 101
+LDPC 131072/niah_multikey_2/95106 B=512 lines-nat-k8 R=0.6666666666666666: words 100
+LDPC 131072/niah_multikey_2/339871 B=53.8174 lines-nat-k8 R=0.3333333333333333: words 101
+LDPC 131072/niah_multikey_2/162015 B=181.019 k16 R=0.25: words 101
+LDPC 131072/niah_multikey_2/170650 B=181.019 k16 R=0.25: words 100
+LDPC 131072/niah_multikey_2/234552 B=181.019 k16 R=0.25: words 101
+LDPC 131072/niah_multikey_2/350510 B=362.039 k16 R=0.8333333333333334: words 100
+LDPC 131072/niah_multikey_2/339871 B=64 k8 R=0.5: words 101
+totals: {"ldpc_words": 1007, "ldpc_info_agree": 792, "ldpc_lib_correct": 705, "ldpc_own_correct": 873}
+
+
+## Reading (written by hand after the generated part; reading rules in the prereg)
+
+Setting. Every stored bit of every memory is a cell (a differential pair of PCM devices read as a sign) with i.i.d.
+sign errors at the device model's measured 30-day rate x k (B34 showed the model's errors are i.i.d.; a re-read of 16
+cells with the device model itself agrees, below), or with localized damage at a matched overall error rate. Each
+memory is read at the smallest budget, in cells per stored pair with every stored bit counted (directory, parity,
+codebook where stored), at which it reads >= 99.5% of the 4,776 probed RULER keys exactly; designs were tuned on
+synthetic dev stores and the condition's error rate is known to every designer. The VSA reads regenerate their
+codebook digitally from the value strings (0 cells; the price is N_values x d code bits and dot products per query).
+
+1. H1, primary (the referee's question): TABLE WIN at every noise level. Error-corrected tables need 2-4x fewer cells
+   per fact than the best VSA read: 19 vs 76 cells with no cell errors (k1), 27 vs 76 at k4 (2.1% cell errors), 54 vs
+   128 at k8 (12.3%), 215 vs 431 at k16 (27.6%), 724 vs 1722 at k32 (37.4%) (Delta -8, -8, -6, -5, -4, -5 grid steps;
+   store bootstrap k8 [-5, -4], k16 [-4, -3]). The winning codes: a BCH table (tuned (n, t), repetition only where
+   needed) at low error rates, an LDPC table with the copies' votes combined into soft inputs at high ones (R = 1/3 at
+   k8 and k16, 1/4 at k32). The best VSA read is V-last (each key's last value bound with a LAST code), which needs no
+   threshold; the published read (V-pub, threshold 0.5) needs 108-861 cells up to k8 and never reaches 99.5% at k16 or
+   k32; V-Snt (B34's argmax read) stalls at 98.8% from k16 on (multi-valued keys of the small stores).
+2. The referee's capacity point holds. With no cell errors the VSA store needs 76 cells per fact (about 108 pairs per
+   8,192-cell vector; 0.17 value bits per cell) where a table needs 19 (0.66) and the directory-free capacity bound is
+   13.5. The RULER stores at 16 pairs per vector (512 cells per fact) were over-provisioned 6.7x; B34's exactness at
+   low precision was a property of that over-provisioning. The VSA's distance from the capacity bound (5.6x at k1, 5.8x
+   at k32) is about twice the best table's (1.4x at k1, 2.5x at k32) at every noise level.
+3. Against repetition alone the VSA store does need fewer cells at high noise (T-rep 256 / 1024 / 3444 vs 128 / 431 /
+   1722 at k8 / k16 / k32): B34's comparison was against a repetition-coded table, and its VSA advantage (V-Snt +7 to
+   +61 points at 512 cells) is an advantage over repetition, not over coding. A hashed CAM in BCH (E-CAM) pays for its
+   26-bit key hashes (45-3444 cells).
+4. H2: a table whose directory and values are random high-dimensional codes decoded by similarity, without
+   superposition (T-vhdd), needs fewer cells than the VSA store at every level (32 / 38 / 91 / 304 / 1024 vs 76 / 76 /
+   128 / 431 / 1722; Delta -2 to -5). Superposition costs cells; it buys none.
+5. H1cb, item memory counted: a VSA whose value codebook (N_values x d) is stored on the same cells needs 431 cells at
+   k1 to 1448 at k8 and never reaches 99.5% at k16 or k32 (load 1-2 pairs per vector chosen, i.e. hardly a VSA); 11-19
+   grid steps (7-27x) above the best table. The VSA's competitiveness above depends on regenerating its codebook.
+6. H3 (localized damage with an interleaver, unknown locations): TABLE WIN in all 12 conditions (Delta -2 to -6).
+   With a random interleaver dead lines, stuck clusters and even a contiguous lost band look like i.i.d. errors to
+   every memory: V-last, T-rep, T-vhdd and E-CAM stay within one grid step of their i.i.d. requirement in 12 of 12
+   conditions, E-BCH and E-LDPC in 10 of 12 (E-BCH 91 vs 38 at lines/e05: the small stores' tables are single
+   codewords, and localized damage on a tiny array varies a lot; hand-read below). H5 (locations known, erasures):
+   TABLE WIN in all 4.
+7. H4 (no interleaver, natural layout): VSA WIN in the 8 lines/cluster conditions. The VSA store keeps its i.i.d.
+   requirement within 0-3 grid steps (V-last 76 / 91 / 152 / 512 for dead lines at f = 4 / 10 / 25 / 55% and 76 / 91 /
+   152 / 724 for clusters) while every table needs at least 4 grid steps more than in its own i.i.d. condition (best
+   non-HD table 181 to > 4096 cells; T-vhdd 91 to 2896). The mechanism is superposition: each fact is spread over the d = 8,192 cells of its shard vector, so a dead
+   word line (256 cells) or a 16 x 16 cluster removes a small share of every fact in that vector, whereas a table
+   keeps each fact (and, with copies adjacent, all copies of a bit) in a few contiguous cells, and a coded table
+   concentrates the damage in some codewords (hand-read: 93-167 errors in codewords designed for 59). This is the
+   one place where the VSA store needs fewer cells than every table, and it is specific to superposition: T-vhdd,
+   with the same random codes but no superposition, fails like the other tables. But an interleaver gives the tables
+   the same property at no cost in cells (point 6). Contiguous loss of a fraction f in the natural layout defeats every
+   memory (whole vectors or codewords lost; no arm reaches 99.5% at any f up to 4,096 cells); at 512 cells the VSA
+   reads 1 - f of its keys or slightly more (96.0 / 90.1 / 76.8 / 48.2%), 5-31 points more than the coded tables
+   (T-rep, E-BCH, E-LDPC, T-vhdd), whose contiguous codewords each lose several facts at once.
+   Exploratory (not registered): the ldpc package's belief propagation, the run's LDPC decoder, decodes far fewer words
+   than our own sum-product decoder when stuck cells make the channel inputs confidently wrong (lines-nat-k8 at 512
+   cells: 7 and 10 of about 100 codewords vs 86 and 94; at 54-64 cells 44-64 vs 47-66), while in the i.i.d. cells the
+   two agree on 602 of 604 words and decode the same ones. With our decoder, LDPC tables reach 99.5% at about 128
+   cells for lines/clusters at f = 4% (VSA 76), 512 at f = 10% (VSA 91), 1024-4096 at f = 25% (VSA 152) and never for
+   lines at f = 55% (VSA 512) (octave grid; results/b38_explore_ldpc_own.txt). The VSA WIN in H4 stands, with smaller
+   margins at f = 4% (about 3 grid steps instead of > 17).
+8. H6 (graceful degradation at equal cells, designs fixed for k8 at 128 cells per fact): the coded table degrades
+   later but abruptly - E-LDPC reads 100 / 99.4 / 98.4% at eps = 0.16 / 0.20 / 0.24 against V-last 98.7 / 94.8 / 84.0,
+   then 12.6% at 0.276 and 3.8% at 0.32 against 65.8% and 37.5% (VSA ahead by 57 and 40 points). T-vhdd degrades like
+   the VSA (70.4% at 0.276): the gradual failure belongs to similarity decoding of per-fact random codes, not to
+   superposition. Without an interleaver (lines, natural layout) the VSA is ahead at every eps (+13 to +43 points).
+9. H7 (under-provisioned memories, i.i.d.): below the best table's N* the VSA reads more keys at 37 of 49 budgets,
+   e.g. k16 at 128 cells 65.7% vs 12.6% (E-LDPC), k32 at 431 cells 66.9% vs 10.0%; long codewords fail together. But
+   these are inexact memories (well below 99.5%), and T-vhdd reads as many or more (70.4% at k16/128).
+
+Checks from other angles (results/b38_check_*): the device model re-read (16 cells: 10 stores x 8 families x k8, k16
+at 256 cells) agrees with the i.i.d. flips everywhere (largest |diff| 2.1 points, SE 1.8; no flag; measured flip
+rates 0.1225-0.1227 and 0.2758-0.2761). BCH: the galois library's codes have the same generator polynomials as ours
+(11 of 11 codes), the same encodings (26,771 of 26,771 codewords) and decode identically (26,771 of 26,771 words,
+including 6,239 beyond the design radius); the bounded-distance shortcut was correct for all 20,532 words it covered.
+LDPC: our numpy decoder and the ldpc package agree on 792 of 1,007 codewords overall - 602 of 604 in the six i.i.d.
+cells (same words decoded correctly), 190 of 403 in the four natural-layout cells, where ours decodes many more (above;
+results/b38_check_decoders_ldpc_percell.txt); the registered >= 99% agreement fails, in the direction that makes the
+LDPC tables look worse than they are. Closed form (results/b38_check_closed.json; 953 i.i.d. cells): the VSA reads
+agree with the Gaussian approximation in all 483 cells (V-pub, V-Snt, V-last; largest |diff| 1.73 points; 0 flagged);
+T-rep's exact binomial agrees in 159 of 161 (2 flagged at 11 cells per pair, small stores only, simulation 12-15 points
+below); E-BCH and E-CAM are flagged in 106 of 309 cells, every one with the simulation ABOVE the closed form (0 cells
+below it): the registered closed form counts a key as failed whenever one of its codewords fails, but an undecodable
+codeword returns its received bits and a key's 17 bits are often intact (E-CAM's rows match by hash even with a few
+wrong bits). Near the 99.5% point (287 cells with closed form >= 95% or simulation >= 99%) 3 are flagged, largest
+|diff| 2.6 points. The registered "at most 10 flagged cells" fails; the closed form is the lower bound it was
+registered as. Hand reading (results/b38_handread.txt): VSA failures at N* - 1 are keys whose true value's similarity
+(0.034-0.053) is beaten by a crosstalk winner (0.041-0.055), or whose LAST tag is misread so the read continues; in the
+natural layout the failing keys' shards had more damaged cells (0.13-0.23 vs 0.125 overall). E-BCH failures are keys
+with one codeword beyond 2t; E-LDPC below N* fails almost every codeword at once (99 of 101 not converged); T-vhdd and
+T-rep failures are keys whose value code or majority falls.
+
+Failed predictions: P7 (V-last at 512 cells under contiguous loss read 48.2% at f = 55%, 3.4 points above 1 - f
+instead of within 3; its other parts held), P9 (E-LDPC was ahead of the VSA by 4.6 points at eps = 0.20, not >= 5; the
+other three parts held), and two parts of P11: closed-form flags (108 > 10, all in the lower bound's direction) and
+LDPC decoder agreement (79% < 99%; 213 of the 215 disagreements in natural-layout cells); its other parts held (BCH 100%, device
+model 0 flags). 8 of 10 mechanical predictions held, P11 counted separately.
+
+Deviations and disclosures. (a) Gap fill: the registered extension rule (b38_design.py) extended windows whose top
+read below 99.5% or whose N* sat at the bottom; it missed N* values sitting above unevaluated budgets (e.g. E-BCH at
+lines-il-e05 reported 512 with 91-431 unevaluated). After the first test pass I added a gap-filling step (fill every
+budget between the highest failing budget below N* and N*), in the spirit of the registered "until bracketed", and
+ran it once (113 evaluations); the tables above include it, and it changed 8 N* values, all downward and all tables
+in damage conditions (E-BCH lines-il-e05 512 -> 91, lines-nat-k4 512 -> 181, lines-nat-e05 512 -> 431, clust-nat-k4
+512 -> 215; E-CAM lines-nat-k4 512 -> 304; T-vhdd clust-nat-k4 512 -> 91, clust-nat-e05 512 -> 128, clust-nat-k8
+512 -> 215); no bar label and no prediction outcome changed. (b) The exploratory own-decoder LDPC runs (point 7) are not registered.
+(c) The first full test pass checkpointed its results every 25 jobs, which slowed its tail; I/O only.
+
+Limits. One published PCM model, hard (sign) reads, single-level cells, 30-day errors; localized damage as stuck
+random signs with three geometries; stored cells only - decoder logic, the VSA's N_values x d similarity computation
+per query, interleaver wiring and read energy are not counted (an interleaved table touches cells all over the array
+for one fact; the VSA reads one contiguous vector). Every design knows the overall cell-error rate. The LDPC codes are
+our own IRA constructions at <= 1,024 information bits (high-rate codes of this length have error floors) and the
+run's decoder is weaker than ours under mismatched inputs, so the LDPC requirements are upper bounds; better codes
+would widen the table's lead. V-am's c (0.9) and V-cb's load (1-2) sit at the edge of their dev grids.
+
+What the paper can say (numbers from this file; shares of the 4,776 probed RULER keys; 30-day device statistics):
+- "Read at the smallest budget at which each memory is still exact (>= 99.5% of keys), with every stored bit on the
+  same simulated phase-change cells, tables protected by BCH or LDPC codes need 2-4x fewer cells per fact than the VSA
+  store at every noise level we tested: 19 vs 76 cells with no cell errors, 54 vs 128 at a 12% cell-error rate, 724 vs
+  1,722 at 37%. The VSA store's exactness at 16 pairs per 8,192-dimensional vector reflected 6.7-fold
+  over-provisioning."
+- "A table of random high-dimensional codes decoded by similarity, without superposition, also needs fewer cells than
+  the VSA store (1.4-2.4x); superposition costs storage. A VSA whose codebook is stored on the cells needs 7-27x more
+  cells than the coded table."
+- "Superposition does buy one property: because each fact is spread over a whole vector, the VSA store stored without an
+  interleaver tolerates dead word lines and stuck-cell clusters at the same cell count it needs for random errors,
+  while tables, whose codewords are local, need several times more cells or fail. An interleaver gives tables the same
+  property at no cost in cells."
+- "When a memory is under-provisioned or the error rate exceeds its design point, the VSA store loses facts gradually
+  (e.g. 66% of keys at 27.6% cell errors with 128 cells per fact, where an LDPC table designed for 12% reads 13%), a
+  property shared by tables of random codes decoded by similarity."
+- Method: an equal-cell comparison with BCH and LDPC baselines, "we found no precedent" (results/b38_literature.txt).
+
+What the paper must not say:
+- That the VSA store is more storage-efficient or more robust to device noise than an error-corrected table, at any
+  noise level (H1 TABLE WIN at every k); B34's "VSA beats every non-HD table at x16 / x32" holds against repetition only.
+- That VSA robustness to localized damage is an advantage over ECC in general: it holds only against tables stored
+  without an interleaver (H3 TABLE WIN with one; H5 TABLE WIN when damage locations are known), and contiguous loss
+  defeats the VSA store as much as any table.
+- That graceful degradation is specific to superposition (T-vhdd degrades as gracefully), or that it helps at the
+  99.5% exactness bar (it is a property of inexact memories).
+- That the comparison covers decoder logic, read energy or area (stored cells only), or multi-level cells / analog reads.
+- "First" (no precedent found).
+
+Compute: dev grid 7.0 CPU-h (incl. the E-BCH/E-CAM rerun and the V-cb loads 1-2), dev full run 10.8 CPU-h, test 35.7
+CPU-h (11,750 + 2,100 + 1,050 + 650 + 1,250 jobs: main pass, three extension passes, gap fill), exploratory own-decoder
+LDPC 3.0 CPU-h, checks about 15 CPU-h (closed form two identical runs, device model, decoders, hand reading), all on
+the A800 box's CPUs (up to 120 workers; no GPU); self-tests and the BCH codec check locally (about 1 CPU-h). No paid API.

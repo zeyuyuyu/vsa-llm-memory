@@ -1,0 +1,30 @@
+[
+ {
+  "arm": "floor",
+  "seed": 42,
+  "acc": 0.5,
+  "trainable": 5122,
+  "secs": 0.3
+ },
+ {
+  "arm": "parser",
+  "seed": 42,
+  "acc": 0.92,
+  "trainable": 2,
+  "secs": 4.0
+ },
+ {
+  "arm": "probe_argmax",
+  "seed": 42,
+  "acc": 0.9,
+  "trainable": 163906,
+  "secs": 19.8
+ },
+ {
+  "arm": "spans",
+  "seed": 42,
+  "acc": 0.4866666666666667,
+  "trainable": 5244930,
+  "secs": 17.6
+ }
+]

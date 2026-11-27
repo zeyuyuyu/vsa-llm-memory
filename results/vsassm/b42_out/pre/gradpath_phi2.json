@@ -1,0 +1,50 @@
+{
+ "A/hard": {
+  "query": 0.0,
+  "candidate": 1.0,
+  "hop1 keys (R)": 0.0,
+  "hop1 values (X)": 0.0,
+  "hop2 keys (X)": 0.0,
+  "hop2 values (Y)": 0.0625,
+  "hop3 keys (Y)": 1.0,
+  "hop3 values (F)": 1.0
+ },
+ "A/st": {
+  "query": 1.0,
+  "candidate": 1.0,
+  "hop1 keys (R)": 1.0,
+  "hop1 values (X)": 1.0,
+  "hop2 keys (X)": 1.0,
+  "hop2 values (Y)": 1.0,
+  "hop3 keys (Y)": 1.0,
+  "hop3 values (F)": 1.0
+ },
+ "B/hard": {
+  "query": 1.0,
+  "candidate": 1.0,
+  "hop1 keys (R)": 1.0,
+  "hop1 values (F)": 1.0
+ },
+ "B/st": {
+  "query": 1.0,
+  "candidate": 1.0,
+  "hop1 keys (R)": 1.0,
+  "hop1 values (F)": 1.0
+ },
+ "C/hard": {
+  "query": 0.0,
+  "candidate": 1.0,
+  "hop1 keys (R)": 0.0,
+  "hop1 values (F)": 0.0,
+  "hop2 keys (R)": 0.0,
+  "hop2 values (F)": 0.03125
+ },
+ "C/st": {
+  "query": 1.0,
+  "candidate": 1.0,
+  "hop1 keys (R)": 1.0,
+  "hop1 values (F)": 1.0,
+  "hop2 keys (R)": 1.0,
+  "hop2 values (F)": 1.0
+ }
+}

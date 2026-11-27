@@ -1,0 +1,38 @@
+{
+ "qwen8L27_C_bind perm/named": {
+  "acc_main_vs_dictionary_labels": 0.49133333333333334
+ },
+ "qwen8L27_C_bind perm/named+pc": {
+  "acc_main_vs_dictionary_labels": 0.49066666666666664
+ },
+ "qwen8L27_C_bind perm/named+pz": {
+  "acc_main_vs_dictionary_labels": 0.5086666666666667
+ },
+ "qwen8L27_C_cw perm/named": {
+  "acc_main_vs_dictionary_labels": 0.5053333333333333
+ },
+ "qwen8L27_C_dkvb perm/named": {
+  "acc_main_vs_dictionary_labels": 0.48533333333333334,
+  "acc_indep_chain": 0.48533333333333334,
+  "agreement": 1.0,
+  "max_abs_score_diff": 1.0000000000287557e-06
+ },
+ "qwen8L27_C_gumbel perm/named": {
+  "acc_main_vs_dictionary_labels": 0.516,
+  "acc_indep_chain": 0.516,
+  "agreement": 1.0,
+  "max_abs_score_diff": 0.0
+ },
+ "qwen8L27_C_st perm/named": {
+  "acc_main_vs_dictionary_labels": 0.45733333333333337,
+  "acc_indep_chain": 0.45733333333333337,
+  "agreement": 1.0,
+  "max_abs_score_diff": 0.0
+ },
+ "qwen8L27_C_vq perm/named": {
+  "acc_main_vs_dictionary_labels": 0.48133333333333334,
+  "acc_indep_chain": 0.48133333333333334,
+  "agreement": 1.0,
+  "max_abs_score_diff": 1.0000000000287557e-06
+ }
+}

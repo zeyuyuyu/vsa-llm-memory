@@ -1,0 +1,13 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 79.15it/s]
+llama31i: /path/to/work/b40/llama31_8b_instruct; layers 32, hidden 4096; tokenizer (AutoTokenizer) adds BOS: True; pad 128009
+0 21166 0s
+3200 21166 15s
+6400 21166 30s
+9600 21166 44s
+12800 21166 58s
+16000 21166 72s
+19200 21166 87s
+done {"tag": "llama31i", "path": "/path/to/work/b40/llama31_8b_instruct", "tokenizer_loader": "AutoTokenizer", "layers": [24], "num_hidden_layers": 32, "adds_bos": true, "pad": 128009, "name_tokens_mean": 5.013228763110649, "example": "Bud! The Amazing Bud Powell (Vol. 3)", "example_tokens": ["<|begin_of_text|>", "Name", ":", "ĠBud", "!", "ĠThe", "ĠAmazing", "ĠBud", "ĠPowell", "Ġ(", "Vol", ".", "Ġ", "3", ")"], "seconds": 96.3}
+b32_data/emb_llama31i_mean_L24_f16.npy (21166, 4096)
+8ccc3e6efaa2e1858b9a1f12ebaaa6c7  b32_data/emb_llama31i_mean_L24_f16.npy
+EMBED_DONE llama rc=0

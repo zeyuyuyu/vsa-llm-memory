@@ -1,0 +1,62 @@
+# B66 part C: matched (72-configuration) tuning grids. R1 test accuracy (points; mean over the 12 R1 cells of
+# the cell accuracy), ideal accounting, 4 language models. full = the registered full-grid dev choice; draws =
+# 20 random 72-configuration sub-grids per family, each family's own dev rule within the draw.
+# Columns of the draw distribution: min, 25%, median, 75%, max, mean. STORE has 72 configurations, so every
+# draw is its full grid. KF6 = best of B36's six key-free families; BEST7 = KF6 + SDMT.
+
+## Families: R1 test accuracy
+| encoder | family | full grid | draws: min 25% median 75% max mean |
+| --- | --- | --- | --- |
+| Qwen3-8B | STORE |  48.81 |  48.81  48.81  48.81  48.81  48.81  48.81 (n=20) |
+| Qwen3-8B | LAMC |  52.87 |  50.97  51.48  51.83  52.60  52.90  51.98 (n=20) |
+| Qwen3-8B | SDMT |  47.30 |  42.24  44.24  45.29  45.88  47.28  45.01 (n=20) |
+| Qwen3-8B | KF6 |  38.63 | no complete draw |
+| Qwen3-8B | BEST7 |  47.56 |  42.99  45.03  45.44  45.90  47.28  45.33 (n=11) |
+| Granite-3.3-8B | STORE |  47.54 |  47.54  47.54  47.54  47.54  47.54  47.54 (n=20) |
+| Granite-3.3-8B | LAMC |  53.09 |  50.07  51.85  52.41  52.87  53.49  52.19 (n=20) |
+| Granite-3.3-8B | SDMT |  47.76 |  43.48  44.54  45.84  46.30  47.98  45.71 (n=20) |
+| Granite-3.3-8B | KF6 |  39.45 | no complete draw |
+| Granite-3.3-8B | BEST7 |  47.76 |  43.48  44.54  45.92  46.51  47.98  45.79 (n=20) |
+| Llama-3.1-8B | STORE |  48.99 |  48.99  48.99  48.99  48.99  48.99  48.99 (n=20) |
+| Llama-3.1-8B | LAMC |  54.55 |  50.47  52.52  53.22  53.34  54.33  52.96 (n=20) |
+| Llama-3.1-8B | SDMT |  48.08 |  43.93  45.90  46.63  47.16  47.82  46.29 (n=20) |
+| Llama-3.1-8B | KF6 |  39.79 | no complete draw |
+| Llama-3.1-8B | BEST7 |  48.08 |  44.39  46.04  46.65  47.17  47.82  46.44 (n=19) |
+| Mistral-7B | STORE |  51.29 |  51.29  51.29  51.29  51.29  51.29  51.29 (n=20) |
+| Mistral-7B | LAMC |  56.53 |  54.21  54.87  55.74  56.50  57.11  55.62 (n=20) |
+| Mistral-7B | SDMT |  52.31 |  46.38  49.69  50.81  51.41  52.10  50.28 (n=20) |
+| Mistral-7B | KF6 |  41.65 | no complete draw |
+| Mistral-7B | BEST7 |  52.31 |  46.02  49.97  50.86  51.52  51.77  50.28 (n=14) |
+
+## Contrasts with the competitor at a 72-configuration grid (store arm at its registered grid)
+| encoder | contrast | full grid | draws: min 25% median 75% max mean | draws with the full grid's sign |
+| --- | --- | --- | --- | --- |
+| Qwen3-8B | STORE-LAMC72 |  -4.06 |  -4.09  -3.79  -3.01  -2.66  -2.15  -3.17 (n=20) | 20 of 20 |
+| Qwen3-8B | VSAR-SDMT72 |  -1.89 |  -1.87  -0.47   0.11   1.17   3.17   0.40 (n=20) | 10 of 20 |
+| Qwen3-8B | VSA-SDMT72 |  +1.51 |   1.53   2.94   3.52   4.57   6.57   3.80 (n=20) | 20 of 20 |
+| Qwen3-8B | VSAR-BEST7_72 |  -2.15 |  -1.87  -0.50  -0.03   0.38   2.42   0.08 (n=11) | 6 of 11 |
+| Qwen3-8B | VSA-BEST7_72 |  +1.25 |   1.53   2.91   3.38   3.78   5.83   3.49 (n=11) | 11 of 11 |
+| Granite-3.3-8B | STORE-LAMC72 |  -5.55 |  -5.95  -5.33  -4.87  -4.31  -2.53  -4.65 (n=20) | 20 of 20 |
+| Granite-3.3-8B | VSAR-SDMT72 |  -2.25 |  -2.48  -0.79  -0.33   0.97   2.03  -0.20 (n=20) | 12 of 20 |
+| Granite-3.3-8B | VSA-SDMT72 |  -0.22 |  -0.44   1.24   1.70   3.00   4.06   1.83 (n=20) | 2 of 20 |
+| Granite-3.3-8B | VSAR-BEST7_72 |  -2.25 |  -2.48  -1.00  -0.41   0.97   2.03  -0.28 (n=20) | 13 of 20 |
+| Granite-3.3-8B | VSA-BEST7_72 |  -0.22 |  -0.44   1.03   1.62   3.00   4.06   1.75 (n=20) | 2 of 20 |
+| Llama-3.1-8B | STORE-LAMC72 |  -5.56 |  -5.34  -4.35  -4.23  -3.53  -1.48  -3.97 (n=20) | 20 of 20 |
+| Llama-3.1-8B | VSAR-SDMT72 |  -1.20 |  -0.94  -0.28   0.25   0.98   2.95   0.59 (n=20) | 7 of 20 |
+| Llama-3.1-8B | VSA-SDMT72 |  +0.91 |   1.17   1.83   2.36   3.09   5.06   2.70 (n=20) | 20 of 20 |
+| Llama-3.1-8B | VSAR-BEST7_72 |  -1.20 |  -0.94  -0.29   0.24   0.84   2.49   0.44 (n=19) | 7 of 19 |
+| Llama-3.1-8B | VSA-BEST7_72 |  +0.91 |   1.17   1.82   2.34   2.95   4.60   2.55 (n=19) | 19 of 19 |
+| Mistral-7B | STORE-LAMC72 |  -5.23 |  -5.82  -5.21  -4.44  -3.57  -2.91  -4.33 (n=20) | 20 of 20 |
+| Mistral-7B | VSAR-SDMT72 |  -3.56 |  -3.35  -2.66  -2.06  -0.94   2.37  -1.53 (n=20) | 16 of 20 |
+| Mistral-7B | VSA-SDMT72 |  -1.02 |  -0.80  -0.12   0.48   1.60   4.91   1.01 (n=20) | 6 of 20 |
+| Mistral-7B | VSAR-BEST7_72 |  -3.56 |  -3.02  -2.77  -2.11  -1.22   2.73  -1.53 (n=14) | 11 of 14 |
+| Mistral-7B | VSA-BEST7_72 |  -1.02 |  -0.48  -0.23   0.44   1.32   5.27   1.01 (n=14) | 5 of 14 |
+
+## BEST7_72: number of R1 cells (of 12) in which the draw's BEST rule picks SDMT, per draw
+  Qwen3-8B: [11, 12, 12, 11, 12, 10, 11, 12, 11, 11, 12, 11, 12, 12, 10, 12, 12, 11, 10, 11]
+  Granite-3.3-8B: [12, 12, 12, 11, 12, 12, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 11]
+  Llama-3.1-8B: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 11, 11]
+  Mistral-7B: [12, 9, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 11, 12, 10, 12, 12, 12, 8, 11]
+
+Draws whose region value is missing (a needed test job not run, e.g. a registered cut) are left out; n
+gives the number of complete draws.

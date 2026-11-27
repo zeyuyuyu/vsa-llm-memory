@@ -1,0 +1,121 @@
+phi2 arena C, family dkvb (selected dev 0.560, config {"cleanup": "st", "mult": 4, "heads": 8, "lr": 0.001}), seed 42 epoch 7: wrong on 253 of 500
+
+#0 label 0, chain 53 -> 16 -> 3, candidate 44; memory says 1 (score 0.324, threshold 0.069)
+  text: [R0D]{57} [R15]{30} [R3F]{28} [R20]{21} [R22]{56} [R24]{61} [R1B]{12} [R23]{10} [R0C]{48} [R29]{35} [R0A]{61} [R2B]{15} [R31]{48} [R03]{60} [R1D]{57} [R1A]{32} [R33]{41} [R1C]{31} [R36]{1} [R17]{63} [R00]{40} [R37]{59} [R35]{16} [R2C]{62} [R30]{10} [R14]{19} [R10]{18} [R07]{35} [R2D]{50} [R3C]{15} [ ...
+  hop 1 winner symbol 60 (WRONG), hop 2 winner symbol 36 (WRONG)
+    query (hex)                        '35'     code (165, 102, 220, 151, 150, 249, 39, 127)
+    level-0 role (hex)                 '35'     code (208, 220, 39, 151, 208, 43, 208, 127)
+    level-0 filler (decimal)           '16'     code (74, 63, 130, 109, 48, 254, 231, 54)
+    level-1 role, same symbol (hex)    '10'     code (25, 209, 140, 165, 148, 4, 85, 205)
+    level-1 filler (decimal)           '3'      code (96, 162, 106, 74, 209, 83, 56, 19)
+    candidate (decimal)                '44'     code (189, 65, 186, 171, 174, 136, 80, 219)
+
+#2 label 1, chain 52 -> 30 -> 26, candidate 26; memory says 0 (score -0.226, threshold 0.069)
+  text: [R2E]{0} [R2A]{62} [R18]{47} [R05]{34} [R0E]{32} [R0A]{60} [R06]{51} [R00]{1} [R38]{49} [R34]{30} [R32]{4} [R0F]{2} [R1E]{13} [R20]{20} [R1C]{14} [R16]{5} [R24]{52} [R07]{19} [R39]{43} [R02]{37} [R12]{34} [R0D]{2} [R11]{43} [R15]{56} [R3D]{42} [R0C]{13} [R09]{62} [R3A]{32} [R2B]{54} [R22]{15} [R35]{ ...
+  hop 1 winner symbol 20 (WRONG), hop 2 winner symbol 8 (WRONG)
+    query (hex)                        '34'     code (221, 102, 205, 11, 152, 19, 106, 18)
+    level-0 role (hex)                 '34'     code (221, 121, 205, 11, 152, 19, 106, 150)
+    level-0 filler (decimal)           '30'     code (195, 108, 213, 158, 218, 69, 100, 116)
+    level-1 role, same symbol (hex)    '1E'     code (120, 87, 218, 137, 206, 65, 12, 204)
+    level-1 filler (decimal)           '26'     code (47, 119, 66, 121, 46, 26, 197, 143)
+    candidate (decimal)                '26'     code (140, 197, 79, 171, 174, 198, 241, 250)
+
+#9 label 0, chain 55 -> 4 -> 10, candidate 19; memory says 1 (score 0.280, threshold 0.069)
+  text: [R37]{4} [R3F]{28} [R25]{62} [R19]{42} [R0B]{12} [R07]{17} [R11]{52} [R00]{4} [R2C]{63} [R09]{13} [R34]{43} [R27]{62} [R2F]{42} [R16]{7} [R17]{37} [R3A]{41} [R2E]{50} [R2A]{4} [R28]{49} [R23]{18} [R30]{24} [R14]{33} [R32]{1} [R0C]{12} [R05]{9} [R3C]{61} [R29]{34} [R06]{44} [R1F]{16} [R2B]{9} [R20]{6 ...
+  hop 1 winner symbol 44 (WRONG), hop 2 winner symbol 36 (WRONG)
+    query (hex)                        '37'     code (130, 213, 111, 96, 233, 249, 39, 146)
+    level-0 role (hex)                 '37'     code (90, 193, 137, 251, 140, 216, 150, 51)
+    level-0 filler (decimal)           '4'      code (204, 221, 197, 192, 119, 1, 22, 32)
+    level-1 role, same symbol (hex)    '04'     code (153, 49, 105, 56, 81, 250, 90, 248)
+    level-1 filler (decimal)           '10'     code (58, 32, 51, 153, 214, 99, 68, 215)
+    candidate (decimal)                '19'     code (189, 80, 23, 182, 55, 198, 172, 250)
+
+#10 label 1, chain 2 -> 32 -> 5, candidate 5; memory says 0 (score -0.012, threshold 0.069)
+  text: [R10]{59} [R30]{56} [R28]{32} [R22]{45} [R3A]{37} [R39]{11} [R03]{53} [R0C]{6} [R02]{32} [R08]{1} [R09]{22} [R37]{45} [R27]{12} [R0D]{53} [R17]{4} [R1A]{17} [R1E]{0} [R00]{63} [R29]{60} [R36]{8} [R24]{2} [R1D]{46} [R13]{44} [R3C]{63} [R0B]{3} [R05]{46} [R31]{22} [R35]{59} [R0E]{14} [R19]{32} [R16]{2 ...
+  hop 1 winner symbol 6 (WRONG), hop 2 winner symbol 42 (WRONG)
+    query (hex)                        '02'     code (226, 102, 17, 201, 95, 190, 169, 186)
+    level-0 role (hex)                 '02'     code (226, 181, 55, 201, 167, 190, 169, 196)
+    level-0 filler (decimal)           '32'     code (60, 139, 136, 111, 4, 35, 206, 249)
+    level-1 role, same symbol (hex)    '20'     code (26, 89, 12, 44, 56, 135, 180, 87)
+    level-1 filler (decimal)           '5'      code (87, 151, 183, 81, 170, 132, 140, 133)
+    candidate (decimal)                '5'      code (0, 75, 43, 30, 169, 150, 93, 29)
+
+#16 label 1, chain 36 -> 6 -> 11, candidate 11; memory says 0 (score -0.076, threshold 0.069)
+  text: [R2C]{52} [R00]{16} [R07]{57} [R12]{61} [R1E]{15} [R2E]{4} [R20]{46} [R11]{32} [R1F]{6} [R3B]{18} [R2D]{26} [R35]{37} [R36]{49} [R09]{15} [R0B]{63} [R19]{8} [R23]{12} [R1B]{44} [R3C]{36} [R17]{37} [R2F]{30} [R13]{9} [R28]{3} [R10]{41} [R02]{60} [R3A]{61} [R08]{50} [R34]{46} [R14]{15} [R03]{30} [R0F] ...
+  hop 1 winner symbol 51 (WRONG), hop 2 winner symbol 63 (WRONG)
+    query (hex)                        '24'     code (165, 102, 111, 151, 67, 249, 39, 43)
+    level-0 role (hex)                 '24'     code (200, 178, 202, 164, 83, 121, 124, 227)
+    level-0 filler (decimal)           '6'      code (122, 233, 20, 150, 72, 165, 48, 211)
+    level-1 role, same symbol (hex)    '06'     code (51, 116, 152, 23, 15, 33, 145, 5)
+    level-1 filler (decimal)           '11'     code (99, 210, 230, 248, 192, 206, 132, 222)
+    candidate (decimal)                '11'     code (189, 154, 79, 117, 55, 150, 241, 251)
+
+#18 label 1, chain 1 -> 57 -> 16, candidate 16; memory says 0 (score 0.045, threshold 0.069)
+  text: [R15]{54} [R37]{31} [R3C]{41} [R34]{61} [R19]{26} [R01]{57} [R3F]{53} [R1B]{13} [R23]{24} [R2C]{30} [R3D]{22} [R1C]{52} [R02]{42} [R35]{12} [R39]{31} [R0F]{40} [R0A]{18} [R30]{50} [R1D]{29} [R0D]{41} [R04]{24} [R26]{29} [R09]{5} [R2D]{28} [R25]{36} [R33]{10} [R29]{58} [R3B]{25} [R21]{34} [R2A]{7} [R ...
+  hop 1 winner symbol 31 (WRONG), hop 2 winner symbol 23 (WRONG)
+    query (hex)                        '01'     code (165, 90, 239, 201, 247, 34, 73, 186)
+    level-0 role (hex)                 '01'     code (36, 90, 143, 148, 247, 34, 73, 236)
+    level-0 filler (decimal)           '57'     code (167, 100, 50, 185, 202, 62, 239, 176)
+    level-1 role, same symbol (hex)    '39'     code (110, 34, 254, 2, 245, 57, 248, 145)
+    level-1 filler (decimal)           '16'     code (74, 97, 130, 138, 222, 238, 226, 54)
+    candidate (decimal)                '16'     code (189, 154, 79, 109, 55, 198, 241, 250)
+
+#19 label 0, chain 6 -> 17 -> 34, candidate 62; memory says 1 (score 0.491, threshold 0.069)
+  text: [R37]{45} [R15]{4} [R06]{17} [R22]{46} [R17]{51} [R3D]{15} [R3A]{1} [R31]{27} [R26]{16} [R1B]{14} [R0E]{3} [R18]{28} [R04]{20} [R2E]{61} [R00]{20} [R0F]{0} [R0D]{34} [R08]{12} [R1A]{61} [R01]{27} [R0B]{39} [R1F]{41} [R02]{20} [R03]{7} [R23]{40} [R38]{46} [R35]{46} [R13]{15} [R32]{46} [R36]{48} [R20] ...
+  hop 1 winner symbol 14 (WRONG), hop 2 winner symbol 25 (WRONG)
+    query (hex)                        '06'     code (225, 61, 228, 71, 196, 63, 225, 161)
+    level-0 role (hex)                 '06'     code (127, 61, 228, 71, 196, 184, 225, 218)
+    level-0 filler (decimal)           '17'     code (192, 137, 222, 59, 173, 177, 81, 149)
+    level-1 role, same symbol (hex)    '11'     code (182, 1, 19, 167, 100, 168, 174, 36)
+    level-1 filler (decimal)           '34'     code (29, 249, 236, 91, 123, 231, 209, 85)
+    candidate (decimal)                '62'     code (140, 65, 186, 48, 224, 81, 241, 219)
+
+#24 label 1, chain 61 -> 50 -> 1, candidate 1; memory says 0 (score -0.358, threshold 0.069)
+  text: [R00]{44} [R32]{20} [R17]{49} [R2A]{19} [R3C]{62} [R1B]{19} [R3B]{60} [R03]{37} [R1A]{12} [R25]{25} [R38]{63} [R16]{31} [R2D]{44} [R29]{26} [R2C]{42} [R1C]{2} [R01]{31} [R0A]{5} [R02]{42} [R0E]{41} [R12]{45} [R07]{55} [R2F]{48} [R39]{32} [R3D]{50} [R0F]{50} [R27]{32} [R31]{37} [R3F]{28} [R34]{25} [R ...
+  hop 1 winner symbol 63 (WRONG), hop 2 winner symbol 42 (WRONG)
+    query (hex)                        '3D'     code (168, 88, 73, 6, 37, 176, 219, 76)
+    level-0 role (hex)                 '3D'     code (168, 68, 142, 175, 144, 197, 219, 76)
+    level-0 filler (decimal)           '50'     code (148, 170, 87, 42, 58, 219, 33, 238)
+    level-1 role, same symbol (hex)    '32'     code (91, 245, 187, 17, 150, 20, 7, 66)
+    level-1 filler (decimal)           '1'      code (169, 81, 74, 61, 6, 248, 70, 192)
+    candidate (decimal)                '1'      code (0, 96, 43, 61, 6, 248, 93, 29)
+
+#25 label 0, chain 0 -> 53 -> 14, candidate 38; memory says 1 (score 0.268, threshold 0.069)
+  text: [R32]{4} [R3E]{2} [R3F]{40} [R16]{40} [R1A]{29} [R19]{22} [R30]{30} [R15]{37} [R3C]{43} [R11]{6} [R00]{53} [R0C]{46} [R3D]{41} [R3A]{42} [R09]{0} [R04]{59} [R0B]{13} [R1E]{57} [R29]{48} [R1D]{21} [R2E]{16} [R20]{12} [R12]{38} [R08]{51} [R14]{29} [R1F]{57} [R38]{8} [R10]{9} [R17]{19} [R02]{39} [R36]{ ...
+  hop 1 winner symbol 53 (right), hop 2 winner symbol 40 (WRONG)
+    query (hex)                        '00'     code (225, 215, 149, 243, 52, 96, 191, 7)
+    level-0 role (hex)                 '00'     code (2, 40, 149, 243, 52, 34, 191, 206)
+    level-0 filler (decimal)           '53'     code (95, 42, 50, 244, 58, 153, 253, 220)
+    level-1 role, same symbol (hex)    '35'     code (39, 38, 39, 252, 246, 43, 75, 89)
+    level-1 filler (decimal)           '14'     code (89, 225, 167, 188, 14, 209, 50, 199)
+    candidate (decimal)                '38'     code (189, 51, 41, 171, 174, 198, 80, 250)
+
+#27 label 0, chain 58 -> 17 -> 52, candidate 62; memory says 1 (score 0.401, threshold 0.069)
+  text: [R17]{1} [R0F]{20} [R1E]{0} [R0A]{42} [R21]{24} [R28]{4} [R2F]{26} [R03]{18} [R2A]{33} [R23]{46} [R3A]{17} [R06]{42} [R02]{23} [R3C]{25} [R37]{24} [R1F]{51} [R2C]{26} [R09]{8} [R0C]{19} [R11]{14} [R18]{25} [R04]{42} [R13]{8} [R20]{57} [R07]{37} [R14]{19} [R3F]{37} [R1A]{15} [R19]{27} [R2B]{0} [R16]{ ...
+  hop 1 winner symbol 23 (WRONG), hop 2 winner symbol 37 (WRONG)
+    query (hex)                        '3A'     code (121, 166, 147, 6, 39, 32, 196, 164)
+    level-0 role (hex)                 '3A'     code (121, 191, 147, 21, 39, 234, 159, 141)
+    level-0 filler (decimal)           '17'     code (5, 252, 219, 139, 175, 156, 91, 217)
+    level-1 role, same symbol (hex)    '11'     code (182, 1, 19, 167, 100, 109, 174, 36)
+    level-1 filler (decimal)           '52'     code (142, 141, 103, 194, 157, 218, 118, 68)
+    candidate (decimal)                '62'     code (219, 243, 176, 48, 224, 81, 241, 219)
+
+#29 label 0, chain 32 -> 19 -> 52, candidate 11; memory says 1 (score 0.172, threshold 0.069)
+  text: [R1E]{36} [R15]{22} [R16]{1} [R0B]{32} [R3B]{17} [R01]{57} [R2D]{19} [R2C]{1} [R2A]{13} [R27]{44} [R35]{57} [R19]{48} [R32]{60} [R2B]{35} [R25]{31} [R0E]{60} [R3A]{36} [R3D]{26} [R37]{56} [R1A]{34} [R24]{38} [R14]{63} [R0F]{27} [R1B]{1} [R36]{63} [R2F]{4} [R26]{17} [R20]{19} [R3F]{27} [R1C]{36} [R33 ...
+  hop 1 winner symbol 63 (WRONG), hop 2 winner symbol 52 (right)
+    query (hex)                        '20'     code (41, 102, 111, 6, 150, 247, 153, 96)
+    level-0 role (hex)                 '20'     code (26, 195, 210, 44, 12, 215, 5, 96)
+    level-0 filler (decimal)           '19'     code (236, 80, 0, 103, 198, 90, 194, 26)
+    level-1 role, same symbol (hex)    '13'     code (184, 77, 91, 242, 134, 106, 183, 38)
+    level-1 filler (decimal)           '52'     code (142, 141, 103, 194, 157, 218, 118, 68)
+    candidate (decimal)                '11'     code (189, 154, 79, 117, 55, 150, 172, 250)
+
+#31 label 1, chain 53 -> 34 -> 30, candidate 30; memory says 0 (score -0.083, threshold 0.069)
+  text: [R1E]{48} [R06]{36} [R30]{26} [R08]{47} [R15]{17} [R3E]{11} [R2D]{1} [R0E]{57} [R38]{10} [R05]{29} [R09]{54} [R22]{45} [R21]{1} [R37]{46} [R2A]{61} [R0C]{10} [R35]{34} [R3B]{45} [R20]{11} [R03]{53} [R29]{63} [R2E]{54} [R0A]{30} [R10]{55} [R16]{31} [R3C]{57} [R00]{51} [R23]{0} [R3D]{2} [R0F]{16} [R12 ...
+  hop 1 winner symbol 63 (WRONG), hop 2 winner symbol 38 (WRONG)
+    query (hex)                        '35'     code (165, 102, 220, 151, 150, 249, 39, 127)
+    level-0 role (hex)                 '35'     code (208, 220, 39, 151, 208, 43, 208, 127)
+    level-0 filler (decimal)           '34'     code (29, 249, 76, 144, 68, 122, 176, 102)
+    level-1 role, same symbol (hex)    '22'     code (20, 4, 160, 145, 155, 37, 227, 1)
+    level-1 filler (decimal)           '30'     code (190, 108, 213, 158, 42, 69, 162, 138)
+    candidate (decimal)                '30'     code (189, 197, 79, 117, 174, 198, 241, 250)

@@ -1,0 +1,56 @@
+{
+ "args": {
+  "cmd": "train",
+  "pos": "last",
+  "arm": "vsapub",
+  "split": "train",
+  "layers": "20",
+  "layer": 20,
+  "bs": 16,
+  "epochs": "100,300,1000",
+  "lr": 0.001,
+  "seed": 0,
+  "steps": 1000,
+  "eval_every": 250,
+  "reader": "out/rd/last_vsa_lr1e-3_s0/e1000",
+  "ckpt": "",
+  "out": "out/dev/last_vsapub_lr1e-3_s0",
+  "pred": "",
+  "limit": 0,
+  "dec_init": "recon",
+  "recon_epochs": 100,
+  "dev_split": "dev",
+  "dev_limit": 0,
+  "train_split": "train",
+  "train_limit": 0
+ },
+ "trainable_params": 8388608,
+ "hist": [
+  {
+   "step": 0,
+   "dev": 0.1725
+  },
+  {
+   "step": 250,
+   "dev": 0.91125,
+   "loss": 0.07243773341178894
+  },
+  {
+   "step": 500,
+   "dev": 0.90625,
+   "loss": 0.013786896131932735
+  },
+  {
+   "step": 750,
+   "dev": 0.9125,
+   "loss": 0.008050915785133839
+  },
+  {
+   "step": 1000,
+   "dev": 0.9075,
+   "loss": 0.016748741269111633
+  }
+ ],
+ "best_dev": 0.9125,
+ "best_step": 750
+}

@@ -1,0 +1,37 @@
+{
+ "config": {
+  "arm": "tfull",
+  "B": 4,
+  "seed": 0,
+  "steps": 0,
+  "bs": 32,
+  "lr": 0.0002,
+  "lora_r": 0,
+  "codes": "rand",
+  "proj": "mlp",
+  "lmt_layers": 2,
+  "eval_splits": "dev",
+  "eval_every": 0,
+  "eval_sub": 100,
+  "tok_budget": 24000,
+  "device": "cuda",
+  "qfirst": 0,
+  "mem_lr": 0,
+  "out": "out/dev_tfull_zeroshot"
+ },
+ "n_trainable_lm": 0,
+ "n_trainable_mem": 0,
+ "emb_rms": 0.03449790179729462,
+ "curve": [],
+ "train_seconds": 3.0994415283203125e-06,
+ "dev": {
+  "N8_hop1": 0.08,
+  "N8_hop2": 0.006666666666666667,
+  "N32_hop1": 0.12,
+  "N32_hop2": 0.0,
+  "N128_hop1": 0.013333333333333334,
+  "N128_hop2": 0.0
+ },
+ "dev_seconds": 133.8081090450287,
+ "total_seconds": 137.60638809204102
+}

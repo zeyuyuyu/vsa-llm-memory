@@ -1,0 +1,54 @@
+# B49 hand reading, mistral: R1 cells with the largest and the smallest VSA - BEST (ideal)
+
+## cell M=1024 V=16 bpf=4: VSA 19.6, BEST LAM 16.6, diff +2.99, EXACT 78.7
+  only VSA right: 661 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Cote Ivoire'                            | 'Ivory Coast'                            | 'Ivory Coast'                            | +0.709 | True
+    'the rebellious States'                  | 'Confederate States of America'          | 'Confederate States of America'          | +0.723 | True
+    'U.S. Highway 7'                         | 'U.S. Route 7'                           | 'U.S. Route 7'                           | +0.965 | True
+    'Night Has Eyes'                         | 'The Night Has Eyes'                     | 'The Night Has Eyes'                     | +0.958 | True
+    'Hieronymus I Francken'                  | 'Hieronymous Francken I'                 | 'Hieronymous Francken I'                 | +0.899 | True
+    'Cola'                                   | 'Columbia'                               | 'Columbia'                               | +0.419 | True
+    'Lady Di'                                | 'Diana, Princess of Wales'               | 'Diana, Princess of Wales'               | +0.670 | True
+    'Bulgarian Kingdom'                      | 'Kingdom of Bulgaria'                    | 'Kingdom of Bulgaria'                    | +0.837 | True
+    'Hieronymus d. Ä. Francken'              | 'Hieronymous Francken I'                 | 'Hieronymous Francken I'                 | +0.844 | True
+    'Alexandros A. Mátsas'                   | 'Alexandros Matsas'                      | 'Alexandros Matsas'                      | +0.918 | True
+    mean centred cosine over all 661: +0.657; EXACT right in 0.88
+  only BEST right: 531 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Camiones (relato corto)'                | 'Trucks'                                 | 'Trucks'                                 | +0.277 | True
+    'Pope Alexander I'                       | 'Alexander I'                            | 'Alexander I'                            | +0.752 | True
+    'Jiri Vycichlo'                          | 'Jiří Vyčichlo'                          | 'Jiří Vyčichlo'                          | +0.887 | True
+    'Communist Germany'                      | 'German Democratic Republic'             | 'German Democratic Republic'             | +0.683 | True
+    'Bilal ibn Rabah al-Habashi'             | 'Bilal ibn Ribah'                        | 'Bilal ibn Ribah'                        | +0.865 | True
+    'Angela Yuka Maxwell'                    | 'Angela Maxwell'                         | 'Angela Maxwell'                         | +0.772 | True
+    'Eglon, West Virginia'                   | 'Eglon'                                  | 'Eglon'                                  | +0.653 | True
+    'Palmes de M. Schutz'                    | 'Les Palmes de M. Schutz'                | 'Les Palmes de M. Schutz'                | +0.846 | True
+    'Kathleen Annie Pannonica Rothschild'    | 'Pannonica de Koenigswarter'             | 'Pannonica de Koenigswarter'             | +0.684 | True
+    'Juan Landazuri Rickets'                 | 'Juan Landázuri Ricketts'                | 'Juan Landázuri Ricketts'                | +0.826 | True
+    mean centred cosine over all 531: +0.655; EXACT right in 0.91
+
+## cell M=256 V=16 bpf=16: VSA 42.2, BEST LHI 55.8, diff -13.51, EXACT 85.0
+  only VSA right: 590 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Next Generation'                        | 'Star Trek: The Next Generation'         | 'Star Trek: The Next Generation'         | +0.478 | True
+    'Dschelaladdin Rumi'                     | 'Rumi'                                   | 'Rumi'                                   | +0.789 | True
+    'Little Busters! Converted Edition'      | 'Little Busters!'                        | 'Little Busters!'                        | +0.376 | True
+    'Heat'                                   | 'The Heat'                               | 'The Heat'                               | +0.746 | True
+    'YEM'                                    | 'Yemen'                                  | 'Yemen'                                  | +0.489 | True
+    'Mowlavi'                                | 'Rumi'                                   | 'Rumi'                                   | +0.456 | True
+    'Haitian Republic'                       | 'Haiti'                                  | 'Haiti'                                  | +0.367 | True
+    'Mushroom'                               | 'The Mushroom'                           | 'The Mushroom'                           | +0.774 | True
+    'Tathagat'                               | 'Gautama Buddha'                         | 'Gautama Buddha'                         | +0.602 | True
+    'Mevlâna'                                | 'Rumi'                                   | 'Rumi'                                   | +0.545 | True
+    mean centred cosine over all 590: +0.604; EXACT right in 0.93
+  only BEST right: 1227 queries; 10 drawn at random (alias | label | EXACT's label | centred cosine alias-label | EXACT right)
+    'Hibernia'                               | 'Ireland'                                | 'Ireland'                                | +0.520 | True
+    'Florence province'                      | 'Province of Florence'                   | 'Province of Florence'                   | +0.869 | True
+    'McKendree R. Long'                      | 'McKendree Long'                         | 'McKendree Long'                         | +0.904 | True
+    'Tours, Centre Region'                   | 'Tours'                                  | 'Tours'                                  | +0.256 | True
+    'CDMX'                                   | 'Mexico City'                            | 'Mexico City'                            | +0.538 | True
+    'ayu'                                    | 'Ayumi Hamasaki'                         | 'Ayumi Hamasaki'                         | +0.422 | True
+    'Linfield College'                       | 'Linfield University'                    | 'Linfield University'                    | +0.988 | True
+    'Marcello Cervini'                       | 'Marcellus II'                           | 'Marcellus II'                           | +0.465 | True
+    'Robert James Lukachyk'                  | 'Rob Lukachyk'                           | 'Rob Lukachyk'                           | +0.824 | True
+    'Tunisian Republic'                      | 'Tunisia'                                | 'Tunisia'                                | +0.324 | True
+    mean centred cosine over all 1227: +0.588; EXACT right in 0.92
+

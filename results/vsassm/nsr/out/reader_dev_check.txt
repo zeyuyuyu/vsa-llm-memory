@@ -1,0 +1,9 @@
+NSR1 reader reproduction check (2026-11-07), prereg/NSR1_prereg.md arm 1.
+nsr/nsr1_reader.py (apps/real/run_real.py as committed at 707351b, data/out redirected), Qwen3-1.7B +
+b16_models/student_s0, --verify, v4 configuration, run on the A800 box (GPU 1) over the 8 dev logs, compared with
+apps/real/out/reader_dev_verify_v4.jsonl (the product's own dev run, PACE H200):
+  per-line events differing: 1 / 1,840 (ops-101-1 line 80: this run wrote move checkout-web -> db-11, v4 wrote none)
+  final state identical: 8 / 8 logs;  product answers identical: 8 / 8 logs
+  8 logs in 254 s, 18.8 generated tokens per human line
+Reading: the vendored reader is the product's reader; the one differing line is a GPU-numerics flip of greedy decoding
+across hardware (A800 vs H200), and it does not reach the final state. The held-out reader run records its hardware.

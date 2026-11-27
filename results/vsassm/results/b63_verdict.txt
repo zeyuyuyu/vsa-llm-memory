@@ -1,0 +1,122 @@
+# B63 verdict (prereg/B63_online_directory_prereg.md): coded tables with an online-insertion directory
+# (cuckoo table with f-bit fingerprints) vs the sparse block code store H-SBC (primary), the dense store U and
+# the MPHF tables. N* in cells per stored pair ('>4096' = not reached). Steps: one grid step = x 2^(1/4).
+# OT-best = per k the smaller of O-BCH's and O-LDPC's own N* (test-selected; favours the table).
+
+Table 1 (i.i.d., test): N*
+                         k1       k2       k4      e05       k8      k16      k32
+  O-BCH                  32       32       45       64      181      724     2435
+  O-LDPC                 32       32       38       64       91      304     1218
+  OT-best                32       32       38       64       91      304     1218
+  H-SBC                  32       32       45       54       91      304     1448
+  U                      76       76       76       91      128      431     1722
+  MPHF best table        19       19       27       38       54      215      724
+  T-rep                  19       23       91      128      256     1024     3444
+  E-BCH                  19       19       27       38      108      431     1722
+  E-LDPC                 23       23       27       38       54      215      724
+  E-CAM                  45       45       64       91      256     1024     3444
+
+Design at N* (dev choice): O-BCH k1=[16, None] k2=[16, None] k4=[14, None] e05=[12, None] k8=[14, None] k16=[12, None] k32=[12, None]; O-LDPC k1=[12, 0.9] k2=[12, 0.9] k4=[12, 0.75] e05=[16, 0.5] k8=[14, 0.3333333333333333] k16=[12, 0.25] k32=[16, 0.25]
+Evaluated budgets per arm (every store):
+  O-BCH|k1     32, 38, 45, 54, 64
+  O-BCH|k2     32, 38, 45, 54, 64
+  O-BCH|k4     32, 38, 45, 54, 64, 76, 91
+  O-BCH|e05    32, 38, 45, 54, 64, 76, 91, 108, 128
+  O-BCH|k8     91, 108, 128, 152, 181, 215, 256, 304, 362
+  O-BCH|k16    362, 431, 512, 609, 724, 861, 1024, 1218, 1448
+  O-BCH|k32    1218, 1448, 1722, 2048, 2435, 2896, 3444, 4096
+  O-LDPC|k1    32, 38, 45, 54, 64
+  O-LDPC|k2    32, 38, 45, 54, 64
+  O-LDPC|k4    32, 38, 45, 54, 64, 76, 91
+  O-LDPC|e05   32, 38, 45, 54, 64, 76, 91, 108, 128
+  O-LDPC|k8    64, 76, 91, 108, 128, 152, 181
+  O-LDPC|k16   152, 181, 215, 256, 304, 362, 431, 512, 609
+  O-LDPC|k32   609, 724, 861, 1024, 1218, 1448, 1722, 2048, 2435
+
+O-BCH vs H-SBC: Delta = steps(O-BCH) - steps(H-SBC) (+: store fewer cells)
+    k1   O-BCH        32  H-SBC      32 | Delta +0 tie
+    k2   O-BCH        32  H-SBC      32 | Delta +0 tie
+    k4   O-BCH        45  H-SBC      45 | Delta +0 tie
+    e05  O-BCH        64  H-SBC      54 | Delta +1 tie
+    k8   O-BCH       181  H-SBC      91 | Delta +4 store fewer cells
+    k16  O-BCH       724  H-SBC     304 | Delta +5 store fewer cells
+    k32  O-BCH      2435  H-SBC    1448 | Delta +3 store fewer cells
+  label (k1, k2, k4, k8, k16, k32): VSA WIN
+
+O-BCH vs U: Delta = steps(O-BCH) - steps(U) (+: store fewer cells)
+    k1   O-BCH        32  U          76 | Delta -5 table fewer cells
+    k2   O-BCH        32  U          76 | Delta -5 table fewer cells
+    k4   O-BCH        45  U          76 | Delta -3 table fewer cells
+    e05  O-BCH        64  U          91 | Delta -2 table fewer cells
+    k8   O-BCH       181  U         128 | Delta +2 store fewer cells
+    k16  O-BCH       724  U         431 | Delta +3 store fewer cells
+    k32  O-BCH      2435  U        1722 | Delta +2 store fewer cells
+  label (k1, k2, k4, k8, k16, k32): MIXED
+
+O-LDPC vs H-SBC: Delta = steps(O-LDPC) - steps(H-SBC) (+: store fewer cells)
+    k1   O-LDPC       32  H-SBC      32 | Delta +0 tie
+    k2   O-LDPC       32  H-SBC      32 | Delta +0 tie
+    k4   O-LDPC       38  H-SBC      45 | Delta -1 tie
+    e05  O-LDPC       64  H-SBC      54 | Delta +1 tie
+    k8   O-LDPC       91  H-SBC      91 | Delta +0 tie
+    k16  O-LDPC      304  H-SBC     304 | Delta +0 tie
+    k32  O-LDPC     1218  H-SBC    1448 | Delta -1 tie
+  label (k1, k2, k4, k8, k16, k32): TIE
+
+O-LDPC vs U: Delta = steps(O-LDPC) - steps(U) (+: store fewer cells)
+    k1   O-LDPC       32  U          76 | Delta -5 table fewer cells
+    k2   O-LDPC       32  U          76 | Delta -5 table fewer cells
+    k4   O-LDPC       38  U          76 | Delta -4 table fewer cells
+    e05  O-LDPC       64  U          91 | Delta -2 table fewer cells
+    k8   O-LDPC       91  U         128 | Delta -2 table fewer cells
+    k16  O-LDPC      304  U         431 | Delta -2 table fewer cells
+    k32  O-LDPC     1218  U        1722 | Delta -2 table fewer cells
+  label (k1, k2, k4, k8, k16, k32): TABLE WIN
+
+OT-best vs H-SBC: Delta = steps(OT-best) - steps(H-SBC) (+: store fewer cells)
+    k1   OT-best      32  H-SBC      32 | Delta +0 tie
+    k2   OT-best      32  H-SBC      32 | Delta +0 tie
+    k4   OT-best      38  H-SBC      45 | Delta -1 tie
+    e05  OT-best      64  H-SBC      54 | Delta +1 tie
+    k8   OT-best      91  H-SBC      91 | Delta +0 tie
+    k16  OT-best     304  H-SBC     304 | Delta +0 tie
+    k32  OT-best    1218  H-SBC    1448 | Delta -1 tie
+  label (k1, k2, k4, k8, k16, k32): TIE
+
+OT-best vs U: Delta = steps(OT-best) - steps(U) (+: store fewer cells)
+    k1   OT-best      32  U          76 | Delta -5 table fewer cells
+    k2   OT-best      32  U          76 | Delta -5 table fewer cells
+    k4   OT-best      38  U          76 | Delta -4 table fewer cells
+    e05  OT-best      64  U          91 | Delta -2 table fewer cells
+    k8   OT-best      91  U         128 | Delta -2 table fewer cells
+    k16  OT-best     304  U         431 | Delta -2 table fewer cells
+    k32  OT-best    1218  U        1722 | Delta -2 table fewer cells
+  label (k1, k2, k4, k8, k16, k32): TABLE WIN
+
+Online penalty Pen = steps(OT-best) - steps(MPHF best table):
+    k1   OT-best     32  MPHF best     19  Pen +3 (x1.68)
+    k2   OT-best     32  MPHF best     19  Pen +3 (x1.68)
+    k4   OT-best     38  MPHF best     27  Pen +2 (x1.41)
+    e05  OT-best     64  MPHF best     38  Pen +3 (x1.68)
+    k8   OT-best     91  MPHF best     54  Pen +3 (x1.68)
+    k16  OT-best    304  MPHF best    215  Pen +2 (x1.41)
+    k32  OT-best   1218  MPHF best    724  Pen +3 (x1.68)
+
+Store-cluster bootstrap (2,000 resamples, seed 63): 95% ranges (OT-best)
+    k1   Delta vs H-SBC [+0, +0]  Delta vs U [-5, -4]  Pen [+3, +3]  N* [32, 32]
+    k2   Delta vs H-SBC [+0, +0]  Delta vs U [-5, -4]  Pen [+3, +3]  N* [32, 32]
+    k4   Delta vs H-SBC [-1, +0]  Delta vs U [-4, -3]  Pen [+2, +3]  N* [38, 45]
+    e05  Delta vs H-SBC [+0, +1]  Delta vs U [-2, -1]  Pen [+3, +3]  N* [64, 64]
+    k8   Delta vs H-SBC [+0, +0]  Delta vs U [-2, -2]  Pen [+3, +3]  N* [91, 91]
+    k16  Delta vs H-SBC [-1, +1]  Delta vs U [-2, +0]  Pen [+2, +4]  N* [304, 431]
+    k32  Delta vs H-SBC [-3, -1]  Delta vs U [-3, -2]  Pen [+2, +3]  N* [1024, 1218]
+
+Dev N* (12 dev stores): O-BCH k1=32 k2=32 k4=45 e05=64 k8=181 k16=724 k32=2435; O-LDPC k1=32 k2=32 k4=45 e05=64 k8=91 k16=304 k32=1218
+
+Predictions (prereg S1-S6; reporting only):
+  S1 HELD: OT-best within 1 step of the model at every k {'k1': 0, 'k2': 0, 'k4': -1, 'e05': 0, 'k8': 0, 'k16': -1, 'k32': 0}; Pen in {+2,+3,+4} at every k {'k1': 3, 'k2': 3, 'k4': 2, 'e05': 3, 'k8': 3, 'k16': 2, 'k32': 3}
+  S2 HELD: TIE vs H-SBC, |Delta| <= 1 at every labelled k: {'k1': 0, 'k2': 0, 'k4': -1, 'e05': 1, 'k8': 0, 'k16': 0, 'k32': -1} (label TIE)
+  S3 HELD: TABLE WIN vs U, Delta <= -2 at >= 4 of 6: {'k1': -5, 'k2': -5, 'k4': -4, 'k8': -2, 'k16': -2, 'k32': -2}
+  S4 FAILED: O-BCH <= O-LDPC at k1-k4 and O-LDPC <= O-BCH at k8-k32: {'k1': ('32', '32'), 'k2': ('32', '32'), 'k4': ('45', '38'), 'e05': ('64', '64'), 'k8': ('181', '91'), 'k16': ('724', '304'), 'k32': ('2435', '1218')}
+  S5 FAILED: dev f at dev N* 14 or 16 in 8 of 14 (>= 10): {'O-BCH|k1': 16, 'O-BCH|k2': 16, 'O-BCH|k4': 14, 'O-BCH|e05': 12, 'O-BCH|k8': 14, 'O-BCH|k16': 12, 'O-BCH|k32': 12, 'O-LDPC|k1': 12, 'O-LDPC|k2': 12, 'O-LDPC|k4': 16, 'O-LDPC|e05': 16, 'O-LDPC|k8': 14, 'O-LDPC|k16': 12, 'O-LDPC|k32': 16}
+  S6 HELD: lost insertions summed over test jobs: 0

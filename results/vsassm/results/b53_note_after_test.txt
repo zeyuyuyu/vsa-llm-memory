@@ -1,0 +1,53 @@
+# B53 note after test (prereg/B53_value_codes_prereg.md; test run once, 2026-11-20 14:33-14:37 machine clock)
+
+## Deviations (none in grids, rules, seeds, accounting, bars or predictions)
+- Placement: the A800 box was abandoned before any run (disclosed in the pre-registration); everything ran on the local
+  CPU (nice 10, no GPU, 0 GPU-h, no API).
+- Dev was stopped by me at 14:14 after the first 12-13 of the 18 dev stores of each Qwen3-8B part, because resident memory
+  at M = 1,024 would have reached about 19 GB of the 30 GB machine; finished stores were kept, the remaining ones run with
+  lower concurrency (b53_local.sh: 1 sgn3 part x 6 threads, 3 other parts x 3 threads instead of 2 x 4 and 4 x 2). The
+  thread count can change float32 summation order in the last bits; nothing else differs (same seeds, same code).
+- Choices committed (b733df1) before any test store existed; test once; merge, verdict, checks after.
+
+## Result (ideal accounting, R1 = V 2 / 16, 4-16 bits per fact, 12 cells; 95% cluster bootstrap)
+Primary, R1 VSA - LAM: Qwen3-8B +0.04 [-0.60, +0.70] level; Granite -0.74 [-1.42, -0.05] LAM ahead; Llama -0.37
+[-1.11, +0.37] level; Mistral +0.62 [-0.20, +1.40] level; e5 -2.89 [-3.60, -2.20] LAM ahead; bge -1.73 [-2.40, -1.07] LAM
+ahead; MiniLM -2.21 [-2.94, -1.47] LAM ahead. VSA >= LAM on 3 of 7 (LLM 3 of 4, sentence 0 of 3); VSA ahead on 0 of 7.
+B49 (random codes): -1.9 to -3.4, LAM ahead on all 7.
+Per V: R1 V=2 LAM ahead on 6 of 7 (-3.5 to -4.2 on the LLMs; MiniLM -0.50 level); R1 V=16 VSA ahead of LAM on all four
+LLM families (+2.31 to +4.73), LAM ahead on the three sentence encoders (-1.98 to -3.93).
+Secondary, R1 VSA - BEST: H1-B49 passes on 0 of 7 (LOSS on 6, Llama -0.91 [-1.64, -0.19] a tie by the +-2 rule); B49 was
+-3.0 to -6.2. Without LAM (BESTNL): Qwen3-8B +2.37, Granite +1.91, Llama +4.20, Mistral +0.26 (sentence -0.9 to -2.8);
+against B36's six families +8.1 to +10.2 on the LLMs.
+Effect of the codes (VSA - VSAR, paired): R1 V=2 +2.2 to +5.1 on six encoders, e5 +0.21 [-0.65, +1.04]; R1 V=16 -0.95 to
++2.03. B53 at b matches B49's random-code store at 2b within 1.6 points on all 7 (the half-the-coordinates algebra).
+Useful accuracy: the store still reaches 0.9 x EXACT within 64 bits per fact in none of the 28 settings.
+
+## Failed predictions
+- P1 (V=2 gain with interval above 0 on all 7): FAILED on e5 (+0.21, interval includes 0); the mean, +2.89, was inside
+  the predicted range. e5's random-code store was already flat between b and 2b at V = 2, so doubling its useful dimension
+  bought nothing.
+- P3 (|V=16 change| <= 1.5 on every encoder): FAILED on Qwen3-8B (+1.67) and Mistral (+2.03); orthogonal codes helped
+  more than the Plotkin-bound argument said on the two encoders with the largest V=16 store accuracies.
+- P7 (R0 V=2 gain > 0 on all 7): FAILED on e5 (-0.46 [-1.77, +0.87]).
+- Held: P2, P4a-c, P5, P6, P8.
+
+## What the paper can say
+- With antipodal (V = 2) and orthogonal (V = 16) value codes the store is level with the least-squares associative memory
+  over R1 on three of the four LLM families (Qwen3-8B, Llama, Mistral; intervals include 0) and behind it on Granite
+  (-0.74) and on all three sentence encoders (-1.7 to -2.9).
+- At V = 16 the store beats LAM on all four LLM families (+2.3 to +4.7 points); at V = 2 LAM beats the store on six of
+  seven encoders (3.5-4.2 points on the LLMs), so the V = 2 deficit is not only the value codes (the referee's account
+  explains about half of it: the codes recover +3.1 to +5.1 points of B49's 6.6-9.3 point V = 2 gap to LAM on the LLMs, leaving 3.5-4.2).
+- Against the best of all ten dev-chosen families the store still loses over R1 (0 of 7 pass; 6 losses, Llama a tie
+  within 1 point). Without LAM it leads on Qwen3-8B (+2.37) and Llama (+4.20) by the +-2 rule, and is within 2 points
+  ahead on Granite and Mistral.
+- Tuning budgets: the store searches 72 configurations per cell, LAM 48, BEST picks among 690 (+16 learned maps).
+- B49's VSA numbers at V in {2, 16} are superseded by B53's (B49's random-code store is reported as such).
+
+## What the paper must not say
+- That the store beats, or is ahead of, the least-squares memory over R1 on any encoder (VSA ahead on 0 of 7).
+- That LLM codes as a class favour the store over LAM (Granite is behind; the "level" encoders are ties, not wins).
+- That the value codes explain the whole V = 2 loss to LAM, or that the fix makes the store competitive with BEST.
+- Any useful-accuracy regime for the store (none within 64 bits per fact; R1 accuracies at V = 16 on the LLMs are 26-31% against an
+  exact index at 76-82%).

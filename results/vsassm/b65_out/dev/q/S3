@@ -1,0 +1,12 @@
+b65_run.py train --pos last --arm vsapub --layer 20 --reader smoke/rd_last_vsa/e2 --lr 1e-3 --steps 20 --eval_every 10 --recon_epochs 2 --seed 0 --dev_split train --dev_limit 32 --out smoke/wb_last_vsapub
+b65_run.py eval --pos last --arm vsapub --layer 20 --reader smoke/rd_last_vsa/e2 --ckpt smoke/wb_last_vsapub --split train --limit 32 --bs 32 --pred smoke/pred_last_vsapub.jsonl
+b65_run.py train --pos last --arm vsabm --layer 20 --reader smoke/rd_last_vsa/e2 --lr 1e-3 --steps 20 --eval_every 10 --recon_epochs 2 --seed 0 --dev_split train --dev_limit 32 --out smoke/wb_last_vsabm
+b65_run.py eval --pos last --arm vsabm --layer 20 --reader smoke/rd_last_vsa/e2 --ckpt smoke/wb_last_vsabm --split train --limit 32 --bs 32 --pred smoke/pred_last_vsabm.jsonl
+b65_run.py train --pos last --arm disc --layer 20 --reader smoke/rd_last_disc/e2 --lr 1e-3 --steps 20 --eval_every 10 --recon_epochs 2 --seed 0 --dev_split train --dev_limit 32 --out smoke/wb_last_disc
+b65_run.py eval --pos last --arm disc --layer 20 --reader smoke/rd_last_disc/e2 --ckpt smoke/wb_last_disc --split train --limit 32 --bs 32 --pred smoke/pred_last_disc.jsonl
+b65_run.py train --pos ops --arm vsapub --layer 17 --reader smoke/rd_ops_vsa/e2 --lr 1e-3 --steps 20 --eval_every 10 --recon_epochs 2 --seed 0 --dev_split train --dev_limit 32 --out smoke/wb_ops_vsapub
+b65_run.py eval --pos ops --arm vsapub --layer 17 --reader smoke/rd_ops_vsa/e2 --ckpt smoke/wb_ops_vsapub --split train --limit 32 --bs 32 --pred smoke/pred_ops_vsapub.jsonl
+b65_run.py train --pos ops --arm vsabm --layer 17 --reader smoke/rd_ops_vsa/e2 --lr 1e-3 --steps 20 --eval_every 10 --recon_epochs 2 --seed 0 --dev_split train --dev_limit 32 --out smoke/wb_ops_vsabm
+b65_run.py eval --pos ops --arm vsabm --layer 17 --reader smoke/rd_ops_vsa/e2 --ckpt smoke/wb_ops_vsabm --split train --limit 32 --bs 32 --pred smoke/pred_ops_vsabm.jsonl
+b65_run.py train --pos ops --arm disc --layer 17 --reader smoke/rd_ops_disc/e2 --lr 1e-3 --steps 20 --eval_every 10 --recon_epochs 2 --seed 0 --dev_split train --dev_limit 32 --out smoke/wb_ops_disc
+b65_run.py eval --pos ops --arm disc --layer 17 --reader smoke/rd_ops_disc/e2 --ckpt smoke/wb_ops_disc --split train --limit 32 --bs 32 --pred smoke/pred_ops_disc.jsonl

@@ -1,0 +1,27 @@
+{
+ "n_sym": 10,
+ "seeds": [
+  {
+   "seed": 42,
+   "stmt_span_acc": 1.0,
+   "query_span_acc": 0.722,
+   "chain_as_probe_argmax": 0.762,
+   "chain_with_true_query": 1.0
+  },
+  {
+   "seed": 123,
+   "stmt_span_acc": 1.0,
+   "query_span_acc": 0.718,
+   "chain_as_probe_argmax": 0.772,
+   "chain_with_true_query": 1.0
+  },
+  {
+   "seed": 456,
+   "stmt_span_acc": 1.0,
+   "query_span_acc": 0.71,
+   "chain_as_probe_argmax": 0.776,
+   "chain_with_true_query": 1.0
+  }
+ ],
+ "verdict": "BREAK LOCALISED TO THE QUERY POSITION (the head is perfect on the syntactic form it was trained on and fails on the same symbol in the question; the chain has no tolerance for a wrong role)"
+}

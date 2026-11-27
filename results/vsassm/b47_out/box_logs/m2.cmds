@@ -1,0 +1,6 @@
+[2026-11-19T17:59:23Z] gpu0 lane2 b47_ft.py --task gen --variant k32 --n 800 --rank 64 --lr 0.0003 --seed 123 --final --mbs 4 --out out/ft/gen_k32_n800_r64_lr0.0003_s123.json
+[2026-11-19T17:59:23Z] gpu0 lane1 b47_ft.py --task scratch --variant k32 --n 800 --rank 8 --lr 0.0003 --seed 123 --final --mbs 4 --out out/ft/scratch_k32_n800_r8_lr0.0003_s123.json
+[2026-11-19T18:23:24Z] gpu0 lane1 rc=0 b47_ft.py --task scratch --variant k32 --n 800 --rank 8 --lr 0.0003 --seed 123 --final --mbs 4 --out out/ft/scratch_k32_n800_r8_lr0.0003_s123.json
+[2026-11-19T18:23:24Z] gpu0 lane1 b47_ft.py --task gen --variant std --n 8000 --rank 64 --lr 3e-05 --seed 123 --final --mbs 4 --out out/ft/gen_std_n8000_r64_lr3e-05_s123.json
+[2026-11-19T18:31:17Z] gpu0 lane2 rc=0 b47_ft.py --task gen --variant k32 --n 800 --rank 64 --lr 0.0003 --seed 123 --final --mbs 4 --out out/ft/gen_k32_n800_r64_lr0.0003_s123.json
+[2026-11-19T19:28:15Z] gpu0 lane1 rc=0 b47_ft.py --task gen --variant std --n 8000 --rank 64 --lr 3e-05 --seed 123 --final --mbs 4 --out out/ft/gen_std_n8000_r64_lr3e-05_s123.json

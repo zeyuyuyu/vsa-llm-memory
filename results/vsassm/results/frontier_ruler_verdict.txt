@@ -1,0 +1,18 @@
+# Frontier references on RULER 128k (B19 amendment 2), 2026-10-23
+Samples: the first 10 test samples of each of the 13 tasks at 131,072 tokens (n = 130), the same for all systems.
+Official metric on the whole output.
+
+task                  ours     GPT-6.1 Sol   Claude Opus 5.5
+NIAH x8, VT            100      100           100
+CWE                    100      100           100
+FWE                    100      100           10   (9/10 refused by Anthropic's safety classifier: content_filter; counted wrong)
+qa_1 (SQuAD)            60       70           100
+qa_2 (HotpotQA)         50       80           100
+13-task average        93.1     96.2          93.1
+without CWE / FWE      91.8     95.5          100.0
+
+Our full-100 QA numbers at 128k are 83 (qa_1) and 55 (qa_2); this 10-sample subset is noisy.
+Cost: GPT-6.1 Sol $38.98; Opus 5.5 $82.49 (Claude counts about 175k tokens per sample).
+Conclusion: both frontier models match or exceed us on RULER at 128k. Our claim there is parity with the leaderboard
+top at a fraction of the size, not superiority.
+Total frontier spend for B19 + B20: $223.33, against about $215 approved (cap overshoot from concurrent requests).

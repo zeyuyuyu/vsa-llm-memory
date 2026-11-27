@@ -1,0 +1,11 @@
+# B64 predictions (prereg P1-P9; P10 = checks, results/b64_check.txt). Points.
+P1 SDMT - SDM over R1 >= +5 on each LLM: HELD [11.751888533467325, 12.09522229650371, 11.896734396663039, 13.900874947860265]
+P2 VSAR - SDMT over R1 in [-1, +3] on each LLM: FAILED [-1.8911484342003497, -2.251659501752344, -1.1988416231140053, -3.5571286456823565]
+P3 VSAR - BEST7: bar passes on <= 1 of 4 LLMs and store leads on >= 2 of 4: FAILED (['loss', 'loss', 'tie', 'loss'], ['memory leads', 'memory leads', 'memory leads', 'memory leads'])
+P4 VSA - BEST7: store leads on all 4 LLMs and bar passes on >= 3 of 4: FAILED (['tie', 'tie', 'tie', 'tie'], ['store leads', 'level', 'store leads', 'memory leads'])
+P5 VSA - BEST7: R1-V2 >= +4 on all LLMs; R1-V16 in [-2, +4] on each: FAILED ([3.721882293065188, 2.06493882867525, 3.565867472972864, -0.09623414908748397], [-1.2213709168489877, -2.5047046357250373, -1.75063989945046, -1.9340648904916644])
+P6 sentence: VSAR - BEST7 memory leads on all 3; VSA - BEST7 bar passes on none: HELD (['memory leads', 'memory leads', 'memory leads'], ['tie', 'loss', 'loss'])
+P7 BEST7 = SDMT in >= 8 of 12 R1 cells of each LLM: HELD [11, 12, 12, 12]
+P8 dev choices: a <= 16 in >= 75%; LA in >= 50%; onehot in >= 50% of V = 16 cells: FAILED (0.964, 0.321, 1.0, 84)
+P9 VSAR - BEST36 reproduces B49 within 0.01 points: HELD {'qwen8': (6.774, 0.0), 'b46': (6.064, 0.0), 'llama': (7.097, 0.0), 'mistral': (7.098, 0.0), 'e5': (0.599, 0.0), 'bge': (-0.709, 0.0), 'minilm': (-2.119, 0.0)}
+P10 checks: HELD (scorer max |diff| 4.9e-17; 383,124 dev / test rows, 0 over budget; disjointness 0 string overlaps and 0 locations with cosine >= 0.9999 on every encoder and set; float64 re-derivation min agreement 1.0000 on 56 stores, N identical 56/56)

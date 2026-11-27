@@ -1,0 +1,52 @@
+{
+ "refs": {
+  "compositional": {
+   "prompt": 0.2533,
+   "prompt_ev": 0.95,
+   "hrr_gold": 0.9744
+  },
+  "inference": {
+   "prompt": 0.0933,
+   "prompt_ev": 0.6833,
+   "hrr_gold": 0.7622
+  }
+ },
+ "arms": {
+  "compositional": {
+   "hrr_gold_big": {
+    "em": 0.0,
+    "hallucination": 0.0
+   },
+   "prompt_ev_big": {
+    "em": 0.35333333333333333,
+    "hallucination": 0.22,
+    "trunc_rate": 0.0,
+    "answer_truncated_out": 0.0
+   },
+   "hrr_then_prompt_big": {
+    "em": 0.09,
+    "hallucination": 0.16333333333333333,
+    "retrieval_hit_rate": 0.44
+   }
+  },
+  "inference": {
+   "hrr_gold_big": {
+    "em": 0.006666666666666667,
+    "hallucination": 0.0
+   },
+   "prompt_ev_big": {
+    "em": 0.006666666666666667,
+    "hallucination": 0.7733333333333333,
+    "trunc_rate": 0.8266666666666667,
+    "answer_truncated_out": 0.043333333333333335
+   },
+   "hrr_then_prompt_big": {
+    "em": 0.013333333333333334,
+    "hallucination": 0.7,
+    "retrieval_hit_rate": 0.31333333333333335
+   }
+  }
+ },
+ "diag": {},
+ "verdict": "compositional: P1 dump degrades >=.10: True (0.950->0.353) | P2 store within .05: False (0.000) | P3 hybrid wins >=.10: False (0.090) || compositional: P4 hallucination dump=0.2200 hybrid=0.1633 readout=0 || inference: P1 dump degrades >=.10: True (0.683->0.007) | P2 store within .05: False (0.007) | P3 hybrid wins >=.10: False (0.013) || inference: P4 hallucination dump=0.7733 hybrid=0.7000 readout=0"
+}

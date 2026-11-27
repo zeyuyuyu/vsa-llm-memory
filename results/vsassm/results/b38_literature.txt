@@ -1,0 +1,165 @@
+# B38 literature check (before the run; each source read in its own text unless marked "abstract/index only").
+# Question: does a VSA memory need fewer cells than an error-protected table for the same exactness under device
+# noise and localized damage? Items are tagged by what they predict for B38; the result-side reading is appended
+# after the test run (section "After the result").
+
+== A. Error-correcting codes for phase-change / resistive memory (the tables' side)
+
+[XZ11] Xu, W. & Zhang, T. A time-aware fault tolerance scheme to improve reliability of multilevel phase-change memory
+  in the presence of significant resistance drift. IEEE Trans. VLSI Syst. 19(8), 1357-1367 (2011). Text: binary BCH
+  codes protecting 4 kB pages, BCH(34816, 32768, 128), BCH(36864, 32768, 256), BCH(30960...), and length-34816 rate-0.94
+  and length-36864 rate-0.89 quasi-cyclic LDPC codes; "conventional use of ECC ... can only achieve the performance with a
+  big gap from the information-theoretical bounds"; with static sensing "simulation results clearly show very abrupt
+  PER drops over the time".
+  -> Precedent for BCH and LDPC as the standard protection of PCM storage (B38's E-BCH, E-LDPC), at high code rates
+     (0.89-0.94) because PCM raw error rates there are small. Also documents the ECC "cliff": long codewords fail
+     abruptly once errors exceed the design point. Predicts: at low cell-error rates a high-rate code costs ~1.1x the
+     information bits, far below any VSA store (which needs tens of cells per fact even with no errors).
+
+[SLSB10] Schechter, S., Loh, G. H., Strauss, K. & Burger, D. Use ECP, not ECC, for hard failures in resistive
+  memories. ISCA 2010. Text: PCM wear-out produces permanent "stuck-at" cell faults that are "immediately detectable, at
+  write time"; ECP "corrects errors by permanently encoding the locations of failed cells into a table and assigning
+  cells to replace them", with lower overhead than ECC for the same lifetime (e.g. ECP6 in 61 bits per 512-bit row,
+  11.9%).
+  -> Stuck cells in real resistive memories are typically known to the controller (erasures), which is far cheaper
+     to correct than unknown errors. B38's primary localized damage keeps locations UNKNOWN to every reader (the
+     harsher, VSA-friendly assumption, Kanerva's "irrespective of position"); a secondary condition gives every reader
+     the locations.
+
+[BWW09] Baeg, S., Wen, S. & Wong, R. SRAM interleaving distance selection with a soft error failure model. IEEE Trans.
+  Nucl. Sci. 56(4), 2111-2118 (2009) (index and abstract only): models multi-cell upsets as compound Poisson clusters
+  and chooses the bit-interleaving distance so that one cluster hits at most one bit per SEC word.
+  -> Interleaving ECC words across the array is standard memory practice against clustered/localized faults; supports
+     giving the ECC tables a (random) interleaver in B38's primary damage conditions.
+
+[PPV10] Polyanskiy, Y., Poor, H. V. & Verdu, S. Channel coding rate in the finite blocklength regime. IEEE Trans. Inf.
+  Theory 56(5), 2307-2359 (2010) (abstract/index): at blocklength n and error probability e the best rate is about
+  C - sqrt(V/n) Q^-1(e). -> Short per-fact codes (13-17 information bits) pay a large finite-length penalty; long
+  codes over many facts approach capacity. Predicts that long BCH/LDPC tables gain most where the VSA (one fact per
+  similarity decision) cannot amortize redundancy, i.e. at low noise.
+
+== B. Robustness of HD/VSA representations (the VSA side)
+
+[Ka09] Kanerva, P. Hyperdimensional computing: an introduction to computing in distributed representation with
+  high-dimensional random vectors. Cogn. Comput. 1, 139-159 (2009). Text (section "Robustness"): "for maximum
+  robustness ... the information encoded into a representation should be distributed 'equally' over all the components
+  ... When bits fail, the information degrades in relation to the number of failing bits irrespective of their
+  position. This kind of representation is referred to as holographic or holistic"; "Error-correcting codes of data
+  communications are robust in the sense that they tolerate some number of errors. A remarkable property of
+  hyperdimensional representation is that ... the proportion of allowable 'errors' increases with dimensionality."
+  -> The classic claim B38 tests: position-independent, graceful degradation. B38's natural-layout damage conditions
+     (a vector stored contiguously, damage localized) test "irrespective of their position"; the interleaved
+     conditions test whether an ECC table given an interleaver obtains the same property.
+
+[K20] Karunaratne, G. et al. In-memory hyperdimensional computing. Nat. Electron. 3, 327-337 (2020) (arXiv:1906.01548):
+  "HDC is remarkably robust to random variability and device failures"; "deterministic spatial variations in the
+  conductance values could pose a challenge"; their remedy: "dividing the crossbar array into f equal sized partitions"
+  and placing the segments "spatially distributed across the crossbar array", because "given the holographic nature of
+  the hypervectors, this can be easily addressed by a random partitioning approach"; accuracy "increases with the
+  number of partitions".
+  -> Even the in-memory HDC prototype spreads hypervectors across the array to survive spatially correlated
+     variation, i.e. it interleaves. Supports giving interleaving to both sides; predicts that a contiguously stored
+     hypervector is NOT immune to block-level (contiguous) damage.
+
+[Kl22] Kleyko, D. et al. Vector symbolic architectures as a computing framework for emerging hardware. Proc. IEEE 110,
+  1538-1571 (2022) (read for B34): HDC tolerates "8.8x higher probability of failures with respect to intermittent
+  hardware errors, and 60x higher ... permanent hardware errors" than unprotected baselines.
+  -> Comparisons against unprotected baselines; silent on ECC-protected baselines at equal storage.
+
+[R17] Rahimi, A. et al. High-dimensional computing as a nanoscalable paradigm. IEEE TCAS-I 64, 2508-2521 (2017) (read
+  for B34): HD classifier tolerates an 8.8-fold failure probability vs a baseline without redundancy. Same reading.
+
+[ZW21] Zhang, S., Wang, R., Zhang, J. J., Rahimi, A. & Jiao, X. Assessing robustness of hyperdimensional computing
+  against errors in associative memory. ASAP 2021 (abstract): "HDC is considerably robust to errors in the associative
+  memory"; robustness depends on data width; random error injection only.
+
+[Xu23] Xu, W. et al. HyperMetric: robust hyperdimensional computing on error-prone memories using metric learning.
+  ICCD 2023 (text): argues ECC "is not cost-effective due to the large implementation overhead. For example, CIM-SECDED
+  [Crafton et al. 2021] sacrifices 20% memory cells".
+  -> CONFLICT-TO-TEST: the claim that ECC costs too many cells is made without an equal-cell comparison; B38 measures
+     cells per fact for both.
+
+[MAC24] Mejri, M., Amarnath, C. & Chatterjee, A. Error resilient hyperdimensional computing using hypervector encoding
+  and cross-clustering. VTS 2024 (text): HDC associative memories are "vulnerable to timing and soft errors"; TMR costs
+  "x3 times"; proposes checksum hypervectors. -> HD memories themselves are protected with redundancy in practice;
+  no equal-storage ECC comparison.
+
+== C. HD codes as channel codes; capacity of superposition (what to expect for cells per fact)
+
+[FKS18] Frady, E. P., Kleyko, D. & Sommer, F. T. A theory of sequence indexing and working memory in recurrent neural
+  networks. Neural Comput. 30, 1449-1513 (2018). Text: high-fidelity capacity of superposition (bundling) memories
+  "asymptotic capacity value is 1/(4 ln 2) = 0.36" bits per neuron, "0.39" with their approximation; without
+  superposition "it is possible to achieve the theoretically optimal capacity of 1 bit per neuron and ... crosstalk
+  immediately limits the achievable capacity".
+  -> Predicts that even without noise a VSA store needs ~1/0.36 = 2.8x (and with 1-bit sign storage more, about
+     2.8 x pi/2 = 4.4x) the cells of a table holding the same information bits: the referee's capacity point.
+
+[Ki18] Kim, H.-S. HDM: hyper-dimensional modulation for robust low-power communications. ICC 2018; [HK23] Hsu & Kim,
+  IEEE Trans. Commun. 71(3) (2023); [He21] Hersche, M., Lippuner, S., Korb, M., Benini, L. & Rahimi, A. Near-channel
+  classifier: symbiotic communication and classification in high-dimensional space. Brain Inform. 8, 16 (2021) (text):
+  superposed HD vectors as a channel code "achieving a similar SNR gain compared to state-of-the-art codes" (LDPC,
+  Polar) at short block lengths (D = 256-512) and BER 1e-4 to 1e-5.
+  -> SUPPORTS that superposed random codes decoded by similarity can match LDPC/Polar codes at short blocks and low
+     rates. Predicts B38's VSA can be competitive at high noise (low rates), where codes of a few hundred cells per
+     fact are needed anyway.
+
+[JB12] Joseph, A. & Barron, A. R. Least squares superposition codes of moderate dictionary size are reliable at rates up
+  to capacity. IEEE Trans. Inf. Theory 58(5) (2012) (arXiv:1006.3780 abstract): superposition codes with least-squares
+  decoding reach capacity. -> Superposition per se need not cost capacity with optimal (joint) decoding; the VSA's
+  one-item-at-a-time similarity decoding is not that decoder.
+
+[TDR21] Thomas, A., Dasgupta, S. & Rosing, T. A theoretical perspective on hyperdimensional computing. J. Artif. Intell.
+  Res. 72, 215-249 (2021) (abstract): non-asymptotic conditions for bundles to be decodable; no ECC comparison.
+
+== D. Equal-storage comparison of HD memories with ECC-protected storage
+
+Searched (Nov 2026): "hyperdimensional computing versus error correcting codes equal memory", "hyperdimensional fault
+tolerance compared to TMR or ECC at the same memory overhead", "hypervector spatially correlated / clustered faults,
+crossbar row/column failure". Found: none. The closest are equal-rate channel-code comparisons of superposed HD
+modulation (Ki18, He21, HK23) and HD robustness studies against unprotected baselines (Kl22, R17, ZW21). The only
+spatial-variation study (K20) handles it by spreading hypervectors (interleaving). Gap: no published measurement of
+cells per fact for an HD/VSA memory against BCH/LDPC-protected storage, nor of HD memories under localized faults at a
+matched error rate against interleaved ECC. B38 fills this; the paper should say "we found no precedent", not "first".
+
+== After the result (B38 test: 50 RULER stores, 4,776 probed keys; numbers from results/b38_verdict.txt)
+
+SUPPORTING
+- [XZ11] (BCH/LDPC are the standard PCM protection; "very abrupt PER drops"): B38's coded tables need the fewest cells
+  (E-BCH at low cell-error rates, E-LDPC with soft-combined repetition at high ones), and they fail abruptly past their
+  design point: an E-LDPC table designed for p(k8) at 128 cells per fact reads 98.4% of keys at eps = 0.24 and 12.6% at
+  0.276 (M3).
+- [K20] (hypervectors spread across the crossbar to survive spatial variation): B38 shows why this matters and that it
+  is what ECC interleaving does. With a random interleaver every memory sees localized damage as i.i.d. errors (H3); a
+  VSA vector stored contiguously already spreads each fact over its d cells, which is why it tolerates dead lines and
+  clusters in the natural layout (H4).
+- [Ka09] ("degrades in relation to the number of failing bits irrespective of their position"): holds for the VSA store
+  against dead lines and stuck clusters in the natural layout (V-last within 0-3 grid steps of its i.i.d. requirement),
+  and does NOT hold for contiguous loss (whole vectors lost; every memory loses about the lost fraction of its facts).
+- [FKS18] (superposition capacity 0.36-0.39 bits per component in the high-fidelity regime; crosstalk costs capacity
+  that codes without superposition keep): with no cell errors the VSA store needs 76 cells per fact for 99.5% exact
+  reads, about 0.17 information bits per cell (12.6-bit values), against 19 cells (0.66 bits per cell) for a table;
+  a table of random HD codes without superposition (T-vhdd) needs 32. The referee's capacity objection is confirmed:
+  the RULER stores at 16 pairs per vector were over-provisioned 6.7x.
+- [Ki18, He21, HK23] (superposed HD codes competitive with LDPC/Polar at short blocks and low SNR): partly - the VSA
+  store needs 2.0-2.4x the cells of the best LDPC table at the highest noise (k16, k32), its closest approach, against
+  4x with no errors; HD codes are better channel codes at low SNR than at high SNR, but not better than LDPC with soft
+  repetition.
+
+CONFLICTING
+- [Xu23] ("ECC ... is not cost-effective due to the large implementation overhead"; HD as the cheaper path to
+  robustness): at equal stored cells, for storing key-value facts, B38 finds the opposite: tables with BCH or LDPC need
+  2-4x fewer cells than the VSA store at every device-noise level from none to 32x (H1), and 11-19 grid steps (7-27x)
+  fewer than a VSA whose item memory is stored on the cells (H1cb). (Their claim concerns HDC classifiers and
+  circuit overhead, not stored cells; B38 does not count decoder logic.)
+- [Kl22, R17] (HD tolerates 8.8x / 60x higher failure rates than baselines): qualified - true against unprotected or
+  repetition-coded tables (the VSA store needs 2x fewer cells than B34's repetition table T-rep at k8-k32), false
+  against BCH/LDPC tables.
+- [He22] (hash structures fragile under memory errors): a hash directory protected by BCH or LDPC is not fragile; the
+  best tables in B38 keep a minimal-perfect-hash directory on the noisy cells.
+
+GAP (unchanged from the pre-result search): no published equal-cell comparison of an HD/VSA memory with ECC-protected
+storage, nor of HD memories against interleaved ECC under localized faults at a matched error rate. B38 is, as far as
+we found, the first; the paper should say "we found no precedent".
+
+Not searched further: decoder logic area/energy (B38 counts stored cells only), multi-level cells, and soft (analog)
+reads, any of which could change the comparison.

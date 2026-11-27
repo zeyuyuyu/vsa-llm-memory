@@ -1,0 +1,74 @@
+{
+ "args": {
+  "cmd": "train",
+  "task": "N",
+  "arm": "lora",
+  "split": "dev",
+  "layers": "17",
+  "layer": 17,
+  "subset": 0,
+  "bs": 16,
+  "epochs": 100,
+  "eval_every": 500,
+  "lr": 0.001,
+  "seed": 0,
+  "steps": 3000,
+  "rank": 6,
+  "reader": "",
+  "ckpt": "",
+  "out": "out/dev/N_lora_lr1e-3_s0",
+  "pred": "",
+  "noise": 0.0,
+  "noise_seed": 12345,
+  "soft_beta": 0.0,
+  "dec_init": "recon",
+  "recon_epochs": 100,
+  "limit": 0,
+  "max_new": 6,
+  "cot_max_new": 512,
+  "cot_bs": 48,
+  "shuffle_facts": 0,
+  "dev_split": "dev",
+  "dev_subset": 0,
+  "dev_limit": 0
+ },
+ "trainable_params": 15728640,
+ "hist": [
+  {
+   "step": 0,
+   "dev": 0.19125
+  },
+  {
+   "step": 500,
+   "dev": 0.095,
+   "loss": 5.884453773498535
+  },
+  {
+   "step": 1000,
+   "dev": 0.0925,
+   "loss": 5.938212871551514
+  },
+  {
+   "step": 1500,
+   "dev": 0.095,
+   "loss": 5.830650329589844
+  },
+  {
+   "step": 2000,
+   "dev": 0.1025,
+   "loss": 6.382025718688965
+  },
+  {
+   "step": 2500,
+   "dev": 0.0975,
+   "loss": 5.507838249206543
+  },
+  {
+   "step": 3000,
+   "dev": 0.10375,
+   "loss": 4.834065914154053
+  }
+ ],
+ "best_dev": 0.10375,
+ "best_step": 3000
+}

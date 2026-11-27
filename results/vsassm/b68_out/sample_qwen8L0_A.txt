@@ -1,0 +1,145 @@
+qwen8L0_A, reader dkvb (selected dev 0.984, config {"cleanup": "hard", "mult": 1, "heads": 1, "lr": 0.001}), seed 42 epoch 1: right 965, wrong 35 of 1000
+
+[RIGHT] #0 label 1, memory says 1 (score 0.246, threshold 0.172)
+  chain [R3A] -> [XE9] -> [Y4E] -> 55, candidate 55
+  hop-1 winner [XE9] (right), hop-2 winner [Y4E] (right)
+    query R      [R3A]    code (28,)                    shared with other symbols: none
+    context R    [R3A]    code (28,)                    shared with other symbols: none
+    X value      [XE9]    code (34,)                    shared with other symbols: none
+    X key        [XE9]    code (34,)                    shared with other symbols: none
+    Y value      [Y4E]    code (165,)                   shared with other symbols: none
+    Y key        [Y4E]    code (165,)                   shared with other symbols: none
+    F value      55       code (29,)                    shared with other symbols: 5
+    candidate F  55       code (29,)                    shared with other symbols: 5
+
+[RIGHT] #1 label 1, memory says 1 (score 0.267, threshold 0.172)
+  chain [R0A] -> [X88] -> [Y2A] -> 163, candidate 163
+  hop-1 winner [X88] (right), hop-2 winner [Y2A] (right)
+    query R      [R0A]    code (50,)                    shared with other symbols: none
+    context R    [R0A]    code (50,)                    shared with other symbols: none
+    X value      [X88]    code (72,)                    shared with other symbols: none
+    X key        [X88]    code (72,)                    shared with other symbols: none
+    Y value      [Y2A]    code (161,)                   shared with other symbols: none
+    Y key        [Y2A]    code (161,)                   shared with other symbols: none
+    F value      163      code (228,)                   shared with other symbols: none
+    candidate F  163      code (228,)                   shared with other symbols: none
+
+[RIGHT] #2 label 1, memory says 1 (score 0.226, threshold 0.172)
+  chain [R32] -> [X35] -> [Y7E] -> 37, candidate 37
+  hop-1 winner [X35] (right), hop-2 winner [Y7E] (right)
+    query R      [R32]    code (22,)                    shared with other symbols: none
+    context R    [R32]    code (22,)                    shared with other symbols: none
+    X value      [X35]    code (216,)                   shared with other symbols: none
+    X key        [X35]    code (216,)                   shared with other symbols: none
+    Y value      [Y7E]    code (24,)                    shared with other symbols: none
+    Y key        [Y7E]    code (24,)                    shared with other symbols: none
+    F value      37       code (120,)                   shared with other symbols: none
+    candidate F  37       code (120,)                   shared with other symbols: none
+
+[RIGHT] #3 label 0, memory says 0 (score -0.030, threshold 0.172)
+  chain [R08] -> [X52] -> [Y40] -> 48, candidate 104
+  hop-1 winner [X52] (right), hop-2 winner [Y40] (right)
+    query R      [R08]    code (29,)                    shared with other symbols: none
+    context R    [R08]    code (29,)                    shared with other symbols: none
+    X value      [X52]    code (36,)                    shared with other symbols: none
+    X key        [X52]    code (36,)                    shared with other symbols: none
+    Y value      [Y40]    code (157,)                   shared with other symbols: [Y04]
+    Y key        [Y40]    code (157,)                   shared with other symbols: [Y04]
+    F value      48       code (93,)                    shared with other symbols: none
+    candidate F  104      code (89,)                    shared with other symbols: none
+
+[RIGHT] #4 label 0, memory says 0 (score 0.055, threshold 0.172)
+  chain [R1E] -> [X14] -> [YFF] -> 193, candidate 198
+  hop-1 winner [X14] (right), hop-2 winner [YFF] (right)
+    query R      [R1E]    code (13,)                    shared with other symbols: none
+    context R    [R1E]    code (13,)                    shared with other symbols: none
+    X value      [X14]    code (191,)                   shared with other symbols: none
+    X key        [X14]    code (191,)                   shared with other symbols: none
+    Y value      [YFF]    code (2,)                     shared with other symbols: none
+    Y key        [YFF]    code (2,)                     shared with other symbols: none
+    F value      193      code (88,)                    shared with other symbols: none
+    candidate F  198      code (186,)                   shared with other symbols: none
+
+[RIGHT] #5 label 0, memory says 0 (score 0.014, threshold 0.172)
+  chain [R2E] -> [XA8] -> [YB9] -> 137, candidate 8
+  hop-1 winner [XA8] (right), hop-2 winner [YB9] (right)
+    query R      [R2E]    code (47,)                    shared with other symbols: none
+    context R    [R2E]    code (47,)                    shared with other symbols: none
+    X value      [XA8]    code (116,)                   shared with other symbols: none
+    X key        [XA8]    code (116,)                   shared with other symbols: none
+    Y value      [YB9]    code (17,)                    shared with other symbols: none
+    Y key        [YB9]    code (17,)                    shared with other symbols: none
+    F value      137      code (187,)                   shared with other symbols: none
+    candidate F  8        code (17,)                    shared with other symbols: none
+
+[WRONG] #21 label 1, memory says 0 (score -0.008, threshold 0.172)
+  chain [R23] -> [XCE] -> [Y39] -> 237, candidate 237
+  hop-1 winner [X63] (WRONG), hop-2 winner [Y50] (WRONG)
+    query R      [R23]    code (22,)                    shared with other symbols: [R32]
+    context R    [R23]    code (22,)                    shared with other symbols: [R32]
+    X value      [XCE]    code (30,)                    shared with other symbols: none
+    X key        [XCE]    code (30,)                    shared with other symbols: none
+    Y value      [Y39]    code (67,)                    shared with other symbols: none
+    Y key        [Y39]    code (67,)                    shared with other symbols: none
+    F value      237      code (213,)                   shared with other symbols: none
+    candidate F  237      code (213,)                   shared with other symbols: none
+
+[WRONG] #94 label 1, memory says 0 (score 0.017, threshold 0.172)
+  chain [R10] -> [X4F] -> [YD2] -> 137, candidate 137
+  hop-1 winner [XD9] (WRONG), hop-2 winner [YA5] (WRONG)
+    query R      [R10]    code (37,)                    shared with other symbols: [R01]
+    context R    [R10]    code (37,)                    shared with other symbols: [R01]
+    X value      [X4F]    code (131,)                   shared with other symbols: none
+    X key        [X4F]    code (131,)                   shared with other symbols: none
+    Y value      [YD2]    code (150,)                   shared with other symbols: none
+    Y key        [YD2]    code (150,)                   shared with other symbols: none
+    F value      137      code (187,)                   shared with other symbols: 173
+    candidate F  137      code (187,)                   shared with other symbols: 173
+
+[WRONG] #96 label 1, memory says 0 (score 0.010, threshold 0.172)
+  chain [R07] -> [X21] -> [Y87] -> 135, candidate 135
+  hop-1 winner [X12] (WRONG), hop-2 winner [Y50] (WRONG)
+    query R      [R07]    code (40,)                    shared with other symbols: none
+    context R    [R07]    code (40,)                    shared with other symbols: none
+    X value      [X21]    code (173,)                   shared with other symbols: [X12]
+    X key        [X21]    code (173,)                   shared with other symbols: [X12]
+    Y value      [Y87]    code (91,)                    shared with other symbols: none
+    Y key        [Y87]    code (91,)                    shared with other symbols: none
+    F value      135      code (109,)                   shared with other symbols: none
+    candidate F  135      code (109,)                   shared with other symbols: none
+
+[WRONG] #135 label 0, memory says 1 (score 0.218, threshold 0.172)
+  chain [R3C] -> [X5E] -> [YF6] -> 198, candidate 239
+  hop-1 winner [X5E] (right), hop-2 winner [YF6] (right)
+    query R      [R3C]    code (7,)                     shared with other symbols: none
+    context R    [R3C]    code (7,)                     shared with other symbols: none
+    X value      [X5E]    code (171,)                   shared with other symbols: none
+    X key        [X5E]    code (171,)                   shared with other symbols: none
+    Y value      [YF6]    code (14,)                    shared with other symbols: [Y6F]
+    Y key        [YF6]    code (14,)                    shared with other symbols: [Y6F]
+    F value      198      code (186,)                   shared with other symbols: none
+    candidate F  239      code (3,)                     shared with other symbols: none
+
+[WRONG] #157 label 1, memory says 0 (score -0.014, threshold 0.172)
+  chain [R30] -> [X08] -> [Y52] -> 227, candidate 227
+  hop-1 winner [X09] (WRONG), hop-2 winner [Y2B] (WRONG)
+    query R      [R30]    code (1,)                     shared with other symbols: [R03]
+    context R    [R30]    code (1,)                     shared with other symbols: [R03]
+    X value      [X08]    code (154,)                   shared with other symbols: none
+    X key        [X08]    code (154,)                   shared with other symbols: none
+    Y value      [Y52]    code (132,)                   shared with other symbols: none
+    Y key        [Y52]    code (132,)                   shared with other symbols: none
+    F value      227      code (126,)                   shared with other symbols: none
+    candidate F  227      code (126,)                   shared with other symbols: none
+
+[WRONG] #207 label 1, memory says 0 (score -0.021, threshold 0.172)
+  chain [R21] -> [XA2] -> [YB3] -> 242, candidate 242
+  hop-1 winner [XF1] (WRONG), hop-2 winner [YC2] (WRONG)
+    query R      [R21]    code (0,)                     shared with other symbols: [R12]
+    context R    [R21]    code (0,)                     shared with other symbols: [R12]
+    X value      [XA2]    code (172,)                   shared with other symbols: none
+    X key        [XA2]    code (172,)                   shared with other symbols: none
+    Y value      [YB3]    code (9,)                     shared with other symbols: none
+    Y key        [YB3]    code (9,)                     shared with other symbols: none
+    F value      242      code (229,)                   shared with other symbols: none
+    candidate F  242      code (229,)                   shared with other symbols: none

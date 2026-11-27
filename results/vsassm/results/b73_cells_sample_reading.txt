@@ -1,0 +1,93 @@
+# B73 equal-cell sample reading material: at k8, the grid step below each memory's fresh N*, which probed keys
+# fail (family, store, key, number of stored values, the values).
+
+U at 108 cells per pair (one step below N* 128): 49 failed of 4779 probed; by family {'code1k5': 9, 'hex1k7': 10, 'wp6k': 30}; by number of values {1: 49}
+    b73/code1k5/test/1     key 'piles/thimbles'               values 1 ['DANT-664']
+    b73/wp6k/test/0        key 'coerce/mantle'                values 1 ['defamed sarees']
+    b73/wp6k/test/9        key 'metro/aliening'               values 1 ['nobleman freeing']
+    b73/wp6k/test/9        key 'forget/rangiest'              values 1 ['pokiest shills']
+    b73/wp6k/test/2        key 'budgies/aches'                values 1 ['rangiest prickly']
+    b73/hex1k7/test/3      key '15557271744915596615f884'     values 1 ['b1ebe358dd2167008ae8a467']
+    b73/wp6k/test/8        key 'helpers/anaemic'              values 1 ['spookier alley']
+    b73/wp6k/test/2        key 'bastes/yuck'                  values 1 ['orthodox fusty']
+
+H-SBC at 76 cells per pair (one step below N* 91): 61 failed of 4779 probed; by family {'code1k5': 9, 'hex1k7': 16, 'wp6k': 36}; by number of values {1: 61}
+    b73/wp6k/test/2        key 'nonplus/colonels'             values 1 ['sketches retarded']
+    b73/wp6k/test/2        key 'conserve/choppy'              values 1 ['shekels packed']
+    b73/wp6k/test/1        key 'burnoose/newsman'             values 1 ['goiter retch']
+    b73/wp6k/test/9        key 'bulgiest/lose'                values 1 ['mechanic animists']
+    b73/code1k5/test/1     key 'adaptor/peppered'             values 1 ['MTAO-845']
+    b73/hex1k7/test/5      key 'c4e1754a71a2b087dd9b5b3a'     values 1 ['e440b3a918822a46b9a58ea9']
+    b73/hex1k7/test/4      key '75e270fa933615ff8a1f99ef'     values 1 ['8089fcbe822b34b68a74c5e7']
+    b73/hex1k7/test/1      key 'e05b199a284d5681c8031a18'     values 1 ['0934386eb7dce32e74aeed82']
+
+T-rep at 215 cells per pair (one step below N* 256): 52 failed of 4779 probed; by family {'code1k5': 3, 'hex1k7': 4, 'wp6k': 45}; by number of values {1: 52}
+    b73/wp6k/test/9        key 'roundly/vote'                 values 1 ['flange sortie']
+    b73/wp6k/test/6        key 'messing/lyceum'               values 1 ['brazened trainees']
+    b73/wp6k/test/1        key 'looter/midweeks'              values 1 ['shimmies disport']
+    b73/wp6k/test/8        key 'chroming/panaceas'            values 1 ['sneakier roods']
+    b73/wp6k/test/4        key 'blurb/iffier'                 values 1 ['levied mealtime']
+    b73/wp6k/test/2        key 'bandies/tingles'              values 1 ['absurdly micron']
+    b73/wp6k/test/6        key 'unicorn/vilifies'             values 1 ['tared uncalled']
+    b73/wp6k/test/8        key 'uproots/eyeball'              values 1 ['kneels dollies']
+
+E-BCH at 91 cells per pair (one step below N* 108): 130 failed of 4779 probed; by family {'code1k5': 2, 'wp6k': 128}; by number of values {1: 130}
+    b73/wp6k/test/9        key 'poseur/catering'              values 1 ['harry caste']
+    b73/wp6k/test/1        key 'cloned/rides'                 values 1 ['ocean ruckuses']
+    b73/wp6k/test/7        key 'squeeze/tilt'                 values 1 ['nosiest razz']
+    b73/wp6k/test/2        key 'oozes/culpable'               values 1 ['meanings kidney']
+    b73/wp6k/test/8        key 'hateful/agates'               values 1 ['earl frippery']
+    b73/wp6k/test/3        key 'ascetic/crevices'             values 1 ['lured tzars']
+    b73/wp6k/test/2        key 'systemic/sawn'                values 1 ['corpora severe']
+    b73/wp6k/test/6        key 'brusker/brazened'             values 1 ['subjoin knees']
+
+E-LDPC at 45 cells per pair (one step below N* 54): 1767 failed of 4779 probed; by family {'code1k5': 186, 'hex1k7': 207, 'wp6k': 1374}; by number of values {1: 1766, 2: 1}
+    b73/wp6k/test/4        key 'splurged/coaxes'              values 1 ['appoints woodenly']
+    b73/wp6k/test/3        key 'grislier/twerps'              values 1 ['pooches antennas']
+    b73/wp6k/test/5        key 'biopsied/veal'                values 1 ['cropper confers']
+    b73/wp6k/test/1        key 'beginner/epithets'            values 1 ['tuning brothels']
+    b73/code1k5/test/9     key 'riffles/humaner'              values 1 ['PBFB-751']
+    b73/wp6k/test/8        key 'reenters/whirs'               values 1 ['bellow tunas']
+    b73/wp6k/test/1        key 'lessened/prolog'              values 1 ['journeys rehashes']
+    b73/wp6k/test/9        key 'waldo/swerve'                 values 1 ['lineal glosses']
+
+O-BCH at 152 cells per pair (one step below N* 181): 64 failed of 4779 probed; by family {'code1k5': 6, 'hex1k7': 4, 'wp6k': 54}; by number of values {1: 64}
+    b73/wp6k/test/3        key 'worthily/manor'               values 1 ['brawl luggage']
+    b73/wp6k/test/9        key 'evasive/alright'              values 1 ['hygiene sealant']
+    b73/wp6k/test/3        key 'tint/gobble'                  values 1 ['display marriage']
+    b73/code1k5/test/8     key 'scalded/preach'               values 1 ['UNMA-300']
+    b73/wp6k/test/1        key 'overage/cleanest'             values 1 ['snouts parented']
+    b73/wp6k/test/2        key 'thorax/doodler'               values 1 ['garners usually']
+    b73/wp6k/test/2        key 'tenon/cowpokes'               values 1 ['plover utility']
+    b73/wp6k/test/2        key 'esquire/boggle'               values 1 ['wounding eldest']
+
+O-LDPC at 76 cells per pair (one step below N* 91): 1264 failed of 4779 probed; by family {'code1k5': 197, 'hex1k7': 167, 'mv': 10, 'wp6k': 890}; by number of values {1: 1261, 2: 2, 4: 1}
+    b73/wp6k/test/0        key 'retain/signally'              values 1 ['falser tardily']
+    b73/wp6k/test/1        key 'relabels/matzos'              values 1 ['sandbars linen']
+    b73/code1k5/test/6     key 'busboys/hangar'               values 1 ['ZOUY-039']
+    b73/wp6k/test/1        key 'wanking/retinal'              values 1 ['sham wattled']
+    b73/wp6k/test/3        key 'urns/bookies'                 values 1 ['compote baseness']
+    b73/hex1k7/test/6      key '2937339b760ca347760ccc2c'     values 1 ['f951b6d8b4bac539ba88b8a7']
+    b73/wp6k/test/3        key 'worthily/manor'               values 1 ['brawl luggage']
+    b73/code1k5/test/4     key 'knowing/mamma'                values 1 ['KCOB-502']
+
+
+## Notes by the AI-assisted process (read after the verdict; nothing changed)
+
+- Every failure listed is a key that the memory read wrongly one grid step below its own N* at 8 times the noise. All
+  but four are single-value keys (2 two-value keys and 1 four-value key fail in O-LDPC, 1 two-value key in E-LDPC), so
+  the multi-value keys and the LAST code are not where the fresh stores differ from the RULER ones.
+- The failures sit in the three large families, mostly in wp6k (the 5,975-5,995-key stores): those stores set the pooled
+  N*, as in the RULER workload. The two small families (mv, tiny) contribute failures only to O-LDPC (10 of 1,264).
+- The two kinds of failure curve look as on the RULER stores: the dense and sparse-block stores and the repetition /
+  BCH tables lose a few dozen keys one step below N* (49, 61, 52, 130 of 4,779), whereas the LDPC tables fall off a
+  cliff (1,767 and 1,264 keys lost one step below N*: LDPC's waterfall at a rate that no longer fits).
+- No scoring artefact: the wrong keys are ordinary word-pair, code and hex-digit strings, the gold values are what the
+  generator wrote, and different memories lose different keys (one key, 'worthily/manor', appears in both cuckoo
+  tables' samples; why was not traced).
+- The word list is the unfiltered system dictionary, so a few keys and values are vulgar or offensive words; they are
+  random draws and play no role in any code.
+- The near-identity of the fresh and RULER requirements (20 of 21 identical) is not a copy: the pooled share curves differ
+  in the third decimal at every budget (results/b73_cells_curves_vs_ruler.txt); with stores of the same sizes and value
+  counts the requirements land on the same 19% grid steps, and the one difference (H-SBC at x16: 362 against 304) is a
+  near-threshold step (0.9925 at 304 cells, against 0.9956 on the RULER stores).

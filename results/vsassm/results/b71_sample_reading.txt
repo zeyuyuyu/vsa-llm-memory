@@ -1,0 +1,28 @@
+# B71 sample reading by the AI-assisted process (the assistant that ran B71 read results/b71_sample_material.txt; not a
+# person). Registered cells: Qwen3-8B and e5-base-v2, the R1 cell with the largest VSADR1 - STORE and the R1-V16 cell with
+# the largest VSAPR - VSAPC; 10 queries only one arm answers right, each way (alias | label | gold | answers).
+
+1. Qwen3-8B, VSADR1 vs STORE (M = 256, V = 16, 8 bits per fact; 25.26 vs 22.67%). 494 queries only the delta-written bundle
+   answers right and 372 only the Hebbian one: the net gain of 2.6 points is the difference of two large, similar sets
+   (about 10% and 8% of the cell's queries change in each direction). Both lists hold the same kind of alias: near-copies and
+   variants of the label ("Tranmere Rovers FC" / "Tranmere Rovers F.C.", "Republic of Guinea" / "Guinea" on one side;
+   "Mexico City, Mexico" / "Mexico City", "Mark Thomas Vande Hei" / "Mark T. Vande Hei" on the other), translations ("Une
+   autre vie" / "Another Life") and full names. One entity appears on both sides (Gerard Reve: "Gerard Kornelis van het
+   Reve" read only by the delta store, "Simon van het Reve" only by the Hebbian store). Reading: the delta rule changes
+   which near-copies survive the cross-talk rather than recovering a class of aliases the Hebbian bundle misses; in
+   the 20 listed, the wrong answers on both sides are varied values (none is a fixed index or the plurality value), so
+   there is no sign of a scoring artefact.
+2. e5-base-v2, VSADR1 vs STORE (M = 256, V = 2, 16 bits per fact; 72.97 vs 71.78%). 347 against 289 queries; with two
+   values many of these are flips at the decision boundary: aliases of one entity (Madame de Pompadour, five aliases)
+   fall on both sides. Same reading as 1.
+3. Qwen3-8B, VSAPR vs VSAPC (M = 1,024, V = 16, 16 bits per fact; 34.58 vs 21.79%). 1,019 against 462: the rotated
+   principal store reads clear aliases the unrotated one misses at sixteen values (Praha / Prague, four variants of Pope
+   Marcellus II, country codes NGA / Nigeria). VSAPC's own successes are the same kind of alias read the other way
+   ("Kasper Kapanen", "Painted House"), i.e. noise around a large systematic gain. Consistent with the registered
+   mechanism (VSAPC is capped at d <= n and each Hadamard class reads a fixed sixteenth of the principal coordinates;
+   VSAPR reads the whole principal subspace in every class with d up to the budget).
+4. e5-base-v2, VSAPR vs VSAPC (M = 1,024, V = 16, 16 bits per fact; 30.24 vs 11.60%). 1,077 against 265; the same
+   pattern (LBR / Liberia, SLE / Sierra Leone, Praha / Prague read only by VSAPR; "giveaway chess", "pape Marcel II" only
+   by VSAPC). With n = 768, VSAPC stores at most 768 numbers where the budget allows about 16,000; the gain is the
+   budget the rotation lets the principal store use.
+No query in the material is a dev or training string; every gold is the stored entity's value.

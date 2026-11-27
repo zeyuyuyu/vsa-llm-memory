@@ -1,0 +1,37 @@
+# B64 sample reading by the AI-assisted process (prereg 'Checks'); material: results/b64_sample_material.txt
+# (b64_handread.py: Qwen3-8B and e5-base-v2, the R1 cell with the lowest VSAR - SDMT, 10 + 10 sampled discordant
+# queries each, with the alias, its label, the gold value, both answers, cos(alias, label) in the prep's space, how many
+# of the a active locations the alias shares with its label, and the alias's nearest location strings).
+# These are notes by the AI agent that ran B64, not an independent human reading.
+
+Qwen3-8B, M = 256, V = 2, 8 bits per fact (store first design 60.7, SDMt 71.8; SDMt = whiten / labels / a = 2 /
+value-bit counters / ternary / all facts). Discordant: 1,308 queries only SDMt right, 766 only the store right.
+- With two values a wrong answer is right half the time by luck, so the discordant sets carry coin flips on both
+  sides: several "SDMt only" cases have cos(alias, label) of 0.03-0.17 and share no active location with the label
+  ('Dayanidhi' -> 'Krishna', 'Mingyan' -> 'Koxinga', 'American East' -> 'Eastern United States'); neither memory has
+  any signal there and SDMt's answer is the default value or the sign of an unrelated location.
+- The informative SDMt wins share an active location with the label: 'Mauricio Luciano Lollo' -> 'Luciano Lollo'
+  (both reach the training label 'Luciano Vincenzoni'), 'Neighborhood Watch' -> 'The Watch' ('The Night Watch'),
+  'John Joseph Myers' -> 'John J. Myers' ('Richard Myers'). The training labels act as a fixed codebook of named
+  cells; an alias and its label fall into the same cell when they share a salient token, and a cell holds the votes
+  of only the few stored facts near it, so the read is nearly free of cross-talk.
+- The store's wins are aliases whose label is reached by graded similarity but not by the same cell: 'Jørgine Anna
+  Krog' -> 'Gina Krog' (alias cells 'Jörg A. Eggers', 'Jörg Bergmeister'), 'Jean Henri Roos' -> 'Johann Heinrich Roos',
+  'Makaziwe Mandela-Amuah' -> 'Makaziwe Mandela' (share 1 of 2, outvoted). Quantization to a cell loses these.
+- Nothing in the 20 cases looks like a leak: the activated locations are other entities' training names, never the
+  stored label or a string of it (the disjointness check: no location has cosine >= 0.9999 to any dev / test code).
+
+e5-base-v2, M = 256, V = 16, 8 bits per fact (store 23.9, SDMt 29.9; SDMt = center / labels / a = 1 / one presence bit
+per value / all facts). Discordant 969 vs 685.
+- Every sampled SDMt win has the alias and the label in the same single cell (1 of 1) except one ('Vir' -> 'Mahavira',
+  a lucky vote): 'Mark Vande Hei' / 'Mark T. Vande Hei' -> cell 'Mark Allen'; 'Zablati' / 'Záblatí' (cosine 1.00 under
+  e5's accent stripping) -> 'Zakarpattia Oblast'. With 16 values the store's read of these near-duplicates still
+  fails through cross-talk (cosine 0.83-1.00 and a wrong answer), whereas a cell holding one or two facts answers
+  exactly: at V = 16 the cell structure, not the similarity, carries the win.
+- Every sampled store win has the alias and the label in different cells: 'Geneva' -> 'Canton of Geneva' (alias cell
+  'France'), 'Republic of Albania' -> 'Albania' ('North Macedonia'), 'Mawlana Rumi' -> 'Rumi'. These are boundary
+  failures of a hard nearest-cell assignment, the same failure as an LSH or PQ bucket, at a much finer, data-placed
+  partition.
+- Reading: SDMt at the chosen settings (a = 1-2) is a count sketch whose buckets are the Voronoi cells of the
+  training labels; its advantage over B36's LSH / PQ sketches is that the cells follow the codes' distribution
+  (whitened), so an alias usually lands in its label's cell; its losses are the aliases that cross a cell boundary.

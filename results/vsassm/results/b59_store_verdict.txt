@@ -1,0 +1,79 @@
+# B59 part 2 verdict (prereg/B59_maps_all_encoders_protected_full_prereg.md): the protected store on the full
+# grid with the uncoded store U inside the search. N* in cells per stored pair; '>4096' = not reached.
+# P-best = largest test share among U, P-BCH, P-LDPC at every budget; P-dev = dev-selected union design.
+# Evaluation sources: {'U-b59': 4900, 'b59-P-BCH': 9059, 'b59-P-LDPC': 7983, 'b58-P-BCH': 1041, 'b58-P-LDPC': 553}
+
+Table 1 (i.i.d.): test N*
+                 k1       k2       k4      e05       k8      k16      k32
+  U              76       76       76       91      128      431     1722
+  P-BCH          91       91       91      128      152     1448    >4096
+  P-LDPC         91       91       91      108      181      724     2896
+  P-best         76       76       76       91      128      431     1722
+  P-any          76       76       76       91      128      431     1722
+  P-dev          76       76       76       91      128      431     1722
+  T-rep          19       23       91      128      256     1024     3444
+  E-BCH          19       19       27       38      108      431     1722
+  E-LDPC         23       23       27       38       54      215      724
+  E-CAM          45       45       64       91      256     1024     3444
+
+Coverage of the full grid (budgets not evaluated on every store; codes 90.5-4096, U 8-4096):
+  P-BCH|k8     missing 1 budgets: 91
+  P-LDPC|k1    missing 1 budgets: 152
+  P-LDPC|k2    missing 1 budgets: 152
+  P-LDPC|k4    missing 1 budgets: 152
+  P-LDPC|e05   missing 2 budgets: 152, 215
+  P-LDPC|k8    missing 6 budgets: 91, 108, 152, 215, 304, 362
+  P-LDPC|k16   missing 2 budgets: 91, 108
+  P-LDPC|k32   missing 3 budgets: 91, 108, 128
+
+H1-P: Delta = steps(best table) - steps(P-best); +: store fewer cells
+    k1   P-best     76 (passing at N*: U) | best table E-BCH       19 | Delta -8 -> table fewer cells
+    k2   P-best     76 (passing at N*: U) | best table E-BCH       19 | Delta -8 -> table fewer cells
+    k4   P-best     76 (passing at N*: U) | best table E-BCH       27 | Delta -6 -> table fewer cells
+    e05  P-best     91 (passing at N*: U) | best table E-BCH       38 | Delta -5 -> table fewer cells
+    k8   P-best    128 (passing at N*: U) | best table E-LDPC      54 | Delta -5 -> table fewer cells
+    k16  P-best    431 (passing at N*: U) | best table E-LDPC     215 | Delta -4 -> table fewer cells
+    k32  P-best   1722 (passing at N*: U) | best table E-LDPC     724 | Delta -5 -> table fewer cells
+  H1-P: TABLE WIN
+
+H1-P (P-dev): Delta = steps(best table) - steps(P-dev); +: store fewer cells
+    k1   P-dev      76 | best table E-BCH       19 | Delta -8 -> table fewer cells
+    k2   P-dev      76 | best table E-BCH       19 | Delta -8 -> table fewer cells
+    k4   P-dev      76 | best table E-BCH       27 | Delta -6 -> table fewer cells
+    e05  P-dev      91 | best table E-BCH       38 | Delta -5 -> table fewer cells
+    k8   P-dev     128 | best table E-LDPC      54 | Delta -5 -> table fewer cells
+    k16  P-dev     431 | best table E-LDPC     215 | Delta -4 -> table fewer cells
+    k32  P-dev    1722 | best table E-LDPC     724 | Delta -5 -> table fewer cells
+  H1-P (P-dev): TABLE WIN
+
+G (does coding help the store? steps(U) - steps(best code family); >= +2 helps, <= -2 hurts):
+    k1   U     76  P-BCH     91  P-LDPC     91  G -1 -> tie
+    k2   U     76  P-BCH     91  P-LDPC     91  G -1 -> tie
+    k4   U     76  P-BCH     91  P-LDPC     91  G -1 -> tie
+    e05  U     91  P-BCH    128  P-LDPC    108  G -1 -> tie
+    k8   U    128  P-BCH    152  P-LDPC    181  G -1 -> tie
+    k16  U    431  P-BCH   1448  P-LDPC    724  G -3 -> coding hurts
+    k32  U   1722  P-BCH  >4096  P-LDPC   2896  G -3 -> coding hurts
+  coding helps at 0 of 7 conditions
+
+Store-cluster bootstrap (2,000 resamples): 95% range of Delta (P-best), P-best N*, best table N*:
+    k1   Delta [-8, -7]   P-best N* [64, 76]   best table N* [19, 19]
+    k2   Delta [-8, -7]   P-best N* [64, 76]   best table N* [19, 19]
+    k4   Delta [-6, -6]   P-best N* [76, 76]   best table N* [27, 27]
+    e05  Delta [-5, -4]   P-best N* [76, 91]   best table N* [38, 38]
+    k8   Delta [-5, -5]   P-best N* [128, 128]   best table N* [54, 54]
+    k16  Delta [-4, -3]   P-best N* [362, 431]   best table N* [215, 215]
+    k32  Delta [-6, -4]   P-best N* [1448, 2048]   best table N* [724, 724]
+
+Table 2 (damage, natural layout; f = 2 eps of the matched i.i.d. condition): test N*; best non-HD table with B58's re-scored E-LDPC*
+  P-any = the smallest of the three families' own N* (each on its own evaluated budgets). P-best (largest
+  share per budget) is shown but not used here: in damage U has only B38's budgets, so at budgets where only a
+  failing code family was evaluated the per-budget maximum reads as a failure (an artefact; compute note 6).
+                        U    P-BCH   P-LDPC    P-any  P-best*    T-rep    E-BCH  E-LDPC*    E-CAM  | Delta P-any vs best table | P-any within 1 step of P-any i.i.d.
+  lines-nat-k4         76       91       91       76       76    >4096      181      128      304  | +3 store fewer cells (vs E-LDPC*) | True
+  clust-nat-k4         76       91       91       76       76      724      215      128      512  | +3 store fewer cells (vs E-LDPC*) | True
+  lines-nat-k8        152      724      256      152      724    >4096     2896     3444    >4096  | +17 store fewer cells (vs E-BCH) | True
+  clust-nat-k8        152     1722      431      152     1722     1722     1024      609     2435  | +8 store fewer cells (vs E-LDPC*) | True
+  natural-layout damage, P-any vs the best non-HD table: VSA WIN
+
+Dev N* (12 dev stores): U k1=76 k2=76 k4=76 e05=91 k8=128 k16=431 k32=1722; P-BCH k1=91 k2=91 k4=91 e05=108 k8=181 k16=1722 k32=-; P-LDPC k1=91 k2=91 k4=91 e05=108 k8=152 k16=861 k32=2896; P-dev k1=76 k2=76 k4=76 e05=91 k8=128 k16=431 k32=1722

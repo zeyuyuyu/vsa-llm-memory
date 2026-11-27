@@ -1,0 +1,80 @@
+# B43 verdict (prereg/B43_natural_text_and_chunked_baseline_prereg.md)
+
+## RULER, 9 memory tasks, seed-42 test sets, 100 samples per task (n = 900 per length)
+store = B21 (Qwen3-8B reader, 250-character chunks, query-independent extraction, sharded FHRR store);
+dict = the same reader output in a Python dict; CoA = Chain-of-Agents with Qwen3-8B over the same chunks
+(8,192-token windows, verbatim CoA prompts, thinking off, greedy). Official string_match_all.
+
+### 64k: no CoA output
+
+### 128k: CoA samples 850 / 900 (MISSING 50: [('niah_multikey_1', 0), ('niah_multikey_1', 1), ('niah_multikey_1', 2), ('niah_multikey_1', 3), ('niah_multikey_1', 4)])
+  INCOMPLETE: registered 9-task bar not computable; complete tasks 8 / 9; partial [('niah_multikey_1', 50)]; absent []
+  store  8-complete-task mean  99.52  [98.8, 99.8]
+  dict   8-complete-task mean  99.52  [98.8, 99.8]
+  coa    8-complete-task mean  47.22  [43.8, 50.7]
+  per task (store / dict / CoA; n):
+    niah_single_1     100.0  100.0   92.0   n=100
+    niah_single_2      99.0   99.0   35.0   n=100
+    niah_single_3     100.0  100.0   63.0   n=100
+    niah_multikey_1   100.0  100.0   30.0   n=50
+    niah_multikey_2    99.0   99.0   56.0   n=100
+    niah_multikey_3   100.0  100.0   81.0   n=100
+    niah_multivalue   100.0  100.0   17.0   n=100
+    niah_multiquery   100.0  100.0   22.8   n=100
+    vt                 98.2   98.2   11.0   n=100
+  store - coa (8-complete-task): +52.31 [+49.81, +54.85]  store ahead (complete tasks only; not the registered bar)
+  dict - coa (8-complete-task): +52.31 [+49.81, +54.85]  store ahead (complete tasks only; not the registered bar)
+  store - dict (8-complete-task):  +0.00 [+0.00, +0.00]  
+  store - coa, niah_multikey_1 on its 50 finished samples: +70.00 [+58.00, +82.00]
+  chain diagnostics over 850 samples: final CU holds every gold value 347; a gold value seen in some CU but lost by the final one 9; some gold value never in any CU 503; all gold in the final CU but the manager's answer failed 0; final CU with a rejection phrase 209; worker calls at the 1,024-token cap 583 / 14439
+  CoA tokens per sample: prompt mean 139,949, generated mean 7,446; windows mean 17.0 (min 16, max 17)
+
+## BABILong QA1-5, 128k, official test release, 100 samples per task (n = 500)
+  no CoA output (not run)
+
+## Store reader tokens per sample (B21's chunks and raw outputs recounted; Qwen3 tokenizer, chat template)
+  64k: nocache_prompt 435,107, nocache_gen 14,148, dedup_sample_prompt 353,020, dedup_sample_gen 13,700, chunks 1,225, dedup_task_prompt 66,152, dedup_task_gen 11,927, template_overhead 302, overhead_check_max_abs_dev 0, overhead_checked_chunks 2,000
+  128k: nocache_prompt 872,835, nocache_gen 28,182, dedup_sample_prompt 707,364, dedup_sample_gen 27,278, chunks 2,458, dedup_task_prompt 131,278, dedup_task_gen 23,792, template_overhead 302, overhead_check_max_abs_dev 0, overhead_checked_chunks 2,000
+
+## Part A: ProPara test (54 paragraphs, 236 participants, 1,910 state cells), Qwen3-8B
+official document-level F1 (aristo-leaderboard evaluator; CLI agrees) / precision / recall; state accuracy
+  direct_think    F1  61.6  P  67.2  R  56.9   state acc  57.6   implied actions P 0.48 R 0.54
+  direct_nothink  F1  50.0  P  73.9  R  37.8   state acc  45.4   implied actions P 0.15 R 0.22
+  store_vsa       F1  54.3  P  60.3  R  49.4   state acc  45.7   implied actions P 0.39 R 0.43
+  store_dict      F1  54.3  P  60.3  R  49.4   state acc  45.7   implied actions P 0.39 R 0.43
+  extraction (the extractor's own events vs gold actions): precision 0.441, recall 0.559, F1 0.493 (508 predicted, 401 gold, 224 correct); destination accuracy 0.473 on 165 matched create/move
+  store_vsa == store_dict on 1910 / 1910 cells
+  paired differences (95% bootstrap over paragraphs, 10,000 resamples, seed 0):
+    store_vsa - direct_think         F1   -7.3 [-12.7, -2.1]   state acc  -12.0 [-18.7, -4.6]
+    store_vsa - direct_nothink       F1   +4.3 [+0.2, +8.9]   state acc   +0.2 [-4.1, +4.9]
+    direct_think - direct_nothink    F1  +11.7 [+6.3, +17.2]   state acc  +12.2 [+7.0, +17.5]
+    store_dict - direct_think        F1   -7.3 [-12.7, -2.1]   state acc  -12.0 [-18.7, -4.6]
+    store_vsa - store_dict           F1   +0.0 [+0.0, +0.0]   state acc   +0.0 [+0.0, +0.0]
+  A1 (store_vsa - direct_think >= 10 with CI > 0): -7.3 [-12.7, -2.1] -> direct ahead
+  A2 (store_vsa = store_dict on 100% of cells): PASS
+
+## Registered predictions
+  PB1 CoA 9-task mean at 128k in [80, 97]: 47.2 (on the complete tasks only) -> FAILED
+  PB2 C1 reads 'store ahead': store ahead (complete tasks only; not the registered bar) -> held (not the registered bar: incomplete)
+  PB3 CoA 64k >= CoA 128k: not tested (64k not run)
+  PB4 CoA tokens per sample < store reader without cache: 147,395 vs 901,018 -> held
+  PB5 weakest CoA tasks are multivalue, multiquery, vt: lowest three ['vt', 'niah_multivalue', 'niah_multiquery'] -> held
+  PB7 final CU with a rejection phrase < 20%: 209/850 = 25% -> FAILED; failures from values never written or lost (not manager errors): manager errors 0 -> held
+  PB6 BABILong: not tested (not run)
+  PA1 A1 does not reach 'beats': held; direct_think 61.6 in [45, 62]: held; store 54.3 in [40, 58]: held
+  PA2 VSA = dict on 100% of cells: held
+  PA3 extraction recall < 0.70: held (0.56); precision > recall: FAILED (0.44 vs 0.56)
+  PA4 direct_think >= direct_nothink: held (+11.7)
+
+## Scope and compute
+- Run: RULER 128k CoA on 850 of 900 samples (8 tasks complete; niah_multikey_1 positions 25-74 only). Not run:
+  niah_multikey_1 positions 0-24 and 75-99 (compute notes 3, 5, 6), so the registered full-set bar C1 is not
+  computed; RULER 64k (C2) and BABILong (C3) not run (scope cut before any 64k output was read). PB3 and PB6 untested.
+- Sources of the 850: PACE (700: single_1, single_2, multikey_2, multikey_3, multiquery, vt complete; single_3 and
+  multivalue positions 0-49) and the A800 (150: single_3 and multivalue 50-99, multikey_1 25-74). Every sample ran
+  exactly once; PACE twin slice jobs never started and were cancelled; no duplicates in the verdict.
+- GPU-hours: PACE 41.8 (H200 / H100 / A100; includes 6.0 for a multikey_1 job that hit its limit with no batch done,
+  1.3 for the cancelled 64k starts, 1.6 dev, 0.9 ProPara test); A800 14.2 (six slices). Total 56.0 (cap 60).
+  No paid API; PACE free tier (gts-nimam6) only.
+- Second scorer (results/b43_check.txt): identical per-task scores; ProPara CLI = in-process to 0.1; nltk state
+  accuracy identical; 0 grid -> action mismatches.
